@@ -1,62 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-    <!-- Navigation Bar with Slide Down Animation -->
-    <nav class="container mx-auto px-6 py-4 slide-in-down relative z-[100]">
-      <div class="flex items-center justify-between">
-        <!-- Logo with Slide Left Animation -->
-        <div class="flex items-center slide-in-left delay-200">
-          <img :src="logoImg" alt="Electronic Merchant Systems" class="h-12 w-auto" />
-        </div>
-        
-        <!-- Navigation Links with Sequenced Menu Item Animation -->
-        <div class="hidden md:flex space-x-8">
-          <div class="group relative menu-item" style="animation-delay: 0.1s;">
-            <a href="#" class="text-gray-700 hover:text-indigo-600 transition-colors duration-300 font-medium">
-              Solutions
-              <span class="ml-1">▾</span>
-            </a>
-            <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md p-4 w-48 mt-2 z-[999] transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-2">
-              <a href="#" class="block py-2 hover:text-indigo-600">Payment Processing</a>
-              <a href="#" class="block py-2 hover:text-indigo-600">Financial Services</a>
-              <a href="#" class="block py-2 hover:text-indigo-600">Point of Sale</a>
-            </div>
-          </div>
-          
-          <div class="group relative menu-item" style="animation-delay: 0.2s;">
-            <a href="#" class="text-gray-700 hover:text-indigo-600 transition-colors duration-300 font-medium">
-              Industries
-              <span class="ml-1">▾</span>
-            </a>
-            <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md p-4 w-48 mt-2 z-[999] transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-2">
-              <a href="#" class="block py-2 hover:text-indigo-600">Retail</a>
-              <a href="#" class="block py-2 hover:text-indigo-600">Restaurant</a>
-              <a href="#" class="block py-2 hover:text-indigo-600">E-commerce</a>
-            </div>
-          </div>
-          
-          <div class="group relative menu-item" style="animation-delay: 0.3s;">
-            <a href="#" class="text-gray-700 hover:text-indigo-600 transition-colors duration-300 font-medium">
-              Partnerships
-              <span class="ml-1">▾</span>
-            </a>
-            <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md p-4 w-48 mt-2 z-[999] transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-2">
-              <a href="#" class="block py-2 hover:text-indigo-600">Become a Partner</a>
-              <a href="#" class="block py-2 hover:text-indigo-600">Partner Programs</a>
-              <a href="#" class="block py-2 hover:text-indigo-600">Partner Resources</a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- CTA Button with direct inline styles to ensure color is applied -->
-        <div class="slide-in-right delay-300">
-          <router-link to="/request-consultation" class="fancy-button text-white font-medium py-2 px-6 rounded-md shadow-md" 
-            style="background-color: #973131; transition: all 0.3s ease;">
-            Request a Consultation
-          </router-link>
-        </div>
-      </div>
-    </nav>
-
+  <MainLayout>
     <!-- Hero Section -->
     <div class="container mx-auto px-6 py-16 flex flex-col lg:flex-row items-center">
       <!-- Left Content with Text Reveal Animation -->
@@ -330,6 +273,189 @@
       </div>
     </div>
 
+    <!-- Payment Processing for All Business Types Section -->
+    <div class="container mx-auto px-6 py-20 mt-16 relative overflow-hidden">
+      <!-- Background decorative elements -->
+      <div class="absolute inset-0 bg-gradient-to-br from-gray-50 to-gray-100 opacity-70"></div>
+      <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+      
+      <!-- Main content with scroll reveal -->
+      <div class="relative z-10">
+        <!-- Section header with staggered animation -->
+        <div class="text-center mb-16 scroll-reveal opacity-0">
+          <span class="inline-block text-custom-red font-semibold mb-4 tracking-wider text-sm uppercase scroll-reveal opacity-0" style="animation-delay: 0.2s">
+            Tailored Solutions For Every Business
+          </span>
+          <h2 class="text-4xl lg:text-5xl font-bold mb-6 scroll-reveal opacity-0" style="animation-delay: 0.4s; color: #973131;">
+            Payment Processing for All Business Types
+          </h2>
+          <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-12 scroll-reveal opacity-0" style="animation-delay: 0.6s">
+            Whether you need to manage multiple store locations, fulfill orders online, or accept credit cards on the go, we can help.
+          </p>
+        </div>
+
+        <!-- Business Types Grid with staggered card animations - SMALLER CIRCLES -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+          <!-- Retail -->
+          <div class="scroll-reveal opacity-0 transform hover:scale-105 transition-all duration-300" style="animation-delay: 0.2s">
+            <div class="bg-white aspect-square rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 p-4 flex flex-col items-center justify-center text-center relative overflow-hidden group max-w-[220px] mx-auto">
+              <div class="absolute inset-0 bg-blue-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="relative z-10">
+                <div class="w-9 h-9 mx-auto mb-3 text-blue-600">
+                  <svg class="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                  </svg>
+                </div>
+                <h3 class="text-base font-bold mb-1.5">Retail</h3>
+                <p class="text-gray-600 mb-2 text-xs leading-tight">
+                  Whether you need to manage multiple store locations, fulfill orders online, or accept credit cards on the go, we can help.
+                </p>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center justify-center group text-xs">
+                  Learn more
+                  <svg class="w-3 h-3 ml-1 transform transition-transform group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- eCommerce (Purple) -->
+          <div class="scroll-reveal opacity-0 transform hover:scale-105 transition-all duration-300" style="animation-delay: 0.3s">
+            <div class="bg-white aspect-square rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 p-4 flex flex-col items-center justify-center text-center relative overflow-hidden group max-w-[220px] mx-auto">
+              <div class="absolute inset-0 bg-purple-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="relative z-10">
+                <div class="w-9 h-9 mx-auto mb-3 text-purple-600">
+                  <svg class="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <h3 class="text-base font-bold mb-1.5">eCommerce</h3>
+                <p class="text-gray-600 mb-2 text-xs leading-tight">
+                  We can help you establish your web presence, add a store to your existing website, or enable payments for an existing online store.
+                </p>
+                <a href="#" class="text-purple-600 hover:text-purple-800 font-medium inline-flex items-center justify-center group text-xs">
+                  Learn more
+                  <svg class="w-3 h-3 ml-1 transform transition-transform group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Restaurant & Bar -->
+          <div class="scroll-reveal opacity-0 transform hover:scale-105 transition-all duration-300" style="animation-delay: 0.4s">
+            <div class="bg-white aspect-square rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 p-4 flex flex-col items-center justify-center text-center relative overflow-hidden group max-w-[220px] mx-auto">
+              <div class="absolute inset-0 bg-green-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="relative z-10">
+                <div class="w-9 h-9 mx-auto mb-3 text-green-600">
+                  <svg class="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <h3 class="text-base font-bold mb-1.5">Restaurant & Bar</h3>
+                <p class="text-gray-600 mb-2 text-xs leading-tight">
+                  Our restaurant-specific point of sale systems can help you improve processes and make service easy.
+                </p>
+                <a href="#" class="text-green-600 hover:text-green-800 font-medium inline-flex items-center justify-center group text-xs">
+                  Learn more
+                  <svg class="w-3 h-3 ml-1 transform transition-transform group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Professional Services -->
+          <div class="scroll-reveal opacity-0 transform hover:scale-105 transition-all duration-300" style="animation-delay: 0.5s">
+            <div class="bg-white aspect-square rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 p-4 flex flex-col items-center justify-center text-center relative overflow-hidden group max-w-[220px] mx-auto">
+              <div class="absolute inset-0 bg-red-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="relative z-10">
+                <div class="w-9 h-9 mx-auto mb-3 text-red-600">
+                  <svg class="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 class="text-base font-bold mb-1.5">Professional Services</h3>
+                <p class="text-gray-600 mb-2 text-xs leading-tight">
+                  With a secure, simple payment solution, you can help your customers get back to their daily lives faster.
+                </p>
+                <a href="#" class="text-red-600 hover:text-red-800 font-medium inline-flex items-center justify-center group text-xs">
+                  Learn more
+                  <svg class="w-3 h-3 ml-1 transform transition-transform group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skilled Trade Services -->
+          <div class="scroll-reveal opacity-0 transform hover:scale-105 transition-all duration-300" style="animation-delay: 0.6s">
+            <div class="bg-white aspect-square rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 p-4 flex flex-col items-center justify-center text-center relative overflow-hidden group max-w-[220px] mx-auto">
+              <div class="absolute inset-0 bg-yellow-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="relative z-10">
+                <div class="w-9 h-9 mx-auto mb-3 text-yellow-600">
+                  <svg class="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                  </svg>
+                </div>
+                <h3 class="text-base font-bold mb-1.5">Skilled Trade Services</h3>
+                <p class="text-gray-600 mb-2 text-xs leading-tight">
+                  We provide innovative, secure payment solutions to help you streamline operations, save time, and elevate the customer experience.
+                </p>
+                <a href="#" class="text-yellow-600 hover:text-yellow-800 font-medium inline-flex items-center justify-center group text-xs">
+                  Learn more
+                  <svg class="w-3 h-3 ml-1 transform transition-transform group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Specialty -->
+          <div class="scroll-reveal opacity-0 transform hover:scale-105 transition-all duration-300" style="animation-delay: 0.7s">
+            <div class="bg-white aspect-square rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 p-4 flex flex-col items-center justify-center text-center relative overflow-hidden group max-w-[220px] mx-auto">
+              <div class="absolute inset-0 bg-indigo-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="relative z-10">
+                <div class="w-9 h-9 mx-auto mb-3 text-indigo-600">
+                  <svg class="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                  </svg>
+                </div>
+                <h3 class="text-base font-bold mb-1.5">Specialty</h3>
+                <p class="text-gray-600 mb-2 text-xs leading-tight">
+                  Whether you run a beauty salon, golf course, auto repair shop, or anything in-between, we're here to serve and support your unique needs!
+                </p>
+                <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center justify-center group text-xs">
+                  Learn more
+                  <svg class="w-3 h-3 ml-1 transform transition-transform group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- See All Industries Link -->
+        <div class="text-center mt-12">
+          <a href="#" class="inline-flex items-center text-gray-700 hover:text-gray-900 font-medium group">
+            <span class="relative">
+              See all industries we serve
+              <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gray-900 transform scale-x-0 transition-transform group-hover:scale-x-100"></span>
+            </span>
+            <svg class="w-5 h-5 ml-2 transform transition-transform group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
     <!-- Find the Right Solution Section with Shaped Burgundy Background -->
     <div class="relative py-24 mt-16 burgundy-section">
       <div class="absolute inset-0 burgundy-shape"></div>
@@ -533,11 +659,12 @@
         </div>
       </div>
     </div>
-  </div>
+  </MainLayout>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
+import MainLayout from '../MainLayout.vue'; // Make sure path is correct
 // Import using the @ alias which points to resources/js
 import dashboardImg from '@/../images/homepic.png';
 // Import logo image
@@ -1170,7 +1297,7 @@ p {
   height: 60px;
   border-radius: 50%;
   background-color: var(--custom-red);
-  color: white;
+  color: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1246,7 +1373,7 @@ p {
 /* Chat panel header */
 .chatbot-panel-header {
   background-color: var(--custom-red);
-  color: white;
+  color: black; /* Change from white to black */
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -1299,7 +1426,7 @@ p {
 .bot-message {
   align-self: flex-start;
   background-color: white;
-  color: #333;
+  color: black; /* Ensure bot messages are black */
   border-radius: 18px 18px 18px 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
@@ -1307,7 +1434,7 @@ p {
 .user-message {
   align-self: flex-end;
   background-color: var(--custom-red);
-  color: white;
+  color: black; /* Change user messages to black */
   border-radius: 18px 18px 4px 18px;
   box-shadow: 0 2px 8px rgba(151, 49, 49, 0.15);
 }
@@ -1329,6 +1456,7 @@ p {
   font-size: 14px;
   outline: none;
   transition: all 0.2s ease;
+  color: black; /* Ensure input text is black */
 }
 
 .chatbot-input-field:focus {
@@ -1341,7 +1469,7 @@ p {
   height: 36px;
   border-radius: 50%;
   background-color: var(--custom-red);
-  color: white;
+  color: black;
   border: none;
   margin-left: 8px;
   display: flex;
@@ -1354,5 +1482,256 @@ p {
 .chatbot-send-button:hover {
   background-color: var(--custom-red-dark);
   transform: scale(1.05);
+}
+
+/* Update the chatbot button color */
+.chatbot-circle-button {
+  /* ... existing styles ... */
+  color: black; /* Change from white to black */
+}
+
+/* Update the send button color */
+.chatbot-send-button {
+  /* ... existing styles ... */
+  color: black; /* Change from white to black */
+}
+
+/* Ensure SVG inherits the black color */
+.chatbot-circle-button svg,
+.chatbot-send-button svg {
+  color: black;
+}
+
+/* When chat is open, keep the SVG black */
+.chatbot-button-open svg {
+  color: black;
+}
+
+/* Update placeholder text color */
+.chatbot-input-field::placeholder {
+  color: #666; /* Darker placeholder text for better visibility */
+}
+
+/* Add these new styles to your existing <style> section */
+
+/* Grid pattern background */
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(151, 49, 49, 0.1) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(151, 49, 49, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Enhanced scroll reveal animation */
+.scroll-reveal {
+  animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  animation-play-state: paused;
+}
+
+.scroll-reveal.animate-reveal {
+  animation-play-state: running;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Card hover effects */
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+/* Smooth shadow transition */
+.hover\:shadow-2xl {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Add a subtle gradient overlay on hover */
+.card-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, rgba(151, 49, 49, 0.05), rgba(151, 49, 49, 0));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hover\:scale-105:hover .card-hover-overlay {
+  opacity: 1;
+}
+
+/* Enhanced text gradient animation */
+.text-gradient {
+  background-size: 200% auto;
+  animation: textGradient 4s ease infinite;
+}
+
+@keyframes textGradient {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+/* Circular card specific styles */
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+/* Enhanced hover effect for circular cards */
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
+}
+
+/* Smooth background transition */
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Adjust text size for better fit in circles */
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+/* Add a subtle rotate effect on hover */
+.hover\:scale-105:hover {
+  transform: scale(1.05) rotate(1deg);
+}
+
+/* Enhance shadow transition */
+.shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.hover\:shadow-2xl:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Adjust circular card sizes */
+.max-w-\[280px\] {
+  max-width: 280px; /* Constrains the maximum size of circles */
+}
+
+/* Adjust padding for smaller screens */
+@media (max-width: 640px) {
+  .max-w-\[280px\] {
+    max-width: 240px;
+  }
+}
+
+/* Adjust content spacing */
+.p-6 {
+  padding: 1.5rem;
+}
+
+/* Make icons slightly smaller */
+.w-12 {
+  width: 3rem;
+}
+
+.h-12 {
+  height: 3rem;
+}
+
+/* Adjust text sizes */
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+/* Adjust margins */
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+/* Updated circle card styles for smaller size */
+.max-w-\[220px\] {
+  max-width: 220px; /* Reduced from 280px */
+}
+
+/* Adjust content padding */
+.p-4 {
+  padding: 1rem; /* Reduced from 1.5rem */
+}
+
+/* Make icons smaller */
+.w-9 {
+  width: 2.25rem; /* Reduced from 3rem */
+}
+
+.h-9 {
+  height: 2.25rem; /* Reduced from 3rem */
+}
+
+/* Adjust text sizes */
+.text-base {
+  font-size: 1rem; /* Reduced from 1.125rem */
+  line-height: 1.5rem;
+}
+
+.text-xs {
+  font-size: 0.75rem; /* Reduced from 0.875rem */
+  line-height: 1rem;
+}
+
+/* Adjust margins */
+.mb-3 {
+  margin-bottom: 0.75rem; /* Reduced from 1rem */
+}
+
+.mb-1\.5 {
+  margin-bottom: 0.375rem; /* Reduced from 0.5rem */
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem; /* Reduced from 0.75rem */
+}
+
+/* Reduce gap between cards */
+.gap-6 {
+  gap: 1.5rem; /* Reduced from 2rem */
+}
+
+/* Smaller shadow */
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.hover\:shadow-xl:hover {
+  box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Smaller rotation on hover */
+.hover\:scale-105:hover {
+  transform: scale(1.05) rotate(0.5deg); /* Less rotation */
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .max-w-\[220px\] {
+    max-width: 180px; /* Even smaller on mobile */
+  }
 }
 </style>
