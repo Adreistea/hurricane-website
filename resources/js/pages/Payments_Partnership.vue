@@ -92,7 +92,7 @@
             </ul>
           </div>
           <div>
-            <img src="@/../images/partnership.jpg" alt="Partnership" class="rounded-lg shadow-xl" 
+            <img src="@/../images/homepic.png" alt="Partnership" class="rounded-lg shadow-xl" 
                  onerror="this.src='https://via.placeholder.com/600x400?text=Partnership+Image'; this.onerror=null;">
           </div>
         </div>
