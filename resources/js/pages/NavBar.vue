@@ -34,7 +34,7 @@
               <div class="dropdown-section payment-section">
                 <h3 class="section-title">Payment Processing</h3>
                 <div class="menu-items">
-                  <a href="#" class="menu-item-link">
+                  <router-link to="/mobile-processing" class="menu-item-link">
                     <div class="top-row">
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
@@ -50,8 +50,8 @@
                       <span class="link-title">Mobile Processing</span>
                     </div>
                     <span class="link-desc">Accept payments anywhere</span>
-                  </a>
-                  <a href="#" class="menu-item-link">
+                  </router-link>
+                  <router-link to="/web-commerce" class="menu-item-link">
                     <div class="top-row">
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
@@ -67,8 +67,8 @@
                       <span class="link-title">Web Commerce</span>
                     </div>
                     <span class="link-desc">Online payment solutions</span>
-                  </a>
-                  <a href="#" class="menu-item-link">
+                  </router-link>
+                  <router-link to="/text-qr" class="menu-item-link">
                     <div class="top-row">
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
@@ -78,14 +78,14 @@
                               <stop offset="100%" stop-color="#34d399" />
                             </linearGradient>
                           </defs>
-                          <path d="M3 11h8V3H3v8zm2-6h4v4H5V5zM3 21h8v-8H3v8zm2-6h4v4H5v-4zM13 3v8h8V3h-8zm6 6h-4V5h4v4zM13 13h2v2h-2zM17 13h2v2h-2zM19 17h2v2h-2zM13 17h2v2h-2zM17 17h2v2h-2zM19 19h2v2h-2zM13 19h2v2h-2zM17 19h2v2h-2z" fill="url(#qrGradient)"/>
+                          <path d="M3 11h8V3H3v8zm2-6h4v4H5V5zM3 21h8v-8H3v8zm2-6h4v4H5v-4zM13 3v8h8V3h-8zm6 6h-4V5h4v4zM13 13h2v2h-2zM17 13h2v2h-2zM19 17h2v2h-2zM13 17h2v2h-2zM17 17h2v2h-2zM19 19h2v2h-2zM13 19h2v2h-2z" fill="url(#qrGradient)"/>
                         </svg>
                       </div>
                       <span class="link-title">Text & QR Payments</span>
                     </div>
                     <span class="link-desc">Contactless payment options</span>
-                  </a>
-                  <a href="#" class="menu-item-link">
+                  </router-link>
+                  <router-link to="/integrations" class="menu-item-link">
                     <div class="top-row">
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
@@ -101,7 +101,7 @@
                       <span class="link-title">Integrations</span>
                     </div>
                     <span class="link-desc">Connect with existing systems</span>
-                  </a>
+                  </router-link>
                 </div>
               </div>
               
@@ -109,7 +109,7 @@
               <div class="dropdown-section pos-section">
                 <h3 class="section-title">POS Solutions</h3>
                 <div class="menu-items">
-                  <a href="#" class="menu-item-link">
+                  <router-link to="/maxx-pay" class="menu-item-link">
                     <div class="top-row">
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
@@ -125,8 +125,8 @@
                       <span class="link-title">MaxxPay</span>
                     </div>
                     <span class="link-desc">Complete POS system</span>
-                  </a>
-                  <a href="#" class="menu-item-link">
+                  </router-link>
+                  <router-link to="/pos-terminals" class="menu-item-link">
                     <div class="top-row">
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
@@ -142,7 +142,7 @@
                       <span class="link-title">POS Terminals</span>
                     </div>
                     <span class="link-desc">Hardware solutions</span>
-                  </a>
+                  </router-link>
                 </div>
               </div>
               
@@ -150,7 +150,7 @@
               <div class="dropdown-section services-section">
                 <h3 class="section-title">Additional Services</h3>
                 <div class="menu-items">
-                  <a href="#" class="menu-item-link">
+                  <router-link to="/surcharge" class="menu-item-link">
                     <div class="top-row">
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
@@ -166,8 +166,8 @@
                       <span class="link-title">Surcharge Program</span>
                     </div>
                     <span class="link-desc">Dual pricing options</span>
-                  </a>
-                  <a href="#" class="menu-item-link">
+                  </router-link>
+                  <router-link to="/bizfunds-cash" class="menu-item-link">
                     <div class="top-row">
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
@@ -183,25 +183,25 @@
                       <span class="link-title">BizFunds Cash Advance</span>
                     </div>
                     <span class="link-desc">Business financing</span>
-                  </a>
-                  <a href="#" class="menu-item-link">
+                  </router-link>
+                  <router-link to="/gift-loyalty" class="menu-item-link">
                     <div class="top-row">
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                           <defs>
-                            <linearGradient id="ecommerceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#7e22ce" />
-                              <stop offset="100%" stop-color="#a855f7" />
+                            <linearGradient id="restaurantGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" stop-color="#15803d" />
+                              <stop offset="100%" stop-color="#22c55e" />
                             </linearGradient>
                           </defs>
-                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 2c2.615 0 4.95 1.007 6.707 2.765C20.493 6.257 21.5 8.593 21.5 11.25c0 2.615-1.007 4.95-2.765 6.707C16.207 20.493 13.87 21.5 11.25 21.5c-2.615 0-4.95-1.007-6.707-2.765C2.507 16.207 1.5 13.87 1.5 11.25c0-2.615 1.007-4.95 2.765-6.707C6.257 2.507 8.593 1.5 11.25 1.5z" fill="url(#ecommerceGradient)"/>
+                          <path d="M8.1 13.34l2.83-2.83-6.19-6.18c-.48-.48-1.31-.35-1.61.27-.71 1.49-.45 3.32.78 4.56l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27l-9.05 9.05 1.41 1.41 9.05-9.05 9.05 9.05 1.41-1.41-9.05-9.05z" fill="url(#restaurantGradient)"/>
                         </svg>
                       </div>
                       <span class="link-title">Gift & Loyalty Programs</span>
                     </div>
                     <span class="link-desc">Customer retention tools</span>
-                  </a>
-                  <a href="#" class="menu-item-link">
+                  </router-link>
+                  <router-link to="/web-design" class="menu-item-link">
                     <div class="top-row">
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
@@ -217,7 +217,7 @@
                       <span class="link-title">Web Design</span>
                     </div>
                     <span class="link-desc">Professional websites</span>
-                  </a>
+                  </router-link>
                 </div>
               </div>
             </div>
@@ -239,7 +239,7 @@
               <div class="dropdown-section">
                 <h3 class="section-title">Retail & Commerce</h3>
                 <div class="menu-items">
-                  <a href="#" class="menu-item-link">
+                  <router-link to="/retail" class="menu-item-link">
                     <div class="top-row">
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
@@ -255,8 +255,8 @@
                       <span class="link-title">Retail</span>
                     </div>
                     <span class="link-desc">In-store payment solutions</span>
-                  </a>
-                  <a href="#" class="menu-item-link">
+                  </router-link>
+                  <router-link to="/ecommerce" class="menu-item-link">
                     <div class="top-row">
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
@@ -272,14 +272,14 @@
                       <span class="link-title">eCommerce</span>
                     </div>
                     <span class="link-desc">Online store solutions</span>
-                  </a>
+                  </router-link>
                 </div>
               </div>
               
               <div class="dropdown-section">
                 <h3 class="section-title">Service Industries</h3>
                 <div class="menu-items">
-                  <a href="#" class="menu-item-link">
+                  <router-link to="/restaurants" class="menu-item-link">
                     <div class="top-row">
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
@@ -295,8 +295,8 @@
                       <span class="link-title">Restaurants & Bars</span>
                     </div>
                     <span class="link-desc">Food service solutions</span>
-                  </a>
-                  <a href="#" class="menu-item-link">
+                  </router-link>
+                  <router-link to="/professional-services" class="menu-item-link">
                     <div class="top-row">
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
@@ -312,14 +312,14 @@
                       <span class="link-title">Professional Services</span>
                     </div>
                     <span class="link-desc">For service-based businesses</span>
-                  </a>
+                  </router-link>
                 </div>
               </div>
               
               <div class="dropdown-section">
                 <h3 class="section-title">Specialized Businesses</h3>
                 <div class="menu-items">
-                  <a href="#" class="menu-item-link">
+                  <router-link to="/skill-trade" class="menu-item-link">
                     <div class="top-row">
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
@@ -335,8 +335,8 @@
                       <span class="link-title">Skilled Trade Services</span>
                     </div>
                     <span class="link-desc">Field service solutions</span>
-                  </a>
-                  <a href="#" class="menu-item-link">
+                  </router-link>
+                  <router-link to="/specialty-business" class="menu-item-link">
                     <div class="top-row">
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
@@ -352,7 +352,7 @@
                       <span class="link-title">Specialty Businesses</span>
                     </div>
                     <span class="link-desc">Unique business solutions</span>
-                  </a>
+                  </router-link>
                 </div>
               </div>
             </div>
@@ -374,7 +374,7 @@
               <div class="dropdown-section">
                 <h3 class="section-title">Agent Programs</h3>
                 <div class="menu-items">
-                  <a href="#" class="menu-item-link">
+                  <router-link to="/agents" class="menu-item-link">
                     <div class="top-row">
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
@@ -390,14 +390,14 @@
                       <span class="link-title">Agents</span>
                     </div>
                     <span class="link-desc">Join our sales agent program</span>
-                  </a>
+                  </router-link>
                 </div>
               </div>
               
               <div class="dropdown-section">
                 <h3 class="section-title">Integration Partners</h3>
                 <div class="menu-items">
-                  <a href="#" class="menu-item-link">
+                  <router-link to="/payment-partnerships" class="menu-item-link">
                     <div class="top-row">
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
@@ -407,13 +407,13 @@
                               <stop offset="100%" stop-color="#6366f1" />
                             </linearGradient>
                           </defs>
-                          <path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7zm11.77 8.27l-3.54 3.54c-.39.39-1.02.39-1.41 0l-5.9-5.9a.9959.9959 0 010-1.41l3.54-3.54c.39-.39 1.02-.39 1.41 0l5.9 5.9c.39.39.39 1.02 0 1.41z" fill="url(#partnershipGradient)"/>
+                          <path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" fill="url(#partnershipGradient)"/>
                         </svg>
                       </div>
                       <span class="link-title">Payment Partnerships</span>
                     </div>
                     <span class="link-desc">Integrate our payment solutions</span>
-                  </a>
+                  </router-link>
                 </div>
               </div>
               
@@ -475,20 +475,20 @@
         </button>
         <div v-if="activeMobileSubmenu === 'solutions'" class="pl-4 mt-2 space-y-2">
           <p class="font-semibold text-gray-800 mt-3">Payment Processing</p>
-          <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">Mobile Processing</a>
-          <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">Web Commerce</a>
+          <router-link to="/mobile-processing" class="block py-1 text-gray-600 hover:text-indigo-600">Mobile Processing</router-link>
+          <router-link to="/web-commerce" class="block py-1 text-gray-600 hover:text-indigo-600">Web Commerce</router-link>
           <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">Text & QR Code Payments</a>
           <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">Integrations</a>
           
           <p class="font-semibold text-gray-800 mt-3">POS Solutions</p>
-          <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">MaxxPay</a>
+          <router-link to="/maxx-pay" class="block py-1 text-gray-600 hover:text-indigo-600">MaxxPay</router-link>
           <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">POS Terminals</a>
           
           <p class="font-semibold text-gray-800 mt-3">Additional Services</p>
-          <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">Surcharge & Dual Pricing Program</a>
-          <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">BizFunds Cash Advance</a>
-          <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">Gift & Loyalty Programs</a>
-          <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">Web Design</a>
+          <router-link to="/surcharge" class="block py-1 text-gray-600 hover:text-indigo-600">Surcharge & Dual Pricing Program</router-link>
+          <router-link to="/bizfunds-cash" class="block py-1 text-gray-600 hover:text-indigo-600">BizFunds Cash Advance</router-link>
+          <router-link to="/gift-loyalty" class="block py-1 text-gray-600 hover:text-indigo-600">Gift & Loyalty Programs</router-link>
+          <router-link to="/web-design" class="block py-1 text-gray-600 hover:text-indigo-600">Web Design</router-link>
         </div>
       </div>
       
@@ -500,10 +500,10 @@
         <div v-if="activeMobileSubmenu === 'industries'" class="pl-4 mt-2 space-y-2">
           <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">Retail</a>
           <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">eCommerce</a>
-          <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">Restaurants & Bars</a>
-          <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">Professional Services</a>
-          <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">Skilled Trade Services</a>
-          <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">Specialty Businesses</a>
+          <router-link to="/restaurants" class="block py-1 text-gray-600 hover:text-indigo-600">Restaurants & Bars</router-link>
+          <router-link to="/professional-services" class="block py-1 text-gray-600 hover:text-indigo-600">Professional Services</router-link>
+          <router-link to="/skill-trade" class="block py-1 text-gray-600 hover:text-indigo-600">Skilled Trade Services</router-link>
+          <router-link to="/specialty-business" class="block py-1 text-gray-600 hover:text-indigo-600">Specialty Businesses</router-link>
         </div>
       </div>
       
@@ -514,7 +514,7 @@
         </button>
         <div v-if="activeMobileSubmenu === 'partnerships'" class="pl-4 mt-2 space-y-2">
           <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">Agents</a>
-          <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">Payment Partnerships</a>
+          <router-link to="/payment-partnerships" class="block py-1 text-gray-600 hover:text-indigo-600">Payment Partnerships</router-link>
           <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">POS Reseller</a>
         </div>
       </div>
