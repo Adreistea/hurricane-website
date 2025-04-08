@@ -43,10 +43,10 @@
           </div>
           
           <blockquote class="italic text-gray-600 border-l-4 border-indigo-300 pl-4">
-            "EMS has been a pleasure to work with. Always providing great customer service. Our representative is always available to assist and as a small business we appreciate that."
+            "Working with Hurricane Payments has been exceptional. Their customer service is outstanding, and their team is consistently responsive to our needs. As a small business, we truly value their personalized support and attention."
           </blockquote>
           
-          <p class="mt-3 font-semibold">AME Loyal Inc</p>
+          <p class="mt-3 font-semibold">Hurricane Payments</p>
         </div>
       </div>
       
@@ -99,7 +99,7 @@
                 <h2 class="text-2xl font-bold text-purple-500">Lower Rates and Fees</h2>
               </div>
               <p class="text-gray-700">
-                We offer the lowest rates possible to help you increase profitability. In fact, 95% of business owners who receive our free rate review end up saving money.
+                We offer the lowest rates possible to help you increase profitability. In fact, 97% of business owners who receive our free rate review end up saving money.
               </p>
             </div>
 

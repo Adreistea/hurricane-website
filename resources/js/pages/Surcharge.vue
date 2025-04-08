@@ -40,7 +40,7 @@
       <!-- Right Content - Image with Card Reveal Animation -->
       <div class="lg:w-1/2 relative card-reveal delay-200">
         <div class="rounded-lg shadow-2xl overflow-hidden">
-          <img src="@/../images/TransparentLogo.png" alt="Surcharge Program" class="w-full h-auto" />
+          <img src="@/../images/surchargepic.jpg" alt="Surcharge Program" class="w-full h-auto" />
         </div>
         
         <!-- Animated decorative elements -->
@@ -85,6 +85,120 @@
               <p class="text-gray-700">
                 By offsetting processing costs, you can significantly reduce operational expenses. Many businesses save thousands of dollars annually with our surcharge program.
               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- After the How It Works Section and before the Benefits Section -->
+    <!-- Visual Information Section -->
+    <div class="py-24 bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden">
+      <!-- Enhanced Background with animated particles -->
+      <div class="absolute inset-0 z-0">
+        <div class="absolute top-0 left-0 w-full h-full bg-pattern"></div>
+        <div class="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-[#973131]/5 animate-pulse-slow"></div>
+        <div class="absolute bottom-1/4 left-1/4 w-96 h-96 rounded-full bg-indigo-500/5 animate-pulse-slower"></div>
+      </div>
+      
+      <!-- Section Content with Enhanced Styling -->
+      <div class="container mx-auto px-6 relative z-10">
+        <!-- Section Title with decorative elements -->
+        <div class="text-center mb-16 relative">
+          <span class="absolute inset-x-0 top-1/2 h-0.5 bg-gray-200 transform -translate-y-1/2"></span>
+          <span class="relative inline-block px-8 py-3 bg-white rounded-full shadow-md border border-gray-100">
+            <h2 class="text-3xl md:text-4xl font-bold" style="color: #973131; text-shadow: 0 1px 2px rgba(0,0,0,0.1);">
+              Compliance & Requirements
+            </h2>
+          </span>
+        </div>
+        
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <!-- Left Image with enhanced styling -->
+          <div class="lg:w-1/2 transform hover:scale-[1.02] transition-all duration-500">
+            <div class="relative rounded-xl overflow-hidden shadow-2xl">
+              <!-- Primary Image - Without any overlays or info boxes -->
+              <img 
+                :src="surchargePic" 
+                alt="Surcharge Program Details" 
+                class="w-full h-auto object-cover"
+                style="min-height: 480px; filter: saturate(1.1);"
+              />
+              
+              <!-- Light decorative gradient overlay only at the bottom - very subtle -->
+              <div class="absolute bottom-0 left-0 right-0 h-1/6 bg-gradient-to-t from-black/20 to-transparent opacity-40"></div>
+            </div>
+          </div>
+          
+          <!-- Right Content with animated entries -->
+          <div class="lg:w-1/2">
+            <h2 class="text-4xl font-bold mb-6 relative" style="color: #973131;">
+              <span class="absolute -left-4 top-0 h-full w-1 bg-[#973131] rounded-full"></span>
+              Surcharge Compliance Requirements
+            </h2>
+            <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+              Implementing a surcharge program requires careful attention to card brand rules and regulations. Our program ensures your business stays fully compliant while maximizing savings.
+            </p>
+            
+            <div class="space-y-5">
+              <!-- Enhanced compliance items with improved hover effects -->
+              <div class="flex items-start p-5 bg-white rounded-lg shadow-md border-l-4 border-[#973131] hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                <div class="w-10 h-10 mr-4 bg-gradient-to-br from-[#973131] to-red-600 rounded-full flex items-center justify-center text-white flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900 mb-1">Clear Customer Notification</h4>
+                  <p class="text-gray-700">Required signage at business entrance and point of sale informs customers before transactions.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start p-5 bg-white rounded-lg shadow-md border-l-4 border-[#973131] hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                <div class="w-10 h-10 mr-4 bg-gradient-to-br from-[#973131] to-red-600 rounded-full flex items-center justify-center text-white flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900 mb-1">Transparent Receipt Details</h4>
+                  <p class="text-gray-700">Separate line item on receipts clearly showing the surcharge amount for transparency.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start p-5 bg-white rounded-lg shadow-md border-l-4 border-[#973131] hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                <div class="w-10 h-10 mr-4 bg-gradient-to-br from-[#973131] to-red-600 rounded-full flex items-center justify-center text-white flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900 mb-1">Pre-Implementation Notice</h4>
+                  <p class="text-gray-700">30-day advance notification to card brands before implementing your surcharge program.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start p-5 bg-white rounded-lg shadow-md border-l-4 border-[#973131] hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                <div class="w-10 h-10 mr-4 bg-gradient-to-br from-[#973131] to-red-600 rounded-full flex items-center justify-center text-white flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900 mb-1">Fair Fee Structure</h4>
+                  <p class="text-gray-700">Surcharge cannot exceed your cost of acceptance, ensuring fair treatment for customers.</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Action button -->
+            <div class="mt-8">
+              <a href="#" class="inline-flex items-center px-6 py-3 bg-[#973131] text-white font-medium rounded-lg shadow-lg transition-all duration-300 hover:bg-[#7e2929] hover:shadow-xl transform hover:-translate-y-1">
+                <span>Learn More About Compliance</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
@@ -154,7 +268,7 @@
             <div class="flex items-start scroll-reveal opacity-0" data-delay="300">
               <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-rose-400 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd" />
+                  <path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 100 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd" />
                 </svg>
               </div>
               <div>
@@ -221,6 +335,9 @@
 import { onMounted } from 'vue';
 import MainLayout from './MainLayout.vue';
 
+// Import the image using Vue's dynamic import
+const surchargePic = new URL('@/../images/surchargepic.jpg', import.meta.url).href;
+
 onMounted(() => {
   // Initialize animation observer for scroll reveal
   const observer = new IntersectionObserver((entries) => {
@@ -246,6 +363,55 @@ onMounted(() => {
 </script>
 
 <style scoped>
+/* Add these font imports at the top of your style section */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+
+/* Apply font families to elements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+p, a, span, blockquote, li {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Refine heading styles */
+h1 {
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h2 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h3 {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Add a touch of refinement to the main navigation */
+nav a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* Make CTA buttons more distinct */
+.fancy-button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* Enhance body text readability */
+p {
+  line-height: 1.6;
+  font-weight: 400;
+}
+
 /* Base animations */
 .scroll-reveal {
   transform: translateY(20px);
@@ -370,5 +536,91 @@ onMounted(() => {
 
 .fancy-button:hover:after {
   transform: translateX(100%);
+}
+
+/* Enhanced text gradient animation */
+.text-gradient {
+  background-size: 200% auto;
+  animation: textGradient 4s ease infinite;
+}
+
+@keyframes textGradient {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+/* Floating animation for section titles */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Shine effect animation for cards */
+.shine-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 100%);
+  transform: skewX(-25deg);
+  z-index: 1;
+  animation: shine 6s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0%, 100% { 
+    left: -75%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  55% { 
+    left: 125%;
+    opacity: 0;
+  }
+}
+
+/* Add this to your style section */
+.bg-pattern {
+  background-image: radial-gradient(#973131 8%, transparent 8%);
+  background-position: 0 0;
+  background-size: 40px 40px;
+  opacity: 0.2;
+}
+
+/* New animations for enhanced section */
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+@keyframes pulse-slower {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.1); }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s infinite ease-in-out;
+}
+
+.animate-pulse-slower {
+  animation: pulse-slower 12s infinite ease-in-out;
 }
 </style>

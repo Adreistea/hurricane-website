@@ -66,26 +66,26 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
           <!-- Stat 1 -->
           <div class="text-center scroll-reveal opacity-0" data-delay="0">
-            <div class="text-5xl font-bold mb-4" style="color: #79c142;">95%</div>
-            <p class="text-gray-600">See significant savings with a rate review</p>
+            <div class="text-5xl font-bold mb-4" style="color: #79c142;">97%</div>
+            <p class="text-gray-600">Achieve substantial savings by reviewing the rates of their current mobile credit card processing provider.</p>
           </div>
           
           <!-- Stat 2 -->
           <div class="text-center scroll-reveal opacity-0" data-delay="200">
             <div class="text-5xl font-bold mb-4" style="color: #79c142;">100+</div>
-            <p class="text-gray-600">U.S. cities have an EMS presence</p>
+            <p class="text-gray-600">U.S. cities have Hurricane Payments presence and use our Mobile Credit Card Processing Solutions</p>
           </div>
           
           <!-- Stat 3 -->
           <div class="text-center scroll-reveal opacity-0" data-delay="400">
-            <div class="text-5xl font-bold mb-4" style="color: #79c142;">30+</div>
-            <p class="text-gray-600">Years operating as a leading payments provider</p>
+            <div class="text-5xl font-bold mb-4" style="color: #79c142;">20+</div>
+            <p class="text-gray-600">Years operating as a leading payments provider with best-in-class Credit Card Processing Solutions</p>
           </div>
           
           <!-- Stat 4 -->
           <div class="text-center scroll-reveal opacity-0" data-delay="600">
-            <div class="text-5xl font-bold mb-4" style="color: #79c142;">11</div>
-            <p class="text-gray-600">Regional sales offices across the country</p>
+            <div class="text-5xl font-bold mb-4" style="color: #79c142;">19</div>
+            <p class="text-gray-600">Regional sales offices across the country provide support for Phone, Tablet, and Mobile Credit Card Processing Solutions</p>
           </div>
         </div>
       </div>
@@ -289,7 +289,7 @@
     </div>
 
     <!-- CTA Section -->
-    <div class="bg-gradient-to-r from-custom-red to-custom-red-dark py-16 relative overflow-hidden">
+    <div class="bg-[#973131] py-16 relative overflow-hidden">
       <div class="absolute top-0 left-0 w-full h-full opacity-10">
         <div class="absolute top-0 right-0 bg-white rounded-full w-64 h-64 -mt-20 -mr-20"></div>
         <div class="absolute bottom-0 left-0 bg-white rounded-full w-80 h-80 -mb-32 -ml-32"></div>
@@ -303,10 +303,10 @@
           </p>
           
           <div class="flex flex-col sm:flex-row justify-center gap-6">
-            <a href="#" class="bg-white text-custom-red hover:bg-red-50 font-bold py-3 px-8 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+            <a href="#" class="bg-white text-[#973131] hover:bg-red-50 font-bold py-3 px-8 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
               Get Started Today
             </a>
-            <a href="#" class="border-2 border-white text-white hover:bg-white hover:text-custom-red font-bold py-3 px-8 rounded-lg transition-all duration-300">
+            <a href="#" class="border-2 border-white text-white hover:bg-white hover:text-[#973131] font-bold py-3 px-8 rounded-lg transition-all duration-300">
               Talk to Sales
             </a>
           </div>

@@ -11,7 +11,7 @@
         <div class="text-reveal mb-6">
           <h1 class="text-reveal-content text-5xl lg:text-6xl font-bold leading-tight delay-200"
               style="color: #973131;">
-            BizFunds Cash Advance
+            Speedy Business Loan
           </h1>
         </div>
         
@@ -104,7 +104,7 @@
     <div class="bg-gray-50 py-24">
       <div class="container mx-auto px-6">
         <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Benefits of BizFunds</h2>
+          <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Benefits of Speedy Business Loan</h2>
           <div class="w-32 h-1 bg-gray-300 mx-auto"></div>
         </div>
         
