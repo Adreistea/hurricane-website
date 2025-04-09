@@ -561,6 +561,8 @@
       v-if="currentLightbox"
       :is-visible="showLightbox"
       :lightbox-id="currentLightbox.lightbox_id"
+      :title="currentLightbox.header"
+      :description="currentLightbox.description"
       :close-on-overlay-click="currentLightbox.close_on_overlay"
       @close="closeLightbox"
       @consultation-click="handleConsultationClick"
@@ -669,10 +671,26 @@ const handleConsultationClick = () => {
 
 // Fetch lightboxes when component mounts
 onMounted(async () => {
+  console.log('Home component mounted');
+  
+  // Clear any localStorage items that might prevent lightbox from showing
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    if (key && key.startsWith('lightbox_shown_')) {
+      console.log('Removing stored lightbox key:', key);
+      localStorage.removeItem(key);
+    }
+  }
+  
+  // Fetch lightboxes
   await fetchLightboxes();
-  // Force show for testing
+  
+  // If we found a lightbox from the database, show it
   if (currentLightbox.value) {
+    console.log('Found lightbox from database:', currentLightbox.value);
     showLightbox.value = true;
+  } else {
+    console.log('No active lightboxes found for home page');
   }
 });
 
