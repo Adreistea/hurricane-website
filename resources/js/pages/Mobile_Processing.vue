@@ -194,7 +194,7 @@
             <div class="mt-8">
               <a href="#" class="fancy-button text-white font-medium py-3 px-8 rounded-md shadow-lg inline-block" 
                  style="background-color: #973131; transition: all 0.3s ease;">
-                Get Your EMSmobile Reader
+                Contact Hurricane Payments Today
               </a>
             </div>
           </div>
@@ -305,7 +305,7 @@ import MainLayout from './MainLayout.vue';
 import NavBar from './NavBar.vue'; // Import the NavBar component
 
 // Import mobile device image with correct file name
-const mobileDeviceImg = new URL('@/../images/mobileprocesspic.png', import.meta.url).href;
+const mobileDeviceImg = new URL('@/../images/qrpic.jpg', import.meta.url).href;
 
 onMounted(() => {
   // Fancy button hover effect
@@ -328,12 +328,14 @@ onMounted(() => {
   
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
+      console.log('Element intersection state changed:', entry.target, entry.isIntersecting);
       if (entry.isIntersecting) {
         // Get the delay attribute
         const delay = entry.target.getAttribute('data-delay') || 0;
         
         // Add animation class after the specified delay
         setTimeout(() => {
+          console.log('Animating element:', entry.target);
           if (entry.target.classList.contains('scroll-reveal-left')) {
             entry.target.classList.add('animate-reveal-left');
           } else if (entry.target.classList.contains('scroll-reveal-right')) {
@@ -403,6 +405,30 @@ onMounted(() => {
   if (ctaSection) {
     ctaObserver.observe(ctaSection);
   }
+
+  // At the very bottom of the onMounted function, add:
+  console.log('Mobile_Processing.vue mounted, observers initialized');
+  console.log('Elements to animate:', document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right').length);
+
+  // Add this at the end of onMounted function to force visibility of the CTA section
+  setTimeout(() => {
+    console.log('Forcing visibility of CTA section');
+    const ctaHeading = document.querySelector('.cta-heading');
+    if (ctaHeading) {
+      ctaHeading.classList.add('animate-reveal');
+      ctaHeading.classList.remove('opacity-0');
+    }
+    
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+      el.classList.add('animate-reveal');
+      el.classList.remove('opacity-0');
+    });
+    
+    // Make all elements with opacity-0 visible
+    document.querySelectorAll('.opacity-0').forEach(el => {
+      el.classList.remove('opacity-0');
+    });
+  }, 500);
 });
 </script>
 

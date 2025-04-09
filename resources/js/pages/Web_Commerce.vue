@@ -196,7 +196,7 @@
         <div class="lg:w-1/2 scroll-reveal-left opacity-0">
           <h2 class="text-4xl font-bold mb-6" style="color: #973131;">What is a Virtual Terminal?</h2>
           <p class="text-lg text-gray-600 mb-6">
-            A Virtual Terminal is an interface built into a Payment Gateway. Its impressive technology empowers you to run your Gateway as if it were a credit card terminal on your computer, tablet, or mobile device. Plus, the Virtual Terminal is browser-based, which means you can access this essential business tool on any web-enabled device. Each Virtual Terminal also offers innovative features to make getting paid easier. Keep scrolling to find out what they are!
+            A Virtual Terminal is an interface built into a Payment Gateway. Its impressive technology empowers you to run your Gateway as if it were a credit card terminal on your computer, tablet, or mobile device. Plus, the Virtual Terminal is browser-based, which means you can access this essential business tool on any web-enabled device. Each Virtual Terminal also offers innovative features to make getting paid easier. 
           </p>
         </div>
         

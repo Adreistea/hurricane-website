@@ -119,6 +119,11 @@ const router = createRouter({
             path: '/lightbox-config',
             name: 'LightboxConfig',
             component: () => import('./pages/lightbox_config.vue')
+        },
+        {
+            path: '/chargeback-guide',
+            name: 'ChargebackGuide',
+            component: () => import('./pages/Chargeback_Guide.vue')
         }
     ]
 });

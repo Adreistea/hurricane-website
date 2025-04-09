@@ -160,6 +160,23 @@
                     </div>
                     <span class="link-desc">Customer retention tools</span>
                   </router-link>
+                  <router-link to="/chargeback-guide" class="menu-item-link">
+                    <div class="top-row">
+                      <div class="icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24">
+                          <defs>
+                            <linearGradient id="chargebackGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" stop-color="#f97316" />
+                              <stop offset="100%" stop-color="#fb923c" />
+                            </linearGradient>
+                          </defs>
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="url(#chargebackGradient)"/>
+                        </svg>
+                      </div>
+                      <span class="link-title">Chargeback Guide</span>
+                    </div>
+                    <span class="link-desc">Manage & prevent disputes</span>
+                  </router-link>
                 </div>
               </div>
             </div>
@@ -426,6 +443,7 @@
           <router-link to="/surcharge" class="block py-1 text-gray-600 hover:text-indigo-600">Surcharge & Dual Pricing Program</router-link>
           <router-link to="/bizfunds-cash" class="block py-1 text-gray-600 hover:text-indigo-600">Speedy Business Loan</router-link>
           <router-link to="/gift-loyalty" class="block py-1 text-gray-600 hover:text-indigo-600">Gift & Loyalty Programs</router-link>
+          <router-link to="/chargeback-guide" class="block py-1 text-gray-600 hover:text-indigo-600">Chargeback Guide</router-link>
         </div>
       </div>
       
@@ -630,6 +648,8 @@ onUnmounted(() => {
   transition: all 0.3s ease;
   margin-bottom: 8px;
   border: 1px solid transparent;
+  position: relative;
+  min-height: 70px;
 }
 
 /* Container for icon and title */
@@ -641,43 +661,15 @@ onUnmounted(() => {
 
 /* Keep icon size and style the same */
 .icon-container {
-  margin-right: 12px;
-  margin-bottom: 0;
-  width: 38px;
-  height: 38px;
-}
-
-/* Move link-title next to the icon */
-.link-title {
-  font-weight: 700;
-  color: #111827;
-  font-size: 1rem;
-  padding-top: 2px;
-}
-
-/* Position the description below the icon and title */
-.link-desc {
-  font-size: 0.875rem;
-  color: #6b7280;
-  padding-left: 50px; /* Match the width of icon-container + margin-right */
-}
-
-/* Adjust hover effects to work with new layout */
-.menu-item-link:hover .link-title {
-  color: #991b1b;
-}
-
-/* Enhanced Icon Styling with gradients */
-.icon-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
-  margin-right: 16px;
+  width: 36px;
+  height: 36px;
+  margin-right: 8px;
   flex-shrink: 0;
   position: relative;
-  border-radius: 10px;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.8);
   transition: all 0.3s ease;
   border: 1px solid rgba(0, 0, 0, 0.05);
@@ -740,13 +732,14 @@ onUnmounted(() => {
 
 /* Section title enhancement */
 .section-title {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   padding-bottom: 8px;
   border-bottom: 2px solid #f3f4f6;
   color: #111827;
   position: relative;
+  white-space: nowrap;
 }
 
 .section-title::after {
@@ -788,6 +781,7 @@ onUnmounted(() => {
   overflow: hidden;
   animation: panelFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  padding-bottom: 16px;
 }
 
 /* Consistent header styling for all dropdowns */
@@ -943,6 +937,8 @@ onUnmounted(() => {
 /* Make all sections padding consistent */
 .dropdown-section {
   padding: 16px 24px;
+  min-width: 200px;
+  box-sizing: border-box;
 }
 
 /* Update structure to match Solutions dropdown for all panels */
@@ -1127,5 +1123,16 @@ onUnmounted(() => {
 
 .menu-item-link:hover .icon-container svg path {
   transform: translateY(-1px);
+}
+
+/* Update the link-desc style to ensure consistent alignment */
+.link-desc {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-left: 44px;
+  display: block;
+  white-space: normal;
+  line-height: 1.2;
+  max-width: 100%;
 }
 </style>
