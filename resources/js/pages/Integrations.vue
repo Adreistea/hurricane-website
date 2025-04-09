@@ -124,12 +124,98 @@
         </div>
       </div>
     </div>
+
+    <!-- Add this at the end of the template, just before the closing MainLayout tag -->
+    <div v-if="currentLightbox && showLightbox">
+      <lightbox
+        :is-visible="showLightbox"
+        :lightbox-id="currentLightbox.lightbox_id"
+        @close="closeLightbox"
+        @consultation-click="handleConsultationClick"
+      />
+    </div>
   </MainLayout>
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
+import axios from 'axios';
 import MainLayout from './MainLayout.vue';
+import lightbox from './lightbox.vue'; // Import the lightbox component
+
+// Add these for lightbox functionality
+const currentLightbox = ref(null);
+const showLightbox = ref(false);
+
+// Fetch active lightboxes for integrations page
+const fetchLightboxes = async () => {
+  try {
+    console.log('Fetching lightboxes for integrations page...');
+    const response = await axios.get('/api/lightboxes/active', {
+      params: { page: 'integrations' }
+    });
+    console.log('API Response:', response.data);
+    
+    if (response.data.success && response.data.data.length > 0) {
+      console.log('Found active lightbox:', response.data.data[0]);
+      currentLightbox.value = response.data.data[0];
+      
+      // Check if this lightbox should only be shown once
+      const showOnceKey = `lightbox_shown_${currentLightbox.value.lightbox_id}`;
+      if (currentLightbox.value.show_once && localStorage.getItem(showOnceKey)) {
+        return;
+      }
+      
+      // Show immediately or set up exit intent
+      if (currentLightbox.value.show_on_exit) {
+        setupExitIntent();
+      } else {
+        // Show after a short delay
+        setTimeout(() => {
+          showLightbox.value = true;
+          if (currentLightbox.value.show_once) {
+            localStorage.setItem(showOnceKey, 'true');
+          }
+        }, 3000);
+      }
+    }
+  } catch (error) {
+    console.error('Error fetching lightboxes:', error);
+  }
+};
+
+// Handle the close action
+const closeLightbox = () => {
+  showLightbox.value = false;
+};
+
+// Handle the consultation button click
+const handleConsultationClick = () => {
+  showLightbox.value = false;
+  // Navigate to consultation page or handle as needed
+  window.location.href = currentLightbox.value.cta_url || '/request-consultation';
+};
+
+// Set up exit intent detection
+const setupExitIntent = () => {
+  const handleExitIntent = (e) => {
+    // If the mouse leaves the top of the viewport
+    if (e.clientY <= 0) {
+      // Remove the event listener to prevent multiple triggers
+      document.removeEventListener('mouseleave', handleExitIntent);
+      
+      // Show the lightbox
+      showLightbox.value = true;
+      
+      // If show only once, set the flag
+      if (currentLightbox.value && currentLightbox.value.show_once) {
+        localStorage.setItem(`lightbox_shown_${currentLightbox.value.lightbox_id}`, 'true');
+      }
+    }
+  };
+  
+  document.addEventListener('mouseleave', handleExitIntent);
+};
 
 onMounted(() => {
   // Initialize animation observer for scroll reveal
@@ -152,6 +238,9 @@ onMounted(() => {
   slideElements.forEach(element => {
     element.classList.add('animate');
   });
+  
+  // Fetch lightboxes for this page
+  fetchLightboxes();
 });
 </script>
 

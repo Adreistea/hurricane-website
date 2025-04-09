@@ -173,6 +173,33 @@
               <label class="checkbox-label">
                 <input 
                   type="checkbox" 
+                  value="web-commerce" 
+                  v-model="displayPages" 
+                  class="checkbox-input"
+                />
+                Web Commerce
+              </label>
+              <label class="checkbox-label">
+                <input 
+                  type="checkbox" 
+                  value="text-qr" 
+                  v-model="displayPages" 
+                  class="checkbox-input"
+                />
+                Text & QR Payments
+              </label>
+              <label class="checkbox-label">
+                <input 
+                  type="checkbox" 
+                  value="integrations" 
+                  v-model="displayPages" 
+                  class="checkbox-input"
+                />
+                Integrations
+              </label>
+              <label class="checkbox-label">
+                <input 
+                  type="checkbox" 
                   value="pricing" 
                   v-model="displayPages" 
                   class="checkbox-input"
@@ -214,6 +241,42 @@
                   class="checkbox-input"
                 />
                 eCommerce
+              </label>
+              <label class="checkbox-label">
+                <input 
+                  type="checkbox" 
+                  value="surcharge" 
+                  v-model="displayPages" 
+                  class="checkbox-input"
+                />
+                Surcharge
+              </label>
+              <label class="checkbox-label">
+                <input 
+                  type="checkbox" 
+                  value="bizfunds-cash" 
+                  v-model="displayPages" 
+                  class="checkbox-input"
+                />
+                BizFunds Cash
+              </label>
+              <label class="checkbox-label">
+                <input 
+                  type="checkbox" 
+                  value="gift-loyalty" 
+                  v-model="displayPages" 
+                  class="checkbox-input"
+                />
+                Gift & Loyalty
+              </label>
+              <label class="checkbox-label">
+                <input 
+                  type="checkbox" 
+                  value="chargeback-guide" 
+                  v-model="displayPages" 
+                  class="checkbox-input"
+                />
+                Chargeback Guide
               </label>
             </div>
           </div>

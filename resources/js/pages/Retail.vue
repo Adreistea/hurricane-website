@@ -233,12 +233,82 @@
         </div>
       </div>
     </div>
+    
+    <!-- Lightbox Component -->
+    <lightbox
+      :is-visible="showLightbox"
+      :lightbox-id="currentLightboxId"
+      @close="showLightbox = false"
+      @consultation-click="handleConsultationClick"
+    />
   </MainLayout>
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 import MainLayout from './MainLayout.vue';
+import axios from 'axios';
+import lightbox from './lightbox.vue';
+
+// Lightbox state
+const showLightbox = ref(false);
+const currentLightboxId = ref(null);
+
+// Handle consultation click
+const handleConsultationClick = () => {
+  showLightbox.value = false;
+  // Redirect to consultation page
+  window.location.href = '/request-consultation';
+};
+
+// Fetch lightboxes and check if we need to show one
+const fetchLightboxes = async () => {
+  try {
+    console.log('Fetching lightboxes for retail page...');
+    const response = await axios.get('/api/lightboxes');
+    if (response.data.success) {
+      const lightboxes = response.data.data;
+      console.log('API Response:', response.data);
+      
+      // Find active lightbox for retail page
+      const retailLightbox = lightboxes.find(item => {
+        const displayPages = Array.isArray(item.display_pages) 
+          ? item.display_pages 
+          : JSON.parse(item.display_pages || '[]');
+        
+        return displayPages.includes('retail') && item.status === 'active';
+      });
+      
+      if (retailLightbox) {
+        console.log('Found retail lightbox:', retailLightbox);
+        currentLightboxId.value = retailLightbox.lightbox_id;
+        
+        // Check if we should show this lightbox (based on show_once setting)
+        const lightboxShownKey = `lightbox_shown_${retailLightbox.lightbox_id}`;
+        const hasBeenShown = localStorage.getItem(lightboxShownKey);
+        
+        if (!retailLightbox.show_once || !hasBeenShown) {
+          // Show the lightbox after a short delay
+          setTimeout(() => {
+            console.log('Showing lightbox now');
+            showLightbox.value = true;
+            
+            // If show_once is enabled, mark as shown
+            if (retailLightbox.show_once) {
+              localStorage.setItem(lightboxShownKey, 'true');
+            }
+          }, 2000); // Show after 2 seconds
+        } else {
+          console.log('Lightbox already shown to this visitor');
+        }
+      } else {
+        console.log('No active lightbox found for retail page');
+      }
+    }
+  } catch (error) {
+    console.error('Error fetching lightboxes:', error);
+  }
+};
 
 onMounted(() => {
   // Initialize animation observer for scroll reveal
@@ -261,6 +331,9 @@ onMounted(() => {
   slideElements.forEach(element => {
     element.classList.add('animate');
   });
+  
+  // Fetch and check lightboxes
+  fetchLightboxes();
 });
 </script>
 

@@ -4,7 +4,11 @@
     :class="{ 'lightbox-active': isVisible }" 
     @click="closeOnOverlayClick ? close() : null"
   >
-    <div class="lightbox-container" @click.stop>
+    <div 
+      class="lightbox-container" 
+      :class="{ 'text-only': !imageUrl }" 
+      @click.stop
+    >
       <!-- Close button -->
       <button class="lightbox-close" @click="close">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -12,17 +16,10 @@
         </svg>
       </button>
       
-      <div class="lightbox-content">
-        <!-- Left side - Image area (display only) -->
-        <div class="lightbox-image-container">
-          <div v-if="!imageUrl" class="image-placeholder">
-            <!-- Placeholder SVG for when no image is available -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-          </div>
-          
-          <div v-else class="image-display-container">
+      <div class="lightbox-content" :class="{ 'text-only-content': !imageUrl }">
+        <!-- Left side - Image area (display only) - Only show if image exists -->
+        <div v-if="imageUrl" class="lightbox-image-container">
+          <div class="image-display-container">
             <img 
               :src="imageUrl" 
               alt="Lightbox image" 
@@ -33,7 +30,7 @@
         </div>
         
         <!-- Right side - Description area -->
-        <div class="lightbox-description">
+        <div class="lightbox-description" :class="{ 'full-width': !imageUrl }">
           <h2 class="description-title">{{ header }}</h2>
           
           <div class="description-content">
@@ -221,7 +218,7 @@ onMounted(() => {
 
 <style scoped>
 /* Add these font imports at the top of your style section */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap');
 
 /* Apply font families to elements */
 h1, h2, h3, h4, h5, h6, .action-button {
@@ -240,14 +237,15 @@ p, a, span, blockquote, li {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 50;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  backdrop-filter: blur(5px);
 }
 
 .lightbox-active {
@@ -257,27 +255,33 @@ p, a, span, blockquote, li {
 
 /* Lightbox container */
 .lightbox-container {
-  background-color: white;
-  border-radius: 8px;
-  width: 90%;
-  max-width: 900px;
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  border-radius: 12px;
+  width: 92%;
+  max-width: 950px;
   max-height: 90vh;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  animation: lightboxFadeIn 0.3s ease forwards;
+  animation: lightboxFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Text-only container variant */
+.lightbox-container.text-only {
+  max-width: 600px;
 }
 
 @keyframes lightboxFadeIn {
   from {
     opacity: 0;
-    transform: scale(0.9);
+    transform: scale(0.92) translateY(10px);
   }
   to {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1) translateY(0);
   }
 }
 
@@ -289,19 +293,24 @@ p, a, span, blockquote, li {
   background: white;
   border: none;
   border-radius: 50%;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px -1px rgba(0, 0, 0, 0.15);
   z-index: 5;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .lightbox-close:hover {
   background-color: #f3f4f6;
+  transform: rotate(90deg);
+}
+
+.lightbox-close svg {
+  color: #973131;
 }
 
 /* Content area */
@@ -310,13 +319,30 @@ p, a, span, blockquote, li {
   flex-direction: column;
   flex-grow: 1;
   overflow: hidden;
-  padding: 20px;
+  padding: 25px;
+  position: relative;
+}
+
+.lightbox-content.text-only-content {
+  padding: 30px 40px;
 }
 
 @media (min-width: 768px) {
   .lightbox-content {
     flex-direction: row;
-    padding: 30px;
+    padding: 40px;
+  }
+  
+  .lightbox-content::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(151, 49, 49, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    z-index: 0;
   }
 }
 
@@ -327,38 +353,32 @@ p, a, span, blockquote, li {
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 @media (min-width: 768px) {
   .lightbox-image-container {
     margin-bottom: 0;
-    margin-right: 30px;
-    min-height: 300px;
+    margin-right: 40px;
+    min-height: 320px;
   }
-}
-
-/* Image placeholder */
-.image-placeholder {
-  width: 100%;
-  height: 300px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  text-align: center;
-  background-color: #f8fafc;
 }
 
 /* Image display */
 .image-display-container {
   position: relative;
   width: 100%;
-  height: 300px;
-  border-radius: 8px;
+  height: 320px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+  transform: perspective(1000px) rotateY(-2deg);
+  transition: transform 0.5s ease;
+}
+
+.image-display-container:hover {
+  transform: perspective(1000px) rotateY(0deg);
 }
 
 .displayed-image {
@@ -372,55 +392,147 @@ p, a, span, blockquote, li {
 .lightbox-description {
   flex: 1;
   min-width: 0;
-  max-height: 400px;
+  max-height: 420px;
   overflow-y: auto;
+  position: relative;
+  z-index: 1;
+  padding: 10px;
+}
+
+/* Full width when there's no image */
+.lightbox-description.full-width {
+  text-align: center;
+  max-width: 100%;
+  padding: 0;
 }
 
 .description-title {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.75rem;
+  font-weight: 800;
   color: #111827;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   line-height: 1.2;
+  position: relative;
+  display: inline-block;
+}
+
+.full-width .description-title {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.description-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background-color: #973131;
+  border-radius: 2px;
+}
+
+.full-width .description-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
 }
 
 .description-content {
   color: #4b5563;
-  line-height: 1.6;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.full-width .description-content {
+  margin: 0 auto;
+  max-width: 90%;
 }
 
 .default-content {
-  min-height: 100px;
+  min-height: 80px;
+}
+
+.full-width .default-content {
+  min-height: 120px;
 }
 
 /* Action area */
 .lightbox-actions {
-  padding: 15px 30px;
-  background-color: #f9fafb;
+  padding: 20px 30px 25px;
+  background: linear-gradient(to right, #f7f8f9, #ffffff);
   border-top: 1px solid #e5e7eb;
   display: flex;
   justify-content: center;
+  position: relative;
+}
+
+.lightbox-actions::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #973131, #b85151);
 }
 
 .action-button {
-  background-color: #973131;
+  background: linear-gradient(to bottom right, #973131, #812929);
   color: white;
-  font-weight: 600;
-  padding: 10px 24px;
+  font-weight: 700;
+  padding: 12px 30px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px -1px rgba(151, 49, 49, 0.3);
+  box-shadow: 0 10px 15px -3px rgba(151, 49, 49, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  font-size: 1.1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.action-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: all 0.6s ease;
 }
 
 .action-button:hover {
-  background-color: #7e2929;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px -2px rgba(151, 49, 49, 0.4);
+  background: linear-gradient(to bottom right, #872b2b, #6e2323);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 20px -7px rgba(151, 49, 49, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+}
+
+.action-button:hover::before {
+  left: 100%;
 }
 
 .action-button:active {
-  transform: translateY(0);
+  transform: translateY(-1px);
+}
+
+/* Custom scrollbar for the description */
+.lightbox-description::-webkit-scrollbar {
+  width: 5px;
+}
+
+.lightbox-description::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.lightbox-description::-webkit-scrollbar-thumb {
+  background: #973131;
+  border-radius: 10px;
+}
+
+.lightbox-description::-webkit-scrollbar-thumb:hover {
+  background: #7e2929;
 }
 </style>

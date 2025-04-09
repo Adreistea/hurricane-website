@@ -224,12 +224,74 @@
         </div>
       </div>
     </div>
+    
+    <!-- Lightbox Component -->
+    <lightbox
+      :is-visible="showLightbox"
+      :lightbox-id="currentLightboxId"
+      @close="showLightbox = false"
+      @consultation-click="handleConsultationClick"
+    />
   </MainLayout>
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 import MainLayout from './MainLayout.vue';
+import axios from 'axios';
+import lightbox from './lightbox.vue';
+
+// Lightbox state
+const showLightbox = ref(false);
+const currentLightboxId = ref(null);
+
+// Handle consultation click
+const handleConsultationClick = () => {
+  showLightbox.value = false;
+  // You can add a redirect or other action here
+  console.log('Consultation requested from BizFunds Cash');
+};
+
+// Fetch lightboxes and check if we need to show one
+const fetchLightboxes = async () => {
+  try {
+    const response = await axios.get('/api/lightboxes');
+    if (response.data.success) {
+      const lightboxes = response.data.data;
+      
+      // Find active lightbox for bizfunds-cash page
+      const bizFundsLightbox = lightboxes.find(item => {
+        const displayPages = Array.isArray(item.display_pages) 
+          ? item.display_pages 
+          : JSON.parse(item.display_pages || '[]');
+        
+        return displayPages.includes('bizfunds-cash') && item.status === 'active';
+      });
+      
+      if (bizFundsLightbox) {
+        currentLightboxId.value = bizFundsLightbox.lightbox_id;
+        
+        // Check if we should show this lightbox (based on show_once setting)
+        const lightboxShownKey = `lightbox_shown_${bizFundsLightbox.lightbox_id}`;
+        const hasBeenShown = localStorage.getItem(lightboxShownKey);
+        
+        if (!bizFundsLightbox.show_once || !hasBeenShown) {
+          // Show the lightbox
+          setTimeout(() => {
+            showLightbox.value = true;
+            
+            // If show_once is enabled, mark as shown
+            if (bizFundsLightbox.show_once) {
+              localStorage.setItem(lightboxShownKey, 'true');
+            }
+          }, 2000); // Show after 2 seconds
+        }
+      }
+    }
+  } catch (error) {
+    console.error('Error fetching lightboxes:', error);
+  }
+};
 
 onMounted(() => {
   // Initialize animation observer for scroll reveal
@@ -252,6 +314,9 @@ onMounted(() => {
   slideElements.forEach(element => {
     element.classList.add('animate');
   });
+
+  // Fetch and check lightboxes
+  fetchLightboxes();
 });
 </script>
 
