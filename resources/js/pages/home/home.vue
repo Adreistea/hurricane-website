@@ -555,11 +555,23 @@
         </div>
       </div>
     </div>
+
+    <!-- Lightbox component -->
+    <Lightbox
+      v-if="currentLightbox"
+      :is-visible="showLightbox"
+      :lightbox-id="currentLightbox.lightbox_id"
+      :close-on-overlay-click="currentLightbox.close_on_overlay"
+      @close="closeLightbox"
+      @consultation-click="handleConsultationClick"
+    />
   </MainLayout>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
+import axios from 'axios';
+import Lightbox from '../lightbox.vue';
 import MainLayout from '../MainLayout.vue'; // Make sure path is correct
 // Import using the @ alias which points to resources/js
 import dashboardImg from '@/../images/homepic.png';
@@ -576,6 +588,93 @@ const newMessage = ref('');
 const messages = ref([
   { type: 'bot', text: 'Hi there! How can I help you with payment processing today?' },
 ]);
+
+// Lightbox state
+const showLightbox = ref(false);
+const currentLightbox = ref(null);
+const hasShownLightbox = ref(false);
+
+// Fetch active lightboxes for home page
+const fetchLightboxes = async () => {
+  try {
+    console.log('Fetching lightboxes...');
+    const response = await axios.get('/api/lightboxes/active', {
+      params: { page: 'home' }
+    });
+    console.log('API Response:', response.data);
+    
+    if (response.data.success && response.data.data.length > 0) {
+      console.log('Found active lightbox:', response.data.data[0]);
+      currentLightbox.value = response.data.data[0];
+      
+      // Check if this lightbox should only be shown once
+      const showOnceKey = `lightbox_shown_${currentLightbox.value.lightbox_id}`;
+      if (currentLightbox.value.show_once && localStorage.getItem(showOnceKey)) {
+        return;
+      }
+      
+      // Show immediately or set up exit intent
+      if (currentLightbox.value.show_on_exit) {
+        setupExitIntent();
+      } else {
+        // Show after a short delay
+        setTimeout(() => {
+          showLightbox.value = true;
+          if (currentLightbox.value.show_once) {
+            localStorage.setItem(showOnceKey, 'true');
+          }
+        }, 3000);
+      }
+    }
+  } catch (error) {
+    console.error('Error fetching lightboxes:', error);
+  }
+};
+
+// Set up exit intent detection
+const setupExitIntent = () => {
+  const handleMouseLeave = (e) => {
+    // Trigger when mouse leaves through the top of the page
+    if (e.clientY <= 0 && !hasShownLightbox.value) {
+      showLightbox.value = true;
+      hasShownLightbox.value = true;
+      
+      // Mark as shown if show_once is enabled
+      if (currentLightbox.value.show_once) {
+        const showOnceKey = `lightbox_shown_${currentLightbox.value.lightbox_id}`;
+        localStorage.setItem(showOnceKey, 'true');
+      }
+    }
+  };
+  
+  document.addEventListener('mouseleave', handleMouseLeave);
+  
+  // Cleanup function
+  onUnmounted(() => {
+    document.removeEventListener('mouseleave', handleMouseLeave);
+  });
+};
+
+// Handle lightbox close
+const closeLightbox = () => {
+  showLightbox.value = false;
+};
+
+// Handle consultation click in lightbox
+const handleConsultationClick = () => {
+  // Handle the click action - typically navigation to consultation page
+  const consultationUrl = currentLightbox.value.cta_url || '/request-consultation';
+  window.location.href = consultationUrl;
+};
+
+// Fetch lightboxes when component mounts
+onMounted(async () => {
+  await fetchLightboxes();
+  // Force show for testing
+  if (currentLightbox.value) {
+    showLightbox.value = true;
+  }
+});
 
 // Chatbot methods
 function toggleChat() {

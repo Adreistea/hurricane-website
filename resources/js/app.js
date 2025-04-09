@@ -114,6 +114,11 @@ const router = createRouter({
             path: '/lightbox',
             name: 'Lightbox',
             component: () => import('./pages/lightbox.vue')
+        },
+        {
+            path: '/lightbox-config',
+            name: 'LightboxConfig',
+            component: () => import('./pages/lightbox_config.vue')
         }
     ]
 });

@@ -13,60 +13,34 @@
       </button>
       
       <div class="lightbox-content">
-        <!-- Left side - Image upload area -->
+        <!-- Left side - Image area (display only) -->
         <div class="lightbox-image-container">
-          <div 
-            v-if="!imageUrl" 
-            class="image-upload-placeholder"
-            @click="triggerFileInput"
-            @dragover.prevent="dragOver = true"
-            @dragleave.prevent="dragOver = false"
-            @drop.prevent="handleFileDrop"
-            :class="{ 'drag-over': dragOver }"
-          >
+          <div v-if="!imageUrl" class="image-placeholder">
+            <!-- Placeholder SVG for when no image is available -->
             <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
-            <p class="mt-2 text-sm text-gray-600">
-              Drag and drop an image here, or click to select
-            </p>
-            <p class="mt-1 text-xs text-gray-500">
-              Supports: JPG, PNG, GIF (Max 5MB)
-            </p>
           </div>
           
-          <div v-else class="image-preview-container">
-            <img :src="imageUrl" alt="Uploaded image" class="uploaded-image" />
-            <button 
-              class="image-remove-button" 
-              @click.prevent="removeImage"
-              title="Remove image"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-              </svg>
-            </button>
+          <div v-else class="image-display-container">
+            <img 
+              :src="imageUrl" 
+              alt="Lightbox image" 
+              class="displayed-image"
+              @error="handleImageError" 
+            />
           </div>
-          
-          <input 
-            type="file" 
-            ref="fileInput" 
-            class="hidden-file-input" 
-            accept="image/*"
-            @change="handleFileChange" 
-          />
         </div>
         
         <!-- Right side - Description area -->
         <div class="lightbox-description">
-          <h2 class="description-title">{{ title || 'Add Description' }}</h2>
+          <h2 class="description-title">{{ header }}</h2>
           
           <div class="description-content">
             <slot>
               <!-- Default content if no slot provided -->
               <div v-if="!hasSlotContent" class="default-content">
                 <p v-if="description">{{ description }}</p>
-                <p v-else class="text-gray-500 italic">Add your content here or provide it through the slot.</p>
               </div>
             </slot>
           </div>
@@ -79,7 +53,7 @@
           class="action-button" 
           @click="onConsultationClick"
         >
-          Request a Consultation Now
+          {{ ctaText || 'Request a Consultation Now' }}
         </button>
       </div>
     </div>
@@ -87,7 +61,8 @@
 </template>
 
 <script setup>
-import { ref, onMounted, useSlots, computed } from 'vue';
+import { ref, onMounted, useSlots, computed, watch } from 'vue';
+import axios from 'axios';
 
 // Props
 const props = defineProps({
@@ -106,62 +81,100 @@ const props = defineProps({
   closeOnOverlayClick: {
     type: Boolean,
     default: true
+  },
+  lightboxId: {
+    type: Number,
+    default: null
+  },
+  isEditing: {
+    type: Boolean,
+    default: false
+  },
+  isPreview: {
+    type: Boolean,
+    default: false
   }
 });
 
 // Emits
-const emit = defineEmits(['close', 'image-upload', 'image-remove', 'consultation-click']);
+const emit = defineEmits(['close', 'consultation-click']);
 
 // Refs
-const fileInput = ref(null);
 const imageUrl = ref('');
-const dragOver = ref(false);
+const header = ref(props.title);
+const description = ref(props.description);
+const ctaText = ref('');
+
+// Watch for prop changes
+watch(() => props.title, (newVal) => {
+  header.value = newVal;
+});
+
+watch(() => props.description, (newVal) => {
+  description.value = newVal;
+});
 
 // Check if slot content exists
 const slots = useSlots();
 const hasSlotContent = computed(() => !!slots.default);
 
-// Methods
-const triggerFileInput = () => {
-  fileInput.value.click();
-};
-
-const handleFileChange = (event) => {
-  const file = event.target.files[0];
-  if (file) {
-    processFile(file);
+// Fetch lightbox data if ID is provided
+const fetchLightboxData = async () => {
+  if (props.lightboxId) {
+    try {
+      const response = await axios.get(`/api/lightboxes/${props.lightboxId}`);
+      if (response.data.success) {
+        const lightbox = response.data.data;
+        header.value = lightbox.header;
+        description.value = lightbox.description;
+        ctaText.value = lightbox.cta_text;
+        
+        if (lightbox.image) {
+          console.log("Original image path:", lightbox.image);
+          
+          // Simplify the URL construction
+          if (lightbox.full_image_url) {
+            imageUrl.value = lightbox.full_image_url;
+          } else {
+            // Ensure the path starts with /storage/
+            imageUrl.value = lightbox.image.startsWith('/') 
+                ? lightbox.image 
+                : '/' + lightbox.image;
+          }
+          
+          console.log("Final image URL:", imageUrl.value);
+        }
+        
+        // Only record impression if not in preview mode
+        if (!props.isPreview) {
+          recordImpression();
+        }
+      }
+    } catch (error) {
+      console.error('Error fetching lightbox data:', error);
+    }
   }
 };
 
-const handleFileDrop = (event) => {
-  dragOver.value = false;
-  const file = event.dataTransfer.files[0];
-  if (file && file.type.startsWith('image/')) {
-    processFile(file);
+// Record impression
+const recordImpression = async () => {
+  if (props.lightboxId) {
+    try {
+      await axios.post(`/api/lightboxes/${props.lightboxId}/impression`);
+    } catch (error) {
+      console.error('Error recording impression:', error);
+    }
   }
 };
 
-const processFile = (file) => {
-  // Check file size (max 5MB)
-  if (file.size > 5 * 1024 * 1024) {
-    alert('File size exceeds 5MB. Please choose a smaller file.');
-    return;
-  }
-  
-  const reader = new FileReader();
-  reader.onload = (e) => {
-    imageUrl.value = e.target.result;
-    emit('image-upload', file);
-  };
-  reader.readAsDataURL(file);
-};
-
-const removeImage = () => {
-  imageUrl.value = '';
-  emit('image-remove');
-  // Reset file input
-  if (fileInput.value) {
-    fileInput.value.value = '';
+// Record click
+const recordClick = async () => {
+  if (props.lightboxId) {
+    try {
+      await axios.post(`/api/lightboxes/${props.lightboxId}/click`);
+    } catch (error) {
+      console.error('Error recording click:', error);
+    }
   }
 };
 
@@ -170,11 +183,28 @@ const close = () => {
 };
 
 const onConsultationClick = () => {
+  // Record click before emitting event
+  recordClick();
   emit('consultation-click');
+};
+
+const handleImageError = (e) => {
+  console.error('Image failed to load:', imageUrl.value);
+  // Remove the error handler first to prevent loops
+  e.target.removeEventListener('error', handleImageError);
+  
+  // Show the placeholder SVG
+  imageUrl.value = '';
+  
+  // Log additional information for debugging
+  console.log('Failed to load image. Image URL was:', imageUrl.value);
 };
 
 // Keyboard events for accessibility
 onMounted(() => {
+  // Fetch data if lightboxId is provided
+  fetchLightboxData();
+  
   const handleEscape = (event) => {
     if (event.key === 'Escape' && props.isVisible) {
       close();
@@ -307,36 +337,22 @@ p, a, span, blockquote, li {
   }
 }
 
-/* Image upload placeholder */
-.image-upload-placeholder {
+/* Image placeholder */
+.image-placeholder {
   width: 100%;
   height: 300px;
-  border: 2px dashed #e2e8f0;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
-  transition: all 0.2s ease;
   padding: 20px;
   text-align: center;
   background-color: #f8fafc;
 }
 
-.image-upload-placeholder:hover {
-  border-color: #973131;
-  background-color: #fef2f2;
-}
-
-.drag-over {
-  border-color: #973131;
-  background-color: #fef2f2;
-  transform: scale(1.02);
-}
-
-/* Image preview */
-.image-preview-container {
+/* Image display */
+.image-display-container {
   position: relative;
   width: 100%;
   height: 300px;
@@ -345,34 +361,11 @@ p, a, span, blockquote, li {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-.uploaded-image {
+.displayed-image {
   width: 100%;
   height: 100%;
   object-fit: contain;
   background-color: #f8fafc;
-}
-
-.image-remove-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: rgba(255, 255, 255, 0.9);
-  border: none;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  color: #dc2626;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-.image-preview-container:hover .image-remove-button {
-  opacity: 1;
 }
 
 /* Description area */
@@ -429,10 +422,5 @@ p, a, span, blockquote, li {
 
 .action-button:active {
   transform: translateY(0);
-}
-
-/* Hide file input */
-.hidden-file-input {
-  display: none;
 }
 </style>
