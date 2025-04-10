@@ -11,7 +11,7 @@
         <div class="text-reveal mb-6">
           <h1 class="text-reveal-content text-5xl lg:text-6xl font-bold leading-tight delay-200"
               style="color: #973131;">
-            BizFunds Cash Advance
+            Speedy Business Loan
           </h1>
         </div>
         
@@ -104,7 +104,7 @@
     <div class="bg-gray-50 py-24">
       <div class="container mx-auto px-6">
         <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Benefits of BizFunds</h2>
+          <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Benefits of Speedy Business Loan</h2>
           <div class="w-32 h-1 bg-gray-300 mx-auto"></div>
         </div>
         
@@ -224,12 +224,74 @@
         </div>
       </div>
     </div>
+    
+    <!-- Lightbox Component -->
+    <lightbox
+      :is-visible="showLightbox"
+      :lightbox-id="currentLightboxId"
+      @close="showLightbox = false"
+      @consultation-click="handleConsultationClick"
+    />
   </MainLayout>
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 import MainLayout from './MainLayout.vue';
+import axios from 'axios';
+import lightbox from './lightbox.vue';
+
+// Lightbox state
+const showLightbox = ref(false);
+const currentLightboxId = ref(null);
+
+// Handle consultation click
+const handleConsultationClick = () => {
+  showLightbox.value = false;
+  // You can add a redirect or other action here
+  console.log('Consultation requested from BizFunds Cash');
+};
+
+// Fetch lightboxes and check if we need to show one
+const fetchLightboxes = async () => {
+  try {
+    const response = await axios.get('/api/lightboxes');
+    if (response.data.success) {
+      const lightboxes = response.data.data;
+      
+      // Find active lightbox for bizfunds-cash page
+      const bizFundsLightbox = lightboxes.find(item => {
+        const displayPages = Array.isArray(item.display_pages) 
+          ? item.display_pages 
+          : JSON.parse(item.display_pages || '[]');
+        
+        return displayPages.includes('bizfunds-cash') && item.status === 'active';
+      });
+      
+      if (bizFundsLightbox) {
+        currentLightboxId.value = bizFundsLightbox.lightbox_id;
+        
+        // Check if we should show this lightbox (based on show_once setting)
+        const lightboxShownKey = `lightbox_shown_${bizFundsLightbox.lightbox_id}`;
+        const hasBeenShown = localStorage.getItem(lightboxShownKey);
+        
+        if (!bizFundsLightbox.show_once || !hasBeenShown) {
+          // Show the lightbox
+          setTimeout(() => {
+            showLightbox.value = true;
+            
+            // If show_once is enabled, mark as shown
+            if (bizFundsLightbox.show_once) {
+              localStorage.setItem(lightboxShownKey, 'true');
+            }
+          }, 2000); // Show after 2 seconds
+        }
+      }
+    }
+  } catch (error) {
+    console.error('Error fetching lightboxes:', error);
+  }
+};
 
 onMounted(() => {
   // Initialize animation observer for scroll reveal
@@ -252,6 +314,9 @@ onMounted(() => {
   slideElements.forEach(element => {
     element.classList.add('animate');
   });
+
+  // Fetch and check lightboxes
+  fetchLightboxes();
 });
 </script>
 

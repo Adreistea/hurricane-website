@@ -109,6 +109,21 @@ const router = createRouter({
             path: '/payment-partnerships',
             name: 'PaymentPartnerships',
             component: () => import('./pages/Payments_Partnership.vue')
+        },
+        {
+            path: '/lightbox',
+            name: 'Lightbox',
+            component: () => import('./pages/lightbox.vue')
+        },
+        {
+            path: '/lightbox-config',
+            name: 'LightboxConfig',
+            component: () => import('./pages/lightbox_config.vue')
+        },
+        {
+            path: '/chargeback-guide',
+            name: 'ChargebackGuide',
+            component: () => import('./pages/Chargeback_Guide.vue')
         }
     ]
 });

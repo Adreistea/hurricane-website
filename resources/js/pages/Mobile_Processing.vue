@@ -16,7 +16,7 @@
         
         <div class="text-reveal mb-8">
           <p class="text-reveal-content text-lg text-gray-600 delay-300">
-            To run a business in the United States today, one thing is abundantly clear, you need to be equipped to accept credit and debit cards easily on your mobile device. But what if you don't have a typical storefront or space for a credit card machine? If this is the case, you need a mobile processing solution. You need our highly ranked "EMSmobile" solution.
+            Let's face it - if you're running a business in the US today, you've got to take credit and debit cards. But what if you don't have a regular storefront or room for bulky payment equipment? That's where mobile processing comes in. It lets you accept payments right from your phone or tablet, no matter where your business takes you.
           </p>
         </div>
         
@@ -68,10 +68,10 @@
             <!-- Animated circular background -->
             <div class="absolute inset-0 bg-gradient-to-br from-red-100 to-red-200 rounded-full pulse-slow"></div>
             <!-- Counter number with animation -->
-            <div class="relative counter-animation font-bold text-5xl" style="color: #4CAF50;">95%</div>
+            <div class="relative counter-animation font-bold text-5xl" style="color: #4CAF50;">97%</div>
           </div>
           <p class="text-gray-700">
-            See significant savings with a rate review of their current mobile credit card processing provider
+            Achieve substantial savings by reviewing the rates of their current mobile credit card processing provider.
           </p>
         </div>
         
@@ -82,7 +82,7 @@
             <div class="relative counter-animation font-bold text-5xl" style="color: #2196F3;">100+</div>
           </div>
           <p class="text-gray-700">
-            U.S. cities have an EMS presence and use our Mobile Credit Card Processing Solutions
+            U.S. cities have Hurricane Payments presence and use our Mobile Credit Card Processing Solutions
           </p>
         </div>
         
@@ -90,7 +90,7 @@
         <div class="bg-white rounded-lg p-8 text-center shadow-lg scroll-reveal opacity-0 stats-card" data-delay="400">
           <div class="relative mb-6 mx-auto w-24 h-24 flex items-center justify-center">
             <div class="absolute inset-0 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full pulse-slow"></div>
-            <div class="relative counter-animation font-bold text-5xl" style="color: #9C27B0;">30+</div>
+            <div class="relative counter-animation font-bold text-5xl" style="color: #9C27B0;">20+</div>
           </div>
           <p class="text-gray-700">
             Years operating as a leading payments provider with best-in-class Credit Card Processing Solutions
@@ -101,7 +101,7 @@
         <div class="bg-white rounded-lg p-8 text-center shadow-lg scroll-reveal opacity-0 stats-card" data-delay="600">
           <div class="relative mb-6 mx-auto w-24 h-24 flex items-center justify-center">
             <div class="absolute inset-0 bg-gradient-to-br from-orange-100 to-orange-200 rounded-full pulse-slow"></div>
-            <div class="relative counter-animation font-bold text-5xl" style="color: #FF9800;">11</div>
+            <div class="relative counter-animation font-bold text-5xl" style="color: #FF9800;">19</div>
           </div>
           <p class="text-gray-700">
             Regional sales offices across the country provide support for Phone, Tablet, and Mobile Credit Card Processing Solutions
@@ -194,7 +194,7 @@
             <div class="mt-8">
               <a href="#" class="fancy-button text-white font-medium py-3 px-8 rounded-md shadow-lg inline-block" 
                  style="background-color: #973131; transition: all 0.3s ease;">
-                Get Your EMSmobile Reader
+                Contact Hurricane Payments Today
               </a>
             </div>
           </div>
@@ -262,13 +262,6 @@
               class="inline-block px-8 py-4 text-lg font-semibold text-white rounded-lg shadow-xl bg-gradient-to-br from-[#FF7043] to-[#FF9800] transform transition-all duration-300 hover:scale-105 hover:shadow-2xl pulsing-button">
               Request a Consultation
             </router-link>
-            
-            <!-- Animated ripple effect -->
-            <div class="ripple-container">
-              <div class="ripple"></div>
-              <div class="ripple delay-1"></div>
-              <div class="ripple delay-2"></div>
-            </div>
           </div>
           
           <!-- Scroll-triggered particles on hover -->
@@ -312,7 +305,7 @@ import MainLayout from './MainLayout.vue';
 import NavBar from './NavBar.vue'; // Import the NavBar component
 
 // Import mobile device image with correct file name
-const mobileDeviceImg = new URL('@/../images/mobileprocesspic.png', import.meta.url).href;
+const mobileDeviceImg = new URL('@/../images/qrpic.jpg', import.meta.url).href;
 
 onMounted(() => {
   // Fancy button hover effect
@@ -335,12 +328,14 @@ onMounted(() => {
   
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
+      console.log('Element intersection state changed:', entry.target, entry.isIntersecting);
       if (entry.isIntersecting) {
         // Get the delay attribute
         const delay = entry.target.getAttribute('data-delay') || 0;
         
         // Add animation class after the specified delay
         setTimeout(() => {
+          console.log('Animating element:', entry.target);
           if (entry.target.classList.contains('scroll-reveal-left')) {
             entry.target.classList.add('animate-reveal-left');
           } else if (entry.target.classList.contains('scroll-reveal-right')) {
@@ -410,6 +405,30 @@ onMounted(() => {
   if (ctaSection) {
     ctaObserver.observe(ctaSection);
   }
+
+  // At the very bottom of the onMounted function, add:
+  console.log('Mobile_Processing.vue mounted, observers initialized');
+  console.log('Elements to animate:', document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right').length);
+
+  // Add this at the end of onMounted function to force visibility of the CTA section
+  setTimeout(() => {
+    console.log('Forcing visibility of CTA section');
+    const ctaHeading = document.querySelector('.cta-heading');
+    if (ctaHeading) {
+      ctaHeading.classList.add('animate-reveal');
+      ctaHeading.classList.remove('opacity-0');
+    }
+    
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+      el.classList.add('animate-reveal');
+      el.classList.remove('opacity-0');
+    });
+    
+    // Make all elements with opacity-0 visible
+    document.querySelectorAll('.opacity-0').forEach(el => {
+      el.classList.remove('opacity-0');
+    });
+  }, 500);
 });
 </script>
 
@@ -831,45 +850,6 @@ iframe {
 
 .pulsing-button:hover:before {
   left: 100%;
-}
-
-/* Ripple effect for CTA button */
-.ripple-container {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-
-.ripple {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 112, 67, 0.5);
-  animation: ripple 2s linear infinite;
-  left: -30px;
-  top: -30px;
-}
-
-.delay-1 {
-  animation-delay: 0.5s;
-}
-
-.delay-2 {
-  animation-delay: 1s;
-}
-
-@keyframes ripple {
-  0% {
-    transform: scale(0.1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(2.5);
-    opacity: 0;
-  }
 }
 
 /* Wrapper positioning for button + effects */

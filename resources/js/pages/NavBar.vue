@@ -11,9 +11,9 @@
       
       <!-- Navigation Links with Sequenced Menu Item Animation -->
       <div class="hidden md:flex space-x-8">
-        <!-- Home Link -->
-        <div class="menu-item" style="animation-delay: 0.05s;">
-          <router-link to="/" class="nav-link">
+        <!-- Home Link - Updated to match other links -->
+        <div class="relative menu-item" style="animation-delay: 0.05s;">
+          <router-link to="/" class="nav-link-dropdown">
             Home
           </router-link>
         </div>
@@ -29,7 +29,7 @@
               <h2>Payment Solutions</h2>
               <p>Explore our comprehensive payment processing solutions</p>
             </div>
-            <div class="grid grid-cols-3 gap-8 mt-6">
+            <div class="grid grid-cols-2 gap-8 mt-6">
               <!-- Payment Processing Section -->
               <div class="dropdown-section payment-section">
                 <h3 class="section-title">Payment Processing</h3>
@@ -105,47 +105,6 @@
                 </div>
               </div>
               
-              <!-- POS Solutions Section -->
-              <div class="dropdown-section pos-section">
-                <h3 class="section-title">POS Solutions</h3>
-                <div class="menu-items">
-                  <router-link to="/maxx-pay" class="menu-item-link">
-                    <div class="top-row">
-                      <div class="icon-container">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
-                          <defs>
-                            <linearGradient id="posGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#ef4444" />
-                              <stop offset="100%" stop-color="#f87171" />
-                            </linearGradient>
-                          </defs>
-                          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V6h16v12zm-6-1h4v-4h-4v4zm-6 0h4v-4H8v4zm-2-9h12V7H6v1z" fill="url(#posGradient)"/>
-                        </svg>
-                      </div>
-                      <span class="link-title">MaxxPay</span>
-                    </div>
-                    <span class="link-desc">Complete POS system</span>
-                  </router-link>
-                  <router-link to="/pos-terminals" class="menu-item-link">
-                    <div class="top-row">
-                      <div class="icon-container">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
-                          <defs>
-                            <linearGradient id="retailGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#1d4ed8" />
-                              <stop offset="100%" stop-color="#3b82f6" />
-                            </linearGradient>
-                          </defs>
-                          <path d="M21.9 8.89l-1.05-4.37c-.22-.9-1-1.52-1.91-1.52H5.05c-.9 0-1.69.63-1.9 1.52L2.1 8.89c-.24 1.02-.02 2.06.62 2.88.08.11.19.19.28.29V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6.94c.09-.09.2-.18.28-.28.64-.82.87-1.87.62-2.89zm-2.99-3.9l1.05 4.37c.1.42.01.84-.25 1.17-.14.18-.44.47-.94.47-.61 0-1.14-.49-1.21-1.14L16.98 5l1.93-.01zM13 5h1.96l.54 4.52c.05.39-.07.78-.33 1.07-.22.26-.54.41-.95.41-.67 0-1.22-.59-1.22-1.31V5zM8.49 9.52L9.04 5H11v4.69c0 .72-.55 1.31-1.29 1.31-.34 0-.65-.15-.89-.41-.25-.29-.37-.68-.33-1.07zm-4.45-.16L5.05 5h1.97l-.58 4.86c-.08.65-.6 1.14-1.21 1.14-.49 0-.8-.29-.93-.47-.27-.32-.36-.75-.26-1.17zM5 19v-6.03c.08.01.15.03.23.03.87 0 1.66-.36 2.24-.95.6.6 1.4.95 2.31.95.87 0 1.65-.36 2.23-.93.59.57 1.39.93 2.29.93.84 0 1.64-.35 2.24-.95.58.59 1.37.95 2.24.95.08 0 .15-.02.23-.03V19H5z" fill="url(#retailGradient)"/>
-                        </svg>
-                      </div>
-                      <span class="link-title">POS Terminals</span>
-                    </div>
-                    <span class="link-desc">Hardware solutions</span>
-                  </router-link>
-                </div>
-              </div>
-              
               <!-- Additional Services Section -->
               <div class="dropdown-section services-section">
                 <h3 class="section-title">Additional Services</h3>
@@ -160,7 +119,7 @@
                               <stop offset="100%" stop-color="#a855f7" />
                             </linearGradient>
                           </defs>
-                          <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h11c.55 0 1-.45 1-1s-.45-1-1-1H7l1.1-2h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.67-1.43c-.16-.35-.52-.57-.9-.57H1c-.55 0-1 .45-1 1s.45 1 1 1zm16 15c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" fill="url(#ecommerceGradient)"/>
+                          <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 4h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h11c.55 0 1-.45 1-1s-.45-1-1-1H7l1.1-2h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.67-1.43c-.16-.35-.52-.57-.9-.57H1c-.55 0-1 .45-1 1s.45 1 1 1zm16 15c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" fill="url(#ecommerceGradient)"/>
                         </svg>
                       </div>
                       <span class="link-title">Surcharge Program</span>
@@ -180,7 +139,7 @@
                           <path d="M8.1 13.34l2.83-2.83-6.19-6.18c-.48-.48-1.31-.35-1.61.27-.71 1.49-.45 3.32.78 4.56l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27l-9.05 9.05 1.41 1.41 9.05-9.05 9.05 9.05 1.41-1.41-9.05-9.05z" fill="url(#restaurantGradient)"/>
                         </svg>
                       </div>
-                      <span class="link-title">BizFunds Cash Advance</span>
+                      <span class="link-title">Speedy Business Loan</span>
                     </div>
                     <span class="link-desc">Business financing</span>
                   </router-link>
@@ -201,22 +160,22 @@
                     </div>
                     <span class="link-desc">Customer retention tools</span>
                   </router-link>
-                  <router-link to="/web-design" class="menu-item-link">
+                  <router-link to="/chargeback-guide" class="menu-item-link">
                     <div class="top-row">
                       <div class="icon-container">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24">
                           <defs>
-                            <linearGradient id="ecommerceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#7e22ce" />
-                              <stop offset="100%" stop-color="#a855f7" />
+                            <linearGradient id="chargebackGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" stop-color="#f97316" />
+                              <stop offset="100%" stop-color="#fb923c" />
                             </linearGradient>
                           </defs>
-                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 2c2.615 0 4.95 1.007 6.707 2.765C20.493 6.257 21.5 8.593 21.5 11.25c0 2.615-1.007 4.95-2.765 6.707C16.207 20.493 13.87 21.5 11.25 21.5c-2.615 0-4.95-1.007-6.707-2.765C2.507 16.207 1.5 13.87 1.5 11.25c0-2.615 1.007-4.95 2.765-6.707C6.257 2.507 8.593 1.5 11.25 1.5z" fill="url(#ecommerceGradient)"/>
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="url(#chargebackGradient)"/>
                         </svg>
                       </div>
-                      <span class="link-title">Web Design</span>
+                      <span class="link-title">Chargeback Guide</span>
                     </div>
-                    <span class="link-desc">Professional websites</span>
+                    <span class="link-desc">Manage & prevent disputes</span>
                   </router-link>
                 </div>
               </div>
@@ -480,15 +439,11 @@
           <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">Text & QR Code Payments</a>
           <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">Integrations</a>
           
-          <p class="font-semibold text-gray-800 mt-3">POS Solutions</p>
-          <router-link to="/maxx-pay" class="block py-1 text-gray-600 hover:text-indigo-600">MaxxPay</router-link>
-          <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">POS Terminals</a>
-          
           <p class="font-semibold text-gray-800 mt-3">Additional Services</p>
           <router-link to="/surcharge" class="block py-1 text-gray-600 hover:text-indigo-600">Surcharge & Dual Pricing Program</router-link>
-          <router-link to="/bizfunds-cash" class="block py-1 text-gray-600 hover:text-indigo-600">BizFunds Cash Advance</router-link>
+          <router-link to="/bizfunds-cash" class="block py-1 text-gray-600 hover:text-indigo-600">Speedy Business Loan</router-link>
           <router-link to="/gift-loyalty" class="block py-1 text-gray-600 hover:text-indigo-600">Gift & Loyalty Programs</router-link>
-          <router-link to="/web-design" class="block py-1 text-gray-600 hover:text-indigo-600">Web Design</router-link>
+          <router-link to="/chargeback-guide" class="block py-1 text-gray-600 hover:text-indigo-600">Chargeback Guide</router-link>
         </div>
       </div>
       
@@ -591,6 +546,42 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+/* Add these font imports at the top of your style section in NavBar.vue */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+
+/* Apply font families to elements */
+.nav-link, .nav-link-dropdown, .cta-button, .menu-item-link .link-title, .dropdown-header h2, .section-title {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.menu-item-link .link-desc, .dropdown-header p, p, a, span {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Refine font weights */
+.nav-link, .nav-link-dropdown {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.dropdown-header h2 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.section-title {
+  font-weight: 600;
+}
+
+.link-title {
+  font-weight: 600;
+}
+
+.cta-button {
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
 /* Base Navigation Styling */
 .nav-link {
   color: #1f2937;
@@ -657,6 +648,8 @@ onUnmounted(() => {
   transition: all 0.3s ease;
   margin-bottom: 8px;
   border: 1px solid transparent;
+  position: relative;
+  min-height: 70px;
 }
 
 /* Container for icon and title */
@@ -668,43 +661,15 @@ onUnmounted(() => {
 
 /* Keep icon size and style the same */
 .icon-container {
-  margin-right: 12px;
-  margin-bottom: 0;
-  width: 38px;
-  height: 38px;
-}
-
-/* Move link-title next to the icon */
-.link-title {
-  font-weight: 700;
-  color: #111827;
-  font-size: 1rem;
-  padding-top: 2px;
-}
-
-/* Position the description below the icon and title */
-.link-desc {
-  font-size: 0.875rem;
-  color: #6b7280;
-  padding-left: 50px; /* Match the width of icon-container + margin-right */
-}
-
-/* Adjust hover effects to work with new layout */
-.menu-item-link:hover .link-title {
-  color: #991b1b;
-}
-
-/* Enhanced Icon Styling with gradients */
-.icon-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
-  margin-right: 16px;
+  width: 36px;
+  height: 36px;
+  margin-right: 8px;
   flex-shrink: 0;
   position: relative;
-  border-radius: 10px;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.8);
   transition: all 0.3s ease;
   border: 1px solid rgba(0, 0, 0, 0.05);
@@ -767,13 +732,14 @@ onUnmounted(() => {
 
 /* Section title enhancement */
 .section-title {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   padding-bottom: 8px;
   border-bottom: 2px solid #f3f4f6;
   color: #111827;
   position: relative;
+  white-space: nowrap;
 }
 
 .section-title::after {
@@ -815,6 +781,7 @@ onUnmounted(() => {
   overflow: hidden;
   animation: panelFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  padding-bottom: 16px;
 }
 
 /* Consistent header styling for all dropdowns */
@@ -970,6 +937,8 @@ onUnmounted(() => {
 /* Make all sections padding consistent */
 .dropdown-section {
   padding: 16px 24px;
+  min-width: 200px;
+  box-sizing: border-box;
 }
 
 /* Update structure to match Solutions dropdown for all panels */
@@ -1154,5 +1123,16 @@ onUnmounted(() => {
 
 .menu-item-link:hover .icon-container svg path {
   transform: translateY(-1px);
+}
+
+/* Update the link-desc style to ensure consistent alignment */
+.link-desc {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-left: 44px;
+  display: block;
+  white-space: normal;
+  line-height: 1.2;
+  max-width: 100%;
 }
 </style>

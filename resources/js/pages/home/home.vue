@@ -43,10 +43,10 @@
           </div>
           
           <blockquote class="italic text-gray-600 border-l-4 border-indigo-300 pl-4">
-            "EMS has been a pleasure to work with. Always providing great customer service. Our representative is always available to assist and as a small business we appreciate that."
+            "Working with Hurricane Payments has been exceptional. Their customer service is outstanding, and their team is consistently responsive to our needs. As a small business, we truly value their personalized support and attention."
           </blockquote>
           
-          <p class="mt-3 font-semibold">AME Loyal Inc</p>
+          <p class="mt-3 font-semibold">Hurricane Payments</p>
         </div>
       </div>
       
@@ -99,7 +99,7 @@
                 <h2 class="text-2xl font-bold text-purple-500">Lower Rates and Fees</h2>
               </div>
               <p class="text-gray-700">
-                We offer the lowest rates possible to help you increase profitability. In fact, 95% of business owners who receive our free rate review end up saving money.
+                We offer the lowest rates possible to help you increase profitability. In fact, 97% of business owners who receive our free rate review end up saving money.
               </p>
             </div>
 
@@ -555,11 +555,25 @@
         </div>
       </div>
     </div>
+
+    <!-- Lightbox component -->
+    <Lightbox
+      v-if="currentLightbox"
+      :is-visible="showLightbox"
+      :lightbox-id="currentLightbox.lightbox_id"
+      :title="currentLightbox.header"
+      :description="currentLightbox.description"
+      :close-on-overlay-click="currentLightbox.close_on_overlay"
+      @close="closeLightbox"
+      @consultation-click="handleConsultationClick"
+    />
   </MainLayout>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
+import axios from 'axios';
+import Lightbox from '../lightbox.vue';
 import MainLayout from '../MainLayout.vue'; // Make sure path is correct
 // Import using the @ alias which points to resources/js
 import dashboardImg from '@/../images/homepic.png';
@@ -576,6 +590,109 @@ const newMessage = ref('');
 const messages = ref([
   { type: 'bot', text: 'Hi there! How can I help you with payment processing today?' },
 ]);
+
+// Lightbox state
+const showLightbox = ref(false);
+const currentLightbox = ref(null);
+const hasShownLightbox = ref(false);
+
+// Fetch active lightboxes for home page
+const fetchLightboxes = async () => {
+  try {
+    console.log('Fetching lightboxes...');
+    const response = await axios.get('/api/lightboxes/active', {
+      params: { page: 'home' }
+    });
+    console.log('API Response:', response.data);
+    
+    if (response.data.success && response.data.data.length > 0) {
+      console.log('Found active lightbox:', response.data.data[0]);
+      currentLightbox.value = response.data.data[0];
+      
+      // Check if this lightbox should only be shown once
+      const showOnceKey = `lightbox_shown_${currentLightbox.value.lightbox_id}`;
+      if (currentLightbox.value.show_once && localStorage.getItem(showOnceKey)) {
+        return;
+      }
+      
+      // Show immediately or set up exit intent
+      if (currentLightbox.value.show_on_exit) {
+        setupExitIntent();
+      } else {
+        // Show after a short delay
+        setTimeout(() => {
+          showLightbox.value = true;
+          if (currentLightbox.value.show_once) {
+            localStorage.setItem(showOnceKey, 'true');
+          }
+        }, 3000);
+      }
+    }
+  } catch (error) {
+    console.error('Error fetching lightboxes:', error);
+  }
+};
+
+// Set up exit intent detection
+const setupExitIntent = () => {
+  const handleMouseLeave = (e) => {
+    // Trigger when mouse leaves through the top of the page
+    if (e.clientY <= 0 && !hasShownLightbox.value) {
+      showLightbox.value = true;
+      hasShownLightbox.value = true;
+      
+      // Mark as shown if show_once is enabled
+      if (currentLightbox.value.show_once) {
+        const showOnceKey = `lightbox_shown_${currentLightbox.value.lightbox_id}`;
+        localStorage.setItem(showOnceKey, 'true');
+      }
+    }
+  };
+  
+  document.addEventListener('mouseleave', handleMouseLeave);
+  
+  // Cleanup function
+  onUnmounted(() => {
+    document.removeEventListener('mouseleave', handleMouseLeave);
+  });
+};
+
+// Handle lightbox close
+const closeLightbox = () => {
+  showLightbox.value = false;
+};
+
+// Handle consultation click in lightbox
+const handleConsultationClick = () => {
+  // Handle the click action - typically navigation to consultation page
+  const consultationUrl = currentLightbox.value.cta_url || '/request-consultation';
+  window.location.href = consultationUrl;
+};
+
+// Fetch lightboxes when component mounts
+onMounted(async () => {
+  console.log('Home component mounted');
+  
+  // Clear any localStorage items that might prevent lightbox from showing
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    if (key && key.startsWith('lightbox_shown_')) {
+      console.log('Removing stored lightbox key:', key);
+      localStorage.removeItem(key);
+    }
+  }
+  
+  // Fetch lightboxes
+  await fetchLightboxes();
+  
+  // If we found a lightbox from the database, show it
+  if (currentLightbox.value) {
+    console.log('Found lightbox from database:', currentLightbox.value);
+    showLightbox.value = true;
+  } else {
+    console.log('No active lightboxes found for home page');
+  }
+});
 
 // Chatbot methods
 function toggleChat() {

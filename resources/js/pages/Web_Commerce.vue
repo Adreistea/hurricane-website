@@ -66,26 +66,26 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
           <!-- Stat 1 -->
           <div class="text-center scroll-reveal opacity-0" data-delay="0">
-            <div class="text-5xl font-bold mb-4" style="color: #79c142;">95%</div>
-            <p class="text-gray-600">See significant savings with a rate review</p>
+            <div class="text-5xl font-bold mb-4" style="color: #79c142;">97%</div>
+            <p class="text-gray-600">Achieve substantial savings by reviewing the rates of their current mobile credit card processing provider.</p>
           </div>
           
           <!-- Stat 2 -->
           <div class="text-center scroll-reveal opacity-0" data-delay="200">
             <div class="text-5xl font-bold mb-4" style="color: #79c142;">100+</div>
-            <p class="text-gray-600">U.S. cities have an EMS presence</p>
+            <p class="text-gray-600">U.S. cities have Hurricane Payments presence and use our Mobile Credit Card Processing Solutions</p>
           </div>
           
           <!-- Stat 3 -->
           <div class="text-center scroll-reveal opacity-0" data-delay="400">
-            <div class="text-5xl font-bold mb-4" style="color: #79c142;">30+</div>
-            <p class="text-gray-600">Years operating as a leading payments provider</p>
+            <div class="text-5xl font-bold mb-4" style="color: #79c142;">20+</div>
+            <p class="text-gray-600">Years operating as a leading payments provider with best-in-class Credit Card Processing Solutions</p>
           </div>
           
           <!-- Stat 4 -->
           <div class="text-center scroll-reveal opacity-0" data-delay="600">
-            <div class="text-5xl font-bold mb-4" style="color: #79c142;">11</div>
-            <p class="text-gray-600">Regional sales offices across the country</p>
+            <div class="text-5xl font-bold mb-4" style="color: #79c142;">19</div>
+            <p class="text-gray-600">Regional sales offices across the country provide support for Phone, Tablet, and Mobile Credit Card Processing Solutions</p>
           </div>
         </div>
       </div>
@@ -196,7 +196,7 @@
         <div class="lg:w-1/2 scroll-reveal-left opacity-0">
           <h2 class="text-4xl font-bold mb-6" style="color: #973131;">What is a Virtual Terminal?</h2>
           <p class="text-lg text-gray-600 mb-6">
-            A Virtual Terminal is an interface built into a Payment Gateway. Its impressive technology empowers you to run your Gateway as if it were a credit card terminal on your computer, tablet, or mobile device. Plus, the Virtual Terminal is browser-based, which means you can access this essential business tool on any web-enabled device. Each Virtual Terminal also offers innovative features to make getting paid easier. Keep scrolling to find out what they are!
+            A Virtual Terminal is an interface built into a Payment Gateway. Its impressive technology empowers you to run your Gateway as if it were a credit card terminal on your computer, tablet, or mobile device. Plus, the Virtual Terminal is browser-based, which means you can access this essential business tool on any web-enabled device. Each Virtual Terminal also offers innovative features to make getting paid easier. 
           </p>
         </div>
         
@@ -289,7 +289,7 @@
     </div>
 
     <!-- CTA Section -->
-    <div class="bg-gradient-to-r from-custom-red to-custom-red-dark py-16 relative overflow-hidden">
+    <div class="bg-[#973131] py-16 relative overflow-hidden">
       <div class="absolute top-0 left-0 w-full h-full opacity-10">
         <div class="absolute top-0 right-0 bg-white rounded-full w-64 h-64 -mt-20 -mr-20"></div>
         <div class="absolute bottom-0 left-0 bg-white rounded-full w-80 h-80 -mb-32 -ml-32"></div>
@@ -303,26 +303,112 @@
           </p>
           
           <div class="flex flex-col sm:flex-row justify-center gap-6">
-            <a href="#" class="bg-white text-custom-red hover:bg-red-50 font-bold py-3 px-8 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+            <a href="#" class="bg-white text-[#973131] hover:bg-red-50 font-bold py-3 px-8 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
               Get Started Today
             </a>
-            <a href="#" class="border-2 border-white text-white hover:bg-white hover:text-custom-red font-bold py-3 px-8 rounded-lg transition-all duration-300">
+            <a href="#" class="border-2 border-white text-white hover:bg-white hover:text-[#973131] font-bold py-3 px-8 rounded-lg transition-all duration-300">
               Talk to Sales
             </a>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Add this at the end of your template, right before closing MainLayout tag -->
+    <div v-if="currentLightbox && showLightbox">
+      <lightbox
+        :is-visible="showLightbox"
+        :lightbox-id="currentLightbox.lightbox_id"
+        @close="closeLightbox"
+        @consultation-click="handleConsultationClick"
+      />
+    </div>
   </MainLayout>
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
+import axios from 'axios';
 import MainLayout from './MainLayout.vue';
+import lightbox from './lightbox.vue'; // Import the lightbox component
 
 // Import the image using Vue's import mechanism
 const webPicImg = new URL('@/../images/webpic.png', import.meta.url).href;
 const webPic2Img = new URL('@/../images/webpic2.png', import.meta.url).href;
+
+// Add these for lightbox functionality
+const currentLightbox = ref(null);
+const showLightbox = ref(false);
+
+// Fetch active lightboxes for web-commerce page
+const fetchLightboxes = async () => {
+  try {
+    console.log('Fetching lightboxes for web-commerce page...');
+    const response = await axios.get('/api/lightboxes/active', {
+      params: { page: 'web-commerce' }
+    });
+    console.log('API Response:', response.data);
+    
+    if (response.data.success && response.data.data.length > 0) {
+      console.log('Found active lightbox:', response.data.data[0]);
+      currentLightbox.value = response.data.data[0];
+      
+      // Check if this lightbox should only be shown once
+      const showOnceKey = `lightbox_shown_${currentLightbox.value.lightbox_id}`;
+      if (currentLightbox.value.show_once && localStorage.getItem(showOnceKey)) {
+        return;
+      }
+      
+      // Show immediately or set up exit intent
+      if (currentLightbox.value.show_on_exit) {
+        setupExitIntent();
+      } else {
+        // Show after a short delay
+        setTimeout(() => {
+          showLightbox.value = true;
+          if (currentLightbox.value.show_once) {
+            localStorage.setItem(showOnceKey, 'true');
+          }
+        }, 3000);
+      }
+    }
+  } catch (error) {
+    console.error('Error fetching lightboxes:', error);
+  }
+};
+
+// Handle the close action
+const closeLightbox = () => {
+  showLightbox.value = false;
+};
+
+// Handle the consultation button click
+const handleConsultationClick = () => {
+  showLightbox.value = false;
+  // Navigate to consultation page or handle as needed
+  window.location.href = currentLightbox.value.cta_url || '/request-consultation';
+};
+
+// Set up exit intent detection
+const setupExitIntent = () => {
+  const handleExitIntent = (e) => {
+    // If the mouse leaves the top of the viewport
+    if (e.clientY <= 0) {
+      // Remove the event listener to prevent multiple triggers
+      document.removeEventListener('mouseleave', handleExitIntent);
+      
+      // Show the lightbox
+      showLightbox.value = true;
+      
+      // If show only once, set the flag
+      if (currentLightbox.value && currentLightbox.value.show_once) {
+        localStorage.setItem(`lightbox_shown_${currentLightbox.value.lightbox_id}`, 'true');
+      }
+    }
+  };
+  
+  document.addEventListener('mouseleave', handleExitIntent);
+};
 
 onMounted(() => {
   // Fancy button hover effect
@@ -387,6 +473,9 @@ onMounted(() => {
     stat.style.animationPlayState = 'paused';
     observer.observe(stat);
   });
+
+  // Add the lightbox initialization
+  fetchLightboxes();
 });
 </script>
 
