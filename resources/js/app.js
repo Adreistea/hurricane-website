@@ -124,6 +124,56 @@ const router = createRouter({
             path: '/chargeback-guide',
             name: 'ChargebackGuide',
             component: () => import('./pages/Chargeback_Guide.vue')
+        },
+        {
+            path: '/understanding-chargebacks',
+            name: 'UnderstandingChargebacks',
+            component: () => import('./pages/Understanding_Chargebacks.vue')
+        },
+        {
+            path: '/win-chargeback-dispute',
+            name: 'WinChargebackDispute',
+            component: () => import('./pages/Win_Chargeback_Dispute.vue')
+        },
+        {
+            path: '/preventing-friendly-fraud',
+            name: 'PreventingFriendlyFraud',
+            component: () => import('./pages/Preventing_Friendly_Fraud.vue')
+        },
+        {
+            path: '/documenting-transactions',
+            name: 'DocumentingTransactions',
+            component: () => import('./pages/Documenting_Transactions.vue')
+        },
+        {
+            path: '/pos-system',
+            name: 'POSSystem',
+            component: () => import('./pages/POS_System.vue')
+        },
+        {
+            path: '/refund-fight-chargeback',
+            name: 'RefundFightChargeback',
+            component: () => import('./pages/Refund_Fight_Chargeback.vue')
+        },
+        {
+            path: '/delivery-order-chargebacks',
+            name: 'DeliveryOrderChargebacks',
+            component: () => import('./pages/Delivery_Order_Chargebacks.vue')
+        },
+        {
+            path: '/staff-training',
+            name: 'StaffTraining',
+            component: () => import('./pages/Staff_Training.vue')
+        },
+        {
+            path: '/customer-communication',
+            name: 'CustomerCommunication',
+            component: () => import('./pages/Customer_Communication.vue')
+        },
+        {
+            path: '/tracking-analysis',
+            name: 'TrackingAnalysis',
+            component: () => import('./pages/TrackingAnalysis.vue')
         }
     ]
 });

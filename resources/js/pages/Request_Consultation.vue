@@ -115,24 +115,36 @@
                   
                   <div>
                     <label for="numLocations" class="block text-gray-700 font-medium mb-2">Number of Locations</label>
-                    <input 
-                      type="number" 
-                      id="numLocations" 
-                      v-model="form.num_locations" 
-                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
-                      min="1"
-                    >
+                    <div class="relative">
+                      <input 
+                        type="number" 
+                        id="numLocations" 
+                        v-model="form.num_locations" 
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                        min="1"
+                        list="locationsOptions"
+                      >
+                      <datalist id="locationsOptions">
+                        <option v-for="n in 100" :key="`location-${n}`" :value="n">{{ n }}</option>
+                      </datalist>
+                    </div>
                   </div>
                   
                   <div>
                     <label for="numTerminals" class="block text-gray-700 font-medium mb-2">Number of Terminals</label>
-                    <input 
-                      type="number" 
-                      id="numTerminals" 
-                      v-model="form.num_terminals" 
-                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
-                      min="0"
-                    >
+                    <div class="relative">
+                      <input 
+                        type="number" 
+                        id="numTerminals" 
+                        v-model="form.num_terminals" 
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                        min="0"
+                        list="terminalsOptions"
+                      >
+                      <datalist id="terminalsOptions">
+                        <option v-for="n in 100" :key="`terminal-${n}`" :value="n">{{ n }}</option>
+                      </datalist>
+                    </div>
                   </div>
                   
                   <div>
@@ -420,6 +432,51 @@
         </div>
       </div>
     </div>
+    
+    <!-- Thank You Modal -->
+    <div 
+      v-if="showThankYouModal" 
+      class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center"
+      @click="showThankYouModal = false"
+    >
+      <div 
+        class="bg-white rounded-lg shadow-xl p-8 max-w-md w-full mx-4 transform transition-all"
+        @click.stop
+      >
+        <div class="text-center">
+          <!-- Celebration Icon with Animation -->
+          <div class="mx-auto mb-6 relative">
+            <div class="celebration-container">
+              <!-- Party popper emoji with animation -->
+              <div class="celebration-icon">🎉</div>
+              <!-- Confetti elements -->
+              <div class="confetti-piece"></div>
+              <div class="confetti-piece"></div>
+              <div class="confetti-piece"></div>
+              <div class="confetti-piece"></div>
+              <div class="confetti-piece"></div>
+              <div class="confetti-piece"></div>
+              <div class="confetti-piece"></div>
+              <div class="confetti-piece"></div>
+              <div class="confetti-piece"></div>
+              <div class="confetti-piece"></div>
+            </div>
+          </div>
+          
+          <h3 class="text-2xl font-bold text-gray-800 mb-3">Thank You!</h3>
+          <p class="text-gray-600 mb-6">
+            We've received your request! We will contact you shortly to confirm your consultation time.
+          </p>
+          
+          <button 
+            @click="showThankYouModal = false" 
+            class="px-6 py-2 bg-custom-red text-white font-medium rounded-md shadow-md hover:bg-red-800 transition-colors duration-300"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
   </MainLayout>
 </template>
 
@@ -428,6 +485,8 @@ import { ref, computed } from 'vue';
 import MainLayout from './MainLayout.vue';
 import VCalendar from 'v-calendar';
 import 'v-calendar/style.css';
+
+const showThankYouModal = ref(false);
 
 const steps = [
   'Contact Information',
@@ -613,6 +672,15 @@ function submitForm() {
   
   isSubmitting.value = true;
   
+  // Create a copy of the form data to modify for submission
+  const formData = { ...form.value };
+  
+  // Format the preferred_date field if it's a Date object
+  if (formData.preferred_date instanceof Date) {
+    // Format as YYYY-MM-DD for Laravel
+    formData.preferred_date = formData.preferred_date.toISOString().split('T')[0];
+  }
+  
   // Send the form data to your Laravel backend
   fetch('/api/consultation-requests', {
     method: 'POST',
@@ -620,11 +688,16 @@ function submitForm() {
       'Content-Type': 'application/json',
       'Accept': 'application/json'
     },
-    body: JSON.stringify(form.value)
+    body: JSON.stringify(formData)
   })
   .then(response => {
     if (!response.ok) {
       return response.json().then(data => {
+        // Display the actual validation errors from the server
+        if (data.errors) {
+          const errorMessages = Object.values(data.errors).flat().join('\n');
+          throw new Error(errorMessages);
+        }
         throw new Error(data.message || 'Server error');
       });
     }
@@ -634,21 +707,22 @@ function submitForm() {
     isSubmitting.value = false;
     
     if (data.success) {
-      alert('Thank you for your request! We will contact you shortly to confirm your consultation time.');
+      // Show the thank you modal
+      showThankYouModal.value = true;
       
       // Reset form and go back to step 1
       resetForm();
       currentStep.value = 1;
     } else {
       // Handle validation errors
-      const errorMessages = Object.values(data.errors).flat().join('\n');
+      const errorMessages = Object.values(data.errors || {}).flat().join('\n');
       alert(`Please correct the following errors:\n${errorMessages}`);
     }
   })
   .catch(error => {
     console.error('Error submitting form:', error);
     isSubmitting.value = false;
-    alert('An error occurred while submitting the form. Please try again later.');
+    alert(error.message || 'An error occurred while submitting the form. Please try again later.');
   });
 }
 
@@ -1098,5 +1172,185 @@ input[type="checkbox"] {
 /* Add border to make selection clear without relying on text color */
 .calendar-container :deep(.vc-day-content.vc-highlight-content-solid) {
   border: 2px solid #731a1a !important;
+}
+
+
+.calendar-container :deep(.vc-day-content.vc-attr),
+.calendar-container :deep(.vc-focus) {
+  color: black !important;
+}
+
+/* Add border to make selection clear without relying on text color */
+.calendar-container :deep(.vc-day-content.vc-highlight-content-solid) {
+  border: 2px solid #731a1a !important;
+}
+
+/* Replace existing Thank You Modal Animation Styles with this */
+.celebration-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+.celebration-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  animation: bounceIcon 1.5s ease-in-out infinite;
+  z-index: 5;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+@keyframes bounceIcon {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 10px;
+  height: 20px;
+  background-color: #982B1C;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+}
+
+.confetti-piece:nth-child(1) {
+  background-color: #973131;
+  animation: confetti 3s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.confetti-piece:nth-child(2) {
+  background-color: #FFC857;
+  animation: confetti 3s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+
+.confetti-piece:nth-child(3) {
+  background-color: #FF5A5F;
+  animation: confetti 3s ease-in-out infinite;
+  animation-delay: 0.6s;
+}
+
+.confetti-piece:nth-child(4) {
+  background-color: #973131;
+  animation: confetti-reverse 3s ease-in-out infinite;
+  animation-delay: 0.9s;
+}
+
+.confetti-piece:nth-child(5) {
+  background-color: #B8D8D8;
+  animation: confetti 3s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+
+.confetti-piece:nth-child(6) {
+  background-color: #FF5A5F;
+  animation: confetti-reverse 3s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.confetti-piece:nth-child(7) {
+  background-color: #FFC857;
+  animation: confetti 3s ease-in-out infinite;
+  animation-delay: 1.8s;
+}
+
+.confetti-piece:nth-child(8) {
+  background-color: #973131;
+  animation: confetti-reverse 3s ease-in-out infinite;
+  animation-delay: 2.1s;
+}
+
+.confetti-piece:nth-child(9) {
+  background-color: #B8D8D8;
+  animation: confetti 3s ease-in-out infinite;
+  animation-delay: 2.4s;
+}
+
+.confetti-piece:nth-child(10) {
+  background-color: #FFC857;
+  animation: confetti-reverse 3s ease-in-out infinite;
+  animation-delay: 2.7s;
+}
+
+@keyframes confetti {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(0) translateY(0);
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(100px) translateY(100px);
+    opacity: 0;
+    width: 5px;
+    height: 5px;
+  }
+}
+
+@keyframes confetti-reverse {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(0) translateY(0);
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg) translateX(-100px) translateY(100px);
+    opacity: 0;
+    width: 5px;
+    height: 5px;
+  }
+}
+
+/* Keep modal animations */
+.fixed.inset-0 {
+  animation: modalBackdrop 0.3s ease-out forwards;
+}
+
+@keyframes modalBackdrop {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.transform.transition-all {
+  animation: modalPopIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes modalPopIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Remove number input spinners (arrows) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
 }
 </style>

@@ -26,7 +26,7 @@
         <div class="max-w-4xl mx-auto">
           <h2 class="text-2xl font-semibold mb-6 text-gray-800">In This Guide:</h2>
           <div class="toc-grid grid md:grid-cols-2 gap-4">
-            <a href="#section-1" class="toc-item p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition duration-300">
+            <a href="#" @click.prevent="$router.push('/understanding-chargebacks')" class="toc-item p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition duration-300">
               <div class="flex items-center">
                 <div class="toc-icon mr-3 text-primary-600">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -36,7 +36,7 @@
                 <span>Understanding Chargebacks</span>
               </div>
             </a>
-            <a href="#section-2" class="toc-item p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition duration-300">
+            <a href="#" @click.prevent="$router.push('/win-chargeback-dispute')" class="toc-item p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition duration-300">
               <div class="flex items-center">
                 <div class="toc-icon mr-3 text-primary-600">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -46,7 +46,7 @@
                 <span>How to Win a Dispute</span>
               </div>
             </a>
-            <a href="#section-3" class="toc-item p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition duration-300">
+            <a href="#" @click.prevent="$router.push('/preventing-friendly-fraud')" class="toc-item p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition duration-300">
               <div class="flex items-center">
                 <div class="toc-icon mr-3 text-primary-600">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -56,7 +56,7 @@
                 <span>Preventing Friendly Fraud</span>
               </div>
             </a>
-            <a href="#section-4" class="toc-item p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition duration-300">
+            <a href="#" @click.prevent="$router.push('/documenting-transactions')" class="toc-item p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition duration-300">
               <div class="flex items-center">
                 <div class="toc-icon mr-3 text-primary-600">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -66,7 +66,7 @@
                 <span>Documenting Transactions</span>
               </div>
             </a>
-            <a href="#section-5" class="toc-item p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition duration-300">
+            <a href="#" @click.prevent="$router.push('/pos-system')" class="toc-item p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition duration-300">
               <div class="flex items-center">
                 <div class="toc-icon mr-3 text-primary-600">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -76,7 +76,7 @@
                 <span>Using Your POS System</span>
               </div>
             </a>
-            <a href="#section-6" class="toc-item p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition duration-300">
+            <a href="#" @click.prevent="$router.push('/refund-fight-chargeback')" class="toc-item p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition duration-300">
               <div class="flex items-center">
                 <div class="toc-icon mr-3 text-primary-600">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -86,7 +86,7 @@
                 <span>When to Refund vs. Fight</span>
               </div>
             </a>
-            <a href="#section-7" class="toc-item p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition duration-300">
+            <a href="#" @click.prevent="$router.push('/delivery-order-chargebacks')" class="toc-item p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition duration-300">
               <div class="flex items-center">
                 <div class="toc-icon mr-3 text-primary-600">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -96,7 +96,7 @@
                 <span>Delivery Order Chargebacks</span>
               </div>
             </a>
-            <a href="#section-8" class="toc-item p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition duration-300">
+            <a href="#" @click.prevent="$router.push('/staff-training')" class="toc-item p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition duration-300">
               <div class="flex items-center">
                 <div class="toc-icon mr-3 text-primary-600">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -106,7 +106,7 @@
                 <span>Staff Training</span>
               </div>
             </a>
-            <a href="#section-9" class="toc-item p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition duration-300">
+            <a href="#" @click.prevent="$router.push('/customer-communication')" class="toc-item p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition duration-300">
               <div class="flex items-center">
                 <div class="toc-icon mr-3 text-primary-600">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -116,7 +116,7 @@
                 <span>Customer Communication</span>
               </div>
             </a>
-            <a href="#section-10" class="toc-item p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition duration-300">
+            <a href="#" @click.prevent="$router.push('/tracking-analysis')" class="toc-item p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition duration-300">
               <div class="flex items-center">
                 <div class="toc-icon mr-3 text-primary-600">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -130,136 +130,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Main Content -->
-    <div id="guide-content" class="guide-content py-16">
-      <div class="container mx-auto px-4">
-        <div class="max-w-3xl mx-auto">
-          <!-- Section 1 -->
-          <section id="section-1" class="content-section mb-16 scroll-reveal">
-            <h2 class="text-3xl font-bold mb-6 text-gray-800">Understanding Chargebacks: A Guide for Coffee Shop and Restaurant Owners</h2>
-            <div class="prose prose-lg">
-              <p>Chargebacks can be frustrating and costly for coffee shop and restaurant owners. When a customer disputes a charge with their credit card issuer, the funds are withdrawn from your account-often without warning. While some chargebacks are legitimate, many are preventable with the right systems in place.</p>
-              <p>The first step in responding to a chargeback is understanding the reason code. This code explains why the charge was disputed: unauthorized transaction, item not received, quality issues, or duplicate charges. Once you know the reason, gather your evidence. For restaurants, this could include signed receipts, order tickets, POS transaction records, or even security footage.</p>
-              <p>Timeliness is key-respond to the chargeback within the window allowed by your payment processor. Submit all documentation clearly and concisely. Explain the situation, provide evidence that the transaction was valid, and demonstrate that you followed best practices.</p>
-              <p>Prevention is also vital. Ensure your staff checks ID for large transactions or card-not-present scenarios. Make your refund and cancellation policies clear and visible. Use a strong POS system that captures digital signatures and timestamps.</p>
-              <p>Lastly, remember chargebacks are part of doing business, but they don't have to eat into your profits. By understanding the process and being proactive, you can protect your coffee shop or restaurant from unnecessary losses.</p>
-            </div>
-          </section>
-
-          <!-- Section 2 -->
-          <section id="section-2" class="content-section mb-16 scroll-reveal">
-            <h2 class="text-3xl font-bold mb-6 text-gray-800">How to Win a Chargeback Dispute: A Step-by-Step Process</h2>
-            <div class="prose prose-lg">
-              <p>Winning a chargeback dispute starts with preparation. For coffee shop and restaurant owners, being organized is your best defense. The first thing to do is review the chargeback notification for the reason code and deadline. Each code requires a different type of evidence.</p>
-              <p>Next, gather your documentation. This could include order details, signed receipts, time-stamped POS records, loyalty program check-ins, photos of takeout or dine-in tickets, and even surveillance footage if available. Highlight any proof that shows the transaction was authorized and completed properly.</p>
-              <p>When writing your response, be clear and factual. Avoid emotional language and focus on explaining what happened, referencing your attached evidence. For example: 'Customer placed a mobile order for a cappuccino and sandwich. Order was picked up at 2:15 PM, confirmed by receipt and camera footage.'</p>
-              <p>Use a reliable format when submitting documents. Label each piece clearly (e.g., 'Receipt - 4/1/25, Order #1095') and submit them as PDFs or JPEGs, depending on processor requirements.</p>
-              <p>Finally, follow up with your payment processor if you don't hear back. Not every dispute will go in your favor, but detailed responses and organized records will greatly increase your chances of winning chargebacks and protecting your revenue.</p>
-            </div>
-          </section>
-
-          <!-- Section 3 -->
-          <section id="section-3" class="content-section mb-16 scroll-reveal">
-            <h2 class="text-3xl font-bold mb-6 text-gray-800">Preventing Friendly Fraud in Your Café or Restaurant</h2>
-            <div class="prose prose-lg">
-              <p>Friendly fraud occurs when a customer makes a purchase, then disputes the charge even though the transaction was valid. It's common in restaurants and cafés where customers may forget they made the purchase or regret spending money.</p>
-              <p>To reduce friendly fraud, set clear expectations and create a paper trail. Always provide itemized receipts and make your return/refund policy visible-on the counter, your website, and even on the receipt. If a customer signs for a purchase, keep that signature on file.</p>
-              <p>Use a POS system that tracks orders with time stamps, item descriptions, and employee IDs. Encourage staff to enter customer names or phone numbers when taking orders, especially for takeout or large orders. For phone or online orders, send order confirmations by text or email.</p>
-              <p>Train your staff to recognize suspicious behavior and verify customer identity if something seems off. Asking for ID isn't rude-it's protection. Make sure all staff follow the same protocol to maintain consistency.</p>
-              <p>Lastly, consider enrolling in chargeback alert programs that notify you of a dispute before it becomes a chargeback. These give you the chance to issue a refund directly and avoid fees. A proactive approach to friendly fraud helps maintain trust while protecting your business.</p>
-            </div>
-          </section>
-
-          <!-- Section 4 -->
-          <section id="section-4" class="content-section mb-16 scroll-reveal">
-            <h2 class="text-3xl font-bold mb-6 text-gray-800">Documenting Transactions: Your First Line of Defense</h2>
-            <div class="prose prose-lg">
-              <p>Proper documentation can make or break your chargeback case. In the fast-paced world of restaurants and coffee shops, keeping track of transactions isn't just good practice-it's essential.</p>
-              <p>Every transaction should generate a detailed receipt that includes the date, time, items purchased, amount, and payment method. Make sure your POS system stores digital copies automatically. If customers sign or tip, keep a copy of the signed receipt as well.</p>
-              <p>Train your staff to note any special instructions, delivery confirmations, or unusual situations in the system. If a customer disputes an order for being wrong or missing, your staff's notes can support your case.</p>
-              <p>For online or phone orders, store email confirmations or delivery app receipts. If you use delivery drivers, have them log delivery times and request signatures or photos of where the food was left.</p>
-              <p>Surveillance footage can be especially helpful. If your cameras show a customer picking up their order, that's powerful evidence in a dispute. Keep video footage for at least 30 days if possible.</p>
-              <p>Consistent documentation builds a strong foundation for responding to chargebacks. It also sends a message to card issuers that your business takes fraud prevention seriously.</p>
-            </div>
-          </section>
-
-          <!-- Section 5 -->
-          <section id="section-5" class="content-section mb-16 scroll-reveal">
-            <h2 class="text-3xl font-bold mb-6 text-gray-800">Using Your POS System to Fight Chargebacks</h2>
-            <div class="prose prose-lg">
-              <p>Your POS system is more than just a cash register-it's your best defense against chargebacks. Most modern POS systems can collect detailed records of every transaction, including timestamps, itemized orders, employee logins, and payment method details.</p>
-              <p>To leverage this, make sure your staff uses the POS consistently. Each order should include the customer's name (especially for takeout), the dining method (dine-in, pickup, delivery), and any special instructions. This creates a full picture of the transaction.</p>
-              <p>For dine-in customers, capturing a digital signature for large or disputed transactions can be helpful. Tip amounts should always be included on receipts, and you should retain both merchant and customer copies, especially for card-present sales.</p>
-              <p>Some systems even allow you to attach notes or photographs to transactions-like a photo of the food order or the pickup shelf. These details can make a big difference in a dispute.</p>
-              <p>Additionally, keep your POS software updated to ensure it maintains PCI compliance and keeps sensitive customer data secure. If your system integrates with delivery apps or online ordering, make sure those transactions also sync properly for recordkeeping.</p>
-              <p>In a chargeback scenario, exporting your POS records into a simple, organized PDF can help you present your evidence quickly and professionally. The better your system, the stronger your defense.</p>
-            </div>
-          </section>
-
-          <!-- Remaining sections... -->
-          <section id="section-6" class="content-section mb-16 scroll-reveal">
-            <h2 class="text-3xl font-bold mb-6 text-gray-800">When to Refund and When to Fight a Chargeback</h2>
-            <div class="prose prose-lg">
-              <p>As a coffee shop or restaurant owner, it's important to pick your battles. Not every chargeback is worth fighting, especially if the dispute amount is small or the customer truly had a poor experience.</p>
-              <p>Start by reviewing the reason code. If it's due to fraud (like a stolen card), and you didn't follow proper verification steps, it may be easier to issue a refund and move on. However, if you have strong evidence the transaction was valid-signed receipts, camera footage, and detailed POS records-then it may be worth your time to challenge it.</p>
-              <p>Consider the customer's history. Is this a regular guest or someone with repeated complaints? If it's the latter, defending the chargeback helps prevent repeat abuse.</p>
-              <p>Also factor in your processor's chargeback fee. Sometimes, disputing a $4 coffee charge with a $25 fee just isn't worth it. But if the ticket was $100 for catering or a group order, defending your revenue makes more sense.</p>
-              <p>In some cases, issuing a refund directly can help de-escalate the situation and avoid additional fees. Use your judgment-and always document your decision.</p>
-              <p>Ultimately, knowing when to refund versus when to fight can save you time, money, and customer goodwill.</p>
-            </div>
-          </section>
-
-          <section id="section-7" class="content-section mb-16 scroll-reveal">
-            <h2 class="text-3xl font-bold mb-6 text-gray-800">Responding to Chargebacks for Delivery Orders</h2>
-            <div class="prose prose-lg">
-              <p>Delivery orders are particularly vulnerable to chargebacks because the customer isn't present during the transaction. But that doesn't mean you're defenseless.</p>
-              <p>To protect your business, document every part of the delivery process. Use order confirmations, delivery app logs, and customer contact records. If your delivery staff snap a photo of the food drop-off or get a signature, save that as evidence.</p>
-              <p>Include customer names and phone numbers in the POS. Match delivery timestamps with the POS receipt. If you use third-party services like Uber Eats or DoorDash, keep copies of the completed delivery status.</p>
-              <p>If a chargeback occurs, gather these records and submit them quickly. Show that the order was placed, fulfilled, and delivered. Include GPS logs if available.</p>
-              <p>You can also contact the delivery platform to help fight the dispute. Some platforms have their own chargeback procedures and may provide additional documentation.</p>
-              <p>In the future, make your delivery terms clear at checkout-especially for no-contact delivery or policies about incorrect addresses. With the right system in place, you can reduce risk while continuing to offer great service.</p>
-            </div>
-          </section>
-
-          <section id="section-8" class="content-section mb-16 scroll-reveal">
-            <h2 class="text-3xl font-bold mb-6 text-gray-800">How Staff Training Reduces Chargebacks</h2>
-            <div class="prose prose-lg">
-              <p>Well-trained staff are your frontline defense against chargebacks. Every employee-from baristas to servers to cashiers-should know how to handle transactions properly and spot red flags.</p>
-              <p>Train your team to always offer receipts, check ID for large or suspicious purchases, and confirm names on mobile or phone orders. If a customer claims an item is missing, staff should document the complaint in the POS.</p>
-              <p>For in-person orders, staff should ensure the correct card is used, especially if customers use mobile wallets. Always use chip or contactless payments when possible, since swiped transactions are less secure and harder to defend.</p>
-              <p>Teach staff to note order modifications and customer complaints clearly. If a refund is issued, it should be recorded in the system, with a note as to why.</p>
-              <p>Regularly reviewing chargeback cases during staff meetings can be helpful too. Let employees know what went wrong and how it could be prevented next time.</p>
-              <p>Chargebacks are often caused by avoidable miscommunications or oversights. By equipping your team with the right knowledge and expectations, you minimize the chances of disputes and build a culture of accountability.</p>
-            </div>
-          </section>
-
-          <section id="section-9" class="content-section mb-16 scroll-reveal">
-            <h2 class="text-3xl font-bold mb-6 text-gray-800">Chargeback Policies: Communicating with Customers</h2>
-            <div class="prose prose-lg">
-              <p>Clear communication with your customers can stop a chargeback before it starts. Many disputes happen simply because customers don't recognize the charge or misunderstand a policy.</p>
-              <p>Your receipt should clearly list your business name, address, and phone number-especially if your legal name is different from your store's name. That way, the charge on a customer's bank statement won't look unfamiliar.</p>
-              <p>Display your refund and return policies prominently near the register, on your website, and on printed receipts. Make sure staff are familiar with these policies and can explain them confidently.</p>
-              <p>For online orders, email a confirmation that includes what was ordered, pickup/delivery time, and contact info for any questions. This prevents confusion and encourages customers to reach out before disputing the charge.</p>
-              <p>If a guest complains or has a bad experience, offer a resolution on the spot. A refund or replacement might cost a few dollars now but save you from fees and penalties later.</p>
-              <p>By being proactive and approachable, you reduce frustration and increase the chance that customers will come to you first-not their bank.</p>
-            </div>
-          </section>
-
-          <section id="section-10" class="content-section mb-16 scroll-reveal">
-            <h2 class="text-3xl font-bold mb-6 text-gray-800">Tracking and Analyzing Chargebacks to Improve Operations</h2>
-            <div class="prose prose-lg">
-              <p>Chargebacks aren't just a financial headache-they can also be a learning opportunity. Tracking and analyzing chargebacks can help you uncover patterns and improve your restaurant's operations.</p>
-              <p>Start by keeping a log of all disputes. Note the date, amount, reason code, and outcome. Over time, you may see trends. Are disputes happening more with online orders? Certain staff members? Specific menu items?</p>
-              <p>Once you identify a pattern, dig into the root cause. If many chargebacks cite order not received, maybe your delivery process needs refining. If customers claim unauthorized transaction, your card verification procedures might need work.</p>
-              <p>Use this data in staff training and system updates. Maybe you'll change your refund policy, upgrade your POS, or start taking photos of delivery drop-offs.</p>
-              <p>Your payment processor may offer reporting tools or alerts to help you monitor your chargeback ratio. Keeping this ratio low helps you avoid penalties or higher processing fees.</p>
-              <p>By turning chargeback data into insights, you can take proactive steps to boost customer satisfaction, prevent fraud, and protect your bottom line.</p>
-            </div>
-          </section>
-        </div>
-      </div>
-    </div>
 
     <!-- CTA Section -->
     <section id="contact" class="cta-section bg-primary-600 py-16 text-white">

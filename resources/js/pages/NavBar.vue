@@ -114,17 +114,34 @@
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                           <defs>
-                            <linearGradient id="ecommerceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <linearGradient id="surchargeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                               <stop offset="0%" stop-color="#7e22ce" />
                               <stop offset="100%" stop-color="#a855f7" />
                             </linearGradient>
                           </defs>
-                          <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 4h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h11c.55 0 1-.45 1-1s-.45-1-1-1H7l1.1-2h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.67-1.43c-.16-.35-.52-.57-.9-.57H1c-.55 0-1 .45-1 1s.45 1 1 1zm16 15c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" fill="url(#ecommerceGradient)"/>
+                          <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 4h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h11c.55 0 1-.45 1-1s-.45-1-1-1H7l1.1-2h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.67-1.43c-.16-.35-.52-.57-.9-.57H1c-.55 0-1 .45-1 1s.45 1 1 1zm16 15c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" fill="url(#surchargeGradient)"/>
                         </svg>
                       </div>
                       <span class="link-title">Surcharge Program</span>
                     </div>
-                    <span class="link-desc">Dual pricing options</span>
+                    <span class="link-desc">Offset card processing fees</span>
+                  </router-link>
+                  <router-link to="/dual-pricing" class="menu-item-link">
+                    <div class="top-row">
+                      <div class="icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                          <defs>
+                            <linearGradient id="dualPricingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" stop-color="#0f766e" />
+                              <stop offset="100%" stop-color="#14b8a6" />
+                            </linearGradient>
+                          </defs>
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.31-8.86c-1.77-.45-2.34-.94-2.34-1.67 0-.84.79-1.43 2.1-1.43 1.38 0 1.9.66 1.94 1.64h1.71c-.05-1.34-.87-2.57-2.49-2.97V5H10.9v1.69c-1.51.32-2.72 1.3-2.72 2.81 0 1.79 1.49 2.69 3.66 3.21 1.95.46 2.34 1.15 2.34 1.87 0 .53-.39 1.39-2.1 1.39-1.6 0-2.23-.72-2.32-1.64H8.04c.1 1.7 1.36 2.66 2.86 2.97V19h2.34v-1.67c1.52-.29 2.72-1.16 2.73-2.77-.01-2.2-1.9-2.96-3.66-3.42z" fill="url(#dualPricingGradient)"/>
+                        </svg>
+                      </div>
+                      <span class="link-title">Dual Pricing Program</span>
+                    </div>
+                    <span class="link-desc">Cash discount pricing model</span>
                   </router-link>
                   <router-link to="/bizfunds-cash" class="menu-item-link">
                     <div class="top-row">
@@ -440,7 +457,8 @@
           <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">Integrations</a>
           
           <p class="font-semibold text-gray-800 mt-3">Additional Services</p>
-          <router-link to="/surcharge" class="block py-1 text-gray-600 hover:text-indigo-600">Surcharge & Dual Pricing Program</router-link>
+          <router-link to="/surcharge" class="block py-1 text-gray-600 hover:text-indigo-600">Surcharge Program</router-link>
+          <router-link to="/dual-pricing" class="block py-1 text-gray-600 hover:text-indigo-600">Dual Pricing Program</router-link>
           <router-link to="/bizfunds-cash" class="block py-1 text-gray-600 hover:text-indigo-600">Speedy Business Loan</router-link>
           <router-link to="/gift-loyalty" class="block py-1 text-gray-600 hover:text-indigo-600">Gift & Loyalty Programs</router-link>
           <router-link to="/chargeback-guide" class="block py-1 text-gray-600 hover:text-indigo-600">Chargeback Guide</router-link>
