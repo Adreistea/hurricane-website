@@ -5,42 +5,28 @@
         <!-- Left Content with Text Reveal Animation -->
         <div class="lg:w-1/2 lg:pr-12 mb-10 lg:mb-0 slide-in-left">
           <div class="text-reveal mb-2">
-            <span class="text-reveal-content text-purple-600 font-semibold delay-100">Industry Solutions</span>
+            <span class="text-reveal-content text-purple-600 font-semibold delay-100">Industries</span>
           </div>
           
           <div class="text-reveal mb-6">
             <h1 class="text-reveal-content text-5xl lg:text-6xl font-bold leading-tight delay-200"
                 style="color: #973131;">
-              eCommerce Payment Solutions
+              eCommerce & Online Payment Processing
             </h1>
           </div>
           
           <div class="text-reveal mb-8">
             <p class="text-reveal-content text-lg text-gray-600 delay-300">
-              Empower your online business with our comprehensive eCommerce payment solutions designed to provide seamless checkout experiences, increase conversion rates, and protect your customers' data.
+              Leverage the right digital tools and strategies to help your online business grow! We can help you establish your web presence, add a store to your existing website, or even enable payments for your online store. Our digital solutions are cost-effective, user-friendly, and always held to the highest security standards.
             </p>
-          </div>
-          
-          <div class="flex flex-col sm:flex-row gap-4 slide-in-left delay-400">
-            <a href="#" class="fancy-button text-white font-medium py-3 px-8 rounded-md shadow-lg" 
-               style="background-color: #973131; transition: all 0.3s ease;">
-              Get Started
-            </a>
-            
-            <a href="#" class="hover-scale border font-medium py-3 px-8 rounded-md transition-all duration-300 inline-flex items-center"
-               style="border-color: #973131; color: #973131;">
-              View Pricing
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-              </svg>
-            </a>
           </div>
         </div>
         
         <!-- Right Content - Image with Card Reveal Animation -->
         <div class="lg:w-1/2 relative card-reveal delay-200">
           <div class="rounded-lg shadow-2xl overflow-hidden">
-            <img src="@/../images/TransparentLogo.png" alt="eCommerce Payment Solutions" class="w-full h-auto" />
+            <img src="@/../images/ecommercepic.png" alt="eCommerce Payment Solutions" class="w-full h-auto" 
+                 onerror="this.onerror=null; this.src='@/../images/TransparentLogo.png';" />
           </div>
           
           <!-- Animated decorative elements -->
@@ -49,33 +35,65 @@
         </div>
       </div>
   
+      <!-- Modern Business Section -->
+      <div class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+          <div class="flex flex-col lg:flex-row items-center gap-12">
+            <!-- Left side image with decorative elements -->
+            <div class="lg:w-2/5 relative">
+              <div class="rounded-xl overflow-hidden shadow-xl scroll-reveal opacity-0">
+                <img src="@/../images/ecommercepic2.jpeg" alt="Modern eCommerce Solutions" class="w-full h-auto" 
+                     onerror="this.onerror=null; this.src='@/../images/TransparentLogo.png';" />
+              </div>
+              <!-- Decorative elements -->
+              <div class="absolute -z-10 -bottom-6 -right-6 w-full h-full bg-gradient-to-r from-purple-100 to-indigo-100 rounded-xl transform rotate-2"></div>
+              <div class="absolute -z-20 -bottom-12 -right-12 w-full h-full bg-gradient-to-r from-indigo-100 to-purple-100 rounded-xl transform -rotate-3"></div>
+            </div>
+            
+            <!-- Right side content -->
+            <div class="lg:w-3/5">
+              <h2 class="text-3xl md:text-4xl font-bold mb-6 scroll-reveal opacity-0" style="color: #973131;">Modern Businesses Need Innovative Solutions</h2>
+              <div class="text-lg text-gray-700 space-y-4 scroll-reveal opacity-0" data-delay="100">
+                <p>
+                  Conducting business online is an option steadily gaining popularity and potential. Electronic Merchant Systems is prepared to help online businesses reach more customers and offer excellent service to every online guest.
+                </p>
+                <p>
+                  You may not be able to present a friendly greeting or your personal attention when a customer enters your website, but you can still show you care by providing a straightforward and secure buying experience. Let us help you develop that experience with an innovative eCommerce payment processing solution.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
       <!-- Solutions Section -->
       <div class="relative py-24 mt-16">
         <div class="container mx-auto px-6">
           <div class="text-center mb-12">
-            <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Online Payment Solutions</h2>
+            <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Why Hurricane Payments</h2>
             <div class="w-32 h-1 bg-gray-300 mx-auto"></div>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto mt-4">Hurricane Payments provides innovative web services to reinforce your digital presence.</p>
           </div>
           
           <!-- Solutions container with border -->
           <div class="solutions-container relative rounded-3xl border border-gray-300 bg-white p-6 md:p-12">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-              <!-- Payment Gateways -->
+              <!-- Responsive Web Design -->
               <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm scroll-reveal opacity-0 solution-card" data-delay="0">
                 <div class="flex flex-row items-center mb-4">
                   <div class="w-14 h-14 mr-4 text-purple-500">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-full h-full">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                     </svg>
                   </div>
-                  <h2 class="text-2xl font-bold text-purple-500">Payment Gateways</h2>
+                  <h2 class="text-2xl font-bold text-purple-500">Responsive Web Design</h2>
                 </div>
                 <p class="text-gray-700">
-                  Secure and reliable payment gateways that integrate with your online store, supporting all major credit cards, digital wallets, and alternative payment methods.
+                  Offer a consistent experience to all customers with EMS. Our websites are designed to be responsive, meaning they adapt to fit any screen size.
                 </p>
               </div>
   
-              <!-- Shopping Carts -->
+              <!-- Online Shopping Carts -->
               <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm scroll-reveal opacity-0 solution-card" data-delay="200">
                 <div class="flex flex-row items-center mb-4">
                   <div class="w-14 h-14 mr-4 text-blue-500">
@@ -83,25 +101,25 @@
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
                   </div>
-                  <h2 class="text-2xl font-bold text-blue-500">Shopping Cart Integration</h2>
+                  <h2 class="text-2xl font-bold text-blue-500">Online Shopping Carts</h2>
                 </div>
                 <p class="text-gray-700">
-                  Seamless integration with popular shopping cart platforms like Shopify, WooCommerce, Magento, and custom-built solutions for a frictionless checkout experience.
+                  Control the shopper's online buying experience with a simple, clean, and straightforward shopping cart. We can build one into a new website or add a cart to your existing website.
                 </p>
               </div>
   
-              <!-- Recurring Billing -->
+              <!-- Web Hosting Services -->
               <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm scroll-reveal opacity-0 solution-card" data-delay="400">
                 <div class="flex flex-row items-center mb-4">
                   <div class="w-14 h-14 mr-4 text-indigo-500">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-full h-full">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
                     </svg>
                   </div>
-                  <h2 class="text-2xl font-bold text-indigo-500">Subscription Management</h2>
+                  <h2 class="text-2xl font-bold text-indigo-500">Web Hosting Services</h2>
                 </div>
                 <p class="text-gray-700">
-                  Automate recurring billing, manage subscription plans, and provide easy customer self-service options for subscription modifications and cancellations.
+                  Host your website with us to benefit from: data storage, an email address tied to your website, simple web transfer, design tools, and administrative tools.
                 </p>
               </div>
             </div>
@@ -212,6 +230,41 @@
                     Accept payments in multiple currencies with automatic currency conversion, enabling you to expand your business internationally with ease.
                   </p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Affordable Solutions Section -->
+      <div class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+          <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
+            <!-- Right side image with decorative elements -->
+            <div class="lg:w-2/5 relative">
+              <div class="rounded-xl overflow-hidden shadow-xl scroll-reveal opacity-0">
+                <div class="bg-white p-16 rounded-xl flex items-center justify-center">
+                  <div class="text-center relative">
+                    <div class="text-8xl font-bold mb-4" style="color: #973131;">$</div>
+                    <div class="flex items-center justify-center">
+                      <span class="animate-ping absolute h-5 w-5 rounded-full bg-red-200 opacity-75"></span>
+                      <span class="relative block h-5 w-5 rounded-full bg-red-300"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Decorative elements -->
+              <div class="absolute -z-10 -bottom-6 -left-6 w-full h-full bg-gradient-to-r from-green-100 to-blue-100 rounded-xl transform -rotate-2"></div>
+              <div class="absolute -z-20 -bottom-12 -left-12 w-full h-full bg-gradient-to-r from-amber-100 to-purple-100 rounded-xl transform rotate-3"></div>
+            </div>
+            
+            <!-- Left side content -->
+            <div class="lg:w-3/5">
+              <h2 class="text-3xl md:text-4xl font-bold mb-6 scroll-reveal opacity-0" style="color: #973131;">Affordable, Simple, Secure Solutions</h2>
+              <div class="text-lg text-gray-700 scroll-reveal opacity-0" data-delay="100">
+                <p>
+                  Helping small businesses improve profitability is part of our company mission. Therefore, we are committed to offering low, wholesale rates for all our products and services. However, we never sacrifice quality. When you choose to implement an EMS solution, you can rest assured that you will be getting the best solution possible, at the lowest rate possible. And yes, the savings stack up quick!
+                </p>
               </div>
             </div>
           </div>

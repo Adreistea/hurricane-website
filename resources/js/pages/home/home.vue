@@ -18,18 +18,18 @@
         </div>
         
         <div class="flex flex-col sm:flex-row gap-4 slide-in-left delay-400">
-          <a href="#" class="fancy-button text-white font-medium py-3 px-8 rounded-md shadow-lg" 
+          <router-link to="/request-consultation" class="fancy-button text-white font-medium py-3 px-8 rounded-md shadow-lg" 
              style="background-color: #973131; transition: all 0.3s ease;">
             Get Started
-          </a>
+          </router-link>
           
-          <a href="#" class="hover-scale border font-medium py-3 px-8 rounded-md transition-all duration-300 inline-flex items-center"
+          <button @click="openSolutionsMenu" class="hover-scale border font-medium py-3 px-8 rounded-md transition-all duration-300 inline-flex items-center"
              style="border-color: #973131; color: #973131;">
-            See our Solutions
+            See Our Solutions
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
             </svg>
-          </a>
+          </button>
         </div>
         
         <div class="mt-10 slide-in-left delay-600">
@@ -156,13 +156,6 @@
               <p class="text-gray-700 mb-4">
                 Do you need a tailored payment solution for your restaurant or retail business? We offer multiple point of sale options to help you streamline operations, increase efficiency, and improve the customer experience.
               </p>
-              
-              <a href="#" class="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-800 transition-colors duration-300">
-                Learn More
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                </svg>
-              </a>
             </div>
           </div>
         </div>
@@ -202,13 +195,6 @@
               <p class="text-gray-700 mb-4">
                 Take advantage of the flexibility to accept payments online! Our payment gateway solutions offer a powerful, secure virtual terminal along with seamless integration to online stores. Plus, advanced features are available to help you manage your business.
               </p>
-              
-              <a href="#" class="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-800 transition-colors duration-300">
-                Learn More
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                </svg>
-              </a>
             </div>
           </div>
         </div>
@@ -240,12 +226,12 @@
               Offset the cost of accepting credit cards by applying a service fee to all credit card sales.
             </p>
             
-            <a href="#" class="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-800 transition-colors duration-300 btn-bounce">
+            <router-link to="/surcharge" class="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-800 transition-colors duration-300 btn-bounce">
               Learn more
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 arrow-icon" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
               </svg>
-            </a>
+            </router-link>
           </div>
         </div>
         
@@ -262,12 +248,12 @@
               Save money on fees by offering a discounted cash price on all sales.
             </p>
             
-            <a href="#" class="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-800 transition-colors duration-300 btn-bounce">
+            <router-link to="/dual-pricing" class="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-800 transition-colors duration-300 btn-bounce">
               Learn more
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 arrow-icon" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
               </svg>
-            </a>
+            </router-link>
           </div>
         </div>
       </div>
@@ -310,12 +296,6 @@
                 <p class="text-gray-600 mb-2 text-xs leading-tight">
                   Whether you need to manage multiple store locations, fulfill orders online, or accept credit cards on the go, we can help.
                 </p>
-                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center justify-center group text-xs">
-                  Learn more
-                  <svg class="w-3 h-3 ml-1 transform transition-transform group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                  </svg>
-                </a>
               </div>
             </div>
           </div>
@@ -334,12 +314,6 @@
                 <p class="text-gray-600 mb-2 text-xs leading-tight">
                   We can help you establish your web presence, add a store to your existing website, or enable payments for an existing online store.
                 </p>
-                <a href="#" class="text-purple-600 hover:text-purple-800 font-medium inline-flex items-center justify-center group text-xs">
-                  Learn more
-                  <svg class="w-3 h-3 ml-1 transform transition-transform group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                  </svg>
-                </a>
               </div>
             </div>
           </div>
@@ -358,12 +332,6 @@
                 <p class="text-gray-600 mb-2 text-xs leading-tight">
                   Our restaurant-specific point of sale systems can help you improve processes and make service easy.
                 </p>
-                <a href="#" class="text-green-600 hover:text-green-800 font-medium inline-flex items-center justify-center group text-xs">
-                  Learn more
-                  <svg class="w-3 h-3 ml-1 transform transition-transform group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                  </svg>
-                </a>
               </div>
             </div>
           </div>
@@ -382,12 +350,6 @@
                 <p class="text-gray-600 mb-2 text-xs leading-tight">
                   With a secure, simple payment solution, you can help your customers get back to their daily lives faster.
                 </p>
-                <a href="#" class="text-red-600 hover:text-red-800 font-medium inline-flex items-center justify-center group text-xs">
-                  Learn more
-                  <svg class="w-3 h-3 ml-1 transform transition-transform group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                  </svg>
-                </a>
               </div>
             </div>
           </div>
@@ -406,12 +368,6 @@
                 <p class="text-gray-600 mb-2 text-xs leading-tight">
                   We provide innovative, secure payment solutions to help you streamline operations, save time, and elevate the customer experience.
                 </p>
-                <a href="#" class="text-yellow-600 hover:text-yellow-800 font-medium inline-flex items-center justify-center group text-xs">
-                  Learn more
-                  <svg class="w-3 h-3 ml-1 transform transition-transform group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                  </svg>
-                </a>
               </div>
             </div>
           </div>
@@ -430,12 +386,6 @@
                 <p class="text-gray-600 mb-2 text-xs leading-tight">
                   Whether you run a beauty salon, golf course, auto repair shop, or anything in-between, we're here to serve and support your unique needs!
                 </p>
-                <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center justify-center group text-xs">
-                  Learn more
-                  <svg class="w-3 h-3 ml-1 transform transition-transform group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                  </svg>
-                </a>
               </div>
             </div>
           </div>
@@ -443,15 +393,7 @@
 
         <!-- See All Industries Link -->
         <div class="text-center mt-12">
-          <a href="#" class="inline-flex items-center text-gray-700 hover:text-gray-900 font-medium group">
-            <span class="relative">
-              See all industries we serve
-              <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gray-900 transform scale-x-0 transition-transform group-hover:scale-x-100"></span>
-            </span>
-            <svg class="w-5 h-5 ml-2 transform transition-transform group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-            </svg>
-          </a>
+          <!-- See all industries link removed -->
         </div>
       </div>
     </div>
@@ -571,7 +513,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted, nextTick } from 'vue';
 import axios from 'axios';
 import Lightbox from '../lightbox.vue';
 import MainLayout from '../MainLayout.vue'; // Make sure path is correct
@@ -583,6 +525,38 @@ import logoImg from '@/../images/TransparentLogo.png';
 import posImg from '@/../images/homepic2.png';
 // Import Online Payments image
 import onlinePaymentsImg from '@/../images/homepic3.png';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+// Create a ref to the NavBar component
+const navbarRef = ref(null);
+
+// Emit a custom event that will be handled by the parent component
+const openSolutionsMenu = () => {
+  // Access global event bus or use a simple custom event
+  const event = new CustomEvent('open-solutions-dropdown');
+  window.dispatchEvent(event);
+};
+
+// Add event listener to window
+onMounted(() => {
+  // ... other onMounted code ...
+  
+  // Create global event handler
+  window.addEventListener('open-solutions-dropdown', () => {
+    // Find the navbar component using query selector and call its method
+    const navbar = document.querySelector('nav');
+    if (navbar && navbar.__vueParentComponent && navbar.__vueParentComponent.exposed) {
+      navbar.__vueParentComponent.exposed.openDropdown('solutions');
+    }
+  });
+});
+
+// Clean up event listener
+onUnmounted(() => {
+  window.removeEventListener('open-solutions-dropdown', () => {});
+});
 
 // Chatbot state
 const isChatOpen = ref(false);

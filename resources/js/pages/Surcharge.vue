@@ -20,21 +20,6 @@
             Our Surcharge Program allows you to pass the cost of credit card processing to your customers through a fee-based model, potentially saving your business thousands of dollars per year.
           </p>
         </div>
-        
-        <div class="flex flex-col sm:flex-row gap-4 slide-in-left delay-400">
-          <a href="#" class="fancy-button text-white font-medium py-3 px-8 rounded-md shadow-lg" 
-             style="background-color: #973131; transition: all 0.3s ease;">
-            Start Saving Today
-          </a>
-          
-          <a href="#" class="hover-scale border font-medium py-3 px-8 rounded-md transition-all duration-300 inline-flex items-center"
-             style="border-color: #973131; color: #973131;">
-            Learn How It Works
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-            </svg>
-          </a>
-        </div>
       </div>
       
       <!-- Right Content - Image with Card Reveal Animation -->
@@ -190,16 +175,6 @@
                 </div>
               </div>
             </div>
-            
-            <!-- Action button -->
-            <div class="mt-8">
-              <a href="#" class="inline-flex items-center px-6 py-3 bg-[#973131] text-white font-medium rounded-lg shadow-lg transition-all duration-300 hover:bg-[#7e2929] hover:shadow-xl transform hover:-translate-y-1">
-                <span>Learn More About Compliance</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
-            </div>
           </div>
         </div>
       </div>
@@ -322,9 +297,6 @@
           <router-link to="/request-consultation" class="bg-white text-red-900 font-medium py-3 px-8 rounded-md shadow-lg hover:bg-opacity-90 transition-all duration-300 inline-block mx-2 mb-4">
             Request a Consultation
           </router-link>
-          <a href="#" class="border-2 border-white text-white font-medium py-3 px-8 rounded-md hover:bg-white hover:text-red-900 transition-all duration-300 inline-block mx-2 mb-4">
-            Calculate Your Savings
-          </a>
         </div>
       </div>
     </div>

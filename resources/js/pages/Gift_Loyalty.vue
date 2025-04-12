@@ -20,27 +20,12 @@
             Enhance customer retention and increase revenue with our customizable gift and loyalty programs. Build lasting relationships with your customers while driving repeat business.
           </p>
         </div>
-        
-        <div class="flex flex-col sm:flex-row gap-4 slide-in-left delay-400">
-          <a href="#" class="fancy-button text-white font-medium py-3 px-8 rounded-md shadow-lg" 
-             style="background-color: #973131; transition: all 0.3s ease;">
-            Get Started
-          </a>
-          
-          <a href="#" class="hover-scale border font-medium py-3 px-8 rounded-md transition-all duration-300 inline-flex items-center"
-             style="border-color: #973131; color: #973131;">
-            View Program Options
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-            </svg>
-          </a>
-        </div>
       </div>
       
       <!-- Right Content - Image with Card Reveal Animation -->
       <div class="lg:w-1/2 relative card-reveal delay-200">
         <div class="rounded-lg shadow-2xl overflow-hidden">
-          <img src="@/../images/TransparentLogo.png" alt="Gift & Loyalty Programs" class="w-full h-auto" />
+          <img src="@/../images/gift.png" alt="Gift & Loyalty Programs" class="w-full h-auto" />
         </div>
         
         <!-- Animated decorative elements -->
@@ -217,6 +202,47 @@
       </div>
     </div>
     
+    <!-- Attract New Customers Section -->
+    <div class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12 scroll-reveal opacity-0">
+          <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Attract New Customers</h2>
+          <div class="w-32 h-1 bg-gray-300 mx-auto"></div>
+        </div>
+        
+        <div class="flex flex-col lg:flex-row gap-10 items-center max-w-6xl mx-auto">
+          <!-- Image Column -->
+          <div class="lg:w-1/2 scroll-reveal opacity-0" data-delay="100">
+            <div class="rounded-lg shadow-xl overflow-hidden">
+              <img src="@/../images/customers.jpg" alt="Attract New Customers" class="w-full h-auto" 
+                   onerror="this.onerror=null; this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22400%22%20height%3D%22300%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20300%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_189a44be9d5%20text%20%7B%20fill%3A%23973131%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A20pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_189a44be9d5%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%23f1f5f9%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22110%22%20y%3D%22156.5%22%3EGift%20Cards%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E';" />
+            </div>
+          </div>
+          
+          <!-- Text Column -->
+          <div class="lg:w-1/2">
+            <div class="scroll-reveal opacity-0" data-delay="200">
+              <p class="text-lg text-gray-700 mb-6">
+                Gift cards make great thank you gifts, prizes, stocking stuffers, and more. With each gift card you sell, you gain the opportunity to welcome a new customer to your business.
+              </p>
+            </div>
+            
+            <div class="scroll-reveal opacity-0" data-delay="300">
+              <p class="text-lg text-gray-700 mb-6">
+                Their experience with you starts when they receive that little piece of plastic, which means it needs to be visually appealing and represent your business.
+              </p>
+            </div>
+            
+            <div class="scroll-reveal opacity-0" data-delay="400">
+              <p class="text-lg text-gray-700 mb-6">
+                Trust the creative professionals at EMS to deliver the branded, plastic card masterpiece you need to attract new customers. Our in-house team utilizes software and various designs to build a program that is completely customized to your business.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- CTA Section -->
     <div class="bg-gradient-to-r from-red-900 to-red-700 text-white py-16" style="background: linear-gradient(to right, #973131, #b64848);">
       <div class="container mx-auto px-6 text-center">
@@ -226,9 +252,6 @@
           <router-link to="/request-consultation" class="bg-white text-red-900 font-medium py-3 px-8 rounded-md shadow-lg hover:bg-opacity-90 transition-all duration-300 inline-block mx-2 mb-4">
             Request a Consultation
           </router-link>
-          <a href="#" class="border-2 border-white text-white font-medium py-3 px-8 rounded-md hover:bg-white hover:text-red-900 transition-all duration-300 inline-block mx-2 mb-4">
-            View Pricing
-          </a>
         </div>
       </div>
     </div>
@@ -325,6 +348,45 @@ onMounted(() => {
 
   // Fetch and check lightboxes
   fetchLightboxes();
+
+  // Animate the fade-in sections
+  setTimeout(() => {
+    document.querySelector('.fade-in-section')?.classList.add('animate');
+    
+    // Animate text appear elements with delay
+    document.querySelectorAll('.text-appear').forEach(el => {
+      setTimeout(() => {
+        el.classList.add('animate');
+      }, parseInt(el.getAttribute('data-delay') || '0'));
+    });
+    
+    // Animate slide-up elements
+    document.querySelector('.slide-up')?.classList.add('animate');
+  }, 300);
+
+  // Add intersection observer for the new section
+  const newSectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const section = entry.target;
+        section.querySelector('.fade-in-section')?.classList.add('animate');
+        
+        section.querySelectorAll('.text-appear').forEach(el => {
+          setTimeout(() => {
+            el.classList.add('animate');
+          }, parseInt(el.getAttribute('data-delay') || '0'));
+        });
+        
+        section.querySelector('.slide-up')?.classList.add('animate');
+        newSectionObserver.unobserve(section);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  // Observe the new section
+  document.querySelector('.py-24.bg-gradient-to-b')?.forEach(section => {
+    newSectionObserver.observe(section);
+  });
 });
 </script>
 
@@ -453,5 +515,68 @@ onMounted(() => {
 
 .fancy-button:hover:after {
   transform: translateX(100%);
+}
+
+/* New animations for Attract New Customers section */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-section.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-appear {
+  transform: translateY(15px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.text-appear.animate {
+  opacity: 1 !important;
+  transform: translateY(0);
+}
+
+.slide-up {
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.slide-up.animate {
+  opacity: 1 !important;
+  transform: translateY(0);
+}
+
+/* Floating animation for decorative elements */
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+.floating-slow {
+  animation: floating 5s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Gift card animations */
+.gift-card {
+  transition: transform 0.5s ease;
+}
+
+.gift-card:hover {
+  transform: translateY(-10px) rotate(0deg) !important;
+  z-index: 10 !important;
 }
 </style>

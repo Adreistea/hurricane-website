@@ -24,18 +24,22 @@
         </div>
         
         <div class="flex flex-col sm:flex-row gap-4 slide-in-left delay-400">
-          <a href="#" class="fancy-button text-white font-medium py-3 px-8 rounded-md shadow-lg" 
-             style="background-color: #973131; transition: all 0.3s ease;">
+          <router-link 
+            to="/request-consultation" 
+            class="fancy-button text-white font-medium py-3 px-8 rounded-md shadow-lg" 
+            style="background-color: #973131; transition: all 0.3s ease;">
             Get Started
-          </a>
+          </router-link>
           
-          <a href="#" class="hover-scale border font-medium py-3 px-8 rounded-md transition-all duration-300 inline-flex items-center"
-             style="border-color: #973131; color: #973131;">
+          <button
+            @click="scrollToNextSection"
+            class="hover-scale border font-medium py-3 px-8 rounded-md transition-all duration-300 inline-flex items-center"
+            style="border-color: #973131; color: #973131;">
             Learn More
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
             </svg>
-          </a>
+          </button>
         </div>
       </div>
       
@@ -236,7 +240,7 @@
           <div class="lg:w-1/2 scroll-reveal-right opacity-0">
             <h2 class="text-4xl font-bold mb-6" style="color: #973131;">Features that Go Beyond Getting Paid</h2>
             <p class="text-lg text-gray-600 mb-8">
-              When you choose to implement an EMS Virtual Terminal solution, you get more than a secure way to accept online payments. You also get access to a suite of features designed help you streamline every aspect of your business.
+              When you choose to implement an Hurricane Payments' Virtual Terminal solution, you get more than a secure way to accept online payments. You also get access to a suite of features designed help you streamline every aspect of your business.
             </p>
             
             <!-- Feature List -->
@@ -409,6 +413,15 @@ const setupExitIntent = () => {
   
   document.addEventListener('mouseleave', handleExitIntent);
 };
+
+// Define scrollToNextSection function
+function scrollToNextSection() {
+  // Scroll to the stats section
+  const statsSection = document.querySelector('.bg-gray-50.py-16');
+  if (statsSection) {
+    statsSection.scrollIntoView({ behavior: 'smooth' });
+  }
+}
 
 onMounted(() => {
   // Fancy button hover effect

@@ -6,9 +6,9 @@
         <div class="max-w-3xl">
           <h1 class="text-5xl font-bold mb-6">Join Our Agent Program</h1>
           <p class="text-xl mb-8">Partner with us to grow your business and provide your clients with industry-leading payment processing solutions.</p>
-          <router-link to="/request-consultation" class="bg-white text-blue-800 font-semibold py-3 px-8 rounded-md shadow-lg hover:bg-gray-100 transition-all duration-300">
+          <a href="https://crm.hurricanepayments.com/apply" target="_blank" class="bg-white text-blue-800 font-semibold py-3 px-8 rounded-md shadow-lg hover:bg-gray-100 transition-all duration-300">
             Become an Agent
-          </router-link>
+          </a>
         </div>
       </div>
     </div>
@@ -56,9 +56,9 @@
       <div class="container mx-auto px-6 text-center">
         <h2 class="text-3xl font-bold mb-6">Ready to Grow Your Business?</h2>
         <p class="text-xl mb-8 max-w-2xl mx-auto">Join our agent program today and start offering industry-leading payment processing solutions to your clients.</p>
-        <router-link to="/request-consultation" class="bg-white text-blue-800 font-semibold py-3 px-8 rounded-md shadow-lg hover:bg-gray-100 transition-all duration-300">
+        <a href="https://crm.hurricanepayments.com/apply" target="_blank" class="bg-white text-blue-800 font-semibold py-3 px-8 rounded-md shadow-lg hover:bg-gray-100 transition-all duration-300">
           Apply Now
-        </router-link>
+        </a>
       </div>
     </div>
   </MainLayout>

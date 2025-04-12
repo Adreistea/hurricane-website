@@ -21,18 +21,22 @@
         </div>
         
         <div class="flex flex-col sm:flex-row gap-4 slide-in-left delay-400">
-          <a href="#" class="fancy-button text-white font-medium py-3 px-8 rounded-md shadow-lg" 
-             style="background-color: #973131; transition: all 0.3s ease;">
+          <router-link 
+            to="/request-consultation" 
+            class="fancy-button text-white font-medium py-3 px-8 rounded-md shadow-lg" 
+            style="background-color: #973131; transition: all 0.3s ease;">
             Get Started
-          </a>
+          </router-link>
           
-          <a href="#" class="hover-scale border font-medium py-3 px-8 rounded-md transition-all duration-300 inline-flex items-center"
-             style="border-color: #973131; color: #973131;">
+          <button
+            @click="scrollToNextSection"
+            class="hover-scale border font-medium py-3 px-8 rounded-md transition-all duration-300 inline-flex items-center"
+            style="border-color: #973131; color: #973131;">
             Learn More
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
             </svg>
-          </a>
+          </button>
         </div>
       </div>
       
@@ -141,7 +145,7 @@
             </h2>
             
             <p class="text-lg text-gray-700 mb-6">
-              EMSmobile is a simple, yet powerful <a href="#" class="text-custom-red font-medium hover:underline">mobile payment acceptance</a> option for any business looking to get paid on the go. It is compatible with iOS and Android devices, offering a card reader that connects to your device via Bluetooth. With this solution, you can:
+              Hurricane Payments' Mobile Credit Card Processing is a simple, yet powerful <a href="#" class="text-custom-red font-medium hover:underline">mobile payment acceptance</a> option for any business looking to get paid on the go. It is compatible with iOS and Android devices, offering a card reader that connects to your device via Bluetooth. With this solution, you can:
             </p>
             
             <ul class="space-y-4 mb-8">
@@ -192,7 +196,9 @@
             </ul>
             
             <div class="mt-8">
-              <a href="#" class="fancy-button text-white font-medium py-3 px-8 rounded-md shadow-lg inline-block" 
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Thomas@hurricanepayments.com" 
+                 target="_blank" 
+                 class="fancy-button text-white font-medium py-3 px-8 rounded-md shadow-lg inline-block" 
                  style="background-color: #973131; transition: all 0.3s ease;">
                 Contact Hurricane Payments Today
               </a>
@@ -306,6 +312,15 @@ import NavBar from './NavBar.vue'; // Import the NavBar component
 
 // Import mobile device image with correct file name
 const mobileDeviceImg = new URL('@/../images/qrpic.jpg', import.meta.url).href;
+
+// Define scrollToNextSection outside onMounted so it's available to the template
+function scrollToNextSection() {
+  // Scroll to the stats section
+  const statsSection = document.querySelector('.container.mx-auto.px-6.py-20.mt-8');
+  if (statsSection) {
+    statsSection.scrollIntoView({ behavior: 'smooth' });
+  }
+}
 
 onMounted(() => {
   // Fancy button hover effect

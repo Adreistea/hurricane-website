@@ -20,27 +20,12 @@
             Get the capital your business needs to grow with our flexible merchant cash advance program. BizFunds provides quick access to funds with simple repayment terms based on your future sales.
           </p>
         </div>
-        
-        <div class="flex flex-col sm:flex-row gap-4 slide-in-left delay-400">
-          <a href="#" class="fancy-button text-white font-medium py-3 px-8 rounded-md shadow-lg" 
-             style="background-color: #973131; transition: all 0.3s ease;">
-            Apply Now
-          </a>
-          
-          <a href="#" class="hover-scale border font-medium py-3 px-8 rounded-md transition-all duration-300 inline-flex items-center"
-             style="border-color: #973131; color: #973131;">
-            Calculate Funding
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-            </svg>
-          </a>
-        </div>
       </div>
       
       <!-- Right Content - Image with Card Reveal Animation -->
       <div class="lg:w-1/2 relative card-reveal delay-200">
         <div class="rounded-lg shadow-2xl overflow-hidden">
-          <img src="@/../images/TransparentLogo.png" alt="BizFunds Cash Advance" class="w-full h-auto" />
+          <img src="@/../images/speedypic.png" alt="BizFunds Cash Advance" class="w-full h-auto" onerror="this.src='https://via.placeholder.com/600x400?text=BizFunds+Cash+Advance';this.onerror='';" />
         </div>
         
         <!-- Animated decorative elements -->
@@ -218,9 +203,6 @@
           <router-link to="/request-consultation" class="bg-white text-red-900 font-medium py-3 px-8 rounded-md shadow-lg hover:bg-opacity-90 transition-all duration-300 inline-block mx-2 mb-4">
             Request a Consultation
           </router-link>
-          <a href="#" class="border-2 border-white text-white font-medium py-3 px-8 rounded-md hover:bg-white hover:text-red-900 transition-all duration-300 inline-block mx-2 mb-4">
-            Apply Now
-          </a>
         </div>
       </div>
     </div>

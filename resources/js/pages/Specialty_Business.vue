@@ -5,42 +5,28 @@
       <!-- Left Content with Text Reveal Animation -->
       <div class="lg:w-1/2 lg:pr-12 mb-10 lg:mb-0 slide-in-left">
         <div class="text-reveal mb-2">
-          <span class="text-reveal-content text-indigo-600 font-semibold delay-100">Industry Solutions</span>
+          <span class="text-reveal-content text-indigo-600 font-semibold delay-100">Industries</span>
         </div>
         
         <div class="text-reveal mb-6">
           <h1 class="text-reveal-content text-5xl lg:text-6xl font-bold leading-tight delay-200"
               style="color: #973131;">
-            Specialty Business Solutions
+            Payment Processing for Specialty Businesses
           </h1>
         </div>
         
         <div class="text-reveal mb-8">
           <p class="text-reveal-content text-lg text-gray-600 delay-300">
-            Tailored payment processing solutions for specialized industries including beauty salons, auto repair shops, golf courses, and more. We understand your unique challenges and provide customized solutions to meet your specific needs.
+            At Electronic Merchant Systems, we're here to serve your business! Whether that business is a beauty salon, golf course, auto repair shop, or anything in-between, you can trust us to provide the payment processing solution you need to thrive.
           </p>
-        </div>
-        
-        <div class="flex flex-col sm:flex-row gap-4 slide-in-left delay-400">
-          <a href="#" class="fancy-button text-white font-medium py-3 px-8 rounded-md shadow-lg" 
-             style="background-color: #973131; transition: all 0.3s ease;">
-            Get Started
-          </a>
-          
-          <a href="#" class="hover-scale border font-medium py-3 px-8 rounded-md transition-all duration-300 inline-flex items-center"
-             style="border-color: #973131; color: #973131;">
-            View Pricing
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-            </svg>
-          </a>
         </div>
       </div>
       
       <!-- Right Content - Image with Card Reveal Animation -->
       <div class="lg:w-1/2 relative card-reveal delay-200">
         <div class="rounded-lg shadow-2xl overflow-hidden">
-          <img src="@/../images/TransparentLogo.png" alt="Specialty Business Solutions" class="w-full h-auto" />
+          <img src="@/../images/specialty.jpg" alt="Specialty Business Solutions" class="w-full h-auto" 
+               onerror="this.onerror=null; this.src='@/../images/TransparentLogo.png';" />
         </div>
         
         <!-- Animated decorative elements -->
@@ -53,55 +39,56 @@
     <div class="relative py-24 mt-16">
       <div class="container mx-auto px-6">
         <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Solutions for Specialty Businesses</h2>
+          <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Why Hurricane Payments</h2>
           <div class="w-32 h-1 bg-gray-300 mx-auto"></div>
+          <p class="text-xl mt-4">Enhance the payment experience with Hurricane Payments.</p>
         </div>
         
         <!-- Solutions container with border -->
         <div class="solutions-container relative rounded-3xl border border-gray-300 bg-white p-6 md:p-12">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-            <!-- Beauty & Salon -->
+            <!-- Virtual Terminals -->
             <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm scroll-reveal opacity-0 solution-card" data-delay="0">
+              <div class="flex flex-row items-center mb-4">
+                <div class="w-14 h-14 mr-4 text-blue-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-full h-full">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h2 class="text-2xl font-bold text-blue-500">Virtual Terminals</h2>
+              </div>
+              <p class="text-gray-700">
+                Send a custom email invoice or set up recurring billing schedules for any customers making fixed monthly payments.
+              </p>
+            </div>
+
+            <!-- Mobile Processing -->
+            <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm scroll-reveal opacity-0 solution-card" data-delay="200">
               <div class="flex flex-row items-center mb-4">
                 <div class="w-14 h-14 mr-4 text-indigo-500">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-full h-full">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h2 class="text-2xl font-bold text-indigo-500">Beauty & Salon</h2>
+                <h2 class="text-2xl font-bold text-indigo-500">Mobile Processing</h2>
               </div>
               <p class="text-gray-700">
-                Appointment-based payment solutions with integrated tipping options, customer profiles, and loyalty programs designed specifically for salons and spas.
+                Accept all payment types immediately using your phone or tablet, including EMV chip cards and contactless options such as Apple Pay and Google Pay.
               </p>
             </div>
 
-            <!-- Auto Services -->
-            <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm scroll-reveal opacity-0 solution-card" data-delay="200">
+            <!-- Web Services -->
+            <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm scroll-reveal opacity-0 solution-card" data-delay="400">
               <div class="flex flex-row items-center mb-4">
                 <div class="w-14 h-14 mr-4 text-purple-500">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-full h-full">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                   </svg>
                 </div>
-                <h2 class="text-2xl font-bold text-purple-500">Auto Services</h2>
+                <h2 class="text-2xl font-bold text-purple-500">Web Services</h2>
               </div>
               <p class="text-gray-700">
-                 Payment solutions for auto repair shops, car washes, and other automotive businesses with invoice management and automated follow-ups.
-              </p>
-            </div>
-
-            <!-- Recreation & Hospitality -->
-            <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm scroll-reveal opacity-0 solution-card" data-delay="400">
-              <div class="flex flex-row items-center mb-4">
-                <div class="w-14 h-14 mr-4 text-violet-500">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-full h-full">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                  </svg>
-                </div>
-                <h2 class="text-2xl font-bold text-violet-500">Recreation & Hospitality</h2>
-              </div>
-              <p class="text-gray-700">
-                Customized solutions for golf courses, fitness centers, and boutique hotels with membership tracking, reservation systems, and more.
+                Help customers find your business faster with a modern, responsive website. Our creative experts can build sites with or without online shopping carts.
               </p>
             </div>
           </div>
@@ -218,7 +205,116 @@
       </div>
     </div>
     
-    <!-- CTA Section -->
+    <!-- Mobile Processing Details Section -->
+    <div class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold mb-8 text-center" style="color: #973131;">Accept Credit Cards from Your Phone or Tablet</h2>
+          <p class="text-lg text-gray-700 mb-8">
+            Our mobile processing solution, is a simple, secure mobile payment acceptance option for any business type. It is compatible with iOS and Android devices, offering a card reader that connects to your device via Bluetooth. With this solution, you can:
+          </p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+            <div class="flex items-start scroll-reveal opacity-0" data-delay="100">
+              <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <p class="text-gray-700">Dip, tap, or swipe credit cards.</p>
+            </div>
+            
+            <div class="flex items-start scroll-reveal opacity-0" data-delay="200">
+              <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <p class="text-gray-700">Create itemized or simple transactions.</p>
+            </div>
+            
+            <div class="flex items-start scroll-reveal opacity-0" data-delay="300">
+              <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <p class="text-gray-700">Accept tips and manage cash payments.</p>
+            </div>
+            
+            <div class="flex items-start scroll-reveal opacity-0" data-delay="400">
+              <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <p class="text-gray-700">Allow multiple users at the same time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Virtual Terminal Details Section -->
+    <div class="py-16 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold mb-8 text-center" style="color: #973131;">Set Up Automatic Payments with a Virtual Terminal</h2>
+          <p class="text-lg text-gray-700 mb-8">
+            Our Virtual Terminal technology gives you access to advanced features that help you accept payments and manage your business. These features include:
+          </p>
+          
+          <div class="space-y-8 mt-10">
+            <!-- Feature 1 -->
+            <div class="flex items-start scroll-reveal opacity-0" data-delay="100">
+              <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-400 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2 text-gray-900">Custom Email Invoicing</h3>
+                <p class="text-gray-700">
+                  Simply send an invoice via email and allow customers to make secure payments online.
+                </p>
+              </div>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="flex items-start scroll-reveal opacity-0" data-delay="200">
+              <div class="w-12 h-12 bg-gradient-to-r from-indigo-500 to-indigo-400 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2 text-gray-900">Secure Vault Storage</h3>
+                <p class="text-gray-700">
+                  Securely store customer card information for future purchases or billing.
+                </p>
+              </div>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="flex items-start scroll-reveal opacity-0" data-delay="300">
+              <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-400 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2 text-gray-900">Recurring Payment Features</h3>
+                <p class="text-gray-700">
+                  Set up automatic recurring billing schedules for customers with monthly payment plans or outstanding balances.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section moved to the bottom -->
     <div class="bg-gradient-to-r from-red-900 to-red-700 text-white py-16" style="background: linear-gradient(to right, #973131, #b64848);">
       <div class="container mx-auto px-6 text-center">
         <h2 class="text-3xl md:text-4xl font-bold mb-6 scroll-reveal opacity-0">Ready to elevate your specialty business?</h2>
@@ -227,9 +323,6 @@
           <router-link to="/request-consultation" class="bg-white text-red-900 font-medium py-3 px-8 rounded-md shadow-lg hover:bg-opacity-90 transition-all duration-300 inline-block mx-2 mb-4">
             Request a Consultation
           </router-link>
-          <a href="#" class="border-2 border-white text-white font-medium py-3 px-8 rounded-md hover:bg-white hover:text-red-900 transition-all duration-300 inline-block mx-2 mb-4">
-            View Pricing
-          </a>
         </div>
       </div>
     </div>

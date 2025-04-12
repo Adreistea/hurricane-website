@@ -3,49 +3,35 @@
     <!-- Hero Section -->
     <div class="container mx-auto px-6 py-16 flex flex-col lg:flex-row items-center">
       <!-- Left Content with Text Reveal Animation -->
-      <div class="lg:w-1/2 lg:pr-12 mb-10 lg:mb-0 slide-in-left">
-        <div class="text-reveal mb-2">
-          <span class="text-reveal-content text-indigo-600 font-semibold delay-100">Industry Solutions</span>
+      <div class="lg:w-1/2 lg:pr-12 mb-10 lg:mb-0">
+        <div class="mb-2">
+          <span class="text-indigo-600 font-semibold">Industries</span>
         </div>
         
-        <div class="text-reveal mb-6">
-          <h1 class="text-reveal-content text-5xl lg:text-6xl font-bold leading-tight delay-200"
+        <div class="mb-6">
+          <h1 class="text-5xl lg:text-6xl font-bold leading-tight"
               style="color: #973131;">
-            Retail Payment Solutions
+            Retail Payment Processing
           </h1>
         </div>
         
-        <div class="text-reveal mb-8">
-          <p class="text-reveal-content text-lg text-gray-600 delay-300">
-            Streamline your retail operations with our comprehensive payment processing solutions designed specifically for retail businesses of all sizes - from small boutiques to large chain stores.
+        <div class="mb-8">
+          <p class="text-lg text-gray-600">
+            As a retail store owner, you do it all: greet customers, fulfill orders, manage inventory, balance the books, clean the bathrooms, and much more. We know your days are busy and to-do list is long, and we'd like to take some of those extra tasks off your plate. This is why Hurricane Payments offers tools to help you both optimize the way you get paid and simplify important processes, such as inventory management and accounting!
           </p>
-        </div>
-        
-        <div class="flex flex-col sm:flex-row gap-4 slide-in-left delay-400">
-          <a href="#" class="fancy-button text-white font-medium py-3 px-8 rounded-md shadow-lg" 
-             style="background-color: #973131; transition: all 0.3s ease;">
-            Get Started
-          </a>
-          
-          <a href="#" class="hover-scale border font-medium py-3 px-8 rounded-md transition-all duration-300 inline-flex items-center"
-             style="border-color: #973131; color: #973131;">
-            View Pricing
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-            </svg>
-          </a>
         </div>
       </div>
       
       <!-- Right Content - Image with Card Reveal Animation -->
-      <div class="lg:w-1/2 relative card-reveal delay-200">
+      <div class="lg:w-1/2 relative">
         <div class="rounded-lg shadow-2xl overflow-hidden">
-          <img src="@/../images/TransparentLogo.png" alt="Retail Payment Solutions" class="w-full h-auto" />
+          <img src="@/../images/retailpic.jpeg" alt="Retail Payment Solutions" class="w-full h-auto" 
+               onerror="this.onerror=null; this.src='@/../images/TransparentLogo.png';" />
         </div>
         
         <!-- Animated decorative elements -->
-        <div class="absolute -z-10 inset-0 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-3xl transform rotate-3 translate-x-4 translate-y-4 slide-in-right delay-300"></div>
-        <div class="absolute -z-20 inset-0 bg-gradient-to-r from-indigo-100 to-blue-100 rounded-3xl transform -rotate-2 translate-x-8 translate-y-8 slide-in-right delay-500"></div>
+        <div class="absolute -z-10 inset-0 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-3xl transform rotate-3 translate-x-4 translate-y-4"></div>
+        <div class="absolute -z-20 inset-0 bg-gradient-to-r from-indigo-100 to-blue-100 rounded-3xl transform -rotate-2 translate-x-8 translate-y-8"></div>
       </div>
     </div>
 
@@ -53,14 +39,15 @@
     <div class="relative py-24 mt-16">
       <div class="container mx-auto px-6">
         <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Retail Payment Solutions</h2>
-          <div class="w-32 h-1 bg-gray-300 mx-auto"></div>
+          <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Why Hurricane Payments</h2>
+          <div class="w-32 h-1 bg-gray-300 mx-auto mb-4"></div>
+          <p class="text-xl text-gray-700 max-w-3xl mx-auto">Hurricane Payments is here to help you grow your retail business.</p>
         </div>
         
         <!-- Solutions container with border -->
         <div class="solutions-container relative rounded-3xl border border-gray-300 bg-white p-6 md:p-12">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-            <!-- In-Store POS -->
+            <!-- Point of Sale Systems -->
             <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm scroll-reveal opacity-0 solution-card" data-delay="0">
               <div class="flex flex-row items-center mb-4">
                 <div class="w-14 h-14 mr-4 text-blue-500">
@@ -68,40 +55,40 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h2 class="text-2xl font-bold text-blue-500">In-Store POS Systems</h2>
+                <h2 class="text-2xl font-bold text-blue-500">Point of Sale Systems</h2>
               </div>
               <p class="text-gray-700">
-                Our comprehensive POS systems are designed to handle everything from simple transactions to complex inventory management, helping you run your retail operation efficiently.
+                Process all forms of payment, easily manage inventory, run essential reports in minutes, and more.
               </p>
             </div>
 
-            <!-- Mobile Checkout -->
+            <!-- Gift & Loyalty Cards -->
             <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm scroll-reveal opacity-0 solution-card" data-delay="200">
               <div class="flex flex-row items-center mb-4">
                 <div class="w-14 h-14 mr-4 text-purple-500">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-full h-full">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                   </svg>
                 </div>
-                <h2 class="text-2xl font-bold text-purple-500">Mobile Checkout</h2>
+                <h2 class="text-2xl font-bold text-purple-500">Gift & Loyalty Cards</h2>
               </div>
               <p class="text-gray-700">
-                Break free from fixed checkout counters with mobile payment solutions that allow your staff to process sales anywhere in the store, reducing wait times and improving customer experience.
+                Attract new customers with a gift card and use your loyalty program to keep them coming back for more.
               </p>
             </div>
 
-            <!-- Contactless Payments -->
+            <!-- Wireless Terminals -->
             <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm scroll-reveal opacity-0 solution-card" data-delay="400">
               <div class="flex flex-row items-center mb-4">
                 <div class="w-14 h-14 mr-4 text-green-500">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-full h-full">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h2 class="text-2xl font-bold text-green-500">Contactless Payments</h2>
+                <h2 class="text-2xl font-bold text-green-500">Wireless Terminals</h2>
               </div>
               <p class="text-gray-700">
-                Offer your customers quick, convenient, and secure payment options with our contactless payment solutions, including tap-to-pay cards and digital wallets like Apple Pay and Google Pay.
+                Accept all payment types, including EMV chip cards and contactless options such as Apple Pay and Google Pay.
               </p>
             </div>
           </div>
@@ -218,7 +205,66 @@
       </div>
     </div>
     
-    <!-- CTA Section -->
+    <!-- Custom Solution Section -->
+    <div class="py-24 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col lg:flex-row items-center lg:space-x-16">
+          <!-- Left side image with decorative elements -->
+          <div class="lg:w-2/5 mb-10 lg:mb-0 relative">
+            <div class="rounded-xl overflow-hidden shadow-xl scroll-reveal opacity-0" data-delay="0">
+              <img src="@/../images/retailpic.jpeg" alt="Retail store owner" class="w-full h-auto" 
+                   onerror="this.onerror=null; this.src='@/../images/TransparentLogo.png';" />
+            </div>
+            <!-- Decorative elements -->
+            <div class="absolute -z-10 -bottom-6 -right-6 w-full h-full bg-gradient-to-r from-red-100 to-rose-100 rounded-xl transform rotate-2"></div>
+            <div class="absolute -z-20 -bottom-12 -right-12 w-full h-full bg-gradient-to-r from-blue-100 to-indigo-100 rounded-xl transform -rotate-3"></div>
+          </div>
+          
+          <!-- Right side content -->
+          <div class="lg:w-3/5">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 scroll-reveal opacity-0" style="color: #973131;">Your Business Deserves a Unique Solution</h2>
+            <p class="text-lg text-gray-700 mb-8 scroll-reveal opacity-0" data-delay="100">
+              Hurricane Payments has worked with thousands of retail business owners over the past 30+ years. If there's one thing we've learned, it's that every retail operation is different! This is why we focus on offering innovative payment solutions that can be configured to your precise needs. Whether you need to manage and accept payments across multiple store locations, fulfill orders online, or even accept credit cards on the go, we can help. Just let us know what you need, and we'll work it out together.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cost-Effective Section -->
+    <div class="py-24 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col lg:flex-row-reverse items-center lg:space-x-16 lg:space-x-reverse">
+          <!-- Right side image with decorative elements -->
+          <div class="lg:w-2/5 mb-10 lg:mb-0 relative">
+            <div class="rounded-xl overflow-hidden shadow-xl scroll-reveal opacity-0" data-delay="0">
+              <div class="bg-white p-10 rounded-xl flex items-center justify-center">
+                <div class="text-center">
+                  <div class="text-8xl font-bold mb-4" style="color: #973131;">$</div>
+                  <div class="flex items-center justify-center space-x-2">
+                    <span class="animate-ping absolute h-6 w-6 rounded-full bg-red-200 opacity-75"></span>
+                    <span class="relative block h-6 w-6 rounded-full bg-red-300"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Decorative elements -->
+            <div class="absolute -z-10 -bottom-6 -left-6 w-full h-full bg-gradient-to-r from-green-100 to-emerald-100 rounded-xl transform -rotate-2"></div>
+            <div class="absolute -z-20 -bottom-12 -left-12 w-full h-full bg-gradient-to-r from-amber-100 to-yellow-100 rounded-xl transform rotate-3"></div>
+          </div>
+          
+          <!-- Left side content -->
+          <div class="lg:w-3/5">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 scroll-reveal opacity-0" style="color: #973131;">Cost-Effective Products & Services</h2>
+            <p class="text-lg text-gray-700 mb-8 scroll-reveal opacity-0" data-delay="100">
+              Helping small businesses improve profitability is part of our company mission. Therefore, we are committed to offering low, wholesale rates for all our products and services. However, we never sacrifice quality. When you choose to implement Hurricane Payments solution, you can rest assured that you will be getting the best solution possible, at the lowest rate possible. And yes, the savings stack up quick!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section (moved to the end) -->
     <div class="bg-gradient-to-r from-red-900 to-red-700 text-white py-16" style="background: linear-gradient(to right, #973131, #b64848);">
       <div class="container mx-auto px-6 text-center">
         <h2 class="text-3xl md:text-4xl font-bold mb-6 scroll-reveal opacity-0">Ready to transform your retail experience?</h2>
@@ -227,9 +273,6 @@
           <router-link to="/request-consultation" class="bg-white text-red-900 font-medium py-3 px-8 rounded-md shadow-lg hover:bg-opacity-90 transition-all duration-300 inline-block mx-2 mb-4">
             Request a Consultation
           </router-link>
-          <a href="#" class="border-2 border-white text-white font-medium py-3 px-8 rounded-md hover:bg-white hover:text-red-900 transition-all duration-300 inline-block mx-2 mb-4">
-            View Pricing
-          </a>
         </div>
       </div>
     </div>
@@ -334,6 +377,18 @@ onMounted(() => {
   
   // Fetch and check lightboxes
   fetchLightboxes();
+
+  // Add animations for the Why Hurricane Payments section
+  setTimeout(() => {
+    document.querySelector('.fade-in')?.classList.add('animate');
+    
+    document.querySelectorAll('.card-reveal').forEach((el, index) => {
+      const delay = parseInt(el.getAttribute('data-delay') || '0');
+      setTimeout(() => {
+        el.classList.add('animate');
+      }, delay);
+    });
+  }, 300);
 });
 </script>
 
@@ -369,5 +424,43 @@ onMounted(() => {
   opacity: 0;
   transform: translateX(-50px);
   transition: all 0.8s ease-out;
+}
+
+/* Additional Animations */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card-reveal.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 </style>

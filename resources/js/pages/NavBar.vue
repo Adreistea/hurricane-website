@@ -396,7 +396,7 @@
               <div class="dropdown-section">
                 <h3 class="section-title">Reseller Programs</h3>
                 <div class="menu-items">
-                  <a href="#" class="menu-item-link">
+                  <router-link to="/pos-reseller" class="menu-item-link">
                     <div class="top-row">
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
@@ -412,7 +412,7 @@
                       <span class="link-title">POS Reseller</span>
                     </div>
                     <span class="link-desc">Resell our POS solutions</span>
-                  </a>
+                  </router-link>
                 </div>
               </div>
             </div>
@@ -502,7 +502,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted, defineExpose } from 'vue';
 // Import logo image
 import logoImg from '@/../images/TransparentLogo.png';
 
@@ -518,6 +518,11 @@ const toggleDropdown = (menu) => {
   } else {
     activeDropdown.value = menu;
   }
+};
+
+// Function to directly open a specific dropdown
+const openDropdown = (menu) => {
+  activeDropdown.value = menu;
 };
 
 // Function to toggle mobile submenus
@@ -560,6 +565,11 @@ onMounted(() => {
 onUnmounted(() => {
   // Remove event listener when component is unmounted
   document.removeEventListener('click', closeDropdowns);
+});
+
+// Expose methods to parent components
+defineExpose({
+  openDropdown
 });
 </script>
 

@@ -174,8 +174,30 @@ const router = createRouter({
             path: '/tracking-analysis',
             name: 'TrackingAnalysis',
             component: () => import('./pages/TrackingAnalysis.vue')
+        },
+        {
+            path: '/dual-pricing',
+            name: 'dual-pricing',
+            component: () => import('./pages/DualPricing.vue')
+        },
+        {
+            path: '/pos-reseller',
+            name: 'POSReseller',
+            component: () => import('./pages/POS_reseller.vue')
         }
-    ]
+    ],
+    scrollBehavior(to, from, savedPosition) {
+        if (savedPosition) {
+            // Return savedPosition when using browser back/forward buttons
+            return savedPosition
+        } else if (to.hash) {
+            // If the route has a hash, scroll to the anchor
+            return { el: to.hash }
+        } else {
+            // Otherwise, scroll to top
+            return { top: 0 }
+        }
+    }
 });
 
 // Create and mount the Vue application

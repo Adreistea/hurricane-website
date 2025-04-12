@@ -5,42 +5,28 @@
       <!-- Left Content with Text Reveal Animation -->
       <div class="lg:w-1/2 lg:pr-12 mb-10 lg:mb-0 slide-in-left">
         <div class="text-reveal mb-2">
-          <span class="text-reveal-content text-green-600 font-semibold delay-100">Industry Solutions</span>
+          <span class="text-reveal-content text-green-600 font-semibold delay-100">Industries</span>
         </div>
         
         <div class="text-reveal mb-6">
           <h1 class="text-reveal-content text-5xl lg:text-6xl font-bold leading-tight delay-200"
               style="color: #973131;">
-            Restaurant & Bar Solutions
+            Food & Beverage Payment Processing
           </h1>
         </div>
         
         <div class="text-reveal mb-8">
           <p class="text-reveal-content text-lg text-gray-600 delay-300">
-            Streamline operations, enhance customer experience, and boost your bottom line with our comprehensive payment processing and management solutions designed specifically for restaurants and bars.
+            Restaurateurs know that the key to success is offering the best dining experience possible. Every aspect, from being seated to enjoying a delicious meal and paying the check, is an important part of what keeps guests coming back for more. Our restaurant-specific solutions can help you improve processes and make service easy.
           </p>
-        </div>
-        
-        <div class="flex flex-col sm:flex-row gap-4 slide-in-left delay-400">
-          <a href="#" class="fancy-button text-white font-medium py-3 px-8 rounded-md shadow-lg" 
-             style="background-color: #973131; transition: all 0.3s ease;">
-            Get Started
-          </a>
-          
-          <a href="#" class="hover-scale border font-medium py-3 px-8 rounded-md transition-all duration-300 inline-flex items-center"
-             style="border-color: #973131; color: #973131;">
-            View Pricing
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-            </svg>
-          </a>
         </div>
       </div>
       
       <!-- Right Content - Image with Card Reveal Animation -->
       <div class="lg:w-1/2 relative card-reveal delay-200">
         <div class="rounded-lg shadow-2xl overflow-hidden">
-          <img src="@/../images/TransparentLogo.png" alt="Restaurant Solutions" class="w-full h-auto" />
+          <img src="@/../images/food.jpeg" alt="Restaurant Solutions" class="w-full h-auto"
+               onerror="this.onerror=null; this.src='@/../images/TransparentLogo.png';" />
         </div>
         
         <!-- Animated decorative elements -->
@@ -53,14 +39,15 @@
     <div class="relative py-24 mt-16">
       <div class="container mx-auto px-6">
         <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Restaurant & Bar Solutions</h2>
+          <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Why Hurricane Payments</h2>
           <div class="w-32 h-1 bg-gray-300 mx-auto"></div>
+          <p class="text-xl mt-4">Powerful solutions for all restaurant concepts.</p>
         </div>
         
         <!-- Solutions container with border -->
         <div class="solutions-container relative rounded-3xl border border-gray-300 bg-white p-6 md:p-12">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-            <!-- POS Systems -->
+            <!-- Total Touch Point of Sale -->
             <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm scroll-reveal opacity-0 solution-card" data-delay="0">
               <div class="flex flex-row items-center mb-4">
                 <div class="w-14 h-14 mr-4 text-green-500">
@@ -68,14 +55,14 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
                   </svg>
                 </div>
-                <h2 class="text-2xl font-bold text-green-500">POS Systems</h2>
+                <h2 class="text-2xl font-bold text-green-500">Total Touch® Point of Sale</h2>
               </div>
               <p class="text-gray-700">
-                Custom-designed point of sale solutions that integrate ordering, payment processing, inventory management, and reporting in one seamless system.
+                Discover the integrated point of sale solution that can help you manage sales, inventory, employees, operations, and more for your restaurant.
               </p>
             </div>
 
-            <!-- Mobile Payments -->
+            <!-- Gift & Loyalty Cards -->
             <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm scroll-reveal opacity-0 solution-card" data-delay="200">
               <div class="flex flex-row items-center mb-4">
                 <div class="w-14 h-14 mr-4 text-blue-500">
@@ -83,14 +70,14 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h2 class="text-2xl font-bold text-blue-500">Mobile Payments</h2>
+                <h2 class="text-2xl font-bold text-blue-500">Gift & Loyalty Cards</h2>
               </div>
               <p class="text-gray-700">
-                Empower your staff to take orders and accept payments right at the table with mobile POS solutions, reducing wait times and increasing table turnover.
+                Attract new customers with a gift card and use your loyalty program to keep them coming back for more.
               </p>
             </div>
 
-            <!-- QR Code Payments -->
+            <!-- Mobile Processing -->
             <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm scroll-reveal opacity-0 solution-card" data-delay="400">
               <div class="flex flex-row items-center mb-4">
                 <div class="w-14 h-14 mr-4 text-indigo-500">
@@ -98,10 +85,10 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
                   </svg>
                 </div>
-                <h2 class="text-2xl font-bold text-indigo-500">QR Code Payments</h2>
+                <h2 class="text-2xl font-bold text-indigo-500">Mobile Processing</h2>
               </div>
               <p class="text-gray-700">
-                Allow customers to view menus, place orders, and pay directly from their smartphones, reducing contact points and streamlining the dining experience.
+                Accept all payment types at your food truck or stand, including EMV chip cards and contactless options such as Apple Pay and Google Pay.
               </p>
             </div>
           </div>
@@ -217,6 +204,106 @@
       </div>
     </div>
     
+    <!-- New Section: Total Touch Details -->
+    <div class="py-24 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Manage Every Aspect of Your Restaurant with Total Touch</h2>
+          <div class="w-32 h-1 bg-gray-300 mx-auto mb-8"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white p-8 rounded-xl shadow-md scroll-reveal opacity-0">
+            <p class="text-lg text-gray-700 mb-6">
+              Total Touch is a preferred solution for all restaurant concepts, from quick-service pizza spots to premier fine dining rooms. Unlike other popular restaurant software, it operates on a hybrid cloud and server-based system. This means that you can trust your solution will keep running, even during an internet interruption.
+            </p>
+            <p class="text-lg text-gray-700">
+              Plus, when you're tired after a long shift, you can access any management function from the comfort of your own home. All you need is an Internet connection!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Essential Features Section -->
+    <div class="py-24 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Essential Features for Restaurants & Bars</h2>
+          <div class="w-32 h-1 bg-gray-300 mx-auto mb-6"></div>
+          <p class="text-xl text-gray-700 max-w-4xl mx-auto">
+            The intuitive, powerful features Total Touch offers can help you stop worrying about system downtime and focus on your primary goal — delivering the best dining experience possible. Some of these include:
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <!-- Feature 1: Tab Management -->
+          <div class="bg-white p-6 rounded-lg shadow-md scroll-reveal opacity-0 transform hover:-translate-y-2 transition-all duration-300" data-delay="0">
+            <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-400 rounded-lg flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-gray-900">Tab Management</h3>
+          </div>
+          
+          <!-- Feature 2: Mobile & Online Ordering -->
+          <div class="bg-white p-6 rounded-lg shadow-md scroll-reveal opacity-0 transform hover:-translate-y-2 transition-all duration-300" data-delay="100">
+            <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-400 rounded-lg flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-gray-900">Mobile & Online Ordering</h3>
+          </div>
+          
+          <!-- Feature 3: Open Table Management -->
+          <div class="bg-white p-6 rounded-lg shadow-md scroll-reveal opacity-0 transform hover:-translate-y-2 transition-all duration-300" data-delay="200">
+            <div class="w-12 h-12 bg-gradient-to-r from-yellow-500 to-amber-400 rounded-lg flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-gray-900">Open Table Management</h3>
+          </div>
+          
+          <!-- Feature 4: Pre-Authorized Bar Tabs -->
+          <div class="bg-white p-6 rounded-lg shadow-md scroll-reveal opacity-0 transform hover:-translate-y-2 transition-all duration-300" data-delay="300">
+            <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-rose-400 rounded-lg flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
+                <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-gray-900">Pre-Authorized Bar Tabs</h3>
+          </div>
+          
+          <!-- Feature 5: Split Check & Flexible Payment Options -->
+          <div class="bg-white p-6 rounded-lg shadow-md scroll-reveal opacity-0 transform hover:-translate-y-2 transition-all duration-300" data-delay="400">
+            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-400 rounded-lg flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-gray-900">Split Check & Flexible Payment Options</h3>
+          </div>
+          
+          <!-- Feature 6: Inventory Management -->
+          <div class="bg-white p-6 rounded-lg shadow-md scroll-reveal opacity-0 transform hover:-translate-y-2 transition-all duration-300" data-delay="500">
+            <div class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-400 rounded-lg flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z" />
+                <path fill-rule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-gray-900">Inventory Management</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <!-- CTA Section -->
     <div class="bg-gradient-to-r from-red-900 to-red-700 text-white py-16" style="background: linear-gradient(to right, #973131, #b64848);">
       <div class="container mx-auto px-6 text-center">
@@ -226,9 +313,6 @@
           <router-link to="/request-consultation" class="bg-white text-red-900 font-medium py-3 px-8 rounded-md shadow-lg hover:bg-opacity-90 transition-all duration-300 inline-block mx-2 mb-4">
             Request a Consultation
           </router-link>
-          <a href="#" class="border-2 border-white text-white font-medium py-3 px-8 rounded-md hover:bg-white hover:text-red-900 transition-all duration-300 inline-block mx-2 mb-4">
-            View Pricing
-          </a>
         </div>
       </div>
     </div>
