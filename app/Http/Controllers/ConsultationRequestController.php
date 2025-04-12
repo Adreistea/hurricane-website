@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\ConsultationRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 
 class ConsultationRequestController extends Controller
 {
@@ -71,16 +73,69 @@ class ConsultationRequestController extends Controller
             }
         }
 
-        // Create the consultation request
-        $consultationRequest = ConsultationRequest::create($data);
+        try {
+            // Create the consultation request in local database
+            $consultationRequest = ConsultationRequest::create($data);
 
-        // You can add email notification logic here
-        // \Mail::to('admin@example.com')->send(new \App\Mail\NewConsultationRequest($consultationRequest));
+            // Format data for CRM API
+            $crmData = [
+                'full_name' => $data['full_name'],
+                'business_name' => $data['business_name'],
+                'phone_number' => $data['phone_number'],
+                'email' => $data['email'],
+                'industry_type' => $data['industry_type'],
+                'num_locations' => $data['num_locations'],
+                'num_terminals' => $data['num_terminals'],
+                'processing_volume' => $data['processing_volume'],
+                'preferred_date' => $data['preferred_date'],
+                'start_hour' => $data['start_hour'],
+                'start_minute' => $data['start_minute'],
+                'start_period' => $data['start_period'],
+                'end_hour' => $data['end_hour'],
+                'end_minute' => $data['end_minute'],
+                'end_period' => $data['end_period'],
+                'time_zone' => $data['time_zone'],
+                'goal_fee_elimination' => $data['goal_fee_elimination'],
+                'goal_pos' => $data['goal_pos'],
+                'goal_mobile' => $data['goal_mobile'],
+                'goal_ecommerce' => $data['goal_ecommerce'],
+                'goal_integration' => $data['goal_integration'],
+                'goal_funding' => $data['goal_funding'],
+                'goal_other' => $data['goal_other'],
+                'other_goal_specification' => $data['other_goal_specification'],
+                'integration_software' => $data['integration_software'],
+                'comments' => $data['comments'],
+                'source' => 'Website Consultation Request',
+                'local_id' => $consultationRequest->id
+            ];
 
-        return response()->json([
-            'success' => true,
-            'message' => 'Consultation request submitted successfully!',
-            'data' => $consultationRequest
-        ], 201);
+            // Send to Hurricane Payments CRM API
+            $response = Http::post('https://crm.hurricanepayments.com/api/consultation-requests', $crmData);
+
+            if (!$response->successful()) {
+                Log::error('Failed to push inquiry to CRM', [
+                    'status' => $response->status(),
+                    'response' => $response->json(),
+                    'inquiry_id' => $consultationRequest->id
+                ]);
+            }
+
+            return response()->json([
+                'success' => true,
+                'message' => 'Consultation request submitted successfully!',
+                'data' => $consultationRequest
+            ], 201);
+
+        } catch (\Exception $e) {
+            Log::error('Error creating consultation request', [
+                'error' => $e->getMessage(),
+                'data' => $data
+            ]);
+
+            return response()->json([
+                'success' => false,
+                'message' => 'An error occurred while processing your request. Please try again later.'
+            ], 500);
+        }
     }
 }
