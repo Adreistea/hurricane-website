@@ -235,7 +235,7 @@
             
             <div class="scroll-reveal opacity-0" data-delay="400">
               <p class="text-lg text-gray-700 mb-6">
-                Trust the creative professionals at EMS to deliver the branded, plastic card masterpiece you need to attract new customers. Our in-house team utilizes software and various designs to build a program that is completely customized to your business.
+                Trust the creative professionals at Hurricane Payments to deliver the branded, plastic card masterpiece you need to attract new customers. Our in-house team utilizes software and various designs to build a program that is completely customized to your business.
               </p>
             </div>
           </div>

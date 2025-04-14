@@ -38,7 +38,7 @@
     <div class="relative py-24 mt-16">
       <div class="container mx-auto px-6">
         <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold mb-4" style="color: #973131;">How BizFunds Works</h2>
+          <h2 class="text-4xl font-bold mb-4" style="color: #973131;">How Speedy Business Loan Works</h2>
           <div class="w-32 h-1 bg-gray-300 mx-auto"></div>
         </div>
         

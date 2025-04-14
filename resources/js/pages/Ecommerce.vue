@@ -277,12 +277,9 @@
           <h2 class="text-3xl md:text-4xl font-bold mb-6 scroll-reveal opacity-0">Ready to scale your online business?</h2>
           <p class="text-xl opacity-90 max-w-3xl mx-auto mb-8 scroll-reveal opacity-0 delay-200">Our eCommerce payment solutions are designed to help you increase sales, expand globally, and provide a seamless checkout experience to your customers.</p>
           <div class="scroll-reveal opacity-0 delay-300">
-            <router-link to="/request-consultation" class="bg-white text-red-900 font-medium py-3 px-8 rounded-md shadow-lg hover:bg-opacity-90 transition-all duration-300 inline-block mx-2 mb-4">
+            <router-link to="/request-consultation" class="bg-white text-red-900 font-medium py-3 px-8 rounded-md shadow-lg hover:bg-opacity-90 transition-all duration-300 inline-block">
               Request a Consultation
             </router-link>
-            <a href="#" class="border-2 border-white text-white font-medium py-3 px-8 rounded-md hover:bg-white hover:text-red-900 transition-all duration-300 inline-block mx-2 mb-4">
-              View Pricing
-            </a>
           </div>
         </div>
       </div>

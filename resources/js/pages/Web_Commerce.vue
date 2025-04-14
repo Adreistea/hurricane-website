@@ -306,13 +306,12 @@
             Join thousands of businesses that trust our web commerce solutions
           </p>
           
-          <div class="flex flex-col sm:flex-row justify-center gap-6">
-            <a href="#" class="bg-white text-[#973131] hover:bg-red-50 font-bold py-3 px-8 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+          <div class="flex justify-center">
+            <router-link 
+              to="/request-consultation" 
+              class="bg-white text-[#973131] hover:bg-red-50 font-bold py-3 px-8 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
               Get Started Today
-            </a>
-            <a href="#" class="border-2 border-white text-white hover:bg-white hover:text-[#973131] font-bold py-3 px-8 rounded-lg transition-all duration-300">
-              Talk to Sales
-            </a>
+            </router-link>
           </div>
         </div>
       </div>

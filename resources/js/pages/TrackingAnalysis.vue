@@ -153,12 +153,9 @@
         <h2 class="text-3xl md:text-4xl font-bold mb-6 scroll-reveal opacity-0">Ready to improve your chargeback management?</h2>
         <p class="text-xl opacity-90 max-w-3xl mx-auto mb-8 scroll-reveal opacity-0 delay-200">Our experts can help you implement effective tracking systems and analyze your chargeback data.</p>
         <div class="scroll-reveal opacity-0 delay-300">
-          <router-link to="/request-consultation" class="bg-white text-red-900 font-medium py-3 px-8 rounded-md shadow-lg hover:bg-opacity-90 transition-all duration-300 inline-block mx-2 mb-4">
+          <router-link to="/request-consultation" class="bg-white text-red-900 font-medium py-3 px-8 rounded-md shadow-lg hover:bg-opacity-90 transition-all duration-300 inline-block">
             Request a Consultation
           </router-link>
-          <a href="#" class="border-2 border-white text-white font-medium py-3 px-8 rounded-md hover:bg-white hover:text-red-900 transition-all duration-300 inline-block mx-2 mb-4">
-            Download Analysis Guide
-          </a>
         </div>
       </div>
     </section>
