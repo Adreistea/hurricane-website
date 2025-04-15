@@ -51,6 +51,23 @@
                     </div>
                     <span class="link-desc">Accept payments anywhere</span>
                   </router-link>
+                  <router-link to="/point-of-sale" class="menu-item-link">
+                    <div class="top-row">
+                      <div class="icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                          <defs>
+                            <linearGradient id="posGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" stop-color="#ec4899" />
+                              <stop offset="100%" stop-color="#f472b6" />
+                            </linearGradient>
+                          </defs>
+                          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V6h16v12zM6 10h2v2H6zm0 4h8v2H6zm10 0h2v2h-2zm-6-4h8v2h-8z" fill="url(#posGradient)"/>
+                        </svg>
+                      </div>
+                      <span class="link-title">POINT OF SALE</span>
+                    </div>
+                    <span class="link-desc">Complete POS solutions</span>
+                  </router-link>
                   <router-link to="/web-commerce" class="menu-item-link">
                     <div class="top-row">
                       <div class="icon-container">
@@ -452,6 +469,7 @@
         <div v-if="activeMobileSubmenu === 'solutions'" class="pl-4 mt-2 space-y-2">
           <p class="font-semibold text-gray-800 mt-3">Payment Processing</p>
           <router-link to="/mobile-processing" class="block py-1 text-gray-600 hover:text-indigo-600">Mobile Processing</router-link>
+          <router-link to="/point-of-sale" class="block py-1 text-gray-600 hover:text-indigo-600">POINT OF SALE</router-link>
           <router-link to="/web-commerce" class="block py-1 text-gray-600 hover:text-indigo-600">Web Commerce</router-link>
           <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">Text & QR Code Payments</a>
           <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">Integrations</a>

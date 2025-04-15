@@ -184,6 +184,11 @@ const router = createRouter({
             path: '/pos-reseller',
             name: 'POSReseller',
             component: () => import('./pages/POS_reseller.vue')
+        },
+        {
+            path: '/point-of-sale',
+            name: 'PointOfSale',
+            component: () => import('./pages/Point_of_sale.vue')
         }
     ],
     scrollBehavior(to, from, savedPosition) {
