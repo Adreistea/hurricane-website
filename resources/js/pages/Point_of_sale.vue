@@ -51,7 +51,7 @@
         <!-- Right Content - POS Image with Card Reveal Animation -->
         <div class="lg:w-1/2 relative card-reveal delay-200">
           <div class="rounded-lg shadow-2xl overflow-hidden">
-            <img src="@/../images/TransparentLogo.png" alt="KwickPOS System" class="w-full h-auto" />
+            <img src="@/../images/homepic3.png" alt="KwickPOS System" class="w-full h-auto" />
           </div>
           
           <!-- Animated decorative elements -->
@@ -158,7 +158,7 @@
           <!-- Dual Pricing Card -->
           <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden scroll-reveal">
             <div class="relative h-48 mb-6 rounded-lg overflow-hidden">
-              <img src="@/../images/businesspartner.png" alt="Dual Pricing" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+              <img src="@/../images/dualpricing.png" alt="Dual Pricing" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               <div class="absolute bottom-4 left-4 text-white font-bold text-2xl">💳</div>
             </div>
@@ -169,7 +169,7 @@
           <!-- Cloud-Based Card -->
           <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden scroll-reveal">
             <div class="relative h-48 mb-6 rounded-lg overflow-hidden">
-              <img src="@/../images/businesspartner.png" alt="Cloud-Based POS" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+              <img src="@/../images/cloudbased.png" alt="Cloud-Based POS" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               <div class="absolute bottom-4 left-4 text-white font-bold text-2xl">📱</div>
             </div>
@@ -180,7 +180,7 @@
           <!-- Online Ordering Card -->
           <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden scroll-reveal">
             <div class="relative h-48 mb-6 rounded-lg overflow-hidden">
-              <img src="@/../images/businesspartner.png" alt="Online Ordering" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+              <img src="@/../images/onlineorder.png" alt="Online Ordering" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               <div class="absolute bottom-4 left-4 text-white font-bold text-2xl">🛒</div>
             </div>
@@ -191,7 +191,7 @@
           <!-- Loyalty Card -->
           <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden scroll-reveal">
             <div class="relative h-48 mb-6 rounded-lg overflow-hidden">
-              <img src="@/../images/businesspartner.png" alt="Loyalty Program" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+              <img src="@/../images/gift.png" alt="Loyalty Program" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               <div class="absolute bottom-4 left-4 text-white font-bold text-2xl">🎁</div>
             </div>
@@ -202,7 +202,7 @@
           <!-- Analytics Card -->
           <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden scroll-reveal">
             <div class="relative h-48 mb-6 rounded-lg overflow-hidden">
-              <img src="@/../images/businesspartner.png" alt="Analytics Dashboard" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+              <img src="@/../images/analytics.png" alt="Analytics Dashboard" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               <div class="absolute bottom-4 left-4 text-white font-bold text-2xl">🧾</div>
             </div>
@@ -213,7 +213,7 @@
           <!-- Restaurant Management Card -->
           <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden scroll-reveal">
             <div class="relative h-48 mb-6 rounded-lg overflow-hidden">
-              <img src="@/../images/businesspartner.png" alt="Restaurant Management" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+              <img src="@/../images/management.png" alt="Restaurant Management" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               <div class="absolute bottom-4 left-4 text-white font-bold text-2xl">🍽</div>
             </div>
@@ -225,7 +225,7 @@
           <div class="col-span-3 flex justify-center mt-12">
             <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden scroll-reveal max-w-md mx-auto">
               <div class="relative h-48 mb-6 rounded-lg overflow-hidden">
-                <img src="@/../images/businesspartner.png" alt="24/7 Support" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                <img src="@/../images/weserve.jpeg" alt="24/7 Support" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <div class="absolute bottom-4 left-4 text-white font-bold text-2xl">🧠</div>
               </div>
@@ -301,24 +301,24 @@
             <!-- Right column - Cost Savings Section -->
             <div class="lg:w-1/2">
               <!-- Cost Savings Section - Match styling exactly to Industry Solutions -->
-              <div class="text-center mb-10 scroll-reveal">
+              <div class="text-center mb-17 scroll-reveal">
                 <h2 class="text-4xl font-bold mb-6 text-white">
                   Real Cost Savings
                 </h2>
-                <p class="text-xl text-white/90 mb-8 mx-auto">
+                <p class="text-xl text-white/90 mb-10 mx-auto">
                   How KwickPOS pays for itself:
                 </p>
               </div>
               
-              <!-- Cost Comparison Table - Match dimensions and styling -->
-              <div class="relative overflow-hidden rounded-2xl bg-white/10 backdrop-blur-lg p-8 shadow-2xl scroll-reveal" style="min-height: 382px;">
+              <!-- Cost Comparison Table - Match dimensions and styling but lowered -->
+              <div class="relative overflow-hidden rounded-2xl bg-white/10 backdrop-blur-lg p-8 pb-24 shadow-2xl scroll-reveal mt-4" style="min-height: 434px;">
                 <!-- Decorative elements -->
                 <div class="absolute -top-10 -left-10 w-40 h-40 bg-yellow-500/20 rounded-full blur-2xl"></div>
                 <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl"></div>
                 
-                <!-- Table -->
+                <!-- Table with more spacing -->
                 <div class="overflow-x-auto relative z-10">
-                  <table class="w-full text-left">
+                  <table class="w-full text-left h-full">
                     <thead>
                       <tr class="border-b-2 border-white/20">
                         <th class="p-4 text-xl font-bold text-white">Traditional POS</th>
@@ -327,21 +327,23 @@
                     </thead>
                     <tbody>
                       <tr class="business-row hover:bg-white/5 transition-all duration-300 cursor-pointer">
-                        <td class="p-4 text-white font-medium">Monthly Fees: $100–$300</td>
-                        <td class="p-4 text-white/90">$0 software fees</td>
+                        <td class="p-6 text-white font-medium">Monthly Fees: $100–$300</td>
+                        <td class="p-6 text-white/90">$0 software fees</td>
                       </tr>
                       <tr class="business-row hover:bg-white/5 transition-all duration-300 cursor-pointer">
-                        <td class="p-4 text-white font-medium">Processing Fees: 2–4%</td>
-                        <td class="p-4 text-white/90">$0 with dual pricing</td>
+                        <td class="p-6 text-white font-medium">Processing Fees: 2–4%</td>
+                        <td class="p-6 text-white/90">$0 with dual pricing</td>
                       </tr>
                       <tr class="business-row hover:bg-white/5 transition-all duration-300 cursor-pointer">
-                        <td class="p-4 text-white font-medium">Hidden Fees & Contracts</td>
-                        <td class="p-4 text-white/90">No long-term contracts</td>
+                        <td class="p-6 text-white font-medium">Hidden Fees & Contracts</td>
+                        <td class="p-6 text-white/90">No long-term contracts</td>
                       </tr>
                       <tr class="business-row hover:bg-white/5 transition-all duration-300 cursor-pointer">
-                        <td class="p-4 text-white font-medium">Limited Support</td>
-                        <td class="p-4 text-white/90">24/7 human support</td>
+                        <td class="p-6 text-white font-medium">Limited Support</td>
+                        <td class="p-6 text-white/90">24/7 human support</td>
                       </tr>
+                      <tr class="h-2"></tr>
+                      <tr class="h-7"></tr>
                     </tbody>
                   </table>
                 </div>
@@ -353,6 +355,325 @@
           <div class="mt-16 text-center scroll-reveal">
             <div class="inline-block bg-white/10 py-3 px-8 rounded-full backdrop-blur-sm">
               <p class="text-lg font-semibold text-white">See why businesses switch to KwickPOS and save thousands per year</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- What You Get with KwickPOS Section -->
+      <div class="container mx-auto px-6 py-16 my-8">
+        <div class="text-center mb-12">
+          <h2 class="text-5xl font-extrabold mb-6" style="color: #973131; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">
+            What You Get with KwickPOS
+          </h2>
+          <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-10">
+            A complete system designed for your business success
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10 max-w-5xl mx-auto">
+          <!-- Item 1 -->
+          <div class="flex items-start space-x-4 scroll-reveal">
+            <div class="flex-shrink-0 mt-1">
+              <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
+                <svg class="w-5 h-5" style="color: #973131;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-gray-800">iPad or Android-compatible touchscreen terminals</h3>
+              <p class="text-gray-600">Use your existing devices or get our recommended hardware setup</p>
+            </div>
+          </div>
+          
+          <!-- Item 2 -->
+          <div class="flex items-start space-x-4 scroll-reveal">
+            <div class="flex-shrink-0 mt-1">
+              <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
+                <svg class="w-5 h-5" style="color: #973131;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-gray-800">Cash drawer, receipt printer, kitchen display system</h3>
+              <p class="text-gray-600">Complete hardware integration for seamless operations</p>
+            </div>
+          </div>
+          
+          <!-- Item 3 -->
+          <div class="flex items-start space-x-4 scroll-reveal">
+            <div class="flex-shrink-0 mt-1">
+              <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
+                <svg class="w-5 h-5" style="color: #973131;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-gray-800">Customized menu setup and initial programming</h3>
+              <p class="text-gray-600">Tailored to your specific business needs and workflow</p>
+            </div>
+          </div>
+          
+          <!-- Item 4 -->
+          <div class="flex items-start space-x-4 scroll-reveal">
+            <div class="flex-shrink-0 mt-1">
+              <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
+                <svg class="w-5 h-5" style="color: #973131;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-gray-800">Loyalty program pre-installed</h3>
+              <p class="text-gray-600">Start building customer relationships and repeat business from day one</p>
+            </div>
+          </div>
+          
+          <!-- Item 5 -->
+          <div class="flex items-start space-x-4 scroll-reveal">
+            <div class="flex-shrink-0 mt-1">
+              <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
+                <svg class="w-5 h-5" style="color: #973131;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-gray-800">Secure cloud backup and remote access</h3>
+              <p class="text-gray-600">Manage your business from anywhere with real-time data access</p>
+            </div>
+          </div>
+          
+          <!-- Item 6 -->
+          <div class="flex items-start space-x-4 scroll-reveal">
+            <div class="flex-shrink-0 mt-1">
+              <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
+                <svg class="w-5 h-5" style="color: #973131;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2 text-gray-800">Live U.S.-based onboarding and support</h3>
+              <p class="text-gray-600">Expert assistance whenever you need it, from setup to daily operations</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonials Section -->
+      <div class="bg-gray-50 py-16 my-8">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-5xl font-extrabold mb-6" style="color: #973131; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">
+              Don't Just Take Our Word for It
+            </h2>
+          </div>
+          
+          <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 scroll-reveal relative">
+              <!-- Decorative quote mark -->
+              <div class="absolute top-4 left-6 text-6xl opacity-10" style="color: #973131;">❝</div>
+              
+              <blockquote class="text-xl italic text-gray-700 mb-8 relative z-10 pt-4">
+                <p>"We switched from Toast and saved over $400/month. It does everything we need, and support is incredible."</p>
+                <footer class="mt-4 text-base not-italic text-gray-600">
+                  — John T., Café Owner, Oregon
+                </footer>
+              </blockquote>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 scroll-reveal relative">
+              <!-- Decorative quote mark -->
+              <div class="absolute top-4 left-6 text-6xl opacity-10" style="color: #973131;">❝</div>
+              
+              <blockquote class="text-xl italic text-gray-700 mb-8 relative z-10 pt-4">
+                <p>"KwickPOS helped us streamline takeout, eliminate fees, and gave us better control of our sales data."</p>
+                <footer class="mt-4 text-base not-italic text-gray-600">
+                  — Maria S., Restaurant Manager, Texas
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="bg-gray-50 py-16 my-8">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-5xl font-extrabold mb-6" style="color: #973131; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">
+              FAQ
+            </h2>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-10">
+              Here are some of the most frequently asked questions
+            </p>
+          </div>
+          
+          <div class="max-w-5xl mx-auto">
+            <!-- FAQ Item 1 -->
+            <div class="mb-12 scroll-reveal">
+              <div class="flex items-start mb-4">
+                <div class="shrink-0 flex items-center justify-center w-14 h-14 rounded-full bg-red-100 mr-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor" style="color: #973131;">
+                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-2xl font-bold mb-3 text-gray-800">Is dual pricing legal in my state?</h3>
+                  <p class="text-gray-700">Yes. Dual pricing is legal in all 50 states when implemented correctly. We'll help you stay 100% compliant.</p>
+                </div>
+              </div>
+              <div class="w-full h-px bg-gray-200 mt-8"></div>
+            </div>
+            
+            <!-- FAQ Item 2 -->
+            <div class="mb-12 scroll-reveal">
+              <div class="flex items-start mb-4">
+                <div class="shrink-0 flex items-center justify-center w-14 h-14 rounded-full bg-red-100 mr-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor" style="color: #973131;">
+                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-2xl font-bold mb-3 text-gray-800">Can I use my existing hardware?</h3>
+                  <p class="text-gray-700">In most cases, yes. We'll review your current setup and help you save where possible.</p>
+                </div>
+              </div>
+              <div class="w-full h-px bg-gray-200 mt-8"></div>
+            </div>
+            
+            <!-- FAQ Item 3 -->
+            <div class="mb-12 scroll-reveal">
+              <div class="flex items-start mb-4">
+                <div class="shrink-0 flex items-center justify-center w-14 h-14 rounded-full bg-red-100 mr-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor" style="color: #973131;">
+                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-2xl font-bold mb-3 text-gray-800">Is there a contract or cancellation fee?</h3>
+                  <p class="text-gray-700">Nope. We don't lock you in. You stay because it works — not because you're forced to.</p>
+                </div>
+              </div>
+              <div class="w-full h-px bg-gray-200 mt-8"></div>
+            </div>
+            
+            <!-- FAQ Item 4 -->
+            <div class="mb-12 scroll-reveal">
+              <div class="flex items-start mb-4">
+                <div class="shrink-0 flex items-center justify-center w-14 h-14 rounded-full bg-red-100 mr-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor" style="color: #973131;">
+                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-2xl font-bold mb-3 text-gray-800">What's the turnaround time for setup?</h3>
+                  <p class="text-gray-700">We typically ship and set up your system within <span class="font-semibold">3–5 business days</span> after onboarding.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+         
+        </div>
+      </div>
+
+      <!-- Attention-Grabbing CTA Section -->
+      <div class="relative py-24 overflow-hidden">
+        <!-- Background with angle and patterns -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-purple-900 -skew-y-3 transform origin-top-right z-0 overflow-hidden">
+          <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' viewBox=\'0 0 100 100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z\' fill=\'%23ffffff\' fill-opacity=\'0.05\' fill-rule=\'evenodd\'/%3E%3C/svg%3E')"></div>
+          <!-- Animated circles -->
+          <div class="absolute -top-20 -right-20 w-80 h-80 bg-pink-500 opacity-20 rounded-full blur-3xl animate-pulse-slow"></div>
+          <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-blue-400 opacity-20 rounded-full blur-3xl"></div>
+        </div>
+
+        <!-- Content Container -->
+        <div class="container mx-auto px-6 relative z-10 pt-8">
+          <div class="max-w-4xl mx-auto bg-white/10 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/20">
+            <!-- Phone Icon with Pulse Effect -->
+            <div class="flex justify-center -mt-20 mb-6">
+              <div class="w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-xl relative">
+                <div class="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 animate-ping opacity-30"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+              </div>
+            </div>
+            
+            <!-- Heading with Glow Effect -->
+            <h2 class="text-4xl font-black text-white text-center mb-4" style="text-shadow: 0 0 15px rgba(255,255,255,0.5);">
+              Ready to See KwickPOS in Action?
+            </h2>
+            
+            <!-- Subheading -->
+            <p class="text-xl text-white/90 text-center mb-10 max-w-2xl mx-auto">
+              Stop letting your POS system hold you back.<br>
+              Get a smarter solution that increases your profits from Day 1.
+            </p>
+            
+            <!-- Call to Action Card -->
+            <div class="text-center mb-10">
+              <h3 class="inline-block text-2xl font-bold text-white bg-gradient-to-r from-yellow-400 to-amber-500 px-6 py-2 rounded-full shadow-lg mb-8">
+                Schedule a Demo or Free Consultation Today
+              </h3>
+              
+              <!-- Contact Information with Buttons -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+                <!-- Phone Button - with tel: link -->
+                <a href="tel:18884400936" class="block w-full py-4 px-4 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl text-center">
+                  <div class="flex items-center justify-center mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    Call
+                  </div>
+                  <span class="block text-sm">1-888-440-0936</span>
+                </a>
+                
+                <!-- Email Button - with Gmail link -->
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Thomas@hurricanepayments.com" target="_blank" class="block w-full py-4 px-4 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl text-center">
+                  <div class="flex items-center justify-center mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    Email
+                  </div>
+                  <span class="block text-xs">Thomas@hurricanepayments.com</span>
+                </a>
+                
+                <!-- Website Button - standard link -->
+                <a href="http://www.hurricanepayments.com" target="_blank" class="block w-full py-4 px-4 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-bold rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl text-center">
+                  <div class="flex items-center justify-center mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                    </svg>
+                    Website
+                  </div>
+                  <span class="block text-xs">www.HurricanePayments.com</span>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Special Offer -->
+            <div class="mt-12 mb-4">
+              <div class="bg-gradient-to-r from-green-600 to-green-500 rounded-lg p-6 max-w-2xl mx-auto transform hover:scale-105 transition-all duration-300 shadow-lg border-2 border-white/50">
+                <div class="flex items-center justify-center mb-2">
+                  <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mr-3">
+                    <div class="w-6 h-6 bg-green-600 rounded-full"></div>
+                  </div>
+                  <h4 class="text-xl font-black text-white uppercase tracking-wide">Special Offer</h4>
+                </div>
+                <p class="text-center text-white font-medium">
+                  New clients receive free menu programming & on-site training — limited time only!
+                </p>
+              </div>
             </div>
           </div>
         </div>
