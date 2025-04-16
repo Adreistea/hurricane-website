@@ -61,7 +61,7 @@
       </div>
   
       <!-- Simplified Features Section -->
-      <div class="container mx-auto px-6 py-20 mt-8" id="features-section">
+      <div class="container mx-auto px-6 py-20 mt-8 opacity-0 animate-on-scroll" id="features-section" data-animation="fade-up">
         <div class="text-center mb-12">
           <h2 class="text-4xl lg:text-5xl font-bold mb-6" style="color: #973131;">
             Built for Business Owners Who Are Tired of Paying to Get Paid
@@ -71,7 +71,7 @@
           </p>
           
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-            <div class="bg-white rounded-lg p-6 shadow-lg transform hover:scale-105 transition-all duration-300">
+            <div class="bg-white rounded-lg p-6 shadow-lg transform opacity-0 animate-on-scroll" data-animation="slide-up" data-delay="100">
               <div class="w-16 h-16 mx-auto bg-red-100 rounded-full flex items-center justify-center mb-6 pulse-slow">
                 <svg class="w-8 h-8" style="color: #973131;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
               </div>
@@ -79,7 +79,7 @@
               <p class="text-gray-600">Systems that slow your staff down and create unnecessary training headaches</p>
             </div>
             
-            <div class="bg-white rounded-lg p-6 shadow-lg transform hover:scale-105 transition-all duration-300">
+            <div class="bg-white rounded-lg p-6 shadow-lg transform opacity-0 animate-on-scroll" data-animation="slide-up" data-delay="200">
               <div class="w-16 h-16 mx-auto bg-red-100 rounded-full flex items-center justify-center mb-6 pulse-slow">
                 <svg class="w-8 h-8" style="color: #973131;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
               </div>
@@ -87,7 +87,7 @@
               <p class="text-gray-600">Software subscriptions and costly hardware upgrades that drain your profits</p>
             </div>
             
-            <div class="bg-white rounded-lg p-6 shadow-lg transform hover:scale-105 transition-all duration-300">
+            <div class="bg-white rounded-lg p-6 shadow-lg transform opacity-0 animate-on-scroll" data-animation="slide-up" data-delay="300">
               <div class="w-16 h-16 mx-auto bg-red-100 rounded-full flex items-center justify-center mb-6 pulse-slow">
                 <svg class="w-8 h-8" style="color: #973131;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
               </div>
@@ -95,7 +95,7 @@
               <p class="text-gray-600"><span class="font-semibold">2–4% of every sale</span> disappears to processing fees</p>
             </div>
             
-            <div class="bg-white rounded-lg p-6 shadow-lg transform hover:scale-105 transition-all duration-300">
+            <div class="bg-white rounded-lg p-6 shadow-lg transform opacity-0 animate-on-scroll" data-animation="slide-up" data-delay="400">
               <div class="w-16 h-16 mx-auto bg-red-100 rounded-full flex items-center justify-center mb-6 pulse-slow">
                 <svg class="w-8 h-8" style="color: #973131;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L8 10.586m4-4V4m0 4h-4"></path></svg>
               </div>
@@ -104,7 +104,7 @@
             </div>
           </div>
           
-          <div class="bg-white rounded-xl p-8 mt-12 shadow-lg">
+          <div class="bg-white rounded-xl p-8 mt-12 shadow-lg opacity-0 animate-on-scroll" data-animation="zoom-in" data-delay="500">
             <h3 class="text-3xl font-bold mb-3" style="color: #973131;">KwickPOS solves all of that.</h3>
             <p class="text-xl text-gray-700">A revolutionary approach to point-of-sale that puts money back in your pocket.</p>
           </div>
@@ -112,7 +112,7 @@
       </div>
       
       <!-- Business Partner Section -->
-      <div class="container mx-auto px-6 py-16 my-8" id="business-partner-section">
+      <div class="container mx-auto px-6 py-16 my-8 opacity-0 animate-on-scroll" id="business-partner-section" data-animation="fade-up">
         <div class="flex flex-col lg:flex-row items-center gap-12">
           <!-- Left Content - Image with Animation -->
           <div class="lg:w-1/2 relative scroll-reveal-left">
@@ -146,7 +146,7 @@
 
       <!-- After the Business Partner Section -->
       <!-- Core Features Section -->
-      <div class="container mx-auto px-6 py-16 my-8" id="core-features-section">
+      <div class="container mx-auto px-6 py-16 my-8 opacity-0 animate-on-scroll" id="core-features-section" data-animation="fade-up">
         <div class="text-center mb-16">
           <h2 class="text-4xl font-bold mb-6" style="color: #973131;">
             Core Features That Power Profit
@@ -237,7 +237,7 @@
       </div>
 
       <!-- Industry-Specific Solutions Section with both tables -->
-      <div class="py-20 my-16 industry-solutions-section">
+      <div class="py-20 my-16 industry-solutions-section opacity-0 animate-on-scroll" data-animation="fade-up">
         <div class="container mx-auto px-6">
           <div class="flex flex-col lg:flex-row gap-8 justify-center">
             <!-- Left column - Industry Solutions Table -->
@@ -361,7 +361,7 @@
       </div>
 
       <!-- What You Get with KwickPOS Section -->
-      <div class="container mx-auto px-6 py-16 my-8">
+      <div class="container mx-auto px-6 py-16 my-8 opacity-0 animate-on-scroll" data-animation="fade-up">
         <div class="text-center mb-12">
           <h2 class="text-5xl font-extrabold mb-6" style="color: #973131; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">
             What You Get with KwickPOS
@@ -465,7 +465,7 @@
       </div>
 
       <!-- Testimonials Section -->
-      <div class="bg-gray-50 py-16 my-8">
+      <div class="bg-gray-50 py-16 my-8 opacity-0 animate-on-scroll" data-animation="fade-up">
         <div class="container mx-auto px-6">
           <div class="text-center mb-12">
             <h2 class="text-5xl font-extrabold mb-6" style="color: #973131; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">
@@ -504,7 +504,7 @@
       </div>
 
       <!-- FAQ Section -->
-      <div class="bg-gray-50 py-16 my-8">
+      <div class="bg-gray-50 py-16 my-8 opacity-0 animate-on-scroll" data-animation="fade-up">
         <div class="container mx-auto px-6">
           <div class="text-center mb-16">
             <h2 class="text-5xl font-extrabold mb-6" style="color: #973131; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">
@@ -585,7 +585,7 @@
       </div>
 
       <!-- Attention-Grabbing CTA Section -->
-      <div class="relative py-24 overflow-hidden">
+      <div class="relative py-24 overflow-hidden opacity-0 animate-on-scroll" data-animation="fade-up">
         <!-- Background with angle and patterns -->
         <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-purple-900 -skew-y-3 transform origin-top-right z-0 overflow-hidden">
           <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' viewBox=\'0 0 100 100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z\' fill=\'%23ffffff\' fill-opacity=\'0.05\' fill-rule=\'evenodd\'/%3E%3C/svg%3E')"></div>
@@ -790,6 +790,35 @@ onMounted(() => {
       el.classList.remove('opacity-0');
     });
   }, 500);
+
+  // Set up animation for sections when scrolled into view
+  const animateOnScrollOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1 // Trigger when 10% of element is visible
+  };
+  
+  const animateOnScrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const element = entry.target;
+        const animation = element.getAttribute('data-animation') || 'fade-up';
+        const delay = element.getAttribute('data-delay') || 0;
+        
+        setTimeout(() => {
+          element.classList.remove('opacity-0');
+          element.classList.add(`animate-${animation}`);
+        }, parseInt(delay));
+        
+        animateOnScrollObserver.unobserve(element);
+      }
+    });
+  }, animateOnScrollOptions);
+  
+  // Observe all elements with animate-on-scroll class
+  document.querySelectorAll('.animate-on-scroll').forEach(element => {
+    animateOnScrollObserver.observe(element);
+  });
 });
 </script>
 
@@ -1075,5 +1104,51 @@ line-height: 1.2;
 
 .business-row:last-child {
   border-bottom: none;
+}
+
+/* Add these new animations for scrolling sections */
+.animate-fade-up {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease forwards;
+}
+
+.animate-zoom-in {
+  animation: zoomIn 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 </style>
