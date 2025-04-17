@@ -679,11 +679,19 @@
         </div>
       </div>
     </MainLayout>
+    <lightbox 
+      v-if="showLightbox"
+      :is-visible="showLightbox"
+      :lightbox-id="activeLightboxId"
+      @close="closeLightbox"
+      @consultation-click="handleConsultationClick"
+    />
 </template>
 
 <script setup>
 import { onMounted } from 'vue';
 import MainLayout from './MainLayout.vue';
+import lightbox from './lightbox.vue';
 
 // Define scrollToNextSection outside onMounted so it's available to the template
 function scrollToNextSection() {

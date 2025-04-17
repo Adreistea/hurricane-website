@@ -56,8 +56,8 @@ const router = createRouter({
             component: () => import('./pages/Surcharge.vue')
         },
         {
-            path: '/bizfunds-cash',
-            name: 'BizFundsCash',
+            path: '/speedybusinessloan',
+            name: 'SpeedyBusinessLoan',
             component: () => import('./pages/BizFunds_Cash.vue')
         },
         {

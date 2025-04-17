@@ -225,7 +225,7 @@
                 <div class="aspect-video relative">
                   <iframe 
                     class="absolute inset-0 w-full h-full rounded-md"
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                    src="https://www.youtube.com/embed/uhJ_VOLySPk" 
                     title="Virtual Terminal Demo"
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 

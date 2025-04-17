@@ -17,7 +17,7 @@
         
         <div class="text-reveal mb-8">
           <p class="text-reveal-content text-lg text-gray-600 delay-300">
-            At Electronic Merchant Systems, we're here to serve your business! Whether that business is a beauty salon, golf course, auto repair shop, or anything in-between, you can trust us to provide the payment processing solution you need to thrive.
+            At Hurricane Payments, we're here to serve your business! Whether that business is a beauty salon, golf course, auto repair shop, or anything in-between, you can trust us to provide the payment processing solution you need to thrive.
           </p>
         </div>
       </div>
@@ -25,7 +25,7 @@
       <!-- Right Content - Image with Card Reveal Animation -->
       <div class="lg:w-1/2 relative card-reveal delay-200">
         <div class="rounded-lg shadow-2xl overflow-hidden">
-          <img src="@/../images/specialty.jpg" alt="Specialty Business Solutions" class="w-full h-auto" 
+          <img src="@/../images/homepic2.png" alt="Specialty Business Solutions" class="w-full h-auto" 
                onerror="this.onerror=null; this.src='@/../images/TransparentLogo.png';" />
         </div>
         

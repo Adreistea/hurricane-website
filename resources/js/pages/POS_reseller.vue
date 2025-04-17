@@ -28,7 +28,7 @@
       <!-- Right Content - Image with Card Reveal Animation -->
       <div class="lg:w-1/2 relative">
         <div class="rounded-lg shadow-2xl overflow-hidden">
-          <img src="@/../images/resell.jpg" alt="POS Reseller Program" class="w-full h-auto" 
+          <img src="@/../images/webpic.png" alt="POS Reseller Program" class="w-full h-auto" 
                onerror="this.onerror=null; this.src='@/../images/TransparentLogo.png';" />
         </div>
         

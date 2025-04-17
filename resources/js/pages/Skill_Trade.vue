@@ -17,7 +17,7 @@
         
         <div class="text-reveal mb-8">
           <p class="text-reveal-content text-lg text-gray-600 delay-300">
-            Offer excellent service to your customers from the first call to final payment with Electronic Merchant Systems. We provide innovative, secure payment solutions designed to help you streamline operations while simultaneously saving time and elevating the customer experience.
+            Offer excellent service to your customers from the first call to final payment with Hurricane Payments. We provide innovative, secure payment solutions designed to help you streamline operations while simultaneously saving time and elevating the customer experience.
           </p>
           <p class="text-reveal-content text-lg text-gray-600 mt-4 delay-400">
             Here are some of the skilled trade and manual labor businesses we serve:
@@ -28,7 +28,7 @@
       <!-- Right Content - Image with Card Reveal Animation -->
       <div class="lg:w-1/2 relative card-reveal delay-200">
         <div class="rounded-lg shadow-2xl overflow-hidden">
-          <img src="@/../images/skilltrade.jpg" alt="Skilled Trade Services" class="w-full h-auto" 
+          <img src="@/../images/weserve.jpeg" alt="Skilled Trade Services" class="w-full h-auto" 
                onerror="this.onerror=null; this.src='@/../images/TransparentLogo.png';" />
         </div>
         

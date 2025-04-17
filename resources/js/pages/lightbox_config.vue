@@ -254,11 +254,11 @@
               <label class="checkbox-label">
                 <input 
                   type="checkbox" 
-                  value="bizfunds-cash" 
+                  value="speedybusinessloan" 
                   v-model="displayPages" 
                   class="checkbox-input"
                 />
-                BizFunds Cash
+                Speedy Business Loan
               </label>
               <label class="checkbox-label">
                 <input 
@@ -277,6 +277,15 @@
                   class="checkbox-input"
                 />
                 Chargeback Guide
+              </label>
+              <label class="checkbox-label">
+                <input 
+                  type="checkbox" 
+                  value="point-of-sale" 
+                  v-model="displayPages" 
+                  class="checkbox-input"
+                />
+                Point of Sale
               </label>
             </div>
           </div>

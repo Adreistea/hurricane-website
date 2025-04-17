@@ -25,7 +25,7 @@
       <!-- Right Content - Image with Card Reveal Animation -->
       <div class="lg:w-1/2 relative card-reveal delay-200">
         <div class="rounded-lg shadow-2xl overflow-hidden">
-          <img src="@/../images/food.jpeg" alt="Restaurant Solutions" class="w-full h-auto"
+          <img src="@/../images/WeChat-Image_20200904180730.jpg" alt="Restaurant Solutions" class="w-full h-auto"
                onerror="this.onerror=null; this.src='@/../images/TransparentLogo.png';" />
         </div>
         
@@ -208,14 +208,14 @@
     <div class="py-24 bg-white">
       <div class="container mx-auto px-6">
         <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Manage Every Aspect of Your Restaurant with Total Touch</h2>
+          <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Manage Every Aspect of Your Restaurant with KwickPOS</h2>
           <div class="w-32 h-1 bg-gray-300 mx-auto mb-8"></div>
         </div>
         
         <div class="max-w-4xl mx-auto">
           <div class="bg-white p-8 rounded-xl shadow-md scroll-reveal opacity-0">
             <p class="text-lg text-gray-700 mb-6">
-              Total Touch is a preferred solution for all restaurant concepts, from quick-service pizza spots to premier fine dining rooms. Unlike other popular restaurant software, it operates on a hybrid cloud and server-based system. This means that you can trust your solution will keep running, even during an internet interruption.
+              KwickPOS is a preferred solution for all restaurant concepts, from quick-service pizza spots to premier fine dining rooms. Unlike other popular restaurant software, it operates on a hybrid cloud and server-based system. This means that you can trust your solution will keep running, even during an internet interruption.
             </p>
             <p class="text-lg text-gray-700">
               Plus, when you're tired after a long shift, you can access any management function from the comfort of your own home. All you need is an Internet connection!
@@ -232,7 +232,7 @@
           <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Essential Features for Restaurants & Bars</h2>
           <div class="w-32 h-1 bg-gray-300 mx-auto mb-6"></div>
           <p class="text-xl text-gray-700 max-w-4xl mx-auto">
-            The intuitive, powerful features Total Touch offers can help you stop worrying about system downtime and focus on your primary goal — delivering the best dining experience possible. Some of these include:
+            The intuitive, powerful features KwickPOS offers can help you stop worrying about system downtime and focus on your primary goal — delivering the best dining experience possible. Some of these include:
           </p>
         </div>
         

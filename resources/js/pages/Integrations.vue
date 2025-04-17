@@ -158,7 +158,7 @@
           
           <div class="lg:w-1/2 order-1 lg:order-2 relative scroll-reveal opacity-0">
             <div class="rounded-lg shadow-2xl overflow-hidden">
-              <img src="@/../images/integrationpic.jpg" alt="Integration Solutions" class="w-full h-auto" onerror="this.src='https://via.placeholder.com/600x400?text=Integration+Solutions';this.onerror='';" />
+              <img src="@/../images/integrationpic.png" alt="Integration Solutions" class="w-full h-auto" onerror="this.src='https://via.placeholder.com/600x400?text=Integration+Solutions';this.onerror='';" />
             </div>
             
             <!-- Animated decorative elements -->

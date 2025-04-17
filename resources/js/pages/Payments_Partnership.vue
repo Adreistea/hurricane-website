@@ -6,9 +6,9 @@
         <div class="max-w-3xl">
           <h1 class="text-5xl font-bold mb-6">Payment Partnerships</h1>
           <p class="text-xl mb-8">Integrate our payment solutions and grow your business with our partnership program.</p>
-          <router-link to="/request-consultation" class="bg-white text-indigo-800 font-semibold py-3 px-8 rounded-md shadow-lg hover:bg-gray-100 transition-all duration-300">
+          <a href="https://crm.hurricanepayments.com/inquiries#partnership" class="bg-white text-indigo-800 font-semibold py-3 px-8 rounded-md shadow-lg hover:bg-gray-100 transition-all duration-300">
             Become a Partner
-          </router-link>
+          </a>
         </div>
       </div>
     </div>
@@ -104,9 +104,9 @@
       <div class="container mx-auto px-6 text-center">
         <h2 class="text-3xl font-bold mb-6">Ready to Partner With Us?</h2>
         <p class="text-xl mb-8 max-w-2xl mx-auto">Join our partnership program today and start growing your business with our innovative payment solutions.</p>
-        <router-link to="/request-consultation" class="bg-white text-indigo-800 font-semibold py-3 px-8 rounded-md shadow-lg hover:bg-gray-100 transition-all duration-300">
+        <a href="https://crm.hurricanepayments.com/inquiries#partnership" class="bg-white text-indigo-800 font-semibold py-3 px-8 rounded-md shadow-lg hover:bg-gray-100 transition-all duration-300">
           Apply Now
-        </router-link>
+        </a>
       </div>
     </div>
   </MainLayout>

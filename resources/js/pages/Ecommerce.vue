@@ -42,7 +42,7 @@
             <!-- Left side image with decorative elements -->
             <div class="lg:w-2/5 relative">
               <div class="rounded-xl overflow-hidden shadow-xl scroll-reveal opacity-0">
-                <img src="@/../images/ecommercepic2.jpeg" alt="Modern eCommerce Solutions" class="w-full h-auto" 
+                <img src="@/../images/urn_aaid_sc_US_5c8ff42e-d98e-4717-90c5-247b2d90af1a-12.png" alt="Modern eCommerce Solutions" class="w-full h-auto" 
                      onerror="this.onerror=null; this.src='@/../images/TransparentLogo.png';" />
               </div>
               <!-- Decorative elements -->
@@ -55,7 +55,7 @@
               <h2 class="text-3xl md:text-4xl font-bold mb-6 scroll-reveal opacity-0" style="color: #973131;">Modern Businesses Need Innovative Solutions</h2>
               <div class="text-lg text-gray-700 space-y-4 scroll-reveal opacity-0" data-delay="100">
                 <p>
-                  Conducting business online is an option steadily gaining popularity and potential. Electronic Merchant Systems is prepared to help online businesses reach more customers and offer excellent service to every online guest.
+                  Conducting business online is an option steadily gaining popularity and potential. Hurricane Payments is prepared to help online businesses reach more customers and offer excellent service to every online guest.
                 </p>
                 <p>
                   You may not be able to present a friendly greeting or your personal attention when a customer enters your website, but you can still show you care by providing a straightforward and secure buying experience. Let us help you develop that experience with an innovative eCommerce payment processing solution.
@@ -89,7 +89,7 @@
                   <h2 class="text-2xl font-bold text-purple-500">Responsive Web Design</h2>
                 </div>
                 <p class="text-gray-700">
-                  Offer a consistent experience to all customers with EMS. Our websites are designed to be responsive, meaning they adapt to fit any screen size.
+                  Offer a consistent experience to all customers with Hurricane Payments. Our websites are designed to be responsive, meaning they adapt to fit any screen size.
                 </p>
               </div>
   
@@ -263,7 +263,7 @@
               <h2 class="text-3xl md:text-4xl font-bold mb-6 scroll-reveal opacity-0" style="color: #973131;">Affordable, Simple, Secure Solutions</h2>
               <div class="text-lg text-gray-700 scroll-reveal opacity-0" data-delay="100">
                 <p>
-                  Helping small businesses improve profitability is part of our company mission. Therefore, we are committed to offering low, wholesale rates for all our products and services. However, we never sacrifice quality. When you choose to implement an EMS solution, you can rest assured that you will be getting the best solution possible, at the lowest rate possible. And yes, the savings stack up quick!
+                  Helping small businesses improve profitability is part of our company mission. Therefore, we are committed to offering low, wholesale rates for all our products and services. However, we never sacrifice quality. When you choose to implement a Hurricane Payments solution, you can rest assured that you will be getting the best solution possible, at the lowest rate possible. And yes, the savings stack up quick!
                 </p>
               </div>
             </div>

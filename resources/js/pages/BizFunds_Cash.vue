@@ -241,13 +241,13 @@ const fetchLightboxes = async () => {
     if (response.data.success) {
       const lightboxes = response.data.data;
       
-      // Find active lightbox for bizfunds-cash page
+      // Find active lightbox for speedybusinessloan page
       const bizFundsLightbox = lightboxes.find(item => {
         const displayPages = Array.isArray(item.display_pages) 
           ? item.display_pages 
           : JSON.parse(item.display_pages || '[]');
         
-        return displayPages.includes('bizfunds-cash') && item.status === 'active';
+        return displayPages.includes('speedybusinessloan') && item.status === 'active';
       });
       
       if (bizFundsLightbox) {

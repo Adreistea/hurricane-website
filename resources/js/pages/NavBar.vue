@@ -160,7 +160,7 @@
                     </div>
                     <span class="link-desc">Cash discount pricing model</span>
                   </router-link>
-                  <router-link to="/bizfunds-cash" class="menu-item-link">
+                  <router-link to="/speedybusinessloan" class="menu-item-link">
                     <div class="top-row">
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
@@ -477,7 +477,7 @@
           <p class="font-semibold text-gray-800 mt-3">Additional Services</p>
           <router-link to="/surcharge" class="block py-1 text-gray-600 hover:text-indigo-600">Surcharge Program</router-link>
           <router-link to="/dual-pricing" class="block py-1 text-gray-600 hover:text-indigo-600">Dual Pricing Program</router-link>
-          <router-link to="/bizfunds-cash" class="block py-1 text-gray-600 hover:text-indigo-600">Speedy Business Loan</router-link>
+          <router-link to="/speedybusinessloan" class="block py-1 text-gray-600 hover:text-indigo-600">Speedy Business Loan</router-link>
           <router-link to="/gift-loyalty" class="block py-1 text-gray-600 hover:text-indigo-600">Gift & Loyalty Programs</router-link>
           <router-link to="/chargeback-guide" class="block py-1 text-gray-600 hover:text-indigo-600">Chargeback Guide</router-link>
         </div>
