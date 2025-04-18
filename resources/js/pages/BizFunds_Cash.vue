@@ -20,12 +20,32 @@
             Get the capital your business needs to grow with our flexible merchant cash advance program. BizFunds provides quick access to funds with simple repayment terms based on your future sales.
           </p>
         </div>
+        
+        <div class="flex flex-col sm:flex-row gap-4 slide-in-left delay-400">
+          <router-link 
+            to="/request-consultation" 
+            class="fancy-button text-white font-medium py-3 px-8 rounded-md shadow-lg" 
+            style="background-color: #973131; transition: all 0.3s ease;">
+            Get Started Today
+          </router-link>
+          
+          <button
+            @click="scrollToNextSection"
+            class="hover-scale border font-medium py-3 px-8 rounded-md transition-all duration-300 inline-flex items-center"
+            style="border-color: #973131; color: #973131;">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </button>
+        </div>
       </div>
       
       <!-- Right Content - Image with Card Reveal Animation -->
       <div class="lg:w-1/2 relative card-reveal delay-200">
         <div class="rounded-lg shadow-2xl overflow-hidden">
-          <img src="@/../images/speedypic.png" alt="BizFunds Cash Advance" class="w-full h-auto" onerror="this.src='https://via.placeholder.com/600x400?text=BizFunds+Cash+Advance';this.onerror='';" />
+          <img src="@/../images/speedypic.png" alt="BizFunds Cash Advance" class="w-full h-auto"
+               onerror="this.src='https://via.placeholder.com/600x400?text=BizFunds+Cash+Advance';this.onerror='';" />
         </div>
         
         <!-- Animated decorative elements -->
@@ -38,7 +58,7 @@
     <div class="relative py-24 mt-16">
       <div class="container mx-auto px-6">
         <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold mb-4" style="color: #973131;">How BizFunds Works</h2>
+          <h2 class="text-4xl font-bold mb-4" style="color: #973131;">How Speedy Business Loan Works</h2>
           <div class="w-32 h-1 bg-gray-300 mx-auto"></div>
         </div>
         
@@ -227,6 +247,15 @@ import lightbox from './lightbox.vue';
 const showLightbox = ref(false);
 const currentLightboxId = ref(null);
 
+// Handle scroll to next section
+function scrollToNextSection() {
+  // Scroll to the How It Works section
+  const howItWorksSection = document.querySelector('.relative.py-24.mt-16');
+  if (howItWorksSection) {
+    howItWorksSection.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
 // Handle consultation click
 const handleConsultationClick = () => {
   showLightbox.value = false;
@@ -241,13 +270,13 @@ const fetchLightboxes = async () => {
     if (response.data.success) {
       const lightboxes = response.data.data;
       
-      // Find active lightbox for bizfunds-cash page
+      // Find active lightbox for speedybusinessloan page
       const bizFundsLightbox = lightboxes.find(item => {
         const displayPages = Array.isArray(item.display_pages) 
           ? item.display_pages 
           : JSON.parse(item.display_pages || '[]');
         
-        return displayPages.includes('bizfunds-cash') && item.status === 'active';
+        return displayPages.includes('speedybusinessloan') && item.status === 'active';
       });
       
       if (bizFundsLightbox) {
@@ -276,17 +305,49 @@ const fetchLightboxes = async () => {
 };
 
 onMounted(() => {
-  // Initialize animation observer for scroll reveal
+  // Fancy button hover effect
+  document.querySelectorAll('.fancy-button').forEach(button => {
+    button.addEventListener('mouseenter', () => {
+      button.style.backgroundColor = '#7e2929'; // Darker shade for hover
+    });
+    
+    button.addEventListener('mouseleave', () => {
+      button.style.backgroundColor = '#973131'; // Original color
+    });
+  });
+
+  // Set up Intersection Observer for scroll reveal animations
+  const observerOptions = {
+    root: null, // Use the viewport as the root
+    rootMargin: '0px', // No margin
+    threshold: 0.2 // Trigger when 20% of the element is visible
+  };
+  
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('animate');
+        // Get the delay attribute
+        const delay = entry.target.getAttribute('data-delay') || 0;
+        
+        // Add animation class after the specified delay
+        setTimeout(() => {
+          if (entry.target.classList.contains('scroll-reveal-left')) {
+            entry.target.classList.add('animate-reveal-left');
+          } else if (entry.target.classList.contains('scroll-reveal-right')) {
+            entry.target.classList.add('animate-reveal-right');
+          } else {
+            entry.target.classList.add('animate');
+          }
+          entry.target.classList.remove('opacity-0');
+        }, parseInt(delay));
+        
+        // Unobserve the element to prevent re-animation
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 });
+  }, observerOptions);
 
-  // Observe all elements with scroll-reveal class
+  // Observe all elements with the scroll-reveal class
   document.querySelectorAll('.scroll-reveal').forEach(element => {
     observer.observe(element);
   });
@@ -303,6 +364,129 @@ onMounted(() => {
 </script>
 
 <style scoped>
+/* Add these font imports at the top of your style section */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+
+/* Apply font families to elements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+p, a, span, blockquote, li {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Refine heading styles */
+h1 {
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h2 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h3 {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Make CTA buttons more distinct */
+.fancy-button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* Enhance body text readability */
+p {
+  line-height: an 1.6;
+  font-weight: 400;
+}
+
+/* Card reveal animation - 3D Effect */
+.card-reveal {
+  animation: cardReveal 0.8s cubic-bezier(0.23, 1, 0.32, 1) both;
+  transform-origin: bottom center;
+}
+
+@keyframes cardReveal {
+  from {
+    transform: perspective(1000px) rotateX(30deg) translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: perspective(1000px) rotateX(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Text reveal animation */
+.text-reveal {
+  overflow: hidden;
+  position: relative;
+}
+
+.text-reveal-content {
+  animation: textReveal 0.8s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+@keyframes textReveal {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Slide Animations */
+.slide-in-right {
+  animation: slideInRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  will-change: transform;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  will-change: transform;
+}
+
+/* Keyframes for slide animations */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Delay classes */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-700 { animation-delay: 0.7s; }
+
 /* Base animations */
 .scroll-reveal {
   transform: translateY(20px);
@@ -312,52 +496,6 @@ onMounted(() => {
 .scroll-reveal.animate {
   opacity: 1 !important;
   transform: translateY(0);
-}
-
-/* Text animations */
-.text-reveal {
-  position: relative;
-  overflow: hidden;
-}
-
-.text-reveal-content {
-  transform: translateY(100%);
-  transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
-.text-reveal.animate .text-reveal-content {
-  transform: translateY(0);
-}
-
-/* Slide animations */
-.slide-in-left {
-  opacity: 0;
-  transform: translateX(-50px);
-  transition: all 0.8s ease-out;
-}
-
-.slide-in-right {
-  opacity: 0;
-  transform: translateX(50px);
-  transition: all 0.8s ease-out;
-}
-
-.slide-in-left.animate,
-.slide-in-right.animate {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* Card animations */
-.card-reveal {
-  opacity: 0;
-  transform: scale(0.9);
-  transition: all 0.8s ease-out;
-}
-
-.card-reveal.animate {
-  opacity: 1;
-  transform: scale(1);
 }
 
 /* Step card hover effects */
@@ -370,34 +508,14 @@ onMounted(() => {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-/* Delay utility classes */
-.delay-100 {
-  transition-delay: 0.1s;
-}
-
-.delay-200 {
-  transition-delay: 0.2s;
-}
-
-.delay-300 {
-  transition-delay: 0.3s;
-}
-
-.delay-400 {
-  transition-delay: 0.4s;
-}
-
-.delay-500 {
-  transition-delay: 0.5s;
-}
-
-.delay-600 {
-  transition-delay: 0.6s;
-}
-
 /* Hover animation for buttons */
+.hover-scale {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
 .hover-scale:hover {
   transform: scale(1.05);
+  background-color: rgba(151, 49, 49, 0.05); /* Very light red background on hover */
 }
 
 /* Fancy button hover effect */

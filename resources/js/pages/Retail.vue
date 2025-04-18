@@ -25,7 +25,7 @@
       <!-- Right Content - Image with Card Reveal Animation -->
       <div class="lg:w-1/2 relative">
         <div class="rounded-lg shadow-2xl overflow-hidden">
-          <img src="@/../images/retailpic.jpeg" alt="Retail Payment Solutions" class="w-full h-auto" 
+          <img src="@/../images/seamless-banner-img.png" alt="Retail Payment Solutions" class="w-full h-auto" 
                onerror="this.onerror=null; this.src='@/../images/TransparentLogo.png';" />
         </div>
         
@@ -212,7 +212,7 @@
           <!-- Left side image with decorative elements -->
           <div class="lg:w-2/5 mb-10 lg:mb-0 relative">
             <div class="rounded-xl overflow-hidden shadow-xl scroll-reveal opacity-0" data-delay="0">
-              <img src="@/../images/retailpic.jpeg" alt="Retail store owner" class="w-full h-auto" 
+              <img src="@/../images/pos.jpg" alt="Retail store owner" class="w-full h-auto" 
                    onerror="this.onerror=null; this.src='@/../images/TransparentLogo.png';" />
             </div>
             <!-- Decorative elements -->
@@ -224,7 +224,7 @@
           <div class="lg:w-3/5">
             <h2 class="text-3xl md:text-4xl font-bold mb-6 scroll-reveal opacity-0" style="color: #973131;">Your Business Deserves a Unique Solution</h2>
             <p class="text-lg text-gray-700 mb-8 scroll-reveal opacity-0" data-delay="100">
-              Hurricane Payments has worked with thousands of retail business owners over the past 30+ years. If there's one thing we've learned, it's that every retail operation is different! This is why we focus on offering innovative payment solutions that can be configured to your precise needs. Whether you need to manage and accept payments across multiple store locations, fulfill orders online, or even accept credit cards on the go, we can help. Just let us know what you need, and we'll work it out together.
+              Hurricane Payments has worked with thousands of retail business owners over the past 20 years. If there's one thing we've learned, it's that every retail operation is different! This is why we focus on offering innovative payment solutions that can be configured to your precise needs. Whether you need to manage and accept payments across multiple store locations, fulfill orders online, or even accept credit cards on the go, we can help. Just let us know what you need, and we'll work it out together.
             </p>
           </div>
         </div>

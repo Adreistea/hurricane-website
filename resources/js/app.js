@@ -56,8 +56,8 @@ const router = createRouter({
             component: () => import('./pages/Surcharge.vue')
         },
         {
-            path: '/bizfunds-cash',
-            name: 'BizFundsCash',
+            path: '/speedybusinessloan',
+            name: 'SpeedyBusinessLoan',
             component: () => import('./pages/BizFunds_Cash.vue')
         },
         {
@@ -184,6 +184,11 @@ const router = createRouter({
             path: '/pos-reseller',
             name: 'POSReseller',
             component: () => import('./pages/POS_reseller.vue')
+        },
+        {
+            path: '/point-of-sale',
+            name: 'PointOfSale',
+            component: () => import('./pages/Point_of_sale.vue')
         }
     ],
     scrollBehavior(to, from, savedPosition) {

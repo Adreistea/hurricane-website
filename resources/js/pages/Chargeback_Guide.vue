@@ -138,8 +138,8 @@
           <h2 class="text-3xl font-bold mb-6">Need Help Managing Chargebacks?</h2>
           <p class="text-xl mb-8">Our payment processing experts can help you implement systems to reduce chargebacks and protect your revenue.</p>
           <div class="cta-buttons">
-            <a href="/contact" class="btn-white">Contact Us</a>
-            <a href="/demo" class="btn-outline-white ml-4">Schedule a Demo</a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Thomas@hurricanepayments.com" target="_blank" class="btn-white mr-4">Email Us</a>
+            <a href="tel:18884400936" class="btn-outline-white">Call 1-888-440-0936</a>
           </div>
         </div>
       </div>
@@ -214,6 +214,11 @@ const fetchLightboxes = async () => {
   } catch (error) {
     console.error('Error fetching lightboxes:', error);
   }
+};
+
+// Add this to your script setup section
+const sendEmail = () => {
+  window.location.href = "mailto:Thomas@hurricanepayments.com";
 };
 
 onMounted(() => {

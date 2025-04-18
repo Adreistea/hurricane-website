@@ -573,6 +573,9 @@ p, a, span, li {
 /* Cards and Sections */
 .benefit-card {
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: auto; /* Adjust height automatically based on content */
 }
 
 .benefit-card:hover {
@@ -630,5 +633,10 @@ p, a, span, li {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+/* Make sure expanding content doesn't affect other cards */
+.grid {
+  align-items: start; /* This will prevent cards from stretching to match tallest card */
 }
 </style>

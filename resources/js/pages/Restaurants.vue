@@ -25,7 +25,7 @@
       <!-- Right Content - Image with Card Reveal Animation -->
       <div class="lg:w-1/2 relative card-reveal delay-200">
         <div class="rounded-lg shadow-2xl overflow-hidden">
-          <img src="@/../images/food.jpeg" alt="Restaurant Solutions" class="w-full h-auto"
+          <img src="@/../images/WeChat-Image_20200904180730.jpg" alt="Restaurant Solutions" class="w-full h-auto"
                onerror="this.onerror=null; this.src='@/../images/TransparentLogo.png';" />
         </div>
         
@@ -208,18 +208,57 @@
     <div class="py-24 bg-white">
       <div class="container mx-auto px-6">
         <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Manage Every Aspect of Your Restaurant with Total Touch</h2>
+          <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Manage Every Aspect of Your Restaurant with Kwick and Hurricane</h2>
           <div class="w-32 h-1 bg-gray-300 mx-auto mb-8"></div>
         </div>
         
         <div class="max-w-4xl mx-auto">
-          <div class="bg-white p-8 rounded-xl shadow-md scroll-reveal opacity-0">
+          <div class="bg-gradient-to-br from-white to-gray-50 p-8 rounded-xl shadow-md scroll-reveal opacity-0 border-l-4 border-red-700">
+            <!-- Icon Header -->
+            <div class="flex justify-center mb-6">
+              <div class="w-20 h-20 bg-gradient-to-r from-red-700 to-red-500 rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                </svg>
+              </div>
+            </div>
+            
+            <!-- Content with highlighted boxes -->
             <p class="text-lg text-gray-700 mb-6">
-              Total Touch is a preferred solution for all restaurant concepts, from quick-service pizza spots to premier fine dining rooms. Unlike other popular restaurant software, it operates on a hybrid cloud and server-based system. This means that you can trust your solution will keep running, even during an internet interruption.
+              KwickPOS is a preferred solution for all restaurant concepts, from quick-service pizza spots to premier fine dining rooms. Our <span class="font-semibold bg-green-50 text-green-800 px-2 py-1 rounded">hybrid cloud and server-based system</span> keeps running even during internet interruptions, while allowing you to manage operations from anywhere.
             </p>
-            <p class="text-lg text-gray-700">
-              Plus, when you're tired after a long shift, you can access any management function from the comfort of your own home. All you need is an Internet connection!
-            </p>
+            
+            <!-- Results and Benefits Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <!-- Revenue Card -->
+              <div class="bg-white rounded-lg p-5 shadow-md border-t-4 border-green-500 transform transition hover:scale-105 duration-300">
+                <div class="flex items-center mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-500 mr-3" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd" />
+                  </svg>
+                  <h3 class="text-xl font-bold text-gray-900">15-20% Revenue Increase</h3>
+                </div>
+                <p class="text-gray-700">Through faster table turnover, integrated loyalty programs, and expanded payment options.</p>
+              </div>
+              
+              <!-- Cost Reduction Card -->
+              <div class="bg-white rounded-lg p-5 shadow-md border-t-4 border-blue-500 transform transition hover:scale-105 duration-300">
+                <div class="flex items-center mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-500 mr-3" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-14a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V4z" clip-rule="evenodd" />
+                  </svg>
+                  <h3 class="text-xl font-bold text-gray-900">10-15% Cost Reduction</h3>
+                </div>
+                <p class="text-gray-700">Through streamlined operations, reduced food waste, and competitive processing rates.</p>
+              </div>
+            </div>
+            
+            <!-- Closing statement -->
+            <div class="p-4 bg-red-50 rounded-lg border border-red-100 text-center">
+              <p class="text-gray-800 font-medium">
+                Our unified system connects your entire operation, allowing staff to focus on customers while you make smarter decisions with real-time analytics.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -232,7 +271,7 @@
           <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Essential Features for Restaurants & Bars</h2>
           <div class="w-32 h-1 bg-gray-300 mx-auto mb-6"></div>
           <p class="text-xl text-gray-700 max-w-4xl mx-auto">
-            The intuitive, powerful features Total Touch offers can help you stop worrying about system downtime and focus on your primary goal — delivering the best dining experience possible. Some of these include:
+            The intuitive, powerful features KwickPOS offers can help you stop worrying about system downtime and focus on your primary goal — delivering the best dining experience possible. Some of these include:
           </p>
         </div>
         
@@ -273,7 +312,7 @@
             <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-rose-400 rounded-lg flex items-center justify-center mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
-                <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd" />
+                <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 012 2h12a2 2 0 012-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd" />
               </svg>
             </div>
             <h3 class="text-xl font-bold mb-2 text-gray-900">Pre-Authorized Bar Tabs</h3>
