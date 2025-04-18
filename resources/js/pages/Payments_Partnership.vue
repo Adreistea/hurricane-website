@@ -17,16 +17,15 @@
         <p class="text-xl text-center mb-12 max-w-2xl mx-auto">Fill out the form below to apply for our partnership program.</p>
         
         <!-- Embedded iframe for the partnership application form -->
-        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
-          <iframe 
-            src="https://crm.hurricanepayments.com/inquiries#partnership" 
-            title="Partnership Application Form" 
-            class="w-full"
-            style="height: 700px; border: none;" 
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+        <div class="max-w-6xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="relative" style="padding-bottom: 75%;">
+            <iframe 
+              src="https://crm.hurricanepayments.com/inquiries#partnership" 
+              class="absolute top-0 left-0 w-full h-full"
+              style="min-height: 1000px;"
+              frameborder="0"
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>
