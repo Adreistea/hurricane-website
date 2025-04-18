@@ -6,9 +6,30 @@
         <div class="max-w-3xl">
           <h1 class="text-5xl font-bold mb-6">Join Our Agent Program</h1>
           <p class="text-xl mb-8">Partner with us to grow your business and provide your clients with industry-leading payment processing solutions.</p>
-          <a href="https://crm.hurricanepayments.com/apply" target="_blank" class="bg-white text-blue-800 font-semibold py-3 px-8 rounded-md shadow-lg hover:bg-gray-100 transition-all duration-300">
-            Become an Agent
-          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Application Form Section -->
+    <div class="py-10 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Apply to Become an Agent</h2>
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-12">
+          <div class="relative" style="height: 700px;">
+            <!-- Loading message shown until iframe loads -->
+            <div class="flex flex-col items-center justify-center absolute inset-0 bg-white" v-if="isLoading">
+              <div class="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mb-4"></div>
+              <p class="text-lg text-gray-700">Loading application form...</p>
+            </div>
+            <!-- iframe with the application form -->
+            <iframe 
+              src="https://crm.hurricanepayments.com/apply" 
+              class="w-full h-full rounded-md"
+              @load="isLoading = false"
+              frameborder="0"
+              title="Agent Application Form"
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>
@@ -50,20 +71,22 @@
         </div>
       </div>
     </div>
-    
-    <!-- CTA Section -->
-    <div class="py-16 bg-blue-800 text-white">
-      <div class="container mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold mb-6">Ready to Grow Your Business?</h2>
-        <p class="text-xl mb-8 max-w-2xl mx-auto">Join our agent program today and start offering industry-leading payment processing solutions to your clients.</p>
-        <a href="https://crm.hurricanepayments.com/apply" target="_blank" class="bg-white text-blue-800 font-semibold py-3 px-8 rounded-md shadow-lg hover:bg-gray-100 transition-all duration-300">
-          Apply Now
-        </a>
-      </div>
-    </div>
   </MainLayout>
 </template>
 
 <script setup>
 import MainLayout from './MainLayout.vue';
+import { ref } from 'vue';
+
+// State to track iframe loading status
+const isLoading = ref(true);
 </script>
+
+<style scoped>
+/* Optional: Add styles to ensure iframe displays properly */
+iframe {
+  min-height: 700px;
+  border: none;
+  transition: opacity 0.3s ease;
+}
+</style>

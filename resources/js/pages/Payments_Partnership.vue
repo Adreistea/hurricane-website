@@ -6,9 +6,27 @@
         <div class="max-w-3xl">
           <h1 class="text-5xl font-bold mb-6">Payment Partnerships</h1>
           <p class="text-xl mb-8">Integrate our payment solutions and grow your business with our partnership program.</p>
-          <a href="https://crm.hurricanepayments.com/inquiries#partnership" class="bg-white text-indigo-800 font-semibold py-3 px-8 rounded-md shadow-lg hover:bg-gray-100 transition-all duration-300">
-            Become a Partner
-          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Application Form Section - Moved above Partnership Opportunities -->
+    <div class="py-16 bg-gray-100">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Become a Partner</h2>
+        <p class="text-xl text-center mb-12 max-w-2xl mx-auto">Fill out the form below to apply for our partnership program.</p>
+        
+        <!-- Embedded iframe for the partnership application form -->
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+          <iframe 
+            src="https://crm.hurricanepayments.com/inquiries#partnership" 
+            title="Partnership Application Form" 
+            class="w-full"
+            style="height: 700px; border: none;" 
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
       </div>
     </div>
@@ -96,17 +114,6 @@
                  onerror="this.src='https://via.placeholder.com/600x400?text=Partnership+Image'; this.onerror=null;">
           </div>
         </div>
-      </div>
-    </div>
-    
-    <!-- CTA Section -->
-    <div class="py-16 bg-indigo-800 text-white">
-      <div class="container mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold mb-6">Ready to Partner With Us?</h2>
-        <p class="text-xl mb-8 max-w-2xl mx-auto">Join our partnership program today and start growing your business with our innovative payment solutions.</p>
-        <a href="https://crm.hurricanepayments.com/inquiries#partnership" class="bg-white text-indigo-800 font-semibold py-3 px-8 rounded-md shadow-lg hover:bg-gray-100 transition-all duration-300">
-          Apply Now
-        </a>
       </div>
     </div>
   </MainLayout>

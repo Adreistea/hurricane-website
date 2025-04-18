@@ -25,7 +25,7 @@
       <!-- Right Content - Image with Card Reveal Animation -->
       <div class="lg:w-1/2 relative card-reveal delay-200">
         <div class="rounded-lg shadow-2xl overflow-hidden">
-          <img src="@/../images/WeChat-Image_20200904180730.jpg" alt="Professional Services" class="w-full h-auto"
+          <img src="@/../images/law.jpg" alt="Professional Services" class="w-full h-auto"
                onerror="this.onerror=null; this.src='@/../images/TransparentLogo.png';" />
         </div>
         

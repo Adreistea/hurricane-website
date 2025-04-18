@@ -153,7 +153,7 @@
                               <stop offset="100%" stop-color="#14b8a6" />
                             </linearGradient>
                           </defs>
-                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.31-8.86c-1.77-.45-2.34-.94-2.34-1.67 0-.84.79-1.43 2.1-1.43 1.38 0 1.9.66 1.94 1.64h1.71c-.05-1.34-.87-2.57-2.49-2.97V5H10.9v1.69c-1.51.32-2.72 1.3-2.72 2.81 0 1.79 1.49 2.69 3.66 3.21 1.95.46 2.34 1.15 2.34 1.87 0 .53-.39 1.39-2.1 1.39-1.6 0-2.23-.72-2.32-1.64H8.04c.1 1.7 1.36 2.66 2.86 2.97V19h2.34v-1.67c1.52-.29 2.72-1.16 2.73-2.77-.01-2.2-1.9-2.96-3.66-3.42z" fill="url(#dualPricingGradient)"/>
+                          <path d="M11 17h2v-1h1c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1h-3v-1h4V8h-2V7h-2v1h-1c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3v1H9v2h2v1zm9-13H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4V6h16v12z" fill="url(#dualPricingGradient)"/>
                         </svg>
                       </div>
                       <span class="link-title">Dual Pricing Program</span>
@@ -165,12 +165,12 @@
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                           <defs>
-                            <linearGradient id="restaurantGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <linearGradient id="loanGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                               <stop offset="0%" stop-color="#15803d" />
                               <stop offset="100%" stop-color="#22c55e" />
                             </linearGradient>
                           </defs>
-                          <path d="M8.1 13.34l2.83-2.83-6.19-6.18c-.48-.48-1.31-.35-1.61.27-.71 1.49-.45 3.32.78 4.56l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27l-9.05 9.05 1.41 1.41 9.05-9.05 9.05 9.05 1.41-1.41-9.05-9.05z" fill="url(#restaurantGradient)"/>
+                          <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z" fill="url(#loanGradient)"/>
                         </svg>
                       </div>
                       <span class="link-title">Speedy Business Loan</span>
@@ -182,12 +182,12 @@
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                           <defs>
-                            <linearGradient id="restaurantGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <linearGradient id="giftGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                               <stop offset="0%" stop-color="#15803d" />
                               <stop offset="100%" stop-color="#22c55e" />
                             </linearGradient>
                           </defs>
-                          <path d="M8.1 13.34l2.83-2.83-6.19-6.18c-.48-.48-1.31-.35-1.61.27-.71 1.49-.45 3.32.78 4.56l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27l-9.05 9.05 1.41 1.41 9.05-9.05 9.05 9.05 1.41-1.41-9.05-9.05z" fill="url(#restaurantGradient)"/>
+                          <path d="M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z" fill="url(#giftGradient)"/>
                         </svg>
                       </div>
                       <span class="link-title">Gift & Loyalty Programs</span>
@@ -317,12 +317,12 @@
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                           <defs>
-                            <linearGradient id="ecommerceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <linearGradient id="skillsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                               <stop offset="0%" stop-color="#7e22ce" />
                               <stop offset="100%" stop-color="#a855f7" />
                             </linearGradient>
                           </defs>
-                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 2c2.615 0 4.95 1.007 6.707 2.765C20.493 6.257 21.5 8.593 21.5 11.25c0 2.615-1.007 4.95-2.765 6.707C16.207 20.493 13.87 21.5 11.25 21.5c-2.615 0-4.95-1.007-6.707-2.765C2.507 16.207 1.5 13.87 1.5 11.25c0-2.615 1.007-4.95 2.765-6.707C6.257 2.507 8.593 1.5 11.25 1.5z" fill="url(#ecommerceGradient)"/>
+                          <path d="M21.67 18.17l-5.3-5.3h-.99l-2.54 2.54v.99l5.3 5.3c.39.39 1.02.39 1.41 0l2.12-2.12c.39-.38.39-1.02 0-1.41zm-2.83 1.42l-4.24-4.24.71-.71 4.24 4.24-.71.71z M11 15h2v2h-2zm-1-4h4v2h-4zm5-3h-6c-.55 0-1 .45-1 1v1h8V9c0-.55-.45-1-1-1zm-1-4h-4c-.55 0-1 .45-1 1v1h6V5c0-.55-.45-1-1-1zM4.59 11.59l-.69.7-2.12-2.12c-.39-.39-.39-1.02 0-1.41l2.12-2.12.69.7L3.41 8.5h.99c2.48 0 4.5 2.02 4.5 4.5 0 .34-.04.67-.12.98-.23-.37-.53-.71-.88-1-.07-.16-.12-.33-.12-.51 0-1.55-1.22-2.82-2.76-2.88H3.41l1.18 1.18z" fill="url(#skillsGradient)"/>
                         </svg>
                       </div>
                       <span class="link-title">Skilled Trade Services</span>
@@ -334,12 +334,12 @@
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                           <defs>
-                            <linearGradient id="ecommerceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <linearGradient id="specialtyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                               <stop offset="0%" stop-color="#7e22ce" />
                               <stop offset="100%" stop-color="#a855f7" />
                             </linearGradient>
                           </defs>
-                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 2c2.615 0 4.95 1.007 6.707 2.765C20.493 6.257 21.5 8.593 21.5 11.25c0 2.615-1.007 4.95-2.765 6.707C16.207 20.493 13.87 21.5 11.25 21.5c-2.615 0-4.95-1.007-6.707-2.765C2.507 16.207 1.5 13.87 1.5 11.25c0-2.615 1.007-4.95 2.765-6.707C6.257 2.507 8.593 1.5 11.25 1.5z" fill="url(#ecommerceGradient)"/>
+                          <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z" fill="url(#specialtyGradient)"/>
                         </svg>
                       </div>
                       <span class="link-title">Specialty Businesses</span>
@@ -355,7 +355,7 @@
         <!-- Partnerships Dropdown - Click to Toggle -->
         <div class="relative menu-item" style="animation-delay: 0.3s;">
           <button @click="toggleDropdown('partnerships')" class="nav-link-dropdown">
-            Partnerships
+            Partner with Us
             <span class="ml-1 dropdown-arrow" :class="{ 'transform rotate-180': activeDropdown === 'partnerships' }">▾</span>
           </button>
           <div v-if="activeDropdown === 'partnerships'" class="dropdown-panel">
@@ -377,7 +377,7 @@
                               <stop offset="100%" stop-color="#3b82f6" />
                             </linearGradient>
                           </defs>
-                          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zm4.51-8.95C15.41 5.38 14 6.37 14 8c0 1.1.9 2 2 2 2.21 0 4-1.79 4-4 0-1.86-1.28-3.41-3-3.86v1.86c.64.32 1.1.98 1.1 1.76 0 1.1-.9 2-2 2-.34 0-.65-.09-.93-.24-.21.42-.32.89-.32 1.38 0 1.66 1.34 3 3 3 2.55 0 4.78-2.44 3.93-5.24-.5-1.66-1.97-2.94-3.66-3.31-.34-.07-.69-.1-1.05-.1-.51 0-1 .09-1.46.25z" fill="url(#agentsGradient)"/>
+                          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="url(#agentsGradient)"/>
                         </svg>
                       </div>
                       <span class="link-title">Agents</span>
@@ -400,7 +400,7 @@
                               <stop offset="100%" stop-color="#6366f1" />
                             </linearGradient>
                           </defs>
-                          <path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" fill="url(#partnershipGradient)"/>
+                          <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" fill="url(#partnershipGradient)"/>
                         </svg>
                       </div>
                       <span class="link-title">Payment Partnerships</span>
@@ -500,7 +500,7 @@
       
       <div class="py-2">
         <button @click="toggleMobileSubmenu('partnerships')" class="flex items-center justify-between w-full text-left text-gray-700 hover:text-indigo-600">
-          <span>Partnerships</span>
+          <span>Partner with Us</span>
           <span :class="{ 'transform rotate-180': activeMobileSubmenu === 'partnerships' }">▾</span>
         </button>
         <div v-if="activeMobileSubmenu === 'partnerships'" class="pl-4 mt-2 space-y-2">
@@ -557,7 +557,7 @@ const closeDropdowns = (event) => {
   const isDropdownButton = event.target.closest('button') && 
     (event.target.closest('button').textContent.includes('Solutions') || 
      event.target.closest('button').textContent.includes('Industries') || 
-     event.target.closest('button').textContent.includes('Partnerships'));
+     event.target.closest('button').textContent.includes('Partner with Us'));
   
   if (!isDropdownButton) {
     activeDropdown.value = null;
