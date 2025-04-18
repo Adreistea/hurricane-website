@@ -213,19 +213,52 @@
         </div>
         
         <div class="max-w-4xl mx-auto">
-          <div class="bg-white p-8 rounded-xl shadow-md scroll-reveal opacity-0">
+          <div class="bg-gradient-to-br from-white to-gray-50 p-8 rounded-xl shadow-md scroll-reveal opacity-0 border-l-4 border-red-700">
+            <!-- Icon Header -->
+            <div class="flex justify-center mb-6">
+              <div class="w-20 h-20 bg-gradient-to-r from-red-700 to-red-500 rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                </svg>
+              </div>
+            </div>
+            
+            <!-- Content with highlighted boxes -->
             <p class="text-lg text-gray-700 mb-6">
-              KwickPOS is a preferred solution for all restaurant concepts, from quick-service pizza spots to premier fine dining rooms. Unlike other popular restaurant software, it operates on a hybrid cloud and server-based system. This means that you can trust your solution will keep running, even during an internet interruption.
+              KwickPOS is a preferred solution for all restaurant concepts, from quick-service pizza spots to premier fine dining rooms. Our <span class="font-semibold bg-green-50 text-green-800 px-2 py-1 rounded">hybrid cloud and server-based system</span> keeps running even during internet interruptions, while allowing you to manage operations from anywhere.
             </p>
-            <p class="text-lg text-gray-700 mb-6">
-              Plus, when you're tired after a long shift, you can access any management function from the comfort of your own home. All you need is an Internet connection!
-            </p>
-            <p class="text-lg text-gray-700 mb-6">
-              Our restaurant clients report an average of <span class="font-bold text-green-600">15-20% increase in revenue</span> after implementing our solutions. This comes through faster table turnover, integrated loyalty programs that increase customer spend, and expanded payment options that attract more customers. Additionally, our system delivers <span class="font-bold text-blue-600">10-15% reduction in operational costs</span> through streamlined operations that reduce labor costs, inventory tracking that minimizes food waste, and competitive processing rates tailored to your business.
-            </p>
-            <p class="text-lg text-gray-700">
-              With our unified system connecting front and back-of-house operations, your staff can focus more on customer service while you gain access to real-time analytics for smarter decision-making. The result is a more profitable, efficient restaurant that delivers exceptional dining experiences.
-            </p>
+            
+            <!-- Results and Benefits Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <!-- Revenue Card -->
+              <div class="bg-white rounded-lg p-5 shadow-md border-t-4 border-green-500 transform transition hover:scale-105 duration-300">
+                <div class="flex items-center mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-500 mr-3" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd" />
+                  </svg>
+                  <h3 class="text-xl font-bold text-gray-900">15-20% Revenue Increase</h3>
+                </div>
+                <p class="text-gray-700">Through faster table turnover, integrated loyalty programs, and expanded payment options.</p>
+              </div>
+              
+              <!-- Cost Reduction Card -->
+              <div class="bg-white rounded-lg p-5 shadow-md border-t-4 border-blue-500 transform transition hover:scale-105 duration-300">
+                <div class="flex items-center mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-500 mr-3" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-14a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V4z" clip-rule="evenodd" />
+                  </svg>
+                  <h3 class="text-xl font-bold text-gray-900">10-15% Cost Reduction</h3>
+                </div>
+                <p class="text-gray-700">Through streamlined operations, reduced food waste, and competitive processing rates.</p>
+              </div>
+            </div>
+            
+            <!-- Closing statement -->
+            <div class="p-4 bg-red-50 rounded-lg border border-red-100 text-center">
+              <p class="text-gray-800 font-medium">
+                Our unified system connects your entire operation, allowing staff to focus on customers while you make smarter decisions with real-time analytics.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -306,127 +339,6 @@
             </div>
             <h3 class="text-xl font-bold mb-2 text-gray-900">Inventory Management</h3>
           </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Revenue Growth Section -->
-    <div class="py-24 bg-white">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Driving Financial Growth for Your Restaurant</h2>
-          <div class="w-32 h-1 bg-gray-300 mx-auto mb-6"></div>
-          <p class="text-xl text-gray-700 max-w-3xl mx-auto">
-            Our advanced payment solutions do more than just process transactions. They're designed to directly impact your bottom line through three key areas:
-          </p>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
-          <!-- Revenue Growth -->
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden scroll-reveal opacity-0" data-delay="0">
-            <div class="h-3 bg-gradient-to-r from-green-500 to-emerald-400"></div>
-            <div class="p-8">
-              <div class="mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-500" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM14 11a1 1 0 011 1v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1v-1a1 1 0 011-1z" />
-                </svg>
-              </div>
-              <h3 class="text-2xl font-bold mb-4 text-gray-900">Increased Revenue</h3>
-              <ul class="space-y-3 text-gray-700">
-                <li class="flex items-start">
-                  <svg class="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                  </svg>
-                  Higher table turnover with faster payment processing
-                </li>
-                <li class="flex items-start">
-                  <svg class="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                  </svg>
-                  Integrated gift card and loyalty programs increase customer spend
-                </li>
-                <li class="flex items-start">
-                  <svg class="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                  </svg>
-                  Expanded payment options attract more customers
-                </li>
-              </ul>
-            </div>
-          </div>
-          
-          <!-- Profit Maximization -->
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden scroll-reveal opacity-0" data-delay="200">
-            <div class="h-3 bg-gradient-to-r from-blue-500 to-indigo-400"></div>
-            <div class="p-8">
-              <div class="mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd" />
-                  <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
-                </svg>
-              </div>
-              <h3 class="text-2xl font-bold mb-4 text-gray-900">Profit Maximization</h3>
-              <ul class="space-y-3 text-gray-700">
-                <li class="flex items-start">
-                  <svg class="h-5 w-5 text-blue-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                  </svg>
-                  Reduced labor costs through streamlined operations
-                </li>
-                <li class="flex items-start">
-                  <svg class="h-5 w-5 text-blue-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                  </svg>
-                  Inventory optimization reduces food waste
-                </li>
-                <li class="flex items-start">
-                  <svg class="h-5 w-5 text-blue-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                  </svg>
-                  Competitive processing rates tailored to your business
-                </li>
-              </ul>
-            </div>
-          </div>
-          
-          <!-- Operational Efficiency -->
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden scroll-reveal opacity-0" data-delay="400">
-            <div class="h-3 bg-gradient-to-r from-red-500 to-rose-400"></div>
-            <div class="p-8">
-              <div class="mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-red-500" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
-                </svg>
-              </div>
-              <h3 class="text-2xl font-bold mb-4 text-gray-900">Operational Efficiency</h3>
-              <ul class="space-y-3 text-gray-700">
-                <li class="flex items-start">
-                  <svg class="h-5 w-5 text-red-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                  </svg>
-                  Unified system for front and back-of-house operations
-                </li>
-                <li class="flex items-start">
-                  <svg class="h-5 w-5 text-red-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                  </svg>
-                  Staff can focus on customer service instead of manual processes
-                </li>
-                <li class="flex items-start">
-                  <svg class="h-5 w-5 text-red-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                  </svg>
-                  Real-time analytics for data-driven decision making
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
-        <div class="mt-16 text-center scroll-reveal opacity-0" data-delay="500">
-          <p class="text-xl text-gray-800 max-w-4xl mx-auto">
-            Our restaurant clients report an average of <span class="font-bold text-green-600">15-20% increase in revenue</span> and <span class="font-bold text-blue-600">10-15% reduction in operational costs</span> after implementing our comprehensive payment solutions.
-          </p>
         </div>
       </div>
     </div>
