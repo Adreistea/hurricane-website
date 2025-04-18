@@ -217,8 +217,14 @@
             <p class="text-lg text-gray-700 mb-6">
               KwickPOS is a preferred solution for all restaurant concepts, from quick-service pizza spots to premier fine dining rooms. Unlike other popular restaurant software, it operates on a hybrid cloud and server-based system. This means that you can trust your solution will keep running, even during an internet interruption.
             </p>
-            <p class="text-lg text-gray-700">
+            <p class="text-lg text-gray-700 mb-6">
               Plus, when you're tired after a long shift, you can access any management function from the comfort of your own home. All you need is an Internet connection!
+            </p>
+            <p class="text-lg text-gray-700 mb-6">
+              Our restaurant clients report an average of <span class="font-bold text-green-600">15-20% increase in revenue</span> after implementing our solutions. This comes through faster table turnover, integrated loyalty programs that increase customer spend, and expanded payment options that attract more customers. Additionally, our system delivers <span class="font-bold text-blue-600">10-15% reduction in operational costs</span> through streamlined operations that reduce labor costs, inventory tracking that minimizes food waste, and competitive processing rates tailored to your business.
+            </p>
+            <p class="text-lg text-gray-700">
+              With our unified system connecting front and back-of-house operations, your staff can focus more on customer service while you gain access to real-time analytics for smarter decision-making. The result is a more profitable, efficient restaurant that delivers exceptional dining experiences.
             </p>
           </div>
         </div>
@@ -273,7 +279,7 @@
             <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-rose-400 rounded-lg flex items-center justify-center mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
-                <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd" />
+                <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 012 2h12a2 2 0 012-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd" />
               </svg>
             </div>
             <h3 class="text-xl font-bold mb-2 text-gray-900">Pre-Authorized Bar Tabs</h3>
