@@ -214,7 +214,7 @@
         <div class="max-w-4xl mx-auto">
           <h2 class="text-3xl font-bold mb-8 text-center" style="color: #973131;">Accept Credit Cards from Your Phone or Tablet</h2>
           <p class="text-lg text-gray-700 mb-8">
-            Our mobile processing solution, EMSmobile, is a simple, secure mobile payment acceptance option for any trade services company. It is compatible with iOS and Android devices, offering a card reader that connects to your device via Bluetooth. With this solution, you can:
+            Our mobile processing solution with Kwick, is a simple, secure mobile payment acceptance option for any trade services company. It is compatible with iOS and Android devices, offering a card reader that connects to your device via Bluetooth. With this solution, you can:
           </p>
           
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">

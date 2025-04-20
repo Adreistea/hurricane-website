@@ -55,7 +55,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
                   </svg>
                 </div>
-                <h2 class="text-2xl font-bold text-green-500">Total Touch® Point of Sale</h2>
+                <h2 class="text-2xl font-bold text-green-500">Kwick Point of Sale</h2>
               </div>
               <p class="text-gray-700">
                 Discover the integrated point of sale solution that can help you manage sales, inventory, employees, operations, and more for your restaurant.
