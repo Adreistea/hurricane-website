@@ -189,6 +189,11 @@ const router = createRouter({
             path: '/point-of-sale',
             name: 'PointOfSale',
             component: () => import('./pages/Point_of_sale.vue')
+        },
+        {
+            path: '/dual-pricing-dealership',
+            name: 'DualPricingDealership',
+            component: () => import('./pages/DualPricingDealership.vue')
         }
     ],
     scrollBehavior(to, from, savedPosition) {

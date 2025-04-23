@@ -14,6 +14,14 @@
         </div>
       </section>
   
+      <!-- Floating Suggestion Box -->
+      <div class="suggestion-box">
+        <span class="text-xs text-red-600 font-semibold uppercase tracking-wide block mb-1">Suggested Reading</span>
+        <h4 class="text-lg font-bold text-red-700 mb-1">Learn more about Hurricane Payments: Dual Pricing for car dealerships</h4>
+        <p class="text-sm text-red-600 mb-2">Discover how auto dealerships can increase profits by implementing dual pricing programs</p>
+        <router-link to="/dual-pricing-dealership" class="text-red-700 hover:text-red-800 font-medium">Read Article →</router-link>
+      </div>
+  
       <!-- Main Content -->
       <article class="py-16">
         <div class="container mx-auto px-4">
@@ -590,6 +598,42 @@ p, a, span, li {
 .industry-tag span:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Floating Suggestion Box */
+.suggestion-box {
+  position: fixed;
+  top: 500px; /* Position it much lower on the page */
+  right: 20px;
+  width: 280px;
+  z-index: 10;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.suggestion-box span, 
+.suggestion-box h4, 
+.suggestion-box p, 
+.suggestion-box a {
+  text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive styles for suggestion box */
+@media (max-width: 768px) {
+  .suggestion-box {
+    top: auto;
+    bottom: 20px;
+    right: 10px;
+    left: 10px;
+    width: auto;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
 }
 
 /* Animations */
