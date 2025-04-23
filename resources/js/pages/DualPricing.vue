@@ -17,8 +17,8 @@
       <!-- Floating Suggestion Box -->
       <div class="suggestion-box">
         <span class="text-xs text-red-600 font-semibold uppercase tracking-wide block mb-1">Suggested Reading</span>
-        <h4 class="text-lg font-bold text-red-700 mb-1">Learn more about Hurricane Payments: Dual Pricing for car dealerships</h4>
-        <p class="text-sm text-red-600 mb-2">Discover how auto dealerships can increase profits by implementing dual pricing programs</p>
+        <h4 class="text-lg font-bold text-red-700 mb-1">Boost Your Dealership's Profits with Hurricane Payments</h4>
+        <p class="text-sm text-red-600 mb-2">See how dual pricing helps auto dealers eliminate transaction fees and grow their bottom line — without raising prices.</p>
         <router-link to="/dual-pricing-dealership" class="text-red-700 hover:text-red-800 font-medium">Read Article →</router-link>
       </div>
   
