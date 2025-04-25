@@ -290,9 +290,8 @@
                       </svg>
                     </div>
                   </div>
-                  <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-1">Fully integrated with your DMS</h3>
-                    <p class="text-gray-700">Works seamlessly with your existing Dealer Management System.</p>
+                  <div class="flex items-center">
+                    <h3 class="text-lg font-semibold text-gray-900">Fully integrated with your DMS</h3>
                   </div>
                 </div>
                 
@@ -625,7 +624,7 @@
                 </a>
                 
                 <!-- Email Button -->
-                <a href="mailto:Thomas@hurricanepayments.com" class="button-contact bg-white rounded-md py-3 px-6 flex items-center justify-center text-center hover:bg-gray-100 transition-colors shadow-md">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Thomas@hurricanepayments.com" target="_blank" class="button-contact bg-white rounded-md py-3 px-6 flex items-center justify-center text-center hover:bg-gray-100 transition-colors shadow-md">
                   <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center mr-4">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
                       <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
