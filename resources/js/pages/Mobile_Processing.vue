@@ -214,12 +214,22 @@
             <div class="relative pb-[56.25%] h-0 overflow-hidden max-w-full bg-gray-200">
               <iframe 
                 class="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/78PlpySumfo" 
+                src="https://www.youtube.com/embed/JxkfrPj1118" 
                 title="EMSmobile Credit Card Processing"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
               </iframe>
+              
+              <!-- Clickable overlay that redirects to YouTube -->
+              <a 
+                href="https://www.youtube.com/watch?v=JxkfrPj1118" 
+                target="_blank" 
+                class="absolute inset-0 z-20 cursor-pointer flex items-center justify-center bg-transparent hover:bg-black/10 transition-colors">
+                <div class="bg-red-600 text-white px-4 py-2 rounded-lg opacity-0 hover:opacity-100 transition-opacity">
+                  Watch on YouTube
+                </div>
+              </a>
               
               <!-- Loading animation overlay that fades out -->
               <div class="absolute inset-0 bg-gray-100 flex items-center justify-center youtube-loader">
@@ -311,7 +321,7 @@ import MainLayout from './MainLayout.vue';
 import NavBar from './NavBar.vue'; // Import the NavBar component
 
 // Import mobile device image with correct file name
-const mobileDeviceImg = new URL('@/../images/qrpic.jpg', import.meta.url).href;
+const mobileDeviceImg = new URL('@/../images/QR table ordering-01.jpg', import.meta.url).href;
 
 // Define scrollToNextSection outside onMounted so it's available to the template
 function scrollToNextSection() {

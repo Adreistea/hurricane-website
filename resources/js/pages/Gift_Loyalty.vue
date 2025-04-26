@@ -94,8 +94,172 @@
       </div>
     </div>
     
+    <!-- Why Loyalty Program Matters Section -->
+    <div class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Why Loyalty Program Matters?</h2>
+          <div class="w-32 h-1 bg-gray-300 mx-auto mb-6"></div>
+          <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+            There are more ways to increase revenue than reaching new customers. In many cases, retargeting existing customers who have already visited your business can also achieve high revenue!
+          </p>
+        </div>
+        
+        <!-- Image Carousel with Navigation -->
+        <div class="max-w-5xl mx-auto mb-16 relative">
+          <!-- Image Slides -->
+          <div class="carousel-container">
+            <!-- Slide 1 -->
+            <div class="carousel-slide rounded-xl overflow-hidden shadow-xl scroll-reveal opacity-0" data-delay="0" id="slide-1">
+              <div class="flex justify-center bg-white p-4">
+                <img src="@/../images/advancedloyalty.png" alt="Advanced Loyalty Program" class="w-auto h-auto max-w-full max-h-[600px]" />
+              </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="carousel-slide rounded-xl overflow-hidden shadow-xl scroll-reveal opacity-0 hidden" data-delay="100" id="slide-2">
+              <div class="flex justify-center bg-white p-4">
+                <img src="@/../images/kpgiftcard.png" alt="KwickPOS Loyalty" class="w-auto h-auto max-w-full max-h-[600px]" />
+              </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="carousel-slide rounded-xl overflow-hidden shadow-xl scroll-reveal opacity-0 hidden" data-delay="200" id="slide-3">
+              <div class="flex justify-center bg-white p-4">
+                <img src="@/../images/comparison.png" alt="Points and Rewards" class="w-auto h-auto max-w-full max-h-[600px]" />
+              </div>
+            </div>
+            
+            <!-- Slide 4 -->
+            <div class="carousel-slide rounded-xl overflow-hidden shadow-xl scroll-reveal opacity-0 hidden" data-delay="300" id="slide-4">
+              <div class="flex justify-center bg-white p-4">
+                <img src="@/../images/benefit.png" alt="Marketing Campaigns" class="w-auto h-auto max-w-full max-h-[600px]" />
+              </div>
+            </div>
+          </div>
+          
+          <!-- Navigation Controls -->
+          <div class="flex justify-center mt-6 mb-8">
+            <button @click="showSlide('slide-1')" class="w-3 h-3 rounded-full mx-2 focus:outline-none" :class="{'bg-red-600': currentSlide === 'slide-1', 'bg-gray-300': currentSlide !== 'slide-1'}"></button>
+            <button @click="showSlide('slide-2')" class="w-3 h-3 rounded-full mx-2 focus:outline-none" :class="{'bg-red-600': currentSlide === 'slide-2', 'bg-gray-300': currentSlide !== 'slide-2'}"></button>
+            <button @click="showSlide('slide-3')" class="w-3 h-3 rounded-full mx-2 focus:outline-none" :class="{'bg-red-600': currentSlide === 'slide-3', 'bg-gray-300': currentSlide !== 'slide-3'}"></button>
+            <button @click="showSlide('slide-4')" class="w-3 h-3 rounded-full mx-2 focus:outline-none" :class="{'bg-red-600': currentSlide === 'slide-4', 'bg-gray-300': currentSlide !== 'slide-4'}"></button>
+          </div>
+          
+          <!-- Caption -->
+          <div class="text-center text-gray-600 italic mt-2 mb-6">
+            These images showcase some of the gift card and loyalty services we offer to help your business grow.
+          </div>
+          
+          <!-- Next/Prev Buttons -->
+          <button @click="prevSlide" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg focus:outline-none hover:bg-gray-100 transition-colors z-10">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button @click="nextSlide" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg focus:outline-none hover:bg-gray-100 transition-colors z-10">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+        
+        <!-- Three column features -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+          <!-- Feature 1 -->
+          <div class="bg-white p-8 rounded-xl shadow-lg scroll-reveal opacity-0" data-delay="0">
+            <div class="text-center mb-6">
+              <h3 class="text-2xl font-bold mb-2" style="color: #973131;">Love at first sight</h3>
+            </div>
+            <p class="text-gray-700">
+              KwickPOS offers a phone-number linked loyalty program that is based on purchases or visits.
+            </p>
+          </div>
+          
+          <!-- Feature 2 -->
+          <div class="bg-white p-8 rounded-xl shadow-lg scroll-reveal opacity-0" data-delay="200">
+            <div class="text-center mb-6">
+              <h3 class="text-2xl font-bold mb-2" style="color: #973131;">Points + Rewards</h3>
+            </div>
+            <p class="text-gray-700">
+              Customers can accumulate points with every purchase or visit to redeem rewards that will keep them coming back.
+            </p>
+          </div>
+          
+          <!-- Feature 3 -->
+          <div class="bg-white p-8 rounded-xl shadow-lg scroll-reveal opacity-0" data-delay="400">
+            <div class="text-center mb-6">
+              <h3 class="text-2xl font-bold mb-2" style="color: #973131;">Retargeting Marketing Campaigns</h3>
+            </div>
+            <p class="text-gray-700">
+              Excite your most loyal customers with ways to earn discounts and additional perks with a loyalty program.
+            </p>
+          </div>
+        </div>
+        
+        <!-- YouTube Video Section - Added below features -->
+        <div class="max-w-5xl mx-auto mt-16">
+          <div class="flex flex-col lg:flex-row items-center gap-10">
+            <!-- YouTube Video with Animation -->
+            <div class="lg:w-1/2 scroll-reveal-right opacity-0 relative">
+              <!-- Video frame with shadow and border effect -->
+              <div class="rounded-xl overflow-hidden shadow-2xl relative z-10 border-4 border-white transform transition hover:-rotate-1 hover:scale-[1.01] duration-500">
+                <!-- Responsive YouTube Embed -->
+                <div class="relative pb-[56.25%] h-0 overflow-hidden max-w-full bg-gray-200">
+                  <!-- YouTube iframe -->
+                  <iframe 
+                    class="absolute top-0 left-0 w-full h-full"
+                    src="https://www.youtube.com/embed/PoCwK1yKh1c?rel=0&showinfo=0" 
+                    title="Loyalty Program Benefits"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                  </iframe>
+                  
+                  <!-- Clickable overlay that redirects to YouTube -->
+                  <a 
+                    href="https://www.youtube.com/watch?v=PoCwK1yKh1c" 
+                    target="_blank" 
+                    class="absolute inset-0 z-20 cursor-pointer flex items-center justify-center bg-transparent hover:bg-black/10 transition-colors">
+                    <div class="bg-red-600 text-white px-4 py-2 rounded-lg opacity-0 hover:opacity-100 transition-opacity">
+                      Watch on YouTube
+                    </div>
+                  </a>
+                  
+                  <!-- Loading animation overlay that fades out -->
+                  <div class="absolute inset-0 bg-gray-100 flex items-center justify-center youtube-loader" style="opacity: 1;">
+                    <div class="w-16 h-16 border-4 border-custom-red border-t-transparent rounded-full animate-spin"></div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Decorative elements behind the video -->
+              <div class="absolute -z-10 inset-0 bg-gradient-to-r from-red-100 to-rose-100 rounded-3xl transform rotate-3 translate-x-8 translate-y-8 blur-sm"></div>
+              <div class="absolute -z-20 inset-0 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-3xl transform -rotate-2 translate-x-4 translate-y-12 blur-sm"></div>
+              
+              <!-- Floating badge/label -->
+              <div class="absolute -right-4 -top-4 bg-custom-red text-black py-2 px-4 rounded-lg font-bold shadow-lg z-20 animate-bounce-slow">
+                Watch Demo
+              </div>
+            </div>
+            
+            <!-- Text Content -->
+            <div class="lg:w-1/2 scroll-reveal-left opacity-0">
+              <h3 class="text-3xl font-bold mb-6" style="color: #973131;">How Our Loyalty Programs Work</h3>
+              <p class="text-lg text-gray-700 mb-6">
+                Our loyalty program solutions offer tremendous flexibility, allowing you to design a program that fits your specific business needs. The customizable platforms help you reward customers in ways that make sense for your business model.
+              </p>
+              <p class="text-lg text-gray-700 mb-6">
+                Whether you're looking to increase customer visit frequency, boost average order value, or simply build a stronger connection with your clientele, our loyalty solutions can be tailored to achieve your goals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <!-- Benefits Section -->
-    <div class="bg-gray-50 py-24">
+    <div class="bg-white py-24">
       <div class="container mx-auto px-6">
         <div class="text-center mb-12">
           <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Program Benefits</h2>
@@ -255,7 +419,7 @@
         </div>
       </div>
     </div>
-    
+
     <!-- Lightbox Component -->
     <lightbox
       :is-visible="showLightbox"
@@ -267,7 +431,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, nextTick } from 'vue';
 import MainLayout from './MainLayout.vue';
 import axios from 'axios';
 import lightbox from './lightbox.vue';
@@ -275,6 +439,33 @@ import lightbox from './lightbox.vue';
 // Lightbox state
 const showLightbox = ref(false);
 const currentLightboxId = ref(null);
+const currentSlide = ref('slide-1');
+const slides = ['slide-1', 'slide-2', 'slide-3', 'slide-4'];
+const youtubeLoaded = ref(false);
+
+// Image carousel functions
+const showSlide = (slideId) => {
+  // Hide all slides
+  document.querySelectorAll('.carousel-slide').forEach(slide => {
+    slide.classList.add('hidden');
+  });
+  
+  // Show the selected slide
+  document.getElementById(slideId)?.classList.remove('hidden');
+  currentSlide.value = slideId;
+};
+
+const nextSlide = () => {
+  const currentIndex = slides.indexOf(currentSlide.value);
+  const nextIndex = (currentIndex + 1) % slides.length;
+  showSlide(slides[nextIndex]);
+};
+
+const prevSlide = () => {
+  const currentIndex = slides.indexOf(currentSlide.value);
+  const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+  showSlide(slides[prevIndex]);
+};
 
 // Handle consultation click
 const handleConsultationClick = () => {
@@ -346,6 +537,9 @@ onMounted(() => {
     element.classList.add('animate');
   });
 
+  // Initialize carousel - show the first slide
+  showSlide('slide-1');
+  
   // Fetch and check lightboxes
   fetchLightboxes();
 
@@ -363,6 +557,21 @@ onMounted(() => {
     // Animate slide-up elements
     document.querySelector('.slide-up')?.classList.add('animate');
   }, 300);
+
+  // Force the YouTube iframe to be visible immediately
+  setTimeout(() => {
+    const youtubeContainer = document.querySelector('.rounded-xl.overflow-hidden.shadow-2xl');
+    if (youtubeContainer) {
+      youtubeContainer.style.opacity = '1';
+    }
+    
+    // Make sure the loader fades out to reveal the video
+    const loader = document.querySelector('.youtube-loader');
+    if (loader) {
+      loader.style.opacity = '0.3';
+      setTimeout(() => loader.style.opacity = '0', 1000);
+    }
+  }, 500);
 
   // Add intersection observer for the new section
   const newSectionObserver = new IntersectionObserver((entries) => {
@@ -383,10 +592,60 @@ onMounted(() => {
     });
   }, { threshold: 0.2 });
 
-  // Observe the new section
-  document.querySelector('.py-24.bg-gradient-to-b')?.forEach(section => {
+  // Observe the new section if it exists
+  document.querySelectorAll('.py-24.bg-gradient-to-b').forEach(section => {
     newSectionObserver.observe(section);
   });
+  
+  // Set up Intersection Observer for scroll reveal left/right animations
+  const scrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Get the delay attribute
+        const delay = entry.target.getAttribute('data-delay') || 0;
+        
+        // Add animation class after the specified delay
+        setTimeout(() => {
+          if (entry.target.classList.contains('scroll-reveal-left')) {
+            entry.target.classList.add('animate-reveal-left');
+          } else if (entry.target.classList.contains('scroll-reveal-right')) {
+            entry.target.classList.add('animate-reveal-right');
+          }
+          entry.target.classList.remove('opacity-0');
+        }, parseInt(delay));
+        
+        // Unobserve the element to prevent re-animation
+        scrollObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  
+  // Observe elements with scroll-reveal-left and scroll-reveal-right classes
+  document.querySelectorAll('.scroll-reveal-left, .scroll-reveal-right').forEach(element => {
+    scrollObserver.observe(element);
+  });
+  
+  // Handle YouTube iframe loading
+  const youtubeIframe = document.querySelector('iframe');
+  if (youtubeIframe) {
+    // Set explicit onload handler
+    youtubeIframe.onload = () => {
+      const loader = document.querySelector('.youtube-loader');
+      if (loader) {
+        loader.style.opacity = '0';
+      }
+      youtubeLoaded.value = true;
+    };
+    
+    // Force load event if iframe was already loaded
+    if (youtubeIframe.complete) {
+      const loader = document.querySelector('.youtube-loader');
+      if (loader) {
+        loader.style.opacity = '0';
+      }
+      youtubeLoaded.value = true;
+    }
+  }
 });
 </script>
 
@@ -400,6 +659,51 @@ onMounted(() => {
 .scroll-reveal.animate {
   opacity: 1 !important;
   transform: translateY(0);
+}
+
+/* Add these font imports at the top of your style section */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+
+/* Apply font families to elements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+p, a, span, blockquote, li {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Refine heading styles */
+h1 {
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h2 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h3 {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Make CTA buttons more distinct */
+.fancy-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* Enhance body text readability */
+p {
+  line-height: 1.6;
+  font-weight: 400;
 }
 
 /* Text animations */
@@ -489,12 +793,6 @@ onMounted(() => {
 }
 
 /* Fancy button hover effect */
-.fancy-button {
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
 .fancy-button:hover {
   background-color: #7e2929 !important;
   transform: translateY(-2px);
@@ -578,5 +876,102 @@ onMounted(() => {
 .gift-card:hover {
   transform: translateY(-10px) rotate(0deg) !important;
   z-index: 10 !important;
+}
+
+/* Carousel styles */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.carousel-slide.hidden {
+  display: none;
+}
+
+/* Button hover effects */
+button.bg-white {
+  transition: all 0.3s ease;
+}
+
+button.bg-white:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Dot navigation active state */
+button.bg-red-600 {
+  transform: scale(1.3);
+}
+
+/* Scroll reveal animations for left/right */
+.scroll-reveal-left, .scroll-reveal-right {
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.17, 0.67, 0.45, 0.97);
+}
+
+.scroll-reveal-left {
+  transform: translateX(-50px);
+}
+
+.scroll-reveal-right {
+  transform: translateX(50px);
+}
+
+.animate-reveal-left, .animate-reveal-right {
+  opacity: 1 !important;
+  transform: translateX(0);
+}
+
+/* Slow bounce animation for badges */
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s infinite ease-in-out;
+}
+
+/* YouTube loader fade */
+.youtube-loader {
+  transition: opacity 0.5s ease;
+  z-index: 15;
+  background-color: rgba(243, 244, 246, 0.8);
+}
+
+/* Add these styles for YouTube iframe visibility */
+iframe {
+  opacity: 1 !important;
+  z-index: 10;
+}
+
+.rounded-xl.overflow-hidden iframe {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Custom color classes */
+.bg-custom-red {
+  background-color: #973131;
+}
+
+.border-custom-red {
+  border-color: #973131;
+}
+
+.text-custom-red {
+  color: #973131;
 }
 </style>

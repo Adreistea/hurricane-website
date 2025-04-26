@@ -18,7 +18,7 @@
         
         <div class="text-reveal mb-8">
           <p class="text-reveal-content text-lg text-gray-600 delay-300">
-            We partner with reputable companies to bring you the best solution possible. Whether you need a website, online shopping cart, payment gateway, or other custom application, you can trust that Hurricane has the resources to build a tailored solution that lasts.
+            We partner with reputable companies to bring you the best solution possible. Whether you need a website, online shopping cart, payment gateway, or other custom application, you can trust that Hurricane Payments has the resources to build a tailored solution that lasts.
           </p>
         </div>
       </div>

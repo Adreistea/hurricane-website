@@ -78,7 +78,7 @@
       <!-- Right Content - Mobile Phone Image with Card Reveal Animation -->
       <div class="lg:w-1/2 relative card-reveal delay-200">
         <div class="rounded-lg shadow-xl overflow-hidden">
-          <img src="@/../images/textqr.png" alt="Payment Complete on Mobile" class="w-full h-auto" />
+          <img src="@/../images/qrpic.jpg" alt="Payment Complete on Mobile" class="w-full h-auto" />
         </div>
         
         <!-- Animated decorative elements -->
@@ -96,7 +96,7 @@
           <p class="text-xl text-gray-600 max-w-3xl mx-auto mt-6">Streamline your payment process with modern, touchless solutions that customers love.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <!-- Products and Services Inventory Management -->
           <div class="bg-white p-8 rounded-xl shadow-md scroll-reveal opacity-0 transform hover:scale-105 transition-all duration-300" data-delay="0">
             <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-400 rounded-lg flex items-center justify-center mb-6">
@@ -128,6 +128,48 @@
             </div>
             <h3 class="text-2xl font-bold mb-4 text-gray-900">Secure Vault Card Storage</h3>
             <p class="text-gray-600 mb-6">Securely store customer card information for future purchases or billing. No need to request credit card information for every future sale.</p>
+          </div>
+        </div>
+
+        <!-- YouTube Video Section -->
+        <div class="lg:w-1/2 scroll-reveal-right opacity-0 relative mx-auto">
+          <!-- Video frame with shadow and border effect -->
+          <div class="rounded-xl overflow-hidden shadow-2xl relative z-10 border-4 border-white transform transition hover:-rotate-1 hover:scale-[1.01] duration-500">
+            <!-- Responsive YouTube Embed -->
+            <div class="relative pb-[56.25%] h-0 overflow-hidden max-w-full bg-gray-200">
+              <iframe 
+                class="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/S3FwXsT4CMY" 
+                title="Hurricane Payments Text & QR Features"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+              </iframe>
+              
+              <!-- Clickable overlay that redirects to YouTube -->
+              <a 
+                href="https://www.youtube.com/watch?v=S3FwXsT4CMY" 
+                target="_blank" 
+                class="absolute inset-0 z-20 cursor-pointer flex items-center justify-center bg-transparent hover:bg-black/10 transition-colors">
+                <div class="bg-red-600 text-white px-4 py-2 rounded-lg opacity-0 hover:opacity-100 transition-opacity">
+                  Watch on YouTube
+                </div>
+              </a>
+              
+              <!-- Loading animation overlay that fades out -->
+              <div class="absolute inset-0 bg-gray-100 flex items-center justify-center youtube-loader">
+                <div class="w-16 h-16 border-4 border-custom-red border-t-transparent rounded-full animate-spin"></div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Decorative elements behind the video -->
+          <div class="absolute -z-10 inset-0 bg-gradient-to-r from-red-100 to-rose-100 rounded-3xl transform rotate-3 translate-x-8 translate-y-8 blur-sm"></div>
+          <div class="absolute -z-20 inset-0 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-3xl transform -rotate-2 translate-x-4 translate-y-12 blur-sm"></div>
+          
+          <!-- Floating badge/label -->
+          <div class="absolute -right-4 -top-4 bg-custom-red text-white py-2 px-4 rounded-lg font-bold shadow-lg z-20 animate-bounce-slow">
+            Watch Demo
           </div>
         </div>
       </div>
@@ -181,11 +223,250 @@
       </div>
     </div>
     
+    <!-- Why Loyalty Program Matters Section -->
+    <div class="py-16 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Why Loyalty Program Matters?</h2>
+          <div class="w-32 h-1 bg-gray-300 mx-auto"></div>
+          <p class="text-xl text-gray-600 max-w-4xl mx-auto mt-6">There are more ways to increase revenue than reaching new customers. In many cases, retargeting existing customers who have already visited your business can also achieve high revenue!</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <!-- Increased Customer Retention -->
+          <div class="bg-white p-8 rounded-xl shadow-md scroll-reveal opacity-0 transform hover:scale-105 transition-all duration-300" data-delay="0">
+            <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-indigo-400 rounded-lg flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">Increased Customer Retention</h3>
+            <p class="text-gray-600 mb-6">Loyalty programs can increase customer retention rates by 5-10%. Our program keeps customers coming back by rewarding their continued patronage.</p>
+          </div>
+          
+          <!-- Higher Customer Lifetime Value -->
+          <div class="bg-white p-8 rounded-xl shadow-md scroll-reveal opacity-0 transform hover:scale-105 transition-all duration-300" data-delay="200">
+            <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-400 rounded-lg flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">Higher Customer Lifetime Value</h3>
+            <p class="text-gray-600 mb-6">Loyal customers spend 67% more than new ones. Our loyalty programs help you maximize the lifetime value of each customer by encouraging repeat business.</p>
+          </div>
+          
+          <!-- Customer Data & Insights -->
+          <div class="bg-white p-8 rounded-xl shadow-md scroll-reveal opacity-0 transform hover:scale-105 transition-all duration-300" data-delay="400">
+            <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">Customer Data & Insights</h3>
+            <p class="text-gray-600 mb-6">Gain valuable insights into customer behavior and preferences. Our loyalty programs help you collect data to personalize marketing efforts and improve customer experience.</p>
+          </div>
+          
+          <!-- Increased Average Order Value -->
+          <div class="bg-white p-8 rounded-xl shadow-md scroll-reveal opacity-0 transform hover:scale-105 transition-all duration-300" data-delay="600">
+            <div class="w-16 h-16 bg-gradient-to-r from-red-500 to-rose-400 rounded-lg flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">Increased Average Order Value</h3>
+            <p class="text-gray-600 mb-6">Loyalty program members tend to spend more per transaction. Our tiered rewards encourage customers to add more items to their cart to reach point thresholds.</p>
+          </div>
+          
+          <!-- Customer Referrals -->
+          <div class="bg-white p-8 rounded-xl shadow-md scroll-reveal opacity-0 transform hover:scale-105 transition-all duration-300" data-delay="800">
+            <div class="w-16 h-16 bg-gradient-to-r from-amber-500 to-yellow-400 rounded-lg flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">Customer Referrals</h3>
+            <p class="text-gray-600 mb-6">Loyalty program members are more likely to refer friends and family. Our referral-boosting features reward customers for bringing in new business.</p>
+          </div>
+          
+          <!-- Brand Differentiation -->
+          <div class="bg-white p-8 rounded-xl shadow-md scroll-reveal opacity-0 transform hover:scale-105 transition-all duration-300" data-delay="1000">
+            <div class="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-400 rounded-lg flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">Brand Differentiation</h3>
+            <p class="text-gray-600 mb-6">Stand out from competitors with a unique loyalty program. Our customizable solutions help you create a loyalty experience that reflects your brand identity.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Review Generation Section -->
+    <div class="py-16 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-4" style="color: #973131;">QR-Based Review Generation System</h2>
+          <div class="w-32 h-1 bg-gray-300 mx-auto mb-6"></div>
+          <p class="text-xl text-gray-600 max-w-4xl mx-auto">Boost your online reputation and customer engagement with our innovative review generation system.</p>
+        </div>
+
+        <!-- Large Centered Image -->
+        <div class="flex justify-center mb-16">
+          <div class="relative w-full max-w-2xl mx-auto">
+            <!-- Decorative elements behind the image -->
+            <div class="absolute -z-10 inset-0 bg-gradient-to-r from-blue-100 to-purple-100 rounded-3xl transform rotate-3 translate-x-4 translate-y-4 blur-sm"></div>
+            <div class="absolute -z-20 inset-0 bg-gradient-to-r from-purple-100 to-pink-100 rounded-3xl transform -rotate-2 translate-x-4 translate-y-8 blur-sm"></div>
+            
+            <!-- Large Centered Image with Animation -->
+            <div class="rounded-xl overflow-hidden shadow-2xl relative z-10 border-4 border-white card-reveal">
+              <img src="@/../images/reviewqr.png" alt="QR-Based Review System" class="w-full h-auto" />
+            </div>
+          </div>
+        </div>
+        
+        <!-- Features Section (Three Columns) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Quick Review Generation -->
+          <div class="bg-white p-6 rounded-xl shadow-lg scroll-reveal opacity-0" data-delay="0">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center text-white mr-4">
+                <span class="text-xl font-bold">1</span>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900">Quick Review Generation</h3>
+            </div>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Review options for all printed receipts</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Pop up your restaurant's Google Map, Facebook, and Yelp links for customers</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Eliminate unnecessary steps for customers to search platforms</span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- Reputation Control -->
+          <div class="bg-white p-6 rounded-xl shadow-lg scroll-reveal opacity-0" data-delay="200">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white mr-4">
+                <span class="text-xl font-bold">2</span>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900">Reputation Control</h3>
+            </div>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 mr-2 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>You control which reviews to go public</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 mr-2 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Receive text notification after each review</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 mr-2 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Record customer feedback for deeper understanding</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 mr-2 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Communicate with customers effectively</span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- Be the Celebrity -->
+          <div class="bg-white p-6 rounded-xl shadow-lg scroll-reveal opacity-0" data-delay="400">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white mr-4">
+                <span class="text-xl font-bold">3</span>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900">Be the Celebrity</h3>
+            </div>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 mr-2 text-purple-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Increase exposure, affiliation, and sales</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 mr-2 text-purple-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Stand out from competitors and be famous</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- YouTube Video Section with added spacing -->
+        <div class="lg:w-3/4 scroll-reveal-right opacity-0 relative mx-auto mt-24">
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold">See How It Works</h3>
+            <p class="text-gray-600">Watch our demonstration video to learn more about the QR-based review system</p>
+          </div>
+          
+          <!-- Video frame with shadow and border effect -->
+          <div class="rounded-xl overflow-hidden shadow-2xl relative z-10 border-4 border-white transform transition hover:-rotate-1 hover:scale-[1.01] duration-500">
+            <!-- Responsive YouTube Embed -->
+            <div class="relative pb-[56.25%] h-0 overflow-hidden max-w-full bg-gray-200">
+              <iframe 
+                class="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/tnQyq7mB2lU" 
+                title="QR-Based Review Generation System"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+              </iframe>
+              
+              <!-- Clickable overlay that redirects to YouTube -->
+              <a 
+                href="https://www.youtube.com/watch?v=tnQyq7mB2lU" 
+                target="_blank" 
+                class="absolute inset-0 z-20 cursor-pointer flex items-center justify-center bg-transparent hover:bg-black/10 transition-colors">
+                <div class="bg-red-600 text-white px-4 py-2 rounded-lg opacity-0 hover:opacity-100 transition-opacity">
+                  Watch on YouTube
+                </div>
+              </a>
+              
+              <!-- Loading animation overlay that fades out -->
+              <div class="absolute inset-0 bg-gray-100 flex items-center justify-center youtube-loader">
+                <div class="w-16 h-16 border-4 border-custom-red border-t-transparent rounded-full animate-spin"></div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Decorative elements behind the video -->
+          <div class="absolute -z-10 inset-0 bg-gradient-to-r from-red-100 to-rose-100 rounded-3xl transform rotate-3 translate-x-8 translate-y-8 blur-sm"></div>
+          <div class="absolute -z-20 inset-0 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-3xl transform -rotate-2 translate-x-4 translate-y-12 blur-sm"></div>
+        </div>
+      </div>
+    </div>
+    
     <!-- CTA Section -->
     <div class="bg-gradient-to-r from-red-900 to-red-700 text-white py-16" style="background: linear-gradient(to right, #973131, #b64848);">
       <div class="container mx-auto px-6 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6 scroll-reveal opacity-0">Ready to upgrade your payment experience?</h2>
-        <p class="text-xl opacity-90 max-w-3xl mx-auto mb-8 scroll-reveal opacity-0 delay-200">Our contactless payment solutions can help you serve customers faster, reduce physical contact, and modernize your business.</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 scroll-reveal opacity-0">Ready to build customer loyalty?</h2>
+        <p class="text-xl opacity-90 max-w-3xl mx-auto mb-8 scroll-reveal opacity-0 delay-200">Our gift and loyalty programs are designed to help your business grow through increased customer retention and higher average order values.</p>
         <div class="scroll-reveal opacity-0 delay-300">
           <router-link to="/request-consultation" class="bg-white text-red-900 font-medium py-3 px-8 rounded-md shadow-lg hover:bg-opacity-90 transition-all duration-300 inline-block mx-2 mb-4">
             Request a Consultation
@@ -297,6 +578,21 @@ function scrollToNextSection() {
 }
 
 onMounted(() => {
+  // Force the YouTube iframe to be visible immediately
+  setTimeout(() => {
+    const youtubeContainer = document.querySelector('.rounded-xl.overflow-hidden.shadow-2xl');
+    if (youtubeContainer) {
+      youtubeContainer.style.opacity = '1';
+    }
+    
+    // Make sure the loader fades out to reveal the video
+    const loader = document.querySelector('.youtube-loader');
+    if (loader) {
+      loader.style.opacity = '0.3';
+      setTimeout(() => loader.style.opacity = '0', 1000);
+    }
+  }, 500);
+  
   // Intro animation for entire page (like in home.vue)
   const heroSection = document.querySelector('.container.mx-auto.px-6.py-16');
   if (heroSection) {
@@ -338,27 +634,91 @@ onMounted(() => {
     el.style.animation = 'float 6s ease-in-out infinite';
   });
   
-  // Enhanced scroll reveal to handle delay attribute
-  const enhancedObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const delay = entry.target.getAttribute('data-delay') || 0;
-        setTimeout(() => {
-          entry.target.classList.add('animate');
-          entry.target.style.opacity = '1';
-        }, delay);
-        enhancedObserver.unobserve(entry.target);
+  // Handle YouTube iframe loading
+  const youtubeIframe = document.querySelector('iframe');
+  if (youtubeIframe) {
+    youtubeIframe.addEventListener('load', () => {
+      const loader = document.querySelector('.youtube-loader');
+      if (loader) {
+        loader.style.opacity = 0;
       }
     });
-  }, { threshold: 0.15, rootMargin: '0px 0px -100px 0px' });
-
-  document.querySelectorAll('.scroll-reveal').forEach(element => {
-    enhancedObserver.observe(element);
+  }
+  
+  // Observe the scroll-reveal-right elements like in Mobile_Processing.vue
+  const scrollRevealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          if (entry.target.classList.contains('scroll-reveal-right')) {
+            entry.target.classList.add('animate-reveal-right');
+            entry.target.classList.remove('opacity-0');
+          }
+        }, 300);
+        scrollRevealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  
+  // Observe the YouTube container
+  document.querySelectorAll('.scroll-reveal-right').forEach(element => {
+    scrollRevealObserver.observe(element);
   });
 });
 </script>
 
 <style scoped>
+/* Add these font imports at the top of your style section */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+
+/* Apply font families to elements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+p, a, span, blockquote, li {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Refine heading styles */
+h1 {
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h2 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h3 {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Make CTA buttons more distinct */
+.fancy-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.fancy-button:hover {
+  background-color: #7e2929 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhance body text readability */
+p {
+  line-height: 1.6;
+  font-weight: 400;
+}
+
 /* Base animations */
 .scroll-reveal {
   transform: translateY(20px);
@@ -447,12 +807,6 @@ onMounted(() => {
 }
 
 /* Fancy button hover effect */
-.fancy-button {
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
 .fancy-button:hover {
   background-color: #7e2929 !important;
   transform: translateY(-2px);
@@ -509,5 +863,62 @@ onMounted(() => {
 .hover\:scale-102:hover {
   transform: scale(1.02) translateY(-5px);
   box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+/* Custom bounce animation for floating badge */
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s infinite ease-in-out;
+}
+
+/* Custom color classes */
+.bg-custom-red {
+  background-color: #973131;
+}
+
+.border-custom-red {
+  border-color: #973131;
+}
+
+.text-custom-red {
+  color: #973131;
+}
+
+/* YouTube video fixes */
+.youtube-loader {
+  transition: opacity 1s ease;
+  opacity: 1;
+  z-index: 4;
+}
+
+.rounded-xl.overflow-hidden iframe {
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+/* Add scroll-reveal-right animation for YouTube section */
+.scroll-reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.animate-reveal-right {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
 }
 </style>

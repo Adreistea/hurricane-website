@@ -105,6 +105,9 @@
           </div>
           
           <div class="bg-white rounded-xl p-8 mt-12 shadow-lg opacity-0 animate-on-scroll" data-animation="zoom-in" data-delay="500">
+            <div class="flex justify-center mb-6">
+              <img src="@/../images/Long-KP-Logo.png" alt="KwickPOS Logo" class="max-w-full h-auto w-64" />
+            </div>
             <h3 class="text-3xl font-bold mb-3" style="color: #973131;">KwickPOS solves all of that.</h3>
             <p class="text-xl text-gray-700">A revolutionary approach to point-of-sale that puts money back in your pocket.</p>
           </div>
@@ -117,7 +120,7 @@
           <!-- Left Content - Image with Animation -->
           <div class="lg:w-1/2 relative scroll-reveal-left">
             <div class="rounded-2xl shadow-xl overflow-hidden transform transition-all duration-500 hover:scale-105">
-              <img src="@/../images/businesspartner.png" alt="Business Partnership" class="w-full h-auto rounded-2xl" />
+              <img src="@/../images/2nddisplay.jpg" alt="KwickPOS Display" class="w-full h-auto rounded-2xl" />
             </div>
             
             <!-- Decorative elements for visual appeal -->
@@ -225,7 +228,7 @@
           <div class="col-span-3 flex justify-center mt-12">
             <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden scroll-reveal max-w-md mx-auto">
               <div class="relative h-48 mb-6 rounded-lg overflow-hidden">
-                <img src="@/../images/weserve.jpeg" alt="24/7 Support" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                <img src="@/../images/Adtool.jpg" alt="24/7 Support" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <div class="absolute bottom-4 left-4 text-white font-bold text-2xl">🧠</div>
               </div>
@@ -363,7 +366,7 @@
       <!-- What You Get with KwickPOS Section -->
       <div class="container mx-auto px-6 py-16 my-8 opacity-0 animate-on-scroll" data-animation="fade-up">
         <div class="text-center mb-12">
-          <h2 class="text-5xl font-extrabold mb-6" style="color: #973131; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">
+          <h2 class="text-5xl font-black mb-6" style="color: #973131; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">
             What You Get with KwickPOS
           </h2>
           <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-10">
@@ -371,94 +374,125 @@
           </p>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10 max-w-5xl mx-auto">
-          <!-- Item 1 -->
-          <div class="flex items-start space-x-4 scroll-reveal">
-            <div class="flex-shrink-0 mt-1">
-              <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
-                <svg class="w-5 h-5" style="color: #973131;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-              </div>
+        <!-- Collage Layout with Images and Text -->
+        <div class="flex flex-col lg:flex-row gap-8 mb-20">
+          <!-- Left Images Column -->
+          <div class="lg:w-1/4 space-y-6">
+            <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
+              <img src="@/../images/magtekproductshot-03.jpg" alt="KwickPOS Terminal" class="w-full h-auto object-cover aspect-square" />
             </div>
-            <div>
-              <h3 class="text-xl font-bold mb-2 text-gray-800">iPad or Android-compatible touchscreen terminals</h3>
-              <p class="text-gray-600">Use your existing devices or get our recommended hardware setup</p>
+            <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
+              <img src="@/../images/product pic-06.png" alt="KwickPOS Equipment" class="w-full h-auto object-cover aspect-square" />
             </div>
           </div>
           
-          <!-- Item 2 -->
-          <div class="flex items-start space-x-4 scroll-reveal">
-            <div class="flex-shrink-0 mt-1">
-              <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
-                <svg class="w-5 h-5" style="color: #973131;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
+          <!-- Center Text Column -->
+          <div class="lg:w-1/2 bg-white rounded-xl p-8 shadow-lg relative z-10">
+            <!-- Content Grid -->
+            <div class="space-y-8">
+              <!-- Item 1 -->
+              <div class="flex items-start">
+                <div class="flex-shrink-0 mr-4">
+                  <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center">
+                    <svg class="w-6 h-6" style="color: #973131;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-2 text-gray-800">iPad or Android-compatible touchscreen terminals</h3>
+                  <p class="text-gray-600">Use your existing devices or get our recommended hardware setup</p>
+                </div>
+              </div>
+              
+              <!-- Item 2 -->
+              <div class="flex items-start">
+                <div class="flex-shrink-0 mr-4">
+                  <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center">
+                    <svg class="w-6 h-6" style="color: #973131;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-2 text-gray-800">Cash drawer, receipt printer, kitchen display system</h3>
+                  <p class="text-gray-600">Complete hardware integration for seamless operations</p>
+                </div>
+              </div>
+              
+              <!-- Item 3 -->
+              <div class="flex items-start">
+                <div class="flex-shrink-0 mr-4">
+                  <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center">
+                    <svg class="w-6 h-6" style="color: #973131;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-2 text-gray-800">Customized menu setup and initial programming</h3>
+                  <p class="text-gray-600">Tailored to your specific business needs and workflow</p>
+                </div>
+              </div>
+              
+              <!-- Item 4 -->
+              <div class="flex items-start">
+                <div class="flex-shrink-0 mr-4">
+                  <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center">
+                    <svg class="w-6 h-6" style="color: #973131;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-2 text-gray-800">Loyalty program pre-installed</h3>
+                  <p class="text-gray-600">Start building customer relationships and repeat business from day one</p>
+                </div>
+              </div>
+              
+              <!-- Item 5 -->
+              <div class="flex items-start">
+                <div class="flex-shrink-0 mr-4">
+                  <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center">
+                    <svg class="w-6 h-6" style="color: #973131;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-2 text-gray-800">Secure cloud backup and remote access</h3>
+                  <p class="text-gray-600">Manage your business from anywhere with real-time data access</p>
+                </div>
+              </div>
+              
+              <!-- Item 6 -->
+              <div class="flex items-start">
+                <div class="flex-shrink-0 mr-4">
+                  <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center">
+                    <svg class="w-6 h-6" style="color: #973131;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-2 text-gray-800">Live U.S.-based onboarding and support</h3>
+                  <p class="text-gray-600">Expert assistance whenever you need it, from setup to daily operations</p>
+                </div>
               </div>
             </div>
-            <div>
-              <h3 class="text-xl font-bold mb-2 text-gray-800">Cash drawer, receipt printer, kitchen display system</h3>
-              <p class="text-gray-600">Complete hardware integration for seamless operations</p>
-            </div>
+            
+            <!-- Decorative elements -->
+            <div class="absolute -z-10 top-8 left-8 w-16 h-16 bg-red-100 rounded-full opacity-50"></div>
+            <div class="absolute -z-10 bottom-8 right-8 w-24 h-24 bg-blue-100 rounded-full opacity-50"></div>
           </div>
           
-          <!-- Item 3 -->
-          <div class="flex items-start space-x-4 scroll-reveal">
-            <div class="flex-shrink-0 mt-1">
-              <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
-                <svg class="w-5 h-5" style="color: #973131;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-              </div>
+          <!-- Right Images Column -->
+          <div class="lg:w-1/4 space-y-6">
+            <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
+              <img src="@/../images/close-up-baker-bakery-shop.jpg" alt="Bakery Shop" class="w-full h-auto object-cover aspect-square" />
             </div>
-            <div>
-              <h3 class="text-xl font-bold mb-2 text-gray-800">Customized menu setup and initial programming</h3>
-              <p class="text-gray-600">Tailored to your specific business needs and workflow</p>
-            </div>
-          </div>
-          
-          <!-- Item 4 -->
-          <div class="flex items-start space-x-4 scroll-reveal">
-            <div class="flex-shrink-0 mt-1">
-              <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
-                <svg class="w-5 h-5" style="color: #973131;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-              </div>
-            </div>
-            <div>
-              <h3 class="text-xl font-bold mb-2 text-gray-800">Loyalty program pre-installed</h3>
-              <p class="text-gray-600">Start building customer relationships and repeat business from day one</p>
-            </div>
-          </div>
-          
-          <!-- Item 5 -->
-          <div class="flex items-start space-x-4 scroll-reveal">
-            <div class="flex-shrink-0 mt-1">
-              <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
-                <svg class="w-5 h-5" style="color: #973131;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-              </div>
-            </div>
-            <div>
-              <h3 class="text-xl font-bold mb-2 text-gray-800">Secure cloud backup and remote access</h3>
-              <p class="text-gray-600">Manage your business from anywhere with real-time data access</p>
-            </div>
-          </div>
-          
-          <!-- Item 6 -->
-          <div class="flex items-start space-x-4 scroll-reveal">
-            <div class="flex-shrink-0 mt-1">
-              <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
-                <svg class="w-5 h-5" style="color: #973131;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-              </div>
-            </div>
-            <div>
-              <h3 class="text-xl font-bold mb-2 text-gray-800">Live U.S.-based onboarding and support</h3>
-              <p class="text-gray-600">Expert assistance whenever you need it, from setup to daily operations</p>
+            <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
+              <img src="@/../images/Online Ordering.png" alt="Online Ordering" class="w-full h-auto object-cover aspect-square" />
             </div>
           </div>
         </div>

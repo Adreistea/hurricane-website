@@ -336,7 +336,7 @@ import MainLayout from './MainLayout.vue';
 import lightbox from './lightbox.vue'; // Import the lightbox component
 
 // Import the image using Vue's import mechanism
-const webPicImg = new URL('@/../images/webpic.png', import.meta.url).href;
+const webPicImg = new URL('@/../images/Online order-01.jpg', import.meta.url).href;
 const webPic2Img = new URL('@/../images/webpic2.png', import.meta.url).href;
 
 // Add these for lightbox functionality
