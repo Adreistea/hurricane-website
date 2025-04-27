@@ -15,7 +15,7 @@
       <div class="container mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-8">Apply to Become an Agent</h2>
         <div class="bg-white rounded-lg shadow-lg p-6 mb-12">
-          <div class="relative" style="height: 700px;">
+          <div class="relative w-full" style="height: 6000px;">
             <!-- Loading message shown until iframe loads -->
             <div class="flex flex-col items-center justify-center absolute inset-0 bg-white" v-if="isLoading">
               <div class="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mb-4"></div>
@@ -23,11 +23,13 @@
             </div>
             <!-- iframe with the application form -->
             <iframe 
-              src="https://crm.hurricanepayments.com/apply" 
+              src="https://crm.hurricanepayments.com/apply"
               class="w-full h-full rounded-md"
               @load="isLoading = false"
               frameborder="0"
+              scrolling="no"
               title="Agent Application Form"
+              style="overflow: hidden;"
             ></iframe>
           </div>
         </div>
@@ -83,10 +85,24 @@ const isLoading = ref(true);
 </script>
 
 <style scoped>
-/* Optional: Add styles to ensure iframe displays properly */
+/* Ensure iframe displays properly without scrollbars */
 iframe {
-  min-height: 700px;
+  min-height: 1200px;
+  height: 100%;
+  width: 100%;
   border: none;
   transition: opacity 0.3s ease;
+  overflow: hidden;
+}
+
+/* Make iframe container responsive */
+.relative {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .relative {
+    height: 1500px !important; /* Increase height on mobile to prevent scrolling */
+  }
 }
 </style>

@@ -18,12 +18,13 @@
         
         <!-- Embedded iframe for the partnership application form -->
         <div class="max-w-6xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
-          <div class="relative" style="padding-bottom: 75%;">
+          <div class="relative" style="height: 1590px;">
             <iframe 
               src="https://crm.hurricanepayments.com/inquiries#partnership" 
-              class="absolute top-0 left-0 w-full h-full"
-              style="min-height: 1000px;"
+              class="w-full h-full"
               frameborder="0"
+              scrolling="no"
+              style="overflow: hidden;"
             ></iframe>
           </div>
         </div>
@@ -121,3 +122,26 @@
 <script setup>
 import MainLayout from './MainLayout.vue';
 </script>
+
+<style scoped>
+/* Ensure iframe displays properly without scrollbars */
+iframe {
+  min-height: 6000px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  transition: opacity 0.3s ease;
+  overflow: hidden;
+}
+
+/* Make iframe container responsive */
+.relative {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .relative {
+    height: 6500px !important; /* Increase height on mobile to prevent scrolling */
+  }
+}
+</style>

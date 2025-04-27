@@ -2,10 +2,16 @@
 
 use App\Http\Controllers\ConsultationRequestController;
 use App\Http\Controllers\LightboxController;
+use App\Http\Controllers\PartnershipRequestController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 // Consultation Request API routes
 Route::post('/consultation-requests', [ConsultationRequestController::class, 'store'])
+    ->withoutMiddleware(\App\Http\Middleware\VerifyCsrfToken::class);
+
+// Partnership Request API route
+Route::post('/partnership-requests', [PartnershipRequestController::class, 'store'])
     ->withoutMiddleware(\App\Http\Middleware\VerifyCsrfToken::class);
 
 // Lightbox API routes

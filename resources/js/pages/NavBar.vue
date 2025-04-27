@@ -390,7 +390,7 @@
               <div class="dropdown-section">
                 <h3 class="section-title">Integration Partners</h3>
                 <div class="menu-items">
-                  <router-link to="/payment-partnerships" class="menu-item-link">
+                  <router-link to="/partnership-forms" class="menu-item-link">
                     <div class="top-row">
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
@@ -505,7 +505,7 @@
         </button>
         <div v-if="activeMobileSubmenu === 'partnerships'" class="pl-4 mt-2 space-y-2">
           <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">Agents</a>
-          <router-link to="/payment-partnerships" class="block py-1 text-gray-600 hover:text-indigo-600">Payment Partnerships</router-link>
+          <router-link to="/partnership-forms" class="block py-1 text-gray-600 hover:text-indigo-600">Payment Partnerships</router-link>
           <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">POS Reseller</a>
         </div>
       </div>

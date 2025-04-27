@@ -1,6 +1,6 @@
 import './bootstrap';
 import { createApp } from 'vue';
-import { createRouter, createWebHashHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import Home from './pages/home/home.vue';
 import RequestConsultation from './pages/Request_Consultation.vue';
 import VCalendar from 'v-calendar';
@@ -8,7 +8,7 @@ import 'v-calendar/style.css';
 
 // Create the router
 const router = createRouter({
-    history: createWebHashHistory(),
+    history: createWebHistory(),
     routes: [
         {
             path: '/',
@@ -194,6 +194,11 @@ const router = createRouter({
             path: '/dual-pricing-dealership',
             name: 'DualPricingDealership',
             component: () => import('./pages/DualPricingDealership.vue')
+        },
+        {
+            path: '/partnership-forms',
+            name: 'PartnershipForms',
+            component: () => import('./pages/PartnershipForms.vue')
         }
     ],
     scrollBehavior(to, from, savedPosition) {
