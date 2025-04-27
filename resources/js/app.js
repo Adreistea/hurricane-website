@@ -199,6 +199,11 @@ const router = createRouter({
             path: '/partnership-forms',
             name: 'PartnershipForms',
             component: () => import('./pages/PartnershipForms.vue')
+        },
+        {
+            path: '/all-industries',
+            name: 'AllIndustries',
+            component: () => import('./pages/All_Industries.vue')
         }
     ],
     scrollBehavior(to, from, savedPosition) {

@@ -93,6 +93,57 @@
             </div>
           </div>
         </div>
+        
+        <!-- Standalone Image Section -->
+        <div class="mt-16 scroll-reveal opacity-0" data-delay="600">
+          <div class="solutions-container relative rounded-3xl border border-gray-300 bg-white p-6 md:p-12">
+            <!-- Decorative elements -->
+            <div class="absolute -z-10 inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl transform rotate-1 translate-x-4 translate-y-4"></div>
+            <div class="absolute -z-20 inset-0 bg-gradient-to-r from-red-50 to-rose-50 rounded-3xl transform -rotate-1 translate-x-6 translate-y-6"></div>
+            
+            <!-- Main image container -->
+            <div class="relative bg-white p-4 rounded-3xl shadow-xl overflow-hidden">
+              <div class="flex flex-col md:flex-row">
+                <!-- Image -->
+                <div class="md:w-3/5 relative">
+                  <img 
+                    src="@/../images/Company Introduction-051822-images-9.jpg" 
+                    alt="Hurricane Payments Retail Solutions" 
+                    class="w-full h-auto object-cover rounded-xl"
+                    onerror="this.onerror=null; this.src='@/../images/TransparentLogo.png';" 
+                  />
+                </div>
+                
+                <!-- Text Content -->
+                <div class="md:w-2/5 p-4 md:p-8 flex flex-col justify-center relative overflow-hidden">
+                  <!-- Pattern Background -->
+                  <div class="absolute inset-0 opacity-10 pointer-events-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100" fill="none">
+                      <pattern id="grid-pattern" patternUnits="userSpaceOnUse" width="20" height="20" patternTransform="rotate(45)">
+                        <rect width="1" height="1" fill="#333333" x="0" y="0" />
+                      </pattern>
+                      <rect width="100%" height="100%" fill="url(#grid-pattern)" />
+                    </svg>
+                  </div>
+                  
+                  <!-- Gradient Overlay -->
+                  <div class="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 opacity-90"></div>
+                  
+                  <!-- Content -->
+                  <div class="relative z-10">
+                    <div class="w-12 h-1 bg-red-800 mb-4 rounded-full"></div>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4" style="color: #973131;">
+                      Simplify Your Retail Operations
+                    </h3>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                      Our integrated payment solutions help retailers focus on growing their business while we handle the complexities of payment processing.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     
@@ -104,7 +155,7 @@
           <div class="w-32 h-1 bg-gray-300 mx-auto"></div>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        <div class="benefits-container relative rounded-3xl p-6 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           <!-- Left Column -->
           <div class="space-y-8">
             <!-- Benefit 1 -->
@@ -393,6 +444,35 @@ onMounted(() => {
 </script>
 
 <style scoped>
+/* Add these font imports at the top of your style section */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+
+/* Apply font families to elements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+p, a, span, blockquote, li {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Refine heading styles */
+h1 {
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h2 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h3 {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
 /* Base animations */
 .scroll-reveal {
   transform: translateY(20px);
@@ -460,6 +540,96 @@ onMounted(() => {
 }
 
 .card-reveal.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Circle pattern background */
+.solutions-container, .benefits-container {
+  position: relative;
+}
+
+.solutions-container::before, .benefits-container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#973131 1px, transparent 1px), 
+                    radial-gradient(#973131 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  opacity: 0.05;
+  z-index: -1;
+}
+
+/* Enhanced hover effects */
+.solution-card {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              box-shadow 0.3s ease;
+  background: linear-gradient(
+    145deg, 
+    rgba(255, 255, 255, 1) 0%, 
+    rgba(249, 250, 251, 1) 100%
+  );
+}
+
+.solution-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 
+              0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Benefits container styling */
+.benefits-container {
+  background-color: #f8f9fa;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Image decorative backgrounds */
+.image-background {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.bg-gradient {
+  background: linear-gradient(45deg, rgba(151, 49, 49, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+}
+
+.image-circle-pattern {
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(151, 49, 49, 0.15) 0%, rgba(151, 49, 49, 0.15) 5%, transparent 5%),
+    radial-gradient(circle at 30% 70%, rgba(151, 49, 49, 0.1) 0%, rgba(151, 49, 49, 0.1) 5%, transparent 5%),
+    radial-gradient(circle at 70% 10%, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.1) 5%, transparent 5%),
+    radial-gradient(circle at 90% 40%, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0.15) 5%, transparent 5%),
+    radial-gradient(circle at 50% 50%, rgba(151, 49, 49, 0.1) 0%, rgba(151, 49, 49, 0.1) 5%, transparent 5%),
+    radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.1) 5%, transparent 5%);
+  background-size: 120px 120px;
+  animation: pulse-pattern 8s ease infinite alternate;
+}
+
+@keyframes pulse-pattern {
+  0% {
+    background-size: 120px 120px;
+    opacity: 0.7;
+  }
+  100% {
+    background-size: 140px 140px;
+    opacity: 0.9;
+  }
+}
+
+.showcase-item:hover .image-background {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation for scroll reveal */
+.scroll-reveal {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(20px);
+}
+
+.scroll-reveal.active {
   opacity: 1;
   transform: translateY(0);
 }

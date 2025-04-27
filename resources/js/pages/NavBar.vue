@@ -349,6 +349,16 @@
                 </div>
               </div>
             </div>
+            
+            <!-- View All Industries Link -->
+            <div class="flex justify-center mt-6 mb-2">
+              <router-link to="/all-industries" class="view-all-link flex items-center text-red-800 hover:text-red-600 font-semibold transition duration-300">
+                <span>View all industries</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </router-link>
+            </div>
           </div>
         </div>
         
@@ -495,6 +505,7 @@
           <router-link to="/professional-services" class="block py-1 text-gray-600 hover:text-indigo-600">Professional Services</router-link>
           <router-link to="/skill-trade" class="block py-1 text-gray-600 hover:text-indigo-600">Skilled Trade Services</router-link>
           <router-link to="/specialty-business" class="block py-1 text-gray-600 hover:text-indigo-600">Specialty Businesses</router-link>
+          <router-link to="/all-industries" class="block py-2 mt-2 text-red-800 font-semibold hover:text-red-600 border-t border-gray-200 pt-3">View all industries</router-link>
         </div>
       </div>
       
