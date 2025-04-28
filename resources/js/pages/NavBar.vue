@@ -517,7 +517,7 @@
         <div v-if="activeMobileSubmenu === 'partnerships'" class="pl-4 mt-2 space-y-2">
           <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">Agents</a>
           <router-link to="/partnership-forms" class="block py-1 text-gray-600 hover:text-indigo-600">Payment Partnerships</router-link>
-          <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">POS Reseller</a>
+          <router-link to="/pos-reseller" class="block py-1 text-gray-600 hover:text-indigo-600">POS Reseller</router-link>
         </div>
       </div>
       

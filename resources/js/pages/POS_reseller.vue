@@ -22,6 +22,20 @@
           <p class="text-lg text-gray-600 mt-4">
             Hurricane Payments understands the challenges you and your customers face every day, and we're here to help! Our POS Reseller Program offers intuitive, affordable, and powerful point of sale solutions to help your customers reach their full potential across the nation. Plus, our unparalleled 24/7/365 live customer support team is always here to help and answer any questions you or your customers may have.
           </p>
+          
+          <!-- Add button here -->
+          <div class="mt-8">
+            <router-link 
+              to="/partnership-forms/reseller" 
+              class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-bold rounded-xl shadow-lg text-white bg-gradient-to-r from-[#dc2626] to-[#991b1b] hover:from-[#991b1b] hover:to-[#dc2626] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-all duration-300 relative overflow-hidden"
+            >
+              Be a POS Reseller Now!
+              <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+              <span class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
+            </router-link>
+          </div>
         </div>
       </div>
       
@@ -228,7 +242,7 @@
           <div class="lg:w-3/5">
             <h2 class="text-3xl md:text-4xl font-bold mb-6 scroll-reveal opacity-0" style="color: #973131;">Your Success is Our Priority</h2>
             <p class="text-lg text-gray-700 mb-8 scroll-reveal opacity-0" data-delay="100">
-              At Electronic Merchant Systems, we're committed to helping you grow your POS reseller business. Our team works alongside you to ensure your clients receive the best point of sale solutions tailored to their specific industry needs. With our comprehensive training, dedicated support, and competitive compensation structure, you'll have everything you need to succeed in today's competitive market.
+              At Hurricane Payments, we're committed to helping you grow your POS reseller business. Our team works alongside you to ensure your clients receive the best point of sale solutions tailored to their specific industry needs. With our comprehensive training, dedicated support, and competitive compensation structure, you'll have everything you need to succeed in today's competitive market.
             </p>
             <p class="text-lg text-gray-700 mb-8 scroll-reveal opacity-0" data-delay="200">
               When you partner with us, you're not just getting a supplier - you're gaining a true business partner invested in your long-term success. Join our network of successful POS resellers and discover how we can help take your business to the next level.
