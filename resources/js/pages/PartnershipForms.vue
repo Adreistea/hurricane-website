@@ -334,6 +334,7 @@
 <script>
 import MainLayout from './MainLayout.vue';
 import axios from 'axios';
+import { useRoute, useRouter } from 'vue-router';
 
 export default {
   name: 'PartnershipForms',
@@ -345,6 +346,11 @@ export default {
       type: Object,
       default: () => ({})
     }
+  },
+  setup() {
+    const route = useRoute();
+    const router = useRouter();
+    return { route, router };
   },
   data() {
     return {
@@ -367,17 +373,19 @@ export default {
     }
   },
   created() {
-    // Check if a partnership type is in the URL hash when the component is created
-    this.checkUrlHash();
-    
-    // Listen for hash changes and update the form accordingly
-    window.addEventListener('hashchange', this.checkUrlHash);
-  },
-  beforeUnmount() {
-    // Remove the event listener when the component is unmounted
-    window.removeEventListener('hashchange', this.checkUrlHash);
+    // Check if a partnership type is in the URL when the component is created
+    this.checkUrlType();
   },
   watch: {
+    // Watch for route changes
+    '$route.params.type': {
+      handler(newType) {
+        if (newType) {
+          this.checkUrlType();
+        }
+      },
+      immediate: true
+    },
     form: {
       handler(newVal) {
         this.$emit('update:modelValue', newVal);
@@ -386,7 +394,6 @@ export default {
     },
     modelValue: {
       handler(newVal) {
-        // Prevent recursive updates by checking if values are different
         if (JSON.stringify(this.form) !== JSON.stringify(newVal)) {
           this.form = { ...newVal };
         }
@@ -395,32 +402,25 @@ export default {
     }
   },
   methods: {
-    checkUrlHash() {
-      // Get the path from the URL
-      const path = window.location.pathname;
-      
-      // Check if the path contains a partnership type
-      // The path should be like /partnership-forms/reseller
-      const match = path.match(/\/partnership-forms\/([^\/]+)/);
-      
-      if (match && match[1]) {
-        const type = match[1];
-        
-        // Check if the type corresponds to a valid partnership type
+    checkUrlType() {
+      const type = this.route.params.type;
+      if (type) {
         const validTypes = ['reseller', 'referral', 'integration', 'iso', 'agency', 'bank', 'other'];
-        
         if (validTypes.includes(type)) {
-          // Update the form with the partnership type from the URL
           this.form.partnershipType = type;
           this.partnershipTypeSelected = true;
           
-          // Scroll to the form after a short delay to ensure the component is rendered
-          setTimeout(() => {
-            document.querySelector('.form-header')?.scrollIntoView({ 
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }, 500);
+          this.$nextTick(() => {
+            setTimeout(() => {
+              const formHeader = document.querySelector('.form-header');
+              if (formHeader) {
+                formHeader.scrollIntoView({ 
+                  behavior: 'smooth',
+                  block: 'start'
+                });
+              }
+            }, 100);
+          });
         }
       }
     },
@@ -479,7 +479,7 @@ Referral Source: ${this.form.referralSource}
       this.partnershipTypeSelected = false;
       
       // Remove any partnership type from the URL
-      window.history.pushState(null, null, '/partnership-forms');
+      this.router.push('/partnership-forms');
       
       // Scroll to top to show success message
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -488,40 +488,25 @@ Referral Source: ${this.form.referralSource}
       this.form.partnershipType = type;
       this.partnershipTypeSelected = true;
       
-      // Update the URL without triggering a page reload
-      const currentPath = window.location.pathname;
-      const newPath = `/partnership-forms/${type}`;
+      // Use router to update the URL
+      this.router.push(`/partnership-forms/${type}`);
       
-      if (currentPath !== newPath) {
-        window.history.pushState(null, null, newPath);
-      }
-      
-      // Wait for Vue to update the DOM before scrolling
       this.$nextTick(() => {
-        // Add a small delay to ensure DOM is fully rendered
         setTimeout(() => {
-          // Determine if we're on mobile
           const isMobile = window.innerWidth < 768;
-          
-          // Get the form element
           const formElement = document.querySelector('form');
           
           if (formElement) {
-            // On mobile, add more offset to account for the fixed header
             const offset = isMobile ? -80 : -20;
-            
-            // Calculate the element's position relative to the viewport
             const rect = formElement.getBoundingClientRect();
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             const targetPosition = rect.top + scrollTop + offset;
             
-            // Smooth scroll to the form
             window.scrollTo({
               top: targetPosition,
               behavior: 'smooth'
             });
           } else {
-            // Fallback - try to find the form header
             const formHeader = document.querySelector('.form-header');
             if (formHeader) {
               formHeader.scrollIntoView({ 
@@ -529,7 +514,6 @@ Referral Source: ${this.form.referralSource}
                 block: 'start'
               });
             } else {
-              // Last resort fallback - scroll a fixed amount
               const scrollAmount = isMobile ? 500 : 400;
               window.scrollTo({
                 top: scrollAmount,
@@ -537,7 +521,7 @@ Referral Source: ${this.form.referralSource}
               });
             }
           }
-        }, 100); // 100ms delay
+        }, 100);
       });
     },
     async submitForm() {
@@ -584,7 +568,7 @@ Referral Source: ${this.form.referralSource}
         this.partnershipTypeSelected = false;
         
         // Remove any partnership type from the URL
-        window.history.pushState(null, null, '/partnership-forms');
+        this.router.push('/partnership-forms');
         
         // Scroll to top to show success message
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -627,10 +611,9 @@ Referral Source: ${this.form.referralSource}
       this.partnershipTypeSelected = false;
       this.form.partnershipType = '';
       
-      // Remove any partnership type from the URL
-      window.history.pushState(null, null, '/partnership-forms');
+      // Use router to update the URL
+      this.router.push('/partnership-forms');
       
-      // Scroll to the partnership type selection section
       document.querySelector('.partnership-types-container').scrollIntoView({ 
         behavior: 'smooth',
         block: 'start'

@@ -201,6 +201,11 @@ const router = createRouter({
             component: () => import('./pages/PartnershipForms.vue')
         },
         {
+            path: '/partnership-forms/:type',
+            name: 'PartnershipFormsType',
+            component: () => import('./pages/PartnershipForms.vue')
+        },
+        {
             path: '/all-industries',
             name: 'AllIndustries',
             component: () => import('./pages/All_Industries.vue')
