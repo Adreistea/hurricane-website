@@ -417,6 +417,23 @@
                     </div>
                     <span class="link-desc">Integrate our payment solutions</span>
                   </router-link>
+                  <router-link to="/merchant-onboarding" class="menu-item-link">
+                    <div class="top-row">
+                      <div class="icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                          <defs>
+                            <linearGradient id="onboardingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" stop-color="#fb7185" />
+                              <stop offset="100%" stop-color="#f43f5e" />
+                            </linearGradient>
+                          </defs>
+                          <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z" fill="url(#onboardingGradient)"/>
+                        </svg>
+                      </div>
+                      <span class="link-title">Merchant Onboarding</span>
+                    </div>
+                    <span class="link-desc">Streamlined merchant setup</span>
+                  </router-link>
                 </div>
               </div>
               
@@ -517,6 +534,7 @@
         <div v-if="activeMobileSubmenu === 'partnerships'" class="pl-4 mt-2 space-y-2">
           <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">Agents</a>
           <router-link to="/partnership-forms" class="block py-1 text-gray-600 hover:text-indigo-600">Payment Partnerships</router-link>
+          <router-link to="/merchant-onboarding" class="block py-1 text-gray-600 hover:text-indigo-600">Merchant Onboarding</router-link>
           <router-link to="/pos-reseller" class="block py-1 text-gray-600 hover:text-indigo-600">POS Reseller</router-link>
         </div>
       </div>

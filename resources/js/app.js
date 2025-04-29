@@ -209,6 +209,11 @@ const router = createRouter({
             path: '/all-industries',
             name: 'AllIndustries',
             component: () => import('./pages/All_Industries.vue')
+        },
+        {
+            path: '/merchant-onboarding',
+            name: 'MerchantOnboarding',
+            component: () => import('./pages/Merchant_Onboarding.vue')
         }
     ],
     scrollBehavior(to, from, savedPosition) {
