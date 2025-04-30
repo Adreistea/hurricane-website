@@ -1136,110 +1136,272 @@
                     </p>
                     
                     <!-- Conversational Question Tree -->
-                    <div class="space-y-8">
-                      <!-- Question 1 -->
+                    <div class="space-y-12">
+                      <!-- Question 1 - Current POS System -->
                       <div>
-                        <h4 class="text-lg font-bold text-gray-800 mb-3">What hardware components do you need?</h4>
-                        <p class="text-gray-600 mb-4">Select all that apply</p>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">Do you currently use a POS system?</h4>
+                        <p class="text-gray-600 mb-4">Understanding your current setup helps us provide the best solution</p>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div 
+                            v-for="option in [
+                              'Yes, but it\'s outdated.',
+                              'Yes, but it\'s slow or crashes often.',
+                              'No, we\'re still using manual receipts/cash register.',
+                              'We use tablets or apps, not a full POS.',
+                              'We use one, but it doesn\'t support online orders.'
+                            ]" 
+                            :key="option"
+                            @click="form.current_pos_status = option"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
+                            :class="form.current_pos_status === option ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="flex items-center">
+                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
+                                :class="form.current_pos_status === option ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              >
+                                <div v-if="form.current_pos_status === option" class="w-3 h-3 rounded-full bg-white"></div>
+                              </div>
+                              <div class="font-medium">{{ option }}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Question 2 - Current Issues -->
+                      <div v-if="form.current_pos_status">
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">What issues or limitations have you experienced with your current system?</h4>
+                        <p class="text-gray-600 mb-4">Select all that apply to your business</p>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                           <div 
-                            v-for="component in hardwareComponents" 
-                            :key="component.name"
-                            @click="toggleHardwareComponent(component.name)"
+                            v-for="issue in [
+                              'It\'s too slow during peak hours.',
+                              'Receipt printing fails sometimes.',
+                              'No support for QR ordering or credit cards.',
+                              'Staff find it hard to use or train on.',
+                              'Doesn\'t integrate online and dine-in orders well.',
+                              'No customer review or gift card system.'
+                            ]" 
+                            :key="issue"
+                            @click="toggleIssue(issue)"
                             class="border rounded-lg px-4 py-3 cursor-pointer transition-all flex items-center"
-                            :class="form.selected_hardware.includes(component.name) ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                            :class="form.current_system_issues.includes(issue) ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
                           >
                             <div class="w-5 h-5 rounded border mr-3 flex items-center justify-center"
-                              :class="form.selected_hardware.includes(component.name) ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              :class="form.current_system_issues.includes(issue) ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
                             >
-                              <svg v-if="form.selected_hardware.includes(component.name)" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                              <svg v-if="form.current_system_issues.includes(issue)" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
                               </svg>
                             </div>
-                            <div class="flex-grow">
-                              <div class="font-medium">{{ component.name }}</div>
-                              <div class="text-sm text-gray-500">{{ component.description }}</div>
-                            </div>
-                            <div class="flex-shrink-0 text-gray-700 font-medium">
-                              {{ component.quantity }}
-                            </div>
+                            <div class="font-medium">{{ issue }}</div>
                           </div>
                         </div>
                       </div>
                       
-                      <!-- Question 2 - Marketing Tools -->
-                      <div>
-                        <h4 class="text-lg font-bold text-gray-800 mb-3">What marketing tools would you like to include?</h4>
-                        <p class="text-gray-600 mb-4">Select all that apply</p>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                      <!-- Question 3 - Order Management -->
+                      <div v-if="form.current_system_issues.length > 0">
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">How do you currently manage dine-in, takeout, or online orders?</h4>
+                        <p class="text-gray-600 mb-4">Understanding your order flow helps us optimize your system</p>
+                        <div class="grid grid-cols-1 gap-3">
                           <div 
-                            v-for="tool in marketingTools" 
-                            :key="tool.name"
-                            @click="toggleMarketingTool(tool.name)"
-                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all flex items-center"
-                            :class="form.selected_marketing_tools.includes(tool.name) ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                            v-for="method in [
+                              'Everything is manual or through separate systems.',
+                              'We use messaging apps or call-ins.',
+                              'We accept orders through Facebook but it\'s disorganized.',
+                              'Online orders confuse our kitchen staff.',
+                              'Customers have to wait long due to missing automation.'
+                            ]" 
+                            :key="method"
+                            @click="form.order_management_method = method"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
+                            :class="form.order_management_method === method ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
                           >
-                            <div class="w-5 h-5 rounded border mr-3 flex items-center justify-center"
-                              :class="form.selected_marketing_tools.includes(tool.name) ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
-                            >
-                              <svg v-if="form.selected_marketing_tools.includes(tool.name)" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                              </svg>
-                            </div>
-                            <div class="flex-grow">
-                              <div class="font-medium">{{ tool.name }}</div>
-                              <div class="text-sm text-gray-500">{{ tool.description }}</div>
-                            </div>
-                            <div class="flex-shrink-0 text-gray-700 font-medium">
-                              {{ tool.quantity }}
+                            <div class="flex items-center">
+                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
+                                :class="form.order_management_method === method ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              >
+                                <div v-if="form.order_management_method === method" class="w-3 h-3 rounded-full bg-white"></div>
+                              </div>
+                              <div class="font-medium">{{ method }}</div>
                             </div>
                           </div>
                         </div>
                       </div>
                       
-                      <!-- Question 3 - Setup Services -->
-                      <div>
-                        <h4 class="text-lg font-bold text-gray-800 mb-3">What setup services do you need?</h4>
-                        <p class="text-gray-600 mb-4">All services included in the Value Hardware Bundle</p>
-                        <div class="bg-gray-50 rounded-lg border border-gray-200 p-5">
-                          <div class="space-y-3">
-                            <div v-for="service in setupServices" :key="service" class="flex items-center">
-                              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-3" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                              </svg>
-                              <span class="text-gray-700">{{ service }}</span>
+                      <!-- Question 4 - Customer Engagement Tools -->
+                      <div v-if="form.order_management_method">
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">What tools do you use to engage with customers—like feedback, loyalty, or gift cards?</h4>
+                        <p class="text-gray-600 mb-4">Customer engagement can significantly increase repeat business</p>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div 
+                            v-for="tool in [
+                              'We don\'t really use any.',
+                              'Just basic comment cards.',
+                              'Customers don\'t really leave reviews.',
+                              'We tried gift cards but had no system to track them.',
+                              'We use social media, but it\'s not consistent.'
+                            ]" 
+                            :key="tool"
+                            @click="form.customer_engagement_tools = tool"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
+                            :class="form.customer_engagement_tools === tool ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="flex items-center">
+                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
+                                :class="form.customer_engagement_tools === tool ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              >
+                                <div v-if="form.customer_engagement_tools === tool" class="w-3 h-3 rounded-full bg-white"></div>
+                              </div>
+                              <div class="font-medium">{{ tool }}</div>
                             </div>
                           </div>
                         </div>
                       </div>
                       
-                      <!-- Question 4 - Warranty Information -->
-                      <div>
-                        <h4 class="text-lg font-bold text-gray-800 mb-3">Warranty Information</h4>
-                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-5">
-                          <p class="text-blue-800">
-                            <span class="font-medium">Hardware Warranty:</span> 2nd day replacement for Front of House equipment and Server Replacement next business day in most cases.
-                          </p>
+                      <!-- Question 5 - Staff Confidence -->
+                      <div v-if="form.customer_engagement_tools">
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">How confident are your staff using your current system, especially during rush hours?</h4>
+                        <p class="text-gray-600 mb-4">An intuitive system can reduce training time and staff errors</p>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div 
+                            v-for="confidence in [
+                              'They still ask a lot of questions.',
+                              'New staff always need days of training.',
+                              'Some staff only use it partially.',
+                              'We don\'t have time to train them fully.',
+                              'It\'s okay, but not efficient.'
+                            ]" 
+                            :key="confidence"
+                            @click="form.staff_confidence = confidence"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
+                            :class="form.staff_confidence === confidence ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="flex items-center">
+                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
+                                :class="form.staff_confidence === confidence ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              >
+                                <div v-if="form.staff_confidence === confidence" class="w-3 h-3 rounded-full bg-white"></div>
+                              </div>
+                              <div class="font-medium">{{ confidence }}</div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                       
-                      <!-- Value Bundle Special Offer -->
-                      <div class="bg-gradient-to-r from-red-100 to-yellow-50 rounded-lg border border-yellow-200 p-5">
+                      <!-- Question 6 - Technical Support -->
+                      <div v-if="form.staff_confidence">
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">How do you handle technical issues or broken hardware?</h4>
+                        <p class="text-gray-600 mb-4">Downtime can significantly impact your business revenue</p>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div 
+                            v-for="support in [
+                              'We wait days for a technician.',
+                              'No local support, we DIY everything.',
+                              'Replacing parts is expensive and slow.',
+                              'We lose sales when printers go down.',
+                              'No warranty, just buy new when broken.'
+                            ]" 
+                            :key="support"
+                            @click="form.technical_support = support"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
+                            :class="form.technical_support === support ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="flex items-center">
+                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
+                                :class="form.technical_support === support ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              >
+                                <div v-if="form.technical_support === support" class="w-3 h-3 rounded-full bg-white"></div>
+                              </div>
+                              <div class="font-medium">{{ support }}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Question 7 - Complete Solution -->
+                      <div v-if="form.technical_support">
+                        <h4 class="text-xl font-bold text-gray-800 mb-3">Would it help if you had a full solution that included: a local server, POS station, printer, credit card pinpad, QR ordering, marketing tools, and professional setup — all in one affordable package?</h4>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div 
+                            v-for="response in [
+                              'That would make a huge difference.',
+                              'We\'ve been looking for something like that.',
+                              'Only if the cost is manageable.',
+                              'Yes, but we\'d need support and training.',
+                              'That sounds like what we actually need.'
+                            ]" 
+                            :key="response"
+                            @click="selectCompleteSolution(response)"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
+                            :class="form.complete_solution_response === response ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="flex items-center">
+                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
+                                :class="form.complete_solution_response === response ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              >
+                                <div v-if="form.complete_solution_response === response" class="w-3 h-3 rounded-full bg-white"></div>
+                              </div>
+                              <div class="font-medium">{{ response }}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Custom Bundle Offer (appears after complete solution answer) -->
+                      <div v-if="form.complete_solution_response" class="bg-gradient-to-r from-red-100 to-yellow-50 rounded-lg border border-yellow-200 p-5">
                         <div class="flex flex-col md:flex-row items-start md:items-center">
                           <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-4">
                             <div class="bg-yellow-400 transform -rotate-12 px-3 py-1 text-lg font-bold uppercase tracking-wide text-red-900 inline-block">
-                              Open Box Deal
+                              Special Offer
                             </div>
                           </div>
                           <div class="flex-grow">
-                            <h3 class="text-xl font-bold text-red-800 mb-1">Value Hardware Bundle</h3>
+                            <h3 class="text-xl font-bold text-red-800 mb-1">Complete POS Solution Package</h3>
                             <div class="flex items-baseline mb-2">
                               <span class="text-2xl font-bold text-gray-900">$999.00</span>
                               <span class="ml-2 text-red-600 line-through text-lg">$2,388.00</span>
                               <span class="ml-2 text-gray-500">or $49/Month</span>
                             </div>
-                            <p class="text-gray-700">
-                              Complete POS solution with all the hardware and marketing tools you need to get started.
+                            <ul class="text-gray-700 space-y-1 mb-2">
+                              <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>High-Performance Local Server</span>
+                              </li>
+                              <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>15" Touchscreen POS Terminal</span>
+                              </li>
+                              <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Thermal Receipt Printer & Credit Card Reader</span>
+                              </li>
+                              <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>QR Code Ordering System + Marketing Tools</span>
+                              </li>
+                              <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Professional Installation & Staff Training</span>
+                              </li>
+                              <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>2-Day Hardware Replacement Warranty</span>
+                              </li>
+                            </ul>
+                            <p class="text-gray-700 text-sm">
+                              Complete POS solution with all the hardware and marketing tools you need to get started - plus 0% credit card processing with Hurricane Pay.
                             </p>
                           </div>
                           <div class="flex-shrink-0 mt-4 md:mt-0 md:ml-4">
@@ -1258,11 +1420,11 @@
                 </div>
                 
                 <!-- Recommendation based on answers - Shows only if all questions are answered -->
-                <div v-if="form.tech_comfort" class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border border-blue-100 p-6 mb-8">
+                <div v-if="form.complete_solution_response" class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border border-blue-100 p-6 mb-8">
                   <h4 class="text-xl font-bold text-blue-800 mb-3">Our Recommendation</h4>
                   <p class="text-gray-700 mb-4">
                     Based on your answers, we recommend the <span class="font-semibold">{{ getRecommendedSetup() }}</span> 
-                    for your {{ form.restaurant_type }} restaurant.
+                    to address your current challenges.
                   </p>
                   <div class="bg-white rounded-lg p-4 shadow-sm">
                     <p class="text-sm text-gray-600">
@@ -1497,6 +1659,15 @@ const form = ref({
   payment_challenges: [],
   has_loyalty_program: '',
   busy_times: [],
+  
+  // New conversational tree fields
+  current_pos_status: '',
+  current_system_issues: [],
+  order_management_method: '',
+  customer_engagement_tools: '',
+  staff_confidence: '',
+  technical_support: '',
+  complete_solution_response: '',
 });
 
 // Step navigation
@@ -1796,35 +1967,12 @@ function skipToConfirmation() {
 
 // Function to get recommended setup based on answers
 function getRecommendedSetup() {
-  if (form.value.selected_value_bundle) {
-    return 'Value Hardware Bundle ($999.00)';
-  }
-  
-  if (form.value.selected_hardware.length > 0 || form.value.selected_marketing_tools.length > 0) {
-    return 'Custom Hardware Package';
-  }
-  
-  return 'Standard POS Setup';
+  return 'Complete POS Solution Package';
 }
 
 // Function to get recommendation details
 function getRecommendationDetails() {
-  if (form.value.selected_value_bundle) {
-    return 'all hardware components, marketing tools, professional installation, and comprehensive training with our special Open Box Deal pricing';
-  }
-  
-  let details = '';
-  
-  if (form.value.selected_hardware.length > 0) {
-    details += form.value.selected_hardware.join(', ');
-  }
-  
-  if (form.value.selected_marketing_tools.length > 0) {
-    if (details) details += ', plus ';
-    details += form.value.selected_marketing_tools.join(', ');
-  }
-  
-  return details || 'standard POS components';
+  return 'a complete POS solution with hardware, software, professional installation, and comprehensive training - plus 0% credit card processing with Hurricane Pay.';
 }
 
 // Add new data arrays based on the image
@@ -1893,6 +2041,25 @@ function toggleHandheldFeature(feature) {
   } else {
     form.value.handheld_features.push(feature);
   }
+}
+
+// Function to toggle issue selection for current POS system
+function toggleIssue(issue) {
+  if (!form.value.current_system_issues) {
+    form.value.current_system_issues = [];
+  }
+  
+  if (form.value.current_system_issues.includes(issue)) {
+    form.value.current_system_issues = form.value.current_system_issues.filter(i => i !== issue);
+  } else {
+    form.value.current_system_issues.push(issue);
+  }
+}
+
+// Function to handle complete solution selection
+function selectCompleteSolution(response) {
+  form.value.complete_solution_response = response;
+  form.value.selected_value_bundle = true;
 }
 </script>
 
