@@ -391,735 +391,21 @@
                 </div>
               </div>
               
-              <!-- Step 3: Owner Information -->
+              <!-- Step 3: Restaurant Profile -->
               <div v-if="currentStep === 3" class="animate-fade-in">
-                <h3 class="text-2xl font-bold mb-6 text-gray-800">Owner Information</h3>
-                <p class="text-gray-600 mb-6">Please fill out information about the owner</p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                  <div>
-                    <label for="ownerFirstName" class="block text-gray-700 font-medium mb-2">Owner First Name *</label>
-                    <input 
-                      type="text" 
-                      id="ownerFirstName" 
-                      v-model="form.owner_first_name" 
-                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
-                      required
-                    >
-                  </div>
-                  
-                  <div>
-                    <label for="ownerLastName" class="block text-gray-700 font-medium mb-2">Owner Last Name *</label>
-                    <input 
-                      type="text" 
-                      id="ownerLastName" 
-                      v-model="form.owner_last_name" 
-                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
-                      required
-                    >
-                  </div>
-                  
-                  <div>
-                    <label for="title" class="block text-gray-700 font-medium mb-2">Title *</label>
-                    <input 
-                      type="text" 
-                      id="title" 
-                      v-model="form.title" 
-                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
-                      required
-                    >
-                  </div>
-                  
-                  <div>
-                    <label for="dob" class="block text-gray-700 font-medium mb-2">Date of Birth *</label>
-                    <input 
-                      type="date" 
-                      id="dob" 
-                      v-model="form.date_of_birth" 
-                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
-                      required
-                    >
-                  </div>
-                  
-                  <div>
-                    <label for="ownershipPercentage" class="block text-gray-700 font-medium mb-2">Business Ownership % *</label>
-                    <div class="relative">
-                      <input 
-                        type="number" 
-                        id="ownershipPercentage" 
-                        v-model="form.ownership_percentage" 
-                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
-                        min="0"
-                        max="100"
-                        required
-                      >
-                      <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                        <span class="text-gray-500">%</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <label for="driversLicense" class="block text-gray-700 font-medium mb-2">Driver's License *</label>
-                    <input 
-                      type="text" 
-                      id="driversLicense" 
-                      v-model="form.drivers_license" 
-                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
-                      required
-                    >
-                  </div>
-                  
-                  <div>
-                    <label for="dlState" class="block text-gray-700 font-medium mb-2">Driver's License State *</label>
-                    <select 
-                      id="dlState" 
-                      v-model="form.dl_state" 
-                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
-                      required
-                    >
-                      <option value="" disabled selected>Select state</option>
-                      <option v-for="state in usStates" :key="state.code" :value="state.code">{{ state.name }}</option>
-                    </select>
-                  </div>
-                  
-                  <div>
-                    <label for="ownerPhone" class="block text-gray-700 font-medium mb-2">Owner Phone *</label>
-                    <input 
-                      type="tel" 
-                      id="ownerPhone" 
-                      v-model="form.owner_phone" 
-                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
-                      required
-                    >
-                  </div>
-                </div>
-                
-                <h4 class="text-xl font-semibold mb-4 text-gray-800">Home Address</h4>
-                <div class="grid grid-cols-1 gap-6 mb-8">
-                  <div>
-                    <label for="homeAddressLine1" class="block text-gray-700 font-medium mb-2">Home Address Line 1 *</label>
-                    <input 
-                      type="text" 
-                      id="homeAddressLine1" 
-                      v-model="form.home_address_line1" 
-                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
-                      placeholder="Street address"
-                      required
-                    >
-                  </div>
-                  
-                  <div>
-                    <label for="homeAddressLine2" class="block text-gray-700 font-medium mb-2">Home Address Line 2 <span class="text-gray-500 text-sm font-normal">(Optional)</span></label>
-                    <input 
-                      type="text" 
-                      id="homeAddressLine2" 
-                      v-model="form.home_address_line2" 
-                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
-                      placeholder="Suite, Unit, etc."
-                    >
-                  </div>
-                  
-                  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div>
-                      <label for="city" class="block text-gray-700 font-medium mb-2">City *</label>
-                      <input 
-                        type="text" 
-                        id="city" 
-                        v-model="form.city" 
-                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
-                        required
-                      >
-                    </div>
-                    
-                    <div>
-                      <label for="homeState" class="block text-gray-700 font-medium mb-2">State *</label>
-                      <select 
-                        id="homeState" 
-                        v-model="form.home_state" 
-                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
-                        required
-                      >
-                        <option value="" disabled selected>Select state</option>
-                        <option v-for="state in usStates" :key="state.code" :value="state.code">{{ state.name }}</option>
-                      </select>
-                    </div>
-                    
-                    <div>
-                      <label for="homeZip" class="block text-gray-700 font-medium mb-2">ZIP Code *</label>
-                      <input 
-                        type="text" 
-                        id="homeZip" 
-                        v-model="form.home_zip" 
-                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
-                        required
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Step 4: Device Selection -->
-              <div v-if="currentStep === 4" class="animate-fade-in">
-                <h3 class="text-2xl font-bold mb-4 text-gray-800">Please Choose Your Device</h3>
-                <p class="text-gray-600 mb-6">
-                  Please choose your option to proceed and start saving money quickly on merchant processing fees. 
-                  We will not charge you until your account is approved.
-                </p>
-                
-                <!-- Zero-fee processing banner -->
-                <div class="mb-8 bg-gradient-to-r from-red-700 to-red-500 rounded-lg shadow-lg overflow-hidden">
-                  <div class="p-6 text-white">
-                    <div class="flex flex-col md:flex-row items-center justify-between">
-                      <div>
-                        <h4 class="text-3xl font-bold mb-2">0% Credit Card Processing</h4>
-                        <p class="text-xl mb-4">Eliminate processing fees forever!</p>
-                        <div class="mb-2 font-medium">Best fits for:</div>
-                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
-                          <li class="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-white" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            Full Service Restaurants
-                          </li>
-                          <li class="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-white" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            Counter Service Restaurant
-                          </li>
-                          <li class="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-white" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            Service Only
-                          </li>
-                          <li class="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-white" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            E-Commerce
-                          </li>
-                        </ul>
-                          </div>
-                      <div class="mt-6 md:mt-0 flex-shrink-0">
-                        <div class="bg-white text-red-600 rounded-full p-4 flex items-center justify-center h-24 w-24 font-bold text-3xl shadow-lg">
-                          0%
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Featured product card -->
-                <div class="bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden mb-8 hover:shadow-2xl transition-shadow duration-300">
-                  <div class="grid grid-cols-1 md:grid-cols-7">
-                    <!-- Product image (3 columns on md) -->
-                    <div class="md:col-span-3 bg-gradient-to-br from-gray-50 to-gray-100 p-6 flex items-center justify-center">
-                      <img src="@/../images/fourth.png" alt="Kwick 15 POS Bundle" class="h-64 object-contain">
-                    </div>
-                    
-                    <!-- Product details (4 columns on md) -->
-                    <div class="md:col-span-4 p-6 flex flex-col">
-                      <div class="mb-2">
-                        <span class="inline-block px-3 py-1 text-sm font-semibold bg-green-100 text-green-800 rounded-full">MOST POPULAR</span>
-                      </div>
-                      <h4 class="text-3xl font-bold text-gray-800 mb-4">Kwick 15" POS Bundle</h4>
-                      
-                      <div class="mb-6">
-                        <div class="flex items-center mb-4">
-                          <span class="text-4xl font-bold text-green-600">$0</span>
-                          <span class="ml-2 text-gray-500 line-through">$1,388.00</span>
-                          <span class="ml-2 bg-green-100 text-green-800 text-sm font-semibold px-2 py-1 rounded">100% OFF</span>
-                        </div>
-                        <p class="text-gray-600 mb-4">Complete POS solution with 15" touchscreen, receipt printer, and all accessories needed to run your business efficiently.</p>
-                        
-                        <div class="flex flex-wrap gap-2 mb-4">
-                          <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Easy Setup
-                          </span>
-                          <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            1-Year Warranty
-                          </span>
-                          <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            24/7 Support
-                          </span>
-                        </div>
-                      </div>
-                      
-                      <div class="mt-auto">
-                        <div class="flex flex-wrap gap-4">
-                        <button 
-                            @click="selectBundleAndProceed(featuredBundle, 'buy')"
-                            class="flex-grow md:flex-grow-0 px-6 py-3 bg-red-600 text-white font-bold rounded-md hover:bg-red-700 transition-colors shadow-md"
-                            :class="{'ring-2 ring-red-600 bg-red-700': selectedDevice === featuredBundle && selectedPaymentOption === 'buy'}"
-                            type="button"
-                          >
-                            Select This Bundle
-                        </button>
-                          <button 
-                            @click="togglePriceList"
-                            class="flex-grow md:flex-grow-0 px-6 py-3 bg-white border-2 border-red-600 text-red-600 font-bold rounded-md hover:bg-red-50 transition-colors"
-                            type="button"
-                          >
-                            View Pricelist
-                          </button>
-                      </div>
-                    </div>
-                  </div>
-                      </div>
-                          </div>
-                
-                <!-- Price list slide-down section -->
-                <div 
-                  class="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden mb-8 transition-all duration-500 ease-in-out"
-                  :class="showPriceList ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0 hidden'"
-                >
-                  <div class="p-6">
-                    <div class="flex justify-between items-center mb-6">
-                      <h3 class="text-2xl font-bold text-gray-800">Bundle Pricing</h3>
-                      <button @click="togglePriceList" class="text-gray-500 hover:text-gray-700" type="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                      </button>
-                        </div>
-                    
-                    <div class="overflow-hidden rounded-lg border border-gray-200 mb-6">
-                      <table class="w-full text-left">
-                        <thead class="bg-gray-50 border-b border-gray-200">
-                          <tr>
-                            <th class="px-4 py-3 text-sm font-semibold text-gray-700">Bundle</th>
-                            <th class="px-4 py-3 text-sm font-semibold text-gray-700 text-right">Price</th>
-                            <th class="px-4 py-3 text-sm font-semibold text-gray-700 text-center">Select</th>
-                          </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-200">
-                          <tr v-for="(price, index) in bundlePrices" :key="index" class="hover:bg-gray-50">
-                            <td class="px-4 py-4 text-sm text-gray-800 font-medium">{{ price.name }}</td>
-                            <td class="px-4 py-4 text-sm text-gray-800 text-right">{{ price.price }}</td>
-                            <td class="px-4 py-4 flex justify-center">
-                          <button 
-                                @click="selectBundleAndProceed(price.name, 'buy')"
-                                class="px-4 py-1 bg-red-600 text-white text-sm font-medium rounded-md hover:bg-red-700 transition-colors"
-                                :class="{'ring-2 ring-red-500': selectedDevice === price.name && selectedPaymentOption === 'buy'}"
-                                type="button"
-                              >
-                                Select
-                          </button>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                  
-                  <div class="px-6 py-4 bg-gray-50 border-t border-gray-200 flex justify-end">
-                          <button 
-                      @click="togglePriceList" 
-                      class="px-6 py-2 bg-gray-300 text-gray-700 font-medium rounded-md hover:bg-gray-400 transition-colors"
-                      type="button"
-                    >
-                      Cancel
-                          </button>
-                        </div>
-                </div>
-                
-                <!-- Bundle card grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-                  <!-- Bundle cards -->
-                  <div v-for="(bundle, index) in bundleOptions.slice(0, 6)" :key="index"
-                    class="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-200">
-                    <div class="p-6">
-                      <h5 class="text-lg font-bold text-gray-800 mb-3">{{ bundle.name }}</h5>
-                      <div class="mb-4">
-                        <div class="flex items-center">
-                          <span class="text-2xl font-bold text-gray-800">Bundle</span>
-                        </div>
-                      </div>
-                      <button 
-                        @click="selectDevice(bundle.name, 'buy')"
-                        class="w-full mt-2 py-2 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors"
-                        :class="{'ring-2 ring-blue-500 bg-blue-700': selectedDevice === bundle.name && selectedPaymentOption === 'buy'}"
-                      >
-                        Select
-                      </button>
-                      </div>
-                    </div>
-                  </div>
-
-                <!-- Need assistance card -->
-                <div class="bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg shadow-lg overflow-hidden mb-8">
-                  <div class="p-6 text-white">
-                    <h4 class="text-xl font-bold mb-2">Need assistance selecting the right hardware?</h4>
-                    <p class="mb-4">Our experts are ready to help you find the perfect solution for your business needs.</p>
-                      <div class="flex items-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                      </svg>
-                      <span class="font-medium">Call (888) 123-4567</span>
-                      </div>
-                          </div>
-                        </div>
-                
-                <!-- Error message if no device is selected -->
-                <div v-if="deviceSelectionError" class="text-red-600 text-center mb-6">
-                  Please select a device to continue
-                </div>
-              </div>
-              
-              <!-- Step 5: System Configuration -->
-              <div v-if="currentStep === 5" class="animate-fade-in">
-                <h3 class="text-2xl font-bold mb-6 text-gray-800">System Configuration</h3>
-                
-                <!-- Selected Product Display -->
-                <div class="mb-8 bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
-                  <div class="bg-gradient-to-r from-green-600 to-green-500 px-6 py-3">
-                    <h4 class="text-white font-bold text-lg">Your Selected Bundle</h4>
-                  </div>
-                  <div class="p-6">
-                    <div class="flex flex-col md:flex-row items-start gap-6">
-                      <!-- Product Image -->
-                      <div class="w-full md:w-1/4 flex-shrink-0 flex justify-center">
-                        <img src="@/../images/fourth.png" alt="Selected POS Bundle" class="h-32 object-contain">
-                      </div>
-                      
-                      <!-- Product Details -->
-                      <div class="flex-grow">
-                        <div class="flex items-center mb-2">
-                          <div class="flex-grow">
-                            <h5 class="text-xl font-bold text-gray-800">{{ selectedDevice }}</h5>
-                            <p class="text-gray-600 text-sm">{{ selectedPaymentOption === 'buy' ? 'Purchase' : 'Lease' }} Option</p>
-                          </div>
-                          <div class="flex-shrink-0">
-                            <span class="inline-block px-3 py-1 text-sm bg-green-100 text-green-800 font-semibold rounded-full">
-                              0% Processing Fees
-                            </span>
-                          </div>
-                        </div>
-                        
-                        <div class="mt-4 flex flex-wrap gap-3">
-                          <div class="bg-gray-100 px-3 py-2 rounded-md">
-                            <span class="text-xs text-gray-500 block">Bundle Price</span>
-                            <span class="text-lg font-bold text-gray-900">{{ getBundlePrice(selectedDevice) }}</span>
-                          </div>
-                          
-                          <div class="bg-gray-100 px-3 py-2 rounded-md">
-                            <span class="text-xs text-gray-500 block">Est. Monthly Savings</span>
-                            <span class="text-lg font-bold text-green-600">$350+</span>
-                          </div>
-                          
-                          <div class="bg-gray-100 px-3 py-2 rounded-md">
-                            <span class="text-xs text-gray-500 block">Setup Fee</span>
-                            <span class="text-lg font-bold text-gray-900">$0</span>
-                          </div>
-                        </div>
-                        
-                        <div class="mt-4 pt-4 border-t border-gray-200">
-                          <p class="text-gray-600">
-                            You're just a few steps away from completing your application and saving on processing fees forever! Complete the configuration below to customize your system.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <p class="text-gray-600 mb-6">
-                  Please help us customize your POS system by providing the following information.
-                </p>
-                
-                <!-- Configuration form -->
-                <div class="grid grid-cols-1 gap-6 mb-8">
-                  <div>
-                    <label for="numberOfLocations" class="block text-gray-700 font-medium mb-2">How many locations do you have? *</label>
-                    <select 
-                      id="numberOfLocations" 
-                      v-model="form.number_of_locations" 
-                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
-                      required
-                    >
-                      <option value="" disabled selected>Please select...</option>
-                      <option value="1">1 Location</option>
-                      <option value="2">2 Locations</option>
-                      <option value="3">3 Locations</option>
-                      <option value="4">4 Locations</option>
-                      <option value="5">5 Locations</option>
-                      <option value="6+">6+ Locations</option>
-                    </select>
-                  </div>
-                  
-                  <div>
-                    <label for="numberOfRegisters" class="block text-gray-700 font-medium mb-2">How many registers per location? *</label>
-                    <select 
-                      id="numberOfRegisters" 
-                      v-model="form.number_of_registers" 
-                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
-                      required
-                    >
-                      <option value="" disabled selected>Please select...</option>
-                      <option value="1">1 Register</option>
-                      <option value="2">2 Registers</option>
-                      <option value="3">3 Registers</option>
-                      <option value="4">4 Registers</option>
-                      <option value="5+">5+ Registers</option>
-                    </select>
-                  </div>
-                  
-                  <div v-if="isRestaurantBusiness">
-                    <label for="numberOfServers" class="block text-gray-700 font-medium mb-2">How many servers/waitstaff do you have? *</label>
-                    <select 
-                      id="numberOfServers" 
-                      v-model="form.number_of_servers" 
-                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
-                      required
-                    >
-                      <option value="" disabled selected>Please select...</option>
-                      <option value="1-5">1-5 Servers</option>
-                      <option value="6-10">6-10 Servers</option>
-                      <option value="11-20">11-20 Servers</option>
-                      <option value="21+">21+ Servers</option>
-                    </select>
-                  </div>
-                  
-                  <div v-if="isRestaurantBusiness">
-                    <label for="handheldsNeeded" class="block text-gray-700 font-medium mb-2">Do you need handheld ordering devices for your waitstaff? *</label>
-                    <p class="text-gray-500 text-sm mb-3">Handheld devices allow servers to take orders tableside, increasing efficiency and table turnover rates</p>
-                    <div class="grid grid-cols-2 gap-4">
-                          <button 
-                        type="button"
-                        @click="form.handhelds_needed = true"
-                        class="px-4 py-2 rounded-md text-center transition-colors"
-                        :class="form.handhelds_needed ? 'bg-green-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'"
-                      >
-                        Yes
-                          </button>
-                          <button 
-                        type="button"
-                        @click="form.handhelds_needed = false"
-                        class="px-4 py-2 rounded-md text-center transition-colors"
-                        :class="!form.handhelds_needed && form.handhelds_needed !== undefined ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'"
-                      >
-                        No
-                          </button>
-                        </div>
-                      </div>
-                  
-                  <div v-if="form.handhelds_needed">
-                    <label for="numberOfHandhelds" class="block text-gray-700 font-medium mb-2">How many handheld devices do you need? *</label>
-                    <div class="grid grid-cols-1 gap-6 mb-4">
-                      <div class="flex flex-col">
-                        <div class="text-sm text-gray-600 mb-2">Select the number of devices ({{ form.number_of_handhelds || "0" }})</div>
-                        <input 
-                          type="range" 
-                          id="numberOfHandhelds" 
-                          v-model="form.number_of_handhelds" 
-                          min="1" 
-                          max="20"
-                          step="1"
-                          class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-custom-red"
-                        >
-                        <div class="flex justify-between text-xs text-gray-500 mt-1">
-                          <span>1</span>
-                          <span>5</span>
-                          <span>10</span>
-                          <span>15</span>
-                          <span>20</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="bg-blue-50 border border-blue-200 rounded-md p-4 mb-6">
-                      <div class="flex items-start">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mt-0.5 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
-                        </svg>
-                        <p class="text-sm text-blue-800">
-                          Most restaurants provide one handheld device for every 1-2 servers. This allows for efficient order taking without overcrowding your staff.
-                        </p>
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <label class="block text-gray-700 font-medium mb-2">Which features do you need on handheld devices? *</label>
-                      <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        <div 
-                          v-for="feature in ['Order Taking', 'Payment Processing', 'Menu Modifications', 'Table Management', 'Split Checks', 'Loyalty Integration']" 
-                          :key="feature"
-                          @click="toggleHandheldFeature(feature)"
-                          class="border rounded-lg px-4 py-3 cursor-pointer transition-all flex items-center"
-                          :class="form.handheld_features?.includes(feature) ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
-                        >
-                          <div class="w-5 h-5 rounded border mr-3 flex items-center justify-center"
-                            :class="form.handheld_features?.includes(feature) ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
-                          >
-                            <svg v-if="form.handheld_features?.includes(feature)" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                          </div>
-                          <div class="font-medium">{{ feature }}</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <label for="customerFacingDisplays" class="block text-gray-700 font-medium mb-2">Do you need customer-facing displays? *</label>
-                    <div class="grid grid-cols-2 gap-4">
-                      <button 
-                        type="button"
-                        @click="form.customer_displays_needed = true"
-                        class="px-4 py-2 rounded-md text-center transition-colors"
-                        :class="form.customer_displays_needed ? 'bg-green-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'"
-                      >
-                        Yes
-                      </button>
-                      <button 
-                        type="button"
-                        @click="form.customer_displays_needed = false"
-                        class="px-4 py-2 rounded-md text-center transition-colors"
-                        :class="!form.customer_displays_needed && form.customer_displays_needed !== undefined ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'"
-                      >
-                        No
-                      </button>
-                    </div>
-                  </div>
-
-                  <!-- Payment Method Section -->
-                  <div class="mt-8">
-                    <h4 class="text-xl font-bold text-gray-800 mb-4">Payment Method</h4>
-                    
-                    <!-- Display only Cash option for bundles under $1500 -->
-                    <div v-if="bundlePriceValue <= 1500" class="bg-gray-50 border border-gray-200 rounded-lg p-5">
-                      <div class="flex items-center mb-4">
-                        <input 
-                          type="radio" 
-                          id="paymentCashOnly" 
-                          value="cash" 
-                          v-model="form.payment_method" 
-                          class="w-5 h-5 text-custom-red focus:ring-custom-red"
-                          checked
-                          disabled
-                        >
-                        <label for="paymentCashOnly" class="ml-3">
-                          <span class="block text-lg font-semibold text-gray-800">100% Cash Upfront</span>
-                          <span class="block text-gray-600 text-sm">Full payment required for purchases under $1,500</span>
-                        </label>
-                      </div>
-                      <div class="bg-blue-50 border border-blue-200 rounded p-3 text-sm text-blue-800">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block h-5 w-5 mr-1 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
-                        </svg>
-                        This payment method is automatically selected for your purchase.
-                      </div>
-                    </div>
-                    
-                    <!-- Display 3 payment options for bundles over $1500 -->
-                    <div v-else class="grid grid-cols-1 gap-4">
-                      <!-- Option 1: Cash Upfront -->
-                      <div 
-                        class="bg-white border rounded-lg p-5 cursor-pointer transition-all duration-200"
-                        :class="form.payment_method === 'cash' ? 'border-green-500 shadow-md' : 'border-gray-200 hover:border-gray-300'"
-                        @click="form.payment_method = 'cash'"
-                      >
-                        <div class="flex items-start">
-                          <input 
-                            type="radio" 
-                            id="paymentCash" 
-                            value="cash" 
-                            v-model="form.payment_method" 
-                            class="w-5 h-5 mt-1 text-custom-red focus:ring-custom-red"
-                          >
-                          <div class="ml-3">
-                            <label for="paymentCash" class="block text-lg font-semibold text-gray-800 cursor-pointer">100% Cash Upfront</label>
-                            <p class="text-gray-600 mb-2">Pay the full amount today and receive your equipment immediately.</p>
-                      <div class="flex items-center">
-                              <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">5% Discount Applied</span>
-                              <span class="text-gray-500 text-sm ml-2">{{ calculateDiscount(getBundlePrice(selectedDevice), 0.05) }}</span>
-                      </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <!-- Option 2: 6-Month Financing -->
-                      <div 
-                        class="bg-white border rounded-lg p-5 cursor-pointer transition-all duration-200"
-                        :class="form.payment_method === 'financing_6mo' ? 'border-green-500 shadow-md' : 'border-gray-200 hover:border-gray-300'"
-                        @click="form.payment_method = 'financing_6mo'"
-                      >
-                        <div class="flex items-start">
-                          <input 
-                            type="radio" 
-                            id="paymentFinancing6mo" 
-                            value="financing_6mo" 
-                            v-model="form.payment_method" 
-                            class="w-5 h-5 mt-1 text-custom-red focus:ring-custom-red"
-                          >
-                          <div class="ml-3">
-                            <label for="paymentFinancing6mo" class="block text-lg font-semibold text-gray-800 cursor-pointer">6-Month Financing</label>
-                            <p class="text-gray-600 mb-2">Split your payment over 6 months with 0% interest.</p>
-                            <div class="flex items-center">
-                              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Monthly Payment</span>
-                              <span class="text-gray-500 text-sm ml-2">{{ calculateMonthlyPayment(getBundlePrice(selectedDevice), 6) }}/month for 6 months</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <!-- Option 3: 12-Month Financing -->
-                      <div 
-                        class="bg-white border rounded-lg p-5 cursor-pointer transition-all duration-200"
-                        :class="form.payment_method === 'financing_12mo' ? 'border-green-500 shadow-md' : 'border-gray-200 hover:border-gray-300'"
-                        @click="form.payment_method = 'financing_12mo'"
-                      >
-                        <div class="flex items-start">
-                          <input 
-                            type="radio" 
-                            id="paymentFinancing12mo" 
-                            value="financing_12mo" 
-                            v-model="form.payment_method" 
-                            class="w-5 h-5 mt-1 text-custom-red focus:ring-custom-red"
-                          >
-                          <div class="ml-3">
-                            <label for="paymentFinancing12mo" class="block text-lg font-semibold text-gray-800 cursor-pointer">12-Month Financing</label>
-                            <p class="text-gray-600 mb-2">Spread your payment over 12 months with our lowest monthly payments.</p>
-                            <div class="flex items-center">
-                              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Monthly Payment</span>
-                              <span class="text-gray-500 text-sm ml-2">{{ calculateMonthlyPayment(getBundlePrice(selectedDevice), 12) }}/month for 12 months</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <label for="additionalRequirements" class="block text-gray-700 font-medium mb-2">Any additional requirements? <span class="text-gray-500 text-sm font-normal">(Optional)</span></label>
-                    <textarea
-                      id="additionalRequirements"
-                      v-model="form.additional_requirements"
-                      rows="4"
-                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red"
-                      placeholder="Please describe any specific requirements or features you need"
-                    ></textarea>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Step 6: Optional Restaurant Profile (Conversational) -->
-              <div v-if="currentStep === 6" class="animate-fade-in">
                 <div class="bg-white rounded-lg shadow-lg mb-8 overflow-hidden">
                   <div class="bg-gradient-to-r from-blue-600 to-blue-500 px-6 py-4">
                     <div class="flex justify-between items-center">
-                      <h3 class="text-2xl font-bold text-white">Restaurant Profile <span class="text-sm bg-yellow-300 text-blue-800 px-2 py-1 rounded ml-2">Optional</span></h3>
+                      <h3 class="text-2xl font-bold text-white">
+                        <span v-if="form.industry_type === 'Restaurant'">Restaurant Profile</span>
+                        <span v-else-if="form.industry_type === 'Retail - Store Front Location'">Retail Profile</span>
+                        <span v-else-if="form.industry_type === 'Service Business'">Service Business Profile</span>
+                        <span v-else-if="form.industry_type === 'Mobile Business'">Mobile Business Profile</span>
+                        <span v-else-if="form.industry_type === 'Licensed Professional Service'">Professional Service Profile</span>
+                        <span v-else-if="form.industry_type === 'Online/MOTO'">Online Business Profile</span>
+                        <span v-else>Business Profile</span>
+                        <span class="text-sm bg-yellow-300 text-blue-800 px-2 py-1 rounded ml-2">Optional</span>
+                      </h3>
                           <button 
                         @click="skipToConfirmation" 
                         type="button"
@@ -1131,12 +417,32 @@
                       </div>
                   <div class="p-6">
                     <p class="text-gray-600 mb-6">
-                      We'd love to learn more about your restaurant to help us customize your POS system perfectly. 
+                      <span v-if="form.industry_type === 'Restaurant'">
+                        We'd love to learn more about your restaurant to help us customize your POS system perfectly.
+                      </span>
+                      <span v-else-if="form.industry_type === 'Retail - Store Front Location'">
+                        We'd love to learn more about your retail store to help us customize your POS system perfectly.
+                      </span>
+                      <span v-else-if="form.industry_type === 'Service Business'">
+                        We'd love to learn more about your service business to help us customize your POS system perfectly.
+                      </span>
+                      <span v-else-if="form.industry_type === 'Mobile Business'">
+                        We'd love to learn more about your mobile business to help us customize your POS system perfectly.
+                      </span>
+                      <span v-else-if="form.industry_type === 'Licensed Professional Service'">
+                        We'd love to learn more about your professional service to help us customize your POS system perfectly.
+                      </span>
+                      <span v-else-if="form.industry_type === 'Online/MOTO'">
+                        We'd love to learn more about your online business to help us customize your payment system perfectly.
+                      </span>
+                      <span v-else>
+                        We'd love to learn more about your business to help us customize your system perfectly.
+                      </span>
                       These questions are optional but will help us better understand your needs.
                     </p>
                     
-                    <!-- Conversational Question Tree -->
-                    <div class="space-y-12">
+                    <!-- Restaurant-specific questions -->
+                    <div v-if="form.industry_type === 'Restaurant'" class="space-y-12">
                       <!-- Question 1 - Current POS System -->
                       <div>
                         <h4 class="text-lg font-bold text-gray-800 mb-3">Do you currently use a POS system?</h4>
@@ -1171,29 +477,84 @@
                       <div v-if="form.current_pos_status">
                         <h4 class="text-lg font-bold text-gray-800 mb-3">What issues or limitations have you experienced with your current system?</h4>
                         <p class="text-gray-600 mb-4">Select all that apply to your business</p>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                           <div 
                             v-for="issue in [
-                              'It\'s too slow during peak hours.',
-                              'Receipt printing fails sometimes.',
-                              'No support for QR ordering or credit cards.',
-                              'Staff find it hard to use or train on.',
-                              'Doesn\'t integrate online and dine-in orders well.',
-                              'No customer review or gift card system.'
+                              {
+                                title: 'System Crashes',
+                                description: 'POS system freezes, jams, and kitchen touchscreens fail mid-rush, causing chaos and order delays.'
+                              },
+                              {
+                                title: 'Difficult Menu Management',
+                                description: 'Making changes to menus, modifiers, or combos is frustrating and often requires outside support.'
+                              },
+                              {
+                                title: 'Lack of KDS Integration',
+                                description: 'Poor or missing Kitchen Display System integration causes order confusion and longer ticket times.'
+                              },
+                              {
+                                title: 'Poor Offline Functionality',
+                                description: 'When internet goes down, system stops working entirely—no orders, no payments.'
+                              },
+                              {
+                                title: 'Weak Inventory Tracking',
+                                description: 'System doesn\'t track ingredients, portions, or spoilage well—leading to waste and cost overruns.'
+                              },
+                              {
+                                title: 'Long Wait Times for Support',
+                                description: 'Critical issues during dinner rush can\'t wait 30–60 minutes on hold with tech support.'
+                              },
+                              {
+                                title: 'Non-Intuitive Order Entry',
+                                description: 'Servers struggle to split checks, modify orders, or handle custom requests quickly.'
+                              },
+                              {
+                                title: 'No Built-in Tip Pooling/Payroll',
+                                description: 'Lack of labor management tools forces restaurant owners to juggle third-party systems.'
+                              },
+                              {
+                                title: 'Limited Reporting Tools',
+                                description: 'We want clear insights into performance—but get confusing or incomplete data.'
+                              },
+                              {
+                                title: 'Expensive Monthly Add-Ons',
+                                description: 'Online ordering, loyalty programs, or marketing tools are sold separately, driving up costs.'
+                              },
+                              {
+                                title: 'Lack of Loyalty/Reservation Tools',
+                                description: 'System doesn\'t include customer rewards or table reservations, forcing us to pay for third-party apps.'
+                              },
+                              {
+                                title: 'Clunky Online Ordering Integration',
+                                description: 'Orders from third-party delivery platforms don\'t sync well with in-house operations, causing errors.'
+                              },
+                              {
+                                title: 'Lack of Table/Seat Management',
+                                description: 'System isn\'t built for full-service restaurants and can\'t manage floor plans or seat-by-seat orders.'
+                              },
+                              {
+                                title: 'Complicated Staff Training',
+                                description: 'With high turnover, we need a system that\'s easy to train and use—current one isn\'t.'
+                              }
                             ]" 
-                            :key="issue"
-                            @click="toggleIssue(issue)"
-                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all flex items-center"
-                            :class="form.current_system_issues.includes(issue) ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                            :key="issue.title"
+                            @click="toggleIssue(issue.title)"
+                            class="border rounded-lg p-4 cursor-pointer transition-all flex flex-col"
+                            :class="form.current_system_issues.includes(issue.title) ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
                           >
-                            <div class="w-5 h-5 rounded border mr-3 flex items-center justify-center"
-                              :class="form.current_system_issues.includes(issue) ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
-                            >
-                              <svg v-if="form.current_system_issues.includes(issue)" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                              </svg>
+                            <div class="flex items-start mb-2">
+                              <div class="w-5 h-5 rounded border mr-3 flex-shrink-0 mt-0.5 flex items-center justify-center"
+                                :class="form.current_system_issues.includes(issue.title) ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              >
+                                <svg v-if="form.current_system_issues.includes(issue.title)" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                              </div>
+                              <div>
+                                <div class="font-medium text-gray-800">{{ issue.title }}</div>
+                                <div class="text-sm text-gray-600 mt-1">{{ issue.description }}</div>
+                              </div>
                             </div>
-                            <div class="font-medium">{{ issue }}</div>
                           </div>
                         </div>
                       </div>
@@ -1415,27 +776,1690 @@
                           </div>
                         </div>
                       </div>
+                  
+                      <!-- Recommendation based on answers - Shows only if all questions are answered -->
+                      <div v-if="form.complete_solution_response" class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border border-blue-100 p-6 mb-8">
+                        <h4 class="text-xl font-bold text-blue-800 mb-3">Our Recommendation</h4>
+                        <p class="text-gray-700 mb-4">
+                          Based on your answers, we recommend the <span class="font-semibold">{{ getRecommendedSetup() }}</span> 
+                          to address your current challenges.
+                        </p>
+                        <div class="bg-white rounded-lg p-4 shadow-sm">
+                          <p class="text-sm text-gray-600">
+                            This setup includes {{ getRecommendationDetails() }}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Retail-specific questions -->
+                    <div v-else-if="form.industry_type === 'Retail - Store Front Location'" class="space-y-12">
+                      <!-- Question 1 - Current POS System -->
+                      <div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">Do you currently use a POS system?</h4>
+                        <p class="text-gray-600 mb-4">Understanding your current setup helps us provide the best solution</p>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div 
+                            v-for="option in [
+                              'Yes, but it\'s outdated.',
+                              'Yes, but it\'s slow or crashes often.',
+                              'No, we\'re still using manual receipts/cash register.',
+                              'We use tablets or apps, not a full POS.',
+                              'We need better inventory management.'
+                            ]" 
+                            :key="option"
+                            @click="form.current_pos_status = option"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
+                            :class="form.current_pos_status === option ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="flex items-center">
+                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
+                                :class="form.current_pos_status === option ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              >
+                                <div v-if="form.current_pos_status === option" class="w-3 h-3 rounded-full bg-white"></div>
+                              </div>
+                              <div class="font-medium">{{ option }}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Question 2 - Inventory Tracking -->
+                      <div v-if="form.current_pos_status">
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">How do you currently track your inventory?</h4>
+                        <p class="text-gray-600 mb-4">Efficient inventory management helps control costs and improve profitability</p>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div 
+                            v-for="method in [
+                              'Manual tracking (spreadsheets, paper)',
+                              'Basic POS inventory features',
+                              'Dedicated inventory software',
+                              'We don\'t track inventory consistently',
+                              'We need better inventory management'
+                            ]" 
+                            :key="method"
+                            @click="form.inventory_tracking = method"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
+                            :class="form.inventory_tracking === method ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="flex items-center">
+                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
+                                :class="form.inventory_tracking === method ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              >
+                                <div v-if="form.inventory_tracking === method" class="w-3 h-3 rounded-full bg-white"></div>
+                              </div>
+                              <div class="font-medium">{{ method }}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Question 3 - Current POS Issues -->
+                      <div v-if="form.inventory_tracking">
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">What issues or limitations have you experienced with your current system?</h4>
+                        <p class="text-gray-600 mb-4">Select all that apply to your retail business</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                          <div 
+                            v-for="issue in [
+                              'Inventory counts are often inaccurate',
+                              'Barcode scanning is unreliable',
+                              'Can\'t track items across multiple locations',
+                              'Difficult to manage product variations',
+                              'Reporting is limited or complicated',
+                              'Customer data isn\'t integrated with sales'
+                            ]" 
+                            :key="issue"
+                            @click="toggleRetailIssue(issue)"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all flex items-center"
+                            :class="form.retail_system_issues && form.retail_system_issues.includes(issue) ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="w-5 h-5 rounded border mr-3 flex items-center justify-center"
+                              :class="form.retail_system_issues && form.retail_system_issues.includes(issue) ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                            >
+                              <svg v-if="form.retail_system_issues && form.retail_system_issues.includes(issue)" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                              </svg>
+                            </div>
+                            <div class="font-medium">{{ issue }}</div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Question 4 - Customer Loyalty -->
+                      <div v-if="form.retail_system_issues && form.retail_system_issues.length > 0">
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">Do you have a customer loyalty or rewards program?</h4>
+                        <p class="text-gray-600 mb-4">Customer loyalty programs can increase repeat business and average order value</p>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div 
+                            v-for="program in [
+                              'Yes, we use a digital loyalty program',
+                              'Yes, but it\'s a manual punch card system',
+                              'No, but we\'re interested in starting one',
+                              'No, we don\'t need one',
+                              'We tried one but it was too complex to manage'
+                            ]" 
+                            :key="program"
+                            @click="form.loyalty_program = program"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
+                            :class="form.loyalty_program === program ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="flex items-center">
+                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
+                                :class="form.loyalty_program === program ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              >
+                                <div v-if="form.loyalty_program === program" class="w-3 h-3 rounded-full bg-white"></div>
+                              </div>
+                              <div class="font-medium">{{ program }}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Question 5 - Staff Training -->
+                      <div v-if="form.loyalty_program">
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">How would you describe your staff's comfort level with technology?</h4>
+                        <p class="text-gray-600 mb-4">This helps us understand training needs for your new system</p>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div 
+                            v-for="level in [
+                              'Very tech-savvy, quick to learn new systems',
+                              'Comfortable with technology but need some training',
+                              'Mixed - some staff are comfortable, others struggle',
+                              'Most need extensive training on new technology',
+                              'We have high staff turnover so easy onboarding is important'
+                            ]" 
+                            :key="level"
+                            @click="form.staff_tech_comfort = level"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
+                            :class="form.staff_tech_comfort === level ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="flex items-center">
+                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
+                                :class="form.staff_tech_comfort === level ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              >
+                                <div v-if="form.staff_tech_comfort === level" class="w-3 h-3 rounded-full bg-white"></div>
+                              </div>
+                              <div class="font-medium">{{ level }}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Question 6 - Complete Solution -->
+                      <div v-if="form.staff_tech_comfort">
+                        <h4 class="text-xl font-bold text-gray-800 mb-3">Would a complete retail POS solution with inventory management, customer loyalty, and integrated payment processing solve your current challenges?</h4>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div 
+                            v-for="response in [
+                              'Yes, that would address most of our needs',
+                              'We need something that integrates with our online store too',
+                              'Only if it\'s easy for our staff to learn quickly',
+                              'That sounds perfect, especially if it can grow with us',
+                              'We need to see a demo to be sure'
+                            ]" 
+                            :key="response"
+                            @click="form.retail_solution_response = response"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
+                            :class="form.retail_solution_response === response ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="flex items-center">
+                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
+                                :class="form.retail_solution_response === response ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              >
+                                <div v-if="form.retail_solution_response === response" class="w-3 h-3 rounded-full bg-white"></div>
+                              </div>
+                              <div class="font-medium">{{ response }}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Recommendation based on answers - Similar to restaurant recommendation -->
+                      <div v-if="form.retail_solution_response" class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border border-blue-100 p-6 mb-8">
+                        <h4 class="text-xl font-bold text-blue-800 mb-3">Our Recommendation</h4>
+                        <p class="text-gray-700 mb-4">
+                          Based on your answers, we recommend the <span class="font-semibold">Complete Retail POS Solution</span> 
+                          to address your current challenges.
+                        </p>
+                        <div class="bg-white rounded-lg p-4 shadow-sm">
+                          <p class="text-sm text-gray-600">
+                            This setup includes a complete retail POS system with inventory management, customer loyalty program, and integrated payment processing with 0% fees through Hurricane Pay.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Service Business-specific questions -->
+                    <div v-else-if="form.industry_type === 'Service Business'" class="space-y-12">
+                      <!-- Question 1 - Appointment Scheduling -->
+                      <div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">How do you currently manage appointments and scheduling?</h4>
+                        <p class="text-gray-600 mb-4">Efficient scheduling can maximize your service capacity and revenue</p>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div 
+                            v-for="method in [
+                              'Paper appointment book',
+                              'Digital calendar (Google Calendar, etc.)',
+                              'Dedicated scheduling software',
+                              'We take appointments by phone only',
+                              'We don\'t have a formal scheduling system'
+                            ]" 
+                            :key="method"
+                            @click="form.appointment_scheduling = method"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
+                            :class="form.appointment_scheduling === method ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="flex items-center">
+                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
+                                :class="form.appointment_scheduling === method ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              >
+                                <div v-if="form.appointment_scheduling === method" class="w-3 h-3 rounded-full bg-white"></div>
+                              </div>
+                              <div class="font-medium">{{ method }}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Question 2 - Scheduling Challenges -->
+                      <div v-if="form.appointment_scheduling">
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">What scheduling challenges does your business face?</h4>
+                        <p class="text-gray-600 mb-4">Select all that apply to your service business</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                          <div 
+                            v-for="challenge in [
+                              'Double bookings or scheduling conflicts',
+                              'No-shows and last-minute cancellations',
+                              'Staff availability management',
+                              'Difficulty managing appointments across multiple locations',
+                              'Can\'t send automatic appointment reminders',
+                              'Clients can\'t book appointments online themselves'
+                            ]" 
+                            :key="challenge"
+                            @click="toggleServiceChallenge(challenge)"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all flex items-center"
+                            :class="form.service_challenges && form.service_challenges.includes(challenge) ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="w-5 h-5 rounded border mr-3 flex items-center justify-center"
+                              :class="form.service_challenges && form.service_challenges.includes(challenge) ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                            >
+                              <svg v-if="form.service_challenges && form.service_challenges.includes(challenge)" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                              </svg>
+                            </div>
+                            <div class="font-medium">{{ challenge }}</div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Question 3 - Client Management -->
+                      <div v-if="form.service_challenges && form.service_challenges.length > 0">
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">How do you manage client information and history?</h4>
+                        <p class="text-gray-600 mb-4">Tracking client details helps personalize service and build relationships</p>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div 
+                            v-for="method in [
+                              'Paper files or cards',
+                              'Spreadsheets',
+                              'CRM software',
+                              'We don\'t consistently track client information',
+                              'We need a better system for client management'
+                            ]" 
+                            :key="method"
+                            @click="form.client_management = method"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
+                            :class="form.client_management === method ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="flex items-center">
+                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
+                                :class="form.client_management === method ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              >
+                                <div v-if="form.client_management === method" class="w-3 h-3 rounded-full bg-white"></div>
+                              </div>
+                              <div class="font-medium">{{ method }}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Question 4 - Payment Processing -->
+                      <div v-if="form.client_management">
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">How do you currently process payments?</h4>
+                        <p class="text-gray-600 mb-4">Efficient payment processing improves cash flow and customer experience</p>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div 
+                            v-for="method in [
+                              'Cash and checks only',
+                              'Mobile card reader (Square, etc.)',
+                              'Traditional credit card terminal',
+                              'Integrated POS system',
+                              'We invoice clients and accept payments later'
+                            ]" 
+                            :key="method"
+                            @click="form.service_payment_method = method"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
+                            :class="form.service_payment_method === method ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="flex items-center">
+                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
+                                :class="form.service_payment_method === method ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              >
+                                <div v-if="form.service_payment_method === method" class="w-3 h-3 rounded-full bg-white"></div>
+                              </div>
+                              <div class="font-medium">{{ method }}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Question 5 - Complete Solution -->
+                      <div v-if="form.service_payment_method">
+                        <h4 class="text-xl font-bold text-gray-800 mb-3">Would an all-in-one solution with online booking, client management, and integrated payment processing solve your current challenges?</h4>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div 
+                            v-for="response in [
+                              'Yes, that would streamline our whole operation',
+                              'We\'d need it to integrate with our existing systems',
+                              'That sounds ideal if staff can learn it quickly',
+                              'Yes, especially if clients can book online',
+                              'We\'d need to see how it works for our specific services'
+                            ]" 
+                            :key="response"
+                            @click="form.service_solution_response = response"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
+                            :class="form.service_solution_response === response ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="flex items-center">
+                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
+                                :class="form.service_solution_response === response ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              >
+                                <div v-if="form.service_solution_response === response" class="w-3 h-3 rounded-full bg-white"></div>
+                              </div>
+                              <div class="font-medium">{{ response }}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Recommendation based on answers -->
+                      <div v-if="form.service_solution_response" class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border border-blue-100 p-6 mb-8">
+                        <h4 class="text-xl font-bold text-blue-800 mb-3">Our Recommendation</h4>
+                        <p class="text-gray-700 mb-4">
+                          Based on your answers, we recommend the <span class="font-semibold">Complete Service Business Solution</span> 
+                          to address your current challenges.
+                        </p>
+                        <div class="bg-white rounded-lg p-4 shadow-sm">
+                          <p class="text-sm text-gray-600">
+                            This setup includes online booking, client management, staff scheduling, and integrated payment processing with 0% fees through Hurricane Pay.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Mobile Business-specific questions -->
+                    <div v-else-if="form.industry_type === 'Mobile Business'" class="space-y-12">
+                      <!-- Question 1 - Payment Processing -->
+                      <div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">How do you currently process payments on the go?</h4>
+                        <p class="text-gray-600 mb-4">Mobile payment solutions can help you accept payments anywhere</p>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div 
+                            v-for="method in [
+                              'Mobile card reader (Square, etc.)',
+                              'Cash only',
+                              'Invoice clients later',
+                              'Mobile POS system',
+                              'We need a better mobile payment solution'
+                            ]" 
+                            :key="method"
+                            @click="form.mobile_payment = method"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
+                            :class="form.mobile_payment === method ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="flex items-center">
+                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
+                                :class="form.mobile_payment === method ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              >
+                                <div v-if="form.mobile_payment === method" class="w-3 h-3 rounded-full bg-white"></div>
+                              </div>
+                              <div class="font-medium">{{ method }}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Question 2 - Payment Challenges -->
+                      <div v-if="form.mobile_payment">
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">What challenges do you face with mobile payments?</h4>
+                        <p class="text-gray-600 mb-4">Select all that apply to your mobile business</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                          <div 
+                            v-for="challenge in [
+                              'Unreliable internet/connectivity issues',
+                              'Battery life limitations',
+                              'Device durability concerns',
+                              'High processing fees',
+                              'Limited receipt options',
+                              'Difficulty tracking inventory on the go'
+                            ]" 
+                            :key="challenge"
+                            @click="toggleMobileChallenge(challenge)"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all flex items-center"
+                            :class="form.mobile_challenges && form.mobile_challenges.includes(challenge) ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="w-5 h-5 rounded border mr-3 flex items-center justify-center"
+                              :class="form.mobile_challenges && form.mobile_challenges.includes(challenge) ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                            >
+                              <svg v-if="form.mobile_challenges && form.mobile_challenges.includes(challenge)" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                              </svg>
+                            </div>
+                            <div class="font-medium">{{ challenge }}</div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Question 3 - Location Tracking -->
+                      <div v-if="form.mobile_challenges && form.mobile_challenges.length > 0">
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">Do you need to track multiple locations or routes?</h4>
+                        <p class="text-gray-600 mb-4">Location tracking can help optimize your mobile business operations</p>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div 
+                            v-for="response in [
+                              'Yes, we operate in multiple areas',
+                              'Yes, we have regular routes',
+                              'No, we operate in a fixed location',
+                              'No, but we might expand to more areas',
+                              'We need help with route planning'
+                            ]" 
+                            :key="response"
+                            @click="form.location_tracking = response"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
+                            :class="form.location_tracking === response ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="flex items-center">
+                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
+                                :class="form.location_tracking === response ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              >
+                                <div v-if="form.location_tracking === response" class="w-3 h-3 rounded-full bg-white"></div>
+                              </div>
+                              <div class="font-medium">{{ response }}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Question 4 - Business Type -->
+                      <div v-if="form.location_tracking">
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">What type of mobile business do you operate?</h4>
+                        <p class="text-gray-600 mb-4">This helps us recommend the most appropriate solution</p>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div 
+                            v-for="type in [
+                              'Food truck or mobile food service',
+                              'Mobile retail (pop-up shop, market vendor)',
+                              'Service provider (repairs, cleaning, etc.)',
+                              'Door-to-door sales',
+                              'Event-based business (fairs, concerts, etc.)'
+                            ]" 
+                            :key="type"
+                            @click="form.mobile_business_type = type"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
+                            :class="form.mobile_business_type === type ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="flex items-center">
+                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
+                                :class="form.mobile_business_type === type ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              >
+                                <div v-if="form.mobile_business_type === type" class="w-3 h-3 rounded-full bg-white"></div>
+                              </div>
+                              <div class="font-medium">{{ type }}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Question 5 - Complete Solution -->
+                      <div v-if="form.mobile_business_type">
+                        <h4 class="text-xl font-bold text-gray-800 mb-3">Would a rugged, reliable mobile payment solution with offline capability and 0% processing fees solve your current challenges?</h4>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div 
+                            v-for="response in [
+                              'Yes, that would be perfect for our mobile operations',
+                              'We\'d need inventory tracking capabilities too',
+                              'That sounds great if it works in areas with poor connectivity',
+                              'We\'d need multiple devices for our team',
+                              'We\'d want to see how durable the equipment is first'
+                            ]" 
+                            :key="response"
+                            @click="form.mobile_solution_response = response"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
+                            :class="form.mobile_solution_response === response ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="flex items-center">
+                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
+                                :class="form.mobile_solution_response === response ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              >
+                                <div v-if="form.mobile_solution_response === response" class="w-3 h-3 rounded-full bg-white"></div>
+                              </div>
+                              <div class="font-medium">{{ response }}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Recommendation based on answers -->
+                      <div v-if="form.mobile_solution_response" class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border border-blue-100 p-6 mb-8">
+                        <h4 class="text-xl font-bold text-blue-800 mb-3">Our Recommendation</h4>
+                        <p class="text-gray-700 mb-4">
+                          Based on your answers, we recommend the <span class="font-semibold">Mobile Business Solution</span> 
+                          to address your current challenges.
+                        </p>
+                        <div class="bg-white rounded-lg p-4 shadow-sm">
+                          <p class="text-sm text-gray-600">
+                            This setup includes rugged mobile payment hardware, offline processing capability, and 0% processing fees through Hurricane Pay - perfect for businesses on the move.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Online Business-specific questions -->
+                    <div v-else-if="form.industry_type === 'Online/MOTO'" class="space-y-12">
+                      <!-- Question 1 - Online Payment Processing -->
+                      <div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">How do you currently process online payments?</h4>
+                        <p class="text-gray-600 mb-4">Secure, reliable online payment processing is essential for e-commerce</p>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div 
+                            v-for="method in [
+                              'PayPal/Stripe/Other payment processor',
+                              'Shopping cart software',
+                              'Manual processing (phone orders)',
+                              'We use multiple payment methods',
+                              'We need a better online payment solution'
+                            ]" 
+                            :key="method"
+                            @click="form.online_payment = method"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
+                            :class="form.online_payment === method ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="flex items-center">
+                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
+                                :class="form.online_payment === method ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              >
+                                <div v-if="form.online_payment === method" class="w-3 h-3 rounded-full bg-white"></div>
+                              </div>
+                              <div class="font-medium">{{ method }}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Question 2 - Payment Challenges -->
+                      <div v-if="form.online_payment">
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">What challenges do you face with online payments?</h4>
+                        <p class="text-gray-600 mb-4">Select all that apply to your online business</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                          <div 
+                            v-for="challenge in [
+                              'High processing fees',
+                              'Payment security concerns',
+                              'Cart abandonment issues',
+                              'Integration problems with our website',
+                              'International payment limitations',
+                              'Chargeback and fraud concerns'
+                            ]" 
+                            :key="challenge"
+                            @click="toggleOnlineChallenge(challenge)"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all flex items-center"
+                            :class="form.online_challenges && form.online_challenges.includes(challenge) ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="w-5 h-5 rounded border mr-3 flex items-center justify-center"
+                              :class="form.online_challenges && form.online_challenges.includes(challenge) ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                            >
+                              <svg v-if="form.online_challenges && form.online_challenges.includes(challenge)" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                              </svg>
+                            </div>
+                            <div class="font-medium">{{ challenge }}</div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Question 3 - E-commerce Platform -->
+                      <div v-if="form.online_challenges && form.online_challenges.length > 0">
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">What e-commerce platform do you use?</h4>
+                        <p class="text-gray-600 mb-4">Your platform choice affects your payment integration options</p>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div 
+                            v-for="platform in [
+                              'Shopify',
+                              'WooCommerce/WordPress',
+                              'Magento',
+                              'Custom website',
+                              'Other platform/marketplace',
+                              'We don\'t have an e-commerce platform yet'
+                            ]" 
+                            :key="platform"
+                            @click="form.ecommerce_platform = platform"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
+                            :class="form.ecommerce_platform === platform ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="flex items-center">
+                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
+                                :class="form.ecommerce_platform === platform ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              >
+                                <div v-if="form.ecommerce_platform === platform" class="w-3 h-3 rounded-full bg-white"></div>
+                              </div>
+                              <div class="font-medium">{{ platform }}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Question 4 - Order Volume -->
+                      <div v-if="form.ecommerce_platform">
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">What is your average monthly online order volume?</h4>
+                        <p class="text-gray-600 mb-4">This helps us recommend the most appropriate payment solution</p>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div 
+                            v-for="volume in [
+                              'Less than 100 orders',
+                              '100-500 orders',
+                              '501-1,000 orders',
+                              '1,001-5,000 orders',
+                              'More than 5,000 orders'
+                            ]" 
+                            :key="volume"
+                            @click="form.online_order_volume = volume"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
+                            :class="form.online_order_volume === volume ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="flex items-center">
+                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
+                                :class="form.online_order_volume === volume ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              >
+                                <div v-if="form.online_order_volume === volume" class="w-3 h-3 rounded-full bg-white"></div>
+                              </div>
+                              <div class="font-medium">{{ volume }}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Question 5 - Complete Solution -->
+                      <div v-if="form.online_order_volume">
+                        <h4 class="text-xl font-bold text-gray-800 mb-3">Would an integrated payment solution with 0% processing fees and enhanced fraud protection help your online business grow?</h4>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div 
+                            v-for="response in [
+                              'Yes, eliminating processing fees would be a game-changer',
+                              'We\'d need it to integrate seamlessly with our platform',
+                              'We\'re especially interested in better fraud protection',
+                              'That would help us offer more competitive pricing',
+                              'We\'d need to understand the integration process first'
+                            ]" 
+                            :key="response"
+                            @click="form.online_solution_response = response"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
+                            :class="form.online_solution_response === response ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="flex items-center">
+                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
+                                :class="form.online_solution_response === response ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              >
+                                <div v-if="form.online_solution_response === response" class="w-3 h-3 rounded-full bg-white"></div>
+                              </div>
+                              <div class="font-medium">{{ response }}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Recommendation based on answers -->
+                      <div v-if="form.online_solution_response" class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border border-blue-100 p-6 mb-8">
+                        <h4 class="text-xl font-bold text-blue-800 mb-3">Our Recommendation</h4>
+                        <p class="text-gray-700 mb-4">
+                          Based on your answers, we recommend the <span class="font-semibold">E-Commerce Payment Solution</span> 
+                          to address your current challenges.
+                        </p>
+                        <div class="bg-white rounded-lg p-4 shadow-sm">
+                          <p class="text-sm text-gray-600">
+                            This solution includes seamless integration with your e-commerce platform, enhanced fraud protection, and 0% processing fees through Hurricane Pay - helping you maximize online revenue.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Default questions for other business types -->
+                    <div v-else class="space-y-12">
+                      <!-- Generic Question 1 -->
+                      <div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">What payment processing challenges do you currently face?</h4>
+                        <p class="text-gray-600 mb-4">Understanding your challenges helps us provide the best solution</p>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div 
+                            v-for="challenge in [
+                              'High processing fees',
+                              'Slow transaction times',
+                              'Limited payment options for customers',
+                              'Equipment reliability issues',
+                              'Complicated statements/reporting',
+                              'Poor customer support from current provider'
+                            ]" 
+                            :key="challenge"
+                            @click="toggleBusinessChallenge(challenge)"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all flex items-center"
+                            :class="form.business_challenges && form.business_challenges.includes(challenge) ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="w-5 h-5 rounded border mr-3 flex items-center justify-center"
+                              :class="form.business_challenges && form.business_challenges.includes(challenge) ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                            >
+                              <svg v-if="form.business_challenges && form.business_challenges.includes(challenge)" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                              </svg>
+                            </div>
+                            <div class="font-medium">{{ challenge }}</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Step 4: Owner Information -->
+              <div v-if="currentStep === 4" class="animate-fade-in">
+                <h3 class="text-2xl font-bold mb-6 text-gray-800">Owner Information</h3>
+                <p class="text-gray-600 mb-6">Please fill out information about the owner</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                  <div>
+                    <label for="ownerFirstName" class="block text-gray-700 font-medium mb-2">Owner First Name *</label>
+                    <input 
+                      type="text" 
+                      id="ownerFirstName" 
+                      v-model="form.owner_first_name" 
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                      required
+                    >
+                  </div>
+                  
+                  <div>
+                    <label for="ownerLastName" class="block text-gray-700 font-medium mb-2">Owner Last Name *</label>
+                    <input 
+                      type="text" 
+                      id="ownerLastName" 
+                      v-model="form.owner_last_name" 
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                      required
+                    >
+                  </div>
+                  
+                  <div>
+                    <label for="title" class="block text-gray-700 font-medium mb-2">Title *</label>
+                    <input 
+                      type="text" 
+                      id="title" 
+                      v-model="form.title" 
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                      required
+                    >
+                  </div>
+                  
+                  <div>
+                    <label for="dob" class="block text-gray-700 font-medium mb-2">Date of Birth *</label>
+                    <input 
+                      type="date" 
+                      id="dob" 
+                      v-model="form.date_of_birth" 
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                      required
+                    >
+                  </div>
+                  
+                  <div>
+                    <label for="ownershipPercentage" class="block text-gray-700 font-medium mb-2">Business Ownership % *</label>
+                    <div class="relative">
+                      <input 
+                        type="number" 
+                        id="ownershipPercentage" 
+                        v-model="form.ownership_percentage" 
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                        min="0"
+                        max="100"
+                        required
+                      >
+                      <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                        <span class="text-gray-500">%</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <label for="driversLicense" class="block text-gray-700 font-medium mb-2">Driver's License *</label>
+                    <input 
+                      type="text" 
+                      id="driversLicense" 
+                      v-model="form.drivers_license" 
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                      required
+                    >
+                  </div>
+                  
+                  <div>
+                    <label for="dlState" class="block text-gray-700 font-medium mb-2">Driver's License State *</label>
+                    <select 
+                      id="dlState" 
+                      v-model="form.dl_state" 
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                      required
+                    >
+                      <option value="" disabled selected>Select state</option>
+                      <option v-for="state in usStates" :key="state.code" :value="state.code">{{ state.name }}</option>
+                    </select>
+                  </div>
+                  
+                  <div>
+                    <label for="ownerPhone" class="block text-gray-700 font-medium mb-2">Owner Phone *</label>
+                    <input 
+                      type="tel" 
+                      id="ownerPhone" 
+                      v-model="form.owner_phone" 
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                      required
+                    >
+                  </div>
+                </div>
+                
+                <h4 class="text-xl font-semibold mb-4 text-gray-800">Home Address</h4>
+                <div class="grid grid-cols-1 gap-6 mb-8">
+                  <div>
+                    <label for="homeAddressLine1" class="block text-gray-700 font-medium mb-2">Home Address Line 1 *</label>
+                    <input 
+                      type="text" 
+                      id="homeAddressLine1" 
+                      v-model="form.home_address_line1" 
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                      placeholder="Street address"
+                      required
+                    >
+                  </div>
+                  
+                  <div>
+                    <label for="homeAddressLine2" class="block text-gray-700 font-medium mb-2">Home Address Line 2 <span class="text-gray-500 text-sm font-normal">(Optional)</span></label>
+                    <input 
+                      type="text" 
+                      id="homeAddressLine2" 
+                      v-model="form.home_address_line2" 
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                      placeholder="Suite, Unit, etc."
+                    >
+                  </div>
+                  
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                      <label for="city" class="block text-gray-700 font-medium mb-2">City *</label>
+                      <input 
+                        type="text" 
+                        id="city" 
+                        v-model="form.city" 
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                        required
+                      >
+                    </div>
+                    
+                    <div>
+                      <label for="homeState" class="block text-gray-700 font-medium mb-2">State *</label>
+                      <select 
+                        id="homeState" 
+                        v-model="form.home_state" 
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                        required
+                      >
+                        <option value="" disabled selected>Select state</option>
+                        <option v-for="state in usStates" :key="state.code" :value="state.code">{{ state.name }}</option>
+                      </select>
+                    </div>
+                    
+                    <div>
+                      <label for="homeZip" class="block text-gray-700 font-medium mb-2">ZIP Code *</label>
+                      <input 
+                        type="text" 
+                        id="homeZip" 
+                        v-model="form.home_zip" 
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                        required
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Step 5: System Configuration -->
+              <div v-if="currentStep === 5" class="animate-fade-in">
+                <h3 class="text-2xl font-bold mb-6 text-gray-800">System Configuration</h3>
+                
+                <p class="text-gray-600 mb-6">
+                  Please help us customize your POS system by providing the following information.
+                </p>
+                
+                <!-- Configuration form -->
+                <div class="grid grid-cols-1 gap-6 mb-8">
+                  <div>
+                    <label for="numberOfLocations" class="block text-gray-700 font-medium mb-2">How many locations do you have? *</label>
+                    <select 
+                      id="numberOfLocations" 
+                      v-model="form.number_of_locations" 
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                      required
+                    >
+                      <option value="" disabled selected>Please select...</option>
+                      <option value="1">1 Location</option>
+                      <option value="2">2 Locations</option>
+                      <option value="3">3 Locations</option>
+                      <option value="4">4 Locations</option>
+                      <option value="5">5 Locations</option>
+                      <option value="6+">6+ Locations</option>
+                    </select>
+                  </div>
+                  
+                  <div>
+                    <label for="numberOfRegisters" class="block text-gray-700 font-medium mb-2">How many registers per location? *</label>
+                    <select 
+                      id="numberOfRegisters" 
+                      v-model="form.number_of_registers" 
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                      required
+                    >
+                      <option value="" disabled selected>Please select...</option>
+                      <option value="1">1 Register</option>
+                      <option value="2">2 Registers</option>
+                      <option value="3">3 Registers</option>
+                      <option value="4">4 Registers</option>
+                      <option value="5+">5+ Registers</option>
+                    </select>
+                  </div>
+                  
+                  <div v-if="isRestaurantBusiness">
+                    <label for="numberOfServers" class="block text-gray-700 font-medium mb-2">How many servers/waitstaff do you have? *</label>
+                    <select 
+                      id="numberOfServers" 
+                      v-model="form.number_of_servers" 
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                      required
+                    >
+                      <option value="" disabled selected>Please select...</option>
+                      <option value="1-5">1-5 Servers</option>
+                      <option value="6-10">6-10 Servers</option>
+                      <option value="11-20">11-20 Servers</option>
+                      <option value="21+">21+ Servers</option>
+                    </select>
+                  </div>
+                  
+                  <div v-if="isRestaurantBusiness">
+                    <label for="handheldsNeeded" class="block text-gray-700 font-medium mb-2">Do you need handheld ordering devices for your waitstaff? *</label>
+                    <p class="text-gray-500 text-sm mb-3">Handheld devices allow servers to take orders tableside, increasing efficiency and table turnover rates</p>
+                    <div class="grid grid-cols-2 gap-4">
+                          <button 
+                        type="button"
+                        @click="form.handhelds_needed = true"
+                        class="px-4 py-2 rounded-md text-center transition-colors"
+                        :class="form.handhelds_needed ? 'bg-green-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'"
+                      >
+                        Yes
+                          </button>
+                          <button 
+                        type="button"
+                        @click="form.handhelds_needed = false"
+                        class="px-4 py-2 rounded-md text-center transition-colors"
+                        :class="!form.handhelds_needed && form.handhelds_needed !== undefined ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'"
+                      >
+                        No
+                          </button>
+                        </div>
+                      </div>
+                  
+                  <div v-if="form.handhelds_needed">
+                    <label for="numberOfHandhelds" class="block text-gray-700 font-medium mb-2">How many handheld devices do you need? *</label>
+                    <div class="grid grid-cols-1 gap-6 mb-4">
+                      <div class="flex flex-col">
+                        <div class="text-sm text-gray-600 mb-2">Select the number of devices ({{ form.number_of_handhelds || "0" }})</div>
+                        <input 
+                          type="range" 
+                          id="numberOfHandhelds" 
+                          v-model="form.number_of_handhelds" 
+                          min="1" 
+                          max="20"
+                          step="1"
+                          class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-custom-red"
+                        >
+                        <div class="flex justify-between text-xs text-gray-500 mt-1">
+                          <span>1</span>
+                          <span>5</span>
+                          <span>10</span>
+                          <span>15</span>
+                          <span>20</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bg-blue-50 border border-blue-200 rounded-md p-4 mb-6">
+                      <div class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mt-0.5 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                        </svg>
+                        <p class="text-sm text-blue-800">
+                          Most restaurants provide one handheld device for every 1-2 servers. This allows for efficient order taking without overcrowding your staff.
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <label class="block text-gray-700 font-medium mb-2">Which features do you need on handheld devices? *</label>
+                      <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <div 
+                          v-for="feature in ['Order Taking', 'Payment Processing', 'Menu Modifications', 'Table Management', 'Split Checks', 'Loyalty Integration']" 
+                          :key="feature"
+                          @click="toggleHandheldFeature(feature)"
+                          class="border rounded-lg px-4 py-3 cursor-pointer transition-all flex items-center"
+                          :class="form.handheld_features?.includes(feature) ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                        >
+                          <div class="w-5 h-5 rounded border mr-3 flex items-center justify-center"
+                            :class="form.handheld_features?.includes(feature) ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                          >
+                            <svg v-if="form.handheld_features?.includes(feature)" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                          </div>
+                          <div class="font-medium">{{ feature }}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <label for="customerFacingDisplays" class="block text-gray-700 font-medium mb-2">Do you need customer-facing displays? *</label>
+                    <div class="grid grid-cols-2 gap-4">
+                      <button 
+                        type="button"
+                        @click="form.customer_displays_needed = true"
+                        class="px-4 py-2 rounded-md text-center transition-colors"
+                        :class="form.customer_displays_needed ? 'bg-green-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'"
+                      >
+                        Yes
+                      </button>
+                      <button 
+                        type="button"
+                        @click="form.customer_displays_needed = false"
+                        class="px-4 py-2 rounded-md text-center transition-colors"
+                        :class="!form.customer_displays_needed && form.customer_displays_needed !== undefined ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'"
+                      >
+                        No
+                      </button>
+                    </div>
+                  </div>
+
+             
+                  <div>
+                    <label for="additionalRequirements" class="block text-gray-700 font-medium mb-2">Any additional requirements? <span class="text-gray-500 text-sm font-normal">(Optional)</span></label>
+                    <textarea
+                      id="additionalRequirements"
+                      v-model="form.additional_requirements"
+                      rows="4"
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red"
+                      placeholder="Please describe any specific requirements or features you need"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Step 6: Device Selection -->
+              <div v-if="currentStep === 6" class="animate-fade-in">
+                <h3 class="text-2xl font-bold mb-4 text-gray-800">Please Choose Your Device</h3>
+                <p class="text-gray-600 mb-6">
+                  Please choose your option to proceed and start saving money quickly on merchant processing fees. 
+                  We will not charge you until your account is approved.
+                </p>
+                
+                <!-- Selected Product Display - Shows only when a device is selected -->
+                <div v-if="selectedDevice" class="mb-8 bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
+                  <div class="bg-gradient-to-r from-green-600 to-green-500 px-6 py-3">
+                    <h4 class="text-white font-bold text-lg">Your Selected Bundle</h4>
+                  </div>
+                  <div class="p-6">
+                    <div class="flex flex-col md:flex-row items-start gap-6">
+                      <!-- Product Image -->
+                      <div class="w-full md:w-1/4 flex-shrink-0 flex justify-center">
+                        <img src="@/../images/fourth.png" alt="Selected POS Bundle" class="h-32 object-contain">
+                      </div>
+                      
+                      <!-- Product Details -->
+                      <div class="flex-grow">
+                        <div class="flex items-center mb-2">
+                          <div class="flex-grow">
+                            <h5 class="text-xl font-bold text-gray-800">{{ selectedDevice }}</h5>
+                            <p class="text-gray-600 text-sm">{{ selectedPaymentOption === 'buy' ? 'Purchase' : 'Lease' }} Option</p>
+                          </div>
+                          <div class="flex-shrink-0">
+                            <span class="inline-block px-3 py-1 text-sm bg-green-100 text-green-800 font-semibold rounded-full">
+                              0% Processing Fees
+                            </span>
+                          </div>
+                        </div>
+                        
+                        <div class="mt-4 flex flex-wrap gap-3">
+                          <div class="bg-gray-100 px-3 py-2 rounded-md">
+                            <span class="text-xs text-gray-500 block">Bundle Price</span>
+                            <span class="text-lg font-bold text-gray-900">{{ getBundlePrice(selectedDevice) }}</span>
+                          </div>
+                          
+                          <div class="bg-gray-100 px-3 py-2 rounded-md">
+                            <span class="text-xs text-gray-500 block">Est. Monthly Savings</span>
+                            <span class="text-lg font-bold text-green-600">$350+</span>
+                          </div>
+                          
+                          <div class="bg-gray-100 px-3 py-2 rounded-md">
+                            <span class="text-xs text-gray-500 block">Setup Fee</span>
+                            <span class="text-lg font-bold text-gray-900">$0</span>
+                          </div>
+                        </div>
+                        
+                        <div class="mt-4 pt-4 border-t border-gray-200">
+                          <p class="text-gray-600">
+                            You've selected your bundle! Continue to customize more options or proceed to the next step.
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
                 
-                <!-- Recommendation based on answers - Shows only if all questions are answered -->
-                <div v-if="form.complete_solution_response" class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border border-blue-100 p-6 mb-8">
-                  <h4 class="text-xl font-bold text-blue-800 mb-3">Our Recommendation</h4>
-                  <p class="text-gray-700 mb-4">
-                    Based on your answers, we recommend the <span class="font-semibold">{{ getRecommendedSetup() }}</span> 
-                    to address your current challenges.
-                  </p>
-                  <div class="bg-white rounded-lg p-4 shadow-sm">
-                    <p class="text-sm text-gray-600">
-                      This setup includes {{ getRecommendationDetails() }}
+                <!-- Zero-fee processing banner -->
+                <div class="mb-8 bg-gradient-to-r from-red-700 to-red-500 rounded-lg shadow-lg overflow-hidden">
+                  <div class="p-6 text-white">
+                    <div class="flex flex-col md:flex-row items-center justify-between">
+                      <div>
+                        <h4 class="text-3xl font-bold mb-2">0% Credit Card Processing</h4>
+                        <p class="text-xl mb-4">Eliminate processing fees forever!</p>
+                        <div class="mb-2 font-medium">Best fits for:</div>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                          <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-white" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            Full Service Restaurants
+                          </li>
+                          <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-white" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            Counter Service Restaurant
+                          </li>
+                          <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-white" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            Service Only
+                          </li>
+                          <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-white" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            E-Commerce
+                          </li>
+                        </ul>
+                          </div>
+                      <div class="mt-6 md:mt-0 flex-shrink-0">
+                        <div class="bg-white text-red-600 rounded-full p-4 flex items-center justify-center h-24 w-24 font-bold text-3xl shadow-lg">
+                          0%
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Featured product card -->
+                <div class="bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden mb-8 hover:shadow-2xl transition-shadow duration-300">
+                  <div class="grid grid-cols-1 md:grid-cols-7">
+                    <!-- Product image (3 columns on md) -->
+                    <div class="md:col-span-3 bg-gradient-to-br from-gray-50 to-gray-100 p-6 flex items-center justify-center">
+                      <img src="@/../images/fourth.png" alt="Kwick 15 POS Bundle" class="h-64 object-contain">
+                    </div>
+                    
+                    <!-- Product details (4 columns on md) -->
+                    <div class="md:col-span-4 p-6 flex flex-col">
+                      <div class="mb-2">
+                        <span class="inline-block px-3 py-1 text-sm font-semibold bg-green-100 text-green-800 rounded-full">MOST POPULAR</span>
+                      </div>
+                      <h4 class="text-3xl font-bold text-gray-800 mb-4">Kwick 15" POS Bundle</h4>
+                      
+                      <div class="mb-6">
+                        <div class="flex items-center mb-4">
+                          <span class="text-4xl font-bold text-green-600">$0</span>
+                          <span class="ml-2 text-gray-500 line-through">$1,388.00</span>
+                          <span class="ml-2 bg-green-100 text-green-800 text-sm font-semibold px-2 py-1 rounded">100% OFF</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Complete POS solution with 15" touchscreen, receipt printer, and all accessories needed to run your business efficiently.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                          <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Easy Setup
+                          </span>
+                          <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            1-Year Warranty
+                          </span>
+                          <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            24/7 Support
+                          </span>
+                        </div>
+                      </div>
+                      
+                      <div class="mt-auto">
+                        <div class="flex flex-wrap gap-4">
+                        <button 
+                            @click="selectBundleAndTransfer(featuredBundle, 'buy')"
+                            class="flex-grow md:flex-grow-0 px-6 py-3 bg-red-600 text-white font-bold rounded-md hover:bg-red-700 transition-colors shadow-md"
+                            :class="{'ring-2 ring-red-600 bg-red-700': selectedDevice === featuredBundle && selectedPaymentOption === 'buy'}"
+                            type="button"
+                          >
+                            Select This Bundle
+                        </button>
+                          <button 
+                            @click="togglePriceList"
+                            class="flex-grow md:flex-grow-0 px-6 py-3 bg-white border-2 border-red-600 text-red-600 font-bold rounded-md hover:bg-red-50 transition-colors"
+                            type="button"
+                          >
+                            View Pricelist
+                          </button>
+                      </div>
+                    </div>
+                  </div>
+                      </div>
+                          </div>
+                
+                <!-- Price list slide-down section -->
+                <div 
+                  class="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden mb-8 transition-all duration-500 ease-in-out"
+                  :class="showPriceList ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0 hidden'"
+                >
+                  <div class="p-6">
+                    <div class="flex justify-between items-center mb-6">
+                      <h3 class="text-2xl font-bold text-gray-800">Bundle Pricing</h3>
+                      <button @click="togglePriceList" class="text-gray-500 hover:text-gray-700" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                        </div>
+                    
+                    <div class="overflow-hidden rounded-lg border border-gray-200 mb-6">
+                      <table class="w-full text-left">
+                        <thead class="bg-gray-50 border-b border-gray-200">
+                          <tr>
+                            <th class="px-4 py-3 text-sm font-semibold text-gray-700">Bundle</th>
+                            <th class="px-4 py-3 text-sm font-semibold text-gray-700 text-right">Price</th>
+                            <th class="px-4 py-3 text-sm font-semibold text-gray-700 text-center">Select</th>
+                          </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                          <tr v-for="(price, index) in bundlePrices" :key="index" class="hover:bg-gray-50">
+                            <td class="px-4 py-4 text-sm text-gray-800 font-medium">{{ price.name }}</td>
+                            <td class="px-4 py-4 text-sm text-gray-800 text-right">{{ price.price }}</td>
+                            <td class="px-4 py-4 flex justify-center">
+                          <button 
+                                @click="selectBundleAndTransfer(price.name, 'buy')"
+                                class="px-4 py-1 bg-red-600 text-white text-sm font-medium rounded-md hover:bg-red-700 transition-colors"
+                                :class="{'ring-2 ring-red-500': selectedDevice === price.name && selectedPaymentOption === 'buy'}"
+                                type="button"
+                              >
+                                Select
+                          </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  
+                  <div class="px-6 py-4 bg-gray-50 border-t border-gray-200 flex justify-end">
+                          <button 
+                      @click="togglePriceList" 
+                      class="px-6 py-2 bg-gray-300 text-gray-700 font-medium rounded-md hover:bg-gray-400 transition-colors"
+                      type="button"
+                    >
+                      Cancel
+                          </button>
+                        </div>
+                </div>
+                
+                <!-- Bundle card grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                  <!-- Bundle cards -->
+                  <div v-for="(bundle, index) in bundleOptions.slice(0, 6)" :key="index"
+                    class="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-200">
+                    <div class="p-6">
+                      <h5 class="text-lg font-bold text-gray-800 mb-3">{{ bundle.name }}</h5>
+                      <div class="mb-4">
+                        <div class="flex items-center">
+                          <span class="text-2xl font-bold text-gray-800">Bundle</span>
+                        </div>
+                      </div>
+                      <button 
+                        @click="selectBundleAndTransfer(bundle.name, 'buy')"
+                        class="w-full mt-2 py-2 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors"
+                        :class="{'ring-2 ring-blue-500 bg-blue-700': selectedDevice === bundle.name && selectedPaymentOption === 'buy'}"
+                      >
+                        Select
+                      </button>
+                      </div>
+                    </div>
+                  </div>
+
+                <!-- Need assistance card -->
+                <div class="bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg shadow-lg overflow-hidden mb-8">
+                  <div class="p-6 text-white">
+                    <h4 class="text-xl font-bold mb-2">Need assistance selecting the right hardware?</h4>
+                    <p class="mb-4">Our experts are ready to help you find the perfect solution for your business needs.</p>
+                      <div class="flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                      </svg>
+                      <span class="font-medium">Call (888) 123-4567</span>
+                      </div>
+                          </div>
+                        </div>
+                
+                <!-- Error message if no device is selected -->
+                <div v-if="deviceSelectionError" class="text-red-600 text-center mb-6">
+                  Please select a device to continue
+                </div>
+              </div>
+              
+              <!-- Step 7: Bundle Selection -->
+              <div v-if="currentStep === 7" class="animate-fade-in">
+                <h3 class="text-2xl font-bold mb-6 text-gray-800">Bundle Selection Details</h3>
+                
+                <!-- Selected Bundle Confirmation -->
+                <div class="mb-8 bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
+                  <div class="bg-gradient-to-r from-green-600 to-green-500 px-6 py-4">
+                    <h4 class="text-white font-bold text-xl flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      Your Selected Bundle
+                    </h4>
+                  </div>
+                  <div class="p-6">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+                      <!-- Product Image -->
+                      <div class="bg-gray-50 p-4 rounded-lg flex justify-center">
+                        <img src="@/../images/fourth.png" alt="Selected POS Bundle" class="h-48 object-contain">
+                      </div>
+                      
+                      <!-- Product Details -->
+                      <div class="md:col-span-2">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                          <div>
+                            <h5 class="text-2xl font-bold text-gray-800">{{ selectedDevice }}</h5>
+                            <p class="text-gray-600">{{ selectedPaymentOption === 'buy' ? 'Purchase Option' : 'Lease Option' }}</p>
+                          </div>
+                          <div class="mt-3 md:mt-0">
+                            <span class="inline-block px-4 py-2 bg-green-100 text-green-800 font-semibold rounded-full text-sm">
+                              0% Processing Fees
+                            </span>
+                          </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-6">
+                          <div class="bg-gray-100 p-4 rounded-md text-center">
+                            <span class="text-sm text-gray-500 block mb-1">Bundle Price</span>
+                            <span class="text-xl font-bold text-gray-900">{{ getBundlePrice(selectedDevice) }}</span>
+                          </div>
+                          
+                          <div class="bg-gray-100 p-4 rounded-md text-center">
+                            <span class="text-sm text-gray-500 block mb-1">Est. Monthly Savings</span>
+                            <span class="text-xl font-bold text-green-600">$350+</span>
+                          </div>
+                          
+                          <div class="bg-gray-100 p-4 rounded-md text-center">
+                            <span class="text-sm text-gray-500 block mb-1">Setup Fee</span>
+                            <span class="text-xl font-bold text-gray-900">$0</span>
+                          </div>
+                        </div>
+                        
+                        <div class="bg-blue-50 border border-blue-100 rounded-md p-4 mb-4">
+                          <h6 class="font-medium text-blue-800 mb-2">What's included:</h6>
+                          <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                            <li class="flex items-start">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                              </svg>
+                              <span>POS Terminal</span>
+                            </li>
+                            <li class="flex items-start">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                              </svg>
+                              <span>Receipt Printer</span>
+                            </li>
+                            <li class="flex items-start">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                              </svg>
+                              <span>Credit Card Processor</span>
+                            </li>
+                            <li class="flex items-start">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                              </svg>
+                              <span>Cash Drawer</span>
+                            </li>
+                            <li class="flex items-start">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                              </svg>
+                              <span>POS Software License</span>
+                            </li>
+                            <li class="flex items-start">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                              </svg>
+                              <span>Installation Support</span>
+                            </li>
+                          </ul>
+                        </div>
+                        
+                        <div class="border-t border-gray-200 pt-4">
+                          <p class="text-gray-600">
+                            You've selected the perfect bundle for your business! Now choose your payment method below.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Payment Method Section -->
+                <div class="mb-8">
+                  <h4 class="text-xl font-bold text-gray-800 mb-4">Payment Method</h4>
+                  
+                  <!-- Display only Cash option for bundles under $1500 -->
+                  <div v-if="bundlePriceValue <= 1500" class="bg-gray-50 border border-gray-200 rounded-lg p-5">
+                    <div class="flex items-center mb-4">
+                      <input 
+                        type="radio" 
+                        id="paymentCashOnly" 
+                        value="cash" 
+                        v-model="form.payment_method" 
+                        class="w-5 h-5 text-custom-red focus:ring-custom-red"
+                        checked
+                        disabled
+                      >
+                      <label for="paymentCashOnly" class="ml-3">
+                        <span class="block text-lg font-semibold text-gray-800">100% Cash Upfront</span>
+                        <span class="block text-gray-600 text-sm">Full payment required for purchases under $1,500</span>
+                      </label>
+                    </div>
+                    <div class="bg-blue-50 border border-blue-200 rounded p-3 text-sm text-blue-800">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="inline-block h-5 w-5 mr-1 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                      </svg>
+                      This payment method is automatically selected for your purchase.
+                    </div>
+                  </div>
+                  
+                  <!-- Display 2 payment options for bundles over $1500 -->
+                  <div v-else class="grid grid-cols-1 gap-4">
+                    <!-- Option 1: Cash Upfront -->
+                    <div 
+                      class="bg-white border rounded-lg p-5 cursor-pointer transition-all duration-200"
+                      :class="form.payment_method === 'cash' ? 'border-green-500 shadow-md' : 'border-gray-200 hover:border-gray-300'"
+                      @click="form.payment_method = 'cash'"
+                    >
+                      <div class="flex items-start">
+                        <input 
+                          type="radio" 
+                          id="paymentCash" 
+                          value="cash" 
+                          v-model="form.payment_method" 
+                          class="w-5 h-5 mt-1 text-custom-red focus:ring-custom-red"
+                        >
+                        <div class="ml-3">
+                          <label for="paymentCash" class="block text-lg font-semibold text-gray-800 cursor-pointer">100% Cash Upfront</label>
+                          <p class="text-gray-600 mb-2">Pay the full amount today and receive your equipment immediately.</p>
+                          <div class="flex items-center">
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">5% Discount Applied</span>
+                            <span class="text-gray-500 text-sm ml-2">{{ calculateDiscount(getBundlePrice(selectedDevice), 0.05) }}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Option 2: 3-Month Financing -->
+                    <div 
+                      class="bg-white border rounded-lg p-5 cursor-pointer transition-all duration-200"
+                      :class="form.payment_method === 'financing_3mo' ? 'border-green-500 shadow-md' : 'border-gray-200 hover:border-gray-300'"
+                      @click="form.payment_method = 'financing_3mo'"
+                    >
+                      <div class="flex items-start">
+                        <input 
+                          type="radio" 
+                          id="paymentFinancing3mo" 
+                          value="financing_3mo" 
+                          v-model="form.payment_method" 
+                          class="w-5 h-5 mt-1 text-custom-red focus:ring-custom-red"
+                        >
+                        <div class="ml-3">
+                          <label for="paymentFinancing3mo" class="block text-lg font-semibold text-gray-800 cursor-pointer">3-Month Financing</label>
+                          <p class="text-gray-600 mb-2">Split your payment over 3 months with 0% interest.</p>
+                          <div class="flex items-center">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Monthly Payment</span>
+                            <span class="text-gray-500 text-sm ml-2">{{ calculateMonthlyPayment(getBundlePrice(selectedDevice), 3) }}/month for 3 months</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Final note -->
+                <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-5 mb-8">
+                  <div class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <div class="ml-3">
+                      <h5 class="text-lg font-semibold text-gray-800">Important Note</h5>
+                      <p class="text-gray-600">
+                        Your bundle will be delivered and installed after your application is approved. Our team will contact you within 24 hours to confirm your order and schedule installation.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Signature and Terms of Service Section -->
+                <div class="bg-white border border-gray-200 rounded-lg p-6 mb-8">
+                  <h4 class="text-xl font-bold text-gray-800 mb-4">Authorization & Agreement</h4>
+                  
+                  <!-- Terms of Service Acknowledgment -->
+                  <div class="mb-6">
+                    <div class="bg-gray-50 border border-gray-200 rounded-md p-4 mb-4">
+                      <h5 class="font-semibold text-gray-800 mb-2">Terms of Service</h5>
+                      <div class="max-h-40 overflow-y-auto text-sm text-gray-600 mb-3 p-2 border border-gray-200 bg-white rounded">
+                        <p class="mb-2">By signing below, I acknowledge and agree that:</p>
+                        <ol class="list-decimal pl-5 space-y-2">
+                          <li>I am authorized to make purchase decisions on behalf of the business listed in this application.</li>
+                          <li>I authorize Hurricane Pay to process this order and agree to the payment terms selected above.</li>
+                          <li>I have reviewed and agree to the <a href="#" class="text-blue-600 hover:underline">Terms of Service</a> and <a href="#" class="text-blue-600 hover:underline">Privacy Policy</a>.</li>
+                          <li>I understand that the hardware and software bundle is subject to approval of the merchant application.</li>
+                          <li>I authorize Hurricane Pay to conduct necessary background and credit checks related to this application.</li>
+                        </ol>
+                      </div>
+                      
+                      <div class="flex items-center mb-2">
+                        <input 
+                          type="checkbox" 
+                          id="termsAgreement" 
+                          v-model="form.terms_agreement" 
+                          class="w-5 h-5 text-custom-red focus:ring-custom-red rounded"
+                          required
+                        >
+                        <label for="termsAgreement" class="ml-3 text-gray-700">
+                          I have read and agree to the Terms of Service
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Signature Field -->
+                  <div class="mb-6">
+                    <label for="signatureName" class="block text-gray-700 font-medium mb-2">Full Name of Authorized Representative *</label>
+                    <input 
+                      type="text" 
+                      id="signatureName" 
+                      v-model="form.signature_name" 
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                      placeholder="Enter your full legal name"
+                      required
+                    >
+                    <p class="text-sm text-gray-500 mt-1">This serves as your electronic signature</p>
+                  </div>
+                  
+                  <!-- Signature Canvas -->
+                  <div class="mb-6">
+                    <label class="block text-gray-700 font-medium mb-2">Signature *</label>
+                    <div 
+                      class="border border-gray-300 rounded-md p-2 bg-white"
+                      :class="{'border-red-500': signatureError}"
+                    >
+                      <div class="border-b border-gray-200 w-full h-32 relative">
+                        <canvas 
+                          ref="signatureCanvas"
+                          class="w-full h-full cursor-crosshair absolute top-0 left-0"
+                        ></canvas>
+                        
+                        <div v-if="!hasSignature" class="absolute inset-0 flex items-center justify-center text-gray-400 pointer-events-none">
+                          Sign here
+                        </div>
+                      </div>
+                      <div class="flex justify-between mt-2">
+                        <button 
+                          type="button" 
+                          @click="clearSignature"
+                          class="px-3 py-1 text-sm text-gray-600 hover:text-gray-800"
+                        >
+                          Clear
+                        </button>
+                        <button 
+                          type="button" 
+                          @click="testSignature"
+                          class="px-3 py-1 text-sm text-blue-600 hover:text-blue-800"
+                        >
+                          Test Signature
+                        </button>
+                      </div>
+                    </div>
+                    <p v-if="signatureError" class="mt-1 text-sm text-red-600">Signature is required to continue</p>
+                  </div>
+                  
+                  <!-- Date Field -->
+                  <div class="mb-4">
+                    <label for="signatureDate" class="block text-gray-700 font-medium mb-2">Date *</label>
+                    <input 
+                      type="date" 
+                      id="signatureDate" 
+                      v-model="form.signature_date" 
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                      :min="todayDate"
+                      required
+                    >
+                  </div>
+                  
+                  <!-- Signature Confirmation -->
+                  <div class="bg-blue-50 border border-blue-100 rounded-md p-4 mt-4">
+                    <p class="text-sm text-blue-800">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="inline-block h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                      </svg>
+                      By providing my electronic signature above, I certify that I am authorized to make this purchase on behalf of the business and agree to all terms and conditions.
                     </p>
                   </div>
                 </div>
               </div>
               
-              <!-- Step 7: Confirmation (updated from step 6) -->
-              <div v-if="currentStep === 7" class="animate-fade-in">
+              <!-- Step 8: Confirmation -->
+              <div v-if="currentStep === 8" class="animate-fade-in">
                 <div class="text-center py-8">
                   <div class="w-24 h-24 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1465,7 +2489,7 @@
               </div>
               
               <!-- Navigation Buttons -->
-              <div v-if="currentStep < 7" class="flex justify-between mt-8">
+              <div v-if="currentStep < 8" class="flex justify-between mt-8">
                 <button 
                   v-if="currentStep > 1" 
                   type="button" 
@@ -1483,7 +2507,7 @@
                   class="px-8 py-3 bg-custom-red text-white font-medium rounded-md shadow-md hover:bg-red-800 transition-colors duration-300"
                   style="background-color: #973131 !important; color: white !important;"
                 >
-                  {{ currentStep === 6 ? 'Continue' : 'Next' }}
+                  {{ currentStep === 7 ? 'Continue' : 'Next' }}
                 </button>
                 <button 
                   v-else 
@@ -1506,7 +2530,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted, nextTick } from 'vue';
 import NavBar from './NavBar.vue';
 import AppFooter from './AppFooter.vue';
 
@@ -1514,13 +2538,14 @@ import AppFooter from './AppFooter.vue';
 const steps = [
   'Business Information',
   'Business Details', 
+  'Restaurant Profile',
   'Owner Information', 
-  'Device Selection', 
   'System Configuration',
-  'Restaurant Profile', 
+  'Device Selection',
+  'Bundle Selection',
   'Confirmation'
 ];
-const totalSteps = 7;
+const totalSteps = 8;
 const currentStep = ref(1);
 const isSubmitting = ref(false);
 
@@ -1650,17 +2675,6 @@ const form = ref({
   important_features: [],
   sales_volume: '',
   tech_comfort: '',
-  additional_notes: '',
-  selected_hardware: [],
-  selected_marketing_tools: [],
-  selected_value_bundle: false,
-  
-  // New conversational fields
-  payment_challenges: [],
-  has_loyalty_program: '',
-  busy_times: [],
-  
-  // New conversational tree fields
   current_pos_status: '',
   current_system_issues: [],
   order_management_method: '',
@@ -1668,13 +2682,50 @@ const form = ref({
   staff_confidence: '',
   technical_support: '',
   complete_solution_response: '',
+  
+  // New fields for different business types
+  inventory_tracking: '',
+  loyalty_program: '',
+  appointment_scheduling: '',
+  client_management: '',
+  mobile_payment: '',
+  location_tracking: '',
+  online_payment: '',
+  ecommerce_platform: '',
+  business_challenges: [],
+  
+  // Additional fields for retail business
+  retail_system_issues: [],
+  staff_tech_comfort: '',
+  retail_solution_response: '',
+  
+  // Additional fields for service business
+  service_challenges: [],
+  service_payment_method: '',
+  service_solution_response: '',
+  
+  // Additional fields for mobile business
+  mobile_challenges: [],
+  mobile_business_type: '',
+  mobile_solution_response: '',
+  
+  // Additional fields for online business
+  online_challenges: [],
+  online_order_volume: '',
+  online_solution_response: '',
+  
+  // Signature fields
+  terms_agreement: false,
+  signature_name: '',
+  signature_data: null,
+  signature_date: new Date().toISOString().split('T')[0], // Today's date as default
 });
 
 // Step navigation
 function nextStep() {
   if (validateCurrentStep()) {
     // If on device selection step, check if a device was selected
-    if (currentStep.value === 4 && !selectedDevice.value) {
+    if (currentStep.value === 6 && !selectedDevice.value) {
       deviceSelectionError.value = true;
       return;
     }
@@ -1682,7 +2733,7 @@ function nextStep() {
     currentStep.value++;
     window.scrollTo(0, 0);
     
-    // Only automatically submit if moving from step 6 to step 7 (which doesn't exist, so we submit instead)
+    // Only automatically submit if moving from step 7 to step 8 (which doesn't exist, so we submit instead)
     if (currentStep.value > totalSteps) {
       submitForm();
     }
@@ -1727,6 +2778,22 @@ function validateCurrentStep() {
       return false;
     }
   }
+  // Restaurant Profile (step 3) is optional, so no validation needed
+  else if (currentStep.value === 4) {
+    // Validate Owner Information if needed
+    // (this is optional for now)
+  }
+  
+  // Add validation for signature fields in step 7
+  if (currentStep.value === 7) {
+    if (!form.value.terms_agreement || !form.value.signature_name || !form.value.signature_data || !form.value.signature_date) {
+      // Show error for signature field
+      signatureError.value = !form.value.signature_data;
+      
+      alert('Please complete all required fields including signature');
+      return false;
+    }
+  }
   
   return true;
 }
@@ -1745,7 +2812,7 @@ function submitForm() {
     console.log('Form submitted:', form.value);
     
     // Move to confirmation step
-    currentStep.value = 7;
+    currentStep.value = 8;
     isSubmitting.value = false;
     
     // Scroll to top of page to show confirmation
@@ -1818,8 +2885,8 @@ function selectBundleAndProceed(device, paymentOption) {
   // First set the device
   selectDevice(device, paymentOption);
   
-  // Then proceed to the next step (System Configuration)
-  currentStep.value = 5;
+  // Since step order changed, we now go to the next step in sequence
+  nextStep();
   
   // Hide the price list
   showPriceList.value = false;
@@ -1833,6 +2900,38 @@ const isRestaurantBusiness = computed(() => {
   return form.value.industry_type === 'Restaurant' || 
          form.value.product_service?.toLowerCase().includes('restaurant') || 
          form.value.product_service?.toLowerCase().includes('food');
+});
+
+// Add computed properties for other business types
+const isRetailBusiness = computed(() => {
+  return form.value.industry_type === 'Retail - Store Front Location' || 
+         form.value.product_service?.toLowerCase().includes('retail') ||
+         form.value.product_service?.toLowerCase().includes('shop') ||
+         form.value.product_service?.toLowerCase().includes('store');
+});
+
+const isServiceBusiness = computed(() => {
+  return form.value.industry_type === 'Service Business' || 
+         form.value.product_service?.toLowerCase().includes('service');
+});
+
+const isMobileBusiness = computed(() => {
+  return form.value.industry_type === 'Mobile Business' || 
+         form.value.product_service?.toLowerCase().includes('mobile') ||
+         form.value.product_service?.toLowerCase().includes('truck');
+});
+
+const isOnlineBusiness = computed(() => {
+  return form.value.industry_type === 'Online/MOTO' || 
+         form.value.product_service?.toLowerCase().includes('online') ||
+         form.value.product_service?.toLowerCase().includes('e-commerce') ||
+         form.value.product_service?.toLowerCase().includes('ecommerce');
+});
+
+const isProfessionalService = computed(() => {
+  return form.value.industry_type === 'Licensed Professional Service' || 
+         form.value.product_service?.toLowerCase().includes('professional') ||
+         form.value.product_service?.toLowerCase().includes('licensed');
 });
 
 // Add function to get bundle price based on selected device
@@ -1961,7 +3060,7 @@ function getTechComfortDescription(level) {
 
 // Function to skip to confirmation step
 function skipToConfirmation() {
-  currentStep.value = 7;
+  currentStep.value = 8;
   window.scrollTo(0, 0);
 }
 
@@ -2056,10 +3155,240 @@ function toggleIssue(issue) {
   }
 }
 
+// Function to handle business challenges for generic business profiles
+function toggleBusinessChallenge(challenge) {
+  if (!form.value.business_challenges) {
+    form.value.business_challenges = [];
+  }
+  
+  if (form.value.business_challenges.includes(challenge)) {
+    form.value.business_challenges = form.value.business_challenges.filter(c => c !== challenge);
+  } else {
+    form.value.business_challenges.push(challenge);
+  }
+}
+
 // Function to handle complete solution selection
 function selectCompleteSolution(response) {
   form.value.complete_solution_response = response;
   form.value.selected_value_bundle = true;
+}
+
+// Add new function to select a bundle and transfer it to the Bundle Selection step
+function selectBundleAndTransfer(device, paymentOption) {
+  // First set the device
+  selectDevice(device, paymentOption);
+  
+  // Next step will show the selected bundle details
+  nextStep();
+  
+  // Hide the price list
+  showPriceList.value = false;
+  
+  // Scroll to top
+  window.scrollTo(0, 0);
+}
+
+// Function to toggle retail business system issues
+function toggleRetailIssue(issue) {
+  if (!form.value.retail_system_issues) {
+    form.value.retail_system_issues = [];
+  }
+  
+  if (form.value.retail_system_issues.includes(issue)) {
+    form.value.retail_system_issues = form.value.retail_system_issues.filter(i => i !== issue);
+  } else {
+    form.value.retail_system_issues.push(issue);
+  }
+}
+
+// Function to toggle service business challenges
+function toggleServiceChallenge(challenge) {
+  if (!form.value.service_challenges) {
+    form.value.service_challenges = [];
+  }
+  
+  if (form.value.service_challenges.includes(challenge)) {
+    form.value.service_challenges = form.value.service_challenges.filter(c => c !== challenge);
+  } else {
+    form.value.service_challenges.push(challenge);
+  }
+}
+
+// Function to toggle mobile business challenges
+function toggleMobileChallenge(challenge) {
+  if (!form.value.mobile_challenges) {
+    form.value.mobile_challenges = [];
+  }
+  
+  if (form.value.mobile_challenges.includes(challenge)) {
+    form.value.mobile_challenges = form.value.mobile_challenges.filter(c => c !== challenge);
+  } else {
+    form.value.mobile_challenges.push(challenge);
+  }
+}
+
+// Add new function to toggle online challenges
+function toggleOnlineChallenge(challenge) {
+  if (!form.value.online_challenges) {
+    form.value.online_challenges = [];
+  }
+  
+  if (form.value.online_challenges.includes(challenge)) {
+    form.value.online_challenges = form.value.online_challenges.filter(c => c !== challenge);
+  } else {
+    form.value.online_challenges.push(challenge);
+  }
+}
+
+// Add these new variables and functions after the existing code in the script section
+const signatureCanvas = ref(null);
+const hasSignature = ref(false);
+const signatureError = ref(false);
+let isDrawing = false;
+let ctx = null;
+
+// Get today's date in YYYY-MM-DD format for the min attribute of the date input
+const todayDate = new Date().toISOString().split('T')[0];
+
+// Initialize the signature canvas after component mounted
+onMounted(() => {
+  // Wait for DOM to be ready
+  nextTick(() => {
+    setupSignature();
+  });
+});
+
+function setupSignature() {
+  if (!signatureCanvas.value) {
+    console.warn('Canvas ref not available yet');
+    setTimeout(setupSignature, 500);
+    return;
+  }
+  
+  console.log('Setting up signature pad');
+  
+  // Set dimensions
+  const canvas = signatureCanvas.value;
+  const rect = canvas.getBoundingClientRect();
+  canvas.width = rect.width;
+  canvas.height = rect.height;
+  
+  // Get context
+  ctx = canvas.getContext('2d');
+  if (!ctx) {
+    console.error('Could not get canvas context');
+    return;
+  }
+  
+  // Set style
+  ctx.lineWidth = 4;
+  ctx.lineCap = 'round';
+  ctx.lineJoin = 'round';
+  ctx.strokeStyle = '#000000';
+  
+  // Add event listeners
+  canvas.addEventListener('mousedown', startDrawing);
+  canvas.addEventListener('mousemove', draw);
+  canvas.addEventListener('mouseup', stopDrawing);
+  canvas.addEventListener('mouseleave', stopDrawing);
+  
+  // Touch events
+  canvas.addEventListener('touchstart', handleTouchStart);
+  canvas.addEventListener('touchmove', handleTouchMove);
+  canvas.addEventListener('touchend', stopDrawing);
+}
+
+// Drawing functions
+function startDrawing(e) {
+  isDrawing = true;
+  draw(e);
+}
+
+function draw(e) {
+  if (!isDrawing || !ctx || !signatureCanvas.value) return;
+  
+  e.preventDefault();
+  
+  // Get coordinates
+  const canvas = signatureCanvas.value;
+  const rect = canvas.getBoundingClientRect();
+  const x = (e.clientX || (e.touches && e.touches[0].clientX)) - rect.left;
+  const y = (e.clientY || (e.touches && e.touches[0].clientY)) - rect.top;
+  
+  ctx.lineTo(x, y);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(x, y);
+  
+  // Record that we have a signature
+  hasSignature.value = true;
+  form.value.signature_data = 'signed';
+}
+
+function stopDrawing() {
+  if (isDrawing && ctx) {
+    isDrawing = false;
+    ctx.beginPath();
+    signatureError.value = false;
+    
+    // Save signature data
+    if (signatureCanvas.value) {
+      form.value.signature_data = signatureCanvas.value.toDataURL();
+    }
+  }
+}
+
+function handleTouchStart(e) {
+  if (e.touches && e.touches.length > 0) {
+    e.preventDefault();
+    startDrawing(e);
+  }
+}
+
+function handleTouchMove(e) {
+  if (e.touches && e.touches.length > 0) {
+    e.preventDefault();
+    draw(e);
+  }
+}
+
+function clearSignature() {
+  if (ctx && signatureCanvas.value) {
+    ctx.clearRect(0, 0, signatureCanvas.value.width, signatureCanvas.value.height);
+    hasSignature.value = false;
+    form.value.signature_data = null;
+  }
+}
+
+// Test function to ensure the signature pad is working
+function testSignature() {
+  if (!ctx || !signatureCanvas.value) {
+    alert('Canvas context not available');
+    return;
+  }
+  
+  // Draw a test signature (simple line)
+  ctx.beginPath();
+  ctx.moveTo(30, 30);
+  ctx.lineTo(signatureCanvas.value.width - 30, signatureCanvas.value.height - 30);
+  ctx.stroke();
+  
+  ctx.beginPath();
+  ctx.moveTo(30, signatureCanvas.value.height - 30);
+  ctx.lineTo(signatureCanvas.value.width - 30, 30);
+  ctx.stroke();
+  
+  hasSignature.value = true;
+  form.value.signature_data = signatureCanvas.value.toDataURL();
+  console.log('Test signature created');
+}
+
+// Remove this entire function as it's not used and may cause conflicts
+function initializeCanvas() {
+  // Empty function to replace any old implementations
+  console.log('Old initialize function called - safe to ignore');
+  return;
 }
 </script>
 
@@ -2170,3 +3499,4 @@ input[type="number"] {
   -moz-appearance: textfield; /* Firefox */
 }
 </style>
+
