@@ -206,14 +206,24 @@ const router = createRouter({
             component: () => import('./pages/PartnershipForms.vue')
         },
         {
-            path: '/all-industries',
+            path: '/merchant-onboarding',
+            name: 'MerchantOnboarding',
+            component: () => import('./pages/Merchant_Onboarding.vue')
+        },
+        {
+            path: '/industries/Adult-Industry',
+            name: 'AdultIndustry',
+            component: () => import('./pages/industries/Adult_Industry.vue')
+        },
+        {
+            path: '/All_Industries',
             name: 'AllIndustries',
             component: () => import('./pages/All_Industries.vue')
         },
         {
-            path: '/merchant-onboarding',
-            name: 'MerchantOnboarding',
-            component: () => import('./pages/Merchant_Onboarding.vue')
+            path: '/industries/Firearms',
+            name: 'Firearms',
+            component: () => import('./pages/industries/Firearems.vue')
         }
     ],
     scrollBehavior(to, from, savedPosition) {

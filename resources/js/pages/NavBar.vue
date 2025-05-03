@@ -223,12 +223,12 @@
             Industries
             <span class="ml-1 dropdown-arrow" :class="{ 'transform rotate-180': activeDropdown === 'industries' }">▾</span>
           </button>
-          <div v-if="activeDropdown === 'industries'" class="dropdown-panel">
+          <div v-if="activeDropdown === 'industries'" class="dropdown-panel industries-panel">
             <div class="dropdown-header">
               <h2>Industry Solutions</h2>
               <p>Tailored payment processing for your specific business needs</p>
             </div>
-            <div class="grid grid-cols-3 gap-8 mt-6">
+            <div class="grid grid-cols-4 gap-16 mt-6 px-8">
               <div class="dropdown-section">
                 <h3 class="section-title">Retail & Commerce</h3>
                 <div class="menu-items">
@@ -348,17 +348,71 @@
                   </router-link>
                 </div>
               </div>
+              
+              <!-- New Column for High Risk Processing Industries -->
+              <div class="dropdown-section">
+                <h3 class="section-title">High Risk Industries</h3>
+                <div class="menu-items">
+                  <router-link to="/industries/Adult-Industry" class="menu-item-link">
+                    <div class="top-row">
+                      <div class="icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                          <defs>
+                            <linearGradient id="adultGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" stop-color="#be123c" />
+                              <stop offset="100%" stop-color="#f43f5e" />
+                            </linearGradient>
+                          </defs>
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" fill="url(#adultGradient)"/>
+                        </svg>
+                      </div>
+                      <span class="link-title">Adult</span>
+                    </div>
+                    <span class="link-desc">Adult industry solutions</span>
+                  </router-link>
+                  
+                  <router-link to="/industries/Firearms" class="menu-item-link">
+                    <div class="top-row">
+                      <div class="icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                          <defs>
+                            <linearGradient id="firearmsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" stop-color="#475569" />
+                              <stop offset="100%" stop-color="#64748b" />
+                            </linearGradient>
+                          </defs>
+                          <path d="M7 5h10v2h2V3H5v4h2V5zm10 16h-4v-5h-2v5H7v-9H5v11h14v-11h-2v9zM12 9l-4 5h2v7h4v-7h2l-4-5z" fill="url(#firearmsGradient)"/>
+                        </svg>
+                      </div>
+                      <span class="link-title">Firearms</span>
+                    </div>
+                    <span class="link-desc">Firearm dealer solutions</span>
+                  </router-link>
+                  
+                  <!-- View All Industries link inside this column -->
+                  <router-link to="/All_Industries" class="menu-item-link mt-3">
+                    <div class="top-row">
+                      <div class="icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <defs>
+                            <linearGradient id="viewAllGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" stop-color="#9f1239" />
+                              <stop offset="100%" stop-color="#e11d48" />
+                            </linearGradient>
+                          </defs>
+                          <path stroke="url(#viewAllGradient)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </div>
+                      <span class="link-title text-red-800">View all industries</span>
+                    </div>
+                    <span class="link-desc">Explore all industry solutions</span>
+                  </router-link>
+                </div>
+              </div>
             </div>
             
-            <!-- View All Industries Link -->
-            <div class="flex justify-center mt-6 mb-2">
-              <router-link to="/all-industries" class="view-all-link flex items-center text-red-800 hover:text-red-600 font-semibold transition duration-300">
-                <span>View all industries</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </router-link>
-            </div>
+            <!-- Remove the View All Industries Link at the bottom since it's now in the High Risk column -->
+            
           </div>
         </div>
         
@@ -857,6 +911,30 @@ defineExpose({
   animation: panelFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.05);
   padding-bottom: 16px;
+}
+
+/* Make the Industries dropdown wider */
+.dropdown-panel[v-if="activeDropdown === 'industries'"], 
+.industries-panel {
+  width: 1400px; /* Dramatically increased width */
+  max-width: 98vw; /* Ensure it still fits on smaller screens */
+}
+
+/* Adjust column spacing for industries dropdown specifically */
+.dropdown-panel[v-if="activeDropdown === 'industries'"] .grid,
+.industries-panel .grid {
+  gap: 2.5rem; /* Significantly increased gap between columns */
+}
+
+/* Remove section title wrap in industries dropdown */
+.dropdown-panel[v-if="activeDropdown === 'industries'"] .section-title,
+.industries-panel .section-title {
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: visible;
+  padding-right: 10px;
+  text-overflow: clip;
+  max-width: 100%;
 }
 
 /* Consistent header styling for all dropdowns */
