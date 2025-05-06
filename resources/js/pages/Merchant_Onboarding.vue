@@ -21,6 +21,75 @@
                 5 minutes to Complete App
               </span>
             </p>
+            
+            <!-- Toast Success Notification -->
+            <div v-if="showCartSuccessMessage" class="fixed top-20 left-1/2 transform -translate-x-1/2 z-50 max-w-md w-full animate-fade-in">
+              <div class="bg-green-100 border border-green-500 rounded-lg shadow-lg p-4 flex mx-4">
+                <div class="flex-shrink-0 bg-green-500 rounded-full p-2">
+                  <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div class="ml-4 flex-grow text-center">
+                  <p class="text-base font-bold text-green-800">
+                    {{ cartSuccessMessage }}
+                  </p>
+                </div>
+                <div class="ml-auto pl-3">
+                  <div class="-mx-1.5 -my-1.5">
+                    <button @click="showCartSuccessMessage = false" class="text-green-600 hover:text-green-800 focus:outline-none focus:ring-2 focus:ring-green-500 p-1 rounded-md">
+                      <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Shopping Cart Icon with Badge - Improved Design -->
+            <div class="mt-4 inline-flex flex-col items-center">
+              <div class="relative cursor-pointer" @click="showCartItems = !showCartItems">
+                <div class="p-3 bg-gradient-to-br from-red-50 to-white rounded-full shadow-md flex items-center justify-center relative border border-red-100 hover:shadow-lg transition-all duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                  </svg>
+                  <transition name="bounce">
+                    <div v-if="cartItemCount > 0" class="absolute -top-1 -right-1 bg-custom-red text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center shadow-sm border border-white">
+                      {{ cartItemCount }}
+                    </div>
+                  </transition>
+                </div>
+                <div class="text-sm text-custom-red font-medium mt-2 whitespace-nowrap">Your products are here</div>
+              </div>
+              <!-- Cart Items Dropdown -->
+              <div v-if="showCartItems" class="absolute mt-16 w-72 bg-white rounded-md shadow-lg p-4 z-10 border border-gray-100">
+                <h3 class="text-lg font-bold mb-2 text-gray-800 border-b pb-2">Your Selected Bundles</h3>
+                <div v-if="cartItems.length === 0" class="text-gray-500 py-4 text-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto mb-2 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                  </svg>
+                  <p>Your cart is empty</p>
+                </div>
+                <ul v-else class="space-y-2 max-h-60 overflow-y-auto">
+                  <li v-for="(item, index) in cartItems" :key="index" class="flex justify-between items-center p-2 hover:bg-gray-50 rounded">
+                    <span class="font-medium text-gray-700">{{ item.name }}</span>
+                    <div class="flex items-center">
+                      <span class="text-sm text-gray-500 mr-2">{{ item.price }}</span>
+                      <button @click="removeFromCart(index)" class="text-red-500 hover:text-red-700 bg-red-50 rounded-full p-1 hover:bg-red-100 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+                <div v-if="cartItems.length > 0" class="mt-3 pt-3 border-t flex justify-between items-center">
+                  <span class="text-sm text-gray-600">Total items: {{ cartItemCount }}</span>
+                  <button class="px-3 py-1 bg-custom-red text-white text-sm rounded hover:bg-red-800 transition-colors">Continue</button>
+                </div>
+              </div>
+            </div>
           </div>
           
           <!-- Step Indicator -->
@@ -32,13 +101,15 @@
                 class="flex items-center"
               >
                 <div 
-                  class="w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors duration-300 relative border shadow"
+                  class="w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors duration-300 relative border shadow cursor-pointer hover:opacity-90"
                   :class="[
                     currentStep > index + 1 ? 'bg-custom-red text-white border-custom-red' : 
                     currentStep === index + 1 ? 'bg-custom-red text-white border-custom-red font-bold step-active' : 
                     'bg-gray-200 text-gray-800 border-gray-300'
                   ]"
                   :style="currentStep >= index + 1 ? 'background-color: #973131 !important; color: white !important' : ''"
+                  @click="goToStep(index + 1)"
+                  :title="`Go to ${step}`"
                 >
                   <span v-if="currentStep > index + 1" class="absolute inset-0 flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
@@ -46,12 +117,37 @@
                     </svg>
                   </span>
                   <span v-else class="step-number" :style="currentStep >= index + 1 ? 'color: white !important' : ''">{{ index + 1 }}</span>
+                  
+                  <!-- Step name tooltip on hover -->
+                  <div class="hidden group-hover:block absolute top-full mt-2 bg-gray-800 text-white text-sm px-2 py-1 rounded z-10 whitespace-nowrap">
+                    {{ step }}
+                  </div>
                 </div>
                 <div 
                   v-if="index < steps.length - 1" 
                   class="w-20 h-1 mx-2"
                   :class="currentStep > index + 1 ? 'bg-custom-red' : 'bg-gray-300'"
                 ></div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Step Names Under Indicators -->
+          <div class="flex justify-center mb-8 px-4">
+            <div class="grid grid-cols-8 w-full max-w-4xl gap-2">
+              <div 
+                v-for="(step, index) in steps" 
+                :key="index"
+                class="text-center" 
+              >
+                <div 
+                  class="text-xs md:text-sm font-medium truncate cursor-pointer"
+                  :class="currentStep === index + 1 ? 'text-custom-red' : 'text-gray-500'"
+                  @click="goToStep(index + 1)"
+                  :title="`Go to ${step}`"
+                >
+                  {{ step }}
+                </div>
               </div>
             </div>
           </div>
@@ -1881,59 +1977,6 @@
                   We will not charge you until your account is approved.
                 </p>
                 
-                <!-- Selected Product Display - Shows only when a device is selected -->
-                <div v-if="selectedDevice" class="mb-8 bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
-                  <div class="bg-gradient-to-r from-green-600 to-green-500 px-6 py-3">
-                    <h4 class="text-white font-bold text-lg">Your Selected Bundle</h4>
-                  </div>
-                  <div class="p-6">
-                    <div class="flex flex-col md:flex-row items-start gap-6">
-                      <!-- Product Image -->
-                      <div class="w-full md:w-1/4 flex-shrink-0 flex justify-center">
-                        <img src="@/../images/fourth.png" alt="Selected POS Bundle" class="h-32 object-contain">
-                      </div>
-                      
-                      <!-- Product Details -->
-                      <div class="flex-grow">
-                        <div class="flex items-center mb-2">
-                          <div class="flex-grow">
-                            <h5 class="text-xl font-bold text-gray-800">{{ selectedDevice }}</h5>
-                            <p class="text-gray-600 text-sm">{{ selectedPaymentOption === 'buy' ? 'Purchase' : 'Lease' }} Option</p>
-                          </div>
-                          <div class="flex-shrink-0">
-                            <span class="inline-block px-3 py-1 text-sm bg-green-100 text-green-800 font-semibold rounded-full">
-                              0% Processing Fees
-                            </span>
-                          </div>
-                        </div>
-                        
-                        <div class="mt-4 flex flex-wrap gap-3">
-                          <div class="bg-gray-100 px-3 py-2 rounded-md">
-                            <span class="text-xs text-gray-500 block">Bundle Price</span>
-                            <span class="text-lg font-bold text-gray-900">{{ getBundlePrice(selectedDevice) }}</span>
-                          </div>
-                          
-                          <div class="bg-gray-100 px-3 py-2 rounded-md">
-                            <span class="text-xs text-gray-500 block">Est. Monthly Savings</span>
-                            <span class="text-lg font-bold text-green-600">$350+</span>
-                          </div>
-                          
-                          <div class="bg-gray-100 px-3 py-2 rounded-md">
-                            <span class="text-xs text-gray-500 block">Setup Fee</span>
-                            <span class="text-lg font-bold text-gray-900">$0</span>
-                          </div>
-                        </div>
-                        
-                        <div class="mt-4 pt-4 border-t border-gray-200">
-                          <p class="text-gray-600">
-                            You've selected your bundle! Continue to customize more options or proceed to the next step.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
                 <!-- Zero-fee processing banner -->
                 <div class="mb-8 bg-gradient-to-r from-red-700 to-red-500 rounded-lg shadow-lg overflow-hidden">
                   <div class="p-6 text-white">
@@ -1978,148 +2021,188 @@
                   </div>
                 </div>
 
-                <!-- Featured product card -->
-                <div class="bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden mb-8 hover:shadow-2xl transition-shadow duration-300">
-                  <div class="grid grid-cols-1 md:grid-cols-7">
-                    <!-- Product image (3 columns on md) -->
-                    <div class="md:col-span-3 bg-gradient-to-br from-gray-50 to-gray-100 p-6 flex items-center justify-center">
-                      <img src="@/../images/fourth.png" alt="Kwick 15 POS Bundle" class="h-64 object-contain">
+                <!-- Bundle card grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                  <!-- Bundle cards -->
+                  <div v-for="(bundle, index) in bundleOptions.slice(0, 6)" :key="index"
+                    @click="openBundleModal(bundle)"
+                    class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 cursor-pointer transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-custom-red">
+                    
+                    <!-- Bundle image -->
+                    <div class="h-48 bg-gray-50 flex items-center justify-center p-4 relative overflow-hidden">
+                      <img src="@/../images/fourth.png" alt="Bundle Image" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
+                      <!-- Subtle overlay with View text that appears on hover -->
+                      <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-gray-900/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <div class="bg-custom-red text-white px-4 py-1 rounded-full font-medium transform scale-90 hover:scale-100 transition-transform">
+                          View Details
+                      </div>
+                        </div>
                     </div>
                     
-                    <!-- Product details (4 columns on md) -->
-                    <div class="md:col-span-4 p-6 flex flex-col">
-                      <div class="mb-2">
-                        <span class="inline-block px-3 py-1 text-sm font-semibold bg-green-100 text-green-800 rounded-full">MOST POPULAR</span>
-                      </div>
-                      <h4 class="text-3xl font-bold text-gray-800 mb-4">Kwick 15" POS Bundle</h4>
-                      
-                      <div class="mb-6">
-                        <div class="flex items-center mb-4">
-                          <span class="text-4xl font-bold text-green-600">$0</span>
-                          <span class="ml-2 text-gray-500 line-through">$1,388.00</span>
-                          <span class="ml-2 bg-green-100 text-green-800 text-sm font-semibold px-2 py-1 rounded">100% OFF</span>
-                        </div>
-                        <p class="text-gray-600 mb-4">Complete POS solution with 15" touchscreen, receipt printer, and all accessories needed to run your business efficiently.</p>
-                        
-                        <div class="flex flex-wrap gap-2 mb-4">
-                          <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    <div class="p-6">
+                      <h5 class="text-lg font-bold text-gray-800 mb-3">{{ bundle.name }}</h5>
+                      <div>
+                        <div class="flex items-center justify-between">
+                          <span class="text-xl font-bold text-gray-800">Bundle</span>
+                          <span class="text-custom-red font-semibold">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block mr-1" viewBox="0 0 20 20" fill="currentColor">
+                              <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                              <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
                             </svg>
-                            Easy Setup
+                            Details
                           </span>
-                          <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            1-Year Warranty
-                          </span>
-                          <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            24/7 Support
-                          </span>
-                        </div>
-                      </div>
-                      
-                      <div class="mt-auto">
-                        <div class="flex flex-wrap gap-4">
-                        <button 
-                            @click="selectBundleAndTransfer(featuredBundle, 'buy')"
-                            class="flex-grow md:flex-grow-0 px-6 py-3 bg-red-600 text-white font-bold rounded-md hover:bg-red-700 transition-colors shadow-md"
-                            :class="{'ring-2 ring-red-600 bg-red-700': selectedDevice === featuredBundle && selectedPaymentOption === 'buy'}"
-                            type="button"
-                          >
-                            Select This Bundle
-                        </button>
-                          <button 
-                            @click="togglePriceList"
-                            class="flex-grow md:flex-grow-0 px-6 py-3 bg-white border-2 border-red-600 text-red-600 font-bold rounded-md hover:bg-red-50 transition-colors"
-                            type="button"
-                          >
-                            View Pricelist
-                          </button>
                       </div>
                     </div>
                   </div>
                       </div>
                           </div>
                 
-                <!-- Price list slide-down section -->
-                <div 
-                  class="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden mb-8 transition-all duration-500 ease-in-out"
-                  :class="showPriceList ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0 hidden'"
-                >
-                  <div class="p-6">
-                    <div class="flex justify-between items-center mb-6">
-                      <h3 class="text-2xl font-bold text-gray-800">Bundle Pricing</h3>
-                      <button @click="togglePriceList" class="text-gray-500 hover:text-gray-700" type="button">
+                <!-- Bundle Details Modal -->
+                <div v-if="showBundleModal" class="fixed inset-0 flex items-center justify-center z-50 px-4">
+                  <!-- Transparent clickable background to close modal -->
+                  <div class="absolute inset-0" @click.stop.prevent="showBundleModal = false"></div>
+                  
+                  <!-- Modal content - only the container has styling -->
+                  <div class="bg-white rounded-lg shadow-2xl overflow-hidden max-w-5xl w-full max-h-[90vh] relative z-10 border border-gray-200">
+                    <!-- Modal header -->
+                    <div class="flex justify-between items-center p-4 border-b border-gray-200">
+                      <h3 class="text-xl font-bold text-gray-800">Bundle Details</h3>
+                      <button @click.stop.prevent="showBundleModal = false" class="text-gray-400 hover:text-gray-600 transition-colors" type="button">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                       </button>
                         </div>
                     
-                    <div class="overflow-hidden rounded-lg border border-gray-200 mb-6">
-                      <table class="w-full text-left">
-                        <thead class="bg-gray-50 border-b border-gray-200">
-                          <tr>
-                            <th class="px-4 py-3 text-sm font-semibold text-gray-700">Bundle</th>
-                            <th class="px-4 py-3 text-sm font-semibold text-gray-700 text-right">Price</th>
-                            <th class="px-4 py-3 text-sm font-semibold text-gray-700 text-center">Select</th>
-                          </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-200">
-                          <tr v-for="(price, index) in bundlePrices" :key="index" class="hover:bg-gray-50">
-                            <td class="px-4 py-4 text-sm text-gray-800 font-medium">{{ price.name }}</td>
-                            <td class="px-4 py-4 text-sm text-gray-800 text-right">{{ price.price }}</td>
-                            <td class="px-4 py-4 flex justify-center">
-                          <button 
-                                @click="selectBundleAndTransfer(price.name, 'buy')"
-                                class="px-4 py-1 bg-red-600 text-white text-sm font-medium rounded-md hover:bg-red-700 transition-colors"
-                                :class="{'ring-2 ring-red-500': selectedDevice === price.name && selectedPaymentOption === 'buy'}"
-                                type="button"
-                              >
-                                Select
-                          </button>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
+                    <!-- Modal body -->
+                    <div class="overflow-y-auto max-h-[calc(90vh-10rem)]">
+                      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+                        <!-- Product image -->
+                        <div class="bg-gray-50 p-4 rounded-lg flex items-center justify-center">
+                          <img src="@/../images/fourth.png" alt="Bundle Image" class="h-64 object-contain">
                     </div>
+                        
+                        <!-- Product details -->
+                        <div class="flex flex-col">
+                          <h1 class="text-2xl font-bold text-gray-800 mb-2">{{ selectedBundleDetails?.name || "Bundle" }}</h1>
+                          
+                          <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                              <svg v-for="i in 5" :key="i" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" :class="i <= 4 ? 'text-yellow-400' : 'text-gray-300'" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            </div>
+                            <span class="text-blue-600 text-sm ml-2 hover:underline cursor-pointer">578 ratings</span>
                   </div>
                   
-                  <div class="px-6 py-4 bg-gray-50 border-t border-gray-200 flex justify-end">
-                          <button 
-                      @click="togglePriceList" 
-                      class="px-6 py-2 bg-gray-300 text-gray-700 font-medium rounded-md hover:bg-gray-400 transition-colors"
-                      type="button"
-                    >
-                      Cancel
-                          </button>
+                          <div class="border-t border-b border-gray-200 py-4 mb-4">
+                            <div class="flex items-baseline mb-2">
+                              <span class="text-xl text-red-600 font-bold">Special Price:</span>
+                              <span class="text-3xl font-bold text-gray-900 ml-2">{{ getBundlePrice(selectedBundleDetails?.name) }}</span>
+                              <span class="ml-2 text-lg text-gray-500 line-through">$2,388.00</span>
+                            </div>
+                            <div class="bg-green-100 text-green-800 inline-block px-2 py-1 rounded text-sm font-medium">
+                              0% Credit Card Processing Fees
+                            </div>
+                          </div>
+                          
+                          <div class="space-y-4 mb-6">
+                            <div>
+                              <h4 class="font-medium text-gray-900">Description</h4>
+                              <p class="text-gray-700 text-sm">Complete POS solution with all hardware, software, and payment processing needed to run your business efficiently.</p>
+                            </div>
+                            
+                            <div>
+                              <h4 class="font-medium text-gray-900">Features</h4>
+                              <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1 mt-2">
+                                <li>High-performance touchscreen display</li>
+                                <li>Receipt printer included</li>
+                                <li>Payment terminal with PIN pad</li>
+                                <li>Cash drawer</li>
+                                <li>Professional installation and setup</li>
+                                <li>Staff training included</li>
+                              </ul>
+                            </div>
+                            
+                            <!-- Bundles quantity selector moved below features -->
+                            <div class="mt-6 pt-5 border-t border-gray-200">
+                              <div class="bg-gradient-to-r from-gray-50 to-gray-100 p-4 rounded-lg border border-gray-300 shadow-sm">
+                                <div class="flex flex-col gap-3">
+                                  <div>
+                                    <label for="bundleQuantity" class="block text-lg font-bold text-gray-900 mb-2 flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-custom-red" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                                      </svg>
+                                      Bundles:
+                                    </label>
+                                    <select 
+                                      id="bundleQuantity" 
+                                      v-model="bundleQuantity" 
+                                      class="rounded-md border-gray-300 shadow-md focus:border-custom-red focus:ring focus:ring-custom-red focus:ring-opacity-30 w-full text-base font-medium py-2 bg-white hover:bg-gray-50 transition-colors"
+                                    >
+                                      <option value="0">None</option>
+                                      <option value="1">1 Bundle ($1,388.00)</option>
+                                      <option value="2">2 Bundles ($2,776.00)</option>
+                                      <option value="3">3 Bundles ($4,164.00)</option>
+                                      <option value="4">4 Bundles ($5,552.00)</option>
+                                      <option value="5">5 Bundles ($6,940.00)</option>
+                                      <option value="6">6 Bundles ($8,328.00)</option>
+                                      <option value="7">7 Bundles ($9,716.00)</option>
+                                      <option value="8">8 Bundles ($11,104.00)</option>
+                                      <option value="9">9 Bundles ($12,492.00)</option>
+                                      <option value="10">10 Bundles ($13,880.00)</option>
+                                      <option value="11">11 Bundles ($15,268.00)</option>
+                                      <option value="12">12 Bundles ($16,656.00)</option>
+                                      <option value="13">13 Bundles ($18,044.00)</option>
+                                      <option value="14">14 Bundles ($19,432.00)</option>
+                                      <option value="15">15 Bundles ($20,820.00)</option>
+                                      <option value="16">16 Bundles ($22,208.00)</option>
+                                      <option value="17">17 Bundles ($23,596.00)</option>
+                                      <option value="18">18 Bundles ($24,984.00)</option>
+                                      <option value="19">19 Bundles ($26,372.00)</option>
+                                      <option value="20">20 Bundles ($27,760.00)</option>
+                                    </select>
+                                  </div>
+                                  <p class="text-sm text-gray-600 italic">Select the number of bundles required for your business</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                 </div>
                 
-                <!-- Bundle card grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-                  <!-- Bundle cards -->
-                  <div v-for="(bundle, index) in bundleOptions.slice(0, 6)" :key="index"
-                    class="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-200">
-                    <div class="p-6">
-                      <h5 class="text-lg font-bold text-gray-800 mb-3">{{ bundle.name }}</h5>
-                      <div class="mb-4">
-                        <div class="flex items-center">
-                          <span class="text-2xl font-bold text-gray-800">Bundle</span>
+                      <!-- What's included section -->
+                      <div class="p-6 bg-gray-50 border-t border-gray-200">
+                        <h4 class="font-bold text-gray-900 mb-3">What's included in this bundle:</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div class="flex items-start" v-for="(item, idx) in bundleItems" :key="idx">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <div>
+                              <span class="font-medium text-gray-900">{{ item.name }}</span>
+                              <p class="text-sm text-gray-600">{{ item.description }}</p>
                         </div>
                       </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Modal footer -->
+                    <div class="border-t border-gray-200 p-4 bg-gray-50 flex flex-col md:flex-row gap-4">
+                      <div class="flex-grow">
+                        <!-- Removed quantity selector from here -->
+                      </div>
+                      <div class="flex gap-4">
                       <button 
-                        @click="selectBundleAndTransfer(bundle.name, 'buy')"
-                        class="w-full mt-2 py-2 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors"
-                        :class="{'ring-2 ring-blue-500 bg-blue-700': selectedDevice === bundle.name && selectedPaymentOption === 'buy'}"
+                          @click.stop="addBundleToCart" 
+                          class="px-8 py-2 bg-custom-red text-white rounded-md font-medium hover:bg-red-700 transition-colors"
+                          type="button"
                       >
-                        Select
+                          Add to Cart
                       </button>
+                        <!-- Removed Buy Now button -->
+                      </div>
                       </div>
                     </div>
                   </div>
@@ -2142,11 +2225,27 @@
                 <div v-if="deviceSelectionError" class="text-red-600 text-center mb-6">
                   Please select a device to continue
                 </div>
+
+                <div v-if="deviceSelectionError" class="text-red-600 text-center mb-6">
+                  Please select a device or ensure you have items in your cart to continue
+                </div>
               </div>
               
               <!-- Step 7: Bundle Selection -->
               <div v-if="currentStep === 7" class="animate-fade-in">
-                <h3 class="text-2xl font-bold mb-6 text-gray-800">Bundle Selection Details</h3>
+                <div class="flex justify-between items-center mb-6">
+                  <h3 class="text-2xl font-bold text-gray-800">Bundle Selection Details</h3>
+                  <button 
+                    type="button" 
+                    @click="goBackToProducts" 
+                    class="px-4 py-2 bg-white border border-custom-red text-custom-red rounded-md hover:bg-red-50 transition-colors flex items-center shadow-sm"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+                    </svg>
+                    Go Back to Products
+                  </button>
+                </div>
                 
                 <!-- Selected Bundle Confirmation -->
                 <div class="mb-8 bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
@@ -2155,93 +2254,58 @@
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                       </svg>
-                      Your Selected Bundle
+                      Your Selected Bundles
                     </h4>
                   </div>
-                  <div class="p-6">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
-                      <!-- Product Image -->
-                      <div class="bg-gray-50 p-4 rounded-lg flex justify-center">
-                        <img src="@/../images/fourth.png" alt="Selected POS Bundle" class="h-48 object-contain">
+                  <div class="p-4">
+                    <!-- Empty cart message -->
+                    <div v-if="cartItems.length === 0" class="text-center py-4">
+                      <p class="text-gray-600">No items have been added to your cart yet.</p>
+                    </div>
+                    
+                    <!-- Cart items list -->
+                    <div v-else>
+                      <div class="space-y-3">
+                        <div v-for="(item, index) in cartItems" :key="index" class="flex items-start p-2 border-b border-gray-100 last:border-b-0">
+                          <div class="flex-shrink-0 w-16 h-16 bg-gray-50 rounded-md flex items-center justify-center mr-3">
+                            <img src="@/../images/fourth.png" alt="Bundle Image" class="h-12 w-12 object-contain">
+                          </div>
+                          <div class="flex-grow">
+                            <h5 class="text-base font-semibold text-gray-800">{{ item.name }}</h5>
+                            <div class="flex justify-between items-center mt-1">
+                              <span class="text-sm text-gray-600">Qty: {{ item.quantity }}</span>
+                              <span class="text-sm font-medium text-gray-800">{{ item.price }}</span>
+                            </div>
+                            <div class="mt-1">
+                              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">
+                                {{ getBundleCategory(item.name) }}
+                              </span>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                       
-                      <!-- Product Details -->
-                      <div class="md:col-span-2">
-                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                          <div>
-                            <h5 class="text-2xl font-bold text-gray-800">{{ selectedDevice }}</h5>
-                            <p class="text-gray-600">{{ selectedPaymentOption === 'buy' ? 'Purchase Option' : 'Lease Option' }}</p>
+                      <div class="bg-blue-50 border border-blue-100 rounded-md p-3 mt-4">
+                        <h6 class="font-medium text-blue-800 text-sm mb-2">All bundles include:</h6>
+                        <div class="grid grid-cols-2 gap-1 text-sm">
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-500 mr-1 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>POS Software License</span>
                           </div>
-                          <div class="mt-3 md:mt-0">
-                            <span class="inline-block px-4 py-2 bg-green-100 text-green-800 font-semibold rounded-full text-sm">
-                              0% Processing Fees
-                            </span>
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-500 mr-1 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Installation Support</span>
                           </div>
-                        </div>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-6">
-                          <div class="bg-gray-100 p-4 rounded-md text-center">
-                            <span class="text-sm text-gray-500 block mb-1">Bundle Price</span>
-                            <span class="text-xl font-bold text-gray-900">{{ getBundlePrice(selectedDevice) }}</span>
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-500 mr-1 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>0% Processing Fees</span>
                           </div>
-                          
-                          <div class="bg-gray-100 p-4 rounded-md text-center">
-                            <span class="text-sm text-gray-500 block mb-1">Est. Monthly Savings</span>
-                            <span class="text-xl font-bold text-green-600">$350+</span>
-                          </div>
-                          
-                          <div class="bg-gray-100 p-4 rounded-md text-center">
-                            <span class="text-sm text-gray-500 block mb-1">Setup Fee</span>
-                            <span class="text-xl font-bold text-gray-900">$0</span>
-                          </div>
-                        </div>
-                        
-                        <div class="bg-blue-50 border border-blue-100 rounded-md p-4 mb-4">
-                          <h6 class="font-medium text-blue-800 mb-2">What's included:</h6>
-                          <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
-                            <li class="flex items-start">
-                              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                              </svg>
-                              <span>POS Terminal</span>
-                            </li>
-                            <li class="flex items-start">
-                              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                              </svg>
-                              <span>Receipt Printer</span>
-                            </li>
-                            <li class="flex items-start">
-                              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                              </svg>
-                              <span>Credit Card Processor</span>
-                            </li>
-                            <li class="flex items-start">
-                              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                              </svg>
-                              <span>Cash Drawer</span>
-                            </li>
-                            <li class="flex items-start">
-                              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                              </svg>
-                              <span>POS Software License</span>
-                            </li>
-                            <li class="flex items-start">
-                              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                              </svg>
-                              <span>Installation Support</span>
-                            </li>
-                          </ul>
-                        </div>
-                        
-                        <div class="border-t border-gray-200 pt-4">
-                          <p class="text-gray-600">
-                            You've selected the perfect bundle for your business! Now choose your payment method below.
-                          </p>
                         </div>
                       </div>
                     </div>
@@ -2530,7 +2594,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, nextTick } from 'vue';
+import { ref, computed, onMounted, nextTick, watch } from 'vue';
 import NavBar from './NavBar.vue';
 import AppFooter from './AppFooter.vue';
 
@@ -2550,8 +2614,9 @@ const currentStep = ref(1);
 const isSubmitting = ref(false);
 
 // Device selection
-const selectedDevice = ref(null);
-const selectedPaymentOption = ref(null);
+const selectedDevice = ref('');
+const selectedPaymentOption = ref('');
+const deviceSelectionError = ref(false);
 
 // Generate years for business start year dropdown (from 1950 to current year)
 const currentYear = new Date().getFullYear();
@@ -2724,10 +2789,15 @@ const form = ref({
 // Step navigation
 function nextStep() {
   if (validateCurrentStep()) {
-    // If on device selection step, check if a device was selected
-    if (currentStep.value === 6 && !selectedDevice.value) {
+    // If on device selection step, check if a device was selected OR if there are items in the cart
+    if (currentStep.value === 6 && !selectedDevice.value && cartItems.value.length === 0) {
       deviceSelectionError.value = true;
       return;
+    }
+    
+    // If there are items in the cart, allow proceeding to the next step even if no device is currently selected
+    if (currentStep.value === 6 && !selectedDevice.value && cartItems.value.length > 0) {
+      deviceSelectionError.value = false;
     }
     
     currentStep.value++;
@@ -2829,43 +2899,50 @@ function selectDevice(device, paymentOption) {
   // Update form data with selected device
   form.value.selected_device = device;
   form.value.payment_option = paymentOption;
+  
+  // Add to cart with animation
+  addToCart({
+    name: device,
+    price: paymentOption || getBundlePrice(device)
+  });
 }
 
-// Include these additions in your script
-const deviceSelectionError = ref(false);
+// Include these additions in your script\n// Removed duplicate deviceSelectionError declaration
 
 // Add new data for device selection components in script section
 const showPriceList = ref(false);
 const featuredBundle = 'Kwick 15" POS Bundle';
 
 const bundlePrices = [
-  { name: "1 Bundle", price: "$1,388.00" },
-  { name: "2 Bundles", price: "$2,776.00" },
-  { name: "3 Bundles", price: "$4,164.00" },
-  { name: "4 Bundles", price: "$5,552.00" },
-  { name: "5 Bundles", price: "$6,940.00" },
-  { name: "6 Bundles", price: "$8,328.00" },
-  { name: "7 Bundles", price: "$9,716.00" },
-  { name: "8 Bundles", price: "$11,104.00" },
-  { name: "9 Bundles", price: "$12,492.00" },
-  { name: "10 Bundles", price: "$13,880.00" },
-  { name: "11 Bundles", price: "$15,268.00" },
-  { name: "12 Bundles", price: "$16,656.00" },
-  { name: "13 Bundles", price: "$18,044.00" },
-  { name: "14 Bundles", price: "$19,432.00" },
-  { name: "15 Bundles", price: "$20,820.00" },
-  { name: "16 Bundles", price: "$22,208.00" },
-  { name: "17 Bundles", price: "$23,596.00" },
-  { name: "18 Bundles", price: "$24,984.00" },
-  { name: "19 Bundles", price: "$26,372.00" },
-  { name: "20 Bundles", price: "$27,760.00" }
+  { name: "1 Bundle", price: "$1,735.00" },
+  { name: "2 Bundles", price: "$3,470.00" },
+  { name: "3 Bundles", price: "$5,205.00" },
+  { name: "4 Bundles", price: "$6,940.00" },
+  { name: "5 Bundles", price: "$8,675.00" },
+  { name: "6 Bundles", price: "$10,410.00" },
+  { name: "7 Bundles", price: "$12,145.00" },
+  { name: "8 Bundles", price: "$13,880.00" },
+  { name: "9 Bundles", price: "$15,615.00" },
+  { name: "10 Bundles", price: "$17,350.00" },
+  { name: "11 Bundles", price: "$19,085.00" },
+  { name: "12 Bundles", price: "$20,820.00" },
+  { name: "13 Bundles", price: "$22,555.00" },
+  { name: "14 Bundles", price: "$24,290.00" },
+  { name: "15 Bundles", price: "$26,025.00" },
+  { name: "16 Bundles", price: "$27,760.00" },
+  { name: "17 Bundles", price: "$29,495.00" },
+  { name: "18 Bundles", price: "$31,230.00" },
+  { name: "19 Bundles", price: "$32,965.00" },
+  { name: "20 Bundles", price: "$34,700.00" }
 ];
 
 const bundleOptions = [
+  { name: "Kwick 15\" POS Bundle" },
   { name: "Kwick 15\" Server Bundle" },
   { name: "Kwick Customer Display POS Bundle" },
   { name: "Kwick iPad Bundle" },
   { name: "Kwick 21\" Large Kiosk Bundle" },
+  { name: "Setup for Kwick: Basic Setup" },
   { name: "Handheld - A920 (Financing Only)" },
   { name: "ACT 15\" POS Station" },
   { name: "MINT 10\" POS Station w/ Built-in Printer" },
@@ -2942,10 +3019,53 @@ function getBundlePrice(device) {
   const bundleMatch = bundlePrices.find(b => b.name === device);
   if (bundleMatch) return bundleMatch.price;
   
-  // For featured bundle, return the price of 1 Bundle
+  // Bundles (main Kwick products with 25% markup)
+  if (device === featuredBundle || 
+      device === "Kwick 15\" POS Bundle" || 
+      device === "Kwick 15\" Server Bundle" ||
+      device === "Kwick Customer Display POS Bundle" ||
+      device === "Kwick iPad Bundle" ||
+      device === "Kwick 21\" Large Kiosk Bundle") {
+    return '$1,735.00';
+  }
+  
+  // Individual Hardware
+  if (device === "Handheld - A920 (Financing Only)") return '$625.00';
+  if (device === "ACT 15\" POS Station") return '$1,735.00';
+  if (device === "MINT 10\" POS Station w/ Built-in Printer") return '$1,250.00';
+  if (device === "MagTek Payment Device DynaFlex II Go") return '$625.00';
+  if (device === "Food Truck / Mobile Vendor Hardware Setup") return '$2,500.00';
+  if (device === "Innovative QR Bundle") return '$1,250.00';
+  if (device === "3rd Party Platform Integration (After 3-month trial)") return '$625.00';
+  
+  // Additional Hardware Options
+  if (device === "KP Thermal Printer") return '$281.25';
+  if (device === "Epson Kitchen Printer") return '$625.00';
+  if (device === "Epson Label Printer") return '$687.50';
+  if (device === "Kitchen Display Monitor 20\"") return '$1,250.00';
+  if (device === "KwickPOS Caller ID") return '$125.00';
+  if (device === "Kitchen Armor Kitchen Display Monitor 22\"") return '$1,875.00';
+  
+  // Setup Options
+  if (device === "Basic Setup") return '$500.00';
+  if (device === "Setup for Kwick: Basic Setup") return '$500.00';
+  
+  // Default fallback price with 25% markup
+  return '$1,735.00';
+}
+
+// Function kept as reference for original non-markup prices (not active)
+function getOriginalBundlePrice(device) {
+  if (!device) return '$0.00';
+  
+  // First, check the bundlePrices array for exact matches
+  const bundleMatch = bundlePrices.find(b => b.name === device);
+  if (bundleMatch) return bundleMatch.price;
+  
+  // For featured bundle, return the price of 1 Bundle (original price)
   if (device === featuredBundle) return '$1,388.00';
   
-  // For other bundles, return a default price
+  // For other bundles, return a default price (original price)
   return '$1,388.00';
 }
 
@@ -3125,8 +3245,11 @@ function selectValueBundle() {
   form.value.selected_hardware = hardwareComponents.map(c => c.name);
   form.value.selected_marketing_tools = marketingTools.map(t => t.name);
   
-  // Display confirmation message
-  alert('Value Hardware Bundle selected! All components have been added to your package.');
+  // Add to cart
+  addToCart({
+    name: 'Complete POS Solution Package',
+    price: '$999.00'
+  });
 }
 
 // Function to toggle handheld feature selection
@@ -3176,7 +3299,7 @@ function selectCompleteSolution(response) {
 
 // Add new function to select a bundle and transfer it to the Bundle Selection step
 function selectBundleAndTransfer(device, paymentOption) {
-  // First set the device
+  // First set the device (this will also add to cart)
   selectDevice(device, paymentOption);
   
   // Next step will show the selected bundle details
@@ -3259,10 +3382,44 @@ onMounted(() => {
   });
 });
 
+// Initialize the signature canvas after component mounted
+onMounted(() => {
+  // Only initialize the signature pad when we're on the correct step
+  watch(() => currentStep.value, (newStep) => {
+    // Step 7 is the signature step (based on your steps array)
+    if (newStep === 7) {
+      // Use nextTick to ensure the DOM is ready after step change
+      nextTick(() => {
+        // Use a safe version of setupSignature that won't loop infinitely
+        setupSignatureWithRetry();
+      });
+    }
+  });
+});
+
+// New function with retry limit
+function setupSignatureWithRetry(retries = 0) {
+  const MAX_RETRIES = 5;
+  
+  if (retries >= MAX_RETRIES) {
+    console.error("Failed to initialize signature canvas after multiple attempts");
+    return;
+  }
+  
+  if (!signatureCanvas.value) {
+    console.warn('Canvas ref not available yet, will retry');
+    setTimeout(() => setupSignatureWithRetry(retries + 1), 500);
+    return;
+  }
+  
+  // If we reach here, the canvas is available, so set it up
+  setupSignature();
+}
+
 function setupSignature() {
   if (!signatureCanvas.value) {
     console.warn('Canvas ref not available yet');
-    setTimeout(setupSignature, 500);
+    // No need for setTimeout here anymore
     return;
   }
   
@@ -3390,6 +3547,233 @@ function initializeCanvas() {
   console.log('Old initialize function called - safe to ignore');
   return;
 }
+
+// Shopping cart functionality
+const cartItems = ref([]);
+const cartItemCount = computed(() => cartItems.value.length);
+const showCartItems = ref(false);
+const showCartSuccessMessage = ref(false);
+const cartSuccessMessage = ref('');
+
+// Animation for cart badge
+const animateCartBadge = () => {
+  const cartBadge = document.querySelector('.bounce-enter-active');
+  if (cartBadge) {
+    cartBadge.classList.add('animate-cart-badge');
+    setTimeout(() => {
+      cartBadge.classList.remove('animate-cart-badge');
+    }, 500);
+  }
+};
+
+// Add to cart function
+const addToCart = (item) => {
+  // Check if item already exists to avoid duplicates
+  const exists = cartItems.value.some(cartItem => 
+    cartItem.name === item.name && cartItem.price === item.price
+  );
+  
+  if (!exists) {
+    cartItems.value.push(item);
+    
+    // Show success message
+    cartSuccessMessage.value = `${item.name} ${item.quantity ? `(${item.quantity} ${item.quantity > 1 ? 'bundles' : 'bundle'})` : ''} is added to cart successfully`;
+    showCartSuccessMessage.value = true;
+    
+    // Hide success message after 5 seconds (increased from 3)
+    setTimeout(() => {
+      showCartSuccessMessage.value = false;
+    }, 5000);
+    
+    // Create flying element animation
+    const flyingItem = document.createElement('div');
+    flyingItem.className = 'flying-item';
+    flyingItem.innerHTML = `
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+      </svg>
+    `;
+    document.body.appendChild(flyingItem);
+    
+    // Get the button/element that was clicked
+    const sourceElement = document.activeElement || document.querySelector('.border-blue-400');
+    const cartIcon = document.querySelector('.mt-4.inline-flex .p-3.bg-gradient-to-br');
+    
+    if (sourceElement && cartIcon) {
+      const sourceRect = sourceElement.getBoundingClientRect();
+      const cartRect = cartIcon.getBoundingClientRect();
+      
+      // Position the flying item at the source element
+      flyingItem.style.top = `${sourceRect.top + sourceRect.height/2 - 15}px`;
+      flyingItem.style.left = `${sourceRect.left + sourceRect.width/2 - 15}px`;
+      
+      // Animate the flying item to the cart
+      setTimeout(() => {
+        flyingItem.style.top = `${cartRect.top + cartRect.height/2 - 15}px`;
+        flyingItem.style.left = `${cartRect.left + cartRect.width/2 - 15}px`;
+        flyingItem.style.opacity = '0.5';
+        flyingItem.style.transform = 'scale(0.5)';
+      }, 50);
+      
+      // Remove the flying item after animation
+      setTimeout(() => {
+        document.body.removeChild(flyingItem);
+        
+        // Animate the cart icon
+        cartIcon.classList.add('animate-cart-icon');
+        setTimeout(() => {
+          cartIcon.classList.remove('animate-cart-icon');
+        }, 500);
+      }, 500);
+    }
+  }
+};
+
+// Remove from cart function
+const removeFromCart = (index) => {
+  cartItems.value.splice(index, 1);
+};
+
+// Function to go back to products
+function goBackToProducts() {
+  currentStep.value = 6; // Go back to device selection step
+  window.scrollTo(0, 0);
+}
+
+// Add new data for the Bundle Details Modal
+const selectedBundleDetails = ref(null);
+const bundleQuantity = ref(0);
+
+// Function to open bundle details modal
+function openBundleModal(bundle) {
+  // Set the selected bundle details for the modal
+  selectedBundleDetails.value = bundle;
+  
+  // Reset bundle quantity to "None" when opening a new bundle modal
+  bundleQuantity.value = 0;
+  
+  // Show the modal
+  showBundleModal.value = true;
+  
+  // Prevent any unwanted step navigation
+  if (typeof event !== 'undefined' && event) {
+    event.stopPropagation();
+    event.preventDefault();
+  }
+}
+
+// Function to add bundle to cart
+function addBundleToCart() {
+  // Get the bundle name and price
+  const bundleName = selectedBundleDetails.value.name;
+  const bundlePrice = getBundlePrice(bundleName);
+  const bundleCount = parseInt(bundleQuantity.value);
+  
+  addToCart({
+    name: bundleName,
+    price: bundlePrice,
+    quantity: bundleCount
+  });
+  
+  showBundleModal.value = false;
+}
+
+// Function to buy now
+function buyNowBundle() {
+  addToCart({
+    name: selectedBundleDetails.value.name,
+    price: getBundlePrice(selectedBundleDetails.value.name),
+    quantity: bundleQuantity.value
+  });
+  
+  // Select this device/bundle
+  selectDevice(selectedBundleDetails.value.name, 'buy');
+  
+  // Close the modal
+  showBundleModal.value = false;
+  
+  // We don't want to automatically go to step 8, so no navigation here
+}
+
+// Bundle Modal
+const showBundleModal = ref(false);
+const bundleItems = ref([
+  { name: 'POS Terminal', description: 'High-performance touchscreen terminal' },
+  { name: 'Receipt Printer', description: 'Thermal receipt printer for fast printing' },
+  { name: 'Payment Terminal', description: 'Secure payment processing terminal with PIN pad' },
+  { name: 'Cash Drawer', description: 'Durable metal cash drawer with security features' },
+  { name: 'Barcode Scanner', description: 'High-speed laser barcode scanner' },
+  { name: 'Cloud Software', description: 'Full-featured POS software with inventory management' },
+  { name: 'Installation', description: 'Professional on-site installation and setup' },
+  { name: 'Training', description: 'Staff training on using the POS system' },
+]);
+
+// Function to go to a specific step
+function goToStep(step) {
+  // Allow going back to previous steps without validation
+  if (step < currentStep.value) {
+    currentStep.value = step;
+    window.scrollTo(0, 0);
+    return;
+  }
+  
+  // Skip current step (stay on same step)
+  if (step === currentStep.value) {
+    return;
+  }
+  
+  // When moving forward, we need to validate the current step first
+  if (validateCurrentStep()) {
+    // Check device selection specifically for step 6
+    if (currentStep.value === 6 && step > 6 && !selectedDevice.value) {
+      deviceSelectionError.value = true;
+      return;
+    }
+    
+    // If validation passed, go to the requested step
+    currentStep.value = step;
+    window.scrollTo(0, 0);
+    
+    // Handle submission if trying to go beyond the last step
+    if (currentStep.value > totalSteps) {
+      submitForm();
+    }
+  }
+}
+
+// Add new function to get bundle category
+function getBundleCategory(bundleName) {
+  switch (bundleName) {
+    case 'Kwick 15" POS Bundle':
+      return 'POS Bundle';
+    case 'Kwick 15" Server Bundle':
+      return 'Server Bundle';
+    case 'Kwick Customer Display POS Bundle':
+      return 'POS Bundle';
+    case 'Kwick iPad Bundle':
+      return 'POS Bundle';
+    case 'Kwick 21" Large Kiosk Bundle':
+      return 'Kiosk Bundle';
+    case 'Setup for Kwick: Basic Setup':
+      return 'Setup';
+    case 'Handheld - A920 (Financing Only)':
+      return 'Handheld';
+    case 'ACT 15" POS Station':
+      return 'POS Station';
+    case 'MINT 10" POS Station w/ Built-in Printer':
+      return 'POS Station';
+    case 'MagTek Payment Device DynaFlex II Go':
+      return 'Payment Device';
+    case 'Food Truck / Mobile Vendor Hardware Setup':
+      return 'Hardware Setup';
+    case 'Innovative QR Bundle':
+      return 'QR Bundle';
+    case '3rd Party Platform Integration (After 3-month trial)':
+      return 'Integration';
+    default:
+      return 'Unknown';
+  }
+}
 </script>
 
 <style scoped>
@@ -3498,5 +3882,54 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
   -moz-appearance: textfield; /* Firefox */
 }
+
+/* Cart animation styles */
+.bounce-enter-active {
+  animation: bounce 0.5s;
+}
+
+.bounce-leave-active {
+  animation: bounce 0.5s reverse;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-cart-icon {
+  animation: cartShake 0.5s ease-in-out;
+}
+
+@keyframes cartShake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px) rotate(-5deg); }
+  50% { transform: translateX(5px) rotate(5deg); }
+  75% { transform: translateX(-5px) rotate(-5deg); }
+  100% { transform: translateX(0); }
+}
+
+/* Flying item animation */
+.flying-item {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  background-color: #973131;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: all 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  pointer-events: none;
+}
 </style>
+
 
