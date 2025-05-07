@@ -1,5 +1,4 @@
-<template>
-  <div>
+<template>  <div>
     <NavBar />
     
     <div class="py-16 bg-gray-50">
@@ -2037,13 +2036,38 @@
                     
                     <!-- Bundle image -->
                     <div class="h-48 bg-gray-50 flex items-center justify-center p-4 relative overflow-hidden">
-                      <img src="@/../images/fourth.png" alt="Bundle Image" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
+                      <template v-if="bundle.name === 'Kwick 15&quot; POS Bundle'">
+                        <img src="@/../images/kwickpos_posbank.png" :alt="bundle.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
+                      </template>
+                      <template v-else-if="bundle.name === 'Kwick 15&quot; Server Bundle'">
+                        <div class="h-full w-full flex items-center justify-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="h-32 w-32 text-gray-700 transition-transform duration-500 group-hover:scale-110">
+                            <g fill="currentColor">
+                              <path d="M58,36H6a2,2,0,0,0-2,2V50a2,2,0,0,0,2,2H58a2,2,0,0,0,2-2V38A2,2,0,0,0,58,36ZM14,46a2,2,0,1,1,2-2A2,2,0,0,1,14,46Zm8,0a2,2,0,1,1,2-2A2,2,0,0,1,22,46Z"/>
+                              <path d="M58,18H6a2,2,0,0,0-2,2V32a2,2,0,0,0,2,2H58a2,2,0,0,0,2-2V20A2,2,0,0,0,58,18ZM14,28a2,2,0,1,1,2-2A2,2,0,0,1,14,28Zm8,0a2,2,0,1,1,2-2A2,2,0,0,1,22,28Z"/>
+                              <circle cx="50" cy="22" r="1.5" fill="#973131"/>
+                              <circle cx="50" cy="26" r="1.5" fill="#4CAF50"/>
+                              <circle cx="50" cy="40" r="1.5" fill="#973131"/>
+                              <circle cx="50" cy="44" r="1.5" fill="#4CAF50"/>
+                              <path d="M58,0H6A2,2,0,0,0,4,2V14a2,2,0,0,0,2,2H58a2,2,0,0,0,2-2V2A2,2,0,0,0,58,0ZM14,10a2,2,0,1,1,2-2A2,2,0,0,1,14,10Zm8,0a2,2,0,1,1,2-2A2,2,0,0,1,22,10Z"/>
+                              <circle cx="50" cy="4" r="1.5" fill="#973131"/>
+                              <circle cx="50" cy="8" r="1.5" fill="#4CAF50"/>
+                              <path d="M58,54H6a2,2,0,0,0-2,2v6a2,2,0,0,0,2,2H58a2,2,0,0,0,2-2V56A2,2,0,0,0,58,54ZM14,62a2,2,0,1,1,2-2A2,2,0,0,1,14,62Zm8,0a2,2,0,1,1,2-2A2,2,0,0,1,22,62Z"/>
+                              <circle cx="50" cy="58" r="1.5" fill="#973131"/>
+                              <text x="32" y="62" text-anchor="middle" font-size="4" font-weight="bold">SERVER</text>
+                            </g>
+                          </svg>
+                        </div>
+                      </template>
+                      <template v-else>
+                        <img src="@/../images/fourth.png" :alt="bundle.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
+                      </template>
                       <!-- Subtle overlay with View text that appears on hover -->
                       <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-gray-900/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
                         <div class="bg-custom-red text-white px-4 py-1 rounded-full font-medium transform scale-90 hover:scale-100 transition-transform">
                           View Details
-                      </div>
                         </div>
+                      </div>
                     </div>
                     
                     <div class="p-6">
@@ -2080,7 +2104,21 @@
                     
                     <!-- Product image -->
                     <div class="h-48 bg-gray-50 flex items-center justify-center p-4 relative overflow-hidden">
-                      <img :src="product.name === 'Handheld - A920' ? '@/../images/A920.jpg' : '@/../images/fourth.png'" :alt="product.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
+                      <template v-if="product.name === 'Handheld - A920'">
+                        <img src="@/../images/A920.jpg" :alt="product.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
+                      </template>
+                      <template v-else-if="product.name === 'MINT 10&quot; POS Station w/ Built-in Printer'">
+                        <img src="@/../images/mintPOS.jpg" :alt="product.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
+                      </template>
+                      <template v-else-if="product.name === 'MagTek Payment Device DynaFlex II Go'">
+                        <img src="@/../images/Magtek.png" :alt="product.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
+                      </template>
+                      <template v-else-if="product.name === 'Food Truck / Mobile Vendor Hardware Setup'">
+                        <img src="@/../images/foodtruckimg.jpg" :alt="product.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
+                      </template>
+                      <template v-else>
+                        <img src="@/../images/fourth.png" :alt="product.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
+                      </template>
                       <!-- Subtle overlay with View text that appears on hover -->
                       <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-gray-900/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
                         <div class="bg-custom-red text-white px-4 py-1 rounded-full font-medium transform scale-90 hover:scale-100 transition-transform">
@@ -2104,7 +2142,6 @@
                         </div>
                         <div class="mt-2">
                           <span class="text-green-600 font-medium">{{ getBundlePrice(product.name) }}</span>
-                          <span v-if="product.name === 'Handheld - A920'" class="text-sm text-gray-500"> per unit</span>
                       </div>
                     </div>
                   </div>
@@ -2133,7 +2170,24 @@
                       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
                         <!-- Product image -->
                         <div class="bg-gray-50 p-4 rounded-lg flex items-center justify-center">
-                          <img src="@/../images/fourth.png" alt="Bundle Image" class="h-64 object-contain">
+                          <template v-if="selectedBundleDetails?.name === 'Handheld - A920'">
+                            <img src="@/../images/A920.jpg" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+                          </template>
+                          <template v-else-if="selectedBundleDetails?.name === 'MINT 10&quot; POS Station w/ Built-in Printer'">
+                            <img src="@/../images/mintPOS.jpg" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+                          </template>
+                          <template v-else-if="selectedBundleDetails?.name === 'MagTek Payment Device DynaFlex II Go'">
+                            <img src="@/../images/Magtek.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+                          </template>
+                          <template v-else-if="selectedBundleDetails?.name === 'Food Truck / Mobile Vendor Hardware Setup'">
+                            <img src="@/../images/foodtruckimg.jpg" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+                          </template>
+                          <template v-else-if="selectedBundleDetails?.name === 'Kwick 15&quot; POS Bundle'">
+                            <img src="@/../images/kwickpos_posbank.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+                          </template>
+                          <template v-else>
+                            <img src="@/../images/fourth.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+                          </template>
                     </div>
                         
                         <!-- Product details -->
@@ -2187,7 +2241,7 @@
                                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-custom-red" viewBox="0 0 20 20" fill="currentColor">
                                         <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                                       </svg>
-                                      Bundles:
+                                      {{ selectedBundleDetails?.name === 'Handheld - A920' ? 'Units:' : 'Bundles:' }}
                                     </label>
                                     <select 
                                       id="bundleQuantity" 
@@ -2200,7 +2254,7 @@
                                       </template>
                                     </select>
                                   </div>
-                                  <p class="text-sm text-gray-600 italic">Select the number of bundles required for your business</p>
+                                  <p class="text-sm text-gray-600 italic">Select the number of {{ selectedBundleDetails?.name === 'Handheld - A920' ? 'units' : 'bundles' }} required for your business</p>
                                 </div>
                               </div>
                             </div>
@@ -3094,7 +3148,7 @@ function getBundlePrice(device) {
   
   // Individual Hardware
   if (device === "Handheld - A920 (Financing Only)") return '$625.00';
-  if (device === "Handheld - A920") return '$10.00/month';
+  if (device === "Handheld - A920") return '$550.00';
   if (device === "ACT 15\" POS Station") return '$1,288.00';
   if (device === "MINT 10\" POS Station w/ Built-in Printer") return '$999.00';
   if (device === "MagTek Payment Device DynaFlex II Go") return '$999.00';
@@ -3140,17 +3194,6 @@ function addBundleToCart() {
     return;
   }
   
-  // Handle A920 differently with monthly pricing
-  if (bundleName === "Handheld - A920") {
-    addToCart({
-      name: `${bundleName} (${quantity} ${quantity > 1 ? 'units' : 'unit'})`,
-      price: `$${quantity * 10}/month`,
-      quantity: quantity
-    });
-    showBundleModal.value = false;
-    return;
-  }
-  
   // Set price per bundle based on bundle type
   let pricePerBundle;
   switch(bundleName) {
@@ -3187,6 +3230,9 @@ function addBundleToCart() {
     case "3rd Party Platform Integration (After 3-month trial)":
       pricePerBundle = 109;
       break;
+    case "Handheld - A920":
+      pricePerBundle = 550;
+      break;
     default:
       pricePerBundle = 1388;
   }
@@ -3200,9 +3246,14 @@ function addBundleToCart() {
     currency: 'USD'
   }).format(totalPrice);
 
+  // Determine label based on product type
+  const itemLabel = bundleName === "Handheld - A920" ? 
+    (quantity > 1 ? 'units' : 'unit') : 
+    (quantity > 1 ? 'bundles' : 'bundle');
+
   // Add to cart with quantity and total price
   addToCart({
-    name: `${bundleName} (${quantity} ${quantity > 1 ? 'bundles' : 'bundle'})`,
+    name: `${bundleName} (${quantity} ${itemLabel})`,
     price: formattedTotalPrice,
     quantity: quantity
   });
@@ -3220,14 +3271,7 @@ function getBundlePricesArray(bundleName) {
     }];
   }
 
-  // For Handheld A920, show monthly pricing options
-  if (bundleName === "Handheld - A920") {
-    return Array.from({ length: 20 }, (_, i) => ({
-      name: `${i + 1} ${i === 0 ? 'Unit' : 'Units'}`,
-      price: `$${(i + 1) * 10}/month`
-    }));
-  }
-
+  // Get base price for the bundle type
   let basePrice;
   switch(bundleName) {
     case "Kwick 15\" Server Bundle":
@@ -3263,12 +3307,20 @@ function getBundlePricesArray(bundleName) {
     case "3rd Party Platform Integration (After 3-month trial)":
       basePrice = 109;
       break;
+    case "Handheld - A920":
+      basePrice = 550;
+      break;
     default:
       basePrice = 1388;
   }
 
+  // For Handheld A920, use units instead of bundles label
+  const itemLabel = bundleName === "Handheld - A920" ? 
+    (i => `${i + 1} ${i === 0 ? 'Unit' : 'Units'}`) : 
+    (i => `${i + 1} ${i === 0 ? 'Bundle' : 'Bundles'}`);
+
   return Array.from({ length: 20 }, (_, i) => ({
-    name: `${i + 1} ${i === 0 ? 'Bundle' : 'Bundles'}`,
+    name: itemLabel(i),
     price: new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD'
@@ -3882,6 +3934,17 @@ const bundlePriceValue = computed(() => {
   const numericValue = parseFloat(priceString.replace(/[^0-9.]/g, ''));
   return numericValue || 0;
 });
+
+// Function to get product image
+function getProductImage(productName) {
+  if (productName === 'Handheld - A920') {
+    return '@/../images/A920.jpg';
+  } else if (productName === 'MINT 10" POS Station w/ Built-in Printer') {
+    return '@/../images/mintPOS.jpg';
+  } else {
+    return '@/../images/fourth.png';
+  }
+}
 </script>
 
 <style scoped>
@@ -4039,5 +4102,6 @@ input[type="number"] {
   pointer-events: none;
 }
 </style>
+
 
 
