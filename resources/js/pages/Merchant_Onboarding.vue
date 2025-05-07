@@ -2105,11 +2105,11 @@
                         <div class="mt-2">
                           <span class="text-green-600 font-medium">{{ getBundlePrice(product.name) }}</span>
                           <span v-if="product.name === 'Handheld - A920'" class="text-sm text-gray-500"> per unit</span>
-                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                      </div>
+                          </div>
                 
                 <!-- Bundle Details Modal -->
                 <div v-if="showBundleModal" class="fixed inset-0 flex items-center justify-center z-50 px-4">
@@ -3098,7 +3098,7 @@ function getBundlePrice(device) {
   if (device === "ACT 15\" POS Station") return '$1,288.00';
   if (device === "MINT 10\" POS Station w/ Built-in Printer") return '$999.00';
   if (device === "MagTek Payment Device DynaFlex II Go") return '$999.00';
-  if (device === "Food Truck / Mobile Vendor Hardware Setup") return '$1288.00';
+  if (device === "Food Truck / Mobile Vendor Hardware Setup") return '$1,288.00';
   if (device === "Innovative QR Bundle") return '$49.00';
   if (device === "3rd Party Platform Integration (After 3-month trial)") return '$109.00';
   
@@ -3106,9 +3106,8 @@ function getBundlePrice(device) {
   if (device === "KP Thermal Printer") return '$225.00';
   if (device === "Epson Kitchen Printer") return '$500.00';
   if (device === "Epson Label Printer") return '$550.00';
-  if (device === "Kitchen Display Monitor 20\"") return '$1,250.00';
-  if (device === "KwickPOS Caller ID") return '$100.00';
   if (device === "Kitchen Display Monitor 20\"") return '$1,000.00';
+  if (device === "KwickPOS Caller ID") return '$100.00';
   if (device === "Kitchen Armor Kitchen Display Monitor 22\"") return '$1,500.00';
   
   // Setup Options
@@ -3170,6 +3169,24 @@ function addBundleToCart() {
     case "Kwick 21\" Large Kiosk Bundle":
       pricePerBundle = 3000;
       break;
+    case "ACT 15\" POS Station":
+      pricePerBundle = 1288;
+      break;
+    case "MINT 10\" POS Station w/ Built-in Printer":
+      pricePerBundle = 999;
+      break;
+    case "MagTek Payment Device DynaFlex II Go":
+      pricePerBundle = 999;
+      break;
+    case "Food Truck / Mobile Vendor Hardware Setup":
+      pricePerBundle = 1288;
+      break;
+    case "Innovative QR Bundle":
+      pricePerBundle = 49;
+      break;
+    case "3rd Party Platform Integration (After 3-month trial)":
+      pricePerBundle = 109;
+      break;
     default:
       pricePerBundle = 1388;
   }
@@ -3227,6 +3244,24 @@ function getBundlePricesArray(bundleName) {
       break;
     case "Kwick 21\" Large Kiosk Bundle":
       basePrice = 3000;
+      break;
+    case "ACT 15\" POS Station":
+      basePrice = 1288;
+      break;
+    case "MINT 10\" POS Station w/ Built-in Printer":
+      basePrice = 999;
+      break;
+    case "MagTek Payment Device DynaFlex II Go":
+      basePrice = 999;
+      break;
+    case "Food Truck / Mobile Vendor Hardware Setup":
+      basePrice = 1288;
+      break;
+    case "Innovative QR Bundle":
+      basePrice = 49;
+      break;
+    case "3rd Party Platform Integration (After 3-month trial)":
+      basePrice = 109;
       break;
     default:
       basePrice = 1388;
