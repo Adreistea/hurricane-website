@@ -2022,9 +2022,16 @@
                 </div>
 
                 <!-- Bundle card grid -->
+                <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3 text-custom-red" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                  </svg>
+                  Bundles
+                </h2>
+
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                   <!-- Bundle cards -->
-                  <div v-for="(bundle, index) in bundleOptions.slice(0, 6)" :key="index"
+                  <div v-for="(bundle, index) in filteredBundleOptions" :key="index"
                     @click="openBundleModal(bundle)"
                     class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 cursor-pointer transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-custom-red">
                     
@@ -2056,6 +2063,53 @@
                   </div>
                       </div>
                           </div>
+                
+                <!-- Products Section -->
+                <h2 class="text-2xl font-bold text-gray-800 mb-6 mt-12 flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3 text-custom-red" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd" />
+                  </svg>
+                  Products
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                  <!-- Product cards -->
+                  <div v-for="(product, index) in productOptions" :key="index"
+                    @click="openBundleModal(product)"
+                    class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 cursor-pointer transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-custom-red">
+                    
+                    <!-- Product image -->
+                    <div class="h-48 bg-gray-50 flex items-center justify-center p-4 relative overflow-hidden">
+                      <img :src="product.name === 'Handheld - A920' ? '@/../images/A920.jpg' : '@/../images/fourth.png'" :alt="product.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
+                      <!-- Subtle overlay with View text that appears on hover -->
+                      <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-gray-900/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <div class="bg-custom-red text-white px-4 py-1 rounded-full font-medium transform scale-90 hover:scale-100 transition-transform">
+                          View Details
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="p-6">
+                      <h5 class="text-lg font-bold text-gray-800 mb-3">{{ product.name }}</h5>
+                      <div>
+                        <div class="flex items-center justify-between">
+                          <span class="text-xl font-bold text-gray-800">Product</span>
+                          <span class="text-custom-red font-semibold">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block mr-1" viewBox="0 0 20 20" fill="currentColor">
+                              <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                              <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
+                            </svg>
+                            Details
+                          </span>
+                        </div>
+                        <div class="mt-2">
+                          <span class="text-green-600 font-medium">{{ getBundlePrice(product.name) }}</span>
+                          <span v-if="product.name === 'Handheld - A920'" class="text-sm text-gray-500"> per unit</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 
                 <!-- Bundle Details Modal -->
                 <div v-if="showBundleModal" class="fixed inset-0 flex items-center justify-center z-50 px-4">
@@ -2124,8 +2178,8 @@
                               </ul>
                             </div>
                             
-                            <!-- Bundles quantity selector moved below features -->
-                            <div class="mt-6 pt-5 border-t border-gray-200">
+                          <!-- Bundles quantity selector -->
+                          <div class="mt-6 pt-5 border-t border-gray-200" v-if="selectedBundleDetails?.name !== 'Setup for Kwick: Basic Setup'">
                               <div class="bg-gradient-to-r from-gray-50 to-gray-100 p-4 rounded-lg border border-gray-300 shadow-sm">
                                 <div class="flex flex-col gap-3">
                                   <div>
@@ -2141,30 +2195,29 @@
                                       class="rounded-md border-gray-300 shadow-md focus:border-custom-red focus:ring focus:ring-custom-red focus:ring-opacity-30 w-full text-base font-medium py-2 bg-white hover:bg-gray-50 transition-colors"
                                     >
                                       <option value="0">None</option>
-                                      <option value="1">1 Bundle ($1,388.00)</option>
-                                      <option value="2">2 Bundles ($2,776.00)</option>
-                                      <option value="3">3 Bundles ($4,164.00)</option>
-                                      <option value="4">4 Bundles ($5,552.00)</option>
-                                      <option value="5">5 Bundles ($6,940.00)</option>
-                                      <option value="6">6 Bundles ($8,328.00)</option>
-                                      <option value="7">7 Bundles ($9,716.00)</option>
-                                      <option value="8">8 Bundles ($11,104.00)</option>
-                                      <option value="9">9 Bundles ($12,492.00)</option>
-                                      <option value="10">10 Bundles ($13,880.00)</option>
-                                      <option value="11">11 Bundles ($15,268.00)</option>
-                                      <option value="12">12 Bundles ($16,656.00)</option>
-                                      <option value="13">13 Bundles ($18,044.00)</option>
-                                      <option value="14">14 Bundles ($19,432.00)</option>
-                                      <option value="15">15 Bundles ($20,820.00)</option>
-                                      <option value="16">16 Bundles ($22,208.00)</option>
-                                      <option value="17">17 Bundles ($23,596.00)</option>
-                                      <option value="18">18 Bundles ($24,984.00)</option>
-                                      <option value="19">19 Bundles ($26,372.00)</option>
-                                      <option value="20">20 Bundles ($27,760.00)</option>
+                                      <template v-for="(price, index) in getBundlePricesArray(selectedBundleDetails?.name)" :key="index">
+                                        <option :value="index + 1">{{ price.name }} ({{ price.price }})</option>
+                                      </template>
                                     </select>
                                   </div>
                                   <p class="text-sm text-gray-600 italic">Select the number of bundles required for your business</p>
                                 </div>
+                              </div>
+                            </div>
+
+                            <!-- Fixed price display for Setup bundle -->
+                            <div class="mt-6 pt-5 border-t border-gray-200" v-if="selectedBundleDetails?.name === 'Setup for Kwick: Basic Setup'">
+                              <div class="bg-gradient-to-r from-gray-50 to-gray-100 p-4 rounded-lg border border-gray-300 shadow-sm">
+                                <div class="flex items-center justify-between">
+                                  <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-custom-red" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span class="text-lg font-bold text-gray-900">Basic Setup</span>
+                          </div>
+                                  <div class="text-lg font-bold text-custom-red">$500.00</div>
+                                </div>
+                                <p class="text-sm text-gray-600 italic mt-2">Automatically included with your bundle purchase</p>
                               </div>
                             </div>
                           </div>
@@ -2914,26 +2967,26 @@ const showPriceList = ref(false);
 const featuredBundle = 'Kwick 15" POS Bundle';
 
 const bundlePrices = [
-  { name: "1 Bundle", price: "$1,735.00" },
-  { name: "2 Bundles", price: "$3,470.00" },
-  { name: "3 Bundles", price: "$5,205.00" },
-  { name: "4 Bundles", price: "$6,940.00" },
-  { name: "5 Bundles", price: "$8,675.00" },
-  { name: "6 Bundles", price: "$10,410.00" },
-  { name: "7 Bundles", price: "$12,145.00" },
-  { name: "8 Bundles", price: "$13,880.00" },
-  { name: "9 Bundles", price: "$15,615.00" },
-  { name: "10 Bundles", price: "$17,350.00" },
-  { name: "11 Bundles", price: "$19,085.00" },
-  { name: "12 Bundles", price: "$20,820.00" },
-  { name: "13 Bundles", price: "$22,555.00" },
-  { name: "14 Bundles", price: "$24,290.00" },
-  { name: "15 Bundles", price: "$26,025.00" },
-  { name: "16 Bundles", price: "$27,760.00" },
-  { name: "17 Bundles", price: "$29,495.00" },
-  { name: "18 Bundles", price: "$31,230.00" },
-  { name: "19 Bundles", price: "$32,965.00" },
-  { name: "20 Bundles", price: "$34,700.00" }
+  { name: "1 Bundle", price: "$1,288.00" },
+  { name: "2 Bundles", price: "$2,576.00" },
+  { name: "3 Bundles", price: "$3,864.00" },
+  { name: "4 Bundles", price: "$5,152.00" },
+  { name: "5 Bundles", price: "$6,440.00" },
+  { name: "6 Bundles", price: "$7,728.00" },
+  { name: "7 Bundles", price: "$9,016.00" },
+  { name: "8 Bundles", price: "$10,304.00" },
+  { name: "9 Bundles", price: "$11,592.00" },
+  { name: "10 Bundles", price: "$12,880.00" },
+  { name: "11 Bundles", price: "$14,168.00" },
+  { name: "12 Bundles", price: "$15,456.00" },
+  { name: "13 Bundles", price: "$16,744.00" },
+  { name: "14 Bundles", price: "$18,032.00" },
+  { name: "15 Bundles", price: "$19,320.00" },
+  { name: "16 Bundles", price: "$20,608.00" },
+  { name: "17 Bundles", price: "$21,896.00" },
+  { name: "18 Bundles", price: "$23,184.00" },
+  { name: "19 Bundles", price: "$24,472.00" },
+  { name: "20 Bundles", price: "$25,760.00" }
 ];
 
 const bundleOptions = [
@@ -2943,7 +2996,12 @@ const bundleOptions = [
   { name: "Kwick iPad Bundle" },
   { name: "Kwick 21\" Large Kiosk Bundle" },
   { name: "Setup for Kwick: Basic Setup" },
-  { name: "Handheld - A920 (Financing Only)" },
+  { name: "Handheld - A920 (Financing Only)" }
+];
+
+// Define product options for the Products section
+const productOptions = [
+  { name: "Handheld - A920" },
   { name: "ACT 15\" POS Station" },
   { name: "MINT 10\" POS Station w/ Built-in Printer" },
   { name: "MagTek Payment Device DynaFlex II Go" },
@@ -2951,6 +3009,11 @@ const bundleOptions = [
   { name: "Innovative QR Bundle" },
   { name: "3rd Party Platform Integration (After 3-month trial)" }
 ];
+
+// Computed property to filter out products from bundle options
+const filteredBundleOptions = computed(() => {
+  return bundleOptions.filter(bundle => bundle.name !== "Handheld - A920 (Financing Only)");
+});
 
 // Toggle price list modal
 function togglePriceList() {
@@ -3011,257 +3074,269 @@ const isProfessionalService = computed(() => {
          form.value.product_service?.toLowerCase().includes('licensed');
 });
 
-// Add function to get bundle price based on selected device
+// Function to get bundle price based on selected device
 function getBundlePrice(device) {
   if (!device) return '$0.00';
   
-  // First, check the bundlePrices array for exact matches
-  const bundleMatch = bundlePrices.find(b => b.name === device);
-  if (bundleMatch) return bundleMatch.price;
-  
-  // Bundles (main Kwick products with 25% markup)
-  if (device === featuredBundle || 
-      device === "Kwick 15\" POS Bundle" || 
-      device === "Kwick 15\" Server Bundle" ||
-      device === "Kwick Customer Display POS Bundle" ||
-      device === "Kwick iPad Bundle" ||
-      device === "Kwick 21\" Large Kiosk Bundle") {
-    return '$1,735.00';
+  // First, check for specific bundle types with their prices
+  switch(device) {
+    case "Kwick 15\" Server Bundle":
+      return '$1,288.00';
+    case "Kwick 15\" POS Bundle":
+      return '$1,388.00';
+    case "Kwick Customer Display POS Bundle":
+      return '$1,788.00';
+    case "Kwick iPad Bundle":
+      return '$1,099.00';
+    case "Kwick 21\" Large Kiosk Bundle":
+      return '$3,000.00';
   }
   
   // Individual Hardware
   if (device === "Handheld - A920 (Financing Only)") return '$625.00';
-  if (device === "ACT 15\" POS Station") return '$1,735.00';
-  if (device === "MINT 10\" POS Station w/ Built-in Printer") return '$1,250.00';
-  if (device === "MagTek Payment Device DynaFlex II Go") return '$625.00';
-  if (device === "Food Truck / Mobile Vendor Hardware Setup") return '$2,500.00';
-  if (device === "Innovative QR Bundle") return '$1,250.00';
-  if (device === "3rd Party Platform Integration (After 3-month trial)") return '$625.00';
+  if (device === "Handheld - A920") return '$10.00/month';
+  if (device === "ACT 15\" POS Station") return '$1,288.00';
+  if (device === "MINT 10\" POS Station w/ Built-in Printer") return '$999.00';
+  if (device === "MagTek Payment Device DynaFlex II Go") return '$999.00';
+  if (device === "Food Truck / Mobile Vendor Hardware Setup") return '$1288.00';
+  if (device === "Innovative QR Bundle") return '$49.00';
+  if (device === "3rd Party Platform Integration (After 3-month trial)") return '$109.00';
   
   // Additional Hardware Options
-  if (device === "KP Thermal Printer") return '$281.25';
-  if (device === "Epson Kitchen Printer") return '$625.00';
-  if (device === "Epson Label Printer") return '$687.50';
+  if (device === "KP Thermal Printer") return '$225.00';
+  if (device === "Epson Kitchen Printer") return '$500.00';
+  if (device === "Epson Label Printer") return '$550.00';
   if (device === "Kitchen Display Monitor 20\"") return '$1,250.00';
-  if (device === "KwickPOS Caller ID") return '$125.00';
-  if (device === "Kitchen Armor Kitchen Display Monitor 22\"") return '$1,875.00';
+  if (device === "KwickPOS Caller ID") return '$100.00';
+  if (device === "Kitchen Display Monitor 20\"") return '$1,000.00';
+  if (device === "Kitchen Armor Kitchen Display Monitor 22\"") return '$1,500.00';
   
   // Setup Options
   if (device === "Basic Setup") return '$500.00';
   if (device === "Setup for Kwick: Basic Setup") return '$500.00';
   
-  // Default fallback price with 25% markup
-  return '$1,735.00';
-}
-
-// Function kept as reference for original non-markup prices (not active)
-function getOriginalBundlePrice(device) {
-  if (!device) return '$0.00';
-  
-  // First, check the bundlePrices array for exact matches
-  const bundleMatch = bundlePrices.find(b => b.name === device);
-  if (bundleMatch) return bundleMatch.price;
-  
-  // For featured bundle, return the price of 1 Bundle (original price)
-  if (device === featuredBundle) return '$1,388.00';
-  
-  // For other bundles, return a default price (original price)
+  // Default fallback price
   return '$1,388.00';
 }
 
-// Add computed property for bundle price value (numeric)
-const bundlePriceValue = computed(() => {
-  const priceString = getBundlePrice(selectedDevice.value);
-  // Extract numeric value from price string (e.g., "$1,388.00" -> 1388)
-  const numericValue = parseFloat(priceString.replace(/[^0-9.]/g, ''));
-  return numericValue || 0;
-});
-
-// Helper function to calculate discount
-function calculateDiscount(priceString, discountRate) {
-  const price = parseFloat(priceString.replace(/[^0-9.]/g, ''));
-  if (isNaN(price)) return '$0.00';
-  
-  const discountAmount = price * discountRate;
-  return `Save $${discountAmount.toFixed(2)}`;
-}
-
-// Helper function to calculate monthly payment
-function calculateMonthlyPayment(priceString, months) {
-  const price = parseFloat(priceString.replace(/[^0-9.]/g, ''));
-  if (isNaN(price) || months <= 0) return '$0.00';
-  
-  const monthlyPayment = price / months;
-  return `$${monthlyPayment.toFixed(2)}`;
-}
-
-// Add new data for the Restaurant Profile step (conversational questions)
-const restaurantTypes = [
-  'Fine Dining', 
-  'Casual Dining', 
-  'Fast Casual',
-  'Quick Service', 
-  'Bar/Pub', 
-  'Café/Bakery',
-  'Food Truck',
-  'Buffet',
-  'Other'
-];
-
-const serviceStyles = [
-  'Table Service',
-  'Counter Service',
-  'Self-Service',
-  'Hybrid/Mixed',
-  'Delivery-Focused',
-  'Take-Out Primary'
-];
-
-const posFeatures = [
-  'Inventory Management',
-  'Staff Management',
-  'Online Ordering',
-  'Table Management',
-  'Kitchen Display System',
-  'Customer Loyalty Program',
-  'Reporting & Analytics',
-  'Menu Management',
-  'Delivery Integration',
-  'Payment Processing'
-];
-
-const salesVolumes = [
-  'Less than $5,000',
-  '$5,000 - $10,000',
-  '$10,001 - $25,000',
-  '$25,001 - $50,000',
-  'More than $50,000'
-];
-
-const techComfortLevels = [
-  'Beginner - We need a simple system',
-  'Intermediate - We can learn new systems',
-  'Advanced - We\'re tech-savvy and want the latest features'
-];
-
-// Function to select restaurant type
-function selectRestaurantType(type) {
-  form.value.restaurant_type = type;
-  
-  // Reset dependent fields
-  form.value.service_style = '';
-  form.value.important_features = [];
-  form.value.sales_volume = '';
-  form.value.tech_comfort = '';
-}
-
-// Function to toggle feature selection
-function toggleFeature(feature) {
-  if (form.value.important_features.includes(feature)) {
-    form.value.important_features = form.value.important_features.filter(f => f !== feature);
-  } else {
-    form.value.important_features.push(feature);
+// Function to add bundle to cart
+function addBundleToCart() {
+  if (bundleQuantity.value <= 0) {
+    alert('Please select at least 1 bundle');
+    return;
   }
-}
 
-// Function to get tech comfort level description
-function getTechComfortDescription(level) {
-  switch(level) {
-    case 'Beginner - We need a simple system':
-      return 'Our staff needs minimal training and intuitive interfaces';
-    case 'Intermediate - We can learn new systems':
-      return 'We can adapt to new technology with some training';
-    case 'Advanced - We\'re tech-savvy and want the latest features':
-      return 'We quickly embrace new technology and want cutting-edge features';
+  // Get the bundle name and quantity
+  const bundleName = selectedBundleDetails.value.name;
+  const quantity = parseInt(bundleQuantity.value);
+  
+  // Handle Setup bundle differently
+  if (bundleName === "Setup for Kwick: Basic Setup") {
+    addToCart({
+      name: bundleName,
+      price: "$500.00",
+      quantity: 1
+    });
+    showBundleModal.value = false;
+    return;
+  }
+  
+  // Handle A920 differently with monthly pricing
+  if (bundleName === "Handheld - A920") {
+    addToCart({
+      name: `${bundleName} (${quantity} ${quantity > 1 ? 'units' : 'unit'})`,
+      price: `$${quantity * 10}/month`,
+      quantity: quantity
+    });
+    showBundleModal.value = false;
+    return;
+  }
+  
+  // Set price per bundle based on bundle type
+  let pricePerBundle;
+  switch(bundleName) {
+    case "Kwick 15\" Server Bundle":
+      pricePerBundle = 1288;
+      break;
+    case "Kwick 15\" POS Bundle":
+      pricePerBundle = 1388;
+      break;
+    case "Kwick Customer Display POS Bundle":
+      pricePerBundle = 1788;
+      break;
+    case "Kwick iPad Bundle":
+      pricePerBundle = 1099;
+      break;
+    case "Kwick 21\" Large Kiosk Bundle":
+      pricePerBundle = 3000;
+      break;
     default:
-      return '';
+      pricePerBundle = 1388;
   }
-}
-
-// Function to skip to confirmation step
-function skipToConfirmation() {
-  currentStep.value = 8;
-  window.scrollTo(0, 0);
-}
-
-// Function to get recommended setup based on answers
-function getRecommendedSetup() {
-  return 'Complete POS Solution Package';
-}
-
-// Function to get recommendation details
-function getRecommendationDetails() {
-  return 'a complete POS solution with hardware, software, professional installation, and comprehensive training - plus 0% credit card processing with Hurricane Pay.';
-}
-
-// Add new data arrays based on the image
-const hardwareComponents = [
-  { name: 'High-Performance Local PC Server', description: 'Central server for your POS system', quantity: '1' },
-  { name: 'Network Switch', description: 'Connect all your POS devices', quantity: '1' },
-  { name: 'High-Speed Ethernet Cable', description: 'For reliable connectivity', quantity: 'Several' },
-  { name: '15" All-in-One POS Station', description: 'Touchscreen POS terminal', quantity: '1' },
-  { name: 'Thermal Receipt Printer', description: 'For customer receipts', quantity: '1' },
-  { name: 'Credit Card Pinpad', description: 'For secure payment processing', quantity: '1' }
-];
-
-const marketingTools = [
-  { name: 'Table Ordering QR Code', description: 'Allow customers to order directly from their table', quantity: '5' },
-  { name: 'Online Ordering QR Code', description: 'Enable online ordering with custom QR code', quantity: '1' },
-  { name: 'Customer Review QR Code', description: 'Encourage customers to leave reviews', quantity: '2' },
-  { name: 'Employee Access Card', description: 'Secure login for staff members', quantity: '2' },
-  { name: 'Generic Gift Card', description: 'Customizable gift cards for your business', quantity: '2' }
-];
-
-const setupServices = [
-  'Professional Installation',
-  'Menu Programming',
-  'Comprehensive Training for Staff and Management',
-  'End-to-End Project Management for Successful Implementation'
-];
-
-// Function to toggle hardware component selection
-function toggleHardwareComponent(component) {
-  if (form.value.selected_hardware.includes(component)) {
-    form.value.selected_hardware = form.value.selected_hardware.filter(c => c !== component);
-  } else {
-    form.value.selected_hardware.push(component);
-  }
-}
-
-// Function to toggle marketing tool selection
-function toggleMarketingTool(tool) {
-  if (form.value.selected_marketing_tools.includes(tool)) {
-    form.value.selected_marketing_tools = form.value.selected_marketing_tools.filter(t => t !== tool);
-  } else {
-    form.value.selected_marketing_tools.push(tool);
-  }
-}
-
-// Function to select the value bundle
-function selectValueBundle() {
-  form.value.selected_value_bundle = true;
   
-  // Auto-select all hardware components and marketing tools
-  form.value.selected_hardware = hardwareComponents.map(c => c.name);
-  form.value.selected_marketing_tools = marketingTools.map(t => t.name);
+  // Calculate total price
+  const totalPrice = pricePerBundle * quantity;
   
-  // Add to cart
+  // Format total price with commas and decimals
+  const formattedTotalPrice = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD'
+  }).format(totalPrice);
+
+  // Add to cart with quantity and total price
   addToCart({
-    name: 'Complete POS Solution Package',
-    price: '$999.00'
+    name: `${bundleName} (${quantity} ${quantity > 1 ? 'bundles' : 'bundle'})`,
+    price: formattedTotalPrice,
+    quantity: quantity
   });
+  
+  showBundleModal.value = false;
 }
 
-// Function to toggle handheld feature selection
-function toggleHandheldFeature(feature) {
-  if (!form.value.handheld_features) {
-    form.value.handheld_features = [];
+// Function to get bundle prices array based on bundle type
+function getBundlePricesArray(bundleName) {
+  // For Setup bundle, only show single fixed price
+  if (bundleName === "Setup for Kwick: Basic Setup") {
+    return [{
+      name: "Basic Setup",
+      price: "$500.00"
+    }];
+  }
+
+  // For Handheld A920, show monthly pricing options
+  if (bundleName === "Handheld - A920") {
+    return Array.from({ length: 20 }, (_, i) => ({
+      name: `${i + 1} ${i === 0 ? 'Unit' : 'Units'}`,
+      price: `$${(i + 1) * 10}/month`
+    }));
+  }
+
+  let basePrice;
+  switch(bundleName) {
+    case "Kwick 15\" Server Bundle":
+      basePrice = 1288;
+      break;
+    case "Kwick 15\" POS Bundle":
+      basePrice = 1388;
+      break;
+    case "Kwick Customer Display POS Bundle":
+      basePrice = 1788;
+      break;
+    case "Kwick iPad Bundle":
+      basePrice = 1099;
+      break;
+    case "Kwick 21\" Large Kiosk Bundle":
+      basePrice = 3000;
+      break;
+    default:
+      basePrice = 1388;
+  }
+
+  return Array.from({ length: 20 }, (_, i) => ({
+    name: `${i + 1} ${i === 0 ? 'Bundle' : 'Bundles'}`,
+    price: new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD'
+    }).format(basePrice * (i + 1))
+  }));
+}
+
+// Function to buy now
+function buyNowBundle() {
+  addToCart({
+    name: selectedBundleDetails.value.name,
+    price: getBundlePrice(selectedBundleDetails.value.name),
+    quantity: bundleQuantity.value
+  });
+  
+  // Select this device/bundle
+  selectDevice(selectedBundleDetails.value.name, 'buy');
+  
+  // Close the modal
+  showBundleModal.value = false;
+  
+  // We don't want to automatically go to step 8, so no navigation here
+}
+
+// Bundle Modal
+const showBundleModal = ref(false);
+const bundleItems = ref([
+  { name: 'POS Terminal', description: 'High-performance touchscreen terminal' },
+  { name: 'Receipt Printer', description: 'Thermal receipt printer for fast printing' },
+  { name: 'Payment Terminal', description: 'Secure payment processing terminal with PIN pad' },
+  { name: 'Cash Drawer', description: 'Durable metal cash drawer with security features' },
+  { name: 'Barcode Scanner', description: 'High-speed laser barcode scanner' },
+  { name: 'Cloud Software', description: 'Full-featured POS software with inventory management' },
+  { name: 'Installation', description: 'Professional on-site installation and setup' },
+  { name: 'Training', description: 'Staff training on using the POS system' },
+]);
+
+// Function to go to a specific step
+function goToStep(step) {
+  // Allow going back to previous steps without validation
+  if (step < currentStep.value) {
+    currentStep.value = step;
+  window.scrollTo(0, 0);
+    return;
   }
   
-  if (form.value.handheld_features.includes(feature)) {
-    form.value.handheld_features = form.value.handheld_features.filter(f => f !== feature);
-  } else {
-    form.value.handheld_features.push(feature);
+  // Skip current step (stay on same step)
+  if (step === currentStep.value) {
+    return;
+  }
+  
+  // When moving forward, we need to validate the current step first
+  if (validateCurrentStep()) {
+    // Check device selection specifically for step 6
+    if (currentStep.value === 6 && step > 6 && !selectedDevice.value) {
+      deviceSelectionError.value = true;
+      return;
+    }
+    
+    // If validation passed, go to the requested step
+    currentStep.value = step;
+    window.scrollTo(0, 0);
+    
+    // Handle submission if trying to go beyond the last step
+    if (currentStep.value > totalSteps) {
+      submitForm();
+    }
+  }
+}
+
+// Add new function to get bundle category
+function getBundleCategory(bundleName) {
+  switch (bundleName) {
+    case 'Kwick 15" POS Bundle':
+      return 'POS Bundle';
+    case 'Kwick 15" Server Bundle':
+      return 'Server Bundle';
+    case 'Kwick Customer Display POS Bundle':
+      return 'POS Bundle';
+    case 'Kwick iPad Bundle':
+      return 'POS Bundle';
+    case 'Kwick 21" Large Kiosk Bundle':
+      return 'Kiosk Bundle';
+    case 'Setup for Kwick: Basic Setup':
+      return 'Setup';
+    case 'Handheld - A920 (Financing Only)':
+      return 'Handheld';
+    case 'Handheld - A920':
+      return 'Handheld';
+    case 'ACT 15" POS Station':
+      return 'POS Station';
+    case 'MINT 10" POS Station w/ Built-in Printer':
+      return 'POS Station';
+    case 'MagTek Payment Device DynaFlex II Go':
+      return 'Payment Device';
+    case 'Food Truck / Mobile Vendor Hardware Setup':
+      return 'Hardware Setup';
+    case 'Innovative QR Bundle':
+      return 'QR Bundle';
+    case '3rd Party Platform Integration (After 3-month trial)':
+      return 'Integration';
+    default:
+      return 'Unknown';
   }
 }
 
@@ -3649,6 +3724,17 @@ function openBundleModal(bundle) {
   // Set the selected bundle details for the modal
   selectedBundleDetails.value = bundle;
   
+  // If it's the Setup bundle, automatically add it to cart
+  if (bundle.name === "Setup for Kwick: Basic Setup") {
+    bundleQuantity.value = 1;
+    addToCart({
+      name: "Setup for Kwick: Basic Setup",
+      price: "$500.00",
+      quantity: 1
+    });
+    return; // Don't show modal for Setup bundle
+  }
+  
   // Reset bundle quantity to "None" when opening a new bundle modal
   bundleQuantity.value = 0;
   
@@ -3662,118 +3748,105 @@ function openBundleModal(bundle) {
   }
 }
 
-// Function to add bundle to cart
-function addBundleToCart() {
-  // Get the bundle name and price
-  const bundleName = selectedBundleDetails.value.name;
-  const bundlePrice = getBundlePrice(bundleName);
-  const bundleCount = parseInt(bundleQuantity.value);
-  
-  addToCart({
-    name: bundleName,
-    price: bundlePrice,
-    quantity: bundleCount
-  });
-  
-  showBundleModal.value = false;
+// Function to get recommended setup based on answers
+function getRecommendedSetup() {
+  return 'Complete POS Solution Package';
 }
 
-// Function to buy now
-function buyNowBundle() {
-  addToCart({
-    name: selectedBundleDetails.value.name,
-    price: getBundlePrice(selectedBundleDetails.value.name),
-    quantity: bundleQuantity.value
-  });
-  
-  // Select this device/bundle
-  selectDevice(selectedBundleDetails.value.name, 'buy');
-  
-  // Close the modal
-  showBundleModal.value = false;
-  
-  // We don't want to automatically go to step 8, so no navigation here
+// Function to get recommendation details
+function getRecommendationDetails() {
+  return 'a complete POS solution with hardware, software, professional installation, and comprehensive training - plus 0% credit card processing with Hurricane Pay.';
 }
 
-// Bundle Modal
-const showBundleModal = ref(false);
-const bundleItems = ref([
-  { name: 'POS Terminal', description: 'High-performance touchscreen terminal' },
-  { name: 'Receipt Printer', description: 'Thermal receipt printer for fast printing' },
-  { name: 'Payment Terminal', description: 'Secure payment processing terminal with PIN pad' },
-  { name: 'Cash Drawer', description: 'Durable metal cash drawer with security features' },
-  { name: 'Barcode Scanner', description: 'High-speed laser barcode scanner' },
-  { name: 'Cloud Software', description: 'Full-featured POS software with inventory management' },
-  { name: 'Installation', description: 'Professional on-site installation and setup' },
-  { name: 'Training', description: 'Staff training on using the POS system' },
-]);
+// Function to skip to confirmation step
+function skipToConfirmation() {
+  currentStep.value = 8;
+  window.scrollTo(0, 0);
+}
 
-// Function to go to a specific step
-function goToStep(step) {
-  // Allow going back to previous steps without validation
-  if (step < currentStep.value) {
-    currentStep.value = step;
-    window.scrollTo(0, 0);
-    return;
+// Restaurant profile related data
+const restaurantTypes = [
+  'Fine Dining', 
+  'Casual Dining', 
+  'Fast Casual',
+  'Quick Service', 
+  'Bar/Pub', 
+  'Café/Bakery',
+  'Food Truck',
+  'Buffet',
+  'Other'
+];
+
+const serviceStyles = [
+  'Table Service',
+  'Counter Service',
+  'Self-Service',
+  'Hybrid/Mixed',
+  'Delivery-Focused',
+  'Take-Out Primary'
+];
+
+const posFeatures = [
+  'Inventory Management',
+  'Staff Management',
+  'Online Ordering',
+  'Table Management',
+  'Kitchen Display System',
+  'Customer Loyalty Program',
+  'Reporting & Analytics',
+  'Menu Management',
+  'Delivery Integration',
+  'Payment Processing'
+];
+
+// Function to select restaurant type
+function selectRestaurantType(type) {
+  form.value.restaurant_type = type;
+  
+  // Reset dependent fields
+  form.value.service_style = '';
+  form.value.important_features = [];
+  form.value.sales_volume = '';
+  form.value.tech_comfort = '';
+}
+
+// Function to toggle feature selection
+function toggleFeature(feature) {
+  if (!form.value.important_features) {
+    form.value.important_features = [];
   }
   
-  // Skip current step (stay on same step)
-  if (step === currentStep.value) {
-    return;
-  }
-  
-  // When moving forward, we need to validate the current step first
-  if (validateCurrentStep()) {
-    // Check device selection specifically for step 6
-    if (currentStep.value === 6 && step > 6 && !selectedDevice.value) {
-      deviceSelectionError.value = true;
-      return;
-    }
-    
-    // If validation passed, go to the requested step
-    currentStep.value = step;
-    window.scrollTo(0, 0);
-    
-    // Handle submission if trying to go beyond the last step
-    if (currentStep.value > totalSteps) {
-      submitForm();
-    }
+  if (form.value.important_features.includes(feature)) {
+    form.value.important_features = form.value.important_features.filter(f => f !== feature);
+  } else {
+    form.value.important_features.push(feature);
   }
 }
 
-// Add new function to get bundle category
-function getBundleCategory(bundleName) {
-  switch (bundleName) {
-    case 'Kwick 15" POS Bundle':
-      return 'POS Bundle';
-    case 'Kwick 15" Server Bundle':
-      return 'Server Bundle';
-    case 'Kwick Customer Display POS Bundle':
-      return 'POS Bundle';
-    case 'Kwick iPad Bundle':
-      return 'POS Bundle';
-    case 'Kwick 21" Large Kiosk Bundle':
-      return 'Kiosk Bundle';
-    case 'Setup for Kwick: Basic Setup':
-      return 'Setup';
-    case 'Handheld - A920 (Financing Only)':
-      return 'Handheld';
-    case 'ACT 15" POS Station':
-      return 'POS Station';
-    case 'MINT 10" POS Station w/ Built-in Printer':
-      return 'POS Station';
-    case 'MagTek Payment Device DynaFlex II Go':
-      return 'Payment Device';
-    case 'Food Truck / Mobile Vendor Hardware Setup':
-      return 'Hardware Setup';
-    case 'Innovative QR Bundle':
-      return 'QR Bundle';
-    case '3rd Party Platform Integration (After 3-month trial)':
-      return 'Integration';
-    default:
-      return 'Unknown';
-  }
+// Helper functions for calculations
+function calculateDiscount(priceString, discountRate) {
+  const price = parseFloat(priceString.replace(/[^0-9.]/g, ''));
+  if (isNaN(price)) return '$0.00';
+  
+  const discountAmount = price * discountRate;
+  return `Save $${discountAmount.toFixed(2)}`;
 }
+
+function calculateMonthlyPayment(priceString, months) {
+  const price = parseFloat(priceString.replace(/[^0-9.]/g, ''));
+  if (isNaN(price) || months <= 0) return '$0.00';
+  
+  const monthlyPayment = price / months;
+  return `$${monthlyPayment.toFixed(2)}`;
+}
+
+// Add computed property for bundle price value
+const bundlePriceValue = computed(() => {
+  const priceString = getBundlePrice(selectedDevice.value);
+  // Extract numeric value from price string (e.g., "$1,388.00" -> 1388)
+  const numericValue = parseFloat(priceString.replace(/[^0-9.]/g, ''));
+  return numericValue || 0;
+});
 </script>
 
 <style scoped>
