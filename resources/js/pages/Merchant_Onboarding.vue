@@ -3,7 +3,7 @@
     
     <div class="py-16 bg-gray-50">
       <div class="container mx-auto px-6">
-        <div class="max-w-5xl mx-auto">
+        <div class="max-w-6xl mx-auto">
           <!-- Heading -->
           <div class="text-center mb-12">
             <h1 class="text-4xl lg:text-5xl font-bold mb-4" style="color: #973131;">
@@ -92,7 +92,7 @@
           </div>
           
           <!-- Step Indicator -->
-          <div class="flex justify-center mb-12">
+          <div class="flex justify-center mb-6">
             <div class="flex items-center">
               <div 
                 v-for="(step, index) in steps" 
@@ -100,15 +100,13 @@
                 class="flex items-center"
               >
                 <div 
-                  class="w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors duration-300 relative border shadow cursor-pointer hover:opacity-90"
+                  class="w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors duration-300 relative border shadow"
                   :class="[
                     currentStep > index + 1 ? 'bg-custom-red text-white border-custom-red' : 
                     currentStep === index + 1 ? 'bg-custom-red text-white border-custom-red font-bold step-active' : 
                     'bg-gray-200 text-gray-800 border-gray-300'
                   ]"
                   :style="currentStep >= index + 1 ? 'background-color: #973131 !important; color: white !important' : ''"
-                  @click="goToStep(index + 1)"
-                  :title="`Go to ${step}`"
                 >
                   <span v-if="currentStep > index + 1" class="absolute inset-0 flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
@@ -116,11 +114,6 @@
                     </svg>
                   </span>
                   <span v-else class="step-number" :style="currentStep >= index + 1 ? 'color: white !important' : ''">{{ index + 1 }}</span>
-                  
-                  <!-- Step name tooltip on hover -->
-                  <div class="hidden group-hover:block absolute top-full mt-2 bg-gray-800 text-white text-sm px-2 py-1 rounded z-10 whitespace-nowrap">
-                    {{ step }}
-                  </div>
                 </div>
                 <div 
                   v-if="index < steps.length - 1" 
@@ -132,20 +125,20 @@
           </div>
           
           <!-- Step Names Under Indicators -->
-          <div class="flex justify-center mb-8 px-4">
-            <div class="grid grid-cols-8 w-full max-w-4xl gap-2">
+          <div class="flex justify-center mb-8">
+            <div class="flex justify-center w-full max-w-6xl">
+              <div class="grid grid-cols-8 gap-2 w-full">
               <div 
                 v-for="(step, index) in steps" 
                 :key="index"
                 class="text-center" 
               >
                 <div 
-                  class="text-xs md:text-sm font-medium truncate cursor-pointer"
-                  :class="currentStep === index + 1 ? 'text-custom-red' : 'text-gray-500'"
-                  @click="goToStep(index + 1)"
-                  :title="`Go to ${step}`"
+                    class="text-xs md:text-sm font-medium px-1 py-1"
+                    :class="currentStep === index + 1 ? 'text-custom-red font-bold' : 'text-gray-500'"
                 >
                   {{ step }}
+                  </div>
                 </div>
               </div>
             </div>
@@ -2028,7 +2021,7 @@
                   Bundles
                 </h2>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
                   <!-- Bundle cards -->
                   <div v-for="(bundle, index) in filteredBundleOptions" :key="index"
                     @click="openBundleModal(bundle)"
@@ -2041,22 +2034,7 @@
                       </template>
                       <template v-else-if="bundle.name === 'Kwick 15&quot; Server Bundle'">
                         <div class="h-full w-full flex items-center justify-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="h-32 w-32 text-gray-700 transition-transform duration-500 group-hover:scale-110">
-                            <g fill="currentColor">
-                              <path d="M58,36H6a2,2,0,0,0-2,2V50a2,2,0,0,0,2,2H58a2,2,0,0,0,2-2V38A2,2,0,0,0,58,36ZM14,46a2,2,0,1,1,2-2A2,2,0,0,1,14,46Zm8,0a2,2,0,1,1,2-2A2,2,0,0,1,22,46Z"/>
-                              <path d="M58,18H6a2,2,0,0,0-2,2V32a2,2,0,0,0,2,2H58a2,2,0,0,0,2-2V20A2,2,0,0,0,58,18ZM14,28a2,2,0,1,1,2-2A2,2,0,0,1,14,28Zm8,0a2,2,0,1,1,2-2A2,2,0,0,1,22,28Z"/>
-                              <circle cx="50" cy="22" r="1.5" fill="#973131"/>
-                              <circle cx="50" cy="26" r="1.5" fill="#4CAF50"/>
-                              <circle cx="50" cy="40" r="1.5" fill="#973131"/>
-                              <circle cx="50" cy="44" r="1.5" fill="#4CAF50"/>
-                              <path d="M58,0H6A2,2,0,0,0,4,2V14a2,2,0,0,0,2,2H58a2,2,0,0,0,2-2V2A2,2,0,0,0,58,0ZM14,10a2,2,0,1,1,2-2A2,2,0,0,1,14,10Zm8,0a2,2,0,1,1,2-2A2,2,0,0,1,22,10Z"/>
-                              <circle cx="50" cy="4" r="1.5" fill="#973131"/>
-                              <circle cx="50" cy="8" r="1.5" fill="#4CAF50"/>
-                              <path d="M58,54H6a2,2,0,0,0-2,2v6a2,2,0,0,0,2,2H58a2,2,0,0,0,2-2V56A2,2,0,0,0,58,54ZM14,62a2,2,0,1,1,2-2A2,2,0,0,1,14,62Zm8,0a2,2,0,1,1,2-2A2,2,0,0,1,22,62Z"/>
-                              <circle cx="50" cy="58" r="1.5" fill="#973131"/>
-                              <text x="32" y="62" text-anchor="middle" font-size="4" font-weight="bold">SERVER</text>
-                            </g>
-                          </svg>
+                          <img src="@/../images/new_server.png" :alt="bundle.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
                         </div>
                       </template>
                       <template v-else>
@@ -2066,11 +2044,11 @@
                       <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-gray-900/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
                         <div class="bg-custom-red text-white px-4 py-1 rounded-full font-medium transform scale-90 hover:scale-100 transition-transform">
                           View Details
-                        </div>
                       </div>
+                        </div>
                     </div>
                     
-                    <div class="p-6">
+                    <div class="p-8">
                       <h5 class="text-lg font-bold text-gray-800 mb-3">{{ bundle.name }}</h5>
                       <div>
                         <div class="flex items-center justify-between">
@@ -2096,7 +2074,7 @@
                   Products
                 </h2>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
                   <!-- Product cards -->
                   <div v-for="(product, index) in productOptions" :key="index"
                     @click="openBundleModal(product)"
@@ -2127,7 +2105,7 @@
                       </div>
                     </div>
                     
-                    <div class="p-6">
+                    <div class="p-8">
                       <h5 class="text-lg font-bold text-gray-800 mb-3">{{ product.name }}</h5>
                       <div>
                         <div class="flex items-center justify-between">
@@ -2149,12 +2127,15 @@
                           </div>
                 
                 <!-- Bundle Details Modal -->
-                <div v-if="showBundleModal" class="fixed inset-0 flex items-center justify-center z-50 px-4">
+                <div v-if="showBundleModal" class="fixed inset-0 z-50 px-4 overflow-auto" style="display: flex; align-items: flex-start; justify-content: center; padding-top: 20px; padding-bottom: 20px;">
                   <!-- Transparent clickable background to close modal -->
-                  <div class="absolute inset-0" @click.stop.prevent="showBundleModal = false"></div>
+                  <div class="absolute inset-0 bg-black bg-opacity-50" @click.stop.prevent="showBundleModal = false"></div>
                   
                   <!-- Modal content - only the container has styling -->
-                  <div class="bg-white rounded-lg shadow-2xl overflow-hidden max-w-5xl w-full max-h-[90vh] relative z-10 border border-gray-200">
+                  <div 
+                    class="bg-white rounded-lg shadow-2xl overflow-hidden max-w-5xl w-full max-h-[90vh] relative z-10 border border-gray-200"
+                    :style="{ 'margin-top': `${modalOffsetTop}px` }"
+                  >
                     <!-- Modal header -->
                     <div class="flex justify-between items-center p-4 border-b border-gray-200">
                       <h3 class="text-xl font-bold text-gray-800">Bundle Details</h3>
@@ -2184,6 +2165,9 @@
                           </template>
                           <template v-else-if="selectedBundleDetails?.name === 'Kwick 15&quot; POS Bundle'">
                             <img src="@/../images/kwickpos_posbank.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+                          </template>
+                          <template v-else-if="selectedBundleDetails?.name === 'Kwick 15&quot; Server Bundle'">
+                            <img src="@/../images/new_server.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
                           </template>
                           <template v-else>
                             <img src="@/../images/fourth.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
@@ -2314,6 +2298,11 @@
                     </div>
                   </div>
 
+                <AdditionalHardware 
+                  :additional-hardware-options="additionalHardwareOptions"
+                  @add-to-cart="addHardwareToCart"
+                />
+
                 <!-- Need assistance card -->
                 <div class="bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg shadow-lg overflow-hidden mb-8">
                   <div class="p-6 text-white">
@@ -2368,8 +2357,8 @@
                     <!-- Empty cart message -->
                     <div v-if="cartItems.length === 0" class="text-center py-4">
                       <p class="text-gray-600">No items have been added to your cart yet.</p>
-                    </div>
-                    
+                      </div>
+                      
                     <!-- Cart items list -->
                     <div v-else>
                       <div class="space-y-3">
@@ -2386,27 +2375,27 @@
                             <div class="mt-1">
                               <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">
                                 {{ getBundleCategory(item.name) }}
-                              </span>
-                            </div>
+                            </span>
                           </div>
                         </div>
-                      </div>
-                      
+                          </div>
+                          </div>
+                          
                       <div class="bg-blue-50 border border-blue-100 rounded-md p-3 mt-4">
                         <h6 class="font-medium text-blue-800 text-sm mb-2">All bundles include:</h6>
                         <div class="grid grid-cols-2 gap-1 text-sm">
                           <div class="flex items-start">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-500 mr-1 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            <span>POS Software License</span>
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                              </svg>
+                              <span>POS Software License</span>
                           </div>
                           <div class="flex items-start">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-500 mr-1 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            <span>Installation Support</span>
-                          </div>
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                              </svg>
+                              <span>Installation Support</span>
+                        </div>
                           <div class="flex items-start">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-500 mr-1 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
                               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
@@ -2704,6 +2693,8 @@
 import { ref, computed, onMounted, nextTick, watch } from 'vue';
 import NavBar from './NavBar.vue';
 import AppFooter from './AppFooter.vue';
+import SignaturePad from 'signature_pad';
+import AdditionalHardware from '../components/AdditionalHardware.vue';
 
 // Form steps
 const steps = [
@@ -3064,6 +3055,16 @@ const productOptions = [
   { name: "3rd Party Platform Integration (After 3-month trial)" }
 ];
 
+// Define additional hardware options
+const additionalHardwareOptions = [
+  { name: "KP Thermal Printer", price: "$225.00" },
+  { name: "Epson Kitchen Printer", price: "$500.00" },
+  { name: "Epson Label Printer", price: "$550.00" },
+  { name: "Kitchen Display Monitor 20\"", price: "$1,000.00" },
+  { name: "KwickPOS Caller ID", price: "$100.00" },
+  { name: "Kitchen Armor Kitchen Display Monitor 22\"", price: "$1,500.00" }
+];
+
 // Computed property to filter out products from bundle options
 const filteredBundleOptions = computed(() => {
   return bundleOptions.filter(bundle => bundle.name !== "Handheld - A920 (Financing Only)");
@@ -3343,6 +3344,15 @@ function buyNowBundle() {
   showBundleModal.value = false;
   
   // We don't want to automatically go to step 8, so no navigation here
+}
+
+// Function to add hardware to cart
+function addHardwareToCart(hardware) {
+  addToCart({
+    name: hardware.name,
+    price: hardware.price,
+    quantity: 1
+  });
 }
 
 // Bundle Modal
@@ -3805,25 +3815,47 @@ function goBackToProducts() {
 // Add new data for the Bundle Details Modal
 const selectedBundleDetails = ref(null);
 const bundleQuantity = ref(0);
+const modalOffsetTop = ref(0); // Modal position offset
 
 // Function to open bundle details modal
 function openBundleModal(bundle) {
   // Set the selected bundle details for the modal
   selectedBundleDetails.value = bundle;
   
-  // If it's the Setup bundle, automatically add it to cart
+  // If it's the Setup bundle, don't auto-add to cart, show the modal instead
   if (bundle.name === "Setup for Kwick: Basic Setup") {
-    bundleQuantity.value = 1;
-    addToCart({
-      name: "Setup for Kwick: Basic Setup",
-      price: "$500.00",
-      quantity: 1
-    });
-    return; // Don't show modal for Setup bundle
+    bundleQuantity.value = 1; // Pre-select quantity of 1
+    
+    // Calculate modal position based on current scroll position
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const windowHeight = window.innerHeight;
+    // Position the modal slightly above the middle of the current viewport
+    modalOffsetTop.value = scrollTop - (windowHeight * 0.2);
+    // Ensure it's not positioned too high
+    modalOffsetTop.value = Math.max(0, modalOffsetTop.value);
+    
+    // Show the modal
+    showBundleModal.value = true;
+    
+    // Prevent any unwanted step navigation
+    if (typeof event !== 'undefined' && event) {
+      event.stopPropagation();
+      event.preventDefault();
+    }
+    
+    return;
   }
   
   // Reset bundle quantity to "None" when opening a new bundle modal
   bundleQuantity.value = 0;
+  
+  // Calculate modal position based on current scroll position
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const windowHeight = window.innerHeight;
+  // Position the modal slightly above the middle of the current viewport
+  modalOffsetTop.value = scrollTop - (windowHeight * 0.2);
+  // Ensure it's not positioned too high
+  modalOffsetTop.value = Math.max(0, modalOffsetTop.value);
   
   // Show the modal
   showBundleModal.value = true;
@@ -3907,6 +3939,19 @@ function toggleFeature(feature) {
     form.value.important_features = form.value.important_features.filter(f => f !== feature);
   } else {
     form.value.important_features.push(feature);
+  }
+}
+
+// Function to toggle handheld feature selection
+function toggleHandheldFeature(feature) {
+  if (!form.value.handheld_features) {
+    form.value.handheld_features = [];
+  }
+  
+  if (form.value.handheld_features.includes(feature)) {
+    form.value.handheld_features = form.value.handheld_features.filter(f => f !== feature);
+  } else {
+    form.value.handheld_features.push(feature);
   }
 }
 
