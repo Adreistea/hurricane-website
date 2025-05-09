@@ -100,13 +100,14 @@
                 class="flex items-center"
               >
                 <div 
-                  class="w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors duration-300 relative border shadow"
+                  class="w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors duration-300 relative border shadow cursor-pointer"
                   :class="[
                     currentStep > index + 1 ? 'bg-custom-red text-white border-custom-red' : 
                     currentStep === index + 1 ? 'bg-custom-red text-white border-custom-red font-bold step-active' : 
                     'bg-gray-200 text-gray-800 border-gray-300'
                   ]"
                   :style="currentStep >= index + 1 ? 'background-color: #973131 !important; color: white !important' : ''"
+                  @click="goToStep(index + 1)"
                 >
                   <span v-if="currentStep > index + 1" class="absolute inset-0 flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
@@ -131,7 +132,8 @@
               <div 
                 v-for="(step, index) in steps" 
                 :key="index"
-                class="text-center" 
+                class="text-center cursor-pointer" 
+                @click="goToStep(index + 1)"
               >
                 <div 
                     class="text-xs md:text-sm font-medium px-1 py-1"
@@ -2037,6 +2039,18 @@
                           <img src="@/../images/new_server.png" :alt="bundle.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
                         </div>
                       </template>
+                      <template v-else-if="bundle.name === 'Kwick 21&quot; Large Kiosk Bundle'">
+                        <img src="@/../images/Kiosks21.png" :alt="bundle.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
+                      </template>
+                      <template v-else-if="bundle.name === 'Kwick Customer Display POS Bundle'">
+                        <img src="@/../images/Customerdisplay.png" :alt="bundle.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
+                      </template>
+                      <template v-else-if="bundle.name === 'Kwick iPad Bundle'">
+                        <img src="@/../images/ipadBundle.png" :alt="bundle.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
+                      </template>
+                      <template v-else-if="bundle.name === 'Setup for Kwick: Basic Setup'">
+                        <img src="@/../images/kwickPoslogo.png" :alt="bundle.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
+                      </template>
                       <template v-else>
                         <img src="@/../images/fourth.png" :alt="bundle.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
                       </template>
@@ -2083,7 +2097,7 @@
                     <!-- Product image -->
                     <div class="h-48 bg-gray-50 flex items-center justify-center p-4 relative overflow-hidden">
                       <template v-if="product.name === 'Handheld - A920'">
-                        <img src="@/../images/A920.jpg" :alt="product.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
+                        <img src="@/../images/A920.png" :alt="product.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
                       </template>
                       <template v-else-if="product.name === 'MINT 10&quot; POS Station w/ Built-in Printer'">
                         <img src="@/../images/mintPOS.jpg" :alt="product.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
@@ -2091,8 +2105,17 @@
                       <template v-else-if="product.name === 'MagTek Payment Device DynaFlex II Go'">
                         <img src="@/../images/Magtek.png" :alt="product.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
                       </template>
+                      <template v-else-if="product.name === 'ACT 15&quot; POS Station'">
+                        <img src="@/../images/Act15.jpg" :alt="product.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
+                      </template>
                       <template v-else-if="product.name === 'Food Truck / Mobile Vendor Hardware Setup'">
                         <img src="@/../images/foodtruckimg.jpg" :alt="product.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
+                      </template>
+                      <template v-else-if="product.name === 'Innovative QR Bundle'">
+                        <img src="@/../images/InnovativeQRBundle.png" :alt="product.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
+                      </template>
+                      <template v-else-if="product.name === '3rd Party Platform Integration (After 3-month trial)'">
+                        <img src="@/../images/thirdparty.jpg" :alt="product.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
                       </template>
                       <template v-else>
                         <img src="@/../images/fourth.png" :alt="product.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
@@ -2127,11 +2150,14 @@
                           </div>
                 
                 <!-- Bundle Details Modal -->
-                <div v-if="showBundleModal" class="fixed inset-0 z-50 px-4 overflow-auto" style="display: flex; align-items: flex-start; justify-content: center; padding-top: 20px; padding-bottom: 20px;">
-                  <!-- Transparent clickable background to close modal -->
-                  <div class="absolute inset-0 bg-black bg-opacity-50" @click.stop.prevent="showBundleModal = false"></div>
+                <div 
+                  v-if="showBundleModal" 
+                  class="fixed inset-0 z-50 flex items-start justify-center px-4 py-5 overflow-auto" 
+                  style="background-color: rgba(0, 0, 0, 0.3); backdrop-filter: blur(2px);"
+                  @click.self="showBundleModal = false"
+                >
                   
-                  <!-- Modal content - only the container has styling -->
+                  <!-- Modal content -->
                   <div 
                     class="bg-white rounded-lg shadow-2xl overflow-hidden max-w-5xl w-full max-h-[90vh] relative z-10 border border-gray-200"
                     :style="{ 'margin-top': `${modalOffsetTop}px` }"
@@ -2144,7 +2170,7 @@
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                       </button>
-                        </div>
+                    </div>
                     
                     <!-- Modal body -->
                     <div class="overflow-y-auto max-h-[calc(90vh-10rem)]">
@@ -2160,6 +2186,9 @@
                           <template v-else-if="selectedBundleDetails?.name === 'MagTek Payment Device DynaFlex II Go'">
                             <img src="@/../images/Magtek.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
                           </template>
+                          <template v-else-if="selectedBundleDetails?.name === 'ACT 15&quot; POS Station'">
+                            <img src="@/../images/Act15.jpg" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+                          </template>
                           <template v-else-if="selectedBundleDetails?.name === 'Food Truck / Mobile Vendor Hardware Setup'">
                             <img src="@/../images/foodtruckimg.jpg" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
                           </template>
@@ -2168,6 +2197,24 @@
                           </template>
                           <template v-else-if="selectedBundleDetails?.name === 'Kwick 15&quot; Server Bundle'">
                             <img src="@/../images/new_server.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+                          </template>
+                          <template v-else-if="selectedBundleDetails?.name === 'Kwick 21&quot; Large Kiosk Bundle'">
+                            <img src="@/../images/Kiosks21.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+                          </template>
+                          <template v-else-if="selectedBundleDetails?.name === 'Kwick Customer Display POS Bundle'">
+                            <img src="@/../images/Customerdisplay.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+                          </template>
+                          <template v-else-if="selectedBundleDetails?.name === 'Kwick iPad Bundle'">
+                            <img src="@/../images/ipadBundle.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+                          </template>
+                          <template v-else-if="selectedBundleDetails?.name === 'Setup for Kwick: Basic Setup'">
+                            <img src="@/../images/kwickPoslogo.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+                          </template>
+                          <template v-else-if="selectedBundleDetails?.name === 'Innovative QR Bundle'">
+                            <img src="@/../images/InnovativeQRBundle.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+                          </template>
+                          <template v-else-if="selectedBundleDetails?.name === '3rd Party Platform Integration (After 3-month trial)'">
+                            <img src="@/../images/thirdparty.jpg" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
                           </template>
                           <template v-else>
                             <img src="@/../images/fourth.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
@@ -2361,26 +2408,92 @@
                       
                     <!-- Cart items list -->
                     <div v-else>
-                      <div class="space-y-3">
-                        <div v-for="(item, index) in cartItems" :key="index" class="flex items-start p-2 border-b border-gray-100 last:border-b-0">
-                          <div class="flex-shrink-0 w-16 h-16 bg-gray-50 rounded-md flex items-center justify-center mr-3">
-                            <img src="@/../images/fourth.png" alt="Bundle Image" class="h-12 w-12 object-contain">
-                          </div>
-                          <div class="flex-grow">
-                            <h5 class="text-base font-semibold text-gray-800">{{ item.name }}</h5>
-                            <div class="flex justify-between items-center mt-1">
-                              <span class="text-sm text-gray-600">Qty: {{ item.quantity }}</span>
-                              <span class="text-sm font-medium text-gray-800">{{ item.price }}</span>
-                            </div>
-                            <div class="mt-1">
-                              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">
-                                {{ getBundleCategory(item.name) }}
-                            </span>
-                          </div>
-                        </div>
-                          </div>
-                          </div>
-                          
+                      <div class="overflow-x-auto">
+                        <table class="w-full table-auto border-collapse">
+                          <thead class="bg-gray-50">
+                            <tr>
+                              <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Item</th>
+                              <th class="px-4 py-2 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Quantity</th>
+                              <th class="px-4 py-2 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Price</th>
+                            </tr>
+                          </thead>
+                          <tbody class="divide-y divide-gray-200">
+                            <tr v-for="(item, index) in cartItems" :key="index" class="hover:bg-gray-50">
+                              <td class="px-4 py-3 text-sm font-medium text-gray-800">
+                                <div class="flex items-center">
+                                  <!-- Dynamic product images based on product name -->
+                                  <template v-if="item.name.includes('Kwick 15') && item.name.includes('POS Bundle')">
+                                    <img src="@/../images/kwickpos_posbank.png" alt="Bundle Image" class="h-10 w-10 mr-3 object-contain">
+                                  </template>
+                                  <template v-else-if="item.name.includes('Kwick 15') && item.name.includes('Server Bundle')">
+                                    <img src="@/../images/new_server.png" alt="Bundle Image" class="h-10 w-10 mr-3 object-contain">
+                                  </template>
+                                  <template v-else-if="item.name.includes('Kwick 21') && item.name.includes('Large Kiosk Bundle')">
+                                    <img src="@/../images/Kiosks21.png" alt="Bundle Image" class="h-10 w-10 mr-3 object-contain">
+                                  </template>
+                                  <template v-else-if="item.name.includes('Kwick Customer Display POS Bundle')">
+                                    <img src="@/../images/Customerdisplay.png" alt="Bundle Image" class="h-10 w-10 mr-3 object-contain">
+                                  </template>
+                                  <template v-else-if="item.name.includes('Kwick iPad Bundle')">
+                                    <img src="@/../images/ipadBundle.png" alt="Bundle Image" class="h-10 w-10 mr-3 object-contain">
+                                  </template>
+                                  <template v-else-if="item.name.includes('Setup for Kwick') || item.name.includes('Basic Setup')">
+                                    <img src="@/../images/kwickPoslogo.png" alt="Bundle Image" class="h-10 w-10 mr-3 object-contain">
+                                  </template>
+                                  <template v-else-if="item.name.includes('Handheld - A920')">
+                                    <img src="@/../images/A920.png" alt="Bundle Image" class="h-10 w-10 mr-3 object-contain">
+                                  </template>
+                                  <template v-else-if="item.name.includes('ACT 15') && item.name.includes('POS Station')">
+                                    <img src="@/../images/Act15.jpg" alt="Bundle Image" class="h-10 w-10 mr-3 object-contain">
+                                  </template>
+                                  <template v-else-if="item.name.includes('MINT 10') && item.name.includes('POS Station')">
+                                    <img src="@/../images/mintPOS.jpg" alt="Bundle Image" class="h-10 w-10 mr-3 object-contain">
+                                  </template>
+                                  <template v-else-if="item.name.includes('MagTek Payment Device')">
+                                    <img src="@/../images/Magtek.png" alt="Bundle Image" class="h-10 w-10 mr-3 object-contain">
+                                  </template>
+                                  <template v-else-if="item.name.includes('Food Truck') || item.name.includes('Mobile Vendor')">
+                                    <img src="@/../images/foodtruckimg.jpg" alt="Bundle Image" class="h-10 w-10 mr-3 object-contain">
+                                  </template>
+                                  <template v-else-if="item.name.includes('Innovative QR Bundle')">
+                                    <img src="@/../images/InnovativeQRBundle.png" alt="Bundle Image" class="h-10 w-10 mr-3 object-contain">
+                                  </template>
+                                  <template v-else-if="item.name.includes('3rd Party Platform') || item.name.includes('Integration')">
+                                    <img src="@/../images/thirdparty.jpg" alt="Bundle Image" class="h-10 w-10 mr-3 object-contain">
+                                  </template>
+                                  <template v-else-if="item.name.includes('KP Thermal Printer')">
+                                    <img src="@/../images/KPThermal.png" alt="Bundle Image" class="h-10 w-10 mr-3 object-contain">
+                                  </template>
+                                  <template v-else-if="item.name.includes('Epson')">
+                                    <img src="@/../images/A7407925.png" alt="Bundle Image" class="h-10 w-10 mr-3 object-contain">
+                                  </template>
+                                  <template v-else-if="item.name.includes('Kitchen Display') || item.name.includes('Monitor')">
+                                    <img src="@/../images/ELO-refurbished KDS.png" alt="Bundle Image" class="h-10 w-10 mr-3 object-contain">
+                                  </template>
+                                  <template v-else>
+                                    <img src="@/../images/fourth.png" alt="Bundle Image" class="h-10 w-10 mr-3 object-contain">
+                                  </template>
+                                  <div>
+                                    <div>{{ item.name }}</div>
+                                    <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full mt-1">
+                                      {{ getBundleCategory(item.name) }}
+                                    </span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td class="px-4 py-3 text-sm text-gray-600 text-center">{{ item.quantity || 1 }}</td>
+                              <td class="px-4 py-3 text-sm font-medium text-right">{{ item.price }}</td>
+                            </tr>
+                          </tbody>
+                          <tfoot class="bg-gray-50">
+                            <tr>
+                              <td colspan="2" class="px-4 py-3 text-sm font-medium text-gray-800 text-right">Total:</td>
+                              <td class="px-4 py-3 text-base font-bold text-right">${{ totalCartValue.toFixed(2) }}</td>
+                            </tr>
+                          </tfoot>
+                        </table>
+                      </div>
+                      
                       <div class="bg-blue-50 border border-blue-100 rounded-md p-3 mt-4">
                         <h6 class="font-medium text-blue-800 text-sm mb-2">All bundles include:</h6>
                         <div class="grid grid-cols-2 gap-1 text-sm">
@@ -2410,10 +2523,16 @@
                 
                 <!-- Payment Method Section -->
                 <div class="mb-8">
-                  <h4 class="text-xl font-bold text-gray-800 mb-4">Payment Method</h4>
+                  <div class="flex justify-between items-center mb-4">
+                    <h4 class="text-xl font-bold text-gray-800">Payment Method</h4>
+                    <div class="bg-gray-100 px-4 py-2 rounded-lg">
+                      <span class="text-gray-600 text-sm mr-2">Cart Total:</span>
+                      <span class="text-xl font-bold text-gray-900">${{ totalCartValue.toFixed(2) }}</span>
+                    </div>
+                  </div>
                   
                   <!-- Display only Cash option for bundles under $1500 -->
-                  <div v-if="bundlePriceValue <= 1500" class="bg-gray-50 border border-gray-200 rounded-lg p-5">
+                  <div v-if="totalCartValue <= 1500" class="bg-gray-50 border border-gray-200 rounded-lg p-5">
                     <div class="flex items-center mb-4">
                       <input 
                         type="radio" 
@@ -2458,7 +2577,7 @@
                           <p class="text-gray-600 mb-2">Pay the full amount today and receive your equipment immediately.</p>
                           <div class="flex items-center">
                             <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">5% Discount Applied</span>
-                            <span class="text-gray-500 text-sm ml-2">{{ calculateDiscount(getBundlePrice(selectedDevice), 0.05) }}</span>
+                            <span class="text-gray-500 text-sm ml-2">{{ calculateDiscount(totalCartValue.toFixed(2), 0.05) }}</span>
                           </div>
                         </div>
                       </div>
@@ -2483,7 +2602,7 @@
                           <p class="text-gray-600 mb-2">Split your payment over 3 months with 0% interest.</p>
                           <div class="flex items-center">
                             <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Monthly Payment</span>
-                            <span class="text-gray-500 text-sm ml-2">{{ calculateMonthlyPayment(getBundlePrice(selectedDevice), 3) }}/month for 3 months</span>
+                            <span class="text-gray-500 text-sm ml-2">{{ calculateMonthlyPayment(totalCartValue.toFixed(2), 3) }}/month for 3 months</span>
                           </div>
                         </div>
                       </div>
@@ -3403,37 +3522,14 @@ function goToStep(step) {
 
 // Add new function to get bundle category
 function getBundleCategory(bundleName) {
-  switch (bundleName) {
-    case 'Kwick 15" POS Bundle':
-      return 'POS Bundle';
-    case 'Kwick 15" Server Bundle':
-      return 'Server Bundle';
-    case 'Kwick Customer Display POS Bundle':
-      return 'POS Bundle';
-    case 'Kwick iPad Bundle':
-      return 'POS Bundle';
-    case 'Kwick 21" Large Kiosk Bundle':
-      return 'Kiosk Bundle';
-    case 'Setup for Kwick: Basic Setup':
-      return 'Setup';
-    case 'Handheld - A920 (Financing Only)':
-      return 'Handheld';
-    case 'Handheld - A920':
-      return 'Handheld';
-    case 'ACT 15" POS Station':
-      return 'POS Station';
-    case 'MINT 10" POS Station w/ Built-in Printer':
-      return 'POS Station';
-    case 'MagTek Payment Device DynaFlex II Go':
-      return 'Payment Device';
-    case 'Food Truck / Mobile Vendor Hardware Setup':
-      return 'Hardware Setup';
-    case 'Innovative QR Bundle':
-      return 'QR Bundle';
-    case '3rd Party Platform Integration (After 3-month trial)':
-      return 'Integration';
-    default:
-      return 'Unknown';
+  if (bundleName.includes("Kwick") || bundleName.includes("POS") || bundleName.includes("ACT") || bundleName.includes("MINT")) {
+    return "Hardware";
+  } else if (bundleName.includes("Setup")) {
+    return "Service";
+  } else if (bundleName.includes("Integration")) {
+    return "Software";
+  } else {
+    return "Accessory";
   }
 }
 
@@ -3956,16 +4052,30 @@ function toggleHandheldFeature(feature) {
 }
 
 // Helper functions for calculations
-function calculateDiscount(priceString, discountRate) {
-  const price = parseFloat(priceString.replace(/[^0-9.]/g, ''));
+function calculateDiscount(priceInput, discountRate) {
+  let price;
+  if (typeof priceInput === 'string') {
+    // Extract numeric value from price string (e.g., "$1,388.00" -> 1388)
+    price = parseFloat(priceInput.replace(/[^0-9.]/g, ''));
+  } else {
+    price = priceInput;
+  }
+  
   if (isNaN(price)) return '$0.00';
   
   const discountAmount = price * discountRate;
   return `Save $${discountAmount.toFixed(2)}`;
 }
 
-function calculateMonthlyPayment(priceString, months) {
-  const price = parseFloat(priceString.replace(/[^0-9.]/g, ''));
+function calculateMonthlyPayment(priceInput, months) {
+  let price;
+  if (typeof priceInput === 'string') {
+    // Extract numeric value from price string (e.g., "$1,388.00" -> 1388)
+    price = parseFloat(priceInput.replace(/[^0-9.]/g, ''));
+  } else {
+    price = priceInput;
+  }
+  
   if (isNaN(price) || months <= 0) return '$0.00';
   
   const monthlyPayment = price / months;
@@ -3980,10 +4090,30 @@ const bundlePriceValue = computed(() => {
   return numericValue || 0;
 });
 
+// Add computed property for total cart value
+const totalCartValue = computed(() => {
+  if (cartItems.value.length === 0) {
+    return bundlePriceValue.value; // Fall back to selected device if cart is empty
+  }
+  
+  let total = 0;
+  cartItems.value.forEach(item => {
+    // Extract numeric value from price string (e.g., "$1,388.00" -> 1388)
+    const priceString = item.price;
+    const priceValue = parseFloat(priceString.replace(/[$,]/g, ''));
+    
+    if (!isNaN(priceValue)) {
+      total += priceValue;
+    }
+  });
+  
+  return total;
+});
+
 // Function to get product image
 function getProductImage(productName) {
   if (productName === 'Handheld - A920') {
-    return '@/../images/A920.jpg';
+    return '@/../images/A920.png';
   } else if (productName === 'MINT 10" POS Station w/ Built-in Printer') {
     return '@/../images/mintPOS.jpg';
   } else {

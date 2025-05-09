@@ -16,13 +16,19 @@
         
         <!-- Hardware image -->
         <div class="h-40 bg-gray-50 flex items-center justify-center p-4 relative overflow-hidden">
-          <template v-if="hardware.name === 'Epson Kitchen Printer'">
+          <template v-if="hardware.name === 'KP Thermal Printer'">
+            <img src="@/../images/KPThermal.png" :alt="hardware.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
+          </template>
+          <template v-else-if="hardware.name === 'Epson Kitchen Printer'">
             <img src="@/../images/A7407925.png" :alt="hardware.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
           </template>
           <template v-else-if="hardware.name === 'Epson Label Printer'">
             <img src="@/../images/A7407925.png" :alt="hardware.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
           </template>
           <template v-else-if="hardware.name === 'Kitchen Display Monitor 20&quot;'">
+            <img src="@/../images/ELO-refurbished KDS.png" :alt="hardware.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
+          </template>
+          <template v-else-if="hardware.name === 'Kitchen Armor Kitchen Display Monitor 22&quot;'">
             <img src="@/../images/ELO-refurbished KDS.png" :alt="hardware.name" class="h-full object-contain transition-transform duration-500 group-hover:scale-110">
           </template>
           <template v-else>
