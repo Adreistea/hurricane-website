@@ -1,0 +1,112 @@
+{
+  "merchant": {
+    "first_name": "John",
+    "last_name": "Doe",
+    "business_name": "John's Restaurant",
+    "phone_number": "555-123-4567",
+    "business_email": "john@example.com",
+    "monthly_volume": "$10,000 - $29,999",
+    "average_sale": 45.75,
+    "high_ticket": 150.00,
+    "privacy_agreement": true
+  },
+  "business_details": {
+    "business_entity_type": "LLC",
+    "industry_type": "Restaurant",
+    "dba": "John's Grill",
+    "product_service": "Full-service restaurant",
+    "business_phone": "555-987-6543",
+    "year_started": 2020,
+    "website": "https://www.johnsgrill.com",
+    "address_line1": "123 Main Street",
+    "address_line2": "Suite 101",
+    "state": "CA",
+    "zip": "90210"
+  },
+  "owner_information": {
+    "owner_first_name": "John",
+    "owner_last_name": "Doe",
+    "title": "Owner",
+    "date_of_birth": "1980-05-15",
+    "ownership_percentage": 100.00,
+    "drivers_license": "D1234567",
+    "dl_state": "CA",
+    "owner_phone": "555-123-4567",
+    "home_address_line1": "456 Oak Avenue",
+    "home_address_line2": "Apt 202",
+    "city": "Los Angeles",
+    "home_state": "CA",
+    "home_zip": "90210"
+  },
+  "system_configuration": {
+    "number_of_locations": "2",
+    "number_of_registers": "3",
+    "number_of_servers": "10",
+    "handhelds_needed": true,
+    "number_of_handhelds": 5,
+    "customer_displays_needed": true,
+    "additional_requirements": "Need integration with our existing inventory system"
+  },
+  "selected_bundles": [
+    {
+      "bundle_name": "Kwick 15\" POS Bundle (2 bundles)",
+      "price": 2776.00,
+      "quantity": 2
+    },
+    {
+      "bundle_name": "Handheld - A920 (3 units)",
+      "price": 1650.00,
+      "quantity": 3
+    },
+    {
+      "bundle_name": "Setup for Kwick: Basic Setup",
+      "price": 500.00,
+      "quantity": 1
+    }
+  ],
+  "payment_details": {
+    "payment_method": "financing_3mo",
+    "terms_agreement": true,
+    "signature_name": "John Doe",
+    "signature_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA...",
+    "signature_date": "2023-05-20",
+    "total_amount": 4926.00
+  },
+  "business_profile": {
+    "profile_type": "Restaurant",
+    "current_pos_status": "Yes, but it's outdated.",
+    "order_management_method": "We use messaging apps or call-ins.",
+    "customer_engagement_tools": "We don't really use any.",
+    "staff_confidence": "New staff always need days of training.",
+    "technical_support": "We wait days for a technician.",
+    "complete_solution_response": "That would make a huge difference."
+  },
+  "business_challenges": [
+    {
+      "profile_type": "Restaurant",
+      "challenge_type": "System Crashes"
+    },
+    {
+      "profile_type": "Restaurant", 
+      "challenge_type": "Difficult Menu Management"
+    },
+    {
+      "profile_type": "Restaurant",
+      "challenge_type": "Poor Offline Functionality"
+    }
+  ],
+  "handheld_features": [
+    {
+      "feature": "Order Taking"
+    },
+    {
+      "feature": "Payment Processing"
+    },
+    {
+      "feature": "Menu Modifications"
+    },
+    {
+      "feature": "Table Management"
+    }
+  ]
+}
