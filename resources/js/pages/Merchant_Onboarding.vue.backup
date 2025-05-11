@@ -54,7 +54,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                   </svg>
                   <transition name="bounce">
-                    <div v-if="cartItemCount > 0" class="absolute -top-1 -right-1 bg-red-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center shadow-sm border border-white">
+                    <div v-if="cartItemCount > 0" class="absolute -top-1 -right-1 bg-custom-red text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center shadow-sm border border-white">
                       {{ cartItemCount }}
                     </div>
                   </transition>
@@ -2501,15 +2501,15 @@
                               <div class="bg-gradient-to-r from-gray-50 to-gray-100 p-4 rounded-lg border border-gray-300 shadow-sm">
                                 <div class="flex flex-col gap-3">
                                   <div>
-                                    <label for="bundleDetailsQuantity" class="block text-lg font-bold text-gray-900 mb-2 flex items-center">
+                                    <label for="bundleQuantity" class="block text-lg font-bold text-gray-900 mb-2 flex items-center">
                                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-custom-red" viewBox="0 0 20 20" fill="currentColor">
                                         <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                                       </svg>
                                       {{ selectedBundleDetails?.name === 'Handheld - A920' ? 'Units:' : 'Bundles:' }}
                                     </label>
                                     <select 
-                                      id="bundleDetailsQuantity" 
-                                      v-model="bundleDetailsQuantity" 
+                                      id="bundleQuantity" 
+                                      v-model="bundleQuantity" 
                                       class="rounded-md border-gray-300 shadow-md focus:border-custom-red focus:ring focus:ring-custom-red focus:ring-opacity-30 w-full text-base font-medium py-2 bg-white hover:bg-gray-50 transition-colors"
                                     >
                                       <option value="0">None</option>
@@ -3084,7 +3084,7 @@
           </div>
           <button 
             @click="addCustomBundlesToCart" 
-            class="px-5 py-2 bg-red-600 text-white font-medium rounded-md hover:bg-red-800 transition-colors"
+            class="px-5 py-2 bg-custom-red text-white font-medium rounded-md hover:bg-red-800 transition-colors"
           >
             Add to Cart
           </button>
@@ -3582,7 +3582,7 @@ function getBundlePrice(device) {
 
 // Function to add bundle to cart
 function addBundleToCart() {
-  if (bundleDetailsQuantity.value <= 0) {
+  if (bundleQuantity.value <= 0) {
     alert('Please select at least 1 bundle');
     return;
   }
@@ -3591,13 +3591,13 @@ function addBundleToCart() {
   if (selectedBundleDetails.value && selectedBundleDetails.value.name === 'Complete POS Solution Package') {
     // Add to cart with special handling
     addToCart({
-      name: `Complete POS Solution Package (${bundleDetailsQuantity.value} ${bundleDetailsQuantity.value > 1 ? 'bundles' : 'bundle'})`,
-      price: `$${(bundleDetailsQuantity.value * 999).toFixed(2)}`,
-      quantity: bundleDetailsQuantity.value
+      name: `Complete POS Solution Package (${bundleQuantity.value} ${bundleQuantity.value > 1 ? 'bundles' : 'bundle'})`,
+      price: `$${(bundleQuantity.value * 999).toFixed(2)}`,
+      quantity: bundleQuantity.value
     });
     
     // Show success message
-    cartSuccessMessage.value = `${bundleDetailsQuantity.value} bundle${bundleDetailsQuantity.value > 1 ? 's' : ''} added to cart successfully!`;
+    cartSuccessMessage.value = `${bundleQuantity.value} bundle${bundleQuantity.value > 1 ? 's' : ''} added to cart successfully!`;
     showCartSuccessMessage.value = true;
     
     // Hide success message after 3 seconds
@@ -3613,7 +3613,7 @@ function addBundleToCart() {
   // Original logic for other bundles
   // Get the bundle name and quantity
   const bundleName = selectedBundleDetails.value.name;
-  const quantity = parseInt(bundleDetailsQuantity.value);
+  const quantity = parseInt(bundleQuantity.value);
   
   // Handle Setup bundle differently
   if (bundleName === "Setup for Kwick: Basic Setup") {
@@ -3765,7 +3765,7 @@ function buyNowBundle() {
   addToCart({
     name: selectedBundleDetails.value.name,
     price: getBundlePrice(selectedBundleDetails.value.name),
-    quantity: bundleDetailsQuantity.value
+    quantity: bundleQuantity.value
   });
   
   // Select this device/bundle
@@ -3832,13 +3832,13 @@ function addCustomBundlesToCart() {
 
 // Function to increment bundle quantity
 function incrementBundleQuantity() {
-  bundleDetailsQuantity.value++;
+  bundleQuantity.value++;
 }
 
 // Function to decrement bundle quantity
 function decrementBundleQuantity() {
-  if (bundleDetailsQuantity.value > 1) {
-    bundleDetailsQuantity.value--;
+  if (bundleQuantity.value > 1) {
+    bundleQuantity.value--;
   }
 }
 
@@ -3849,11 +3849,11 @@ function addBundlesToCart() {
     name: 'Complete POS Solution Package',
     price: '$999.00',
     originalPrice: '$2,388.00',
-    quantity: bundleDetailsQuantity.value
+    quantity: bundleQuantity.value
   });
   
   // Show success message
-  cartSuccessMessage.value = `${bundleDetailsQuantity.value} bundle${bundleDetailsQuantity.value > 1 ? 's' : ''} added to cart successfully!`;
+  cartSuccessMessage.value = `${bundleQuantity.value} bundle${bundleQuantity.value > 1 ? 's' : ''} added to cart successfully!`;
   showCartSuccessMessage.value = true;
   
   // Hide success message after 3 seconds
@@ -4288,7 +4288,7 @@ function goBackToProducts() {
 
 // Add new data for the Bundle Details Modal
 const selectedBundleDetails = ref(null);
-const bundleDetailsQuantity = ref(0);
+const bundleQuantity = ref(0);
 const modalOffsetTop = ref(0); // Modal position offset
 
 // Function to open bundle details modal
@@ -4298,7 +4298,7 @@ function openBundleModal(bundle) {
   
   // If it's the Setup bundle, don't auto-add to cart, show the modal instead
   if (bundle.name === "Setup for Kwick: Basic Setup") {
-    bundleDetailsQuantity.value = 1; // Pre-select quantity of 1
+    bundleQuantity.value = 1; // Pre-select quantity of 1
     
     // Calculate modal position based on current scroll position
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -4321,7 +4321,7 @@ function openBundleModal(bundle) {
   }
   
   // Reset bundle quantity to "None" when opening a new bundle modal
-  bundleDetailsQuantity.value = 0;
+  bundleQuantity.value = 0;
   
   // Calculate modal position based on current scroll position
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -4503,3 +4503,21 @@ function getProductImage(productName) {
 const showCustomBundleModal = ref(false);
 const customBundleQuantity = ref(1);
 </script>
+
+<style scoped>
+/* Custom color variables */
+:root {
+  --custom-red: #973131;
+  --custom-red-dark: #7e2016;
+}
+
+</style>
+
+```
+</style scoped>
+
+```
+</style scoped>
+
+```
+</style scoped>
