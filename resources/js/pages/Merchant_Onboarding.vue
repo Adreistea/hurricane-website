@@ -1,6 +1,202 @@
 <template>  <div>
     <NavBar />
     
+    <!-- Bundle Details Modal - Moved outside of steps to be accessible from any step -->
+    <div 
+      v-if="showBundleModal" 
+      class="fixed inset-0 z-50 flex items-center justify-center px-4 py-5 overflow-auto modal-container" 
+      style="background-color: rgba(0, 0, 0, 0.3); backdrop-filter: blur(2px);"
+      @click.self="showBundleModal = false"
+    >
+      <!-- Modal content -->
+      <div 
+        class="bg-white rounded-lg shadow-2xl overflow-hidden max-w-5xl w-full max-h-[90vh] relative z-[100] border border-gray-200 modal-content"
+        style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);"
+      >
+        <!-- Modal header -->
+        <div class="flex justify-between items-center p-4 border-b border-gray-200">
+          <h3 class="text-xl font-bold text-gray-800">Bundle Details - {{ selectedBundleDetails?.name }}</h3>
+          <button @click.stop.prevent="showBundleModal = false" class="text-gray-400 hover:text-gray-600 transition-colors" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <!-- Modal body -->
+        <div class="overflow-y-auto max-h-[calc(90vh-10rem)]">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+            <!-- Product image -->
+            <div class="bg-gray-50 p-4 rounded-lg flex items-center justify-center">
+              <template v-if="selectedBundleDetails?.name === 'Handheld - A920'">
+                <img src="@/../images/A920.jpg" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+              </template>
+              <template v-else-if="selectedBundleDetails?.name === 'MINT 10&quot; POS Station w/ Built-in Printer'">
+                <img src="@/../images/mintPOS.jpg" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+              </template>
+              <template v-else-if="selectedBundleDetails?.name === 'MagTek Payment Device DynaFlex II Go'">
+                <img src="@/../images/Magtek.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+              </template>
+              <template v-else-if="selectedBundleDetails?.name === 'ACT 15&quot; POS Station'">
+                <img src="@/../images/Act15.jpg" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+              </template>
+              <template v-else-if="selectedBundleDetails?.name === 'Food Truck / Mobile Vendor Hardware Setup'">
+                <img src="@/../images/foodtruckimg.jpg" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+              </template>
+              <template v-else-if="selectedBundleDetails?.name === 'Kwick 15&quot; POS Bundle'">
+                <img src="@/../images/kwickpos_posbank.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+              </template>
+              <template v-else-if="selectedBundleDetails?.name === 'Kwick 15&quot; Server Bundle'">
+                <img src="@/../images/new_server.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+              </template>
+              <template v-else-if="selectedBundleDetails?.name === 'Kwick 21&quot; Large Kiosk Bundle'">
+                <img src="@/../images/Kiosks21.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+              </template>
+              <template v-else-if="selectedBundleDetails?.name === 'Kwick Customer Display POS Bundle'">
+                <img src="@/../images/Customerdisplay.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+              </template>
+              <template v-else-if="selectedBundleDetails?.name === 'Kwick iPad Bundle'">
+                <img src="@/../images/ipadBundle.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+              </template>
+              <template v-else-if="selectedBundleDetails?.name === 'Setup for Kwick: Basic Setup'">
+                <img src="@/../images/kwickPoslogo.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+              </template>
+              <template v-else-if="selectedBundleDetails?.name === 'Innovative QR Bundle'">
+                <img src="@/../images/InnovativeQRBundle.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+              </template>
+              <template v-else-if="selectedBundleDetails?.name === '3rd Party Platform Integration (After 3-month trial)'">
+                <img src="@/../images/thirdparty.jpg" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+              </template>
+              <template v-else-if="selectedBundleDetails?.name === 'Complete POS Solution Package'">
+                <img src="@/../images/fourth.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+              </template>
+              <template v-else>
+                <img src="@/../images/fourth.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
+              </template>
+            </div>
+            <!-- Product details -->
+            <div class="flex flex-col">
+              <h1 class="text-2xl font-bold text-gray-800 mb-2">{{ selectedBundleDetails?.name || "Bundle" }}</h1>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400">
+                  <svg v-for="i in 5" :key="i" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" :class="i <= 4 ? 'text-yellow-400' : 'text-gray-300'" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
+                <span class="text-blue-600 text-sm ml-2 hover:underline cursor-pointer">578 ratings</span>
+              </div>
+              <div class="border-t border-b border-gray-200 py-4 mb-4">
+                <div class="flex items-baseline mb-2">
+                  <span class="text-xl text-red-600 font-bold">Special Price:</span>
+                  <span class="text-3xl font-bold text-gray-900 ml-2">{{ getTotalPrice }}</span>
+                  <span v-if="selectedBundleDetails?.originalPrice" class="ml-2 text-lg text-gray-500 line-through">{{ getOriginalTotalPrice }}</span>
+                  <span v-else class="ml-2 text-lg text-gray-500 line-through">$2,388.00</span>
+                </div>
+                <div class="bg-green-100 text-green-800 inline-block px-2 py-1 rounded text-sm font-medium">
+                  0% Credit Card Processing Fees
+                </div>
+              </div>
+              <div class="space-y-4 mb-6">
+                <div>
+                  <h4 class="font-medium text-gray-900">Description</h4>
+                  <p class="text-gray-700 text-sm">{{ selectedBundleDetails?.description || 'Complete POS solution with all hardware, software, and payment processing needed to run your business efficiently.' }}</p>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-900">Features</h4>
+                  <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1 mt-2">
+                    <template v-if="selectedBundleDetails?.features">
+                      <li v-for="(feature, featureIndex) in selectedBundleDetails.features" :key="featureIndex">
+                        {{ feature }}
+                      </li>
+                    </template>
+                    <template v-else>
+                      <li>High-performance touchscreen display</li>
+                      <li>Receipt printer included</li>
+                      <li>Payment terminal with PIN pad</li>
+                      <li>Cash drawer</li>
+                      <li>Professional installation and setup</li>
+                      <li>Staff training included</li>
+                    </template>
+                  </ul>
+                </div>
+                <!-- Bundles quantity selector -->
+                <div class="mt-6 pt-5 border-t border-gray-200" v-if="selectedBundleDetails?.name !== 'Setup for Kwick: Basic Setup'">
+                  <div class="bg-gradient-to-r from-gray-50 to-gray-100 p-4 rounded-lg border border-gray-300 shadow-sm">
+                    <div class="flex flex-col gap-3">
+                      <div>
+                        <label for="bundleQuantity" class="block text-lg font-bold text-gray-900 mb-2 flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-custom-red" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                          </svg>
+                          {{ selectedBundleDetails?.name === 'Handheld - A920' ? 'Units:' : 'Bundles:' }}
+                        </label>
+                        <select 
+                          id="bundleQuantity" 
+                          v-model="bundleQuantity" 
+                          class="rounded-md border-gray-300 shadow-md focus:border-custom-red focus:ring focus:ring-custom-red focus:ring-opacity-30 w-full text-base font-medium py-2 bg-white hover:bg-gray-50 transition-colors"
+                        >
+                          <option value="0">None</option>
+                          <template v-for="(price, index) in getBundlePricesArray(selectedBundleDetails?.name)" :key="index">
+                            <option :value="index + 1">{{ price.name }} ({{ price.price }})</option>
+                          </template>
+                        </select>
+                      </div>
+                      <p class="text-sm text-gray-600 italic">Select the number of {{ selectedBundleDetails?.name === 'Handheld - A920' ? 'units' : 'bundles' }} required for your business</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Fixed price display for Setup bundle -->
+                <div class="mt-6 pt-5 border-t border-gray-200" v-if="selectedBundleDetails?.name === 'Setup for Kwick: Basic Setup'">
+                  <div class="bg-gradient-to-r from-gray-50 to-gray-100 p-4 rounded-lg border border-gray-300 shadow-sm">
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-custom-red" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+                        </svg>
+                        <span class="text-lg font-bold text-gray-900">Basic Setup</span>
+                      </div>
+                      <div class="text-lg font-bold text-custom-red">$500.00</div>
+                    </div>
+                    <p class="text-sm text-gray-600 italic mt-2">Automatically included with your bundle purchase</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- What's included section -->
+          <div class="p-6 bg-gray-50 border-t border-gray-200">
+            <h4 class="font-bold text-gray-900 mb-3">What's included in this bundle:</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="flex items-start" v-for="(item, idx) in bundleItems" :key="idx">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <span class="font-medium text-gray-900">{{ item.name }}</span>
+                  <p class="text-sm text-gray-600">{{ item.description }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="border-t border-gray-200 p-4 bg-gray-50 flex flex-col md:flex-row gap-4">
+          <div class="flex-grow">
+            <!-- Removed quantity selector from here -->
+          </div>
+          <div class="flex gap-4">
+            <button 
+              @click.stop="addBundleToCart" 
+              class="px-8 py-2 bg-custom-red text-white rounded-md font-medium hover:bg-red-700 transition-colors"
+              type="button"
+            >
+              Add to Cart
+            </button>
+            <!-- Removed Buy Now button -->
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <div class="py-16 bg-gray-50">
       <div class="container mx-auto px-6">
         <div class="max-w-6xl mx-auto">
@@ -2374,200 +2570,7 @@
                           </div>
                 
                 <!-- Bundle Details Modal -->
-                <div 
-                  v-if="showBundleModal" 
-                  class="fixed inset-0 z-50 flex items-start justify-center px-4 py-5 overflow-auto" 
-                  style="background-color: rgba(0, 0, 0, 0.3); backdrop-filter: blur(2px);"
-                  @click.self="showBundleModal = false"
-                >
-                  
-                  <!-- Modal content -->
-                  <div 
-                    class="bg-white rounded-lg shadow-2xl overflow-hidden max-w-5xl w-full max-h-[90vh] relative z-10 border border-gray-200"
-                    :style="{ 'margin-top': `${modalOffsetTop}px` }"
-                  >
-                    <!-- Modal header -->
-                    <div class="flex justify-between items-center p-4 border-b border-gray-200">
-                      <h3 class="text-xl font-bold text-gray-800">Bundle Details</h3>
-                      <button @click.stop.prevent="showBundleModal = false" class="text-gray-400 hover:text-gray-600 transition-colors" type="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                      </button>
-                    </div>
-                    
-                    <!-- Modal body -->
-                    <div class="overflow-y-auto max-h-[calc(90vh-10rem)]">
-                      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
-                        <!-- Product image -->
-                        <div class="bg-gray-50 p-4 rounded-lg flex items-center justify-center">
-                          <template v-if="selectedBundleDetails?.name === 'Handheld - A920'">
-                            <img src="@/../images/A920.jpg" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
-                          </template>
-                          <template v-else-if="selectedBundleDetails?.name === 'MINT 10&quot; POS Station w/ Built-in Printer'">
-                            <img src="@/../images/mintPOS.jpg" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
-                          </template>
-                          <template v-else-if="selectedBundleDetails?.name === 'MagTek Payment Device DynaFlex II Go'">
-                            <img src="@/../images/Magtek.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
-                          </template>
-                          <template v-else-if="selectedBundleDetails?.name === 'ACT 15&quot; POS Station'">
-                            <img src="@/../images/Act15.jpg" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
-                          </template>
-                          <template v-else-if="selectedBundleDetails?.name === 'Food Truck / Mobile Vendor Hardware Setup'">
-                            <img src="@/../images/foodtruckimg.jpg" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
-                          </template>
-                          <template v-else-if="selectedBundleDetails?.name === 'Kwick 15&quot; POS Bundle'">
-                            <img src="@/../images/kwickpos_posbank.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
-                          </template>
-                          <template v-else-if="selectedBundleDetails?.name === 'Kwick 15&quot; Server Bundle'">
-                            <img src="@/../images/new_server.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
-                          </template>
-                          <template v-else-if="selectedBundleDetails?.name === 'Kwick 21&quot; Large Kiosk Bundle'">
-                            <img src="@/../images/Kiosks21.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
-                          </template>
-                          <template v-else-if="selectedBundleDetails?.name === 'Kwick Customer Display POS Bundle'">
-                            <img src="@/../images/Customerdisplay.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
-                          </template>
-                          <template v-else-if="selectedBundleDetails?.name === 'Kwick iPad Bundle'">
-                            <img src="@/../images/ipadBundle.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
-                          </template>
-                          <template v-else-if="selectedBundleDetails?.name === 'Setup for Kwick: Basic Setup'">
-                            <img src="@/../images/kwickPoslogo.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
-                          </template>
-                          <template v-else-if="selectedBundleDetails?.name === 'Innovative QR Bundle'">
-                            <img src="@/../images/InnovativeQRBundle.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
-                          </template>
-                          <template v-else-if="selectedBundleDetails?.name === '3rd Party Platform Integration (After 3-month trial)'">
-                            <img src="@/../images/thirdparty.jpg" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
-                          </template>
-                          <template v-else>
-                            <img src="@/../images/fourth.png" :alt="selectedBundleDetails?.name || 'Bundle Image'" class="h-64 object-contain">
-                          </template>
-                    </div>
-                        
-                        <!-- Product details -->
-                        <div class="flex flex-col">
-                          <h1 class="text-2xl font-bold text-gray-800 mb-2">{{ selectedBundleDetails?.name || "Bundle" }}</h1>
-                          
-                          <div class="flex items-center mb-4">
-                            <div class="flex text-yellow-400">
-                              <svg v-for="i in 5" :key="i" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" :class="i <= 4 ? 'text-yellow-400' : 'text-gray-300'" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                              </svg>
-                            </div>
-                            <span class="text-blue-600 text-sm ml-2 hover:underline cursor-pointer">578 ratings</span>
-                  </div>
-                  
-                          <div class="border-t border-b border-gray-200 py-4 mb-4">
-                            <div class="flex items-baseline mb-2">
-                              <span class="text-xl text-red-600 font-bold">Special Price:</span>
-                              <span class="text-3xl font-bold text-gray-900 ml-2">{{ getBundlePrice(selectedBundleDetails?.name) }}</span>
-                              <span class="ml-2 text-lg text-gray-500 line-through">$2,388.00</span>
-                            </div>
-                            <div class="bg-green-100 text-green-800 inline-block px-2 py-1 rounded text-sm font-medium">
-                              0% Credit Card Processing Fees
-                            </div>
-                          </div>
-                          
-                          <div class="space-y-4 mb-6">
-                            <div>
-                              <h4 class="font-medium text-gray-900">Description</h4>
-                              <p class="text-gray-700 text-sm">Complete POS solution with all hardware, software, and payment processing needed to run your business efficiently.</p>
-                            </div>
-                            
-                            <div>
-                              <h4 class="font-medium text-gray-900">Features</h4>
-                              <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1 mt-2">
-                                <li>High-performance touchscreen display</li>
-                                <li>Receipt printer included</li>
-                                <li>Payment terminal with PIN pad</li>
-                                <li>Cash drawer</li>
-                                <li>Professional installation and setup</li>
-                                <li>Staff training included</li>
-                              </ul>
-                            </div>
-                            
-                          <!-- Bundles quantity selector -->
-                          <div class="mt-6 pt-5 border-t border-gray-200" v-if="selectedBundleDetails?.name !== 'Setup for Kwick: Basic Setup'">
-                              <div class="bg-gradient-to-r from-gray-50 to-gray-100 p-4 rounded-lg border border-gray-300 shadow-sm">
-                                <div class="flex flex-col gap-3">
-                                  <div>
-                                    <label for="bundleQuantity" class="block text-lg font-bold text-gray-900 mb-2 flex items-center">
-                                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-custom-red" viewBox="0 0 20 20" fill="currentColor">
-                                        <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                                      </svg>
-                                      {{ selectedBundleDetails?.name === 'Handheld - A920' ? 'Units:' : 'Bundles:' }}
-                                    </label>
-                                    <select 
-                                      id="bundleQuantity" 
-                                      v-model="bundleQuantity" 
-                                      class="rounded-md border-gray-300 shadow-md focus:border-custom-red focus:ring focus:ring-custom-red focus:ring-opacity-30 w-full text-base font-medium py-2 bg-white hover:bg-gray-50 transition-colors"
-                                    >
-                                      <option value="0">None</option>
-                                      <template v-for="(price, index) in getBundlePricesArray(selectedBundleDetails?.name)" :key="index">
-                                        <option :value="index + 1">{{ price.name }} ({{ price.price }})</option>
-                                      </template>
-                                    </select>
-                                  </div>
-                                  <p class="text-sm text-gray-600 italic">Select the number of {{ selectedBundleDetails?.name === 'Handheld - A920' ? 'units' : 'bundles' }} required for your business</p>
-                                </div>
-                              </div>
-                            </div>
-
-                            <!-- Fixed price display for Setup bundle -->
-                            <div class="mt-6 pt-5 border-t border-gray-200" v-if="selectedBundleDetails?.name === 'Setup for Kwick: Basic Setup'">
-                              <div class="bg-gradient-to-r from-gray-50 to-gray-100 p-4 rounded-lg border border-gray-300 shadow-sm">
-                                <div class="flex items-center justify-between">
-                                  <div class="flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-custom-red" viewBox="0 0 20 20" fill="currentColor">
-                                      <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
-                                    </svg>
-                                    <span class="text-lg font-bold text-gray-900">Basic Setup</span>
-                          </div>
-                                  <div class="text-lg font-bold text-custom-red">$500.00</div>
-                                </div>
-                                <p class="text-sm text-gray-600 italic mt-2">Automatically included with your bundle purchase</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                </div>
-                
-                      <!-- What's included section -->
-                      <div class="p-6 bg-gray-50 border-t border-gray-200">
-                        <h4 class="font-bold text-gray-900 mb-3">What's included in this bundle:</h4>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          <div class="flex items-start" v-for="(item, idx) in bundleItems" :key="idx">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            <div>
-                              <span class="font-medium text-gray-900">{{ item.name }}</span>
-                              <p class="text-sm text-gray-600">{{ item.description }}</p>
-                        </div>
-                      </div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <!-- Modal footer -->
-                    <div class="border-t border-gray-200 p-4 bg-gray-50 flex flex-col md:flex-row gap-4">
-                      <div class="flex-grow">
-                        <!-- Removed quantity selector from here -->
-                      </div>
-                      <div class="flex gap-4">
-                      <button 
-                          @click.stop="addBundleToCart" 
-                          class="px-8 py-2 bg-custom-red text-white rounded-md font-medium hover:bg-red-700 transition-colors"
-                          type="button"
-                      >
-                          Add to Cart
-                      </button>
-                        <!-- Removed Buy Now button -->
-                      </div>
-                      </div>
-                    </div>
-                  </div>
+                <!-- The modal has been moved to the top of the file for use in all steps -->
 
                 <AdditionalHardware 
                   :additional-hardware-options="additionalHardwareOptions"
@@ -2972,9 +2975,11 @@
                   
                   
                   <h3 class="text-2xl font-bold mb-4 text-gray-800">Application Submitted Successfully!</h3>
-                  <p class="text-gray-600 mb-6">
+                  <p class="text-lg text-gray-600 mb-6">
                     Thank you for completing your merchant application. Our team will review your information and contact you shortly.
                   </p>
+                  
+                
                   
                   <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 mb-6 max-w-md mx-auto">
                     <h4 class="text-xl font-bold text-custom-red mb-2">What Happens Next?</h4>
@@ -3539,57 +3544,8 @@ function addBundleToCart() {
     return;
   }
   
-  // Set price per bundle based on bundle type
-  let pricePerBundle;
-  switch(bundleName) {
-    case "Kwick 15\" Server Bundle":
-      pricePerBundle = 1288;
-      break;
-    case "Kwick 15\" POS Bundle":
-      pricePerBundle = 1388;
-      break;
-    case "Kwick Customer Display POS Bundle":
-      pricePerBundle = 1788;
-      break;
-    case "Kwick iPad Bundle":
-      pricePerBundle = 1099;
-      break;
-    case "Kwick 21\" Large Kiosk Bundle":
-      pricePerBundle = 3000;
-      break;
-    case "ACT 15\" POS Station":
-      pricePerBundle = 1288;
-      break;
-    case "MINT 10\" POS Station w/ Built-in Printer":
-      pricePerBundle = 999;
-      break;
-    case "MagTek Payment Device DynaFlex II Go":
-      pricePerBundle = 999;
-      break;
-    case "Food Truck / Mobile Vendor Hardware Setup":
-      pricePerBundle = 1288;
-      break;
-    case "Innovative QR Bundle":
-      pricePerBundle = 49;
-      break;
-    case "3rd Party Platform Integration (After 3-month trial)":
-      pricePerBundle = 109;
-      break;
-    case "Handheld - A920":
-      pricePerBundle = 550;
-      break;
-    default:
-      pricePerBundle = 1388;
-  }
-  
-  // Calculate total price
-  const totalPrice = pricePerBundle * quantity;
-  
-  // Format total price with commas and decimals
-  const formattedTotalPrice = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD'
-  }).format(totalPrice);
+  // Get the total price based on quantity using the computed property
+  const totalPrice = getTotalPrice.value;
 
   // Determine label based on product type
   const itemLabel = bundleName === "Handheld - A920" ? 
@@ -3599,7 +3555,7 @@ function addBundleToCart() {
   // Add to cart with quantity and total price
   addToCart({
     name: `${bundleName} (${quantity} ${itemLabel})`,
-    price: formattedTotalPrice,
+    price: totalPrice,
     quantity: quantity
   });
   
@@ -3619,6 +3575,9 @@ function getBundlePricesArray(bundleName) {
   // Get base price for the bundle type
   let basePrice;
   switch(bundleName) {
+    case "Complete POS Solution Package":
+      basePrice = 999;
+      break;
     case "Kwick 15\" Server Bundle":
       basePrice = 1288;
       break;
@@ -3788,6 +3747,49 @@ function toggleBusinessChallenge(challenge) {
 function selectCompleteSolution(response) {
   form.value.complete_solution_response = response;
   form.value.selected_value_bundle = true;
+}
+
+// Function to select the value bundle and open the quantity selection modal
+function selectValueBundle() {
+  console.log("selectValueBundle called");
+  
+  // Create the bundle details object for the special offer
+  selectedBundleDetails.value = {
+    name: "Complete POS Solution Package",
+    price: "$999.00",
+    originalPrice: "$2,388.00",
+    description: "Complete POS solution with all the hardware and marketing tools you need to get started - plus 0% credit card processing with Hurricane Pay.",
+    features: [
+      "High-Performance Local Server",
+      "15\" Touchscreen POS Terminal",
+      "Thermal Receipt Printer & Credit Card Reader",
+      "QR Code Ordering System + Marketing Tools",
+      "Professional Installation & Staff Training",
+      "2-Day Hardware Replacement Warranty"
+    ]
+  };
+  
+  // Set initial quantity
+  bundleQuantity.value = 1;
+  
+  // Ensure bundle items are set for this product
+  bundleItems.value = [
+    { name: 'Local Server', description: 'High-performance local server for your POS system' },
+    { name: 'Touchscreen Terminal', description: '15" touchscreen POS terminal' },
+    { name: 'Receipt Printer', description: 'Thermal receipt printer for fast printing' },
+    { name: 'Credit Card Reader', description: 'Secure payment processing terminal' },
+    { name: 'QR Ordering System', description: 'Contactless ordering system for customers' },
+    { name: 'Marketing Tools', description: 'Customer engagement and marketing tools' },
+    { name: 'Installation', description: 'Professional on-site installation and setup' },
+    { name: 'Training', description: 'Staff training on using the POS system' },
+  ];
+  
+  // Force-update to ensure modal visibility
+  nextTick(() => {
+    // Show the modal
+    showBundleModal.value = true;
+    console.log("Modal should be visible now:", showBundleModal.value);
+  });
 }
 
 // Add new function to select a bundle and transfer it to the Bundle Selection step
@@ -4135,7 +4137,7 @@ function goBackToProducts() {
 
 // Add new data for the Bundle Details Modal
 const selectedBundleDetails = ref(null);
-const bundleQuantity = ref(0);
+const bundleQuantity = ref(1); // Default to 1 for better UX
 const modalOffsetTop = ref(0); // Modal position offset
 
 // Function to open bundle details modal
@@ -4345,6 +4347,97 @@ function getProductImage(productName) {
     return '@/../images/fourth.png';
   }
 }
+
+// Computed properties for bundle price calculations
+const getTotalPrice = computed(() => {
+  if (!selectedBundleDetails.value) return '$0.00';
+  
+  // If it's the setup bundle, always return fixed price
+  if (selectedBundleDetails.value.name === "Setup for Kwick: Basic Setup") {
+    return "$500.00";
+  }
+  
+  // Get the base price
+  let basePrice;
+  
+  // If selectedBundleDetails already has a price, extract the number value
+  if (selectedBundleDetails.value.price) {
+    // Extract numeric value from price string (e.g., "$999.00" -> 999)
+    const priceStr = selectedBundleDetails.value.price;
+    basePrice = parseFloat(priceStr.replace(/[^0-9.]/g, ''));
+  } else {
+    // Otherwise look up the price based on the name
+    switch(selectedBundleDetails.value.name) {
+      case "Kwick 15\" Server Bundle":
+        basePrice = 1288;
+        break;
+      case "Kwick 15\" POS Bundle":
+        basePrice = 1388;
+        break;
+      case "Kwick Customer Display POS Bundle":
+        basePrice = 1788;
+        break;
+      case "Kwick iPad Bundle":
+        basePrice = 1099;
+        break;
+      case "Kwick 21\" Large Kiosk Bundle":
+        basePrice = 3000;
+        break;
+      case "ACT 15\" POS Station":
+        basePrice = 1288;
+        break;
+      case "MINT 10\" POS Station w/ Built-in Printer":
+        basePrice = 999;
+        break;
+      case "MagTek Payment Device DynaFlex II Go":
+        basePrice = 999;
+        break;
+      case "Food Truck / Mobile Vendor Hardware Setup":
+        basePrice = 1288;
+        break;
+      case "Innovative QR Bundle":
+        basePrice = 49;
+        break;
+      case "3rd Party Platform Integration (After 3-month trial)":
+        basePrice = 109;
+        break;
+      case "Handheld - A920":
+        basePrice = 550;
+        break;
+      case "Complete POS Solution Package":
+        basePrice = 999;
+        break;
+      default:
+        basePrice = 1388;
+    }
+  }
+  
+  // Calculate total price based on quantity
+  const totalPrice = basePrice * bundleQuantity.value;
+  
+  // Format the total price
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD'
+  }).format(totalPrice);
+});
+
+const getOriginalTotalPrice = computed(() => {
+  if (!selectedBundleDetails.value || !selectedBundleDetails.value.originalPrice) return '$2,388.00';
+  
+  // Extract numeric value from original price string
+  const originalPriceStr = selectedBundleDetails.value.originalPrice;
+  const originalBasePrice = parseFloat(originalPriceStr.replace(/[^0-9.]/g, ''));
+  
+  // Calculate total original price based on quantity
+  const totalOriginalPrice = originalBasePrice * bundleQuantity.value;
+  
+  // Format the total original price
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD'
+  }).format(totalOriginalPrice);
+});
 </script>
 
 <style scoped>
@@ -4502,6 +4595,7 @@ input[type="number"] {
   pointer-events: none;
 }
 </style>
+
 
 
 
