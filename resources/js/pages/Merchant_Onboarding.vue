@@ -799,63 +799,64 @@
                       </div>
                       
                       <!-- Custom Bundle Offer (appears after complete solution answer) -->
-                      <div v-if="form.complete_solution_response" class="bg-gradient-to-r from-red-100 to-yellow-50 rounded-lg border border-yellow-200 p-5">
-                        <div class="flex flex-col md:flex-row items-start md:items-center">
-                          <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-4">
-                            <div class="bg-yellow-400 transform -rotate-12 px-3 py-1 text-lg font-bold uppercase tracking-wide text-red-900 inline-block">
-                              Special Offer
+                      <div v-if="form.complete_solution_response" class="bg-gradient-to-r from-red-100 to-yellow-50 rounded-lg border border-yellow-200 p-5 relative">
+                        <div class="absolute -top-3 -left-3">
+                          <div class="bg-yellow-400 px-3 py-1 text-base font-bold uppercase tracking-wide text-red-900 inline-block shadow-sm transform -rotate-12">
+                            SPECIAL OFFER
                             </div>
                           </div>
-                          <div class="flex-grow">
-                            <h3 class="text-xl font-bold text-red-800 mb-1">Complete POS Solution Package</h3>
-                            <div class="flex items-baseline mb-2">
+                        
+                        <h3 class="text-xl font-bold text-red-800 mt-6 mb-2">Complete POS Solution Package</h3>
+                        <div class="flex items-baseline mb-4">
                               <span class="text-2xl font-bold text-gray-900">$999.00</span>
                               <span class="ml-2 text-red-600 line-through text-lg">$2,388.00</span>
                               <span class="ml-2 text-gray-500">or $49/Month</span>
                             </div>
-                            <ul class="text-gray-700 space-y-1 mb-2">
-                              <li class="flex items-start">
+                        
+                        <div class="space-y-1 mb-4">
+                          <div class="flex items-start">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
                                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
                                 </svg>
                                 <span>High-Performance Local Server</span>
-                              </li>
-                              <li class="flex items-start">
+                          </div>
+                          <div class="flex items-start">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
                                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
                                 </svg>
                                 <span>15" Touchscreen POS Terminal</span>
-                              </li>
-                              <li class="flex items-start">
+                          </div>
+                          <div class="flex items-start">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
                                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
                                 </svg>
                                 <span>Thermal Receipt Printer & Credit Card Reader</span>
-                              </li>
-                              <li class="flex items-start">
+                          </div>
+                          <div class="flex items-start">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
                                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
                                 </svg>
                                 <span>QR Code Ordering System + Marketing Tools</span>
-                              </li>
-                              <li class="flex items-start">
+                          </div>
+                          <div class="flex items-start">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
                                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
                                 </svg>
                                 <span>Professional Installation & Staff Training</span>
-                              </li>
-                              <li class="flex items-start">
+                          </div>
+                          <div class="flex items-start">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
                                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
                                 </svg>
                                 <span>2-Day Hardware Replacement Warranty</span>
-                              </li>
-                            </ul>
-                            <p class="text-gray-700 text-sm">
+                          </div>
+                        </div>
+                        
+                        <p class="text-gray-700 text-sm mb-4">
                               Complete POS solution with all the hardware and marketing tools you need to get started - plus 0% credit card processing with Hurricane Pay.
                             </p>
-                          </div>
-                          <div class="flex-shrink-0 mt-4 md:mt-0 md:ml-4">
+                        
+                        <div class="text-right">
                             <button 
                               @click="selectValueBundle"
                               type="button"
@@ -863,24 +864,13 @@
                             >
                               Select This Bundle
                             </button>
-                          </div>
                         </div>
                       </div>
                   
                       <!-- Recommendation based on answers - Shows only if all questions are answered -->
-                      <div v-if="form.complete_solution_response" class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border border-blue-100 p-6 mb-8">
-                        <h4 class="text-xl font-bold text-blue-800 mb-3">Our Recommendation</h4>
-                        <p class="text-gray-700 mb-4">
-                          Based on your answers, we recommend the <span class="font-semibold">{{ getRecommendedSetup() }}</span> 
-                          to address your current challenges.
-                        </p>
-                        <div class="bg-white rounded-lg p-4 shadow-sm">
-                          <p class="text-sm text-gray-600">
-                            This setup includes {{ getRecommendationDetails() }}
-                          </p>
-                        </div>
-                      </div>
+                   
                     </div>
+                    
                     
                     <!-- Retail-specific questions -->
                     <div v-else-if="form.industry_type === 'Retail - Store Front Location'" class="space-y-12">
@@ -1065,16 +1055,76 @@
                       </div>
                       
                       <!-- Recommendation based on answers - Similar to restaurant recommendation -->
-                      <div v-if="form.retail_solution_response" class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border border-blue-100 p-6 mb-8">
-                        <h4 class="text-xl font-bold text-blue-800 mb-3">Our Recommendation</h4>
-                        <p class="text-gray-700 mb-4">
-                          Based on your answers, we recommend the <span class="font-semibold">Complete Retail POS Solution</span> 
-                          to address your current challenges.
+                    
+                     
+                      
+                      
+                      <!-- Custom Bundle Offer for Retail -->
+                      <div v-if="form.retail_solution_response" class="bg-gradient-to-r from-red-100 to-yellow-50 rounded-lg border border-yellow-200 p-5 relative">
+                        <div class="absolute -top-3 -left-3">
+                          <div class="bg-yellow-400 px-3 py-1 text-base font-bold uppercase tracking-wide text-red-900 inline-block shadow-sm transform -rotate-12">
+                            SPECIAL OFFER
+                          </div>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-red-800 mt-6 mb-2">Complete POS Solution Package</h3>
+                        <div class="flex items-baseline mb-4">
+                          <span class="text-2xl font-bold text-gray-900">$999.00</span>
+                          <span class="ml-2 text-red-600 line-through text-lg">$2,388.00</span>
+                          <span class="ml-2 text-gray-500">or $49/Month</span>
+                        </div>
+                        
+                        <div class="space-y-1 mb-4">
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>High-Performance Local Server</span>
+                          </div>
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>15" Touchscreen POS Terminal</span>
+                          </div>
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Thermal Receipt Printer & Credit Card Reader</span>
+                          </div>
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>QR Code Ordering System + Marketing Tools</span>
+                          </div>
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Professional Installation & Staff Training</span>
+                          </div>
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>2-Day Hardware Replacement Warranty</span>
+                          </div>
+                        </div>
+                        
+                        <p class="text-gray-700 text-sm mb-4">
+                          Complete POS solution with all the hardware and marketing tools you need to get started - plus 0% credit card processing with Hurricane Pay.
                         </p>
-                        <div class="bg-white rounded-lg p-4 shadow-sm">
-                          <p class="text-sm text-gray-600">
-                            This setup includes a complete retail POS system with inventory management, customer loyalty program, and integrated payment processing with 0% fees through Hurricane Pay.
-                          </p>
+                        
+                        <div class="text-right">
+                          <button 
+                            @click="selectValueBundle"
+                            type="button"
+                            class="px-4 py-2 bg-red-600 text-white font-medium rounded-md hover:bg-red-700 transition-colors"
+                          >
+                            Select This Bundle
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -1232,16 +1282,74 @@
                       </div>
                       
                       <!-- Recommendation based on answers -->
-                      <div v-if="form.service_solution_response" class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border border-blue-100 p-6 mb-8">
-                        <h4 class="text-xl font-bold text-blue-800 mb-3">Our Recommendation</h4>
-                        <p class="text-gray-700 mb-4">
-                          Based on your answers, we recommend the <span class="font-semibold">Complete Service Business Solution</span> 
-                          to address your current challenges.
+                  
+                     
+                      <!-- Custom Bundle Offer for Service Business -->
+                      <div v-if="form.service_solution_response" class="bg-gradient-to-r from-red-100 to-yellow-50 rounded-lg border border-yellow-200 p-5 relative">
+                        <div class="absolute -top-3 -left-3">
+                          <div class="bg-yellow-400 px-3 py-1 text-base font-bold uppercase tracking-wide text-red-900 inline-block shadow-sm transform -rotate-12">
+                            SPECIAL OFFER
+                          </div>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-red-800 mt-6 mb-2">Complete POS Solution Package</h3>
+                        <div class="flex items-baseline mb-4">
+                          <span class="text-2xl font-bold text-gray-900">$999.00</span>
+                          <span class="ml-2 text-red-600 line-through text-lg">$2,388.00</span>
+                          <span class="ml-2 text-gray-500">or $49/Month</span>
+                        </div>
+                        
+                        <div class="space-y-1 mb-4">
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>High-Performance Local Server</span>
+                          </div>
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>15" Touchscreen POS Terminal</span>
+                          </div>
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Thermal Receipt Printer & Credit Card Reader</span>
+                          </div>
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>QR Code Ordering System + Marketing Tools</span>
+                          </div>
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Professional Installation & Staff Training</span>
+                          </div>
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>2-Day Hardware Replacement Warranty</span>
+                          </div>
+                        </div>
+                        
+                        <p class="text-gray-700 text-sm mb-4">
+                          Complete POS solution with all the hardware and marketing tools you need to get started - plus 0% credit card processing with Hurricane Pay.
                         </p>
-                        <div class="bg-white rounded-lg p-4 shadow-sm">
-                          <p class="text-sm text-gray-600">
-                            This setup includes online booking, client management, staff scheduling, and integrated payment processing with 0% fees through Hurricane Pay.
-                          </p>
+                        
+                        <div class="text-right">
+                          <button 
+                            @click="selectValueBundle"
+                            type="button"
+                            class="px-4 py-2 bg-red-600 text-white font-medium rounded-md hover:bg-red-700 transition-colors"
+                          >
+                            Select This Bundle
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -1399,16 +1507,74 @@
                       </div>
                       
                       <!-- Recommendation based on answers -->
-                      <div v-if="form.mobile_solution_response" class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border border-blue-100 p-6 mb-8">
-                        <h4 class="text-xl font-bold text-blue-800 mb-3">Our Recommendation</h4>
-                        <p class="text-gray-700 mb-4">
-                          Based on your answers, we recommend the <span class="font-semibold">Mobile Business Solution</span> 
-                          to address your current challenges.
+                   
+                      
+                      <!-- Custom Bundle Offer for Mobile Business -->
+                      <div v-if="form.mobile_solution_response" class="bg-gradient-to-r from-red-100 to-yellow-50 rounded-lg border border-yellow-200 p-5 relative">
+                        <div class="absolute -top-3 -left-3">
+                          <div class="bg-yellow-400 px-3 py-1 text-base font-bold uppercase tracking-wide text-red-900 inline-block shadow-sm transform -rotate-12">
+                            SPECIAL OFFER
+                          </div>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-red-800 mt-6 mb-2">Complete POS Solution Package</h3>
+                        <div class="flex items-baseline mb-4">
+                          <span class="text-2xl font-bold text-gray-900">$999.00</span>
+                          <span class="ml-2 text-red-600 line-through text-lg">$2,388.00</span>
+                          <span class="ml-2 text-gray-500">or $49/Month</span>
+                        </div>
+                        
+                        <div class="space-y-1 mb-4">
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>High-Performance Local Server</span>
+                          </div>
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>15" Touchscreen POS Terminal</span>
+                          </div>
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Thermal Receipt Printer & Credit Card Reader</span>
+                          </div>
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>QR Code Ordering System + Marketing Tools</span>
+                          </div>
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Professional Installation & Staff Training</span>
+                          </div>
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>2-Day Hardware Replacement Warranty</span>
+                          </div>
+                        </div>
+                        
+                        <p class="text-gray-700 text-sm mb-4">
+                          Complete POS solution with all the hardware and marketing tools you need to get started - plus 0% credit card processing with Hurricane Pay.
                         </p>
-                        <div class="bg-white rounded-lg p-4 shadow-sm">
-                          <p class="text-sm text-gray-600">
-                            This setup includes rugged mobile payment hardware, offline processing capability, and 0% processing fees through Hurricane Pay - perfect for businesses on the move.
-                          </p>
+                        
+                        <div class="text-right">
+                          <button 
+                            @click="selectValueBundle"
+                            type="button"
+                            class="px-4 py-2 bg-red-600 text-white font-medium rounded-md hover:bg-red-700 transition-colors"
+                          >
+                            Select This Bundle
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -1567,16 +1733,74 @@
                       </div>
                       
                       <!-- Recommendation based on answers -->
-                      <div v-if="form.online_solution_response" class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border border-blue-100 p-6 mb-8">
-                        <h4 class="text-xl font-bold text-blue-800 mb-3">Our Recommendation</h4>
-                        <p class="text-gray-700 mb-4">
-                          Based on your answers, we recommend the <span class="font-semibold">E-Commerce Payment Solution</span> 
-                          to address your current challenges.
+                 
+                      
+                      <!-- Custom Bundle Offer for Online Business -->
+                      <div v-if="form.online_solution_response" class="bg-gradient-to-r from-red-100 to-yellow-50 rounded-lg border border-yellow-200 p-5 relative">
+                        <div class="absolute -top-3 -left-3">
+                          <div class="bg-yellow-400 px-3 py-1 text-base font-bold uppercase tracking-wide text-red-900 inline-block shadow-sm transform -rotate-12">
+                            SPECIAL OFFER
+                          </div>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-red-800 mt-6 mb-2">Complete POS Solution Package</h3>
+                        <div class="flex items-baseline mb-4">
+                          <span class="text-2xl font-bold text-gray-900">$999.00</span>
+                          <span class="ml-2 text-red-600 line-through text-lg">$2,388.00</span>
+                          <span class="ml-2 text-gray-500">or $49/Month</span>
+                        </div>
+                        
+                        <div class="space-y-1 mb-4">
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>High-Performance Local Server</span>
+                          </div>
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>15" Touchscreen POS Terminal</span>
+                          </div>
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Thermal Receipt Printer & Credit Card Reader</span>
+                          </div>
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>QR Code Ordering System + Marketing Tools</span>
+                          </div>
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Professional Installation & Staff Training</span>
+                          </div>
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>2-Day Hardware Replacement Warranty</span>
+                          </div>
+                        </div>
+                        
+                        <p class="text-gray-700 text-sm mb-4">
+                          Complete POS solution with all the hardware and marketing tools you need to get started - plus 0% credit card processing with Hurricane Pay.
                         </p>
-                        <div class="bg-white rounded-lg p-4 shadow-sm">
-                          <p class="text-sm text-gray-600">
-                            This solution includes seamless integration with your e-commerce platform, enhanced fraud protection, and 0% processing fees through Hurricane Pay - helping you maximize online revenue.
-                          </p>
+                        
+                        <div class="text-right">
+                          <button 
+                            @click="selectValueBundle"
+                            type="button"
+                            class="px-4 py-2 bg-red-600 text-white font-medium rounded-md hover:bg-red-700 transition-colors"
+                          >
+                            Select This Bundle
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2745,6 +2969,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
+                  
                   
                   <h3 class="text-2xl font-bold mb-4 text-gray-800">Application Submitted Successfully!</h3>
                   <p class="text-gray-600 mb-6">
