@@ -13,9 +13,15 @@ return new class extends Migration
     {
         Schema::create('handheld_features', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('merchant_id')->constrained()->onDelete('cascade');
+            $table->unsignedBigInteger('merchant_id');
             $table->string('feature', 100);
             $table->timestamps();
+            
+            // Add foreign key separately
+            $table->foreign('merchant_id')
+                  ->references('id')
+                  ->on('merchants')
+                  ->onDelete('cascade');
         });
     }
 

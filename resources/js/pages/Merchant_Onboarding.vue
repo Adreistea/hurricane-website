@@ -3016,7 +3016,7 @@
                   class="px-8 py-3 bg-custom-red text-white font-medium rounded-md shadow-md hover:bg-red-800 transition-colors duration-300"
                   style="background-color: #973131 !important; color: white !important;"
                 >
-                  {{ currentStep === 7 ? 'Continue' : 'Next' }}
+                  {{ currentStep === 7 ? 'Submit Application' : 'Next' }}
                 </button>
                 <button 
                   v-else 
@@ -3247,13 +3247,14 @@ function nextStep() {
       deviceSelectionError.value = false;
     }
     
+    // If we're on step 7 and about to move to step 8, submit the form
+    if (currentStep.value === 7) {
+      submitForm();
+      return;
+    }
+    
     currentStep.value++;
     window.scrollTo(0, 0);
-    
-    // Only automatically submit if moving from step 7 to step 8 (which doesn't exist, so we submit instead)
-    if (currentStep.value > totalSteps) {
-      submitForm();
-    }
   }
 }
 
@@ -3303,13 +3304,29 @@ function validateCurrentStep() {
   
   // Add validation for signature fields in step 7
   if (currentStep.value === 7) {
-    if (!form.value.terms_agreement || !form.value.signature_name || !form.value.signature_data || !form.value.signature_date) {
-      // Show error for signature field
-      signatureError.value = !form.value.signature_data;
-      
-      alert('Please complete all required fields including signature');
+    if (!form.value.terms_agreement) {
+      alert('Please agree to the terms and conditions');
       return false;
     }
+    
+    if (!form.value.signature_name) {
+      alert('Please enter your full name for the signature');
+      return false;
+    }
+    
+    if (!form.value.signature_data) {
+      signatureError.value = true;
+      alert('Please provide your signature');
+      return false;
+    }
+    
+    // Ensure we have at least one cart item
+    if (cartItems.value.length === 0) {
+      alert('Please select at least one product bundle');
+      return false;
+    }
+    
+    return true;
   }
   
   return true;
@@ -3323,10 +3340,26 @@ function submitForm() {
   
   isSubmitting.value = true;
   
-  // Simulate API call with a timeout
-  setTimeout(() => {
-    // Process form submission
-    console.log('Form submitted:', form.value);
+  // Prepare data for submission
+  const formData = {
+    ...form.value,
+    cartItems: cartItems.value,
+    total_amount: calculateTotalAmount()
+  };
+  
+  // Make API call to save the data
+  fetch('/api/merchant-onboarding', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'X-Requested-With': 'XMLHttpRequest'
+    },
+    body: JSON.stringify(formData)
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Form submitted:', data);
     
     // Move to confirmation step
     currentStep.value = 8;
@@ -3334,7 +3367,21 @@ function submitForm() {
     
     // Scroll to top of page to show confirmation
     window.scrollTo(0, 0);
-  }, 1500);
+  })
+  .catch(error => {
+    console.error('Error submitting form:', error);
+    isSubmitting.value = false;
+    alert('An error occurred while submitting the form. Please try again.');
+  });
+}
+
+// Calculate total amount from cart items
+function calculateTotalAmount() {
+  return cartItems.value.reduce((total, item) => {
+    // Extract numeric price from formatted price string
+    const price = parseFloat(item.price.replace(/[^0-9.]/g, ''));
+    return total + (price * (item.quantity || 1));
+  }, 0);
 }
 
 // Device selection function

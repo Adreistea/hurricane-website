@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('business_details', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('merchant_id')->constrained()->onDelete('cascade');
+            $table->unsignedBigInteger('merchant_id');
             $table->string('business_entity_type', 50);
             $table->string('industry_type', 100);
             $table->string('dba', 255)->nullable();
@@ -26,6 +26,12 @@ return new class extends Migration
             $table->string('state', 2);
             $table->string('zip', 10);
             $table->timestamps();
+            
+            // Add foreign key separately
+            $table->foreign('merchant_id')
+                  ->references('id')
+                  ->on('merchants')
+                  ->onDelete('cascade');
         });
     }
 

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('owner_information', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('merchant_id')->constrained()->onDelete('cascade');
+            $table->unsignedBigInteger('merchant_id');
             $table->string('owner_first_name', 100);
             $table->string('owner_last_name', 100);
             $table->string('title', 100);
@@ -28,6 +28,12 @@ return new class extends Migration
             $table->string('home_state', 2);
             $table->string('home_zip', 10);
             $table->timestamps();
+            
+            // Add foreign key separately
+            $table->foreign('merchant_id')
+                  ->references('id')
+                  ->on('merchants')
+                  ->onDelete('cascade');
         });
     }
 

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('payment_details', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('merchant_id')->constrained()->onDelete('cascade');
+            $table->unsignedBigInteger('merchant_id');
             $table->string('payment_method', 20);
             $table->boolean('terms_agreement')->default(false);
             $table->string('signature_name', 255);
@@ -21,6 +21,12 @@ return new class extends Migration
             $table->date('signature_date');
             $table->decimal('total_amount', 10, 2);
             $table->timestamps();
+            
+            // Add foreign key separately
+            $table->foreign('merchant_id')
+                  ->references('id')
+                  ->on('merchants')
+                  ->onDelete('cascade');
         });
     }
 

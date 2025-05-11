@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ConsultationRequestController;
 use App\Http\Controllers\LightboxController;
+use App\Http\Controllers\MerchantOnboardingController;
 use App\Http\Controllers\PartnershipRequestController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
@@ -12,6 +13,10 @@ Route::post('/consultation-requests', [ConsultationRequestController::class, 'st
 
 // Partnership Request API route
 Route::post('/partnership-requests', [PartnershipRequestController::class, 'store'])
+    ->withoutMiddleware(\App\Http\Middleware\VerifyCsrfToken::class);
+
+// Merchant Onboarding API route
+Route::post('/merchant-onboarding', [MerchantOnboardingController::class, 'store'])
     ->withoutMiddleware(\App\Http\Middleware\VerifyCsrfToken::class);
 
 // Lightbox API routes

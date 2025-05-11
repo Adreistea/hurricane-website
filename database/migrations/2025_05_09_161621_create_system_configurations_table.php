@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('system_configurations', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('merchant_id')->constrained()->onDelete('cascade');
+            $table->unsignedBigInteger('merchant_id');
             $table->string('number_of_locations', 10);
             $table->string('number_of_registers', 10);
             $table->string('number_of_servers', 10)->nullable();
@@ -22,6 +22,12 @@ return new class extends Migration
             $table->boolean('customer_displays_needed')->nullable();
             $table->text('additional_requirements')->nullable();
             $table->timestamps();
+            
+            // Add foreign key separately
+            $table->foreign('merchant_id')
+                  ->references('id')
+                  ->on('merchants')
+                  ->onDelete('cascade');
         });
     }
 

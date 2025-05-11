@@ -13,11 +13,17 @@ return new class extends Migration
     {
         Schema::create('selected_bundles', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('merchant_id')->constrained()->onDelete('cascade');
+            $table->unsignedBigInteger('merchant_id');
             $table->string('bundle_name', 255);
             $table->decimal('price', 10, 2);
             $table->integer('quantity')->default(1);
             $table->timestamps();
+            
+            // Add foreign key separately
+            $table->foreign('merchant_id')
+                  ->references('id')
+                  ->on('merchants')
+                  ->onDelete('cascade');
         });
     }
 
