@@ -19,6 +19,11 @@ Route::post('/partnership-requests', [PartnershipRequestController::class, 'stor
 Route::post('/merchant-onboarding', [MerchantOnboardingController::class, 'store'])
     ->withoutMiddleware(\App\Http\Middleware\VerifyCsrfToken::class);
 
+// Added for compatibility - handle potential trailing spaces in the URL
+Route::post('/merchant-onboarding{any}', [MerchantOnboardingController::class, 'store'])
+    ->where('any', '.*')
+    ->withoutMiddleware(\App\Http\Middleware\VerifyCsrfToken::class);
+
 // Lightbox API routes
 Route::prefix('lightboxes')->group(function () {
     Route::get('/', [LightboxController::class, 'index']);

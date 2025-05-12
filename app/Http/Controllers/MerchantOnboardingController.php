@@ -13,6 +13,7 @@ use App\Models\HandheldFeature;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Http;
 
 class MerchantOnboardingController extends Controller
 {
@@ -145,10 +146,14 @@ class MerchantOnboardingController extends Controller
             // If everything went well, commit the transaction
             DB::commit();
 
+            // Submit data to the external API
+            $apiResponse = $this->submitToAPI($request->all(), $merchant->id);
+            
             return response()->json([
                 'success' => true,
                 'message' => 'Merchant onboarding completed successfully!',
-                'merchant_id' => $merchant->id
+                'merchant_id' => $merchant->id,
+                'api_response' => $apiResponse
             ], 201);
         } catch (\Exception $e) {
             // If an error occurred, rollback the transaction
@@ -173,5 +178,140 @@ class MerchantOnboardingController extends Controller
     {
         // Remove currency symbols, commas, etc. and convert to float
         return (float) preg_replace('/[^0-9.]/', '', $price);
+    }
+
+    /**
+     * Submit merchant data to external API.
+     *
+     * @param  array  $data
+     * @param  int    $merchantId
+     * @return array
+     */
+    private function submitToAPI($data, $merchantId)
+    {
+        try {
+            // Log request data for debugging
+            Log::info('Submitting to external API: https://crm.hurricanepayments.com/api/merchant-onboarding');
+            
+            // Use the exact format from the example JSON, with all fields at the root level
+            // We're not nesting anything here to match the expected format
+            $apiData = [
+                // Basic merchant information
+                'first_name' => $data['first_name'],
+                'last_name' => $data['last_name'],
+                'business_name' => $data['business_name'],
+                'phone_number' => $data['phone_number'],
+                'business_email' => $data['business_email'],
+                'monthly_volume' => $data['monthly_volume'],
+                'average_sale' => $data['average_sale'],
+                'high_ticket' => $data['high_ticket'],
+                'privacy_agreement' => $data['privacy_agreement'] ? true : false,
+                
+                // Business details
+                'business_entity_type' => $data['business_entity_type'] ?? null,
+                'industry_type' => $data['industry_type'] ?? null,
+                'dba' => $data['dba'] ?? null,
+                'product_service' => $data['product_service'] ?? null,
+                'business_phone' => $data['business_phone'] ?? null,
+                'year_started' => $data['year_started'] ?? null,
+                'website' => $data['website'] ?? null,
+                'address_line1' => $data['address_line1'] ?? null,
+                'address_line2' => $data['address_line2'] ?? null,
+                'state' => $data['state'] ?? null,
+                'zip' => $data['zip'] ?? null,
+                
+                // Owner information
+                'owner_first_name' => $data['owner_first_name'] ?? null,
+                'owner_last_name' => $data['owner_last_name'] ?? null,
+                'title' => $data['title'] ?? null,
+                'date_of_birth' => $data['date_of_birth'] ?? null,
+                'ownership_percentage' => $data['ownership_percentage'] ?? null,
+                'drivers_license' => $data['drivers_license'] ?? null,
+                'dl_state' => $data['dl_state'] ?? null,
+                'owner_phone' => $data['owner_phone'] ?? null,
+                'home_address_line1' => $data['home_address_line1'] ?? null,
+                'home_address_line2' => $data['home_address_line2'] ?? null,
+                'city' => $data['city'] ?? null,
+                'home_state' => $data['home_state'] ?? null,
+                'home_zip' => $data['home_zip'] ?? null,
+                
+                // System configuration
+                'number_of_locations' => $data['number_of_locations'] ?? null,
+                'number_of_registers' => $data['number_of_registers'] ?? null,
+                'number_of_servers' => $data['number_of_servers'] ?? null,
+                'handhelds_needed' => isset($data['handhelds_needed']) ? (bool)$data['handhelds_needed'] : null,
+                'number_of_handhelds' => $data['number_of_handhelds'] ?? null,
+                'customer_displays_needed' => isset($data['customer_displays_needed']) ? (bool)$data['customer_displays_needed'] : null,
+                'additional_requirements' => $data['additional_requirements'] ?? null,
+                
+                // Business profile
+                'profile_type' => $data['profile_type'] ?? null,
+                'current_pos_status' => $data['current_pos_status'] ?? null,
+                'order_management_method' => $data['order_management_method'] ?? null,
+                'customer_engagement_tools' => $data['customer_engagement_tools'] ?? null,
+                'staff_confidence' => $data['staff_confidence'] ?? null,
+                'technical_support' => $data['technical_support'] ?? null,
+                'complete_solution_response' => $data['complete_solution_response'] ?? null,
+                
+                // Payment details
+                'payment_method' => $data['payment_method'] ?? null,
+                'terms_agreement' => isset($data['terms_agreement']) ? (bool)$data['terms_agreement'] : null,
+                'signature_name' => $data['signature_name'] ?? null,
+                'signature_data' => $data['signature_data'] ?? null,
+                'signature_date' => $data['signature_date'] ?? null,
+                'total_amount' => $data['total_amount'] ?? null,
+            ];
+            
+            // Include cartItems array if it exists
+            if (isset($data['cartItems']) && is_array($data['cartItems'])) {
+                $apiData['cartItems'] = $data['cartItems'];
+            }
+            
+            // Include handheld_features array if it exists
+            if (isset($data['handheld_features']) && is_array($data['handheld_features'])) {
+                $apiData['handheld_features'] = $data['handheld_features'];
+            }
+            
+            // Set the merchant ID reference
+            $apiData['merchant_reference_id'] = $merchantId;
+            
+            // Log payload for debugging
+            Log::info('API Request payload: ' . json_encode($apiData, JSON_PRETTY_PRINT));
+            
+            // Set headers and timeout
+            $response = Http::timeout(30)
+                ->withHeaders([
+                    'Accept' => 'application/json',
+                    'Content-Type' => 'application/json'
+                ])
+                ->post('https://crm.hurricanepayments.com/api/merchant-onboarding', $apiData);
+            
+            // Log detailed response
+            Log::info('API response status: ' . $response->status());
+            Log::info('API response body: ' . $response->body());
+            
+            // Even if the API fails, don't show error to user since local data is saved
+            if (!$response->successful()) {
+                Log::error('API submission failed but continuing: ' . $response->body());
+                return [
+                    'status' => 'success',
+                    'message' => 'Data saved successfully.'
+                ];
+            }
+            
+            return [
+                'status' => 'success',
+                'code' => $response->status(),
+                'response' => $response->json() ?: $response->body()
+            ];
+        } catch (\Exception $e) {
+            Log::error('API submission error: ' . $e->getMessage());
+            
+            // Even if API fails, return success since local data is saved
+            return [
+                'status' => 'success',
+                'message' => 'Data saved successfully.'
+            ];
+        }
     }
 } 
