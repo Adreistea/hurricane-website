@@ -49,6 +49,70 @@
         </div>
       </div>
   
+      <!-- Quick Navigation Section -->
+      <div class="bg-gray-50 py-8 border-t border-b border-gray-200">
+        <div class="container mx-auto px-6">
+          <div class="text-left mb-6">
+            <h2 class="text-2xl font-bold text-gray-800">Quick Navigation</h2>
+            <p class="text-gray-600 mt-2">Jump to the section you're interested in</p>
+          </div>
+          <div class="flex flex-wrap gap-x-12 gap-y-4">
+            <button 
+              @click="scrollToSection('high-risk')"
+              class="text-left text-custom-red hover:text-red-700 transition duration-300 flex items-center group">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="border-b border-transparent group-hover:border-red-700">Why High-Risk?</span>
+            </button>
+            <button 
+              @click="scrollToSection('why-choose')"
+              class="text-left text-custom-red hover:text-red-700 transition duration-300 flex items-center group">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="border-b border-transparent group-hover:border-red-700">Why Choose Hurricane Payments</span>
+            </button>
+
+            <button 
+              @click="scrollToSection('challenges-solutions')"
+              class="text-left text-custom-red hover:text-red-700 transition duration-300 flex items-center group">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="border-b border-transparent group-hover:border-red-700">Challenges & Solutions</span>
+            </button>
+
+            <button 
+              @click="scrollToSection('content-guidelines')"
+              class="text-left text-custom-red hover:text-red-700 transition duration-300 flex items-center group">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="border-b border-transparent group-hover:border-red-700">Content Guidelines</span>
+            </button>
+
+            <button 
+              @click="scrollToSection('our-services')"
+              class="text-left text-custom-red hover:text-red-700 transition duration-300 flex items-center group">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="border-b border-transparent group-hover:border-red-700">Our Services</span>
+            </button>
+
+            <button 
+              @click="scrollToSection('payment-gateway')"
+              class="text-left text-custom-red hover:text-red-700 transition duration-300 flex items-center group">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="border-b border-transparent group-hover:border-red-700">Payment Gateway</span>
+            </button>
+          </div>
+        </div>
+      </div>
+  
       <!-- Adult Entertainment Merchant Accounts Section -->
       <div class="container mx-auto px-6 py-20 mt-8">
         <!-- Section Header -->
@@ -131,21 +195,57 @@
           </div>
         </div>
       </div>
+
+          <!-- Why Choose Section with Texture -->
+          <div id="high-risk" class="relative bg-gradient-to-br from-gray-900 to-gray-800 py-24 overflow-hidden">
+        <!-- Texture overlay -->
+        <div class="absolute inset-0 opacity-10">
+          <div class="absolute inset-0" :style="{ backgroundImage: 'url(\'data:image/svg+xml,%3Csvg width=\\\'20\\\' height=\\\'20\\\' viewBox=\\\'0 0 20 20\\\' xmlns=\\\'http://www.w3.org/2000/svg\\\'%3E%3Crect width=\\\'2\\\' height=\\\'2\\\' fill=\\\'%23ffffff\\\' fill-opacity=\\\'0.4\\\'/%3E%3C/svg%3E\')' }"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+          <div class="flex flex-col lg:flex-row items-center gap-12">
+            <div class="lg:w-1/2">
+              <div class="relative">
+                <div class="absolute -inset-4 bg-gradient-to-r from-red-500/30 to-purple-500/30 rounded-xl blur-xl"></div>
+                <img :src="adultCameraImg" alt="Adult Industry Solutions" class="relative rounded-lg shadow-2xl w-full" />
+              </div>
+            </div>
+            <div class="lg:w-1/2">
+              <h2 class="text-4xl font-bold mb-6 text-white">
+                Why is an Adult Merchant Account Considered High-Risk?
+              </h2>
+              <p class="text-lg text-gray-300 mb-8">
+                Adult businesses are classified as high-risk merchants. That's because every adult business faces a high rate of chargebacks and a high risk of fraud. Card-not-present transactions are risky for payment processing services. These factors lead to the high-risk designation making it difficult for any merchant in the adult industry to find a credit card processing company.
+              </p>
+              <p class="text-lg text-gray-300 mb-8">
+                Being labeled as a high-risk merchant necessitates partnering with a payment processor experienced in high-risk accounts. Adult payment processors like Hurricane Payments understand the risks and make the best financial partners.
+              </p>
+              <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
+                <h3 class="text-2xl font-bold mb-4 text-white">Choose an Adult Merchant Account Provider</h3>
+                <p class="text-gray-300">
+                  Adult merchant account providers and payment processing companies work specifically with businesses in the adult industry. They understand the risks adult businesses face and have the expertise to navigate credit card processing in this industry. Avoid disruptions by choosing Hurricane Payments, a leader in high-risk merchant account solutions for the adult entertainment industry.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   
       <!-- Feature Details Section -->
       <div class="container mx-auto px-6 py-24 mt-8">
         <div class="flex flex-col lg:flex-row items-center">
           <!-- Left Content with Text Animation -->
           <div class="lg:w-1/2 lg:pr-12 mb-10 lg:mb-0 scroll-reveal-left opacity-0">
-            <div class="relative z-10">
-              <h2 class="text-4xl font-bold mb-6 text-gray-900">
-                <span class="relative inline-block">
-                  <span class="relative z-10">Why Choose</span>
-                  <span class="absolute bottom-0 left-0 w-full h-3 bg-red-100 transform -rotate-1"></span>
-                </span>
-                <span class="block mt-2">Hurricane Payments for</span>
-                <span class="block mt-2 text-custom-red">Adult Payment Processing?</span>
-              </h2>
+                      <div id="why-choose" class="relative z-10">
+            <h2 class="text-4xl font-bold mb-6 text-gray-900">
+              <span class="relative inline-block">
+                <span class="relative z-10">Why Choose</span>
+                <span class="absolute bottom-0 left-0 w-full h-3 bg-red-100 transform -rotate-1"></span>
+              </span>
+              <span class="block mt-2">Hurricane Payments for</span>
+              <span class="block mt-2 text-custom-red">Adult Payment Processing?</span>
+            </h2>
               
               <p class="text-lg text-gray-700 mb-6">
                 Adult entertainment businesses face unique challenges in the payment processing world. As a high-risk industry, many traditional banks and payment processors are hesitant to work with adult merchants. Choose a payment processor who understands the adult entertainment industry.
@@ -154,6 +254,13 @@
               <div class="bg-gradient-to-r from-red-50 to-red-100 p-6 rounded-lg mb-8 transform hover:scale-[1.02] transition duration-300">
                 <p class="text-gray-800 font-medium italic">
                   "Hurricane payments works with over 20 financial partners, so we can get you approved and ready to accept credit card payments quickly."
+                </p>
+              </div>
+              
+              <div class="bg-white p-6 rounded-lg border border-red-100 mb-8">
+                <h3 class="text-xl font-bold mb-3" style="color: #973131;">Tailored Solutions for the Adult Industry</h3>
+                <p class="text-gray-700">
+                  At Hurricane Payments, we specialize in providing merchant accounts tailored to the specific needs of adult businesses, ensuring you can process payments securely and efficiently. If you need an adult merchant account, trust Hurricane Payments to provide the perfect solution for your adult business needs.
                 </p>
               </div>
               
@@ -232,182 +339,127 @@
         </div>
       </div>
   
-      <!-- Why Choose Section with Texture -->
-      <div class="relative bg-gradient-to-br from-gray-900 to-gray-800 py-24 overflow-hidden">
-        <!-- Texture overlay -->
-        <div class="absolute inset-0 opacity-10">
-          <div class="absolute inset-0" :style="{ backgroundImage: 'url(\'data:image/svg+xml,%3Csvg width=\\\'20\\\' height=\\\'20\\\' viewBox=\\\'0 0 20 20\\\' xmlns=\\\'http://www.w3.org/2000/svg\\\'%3E%3Crect width=\\\'2\\\' height=\\\'2\\\' fill=\\\'%23ffffff\\\' fill-opacity=\\\'0.4\\\'/%3E%3C/svg%3E\')' }"></div>
-        </div>
-        
-        <div class="container mx-auto px-6 relative z-10">
-          <div class="flex flex-col lg:flex-row items-center gap-12">
-            <div class="lg:w-1/2">
-              <h2 class="text-4xl font-bold mb-6 text-white">
-                Why Choose Hurricane Payments for Your Adult Entertainment Payment Processing?
-              </h2>
-              <p class="text-lg text-gray-300 mb-8">
-                Businesses in the adult entertainment industry face unique challenges in the payment processing world. As a high-risk industry, many traditional payment processors are hesitant to work with adult merchants. You'll need the right payment processing partner to get your adult merchant account set up so you can accept credit cards. Let a Hurricane Payments dedicated account manager help you get your adult merchant account and payment processing organized.
-              </p>
-              <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
-                <h3 class="text-2xl font-bold mb-4 text-white">Tailored Solutions for the Adult Industry</h3>
-                <p class="text-gray-300">
-                  At Hurricane Payments, we specialize in providing merchant accounts tailored to the specific needs of adult businesses, ensuring you can process payments securely and efficiently. If you need an adult merchant account, trust Hurricane Payments to provide the perfect solution for your adult business needs.
-                </p>
-              </div>
-            </div>
-            <div class="lg:w-1/2">
-              <div class="relative">
-                <div class="absolute -inset-4 bg-gradient-to-r from-red-500/30 to-purple-500/30 rounded-xl blur-xl"></div>
-                <img :src="adultCameraImg" alt="Adult Industry Solutions" class="relative rounded-lg shadow-2xl w-full" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Second Why Choose Section with Light Background -->
-      <div class="bg-white py-24">
-        <div class="container mx-auto px-6">
+
+      <!-- Industry Challenges and Solutions Section -->
+      <div id="challenges-solutions" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-16">
-            <span class="inline-block bg-red-50 text-custom-red px-4 py-2 rounded-full font-medium text-sm uppercase tracking-wide mb-4">Industry Leaders</span>
+            <span class="inline-block bg-red-50 text-custom-red px-4 py-2 rounded-full font-medium text-sm uppercase tracking-wide mb-4">Solutions That Work</span>
             <h2 class="text-4xl lg:text-5xl font-bold mb-8" style="color: #973131;">
-              Why Choose Hurricane Payments for Your Adult Entertainment Payment Processing?
+              Common Challenges & Our Solutions
             </h2>
             <div class="w-24 h-1 bg-custom-red mx-auto rounded-full mb-8"></div>
           </div>
-          
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-            <div class="bg-white rounded-xl shadow-xl overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-              <div class="p-6">
-                <div class="flex items-start">
-                  <div class="p-3 bg-red-50 rounded-lg mr-5">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 class="text-2xl font-bold mb-3">High-Risk Industry Expertise</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                      Businesses in the adult entertainment industry face unique challenges in the payment processing world. As a high-risk industry, many traditional payment processors are hesitant to work with adult merchants.
-                    </p>
-                  </div>
-                </div>
-                
-                <div class="ml-16 mt-4 pl-5 border-l-2 border-red-100">
-                  <p class="text-gray-600 italic">
-                    "You'll need the right payment processing partner to get your adult merchant account set up so you can accept credit cards."
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="bg-white rounded-xl shadow-xl overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-              <div class="p-6">
-                <h3 class="text-2xl font-bold mb-4" style="color: #973131;">Tailored Solutions for the Adult Industry</h3>
-                <div class="w-16 h-1 bg-custom-red rounded-full mb-5"></div>
-                <p class="text-gray-700 mb-6 leading-relaxed">
-                  At Hurricane Payments, we specialize in providing merchant accounts tailored to the specific needs of adult businesses, ensuring you can process payments securely and efficiently.
-                </p>
-                
-                <div class="space-y-3">
-                  <div class="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-custom-red mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span class="text-gray-700">Advanced fraud protection & security features</span>
-                  </div>
-                  <div class="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-custom-red mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span class="text-gray-700">Competitive rates for high-risk merchants</span>
-                  </div>
-                  <div class="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-custom-red mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span class="text-gray-700">Fast approval & setup process</span>
-                  </div>
-                  <div class="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-custom-red mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span class="text-gray-700">Dedicated account managers</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="flex justify-center">
-            <div class="flex items-center space-x-8 p-4 bg-red-50 rounded-full">
-              <div class="flex items-center">
-                <div class="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center mr-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Common Problems Column -->
+            <div id="common-challenges" class="bg-white rounded-xl shadow-xl p-8 transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+              <div class="flex items-center mb-6">
+                <div class="p-3 bg-red-50 rounded-lg mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                   </svg>
                 </div>
-                <span class="font-medium">Secure Processing</span>
+                <h3 class="text-2xl font-bold" style="color: #973131;">Common Industry Challenges</h3>
               </div>
-              <div class="flex items-center">
-                <div class="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center mr-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+              <ul class="space-y-4">
+                <li class="flex items-start">
+                  <span class="text-custom-red mr-2">•</span>
+                  <span class="text-gray-700">High chargeback rates affecting merchant stability</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-custom-red mr-2">•</span>
+                  <span class="text-gray-700">Limited access to traditional payment processors</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-custom-red mr-2">•</span>
+                  <span class="text-gray-700">Increased risk of fraud in online transactions</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-custom-red mr-2">•</span>
+                  <span class="text-gray-700">Complex regulatory compliance requirements</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-custom-red mr-2">•</span>
+                  <span class="text-gray-700">Account stability and continuity concerns</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- General Solutions Column -->
+            <div id="industry-solutions" class="bg-white rounded-xl shadow-xl p-8 transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+              <div class="flex items-center mb-6">
+                <div class="p-3 bg-blue-50 rounded-lg mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <span class="font-medium">Fair Rates</span>
+                <h3 class="text-2xl font-bold text-blue-500">Industry Solutions</h3>
               </div>
-              <div class="flex items-center">
-                <div class="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center mr-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <ul class="space-y-4">
+                <li class="flex items-start">
+                  <span class="text-blue-500 mr-2">•</span>
+                  <span class="text-gray-700">Implement robust fraud prevention systems</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-blue-500 mr-2">•</span>
+                  <span class="text-gray-700">Partner with specialized high-risk processors</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-blue-500 mr-2">•</span>
+                  <span class="text-gray-700">Maintain detailed transaction records</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-blue-500 mr-2">•</span>
+                  <span class="text-gray-700">Follow industry compliance standards</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-blue-500 mr-2">•</span>
+                  <span class="text-gray-700">Establish clear billing descriptors</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Hurricane Payments Solutions Column -->
+            <div id="hurricane-solutions" class="bg-white rounded-xl shadow-xl p-8 transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+              <div class="flex items-center mb-6">
+                <div class="p-3 bg-green-50 rounded-lg mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>
-                <span class="font-medium">24/7 Support</span>
+                <h3 class="text-2xl font-bold text-green-500">Hurricane Payments Solutions</h3>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Why is an Adult Merchant Account Considered High-Risk? Section -->
-      <div class="bg-gradient-to-r from-gray-50 to-gray-100 py-16">
-        <div class="max-w-7xl mx-auto px-4">
-          <h2 class="text-4xl font-bold text-center mb-10" style="color: #973131;">Why is an Adult Merchant Account Considered High-Risk?</h2>
-          
-          <div class="bg-white p-10 rounded-xl shadow-lg">
-            <div class="flex flex-col md:flex-row items-start gap-12">
-              <div class="md:w-1/2 relative z-10 self-center">
-                <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                  Adult businesses are classified as high-risk merchants. That's because every adult business faces a high rate of chargebacks and a high risk of fraud. Card-not-present transactions are risky for payment processing services. These factors lead to the high-risk designation making it difficult for any merchant in the adult industry to find a credit card processing company.
-                </p>
-                <p class="text-lg text-gray-700 leading-relaxed">
-                  Being labeled as a high-risk merchant necessitates partnering with a payment processor experienced in high-risk accounts. Adult payment processors like Hurricane Payments understand the risks and make the best financial partners.
-                </p>
-              </div>
-              <div class="md:w-1/2">
-                <div class="rounded-lg overflow-hidden shadow-lg">
-                  <img :src="adultHighRiskImg" alt="Adult High Risk Merchant Account" class="w-full h-auto transform transition hover:scale-105 duration-500">
-                </div>
-              </div>
-            </div>
-            
-            <div class="flex items-center justify-center my-8">
-              <div class="w-24 h-1 bg-red-200 rounded-full"></div>
-            </div>
-            
-            <div class="max-w-5xl mx-auto">
-              <h3 class="text-2xl font-bold mb-4" style="color: #973131;">Choose an Adult Merchant Account Provider</h3>
-              <p class="text-lg text-gray-700 leading-relaxed">
-                Adult merchant account providers and payment processing companies work specifically with businesses in the adult industry. They understand the risks adult businesses face and have the expertise to navigate credit card processing in this industry. Avoid disruptions by choosing Hurricane Payments, a leader in high-risk merchant account solutions for the adult entertainment industry.
-              </p>
+              <ul class="space-y-4">
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">•</span>
+                  <span class="text-gray-700">20+ proven bank relationships for stable processing</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">•</span>
+                  <span class="text-gray-700">Advanced fraud protection & security features</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">•</span>
+                  <span class="text-gray-700">Fast approval process with competitive rates</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">•</span>
+                  <span class="text-gray-700">Dedicated account managers for ongoing support</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">•</span>
+                  <span class="text-gray-700">Multiple payment gateway options for flexibility</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Adult Content Guidelines Section with Page Break -->
-      <div class="py-16">
+      <div id="content-guidelines" class="py-16">
         <div class="max-w-5xl mx-auto px-6 mb-12">
           <hr class="border-t-2 border-red-200 w-1/3 mx-auto mb-12">
           
@@ -470,7 +522,7 @@
       </div>
 
       <!-- Our Services Section -->
-      <div class="py-20">
+      <div id="our-services" class="py-20">
         <div class="max-w-7xl mx-auto px-6">
           <div class="bg-white rounded-2xl border-2 border-red-100 p-10">
             <h2 class="text-4xl font-bold text-center mb-16" style="color: #973131;">Our Services</h2>
@@ -611,7 +663,7 @@
       </div>
 
       <!-- Adult Payment Gateway Section -->
-      <div class="bg-gradient-to-r from-gray-50 to-red-50 py-16">
+      <div id="payment-gateway" class="bg-gradient-to-r from-gray-50 to-red-50 py-16">
         <div class="max-w-7xl mx-auto px-4">
           <h2 class="text-4xl font-bold text-center mb-10" style="color: #973131;">Adult Payment Gateway</h2>
           
@@ -725,6 +777,19 @@
       top: window.innerHeight,
       behavior: 'smooth'
     });
+  };
+
+  // Function to scroll to specific section
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const yOffset = -100; // Offset to account for fixed header if needed
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({
+        top: y,
+        behavior: 'smooth'
+      });
+    }
   };
   
   onMounted(() => {

@@ -7,19 +7,19 @@
         <div class="text-reveal mb-6">
           <h1 class="text-reveal-content text-5xl lg:text-6xl font-bold leading-tight delay-200"
               style="color: #973131;">
-            Firearms Merchant Account Solutions
+            Booking and Airline Payment Solutions
           </h1>
         </div>
         
         <div class="text-reveal mb-8">
           <h2 class="text-reveal-content text-2xl lg:text-3xl font-semibold leading-tight delay-200 text-gray-800">
-            Is Your Firearms Business Classified as High-Risk? Here's What You Need to Know
+            Airline Bookings Merchant Account: Essential Payment Solutions for the Travel Industry
           </h2>
         </div>
         
         <div class="text-reveal mb-8">
           <p class="text-reveal-content text-lg text-gray-600 delay-300">
-            Secure a high-risk firearms merchant account from Hurricane Payments. Our specialized payment processing accounts are tailored to firearms industry businesses, providing robust solutions for both online and in-store credit card processing.
+            If you're running an airline, travel agency, or booking business, you may find yourself categorized as a high-risk merchant. Understanding the unique needs and challenges of the travel industry is crucial to selecting the right payment processing solutions. A high-risk merchant account is specially designed to cater to these needs, ensuring that your business can handle online credit card processing with ease and security.
           </p>
           
           <ul class="mt-4 space-y-2">
@@ -37,7 +37,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <span class="ml-3 text-gray-700">Fast and Easy Application Process</span>
+              <span class="ml-3 text-gray-700">Years High-Risk Experience</span>
             </li>
             <li class="flex items-start fade-in-slide-up" style="animation-delay: 300ms;">
               <div class="flex-shrink-0 w-6 h-6 text-custom-red mt-1">
@@ -45,7 +45,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <span class="ml-3 text-gray-700">Recurring Billing Options</span>
+              <span class="ml-3 text-gray-700">Fast and Easy Application Process</span>
             </li>
             <li class="flex items-start fade-in-slide-up" style="animation-delay: 400ms;">
               <div class="flex-shrink-0 w-6 h-6 text-custom-red mt-1">
@@ -53,7 +53,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <span class="ml-3 text-gray-700">20+ Financial Partners</span>
+              <span class="ml-3 text-gray-700">Recurring Billing Options</span>
             </li>
             <li class="flex items-start fade-in-slide-up" style="animation-delay: 500ms;">
               <div class="flex-shrink-0 w-6 h-6 text-custom-red mt-1">
@@ -61,7 +61,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <span class="ml-3 text-gray-700">Chargeback Mitigation</span>
+              <span class="ml-3 text-gray-700">20+ Financial Partners</span>
             </li>
             <li class="flex items-start fade-in-slide-up" style="animation-delay: 600ms;">
               <div class="flex-shrink-0 w-6 h-6 text-custom-red mt-1">
@@ -69,7 +69,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <span class="ml-3 text-gray-700">Years of Experience With High-Risk Merchants</span>
+              <span class="ml-3 text-gray-700">Chargeback Mitigation</span>
             </li>
           </ul>
         </div>
@@ -95,10 +95,12 @@
       </div>
       
       <!-- Right Content - Image with Card Reveal Animation -->
-      <div class="lg:w-1/2 relative card-reveal delay-200">
-        <div class="rounded-lg shadow-2xl overflow-hidden">
-          <img :src="firearmsIndustryImg" alt="Firearms Industry Payment Processing" class="w-full h-auto" />
-        </div>
+<div class="lg:w-1/2 relative card-reveal delay-200">
+  <div class="rounded-lg shadow-2xl overflow-hidden">
+    <img :src="airlineBookingImg" alt="Airline Booking Payment Processing" class="w-full h-[500px] object-cover" />
+  </div>
+
+
         
         <!-- Animated decorative elements -->
         <div class="absolute -z-10 inset-0 bg-gradient-to-r from-red-100 to-rose-100 rounded-3xl transform rotate-3 translate-x-4 translate-y-4 slide-in-right delay-300"></div>
@@ -106,15 +108,15 @@
       </div>
     </div>
 
-    <!-- Firearms Merchant Accounts Section -->
+    <!-- Airline Booking Merchant Accounts Section -->
     <div class="container mx-auto px-6 py-20 mt-8">
       <!-- Section Header -->
       <div class="text-center mb-16 scroll-reveal opacity-0">
         <span class="inline-block text-indigo-600 font-semibold mb-4 tracking-wider text-sm uppercase scroll-reveal opacity-0" style="animation-delay: 0.2s; color: #973131;">
-          Streamlined Setup for Firearms Payment Processing
+          Get Started with Airlines & Booking Payment Processing
         </span>
         <h2 class="text-4xl lg:text-5xl font-bold mb-6 scroll-reveal opacity-0" style="animation-delay: 0.4s;">
-          Four Easy Steps to Establish Your Firearms Merchant Account
+          Set Up Your Merchant Account in Four Easy Steps
         </h2>
       </div>
       
@@ -128,9 +130,9 @@
               <div class="text-4xl font-bold" style="color: #973131;">1</div>
             </div>
           </div>
-          <h3 class="text-xl font-bold mb-3 text-gray-800">Quick Online Application</h3>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">Complete an Online Application</h3>
           <p class="text-gray-700">
-            Initiate your firearms merchant account with our straightforward online application process.
+            Begin with our straightforward online application tailored for airlines and booking businesses.
           </p>
         </div>
         
@@ -142,9 +144,9 @@
               <div class="text-4xl font-bold" style="color: #2196F3;">2</div>
             </div>
           </div>
-          <h3 class="text-xl font-bold mb-3 text-gray-800">Document Submission</h3>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">Submit Necessary Documentation</h3>
           <p class="text-gray-700">
-            Provide essential documentation to support your firearms business application.
+            Provide essential documents to support your merchant account application.
           </p>
         </div>
         
@@ -156,9 +158,9 @@
               <div class="text-4xl font-bold" style="color: #9C27B0;">3</div>
             </div>
           </div>
-          <h3 class="text-xl font-bold mb-3 text-gray-800">Expert Underwriting Assistance</h3>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">Work with Our Underwriting Team</h3>
           <p class="text-gray-700">
-            Benefit from our specialized underwriting team's guidance for firearms businesses.
+            Our experts guide you through the underwriting process specific to high-risk industries.
           </p>
         </div>
         
@@ -170,130 +172,11 @@
               <div class="text-4xl font-bold" style="color: #4CAF50;">4</div>
             </div>
           </div>
-          <h3 class="text-xl font-bold mb-3 text-gray-800">Launch Secure Payment Processing</h3>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">Start Processing Payments</h3>
           <p class="text-gray-700">
-            Start accepting payments for firearms products and expand your business revenue.
+            Begin accepting payments for airline tickets, booking services, and other travel-related transactions with Hurricane Payments' payment processing. This will enable you to grow your revenue and enhance customer satisfaction.
           </p>
         </div>
-      </div>
-    </div>
-
-    <!-- Hurricane Payments Trusted Partner Section -->
-    <div class="relative py-24 overflow-hidden">
-      <!-- Background with texture and gradient -->
-      <div class="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-800 opacity-95"></div>
-      <div class="absolute inset-0 opacity-10">
-        <div class="absolute inset-0" :style="{ backgroundImage: 'url(\'data:image/svg+xml,%3Csvg width=\\\'20\\\' height=\\\'20\\\' viewBox=\\\'0 0 20 20\\\' xmlns=\\\'http://www.w3.org/2000/svg\\\'%3E%3Crect width=\\\'2\\\' height=\\\'2\\\' fill=\\\'%23ffffff\\\' fill-opacity=\\\'0.4\\\'/%3E%3C/svg%3E\')' }"></div>
-      </div>
-      
-      <!-- Decorative Elements -->
-      <div class="absolute top-0 right-0 w-96 h-96 bg-red-500 rounded-full filter blur-3xl opacity-10 transform translate-x-1/3 -translate-y-1/3"></div>
-      <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-10 transform -translate-x-1/3 translate-y-1/3"></div>
-      
-      <div class="container mx-auto px-6 relative z-10">
-        <div class="max-w-7xl mx-auto">
-          <!-- Section Header with Highlight Effect -->
-          <div class="text-center mb-16">
-            <!-- Premier text centered at the top -->
-            <div class="mb-8">
-              <span class="text-white font-semibold text-lg uppercase tracking-wider">Premier Firearms Processing Solutions</span>
-              <div class="w-48 h-1 bg-red-500/30 mx-auto mt-2"></div>
-            </div>
-            
-            <!-- Main title -->
-            <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-white relative inline-block">
-              <span class="relative z-10">Hurricane Payments: Your Trusted Partner for</span>
-              <div class="absolute -bottom-2 left-0 w-full h-3 bg-red-500/30 -rotate-1 transform"></div>
-            </h2>
-            <h2 class="text-4xl lg:text-5xl font-bold mb-10 text-white">Firearms Payment Processing</h2>
-          </div>
-          
-          <div class="flex flex-col lg:flex-row items-center gap-12">
-            <!-- Left Content: Image with Effects -->
-            <div class="lg:w-1/2 mb-10 lg:mb-0 relative">
-              <div class="relative z-10 rounded-xl overflow-hidden shadow-2xl transform transition duration-500 hover:scale-[1.02] hover:rotate-1">
-                <img :src="firearms2Img" alt="Firearms Payment Processing Solutions" class="w-full h-auto" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                <div class="absolute bottom-0 left-0 p-6">
-                  <div class="flex items-center">
-                    <div class="w-3 h-3 rounded-full bg-green-500 mr-2 animate-pulse"></div>
-                    <span class="text-white font-medium">Secure & Compliant Solutions</span>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Decorative elements behind the image -->
-              <div class="absolute -z-10 inset-0 bg-gradient-to-r from-red-500/30 to-red-600/30 rounded-xl transform rotate-3 translate-x-4 translate-y-4 blur-sm"></div>
-              <div class="absolute -z-20 inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 rounded-xl transform -rotate-2 translate-x-8 translate-y-8 blur-sm"></div>
-            </div>
-            
-            <!-- Right Content: Text with Card Design -->
-            <div class="lg:w-1/2">
-              <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 shadow-xl transform transition hover:shadow-2xl hover:-translate-y-1 duration-500">
-                <p class="text-xl text-gray-300 mb-8 leading-relaxed">
-                  The firearms industry faces unique obstacles in payment processing. As a high-risk sector, many conventional payment processors are reluctant to partner with firearms merchants.
-                </p>
-                
-                <h3 class="text-2xl font-bold mb-6 text-white">Comprehensive Firearms Industry Solutions</h3>
-                
-                <p class="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Hurricane Payments offers specialized merchant accounts designed to meet the distinct requirements of the firearms industry. We ensure secure, efficient, and compliant payment processing tailored to your business needs.
-                </p>
-                
-                <div class="space-y-5">
-                  <div class="flex items-start fade-in-slide-up">
-                    <div class="flex-shrink-0 mt-1">
-                      <div class="p-2 bg-red-500/20 rounded-lg">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="ml-4">
-                      <h4 class="text-xl font-semibold text-white">Industry-Specific Compliance</h4>
-                      <p class="text-gray-400 mt-1">Navigating complex regulations with ease and confidence</p>
-                    </div>
-                  </div>
-                  
-                  <div class="flex items-start fade-in-slide-up" style="animation-delay: 100ms;">
-                    <div class="flex-shrink-0 mt-1">
-                      <div class="p-2 bg-blue-500/20 rounded-lg">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="ml-4">
-                      <h4 class="text-xl font-semibold text-white">Enhanced Security Protocols</h4>
-                      <p class="text-gray-400 mt-1">Protecting transactions and sensitive customer information</p>
-                    </div>
-                  </div>
-                  
-                  <div class="flex items-start fade-in-slide-up" style="animation-delay: 200ms;">
-                    <div class="flex-shrink-0 mt-1">
-                      <div class="p-2 bg-green-500/20 rounded-lg">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="ml-4">
-                      <h4 class="text-xl font-semibold text-white">Competitive Rates</h4>
-                      <p class="text-gray-400 mt-1">Fair pricing designed specifically for high-risk merchants</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Bottom wave decoration -->
-      <div class="absolute bottom-0 left-0 w-full overflow-hidden" style="height: 80px;">
-        <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">
-          <path fill="#f9fafb" fill-opacity="1" d="M0,32L60,37.3C120,43,240,53,360,58.7C480,64,600,64,720,58.7C840,53,960,43,1080,42.7C1200,43,1320,53,1380,58.7L1440,64L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"></path>
-        </svg>
       </div>
     </div>
 
@@ -309,7 +192,7 @@
           <div class="text-center mb-16">
             <span class="inline-block bg-red-50 text-custom-red px-4 py-2 rounded-full font-medium text-sm uppercase tracking-wide mb-4">Understanding Industry Challenges</span>
             <h2 class="text-4xl lg:text-5xl font-bold mb-6" style="color: #973131;">
-              Navigating High-Risk Designation for Firearms Merchant Accounts
+              Understanding High-Risk Designation for Airlines & Booking Merchant Accounts
             </h2>
             <div class="w-24 h-1 bg-custom-red mx-auto rounded-full mb-8"></div>
           </div>
@@ -318,12 +201,12 @@
             <!-- Left Content: Image with Effects -->
             <div class="relative order-2 lg:order-1">
               <div class="relative z-10 rounded-xl overflow-hidden shadow-2xl transition duration-500 transform hover:scale-[1.02]">
-                <img :src="firearms3Img" alt="Firearms High-Risk Merchant Services" class="w-full h-auto" />
+                <img :src="airlineBooking3Img" alt="Airline Booking High-Risk Merchant Services" class="w-full h-auto" />
                 <div class="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
                 <div class="absolute bottom-0 left-0 w-full p-8">
                   <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
                     <h3 class="text-xl font-bold mb-2 text-white">Expert Solutions for High-Risk Merchants</h3>
-                    <p class="text-white/90">Specialized processing for firearms businesses</p>
+                    <p class="text-white/90">Specialized processing for airline and booking businesses</p>
                   </div>
                 </div>
               </div>
@@ -337,9 +220,9 @@
             <div class="order-1 lg:order-2">
               <div class="space-y-8">
                 <div class="bg-white rounded-xl p-8 shadow-xl transform transition hover:shadow-2xl duration-500 border-l-4 border-custom-red">
-                  <h3 class="text-2xl font-bold mb-4" style="color: #973131;">Why are Firearms Merchants Considered High-Risk?</h3>
+                  <h3 class="text-2xl font-bold mb-4" style="color: #973131;">High-risk merchants require specialized payment processors</h3>
                   <p class="text-gray-700 leading-relaxed">
-                    Firearms merchants are classified as high-risk due to stringent federal regulatory challenges. In addition to obtaining a Federal Firearms License (FFL), these businesses must comply with numerous other regulations specific to the sale of firearms. Moreover, firearms are a politically sensitive issue, which may lead payment processors to perceive reputational risks in offering firearms merchant services to gun shops. Firearms businesses also frequently process high-value transactions and experience elevated chargeback rates. These factors combined make it challenging for firearms merchants to establish a merchant account and accept payments.
+                    Avoid disruptions with Hurricane Payments, a leader in high-risk merchant account solutions for the airlines and booking industry.
                   </p>
                 </div>
                 
@@ -350,9 +233,9 @@
                   </div>
                   
                   <div class="relative z-10">
-                    <h3 class="text-2xl font-bold mb-4 text-white">How Hurricane Payments Can Help</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Choosing the Right Airlines & Booking Payment Processor</h3>
                     <p class="text-gray-300 leading-relaxed mb-6">
-                      The high-risk label for firearms businesses necessitates partnering with an experienced payment processor. Choose Hurricane Payments, a leader in high-risk merchant account solutions, to avoid disruptions and ensure smooth operations for your firearms business.
+                      Select a payment processor that understands the airlines and booking industry to prevent account closures and fund holds. Trust Hurricane Payments for stability and growth.
                     </p>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
@@ -362,7 +245,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                           </svg>
                         </div>
-                        <span>Regulatory Compliance Expertise</span>
+                        <span>Industry-Specific Compliance</span>
                       </div>
                       
                       <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20 flex items-center">
@@ -392,6 +275,8 @@
                         <span>Fast Approval Process</span>
                       </div>
                     </div>
+                    
+                   
                   </div>
                 </div>
               </div>
@@ -417,7 +302,7 @@
                   </svg>
                 </div>
               </div>
-              <h3 class="text-xl font-bold mb-4 text-center">Firearms Merchant Accounts</h3>
+              <h3 class="text-xl font-bold mb-4 text-center">Airline & Booking Merchant Accounts</h3>
               <ul class="ml-5 space-y-2">
                 <li class="flex items-start">
                   <span class="text-custom-red mr-2">•</span>
@@ -429,7 +314,7 @@
                 </li>
                 <li class="flex items-start">
                   <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">Fast Firearms Account Approval</span>
+                  <span class="text-gray-700">Fast Airline Account Approval</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-custom-red mr-2">•</span>
@@ -437,11 +322,11 @@
                 </li>
                 <li class="flex items-start">
                   <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">E-Commerce and Retail Firearms</span>
+                  <span class="text-gray-700">E-Commerce and Retail Travel</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">B2B Firearms Vendors Supported</span>
+                  <span class="text-gray-700">B2B Travel Vendors Supported</span>
                 </li>
               </ul>
             </div>
@@ -542,10 +427,10 @@
       </div>
     </div>
 
-    <!-- Firearms Payment Gateway Section -->
+    <!-- Airline & Booking Payment Gateway Section -->
     <div id="payment-gateway" class="bg-gradient-to-r from-gray-50 to-red-50 py-16">
       <div class="max-w-7xl mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center mb-10" style="color: #973131;">Firearms Payment Gateway for Online Payment Processing</h2>
+        <h2 class="text-4xl font-bold text-center mb-10" style="color: #973131;">Seamless Payment Processing for Airlines & Booking Businesses</h2>
         
         <div class="bg-white p-10 rounded-xl shadow-lg mb-10 relative overflow-hidden">
           <div class="absolute top-0 right-0 h-32 w-32 bg-red-50 rounded-full -mt-10 -mr-10"></div>
@@ -553,7 +438,7 @@
           <div class="flex flex-col md:flex-row items-start gap-12">
             <div class="md:w-1/2 relative z-10 self-center">
               <p class="text-lg text-gray-700 leading-relaxed">
-                If you sell firearms online, you'll also need a processor who can provide a firearms payment gateway. A payment gateway serves as the middleman between the merchant and the customer's financial institution, making it simple to accept credit card payments online. Discover how Hurricane Payments provides stable, high-risk processing accounts tailored for the firearms industry, enabling uninterrupted sales and sustainable growth.
+                Our merchant accounts are designed for smooth, reliable payment processing. Focus on expanding your platform while we handle the complexities of high-risk payment solutions.
               </p>
               
               <div class="mt-8 p-6 bg-gradient-to-r from-gray-900 to-gray-800 rounded-lg shadow-lg text-white relative overflow-hidden">
@@ -563,9 +448,9 @@
                 </div>
                 
                 <div class="relative z-10">
-                  <h3 class="text-2xl font-bold mb-4 text-white">Reliable Payment Processing Solutions for Firearms Businesses</h3>
+                  <h3 class="text-2xl font-bold mb-4 text-white">Reliable Payment Processing Solutions for Airline & Booking Businesses</h3>
                   <p class="text-gray-300 leading-relaxed">
-                    Our firearms merchant accounts offer smooth, dependable payment processing tailored to your business needs. With Hurricane Payments' specialized solutions, you can concentrate on expanding your firearms business while we manage the intricacies of secure and compliant payment processing.
+                    Our airline and booking merchant accounts offer smooth, dependable payment processing tailored to your business needs. With Hurricane Payments' specialized solutions, you can concentrate on expanding your travel business while we manage the intricacies of secure and compliant payment processing.
                   </p>
                 </div>
               </div>
@@ -575,7 +460,7 @@
               <div class="relative">
                 <!-- Main image with effects -->
                 <div class="rounded-lg overflow-hidden shadow-lg relative z-20">
-                  <img :src="firearmsGatewayImg" alt="Firearms Payment Gateway" class="w-full h-auto transform transition hover:scale-105 duration-500">
+                  <img :src="airlineBooking4Img" alt="Airline Booking Payment Gateway" class="w-full h-auto transform transition hover:scale-105 duration-500">
                   <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div class="absolute bottom-0 left-0 p-6">
                     <h3 class="text-xl font-bold text-white mb-2">Secure Online Transactions</h3>
@@ -617,6 +502,10 @@
               </div>
             </div>
           </div>
+          
+          <div class="flex items-center justify-center my-8">
+            <div class="w-24 h-1 bg-red-200 rounded-full"></div>
+          </div>
         
         </div>
       </div>
@@ -633,7 +522,7 @@
         <div class="max-w-4xl mx-auto text-center">
           <h2 class="text-4xl font-bold mb-6 text-white">Ready to Get Started?</h2>
           <p class="text-xl mb-10 text-white opacity-90">
-            Apply for your firearms industry merchant account today and experience hassle-free payment processing.
+            Apply for your airline & booking industry merchant account today and experience hassle-free payment processing.
           </p>
           
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
@@ -682,11 +571,10 @@ import { ref, onMounted } from 'vue';
 import MainLayout from '../MainLayout.vue';
 
 // Import images 
-import firearmsIndustryImg from '@/../images/firearms.jpg'; // Using a placeholder image
-import firearmsMerchantImg from '@/../images/homepic.png'; // Using a placeholder image
-import firearms2Img from '@/../images/firearms(2).jpg'; // Using a placeholder image
-import firearms3Img from '@/../images/firearms(3).jpg'; // Using a placeholder image
-import firearmsGatewayImg from '@/../images/firearms(4).jpg'; // Using a placeholder image
+import airlineBookingImg from '@/../images/airlinebooking.jpg';
+import airlineBooking2Img from '@/../images/airlinebooking(2).jpg';
+import airlineBooking3Img from '@/../images/airlinebooking(3).jpg';
+import airlineBooking4Img from '@/../images/airlinebooking(4).jpg';
 
 // Function to scroll to next section
 const scrollToNextSection = () => {

@@ -224,7 +224,13 @@ const router = createRouter({
             path: '/industries/Firearms',
             name: 'Firearms',
             component: () => import('./pages/industries/Firearems.vue')
+        },
+        {
+            path: '/industries/airline-booking',
+            name: 'AirlineBooking',
+            component: () => import('./pages/industries/Airline_Booking.vue')
         }
+        
     ],
     scrollBehavior(to, from, savedPosition) {
         if (savedPosition) {
