@@ -353,7 +353,7 @@
               <div class="dropdown-section">
                 <h3 class="section-title">High Risk Industries</h3>
                 <div class="menu-items">
-                  <router-link to="/industries/Adult-Industry" class="menu-item-link">
+                  <router-link to="/industries/adult-industry" class="menu-item-link">
                     <div class="top-row">
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
@@ -371,7 +371,7 @@
                     <span class="link-desc">Adult industry solutions</span>
                   </router-link>
                   
-                  <router-link to="/industries/Firearms" class="menu-item-link">
+                  <router-link to="/industries/firearms" class="menu-item-link">
                     <div class="top-row">
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
@@ -390,7 +390,7 @@
                   </router-link>
                   
                   <!-- View All Industries link inside this column -->
-                  <router-link to="/All_Industries" class="menu-item-link mt-3">
+                  <router-link to="/all-industries" class="menu-item-link mt-3">
                     <div class="top-row">
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -570,12 +570,6 @@
           <span :class="{ 'transform rotate-180': activeMobileSubmenu === 'industries' }">▾</span>
         </button>
         <div v-if="activeMobileSubmenu === 'industries'" class="pl-4 mt-2 space-y-2">
-          <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">Retail</a>
-          <a href="#" class="block py-1 text-gray-600 hover:text-indigo-600">eCommerce</a>
-          <router-link to="/restaurants" class="block py-1 text-gray-600 hover:text-indigo-600">Restaurants & Bars</router-link>
-          <router-link to="/professional-services" class="block py-1 text-gray-600 hover:text-indigo-600">Professional Services</router-link>
-          <router-link to="/skill-trade" class="block py-1 text-gray-600 hover:text-indigo-600">Skilled Trade Services</router-link>
-          <router-link to="/specialty-business" class="block py-1 text-gray-600 hover:text-indigo-600">Specialty Businesses</router-link>
           <router-link to="/all-industries" class="block py-2 mt-2 text-red-800 font-semibold hover:text-red-600 border-t border-gray-200 pt-3">View all industries</router-link>
         </div>
       </div>

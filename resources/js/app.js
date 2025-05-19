@@ -211,17 +211,17 @@ const router = createRouter({
             component: () => import('./pages/Merchant_Onboarding.vue')
         },
         {
-            path: '/industries/Adult-Industry',
+            path: '/industries/adult-industry',
             name: 'AdultIndustry',
             component: () => import('./pages/industries/Adult_Industry.vue')
         },
         {
-            path: '/All_Industries',
+            path: '/all-industries',
             name: 'AllIndustries',
             component: () => import('./pages/All_Industries.vue')
         },
         {
-            path: '/industries/Firearms',
+            path: '/industries/firearms',
             name: 'Firearms',
             component: () => import('./pages/industries/Firearems.vue')
         },
