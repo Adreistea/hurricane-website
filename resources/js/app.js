@@ -229,6 +229,11 @@ const router = createRouter({
             path: '/industries/airline-booking',
             name: 'AirlineBooking',
             component: () => import('./pages/industries/Airline_Booking.vue')
+        },
+        {
+            path: '/industries/auction-houses',
+            name: 'AuctionHouses',
+            component: () => import('./pages/industries/Auction_Houses.vue')
         }
         
     ],

@@ -97,7 +97,7 @@
       <!-- Right Content - Image with Card Reveal Animation -->
       <div class="lg:w-1/2 relative card-reveal delay-200">
         <div class="rounded-lg shadow-2xl overflow-hidden">
-          <img :src="firearmsIndustryImg" alt="Firearms Industry Payment Processing" class="w-full h-auto" />
+          <img :src="firearmsIndustryImg" alt="Firearms Industry Payment Processing" class="w-full h-[800px] object-cover" />
         </div>
         
         <!-- Animated decorative elements -->
@@ -318,7 +318,7 @@
             <!-- Left Content: Image with Effects -->
             <div class="relative order-2 lg:order-1">
               <div class="relative z-10 rounded-xl overflow-hidden shadow-2xl transition duration-500 transform hover:scale-[1.02]">
-                <img :src="firearms3Img" alt="Firearms High-Risk Merchant Services" class="w-full h-auto" />
+                <img :src="firearms3Img" alt="Firearms High-Risk Merchant Services" class="w-full h-[800px] object-cover" />
                 <div class="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
                 <div class="absolute bottom-0 left-0 w-full p-8">
                   <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
@@ -623,63 +623,14 @@
     </div>
 
     <!-- CTA Section -->
-    <div class="bg-[#973131] py-16 relative overflow-hidden">
-      <div class="absolute top-0 left-0 w-full h-full opacity-10">
-        <div class="absolute top-0 right-0 bg-white rounded-full w-64 h-64 -mt-20 -mr-20"></div>
-        <div class="absolute bottom-0 left-0 bg-white rounded-full w-80 h-80 -mb-32 -ml-32"></div>
-      </div>
-      
-      <div class="container mx-auto px-6 relative z-10">
-        <div class="max-w-4xl mx-auto text-center">
-          <h2 class="text-4xl font-bold mb-6 text-white">Ready to Get Started?</h2>
-          <p class="text-xl mb-10 text-white opacity-90">
-            Apply for your firearms industry merchant account today and experience hassle-free payment processing.
-          </p>
-          
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-            <!-- Request Consultation -->
-            <router-link 
-              to="/request-consultation" 
-              class="bg-white text-[#973131] hover:bg-red-50 font-bold py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 flex flex-col items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-              </svg>
-              Request a Consultation
-            </router-link>
-            
-            <!-- Call -->
-            <a 
-              href="tel:+18884400936" 
-              class="bg-white text-[#973131] hover:bg-red-50 font-bold py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 flex flex-col items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              Call Hurricane Payments<br/>
-              <span class="text-sm">1-888-440-0936</span>
-            </a>
-
-            <!-- Email -->
-            <a 
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=Thomas@hurricanepayments.com" 
-              target="_blank"
-              rel="noopener noreferrer"
-              class="bg-white text-[#973131] hover:bg-red-50 font-bold py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 flex flex-col items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              Email Hurricane Payments<br/>
-              <span class="text-sm">Thomas@hurricanepayments.com</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <CtaSection subheading="Apply for your firearms industry merchant account today and experience hassle-free payment processing." />
   </MainLayout>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
 import MainLayout from '../MainLayout.vue';
+import CtaSection from '../../components/CtaSection.vue';
 
 // Import images 
 import firearmsIndustryImg from '@/../images/firearms.jpg'; // Using a placeholder image
