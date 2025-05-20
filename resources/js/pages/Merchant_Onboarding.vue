@@ -648,6 +648,203 @@
                       placeholder="Suite, Unit, etc."
                     >
                   </div>
+
+                  <div>
+                    <label for="city" class="block text-gray-700 font-medium mb-2">City *</label>
+                    <input 
+                      type="text" 
+                      id="city" 
+                      v-model="form.city" 
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                      placeholder="Enter city"
+                      required
+                    >
+                  </div>
+
+                  <!-- Payment Acceptance Section -->
+                  <div class="mt-8">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Which Payments Would You Like to Accept?</h3>
+                    
+                    <div class="space-y-4">
+                      <!-- Visa, Mastercard, Discover -->
+                      <div class="flex items-start">
+                        <div class="flex items-center h-5">
+                          <input
+                            type="checkbox"
+                            id="visaMastercardDiscover"
+                            v-model="form.accept_visa_mastercard_discover"
+                            class="w-4 h-4 border-gray-300 rounded focus:ring-2 focus:ring-custom-red"
+                          >
+                        </div>
+                        <label for="visaMastercardDiscover" class="ml-3 text-gray-700">
+                          VISA, MASTERCARD, DISCOVER
+                        </label>
+                      </div>
+
+                      <!-- American Express OptBlue -->
+                      <div class="flex items-start">
+                        <div class="flex items-center h-5">
+                          <input
+                            type="checkbox"
+                            id="amexOptblue"
+                            v-model="form.accept_amex_optblue"
+                            class="w-4 h-4 border-gray-300 rounded focus:ring-2 focus:ring-custom-red"
+                          >
+                        </div>
+                        <label for="amexOptblue" class="ml-3 text-gray-700">
+                          AMERICAN EXPRESS OPTBLUE®
+                        </label>
+                      </div>
+
+                      <!-- American Express ESA -->
+                      <div class="space-y-2">
+                        <div class="flex items-start">
+                          <div class="flex items-center h-5">
+                            <input
+                              type="checkbox"
+                              id="amexEsa"
+                              v-model="form.accept_amex_esa"
+                              class="w-4 h-4 border-gray-300 rounded focus:ring-2 focus:ring-custom-red"
+                            >
+                          </div>
+                          <label for="amexEsa" class="ml-3 text-gray-700">
+                            AMERICAN EXPRESS ESA
+                          </label>
+                        </div>
+                        <div v-if="form.accept_amex_esa" class="ml-7">
+                          <input
+                            type="text"
+                            id="amexEsaNumber"
+                            v-model="form.amex_esa_number"
+                            placeholder="Enter ESA Number"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red"
+                          >
+                        </div>
+                      </div>
+
+                      <!-- PIN Debit -->
+                      <div class="flex items-start">
+                        <div class="flex items-center h-5">
+                          <input
+                            type="checkbox"
+                            id="pinDebit"
+                            v-model="form.accept_pin_debit"
+                            class="w-4 h-4 border-gray-300 rounded focus:ring-2 focus:ring-custom-red"
+                          >
+                        </div>
+                        <label for="pinDebit" class="ml-3 text-gray-700">
+                          PIN DEBIT
+                        </label>
+                      </div>
+
+                      <!-- EBT -->
+                      <div class="space-y-2">
+                        <div class="flex items-start">
+                          <div class="flex items-center h-5">
+                            <input
+                              type="checkbox"
+                              id="ebt"
+                              v-model="form.accept_ebt"
+                              class="w-4 h-4 border-gray-300 rounded focus:ring-2 focus:ring-custom-red"
+                            >
+                          </div>
+                          <label for="ebt" class="ml-3 text-gray-700">
+                            EBT
+                          </label>
+                        </div>
+                        <div v-if="form.accept_ebt" class="ml-7">
+                          <input
+                            type="text"
+                            id="ebtFnsNumber"
+                            v-model="form.ebt_fns_number"
+                            placeholder="Enter EBT FNS Number"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red"
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Sales Method Section -->
+                    <div class="mt-8">
+                      <h3 class="text-xl font-bold text-gray-800 mb-4">SALES METHOD (MUST EQUAL 100%)</h3>
+                      
+                      <!-- In Person -->
+                      <div class="mb-6">
+                        <div class="flex items-center gap-2">
+                          <label for="inPersonPercentage" class="block text-gray-700 font-medium">IN PERSON</label>
+                          <input
+                            type="number"
+                            id="inPersonPercentage"
+                            v-model="form.in_person_percentage"
+                            class="w-24 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red"
+                            min="0"
+                            max="100"
+                            @input="validateTotalPercentage"
+                          >
+                          <span class="text-gray-700">%</span>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-600">Card-present (i.e. swiped, dipped, NFC, etc.)</p>
+                      </div>
+
+                      <!-- Mail/Phone -->
+                      <div class="mb-6">
+                        <div class="flex items-center gap-2">
+                          <label for="mailPhonePercentage" class="block text-gray-700 font-medium">MAIL/PHONE</label>
+                          <input
+                            type="number"
+                            id="mailPhonePercentage"
+                            v-model="form.mail_phone_percentage"
+                            class="w-24 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red"
+                            min="0"
+                            max="100"
+                            @input="validateTotalPercentage"
+                          >
+                          <span class="text-gray-700">%</span>
+                        </div>
+                        
+                        <p class="text-sm text-gray-600">Card-absent</p>
+                      </div>
+
+                      <!-- E-commerce -->
+                      <div class="mb-6">
+                        <div class="flex items-center gap-2">
+                          <label for="ecommercePercentage" class="block text-gray-700 font-medium">E-COMMERCE</label>
+                          <input
+                            type="number"
+                            id="ecommercePercentage"
+                            v-model="form.ecommerce_percentage"
+                            class="w-24 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red"
+                            min="0"
+                            max="100"
+                            @input="validateTotalPercentage"
+                          >
+                          <span class="text-gray-700">%</span>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-600">Card-absent, Internet based</p>
+                      </div>
+
+                      <!-- Total Percentage Warning -->
+                      <div v-if="totalPercentageError" class="text-red-600 mb-4">
+                        Total percentage must equal 100%
+                      </div>
+                    </div>
+
+                    <!-- Notes field -->
+                    <div class="mt-4">
+                      <label for="notes" class="block text-gray-700 font-medium mb-2">Notes</label>
+                      <textarea
+                        id="notes"
+                        v-model="form.notes"
+                        rows="3"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red"
+                        placeholder="Enter any additional notes"
+                      ></textarea>
+                    </div>
+
+                    <!-- OptBlue Notice -->
+                    <div class="mt-4 text-sm text-gray-600 italic">
+                    </div>
+                  </div>
                   
                   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -2140,6 +2337,21 @@
                       required
                     >
                   </div>
+
+                  <div>
+                    <label for="ssn" class="block text-gray-700 font-medium mb-2">Social Security Number (SSN) *</label>
+                    <input 
+                      type="password"
+                      id="ssn"
+                      v-model="form.ssn"
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red"
+                      pattern="[0-9]{9}"
+                      maxlength="9"
+                      placeholder="Enter 9-digit SSN"
+                      required
+                    >
+                    <p class="mt-1 text-sm text-gray-500">Your SSN is securely encrypted and stored</p>
+                  </div>
                 </div>
                 
                 <h4 class="text-xl font-semibold mb-4 text-gray-800">Home Address</h4>
@@ -2175,6 +2387,7 @@
                         id="city" 
                         v-model="form.city" 
                         class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                        placeholder="Enter city"
                         required
                       >
                     </div>
@@ -3040,6 +3253,7 @@
 
 <script setup>
 import { ref, computed, onMounted, nextTick, watch } from 'vue';
+import axios from 'axios';
 import NavBar from './NavBar.vue';
 import AppFooter from './AppFooter.vue';
 import SignaturePad from 'signature_pad';
@@ -3059,6 +3273,7 @@ const steps = [
 const totalSteps = 8;
 const currentStep = ref(1);
 const isSubmitting = ref(false);
+const totalPercentageError = ref(false);
 
 // Device selection
 const selectedDevice = ref('');
@@ -3147,10 +3362,26 @@ const form = ref({
   business_phone: '',
   year_started: '',
   website: '',
-  address_line1: '',
-  address_line2: '',
-  state: '',
+      address_line1: '',
+    address_line2: '',
+    city: '',
+    state: '',
   zip: '',
+  
+  // Payment Acceptance fields
+  accept_visa_mastercard_discover: false,
+  accept_amex_optblue: false,
+  accept_amex_esa: false,
+  amex_esa_number: '',
+  accept_pin_debit: false,
+  accept_ebt: false,
+  ebt_fns_number: '',
+  notes: '',
+  
+  // Sales Method Percentages
+  in_person_percentage: 90,
+  mail_phone_percentage: 0,
+  ecommerce_percentage: 10,
   
   owner_first_name: '',
   owner_last_name: '',
@@ -3160,6 +3391,7 @@ const form = ref({
   drivers_license: '',
   dl_state: '',
   owner_phone: '',
+  ssn: '',
   home_address_line1: '',
   home_address_line2: '',
   city: '',
@@ -3295,6 +3527,15 @@ function validateCurrentStep() {
       alert('Please select all required business details');
       return false;
     }
+    
+    // Validate Sales Method Percentages
+    const total = Number(form.value.in_person_percentage || 0) +
+                 Number(form.value.mail_phone_percentage || 0) +
+                 Number(form.value.ecommerce_percentage || 0);
+    if (Math.abs(total - 100) > 0.01) {
+      alert('Sales method percentages must total 100%');
+      return false;
+    }
   }
   // Restaurant Profile (step 3) is optional, so no validation needed
   else if (currentStep.value === 4) {
@@ -3332,6 +3573,27 @@ function validateCurrentStep() {
   return true;
 }
 
+// Sales Method Percentage Validation
+function validateTotalPercentage() {
+  const total = Number(form.value.in_person_percentage || 0) +
+                Number(form.value.mail_phone_percentage || 0) +
+                Number(form.value.ecommerce_percentage || 0);
+  totalPercentageError.value = Math.abs(total - 100) > 0.01;
+}
+
+// Watch for industry type changes to set default percentages
+watch(() => form.value.industry_type, (newType) => {
+  if (newType === 'Online/MOTO') {
+    form.value.in_person_percentage = 0;
+    form.value.mail_phone_percentage = 0;
+    form.value.ecommerce_percentage = 100;
+  } else {
+    form.value.in_person_percentage = 90;
+    form.value.mail_phone_percentage = 0;
+    form.value.ecommerce_percentage = 10;
+  }
+});
+
 // Form submission method
 function submitForm() {
   if (!validateCurrentStep()) {
@@ -3348,18 +3610,13 @@ function submitForm() {
   };
   
   // Make API call to save the data
-  fetch('/api/merchant-onboarding', {
-    method: 'POST',
+  axios.post('/api/merchant-onboarding/', formData, {
     headers: {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json',
-      'X-Requested-With': 'XMLHttpRequest'
-    },
-    body: JSON.stringify(formData)
+      'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+    }
   })
-  .then(response => response.json())
-  .then(data => {
-    console.log('Form submitted:', data);
+  .then(response => {
+    console.log('Form submitted:', response.data);
     
     // Move to confirmation step
     currentStep.value = 8;
@@ -3369,9 +3626,9 @@ function submitForm() {
     window.scrollTo(0, 0);
   })
   .catch(error => {
-    console.error('Error submitting form:', error);
+    console.error('Error submitting form:', error.response?.data || error);
     isSubmitting.value = false;
-    alert('An error occurred while submitting the form. Please try again.');
+    alert(error.response?.data?.message || 'An error occurred while submitting the form. Please try again.');
   });
 }
 

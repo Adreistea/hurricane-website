@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('drivers_license', 50);
             $table->string('dl_state', 2);
             $table->string('owner_phone', 20);
+            $table->string('ssn', 9);
             $table->string('home_address_line1', 255);
             $table->string('home_address_line2', 255)->nullable();
             $table->string('city', 100);

@@ -597,7 +597,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, defineExpose } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 // Import logo image
 import logoImg from '@/../images/TransparentLogo.png';
 

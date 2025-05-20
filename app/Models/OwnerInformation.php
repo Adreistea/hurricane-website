@@ -19,6 +19,7 @@ class OwnerInformation extends Model
         'drivers_license',
         'dl_state',
         'owner_phone',
+        'ssn',
         'home_address_line1',
         'home_address_line2',
         'city',

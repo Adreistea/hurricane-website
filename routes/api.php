@@ -16,11 +16,11 @@ Route::post('/partnership-requests', [PartnershipRequestController::class, 'stor
     ->withoutMiddleware(\App\Http\Middleware\VerifyCsrfToken::class);
 
 // Merchant Onboarding API route
-Route::post('/merchant-onboarding', [MerchantOnboardingController::class, 'store'])
+Route::match(['post', 'options'], 'merchant-onboarding', [MerchantOnboardingController::class, 'store'])
     ->withoutMiddleware(\App\Http\Middleware\VerifyCsrfToken::class);
 
 // Added for compatibility - handle potential trailing spaces in the URL
-Route::post('/merchant-onboarding{any}', [MerchantOnboardingController::class, 'store'])
+Route::match(['post', 'options'], 'merchant-onboarding/{any?}', [MerchantOnboardingController::class, 'store'])
     ->where('any', '.*')
     ->withoutMiddleware(\App\Http\Middleware\VerifyCsrfToken::class);
 

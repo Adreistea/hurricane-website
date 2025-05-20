@@ -55,6 +55,7 @@ class MerchantOnboardingController extends Controller
                     'website' => $request->website,
                     'address_line1' => $request->address_line1,
                     'address_line2' => $request->address_line2,
+                    'city' => $request->city,
                     'state' => $request->state,
                     'zip' => $request->zip,
                 ]);
@@ -77,6 +78,7 @@ class MerchantOnboardingController extends Controller
                     'city' => $request->city,
                     'home_state' => $request->home_state,
                     'home_zip' => $request->home_zip,
+                    'ssn' => $request->ssn,
                 ]);
             }
 
@@ -146,24 +148,28 @@ class MerchantOnboardingController extends Controller
             // If everything went well, commit the transaction
             DB::commit();
 
-            // Submit data to the external API
-            $apiResponse = $this->submitToAPI($request->all(), $merchant->id);
+            // Temporarily comment out API submission for testing
+            // $apiResponse = $this->submitToAPI($request->all(), $merchant->id);
             
             return response()->json([
                 'success' => true,
                 'message' => 'Merchant onboarding completed successfully!',
                 'merchant_id' => $merchant->id,
-                'api_response' => $apiResponse
+                'data' => $request->all() // Add this line to see what data was received
+                // 'api_response' => $apiResponse // Comment this out
             ], 201);
         } catch (\Exception $e) {
             // If an error occurred, rollback the transaction
             DB::rollBack();
             Log::error('Merchant onboarding error: ' . $e->getMessage());
+            Log::error('Stack trace: ' . $e->getTraceAsString()); // Add stack trace for better debugging
 
             return response()->json([
                 'success' => false,
                 'message' => 'An error occurred while processing your request.',
-                'error' => $e->getMessage()
+                'error' => $e->getMessage(),
+                'trace' => $e->getTraceAsString(), // Add this for debugging
+                'request_data' => $request->all() // Add this to see what data was sent
             ], 500);
         }
     }
@@ -234,6 +240,7 @@ class MerchantOnboardingController extends Controller
                 'city' => $data['city'] ?? null,
                 'home_state' => $data['home_state'] ?? null,
                 'home_zip' => $data['home_zip'] ?? null,
+                'ssn' => $data['ssn'] ?? null,
                 
                 // System configuration
                 'number_of_locations' => $data['number_of_locations'] ?? null,
