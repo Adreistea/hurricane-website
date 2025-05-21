@@ -3174,6 +3174,95 @@
                       By providing my electronic signature above, I certify that I am authorized to make this purchase on behalf of the business and agree to all terms and conditions.
                     </p>
                   </div>
+                  
+                  <!-- Banking Partners Section -->
+                  <div class="mt-8">
+                    <h4 class="text-lg font-bold text-gray-800 mb-4">Our Banking Partners</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                      <div class="bg-white rounded-lg shadow-md p-4 border border-gray-200">
+                        <div class="flex flex-col items-center">
+                          <img src="@/../images/axiombank.png" alt="Axiom Bank" class="h-16 object-contain mb-4">
+                          <div class="text-center">
+                            <p class="font-medium">258 Southhall Lane, Suite 400,</p>
+                            <p class="font-medium">Maitland, FL 32751</p>
+                            <p class="text-gray-600">(800) 584-0015</p>
+                            <p class="text-sm text-gray-500 mt-2">MID Prefix: starts with 2099/3099/4011/5011</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="bg-white rounded-lg shadow-md p-4 border border-gray-200">
+                        <div class="flex flex-col items-center">
+                          <img src="@/../images/avidiabank.png" alt="Avidia Bank" class="h-16 object-contain mb-4">
+                          <div class="text-center">
+                            <p class="font-medium">42 Main St., Hudson,</p>
+                            <p class="font-medium">MA 01749</p>
+                            <p class="text-gray-600">(800) 508-2265</p>
+                            <p class="text-sm text-gray-500 mt-2">MID Prefix: starts with 3011</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="bg-white rounded-lg shadow-md p-4 border border-gray-200">
+                        <div class="flex flex-col items-center">
+                          <img src="@/../images/northamericanbankingcompany.png" alt="North American Banking Company" class="h-16 object-contain mb-4">
+                          <div class="text-center">
+                            <p class="font-medium">1901 Oakcrest Ave, Ste 9A Roseville,</p>
+                            <p class="font-medium">MN 55113</p>
+                            <p class="text-gray-600">(651) 636-9654</p>
+                            <p class="text-sm text-gray-500 mt-2">MID Prefix: starts with 7011</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                      <div class="bg-white rounded-lg shadow-md p-4 border border-gray-200">
+                        <div class="flex flex-col items-center">
+                          <img src="@/../images/ffb.png" alt="Fresno First Bank" class="h-16 object-contain mb-4">
+                          <div class="text-center">
+                            <p class="font-medium">7690 N. Palm Ave., Ste. 101, Fresno,</p>
+                            <p class="font-medium">CA 93711</p>
+                            <p class="text-gray-600">(559) 439-0200</p>
+                            <p class="text-sm text-gray-500 mt-2">MID Prefix: starts with 2011</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="bg-white rounded-lg shadow-md p-4 border border-gray-200">
+                        <div class="flex flex-col items-center">
+                          <img src="@/../images/westamericabank.png" alt="WestAmerica Bank" class="h-16 object-contain mb-4">
+                          <div class="text-center">
+                            <p class="font-medium">3750 Westwind Blvd., Suite 210</p>
+                            <p class="font-medium">Santa Rosa, CA 95403</p>
+                            <p class="text-gray-600">(800) 939-9942</p>
+                            <p class="text-sm text-gray-500 mt-2">MID Prefix: starts with 8011</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Bank and Merchant Responsibilities -->
+                  <div class="mt-6 text-sm text-gray-600 p-4 bg-gray-50 border border-gray-200 rounded-md">
+                    <div class="mb-3">
+                      <h5 class="font-bold mb-1">IMPORTANT BANK RESPONSIBILITIES:</h5>
+                      <ol class="list-decimal pl-5 space-y-1">
+                        <li>A Visa Member (meaning, a financial institution that is a member of Visa's network) is the only entity approved to extend acceptance of VISA products directly to a Merchant.</li>
+                        <li>A Visa Member must be a principal (signor) to the Merchant Agreement.</li>
+                        <li>The Visa Member is responsible for educating Merchants on pertinent VISA Operating Regulations with which Merchants must comply.</li>
+                        <li>The Visa Member is responsible for and must provide settlement funds to the Merchant.</li>
+                        <li>The Visa Member is responsible for all funds held in reserve that are derived from settlement.</li>
+                      </ol>
+                    </div>
+                    
+                    <div>
+                      <h5 class="font-bold mb-1">IMPORTANT MERCHANT RESPONSIBILITIES</h5>
+                      <ol class="list-decimal pl-5 space-y-1">
+                        <li>Ensure compliance with cardholder data security and storage requirements. (To review these requirements, go to www.visa.com)</li>
+                        <li>Maintain fraud and chargebacks below thresholds.</li>
+                        <li>Review and understand the terms of the Merchant Agreement, which is attached hereto and available for viewing at the following link: <a href="https://dashboard.maverickpayments.com/legal/merchant-agreement?version=1.7" class="text-blue-600 hover:underline" target="_blank">https://dashboard.maverickpayments.com/legal/merchant-agreement?version=1.7</a></li>
+                        <li>Comply with VISA Operating Regulations.</li>
+                      </ol>
+                      <p class="mt-2 italic text-xs">The responsibilities listed above do not supersede terms of the Merchant Agreement and are provided to ensure the Merchant understands some important obligations of each party and that the VISA Member – the Bank - is the ultimate authority should the Merchant have any problems.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
               
@@ -3184,7 +3273,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                     </svg>
-                  </div>
+                      </div>
                   
                   
                   <h3 class="text-2xl font-bold mb-4 text-gray-800">Application Submitted Successfully!</h3>
@@ -3199,7 +3288,7 @@
                     <p class="text-gray-700 mb-4">
                       A member of our team will reach out within 24 hours to confirm your application details and guide you through the next steps.
                     </p>
-                  </div>
+                          </div>
                   
                   <router-link 
                     to="/" 
@@ -3207,8 +3296,8 @@
                   >
                     Return to Home
                   </router-link>
-                </div>
-              </div>
+                        </div>
+                      </div>
               
               <!-- Navigation Buttons -->
               <div v-if="currentStep < 8" class="flex justify-between mt-8">
@@ -3240,15 +3329,15 @@
                 >
                   {{ isSubmitting ? 'Submitting...' : 'Finish' }}
                 </button>
-              </div>
+                          </div>
             </form>
-          </div>
-        </div>
-      </div>
-    </div>
+                        </div>
+                      </div>
+                    </div>
+                          </div>
     
     <AppFooter />
-  </div>
+                        </div>
 </template>
 
 <script setup>
