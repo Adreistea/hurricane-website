@@ -234,6 +234,16 @@ const router = createRouter({
             path: '/industries/auction-houses',
             name: 'AuctionHouses',
             component: () => import('./pages/industries/Auction_Houses.vue')
+        },
+        {
+            path: '/industries/automotive',
+            name: 'Automotive',
+            component: () => import('./pages/industries/Automotive.vue')
+        },
+        {
+            path: '/industries/background-checks',
+            name: 'BackgroundChecks',
+            component: () => import('./pages/industries/Background_Checks.vue')
         }
         
     ],
