@@ -97,7 +97,7 @@
       <!-- Right Content - Image with Card Reveal Animation -->
       <div class="lg:w-1/2 relative card-reveal delay-200">
   <div class="rounded-lg shadow-2xl overflow-hidden">
-    <img :src="airlineBookingImg" alt="Airline Booking Payment Processing" class="w-full h-[800px] object-cover" />
+    <img :src="firstImage" alt="Airline Booking Payment Processing" class="w-full h-[800px] object-cover" />
   </div>
 
 
@@ -200,7 +200,7 @@
             <!-- Left Content: Image with Effects -->
             <div class="relative order-2 lg:order-1">
               <div class="relative z-10 rounded-xl overflow-hidden shadow-2xl transition duration-500 transform hover:scale-[1.02]">
-                <img :src="airlineBooking3Img" alt="Airline Booking High-Risk Merchant Services" class="w-full h-[800px] object-cover" />
+                <img :src="thirdImage" alt="Airline Booking High-Risk Merchant Services" class="w-full h-[800px] object-cover" />
                 <div class="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
                 <div class="absolute bottom-0 left-0 w-full p-8">
                   <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
@@ -459,7 +459,7 @@
               <div class="relative">
                 <!-- Main image with effects -->
                 <div class="rounded-lg overflow-hidden shadow-lg relative z-20">
-                  <img :src="airlineBooking4Img" alt="Airline Booking Payment Gateway" class="w-full h-auto transform transition hover:scale-105 duration-500">
+                  <img :src="fourthImage" alt="Airline Booking Payment Gateway" class="w-full h-auto transform transition hover:scale-105 duration-500">
                   <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div class="absolute bottom-0 left-0 p-6">
                     <h3 class="text-xl font-bold text-white mb-2">Secure Online Transactions</h3>
@@ -521,10 +521,10 @@ import MainLayout from '../MainLayout.vue';
 import CtaSection from '../../components/CtaSection.vue';
 
 // Import images 
-import airlineBookingImg from '@/../images/airlinebooking.jpg';
-import airlineBooking2Img from '@/../images/airlinebooking(2).jpg';
-import airlineBooking3Img from '@/../images/airlinebooking(3).jpg';
-import airlineBooking4Img from '@/../images/airlinebooking(4).jpg';
+import firstImage from '@/../images/airlinebooking.jpg';
+import secondImage from '@/../images/airlinebooking(2).jpg';
+import thirdImage from '@/../images/airlinebooking(3).jpg';
+import fourthImage from '@/../images/airlinebooking(4).jpg';
 
 // Function to scroll to next section
 const scrollToNextSection = () => {

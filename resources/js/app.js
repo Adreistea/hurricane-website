@@ -244,7 +244,29 @@ const router = createRouter({
             path: '/industries/background-checks',
             name: 'BackgroundChecks',
             component: () => import('./pages/industries/Background_Checks.vue')
-        }
+        },
+        {
+            path: '/industries/bad-credit',
+            name: 'BadCredit',
+            component: () => import('./pages/industries/Bad_Credit.vue')
+        },
+        {
+            path: '/industries/business-consulting',
+            name: 'BusinessConsulting',
+            component: () => import('./pages/industries/Business_Consulting.vue')
+        },
+        {
+            path: '/industries/business-opportunities',
+            name: 'BusinessOpportunities',
+            component: () => import('./pages/industries/Business_Opportunities.vue')
+        },
+        {
+            path: '/industries/cbd-oil',
+            name: 'Cannabis',
+            component: () => import('./pages/industries/CBD_Oil.vue')
+        },
+        
+        
         
     ],
     scrollBehavior(to, from, savedPosition) {
