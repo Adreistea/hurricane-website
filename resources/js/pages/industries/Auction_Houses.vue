@@ -286,146 +286,148 @@
       </div>
     </div>
 
-    <!-- Our Services Section -->
-    <div id="our-services" class="py-20">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="bg-white rounded-2xl border-2 border-red-100 p-10">
-          <h2 class="text-4xl font-bold text-center mb-16" style="color: #973131;">Our Services</h2>
-          
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <!-- Column 1 -->
-            <div>
-              <div class="mb-6 flex justify-center">
-                <div class="bg-red-50 p-4 rounded-lg inline-flex">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-                  </svg>
-                </div>
-              </div>
-              <h3 class="text-xl font-bold mb-4 text-center">Airline & Booking Merchant Accounts</h3>
-              <ul class="ml-5 space-y-2">
-                <li class="flex items-start">
-                  <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">20+ Proven Bank Relationships</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">Medium/High Risk Accounts</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">Fast Airline Account Approval</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">Large Merchant Case Studies</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">E-Commerce and Retail Travel</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">B2B Travel Vendors Supported</span>
-                </li>
-              </ul>
-            </div>
+ 
+      <!-- Our Services Section -->
+      <div id="our-services" class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="bg-white rounded-2xl border-2 border-red-100 p-10">
+            <h2 class="text-4xl font-bold text-center mb-16" style="color: #973131;">Our Services</h2>
             
-            <!-- Column 2 -->
-            <div>
-              <div class="mb-6 flex justify-center">
-                <div class="bg-red-50 p-4 rounded-lg inline-flex">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+              <!-- Column 1 -->
+              <div>
+                <div class="mb-6 flex justify-center">
+                  <div class="bg-red-50 p-4 rounded-lg inline-flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                    </svg>
+                  </div>
                 </div>
+                <h3 class="text-xl font-bold mb-4 text-center">Adult Entertainment Merchant Accounts</h3>
+                <ul class="ml-5 space-y-2">
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">20+ Proven Bank Relationships</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Medium/High Risk Accounts</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Fast Adult Entertainment Account Approval</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Large Merchant Case Studies</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">E-Commerce and Retail Adult Entertainment</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">B2B Adult Entertainment Vendors Supported</span>
+                  </li>
+                </ul>
               </div>
-              <h3 class="text-xl font-bold mb-4 text-center">Multiple Payment Solutions</h3>
-              <ul class="ml-5 space-y-2">
-                <li class="flex items-start">
-                  <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">Multiple E-Commerce Gateway</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">Chargeback Prevention</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">ACH</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">E-Check</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">Credit Cards</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">B2B-Level II/III Data Discounts</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">3D Secure Frictionless Checkout</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">Mobile Payment</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">EMV Readers</span>
-                </li>
-              </ul>
-            </div>
-            
-            <!-- Column 3 -->
-            <div>
-              <div class="mb-6 flex justify-center">
-                <div class="bg-red-50 p-4 rounded-lg inline-flex">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
+              
+              <!-- Column 2 -->
+              <div>
+                <div class="mb-6 flex justify-center">
+                  <div class="bg-red-50 p-4 rounded-lg inline-flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
                 </div>
+                <h3 class="text-xl font-bold mb-4 text-center">Multiple Payment Solutions</h3>
+                <ul class="ml-10 space-y-2">
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Multiple E-Commerce Gateway</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Chargeback Prevention</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">ACH</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">E-Check</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Credit Cards</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">B2B-Level I/II/III Data Discounts</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">3D Secure Frictionless Checkout</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Mobile Payment</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">EMV Readers</span>
+                  </li>
+                </ul>
               </div>
-              <h3 class="text-xl font-bold mb-4 text-center">Compatibility & Support</h3>
-              <ul class="ml-5 space-y-2">
-                <li class="flex items-start">
-                  <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">Gateway Recurring Billing</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">Vault</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">E-Commerce Cart Plugins</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">Developer API / Docs</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">POS/Terminals</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">Scalable Merchant Accounts</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">Dedicated Account Managers</span>
-                </li>
-              </ul>
+              
+              <!-- Column 3 -->
+              <div>
+                <div class="mb-6 flex justify-center">
+                  <div class="bg-red-50 p-4 rounded-lg inline-flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-center">Compatibility & Support</h3>
+                <ul class="ml-15 space-y-2">
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Gateway Recurring Billing</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Vault</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">E-Commerce Cart Plugins</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Developer API / Docs</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">POS/Terminals</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Scalable Merchant Accounts</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Dedicated Account Managers</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+
 
     <!-- Airline & Booking Payment Gateway Section -->
     <div id="payment-gateway" class="bg-gradient-to-r from-gray-50 to-red-50 py-16">

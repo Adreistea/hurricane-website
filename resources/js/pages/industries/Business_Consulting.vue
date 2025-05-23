@@ -112,7 +112,7 @@
         <!-- Section Header -->
         <div class="text-center mb-16 scroll-reveal opacity-0">
           <span class="inline-block text-indigo-600 font-semibold mb-4 tracking-wider text-sm uppercase scroll-reveal opacity-0" style="animation-delay: 0.2s; color: #973131;">
-            Get Started with Airlines & Booking Payment Processing
+            Get Started with Business Consulting Payment Processing
           </span>
           <h2 class="text-4xl lg:text-5xl font-bold mb-6 scroll-reveal opacity-0" style="animation-delay: 0.4s;">
             Set Up Your Merchant Account in Four Easy Steps
@@ -131,7 +131,7 @@
             </div>
             <h3 class="text-xl font-bold mb-3 text-gray-800">Complete an Online Application</h3>
             <p class="text-gray-700">
-              Begin with our straightforward online application tailored for airlines and booking businesses.
+              Begin with our straightforward online application tailored for Business Consulting businesses.
             </p>
           </div>
           
@@ -205,7 +205,7 @@
                   <div class="absolute bottom-0 left-0 w-full p-8">
                     <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
                       <h3 class="text-xl font-bold mb-2 text-white">Expert Solutions for High-Risk Merchants</h3>
-                      <p class="text-white/90">Specialized processing for airline and booking businesses</p>
+                      <p class="text-white/90">Specialized processing for Business Consulting businesses</p>
                     </div>
                   </div>
                 </div>
@@ -285,6 +285,7 @@
         </div>
       </div>
   
+ 
       <!-- Our Services Section -->
       <div id="our-services" class="py-20">
         <div class="max-w-7xl mx-auto px-6">
@@ -301,7 +302,7 @@
                     </svg>
                   </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-center">Airline & Booking Merchant Accounts</h3>
+                <h3 class="text-xl font-bold mb-4 text-center">Adult Entertainment Merchant Accounts</h3>
                 <ul class="ml-5 space-y-2">
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
@@ -313,7 +314,7 @@
                   </li>
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">Fast Airline Account Approval</span>
+                    <span class="text-gray-700">Fast Adult Entertainment Account Approval</span>
                   </li>
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
@@ -321,11 +322,11 @@
                   </li>
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">E-Commerce and Retail Travel</span>
+                    <span class="text-gray-700">E-Commerce and Retail Adult Entertainment</span>
                   </li>
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">B2B Travel Vendors Supported</span>
+                    <span class="text-gray-700">B2B Adult Entertainment Vendors Supported</span>
                   </li>
                 </ul>
               </div>
@@ -340,7 +341,7 @@
                   </div>
                 </div>
                 <h3 class="text-xl font-bold mb-4 text-center">Multiple Payment Solutions</h3>
-                <ul class="ml-5 space-y-2">
+                <ul class="ml-10 space-y-2">
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
                     <span class="text-gray-700">Multiple E-Commerce Gateway</span>
@@ -363,7 +364,7 @@
                   </li>
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">B2B-Level II/III Data Discounts</span>
+                    <span class="text-gray-700">B2B-Level I/II/III Data Discounts</span>
                   </li>
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
@@ -390,7 +391,7 @@
                   </div>
                 </div>
                 <h3 class="text-xl font-bold mb-4 text-center">Compatibility & Support</h3>
-                <ul class="ml-5 space-y-2">
+                <ul class="ml-15 space-y-2">
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
                     <span class="text-gray-700">Gateway Recurring Billing</span>
@@ -425,6 +426,7 @@
           </div>
         </div>
       </div>
+
   
       <!-- Airline & Booking Payment Gateway Section -->
       <div id="payment-gateway" class="bg-gradient-to-r from-gray-50 to-red-50 py-16">

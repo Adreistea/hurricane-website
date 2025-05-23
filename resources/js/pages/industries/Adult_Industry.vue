@@ -49,69 +49,7 @@
         </div>
       </div>
   
-      <!-- Quick Navigation Section -->
-      <div class="bg-gray-50 py-8 border-t border-b border-gray-200">
-        <div class="container mx-auto px-6">
-          <div class="text-left mb-6">
-            <h2 class="text-2xl font-bold text-gray-800">Quick Navigation</h2>
-            <p class="text-gray-600 mt-2">Jump to the section you're interested in</p>
-          </div>
-          <div class="flex flex-wrap gap-x-12 gap-y-4">
-            <button 
-              @click="scrollToSection('high-risk')"
-              class="text-left text-custom-red hover:text-red-700 transition duration-300 flex items-center group">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="border-b border-transparent group-hover:border-red-700">Why High-Risk?</span>
-            </button>
-            <button 
-              @click="scrollToSection('why-choose')"
-              class="text-left text-custom-red hover:text-red-700 transition duration-300 flex items-center group">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="border-b border-transparent group-hover:border-red-700">Why Choose Hurricane Payments</span>
-            </button>
-
-            <button 
-              @click="scrollToSection('challenges-solutions')"
-              class="text-left text-custom-red hover:text-red-700 transition duration-300 flex items-center group">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="border-b border-transparent group-hover:border-red-700">Challenges & Solutions</span>
-            </button>
-
-            <button 
-              @click="scrollToSection('content-guidelines')"
-              class="text-left text-custom-red hover:text-red-700 transition duration-300 flex items-center group">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="border-b border-transparent group-hover:border-red-700">Content Guidelines</span>
-            </button>
-
-            <button 
-              @click="scrollToSection('our-services')"
-              class="text-left text-custom-red hover:text-red-700 transition duration-300 flex items-center group">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="border-b border-transparent group-hover:border-red-700">Our Services</span>
-            </button>
-
-            <button 
-              @click="scrollToSection('payment-gateway')"
-              class="text-left text-custom-red hover:text-red-700 transition duration-300 flex items-center group">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="border-b border-transparent group-hover:border-red-700">Payment Gateway</span>
-            </button>
-          </div>
-        </div>
-      </div>
+     
   
       <!-- Adult Entertainment Merchant Accounts Section -->
       <div class="container mx-auto px-6 py-20 mt-8">

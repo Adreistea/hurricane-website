@@ -265,6 +265,11 @@ const router = createRouter({
             name: 'Cannabis',
             component: () => import('./pages/industries/CBD_Oil.vue')
         },
+        {
+            path: '/industries/coaching',
+            name: 'Coaching',
+            component: () => import('./pages/industries/Coaching.vue')
+        },
         
         
         
