@@ -7,13 +7,19 @@
           <div class="text-reveal mb-6">
             <h1 class="text-reveal-content text-5xl lg:text-6xl font-bold leading-tight delay-200"
                 style="color: #973131;">
-              CBD Credit Card Processing & Merchant Account
+                Crypto Payment Gateway and Payment Processing
             </h1>
+          </div>
+
+          <div class="text-reveal mb-8">
+            <h2 class="text-reveal-content text-2xl lg:text-3xl font-semibold leading-tight delay-200 text-gray-800">
+                Cryptocurrency Trading Platform Merchant Accounts
+            </h2>
           </div>
           
           <div class="text-reveal mb-8">
             <p class="text-reveal-content text-lg text-gray-600 delay-300">
-                A high-risk merchant account is essential for CBD businesses. These specialized payment processing accounts are designed for merchants classified in high-risk categories, providing the necessary solutions for online credit card processing in the CBD industry. Hurricane Payments has the experience and expertise to set your business up with CBD credit card processing solutions.
+                At PayKings, we specialize in providing merchant accounts tailored to the specific needs of cryptocurrency trading platforms, ensuring you can process payments securely and efficiently. With extensive experience in crypto businesses and other high-risk merchants, we understand your unique requirements.
             </p>
           </div>
           
@@ -110,10 +116,10 @@
             Simple Process
           </span>
           <h2 class="text-4xl lg:text-5xl font-bold mb-6 scroll-reveal opacity-0" style="animation-delay: 0.4s;">
-            Get Started with CBD Merchant Processing
+           Get Started with Cryptocurrency Trading Platform Payment Processing
           </h2>
           <p class="text-lg text-gray-600 max-w-3xl mx-auto scroll-reveal opacity-0" style="animation-delay: 0.6s;">
-            Set Up Your CBD Merchant Account in Four Easy Steps
+            Setting up payment processing for your cryptocurrency trading platform is straightforward with PayKings. Follow these simple steps to get your merchant account:
           </p>
         </div>
         
@@ -131,7 +137,7 @@
             </div>
             <h3 class="text-xl font-bold mb-3 text-gray-800">Complete an Online Application</h3>
             <p class="text-gray-700">
-                Begin with our straightforward online application tailored for CBD oil businesses.
+                Begin with our straightforward online application tailored for cryptocurrency trading platforms.
             </p>
           </div>
           
@@ -163,7 +169,7 @@
             </div>
             <h3 class="text-xl font-bold mb-3 text-gray-800">Work with Our Underwriting Team</h3>
             <p class="text-gray-700">
-                Our experts guide you through the underwriting process specific to high-risk industries.
+                Our experts guide you through the underwriting process specific to cryptocurrency platform payment processing.
             </p>
           </div>
           
@@ -179,7 +185,7 @@
             </div>
             <h3 class="text-xl font-bold mb-3 text-gray-800">Start Processing Payments</h3>
             <p class="text-gray-700">
-              Protect your business with cutting-edge security solutions
+                Begin accepting payments seamlessly and focus on growing your platform.
             </p>
           </div>
         </div>
@@ -202,15 +208,15 @@
             </div>
             <div class="lg:w-1/2">
               <h2 class="text-4xl font-bold mb-6 text-white">
-                Understanding High-Risk Designation for CBD Merchant Accounts
+                Understanding High-Risk Designation for Cryptocurrency Platform Merchant Accounts
               </h2>
               <p class="text-lg text-gray-300 mb-8">
-                Unfortunately, CBD businesses face unique challenges in the payment processing world. As a high-risk industry, many traditional banks and payment processors label the CBD sector as high-risk and are often reluctant to provide support. This hesitation stems from ongoing regulatory scrutiny, evolving legal status, and a history of chargebacks or compliance concerns. At the same time, CBD merchants need reliable, secure, and transparent solutions to grow their business without disruption. We understand these complexities and are committed to helping you overcome them with industry-specific merchant services designed for your success.
+                Cryptocurrency trading platforms are classified as high-risk merchants due to several factors including regulatory uncertainty, market volatility, and the innovative nature of digital assets.The cryptocurrency industry faces unique challenges with fraud prevention and compliance requirements, making it challenging to secure traditional payment processing services.Being labeled as a high-risk merchant necessitates partnering with a payment processor experienced in high-risk accounts. PayKings understands these challenges and provides specialized solutions for cryptocurrency trading platforms.
               </p>         
               <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
-                <h3 class="text-2xl font-bold mb-4 text-white">Choosing the Best CBD Payment Processor for Your Business</h3>
+                <h3 class="text-2xl font-bold mb-4 text-white">  Why Choose PayKings for Your Cryptocurrency Trading Platform Payment Processing?</h3>
                 <p class="text-gray-300">
-                    Hurricane Payments has years of CBD industry experience, and won't turn you away because you are a high-risk merchant. When you choose Hurricane Payments, you're not only getting a CBD merchant account, but you're also getting a dedicated partner. We offer Dedicated Account Managers so that you have someone you can trust to answer all of your questions about CBD payment processing.
+                    Cryptocurrency platform payment processors need to understand the unique requirements of your business model. They must be equipped to handle fiat currency transactions, implement robust security measures, and maintain compliance with evolving regulations. At PayKings, we specialize in providing merchant accounts tailored to the specific needs of cryptocurrency trading platforms, ensuring secure and efficient payment processing. Trust PayKings to provide the perfect solution for your crypto platform's payment processing needs.
                 </p>
               </div>
             </div>
@@ -230,23 +236,23 @@
                 <span class="absolute bottom-0 left-0 w-full h-3 bg-red-100 transform -rotate-1"></span>
               </span>
               <span class="block mt-2">Hurricane Payments for</span>
-              <span class="block mt-2 text-custom-red">CBD Payment Processing</span>
+              <span class="block mt-2 text-custom-red">Cryptocurrency Trading Payment Processing</span>
             </h2>
               
               <p class="text-lg text-gray-700 mb-6">
-                CBD businesses face unique challenges when it comes to payment processing. Because the industry is considered high-risk, many banks and traditional payment providers are unwilling to work with CBD merchants. This is mostly due to changing laws and regulations around CBD products. As a result, it can be hard for these businesses to find reliable payment solutions, which often leads to account issues or interruptions in sales.
+                Cryptocurrency trading platforms face unique challenges in the payment processing world. As a high-risk industry dealing with digital assets and fiat currency transactions, many traditional banks and payment processors are hesitant to work with crypto merchants. This is primarily due to regulatory uncertainty, market volatility, and the innovative nature of digital assets. As a result, crypto businesses often struggle to find reliable payment solutions, leading to account issues or interruptions in operations.
               </p>
               
               <div class="bg-gradient-to-r from-red-50 to-red-100 p-6 rounded-lg mb-8 transform hover:scale-[1.02] transition duration-300">
                 <p class="text-gray-800 font-medium italic">
-                  "Hurricane Payments collaborates with over 20 financial partners, ensuring swift approval and enabling CBD businesses to accept credit card payments promptly."
+                  "Hurricane Payments collaborates with over 20 financial partners, ensuring quick approval and seamless payment processing for your cryptocurrency trading platform."
                 </p>
               </div>
               
               <div class="bg-white p-6 rounded-lg border border-red-100 mb-8">
-                <h3 class="text-xl font-bold mb-3" style="color: #973131;">Tailored Solutions for the CBD Industry</h3>
+                <h3 class="text-xl font-bold mb-3" style="color: #973131;">Tailored Solutions for Cryptocurrency Trading Platforms</h3>
                 <p class="text-gray-700">
-                    At Hurricane Payments, we specialize in providing merchant accounts tailored to the specific needs of CBD businesses, ensuring secure and efficient payment processing. If you're seeking a CBD merchant account, trust Hurricane Payments to deliver the perfect solution for your business.
+                  At Hurricane Payments, we specialize in providing merchant accounts tailored to the specific needs of cryptocurrency trading platforms, ensuring secure and efficient payment processing. Trust Hurricane Payments to deliver the perfect solution for your crypto platform's payment processing needs.
                 </p>
               </div>
               
@@ -259,7 +265,7 @@
                   </div>
                   <div>
                     <h3 class="font-semibold">Industry Expertise</h3>
-                    <p class="text-gray-700">Leverage our specialized knowledge in CBD payment processing.</p>
+                    <p class="text-gray-700">Leverage our specialized knowledge in cryptocurrency payment processing.</p>
                   </div>
                 </div>
                 
@@ -271,7 +277,7 @@
                   </div>
                   <div>
                     <h3 class="font-semibold">Competitive Rates</h3>
-                    <p class="text-gray-700">Benefit from fair pricing designed specifically for high-risk merchants.</p>
+                    <p class="text-gray-700">Benefit from fair pricing designed specifically for crypto trading platforms.</p>
                   </div>
                 </div>
                 
@@ -295,7 +301,7 @@
                   </div>
                   <div>
                     <h3 class="font-semibold">Advanced Fraud Protection</h3>
-                    <p class="text-gray-700">Safeguard your business with cutting-edge security solutions.</p>
+                    <p class="text-gray-700">Safeguard your crypto platform with cutting-edge security solutions.</p>
                   </div>
                 </div>
               </div>
@@ -346,23 +352,23 @@
               <ul class="space-y-4">
                 <li class="flex items-start">
                   <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">High chargeback rates that threaten merchant account stability</span>
+                  <span class="text-gray-700">Regulatory uncertainty and compliance complexities</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">Difficulty accessing traditional banks and payment processors</span>
+                  <span class="text-gray-700">High chargeback rates due to market volatility</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">Increased exposure to fraud, especially in online transactions</span>
+                  <span class="text-gray-700">Difficulty accessing traditional banking services</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">Complicated and changing regulatory requirements</span>
+                  <span class="text-gray-700">Increased exposure to fraud and security threats</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">Worry over account freezes or sudden shutdowns</span>
+                  <span class="text-gray-700">Risk of sudden account closures or fund holds</span>
                 </li>
               </ul>
             </div>
@@ -380,23 +386,23 @@
               <ul class="space-y-4">
                 <li class="flex items-start">
                   <span class="text-blue-500 mr-2">•</span>
-                  <span class="text-gray-700">Use strong fraud prevention tools to reduce chargebacks</span>
+                  <span class="text-gray-700">Implement robust fraud prevention tools designed for crypto transactions</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-blue-500 mr-2">•</span>
-                  <span class="text-gray-700">Work with payment processors experienced in high-risk industries</span>
+                  <span class="text-gray-700">Partner with payment processors experienced in cryptocurrency businesses</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-blue-500 mr-2">•</span>
-                  <span class="text-gray-700">Keep accurate transaction and customer records</span>
+                  <span class="text-gray-700">Maintain detailed transaction records for compliance purposes</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-blue-500 mr-2">•</span>
-                  <span class="text-gray-700">Stay compliant with evolving legal and regulatory standards</span>
+                  <span class="text-gray-700">Stay updated on evolving regulatory requirements for crypto platforms</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-blue-500 mr-2">•</span>
-                  <span class="text-gray-700">Use clear and honest billing descriptors to avoid confusion and disputes</span>
+                  <span class="text-gray-700">Use clear billing descriptors to minimize customer confusion and disputes</span>
                 </li>
               </ul>
             </div>
@@ -417,37 +423,37 @@
               <!-- Solution 1 -->
               <div class="bg-green-50 rounded-lg p-6 hover:shadow-md transition duration-300">
                 <h4 class="text-xl font-bold text-gray-900 mb-3">20+ Reliable Banking Partners</h4>
-                <p class="text-gray-700">We work with over 20 trusted financial institutions to ensure your payment processing stays stable and uninterrupted.</p>
+                <p class="text-gray-700">We work with over 20 trusted financial institutions that understand the cryptocurrency industry, ensuring stable and uninterrupted payment processing.</p>
               </div>
 
               <!-- Solution 2 -->
               <div class="bg-green-50 rounded-lg p-6 hover:shadow-md transition duration-300">
                 <h4 class="text-xl font-bold text-gray-900 mb-3">Advanced Fraud Protection</h4>
-                <p class="text-gray-700">Our robust security systems help detect and prevent fraudulent activity, reducing your risk and chargebacks.</p>
+                <p class="text-gray-700">Our specialized security systems are designed for crypto businesses, helping detect and prevent fraudulent activity specific to digital asset transactions.</p>
               </div>
 
               <!-- Solution 3 -->
               <div class="bg-green-50 rounded-lg p-6 hover:shadow-md transition duration-300">
                 <h4 class="text-xl font-bold text-gray-900 mb-3">Fast Approvals, Competitive Rates</h4>
-                <p class="text-gray-700">Get approved quickly and start accepting payments without delay, all at pricing designed for high-risk merchants.</p>
+                <p class="text-gray-700">Get your cryptocurrency trading platform approved quickly with competitive pricing tailored specifically for high-risk crypto businesses.</p>
               </div>
 
               <!-- Solution 4 -->
               <div class="bg-green-50 rounded-lg p-6 hover:shadow-md transition duration-300">
-                <h4 class="text-xl font-bold text-gray-900 mb-3">Dedicated Account Managers</h4>
-                <p class="text-gray-700">Our expert team supports you every step of the way, helping you navigate regulations and stay compliant.</p>
+                <h4 class="text-xl font-bold text-gray-900 mb-3">Dedicated Crypto Industry Experts</h4>
+                <p class="text-gray-700">Our team of specialists understands the unique challenges of cryptocurrency platforms, helping you navigate complex regulations and maintain compliance.</p>
               </div>
 
               <!-- Solution 5 -->
               <div class="bg-green-50 rounded-lg p-6 hover:shadow-md transition duration-300">
                 <h4 class="text-xl font-bold text-gray-900 mb-3">Flexible Gateway Options</h4>
-                <p class="text-gray-700">Choose from multiple gateway solutions that work with your specific business model and needs.</p>
+                <p class="text-gray-700">Choose from multiple gateway solutions optimized for cryptocurrency trading platforms that integrate seamlessly with your existing systems.</p>
               </div>
               
               <!-- CTA Card -->
               <div class="bg-gradient-to-r from-red-50 to-red-100 rounded-lg p-6 flex flex-col justify-center hover:shadow-md transition duration-300">
                 <h4 class="text-xl font-bold text-custom-red mb-3">Ready to Get Started?</h4>
-                <p class="text-gray-700 mb-4">Let us help you navigate the complexities of CBD payment processing.</p>
+                <p class="text-gray-700 mb-4">Let us help you navigate the complexities of cryptocurrency trading payment processing.</p>
                 <router-link 
                   to="/request-consultation" 
                   class="fancy-button text-white font-medium py-2 px-6 rounded-md shadow-lg mt-auto text-center" 
@@ -479,7 +485,7 @@
                     </svg>
                   </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-center">Adult Entertainment Merchant Accounts</h3>
+                <h3 class="text-xl font-bold mb-4 text-center">Cryptocurrency Trading Platforms Merchant Accounts</h3>
                 <ul class="ml-5 space-y-2">
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
@@ -491,7 +497,7 @@
                   </li>
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">Fast Adult Entertainment Account Approval</span>
+                    <span class="text-gray-700">Fast Cryptocurrency Trading Platforms Account Approval</span>
                   </li>
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
@@ -499,11 +505,11 @@
                   </li>
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">E-Commerce and Retail Adult Entertainment</span>
+                    <span class="text-gray-700">E-Commerce and Retail Cryptocurrency Trading Platforms</span>
                   </li>
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">B2B Adult Entertainment Vendors Supported</span>
+                    <span class="text-gray-700">B2B Cryptocurrency Trading Platforms Vendors Supported</span>
                   </li>
                 </ul>
               </div>
@@ -607,20 +613,49 @@
       <!-- Adult Payment Gateway Section -->
       <div id="payment-gateway" class="bg-gradient-to-r from-gray-50 to-red-50 py-16">
         <div class="max-w-7xl mx-auto px-4">
-          <h2 class="text-4xl font-bold text-center mb-10" style="color: #973131;">Seamless Payment Processing for CBD Businesses</h2>
+          <h2 class="text-4xl font-bold text-center mb-10" style="color: #973131;">Secure Payment Gateway Solutions for Cryptocurrency Trading</h2>
           
           <div class="bg-white p-10 rounded-xl shadow-lg mb-10 relative overflow-hidden">
             <div class="absolute top-0 right-0 h-32 w-32 bg-red-50 rounded-full -mt-10 -mr-10"></div>
             
             <div class="flex flex-col md:flex-row items-start gap-12">
-  <div class="md:w-1/2 relative z-10 self-center">
-    <p class="text-2xl text-gray-700 leading-relaxed">
-                    Our CBD merchant accounts are designed for smooth, reliable payment processing. Focus on expanding your CBD oil business while we handle the complexities of high-risk payment solutions.
+              <div class="md:w-1/2 relative z-10 self-center">
+                <p class="text-2xl text-gray-700 leading-relaxed">
+                  A reliable payment gateway is essential for cryptocurrency trading platforms. It serves as the crucial link between your platform, your customers, and traditional financial institutions, enabling secure and instant fiat currency transactions.
                 </p>
+                
+                <div class="mt-8 space-y-4">
+                  <div class="flex items-start">
+                    <div class="flex-shrink-0 p-1 bg-green-100 rounded-full mr-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p class="text-gray-700">Enhanced security and fraud prevention tools</p>
+                  </div>
+                  
+                  <div class="flex items-start">
+                    <div class="flex-shrink-0 p-1 bg-green-100 rounded-full mr-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p class="text-gray-700">Seamless integration with your existing crypto platform</p>
+                  </div>
+                  
+                  <div class="flex items-start">
+                    <div class="flex-shrink-0 p-1 bg-green-100 rounded-full mr-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p class="text-gray-700">Regulatory compliance features built-in</p>
+                  </div>
+                </div>
               </div>
               <div class="md:w-1/2">
                 <div class="rounded-lg overflow-hidden shadow-lg">
-                  <img :src="adultGatewayImg" alt="Adult Payment Gateway" class="w-full h-auto transform transition hover:scale-105 duration-500">
+                  <img :src="adultGatewayImg" alt="Cryptocurrency Payment Gateway" class="w-full h-auto transform transition hover:scale-105 duration-500">
                 </div>
               </div>
             </div>
@@ -632,7 +667,7 @@
       </div>
 
       <!-- CTA Section -->
-      <CtaSection subheading="Apply for your CBD Oil industry merchant account today and experience hassle-free payment processing." />
+      <CtaSection subheading="Apply for your cryptocurrency trading platform merchant account today and experience hassle-free payment processing." />
     </MainLayout>
   </template>
   
@@ -642,11 +677,11 @@ import MainLayout from '../MainLayout.vue';
 import CtaSection from '../../components/CtaSection.vue';
 
 // Import images 
-import adultIndustryImg from '@/../images/cbdoil(4).jpg';
-import adultMerchantImg from '@/../images/cbdoil(2).jpg';
-import adultCameraImg from '@/../images/cbdoil.jpg';
-import adultGatewayImg from '@/../images/cbdoil(3).jpg';
-import adultHighRiskImg from '@/../images/adult(1).jpg';
+import adultIndustryImg from '@/../images/cryptotrading(3).jpg';
+import adultMerchantImg from '@/../images/cryptotrading(2).jpg';
+import adultCameraImg from '@/../images/cryptotrading(3).jpg';
+import adultGatewayImg from '@/../images/cryptotrading(3).jpg';
+import adultHighRiskImg from '@/../images/cryptotrading(2).jpg';
   
   // Function to scroll to next section
   const scrollToNextSection = () => {

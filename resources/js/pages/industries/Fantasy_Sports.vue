@@ -7,13 +7,19 @@
           <div class="text-reveal mb-6">
             <h1 class="text-reveal-content text-5xl lg:text-6xl font-bold leading-tight delay-200"
                 style="color: #973131;">
-              CBD Credit Card Processing & Merchant Account
+                Fantasy Sports Merchant Account
             </h1>
           </div>
           
           <div class="text-reveal mb-8">
+            <h2 class="text-reveal-content text-2xl lg:text-3xl font-semibold leading-tight delay-200 text-gray-800">
+                Is your fantasy sports business classified as a high-risk merchant?
+            </h2>
+          </div>
+          
+          <div class="text-reveal mb-8">
             <p class="text-reveal-content text-lg text-gray-600 delay-300">
-                A high-risk merchant account is essential for CBD businesses. These specialized payment processing accounts are designed for merchants classified in high-risk categories, providing the necessary solutions for online credit card processing in the CBD industry. Hurricane Payments has the experience and expertise to set your business up with CBD credit card processing solutions.
+                Fantasy sports businesses face unique challenges in the payment processing world. As a high-risk industry, many traditional banks and payment processors are hesitant to work with fantasy sports merchants. At Hurricane Payments, we specialize in providing merchant accounts tailored to the specific needs of the fantasy sports industry, ensuring you can process payments securely and efficiently.
             </p>
           </div>
           
@@ -107,13 +113,13 @@
         <!-- Section Header -->
         <div class="text-center mb-16 scroll-reveal opacity-0">
           <span class="inline-block text-indigo-600 font-semibold mb-4 tracking-wider text-sm uppercase scroll-reveal opacity-0" style="animation-delay: 0.2s; color: #973131;">
-            Simple Process
+            Get Started with Fantasy Sports Payment Processing
           </span>
           <h2 class="text-4xl lg:text-5xl font-bold mb-6 scroll-reveal opacity-0" style="animation-delay: 0.4s;">
-            Get Started with CBD Merchant Processing
+            Follow these simple steps to set up your fantasy sports merchant account
           </h2>
           <p class="text-lg text-gray-600 max-w-3xl mx-auto scroll-reveal opacity-0" style="animation-delay: 0.6s;">
-            Set Up Your CBD Merchant Account in Four Easy Steps
+            Set Up Your Fantasy Sports Merchant Account in Four Easy Steps
           </p>
         </div>
         
@@ -129,9 +135,9 @@
                 </svg>
               </div>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-gray-800">Complete an Online Application</h3>
+            <h3 class="text-xl font-bold mb-3 text-gray-800">Complete an online application</h3>
             <p class="text-gray-700">
-                Begin with our straightforward online application tailored for CBD oil businesses.
+              Start your journey with a simple online application process for your fantasy sports business.
             </p>
           </div>
           
@@ -145,9 +151,9 @@
                 </svg>
               </div>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-gray-800">Submit Necessary Documentation</h3>
+            <h3 class="text-xl font-bold mb-3 text-gray-800">Submit necessary documentation</h3>
             <p class="text-gray-700">
-                Provide essential documents to support your merchant account application.
+              Provide the required documents to support your fantasy sports merchant account application.
             </p>
           </div>
           
@@ -161,9 +167,9 @@
                 </svg>
               </div>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-gray-800">Work with Our Underwriting Team</h3>
+            <h3 class="text-xl font-bold mb-3 text-gray-800">Benefit from our underwriting team's assistance</h3>
             <p class="text-gray-700">
-                Our experts guide you through the underwriting process specific to high-risk industries.
+                Our expert team will guide you through the underwriting process for fantasy sports businesses.
             </p>
           </div>
           
@@ -177,9 +183,9 @@
                 </svg>
               </div>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-gray-800">Start Processing Payments</h3>
+            <h3 class="text-xl font-bold mb-3 text-gray-800">Start processing payments and growing your revenue</h3>
             <p class="text-gray-700">
-              Protect your business with cutting-edge security solutions
+                Begin accepting payments for your fantasy sports services and watch your business thrive.
             </p>
           </div>
         </div>
@@ -202,15 +208,15 @@
             </div>
             <div class="lg:w-1/2">
               <h2 class="text-4xl font-bold mb-6 text-white">
-                Understanding High-Risk Designation for CBD Merchant Accounts
+                Understanding High-Risk Designation for Fantasy Sports Merchant Accounts
               </h2>
               <p class="text-lg text-gray-300 mb-8">
-                Unfortunately, CBD businesses face unique challenges in the payment processing world. As a high-risk industry, many traditional banks and payment processors label the CBD sector as high-risk and are often reluctant to provide support. This hesitation stems from ongoing regulatory scrutiny, evolving legal status, and a history of chargebacks or compliance concerns. At the same time, CBD merchants need reliable, secure, and transparent solutions to grow their business without disruption. We understand these complexities and are committed to helping you overcome them with industry-specific merchant services designed for your success.
+                Fantasy sports businesses are labeled as high-risk businesses and often have a difficult time setting up a merchant account. At Hurricane Payments, we have years of experience working with high-risk merchants. We'll get your business set up with a merchant account so you can accept debit and credit card payments.
               </p>         
               <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
-                <h3 class="text-2xl font-bold mb-4 text-white">Choosing the Best CBD Payment Processor for Your Business</h3>
-                <p class="text-gray-300">
-                    Hurricane Payments has years of CBD industry experience, and won't turn you away because you are a high-risk merchant. When you choose Hurricane Payments, you're not only getting a CBD merchant account, but you're also getting a dedicated partner. We offer Dedicated Account Managers so that you have someone you can trust to answer all of your questions about CBD payment processing.
+                <h3 class="text-2xl font-bold mb-4" style="color: #973131;">Why Choose Hurricane Payments for Your Fantasy Sports Payment Processing?</h3>
+                <p class="text-gray-300 leading-relaxed mb-6">
+                    Fantasy sports businesses are labeled as high-risk businesses and often have a difficult time setting up a merchant account. At Hurricane Payments, we have years of experience working with high-risk merchants. We'll get your business set up with a merchant account so you can accept debit and credit card payments.
                 </p>
               </div>
             </div>
@@ -230,23 +236,23 @@
                 <span class="absolute bottom-0 left-0 w-full h-3 bg-red-100 transform -rotate-1"></span>
               </span>
               <span class="block mt-2">Hurricane Payments for</span>
-              <span class="block mt-2 text-custom-red">CBD Payment Processing</span>
+              <span class="block mt-2 text-custom-red">Fantasy Sports Payment Processing</span>
             </h2>
               
               <p class="text-lg text-gray-700 mb-6">
-                CBD businesses face unique challenges when it comes to payment processing. Because the industry is considered high-risk, many banks and traditional payment providers are unwilling to work with CBD merchants. This is mostly due to changing laws and regulations around CBD products. As a result, it can be hard for these businesses to find reliable payment solutions, which often leads to account issues or interruptions in sales.
+                Fantasy sports businesses face unique challenges when it comes to payment processing. Because the industry is considered high-risk, many banks and traditional payment providers are unwilling to work with fantasy sports merchants. This is mostly due to changing laws and regulations around fantasy sports. As a result, it can be hard for these businesses to find reliable payment solutions, which often leads to account issues or interruptions in sales.
               </p>
               
               <div class="bg-gradient-to-r from-red-50 to-red-100 p-6 rounded-lg mb-8 transform hover:scale-[1.02] transition duration-300">
                 <p class="text-gray-800 font-medium italic">
-                  "Hurricane Payments collaborates with over 20 financial partners, ensuring swift approval and enabling CBD businesses to accept credit card payments promptly."
+                  "Hurricane Payments collaborates with over 20 financial partners, ensuring swift approval and enabling fantasy sports businesses to accept credit card payments promptly."
                 </p>
               </div>
               
               <div class="bg-white p-6 rounded-lg border border-red-100 mb-8">
-                <h3 class="text-xl font-bold mb-3" style="color: #973131;">Tailored Solutions for the CBD Industry</h3>
+                <h3 class="text-xl font-bold mb-3" style="color: #973131;">Tailored Solutions for the Fantasy Sports Industry</h3>
                 <p class="text-gray-700">
-                    At Hurricane Payments, we specialize in providing merchant accounts tailored to the specific needs of CBD businesses, ensuring secure and efficient payment processing. If you're seeking a CBD merchant account, trust Hurricane Payments to deliver the perfect solution for your business.
+                    At Hurricane Payments, we specialize in providing merchant accounts tailored to the specific needs of fantasy sports businesses, ensuring secure and efficient payment processing. If you're seeking a fantasy sports merchant account, trust Hurricane Payments to deliver the perfect solution for your business.
                 </p>
               </div>
               
@@ -259,7 +265,7 @@
                   </div>
                   <div>
                     <h3 class="font-semibold">Industry Expertise</h3>
-                    <p class="text-gray-700">Leverage our specialized knowledge in CBD payment processing.</p>
+                    <p class="text-gray-700">Leverage our specialized knowledge in fantasy sports payment processing.</p>
                   </div>
                 </div>
                 
@@ -447,7 +453,7 @@
               <!-- CTA Card -->
               <div class="bg-gradient-to-r from-red-50 to-red-100 rounded-lg p-6 flex flex-col justify-center hover:shadow-md transition duration-300">
                 <h4 class="text-xl font-bold text-custom-red mb-3">Ready to Get Started?</h4>
-                <p class="text-gray-700 mb-4">Let us help you navigate the complexities of CBD payment processing.</p>
+                <p class="text-gray-700 mb-4">Let us help you navigate the complexities of fantasy sports payment processing.</p>
                 <router-link 
                   to="/request-consultation" 
                   class="fancy-button text-white font-medium py-2 px-6 rounded-md shadow-lg mt-auto text-center" 
@@ -479,7 +485,7 @@
                     </svg>
                   </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-center">Adult Entertainment Merchant Accounts</h3>
+                <h3 class="text-xl font-bold mb-4 text-center">Fantasy Sports Merchant Accounts</h3>
                 <ul class="ml-5 space-y-2">
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
@@ -491,7 +497,7 @@
                   </li>
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">Fast Adult Entertainment Account Approval</span>
+                    <span class="text-gray-700">Fast Fantasy Sports Account Approval</span>
                   </li>
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
@@ -499,11 +505,11 @@
                   </li>
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">E-Commerce and Retail Adult Entertainment</span>
+                    <span class="text-gray-700">E-Commerce and Retail Fantasy Sports</span>
                   </li>
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">B2B Adult Entertainment Vendors Supported</span>
+                    <span class="text-gray-700">B2B Fantasy Sports Vendors Supported</span>
                   </li>
                 </ul>
               </div>
@@ -607,15 +613,15 @@
       <!-- Adult Payment Gateway Section -->
       <div id="payment-gateway" class="bg-gradient-to-r from-gray-50 to-red-50 py-16">
         <div class="max-w-7xl mx-auto px-4">
-          <h2 class="text-4xl font-bold text-center mb-10" style="color: #973131;">Seamless Payment Processing for CBD Businesses</h2>
+          <h2 class="text-4xl font-bold text-center mb-10" style="color: #973131;">Seamless Payment Processing for Fantasy Sports Businesses</h2>
           
           <div class="bg-white p-10 rounded-xl shadow-lg mb-10 relative overflow-hidden">
             <div class="absolute top-0 right-0 h-32 w-32 bg-red-50 rounded-full -mt-10 -mr-10"></div>
             
             <div class="flex flex-col md:flex-row items-start gap-12">
-  <div class="md:w-1/2 relative z-10 self-center">
-    <p class="text-2xl text-gray-700 leading-relaxed">
-                    Our CBD merchant accounts are designed for smooth, reliable payment processing. Focus on expanding your CBD oil business while we handle the complexities of high-risk payment solutions.
+              <div class="md:w-1/2 relative z-10 self-center">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Our fantasy sports merchant accounts are designed to provide smooth, reliable payment processing for your business. With our tailored solutions, you can focus on growing your fantasy sports platform while we handle the complexities of payment processing.
                 </p>
               </div>
               <div class="md:w-1/2">
@@ -632,7 +638,7 @@
       </div>
 
       <!-- CTA Section -->
-      <CtaSection subheading="Apply for your CBD Oil industry merchant account today and experience hassle-free payment processing." />
+      <CtaSection subheading="Apply for your fantasy sports merchant account today and experience hassle-free payment processing." />
     </MainLayout>
   </template>
   
@@ -642,10 +648,10 @@ import MainLayout from '../MainLayout.vue';
 import CtaSection from '../../components/CtaSection.vue';
 
 // Import images 
-import adultIndustryImg from '@/../images/cbdoil(4).jpg';
-import adultMerchantImg from '@/../images/cbdoil(2).jpg';
-import adultCameraImg from '@/../images/cbdoil.jpg';
-import adultGatewayImg from '@/../images/cbdoil(3).jpg';
+import adultIndustryImg from '@/../images/fantasysports.jpg';
+import adultMerchantImg from '@/../images/fantasysports(2).jpg';
+import adultCameraImg from '@/../images/fantasysports(3).jpg';
+import adultGatewayImg from '@/../images/fantasysports(2).jpg';
 import adultHighRiskImg from '@/../images/adult(1).jpg';
   
   // Function to scroll to next section

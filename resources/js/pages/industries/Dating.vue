@@ -7,19 +7,19 @@
           <div class="text-reveal mb-6">
             <h1 class="text-reveal-content text-5xl lg:text-6xl font-bold leading-tight delay-200"
                 style="color: #973131;">
-                Bad Credit Merchant Account
+                Online Dating Merchant Account
             </h1>
           </div>
           
           <div class="text-reveal mb-8">
             <h2 class="text-reveal-content text-2xl lg:text-3xl font-semibold leading-tight delay-200 text-gray-800">
-                Is Your Business Classified as High-Risk Due to Bad Credit?
+                Is your dating business considered high-risk?
             </h2>
           </div>
           
           <div class="text-reveal mb-8">
             <p class="text-reveal-content text-lg text-gray-600 delay-300">
-                Businesses with bad credit face unique challenges in the payment processing world. As a high-risk category, many traditional banks and payment processors hesitate to work with merchants with credit issues. These merchants need a no-credit-check merchant account, meaning the payment processing company doesn't emphasize their credit score. At Hurricane Payments, we specialize in providing merchant accounts tailored to the specific needs of businesses with bad credit, ensuring you can process payments securely and efficiently.
+                A high-risk merchant account is essential for online dating businesses and mobile dating apps. These specialized payment processing accounts are designed for merchants classified in high-risk categories, providing the necessary solutions for online credit card processing in the dating industry. At Hurricane Payments, we specialize in providing merchant accounts tailored to the specific needs of the dating industry, ensuring you can process payments securely and efficiently.
             </p>
             
             <ul class="mt-4 space-y-2">
@@ -112,10 +112,10 @@
         <!-- Section Header -->
         <div class="text-center mb-16 scroll-reveal opacity-0">
           <span class="inline-block text-indigo-600 font-semibold mb-4 tracking-wider text-sm uppercase scroll-reveal opacity-0" style="animation-delay: 0.2s; color: #973131;">
-            Get Started with Bad Credit Payment Processing
+            Get Started with Dating Payment Processing
           </span>
           <h2 class="text-4xl lg:text-5xl font-bold mb-6 scroll-reveal opacity-0" style="animation-delay: 0.4s;">
-            Set Up Your Merchant Account in Four Easy Steps
+            Follow these simple steps to set up your online dating site merchant account
           </h2>
         </div>
         
@@ -131,7 +131,7 @@
             </div>
             <h3 class="text-xl font-bold mb-3 text-gray-800">Complete an Online Application</h3>
             <p class="text-gray-700">
-              Begin with our straightforward online application tailored for Bad Credit businesses.
+              Start your journey with a simple online application process for your online dating business.
             </p>
           </div>
           
@@ -145,7 +145,7 @@
             </div>
             <h3 class="text-xl font-bold mb-3 text-gray-800">Submit Necessary Documentation</h3>
             <p class="text-gray-700">
-              Provide essential documents to support your merchant account application.
+              Provide the required documents to support your dating merchant account application.
             </p>
           </div>
           
@@ -157,9 +157,9 @@
                 <div class="text-4xl font-bold" style="color: #9C27B0;">3</div>
               </div>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-gray-800">Work with Our Underwriting Team</h3>
+            <h3 class="text-xl font-bold mb-3 text-gray-800">Benefit from our underwriting team's assistance</h3>
             <p class="text-gray-700">
-              Our experts guide you through the underwriting process specific to high-risk industries.
+                Our expert team will guide you through the underwriting process for dating businesses.
             </p>
           </div>
           
@@ -171,9 +171,9 @@
                 <div class="text-4xl font-bold" style="color: #4CAF50;">4</div>
               </div>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-gray-800">Start Processing Payments</h3>
+            <h3 class="text-xl font-bold mb-3 text-gray-800">Start processing payments and growing your revenue</h3>
             <p class="text-gray-700">
-                Begin accepting payments seamlessly and focus on growing your revenue.
+                Begin accepting payments for your dating services and watch your business thrive.
             </p>
           </div>
         </div>
@@ -191,7 +191,7 @@
             <div class="text-center mb-16">
               <span class="inline-block bg-red-50 text-custom-red px-4 py-2 rounded-full font-medium text-sm uppercase tracking-wide mb-4">Understanding Industry Challenges</span>
               <h2 class="text-4xl lg:text-5xl font-bold mb-6" style="color: #973131;">
-                Understanding High-Risk Designation for Bad Credit Merchant Accounts
+                Understanding High-Risk Designation for Dating Merchant Accounts
               </h2>
               <div class="w-24 h-1 bg-custom-red mx-auto rounded-full mb-8"></div>
             </div>
@@ -205,7 +205,7 @@
                   <div class="absolute bottom-0 left-0 w-full p-8">
                     <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
                       <h3 class="text-xl font-bold mb-2 text-white">Expert Solutions for High-Risk Merchants</h3>
-                      <p class="text-white/90">Specialized processing for Bad Credit businesses</p>
+                      <p class="text-white/90">Specialized processing for dating businesses</p>
                     </div>
                   </div>
                 </div>
@@ -219,9 +219,11 @@
               <div class="order-1 lg:order-2">
                 <div class="space-y-8">
                   <div class="bg-white rounded-xl p-8 shadow-xl transform transition hover:shadow-2xl duration-500 border-l-4 border-custom-red">
-                    <h3 class="text-2xl font-bold mb-4" style="color: #973131;">High-risk merchants require specialized payment processors</h3>
+                    <h3 class="text-2xl font-bold mb-4" style="color: #973131;">Why Are Online Dating Merchants Labeled High-Risk?</h3>
                     <p class="text-gray-700 leading-relaxed">
-                        A high-risk merchant account is essential for businesses with bad credit. These specialized payment processing accounts are designed for merchants classified in high-risk categories, providing the necessary solutions for online credit card processing despite credit challenges.Being labeled as a high-risk merchant due to bad credit necessitates partnering with a payment processor experienced in high-risk accounts. Avoid disruptions by choosing Hurricane Payments, a leader in high-risk merchant account solutions for businesses with credit challenges.
+                        The online dating industry is considered high-risk by traditional payment processing companies. This is due to a higher risk of transaction laundering and chargebacks, as well as their recurring billing model. Each of these is a red flag to traditional payment processors.
+                        
+                        Being labeled as a high-risk merchant necessitates partnering with a payment processor experienced in high-risk accounts. Avoid disruptions by choosing Hurricane Payments, a leader in high-risk merchant account solutions for the dating industry.
                     </p>
                   </div>
                   
@@ -232,9 +234,9 @@
                     </div>
                     
                     <div class="relative z-10">
-                      <h3 class="text-2xl font-bold mb-4 text-white">Choosing the Right Payment Processor for Your Business</h3>
+                      <h3 class="text-2xl font-bold mb-4 text-white">Choosing the Right Dating Payment Processor</h3>
                       <p class="text-gray-300 leading-relaxed mb-6">
-                        Select a payment processor that understands the challenges of bad credit to prevent account closures and fund holds. Trust Hurricane Payments for stability and growth.
+                        Online dating websites face unique challenges in the payment processing world. As a high-risk industry, many traditional banks and payment processors are hesitant to work with dating merchants. That's where we come in! Hurricane Payments has years of experience providing online dating merchant accounts. We understand the unique needs of the dating industry and can help you secure the stable processing you need.
                       </p>
                       
                       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
@@ -285,153 +287,153 @@
         </div>
       </div>
   
- 
-      <!-- Our Services Section -->
-      <div id="our-services" class="py-20">
-        <div class="max-w-7xl mx-auto px-6">
-          <div class="bg-white rounded-2xl border-2 border-red-100 p-10">
-            <h2 class="text-4xl font-bold text-center mb-16" style="color: #973131;">Our Services</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-              <!-- Column 1 -->
-              <div>
-                <div class="mb-6 flex justify-center">
-                  <div class="bg-red-50 p-4 rounded-lg inline-flex">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-                    </svg>
-                  </div>
-                </div>
-                <h3 class="text-xl font-bold mb-4 text-center">Adult Entertainment Merchant Accounts</h3>
-                <ul class="ml-5 space-y-2">
-                  <li class="flex items-start">
-                    <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">20+ Proven Bank Relationships</span>
-                  </li>
-                  <li class="flex items-start">
-                    <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">Medium/High Risk Accounts</span>
-                  </li>
-                  <li class="flex items-start">
-                    <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">Fast Adult Entertainment Account Approval</span>
-                  </li>
-                  <li class="flex items-start">
-                    <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">Large Merchant Case Studies</span>
-                  </li>
-                  <li class="flex items-start">
-                    <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">E-Commerce and Retail Adult Entertainment</span>
-                  </li>
-                  <li class="flex items-start">
-                    <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">B2B Adult Entertainment Vendors Supported</span>
-                  </li>
-                </ul>
-              </div>
+  
+        <!-- Our Services Section -->
+        <div id="our-services" class="py-20">
+          <div class="max-w-7xl mx-auto px-6">
+            <div class="bg-white rounded-2xl border-2 border-red-100 p-10">
+              <h2 class="text-4xl font-bold text-center mb-16" style="color: #973131;">Our Services</h2>
               
-              <!-- Column 2 -->
-              <div>
-                <div class="mb-6 flex justify-center">
-                  <div class="bg-red-50 p-4 rounded-lg inline-flex">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Column 1 -->
+                <div>
+                  <div class="mb-6 flex justify-center">
+                    <div class="bg-red-50 p-4 rounded-lg inline-flex">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                      </svg>
+                    </div>
                   </div>
+                  <h3 class="text-xl font-bold mb-4 text-center">Dating Merchant Accounts</h3>
+                  <ul class="ml-5 space-y-2">
+                    <li class="flex items-start">
+                      <span class="text-custom-red mr-2">•</span>
+                      <span class="text-gray-700">20+ Proven Bank Relationships</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-custom-red mr-2">•</span>
+                      <span class="text-gray-700">Medium/High Risk Accounts</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-custom-red mr-2">•</span>
+                      <span class="text-gray-700">Fast Dating Account Approval</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-custom-red mr-2">•</span>
+                      <span class="text-gray-700">Large Merchant Case Studies</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-custom-red mr-2">•</span>
+                      <span class="text-gray-700">E-Commerce and Retail Dating</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-custom-red mr-2">•</span>
+                      <span class="text-gray-700">B2B Dating Vendors Supported</span>
+                    </li>
+                  </ul>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-center">Multiple Payment Solutions</h3>
-                <ul class="ml-10 space-y-2">
-                  <li class="flex items-start">
-                    <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">Multiple E-Commerce Gateway</span>
-                  </li>
-                  <li class="flex items-start">
-                    <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">Chargeback Prevention</span>
-                  </li>
-                  <li class="flex items-start">
-                    <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">ACH</span>
-                  </li>
-                  <li class="flex items-start">
-                    <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">E-Check</span>
-                  </li>
-                  <li class="flex items-start">
-                    <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">Credit Cards</span>
-                  </li>
-                  <li class="flex items-start">
-                    <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">B2B-Level I/II/III Data Discounts</span>
-                  </li>
-                  <li class="flex items-start">
-                    <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">3D Secure Frictionless Checkout</span>
-                  </li>
-                  <li class="flex items-start">
-                    <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">Mobile Payment</span>
-                  </li>
-                  <li class="flex items-start">
-                    <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">EMV Readers</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <!-- Column 3 -->
-              <div>
-                <div class="mb-6 flex justify-center">
-                  <div class="bg-red-50 p-4 rounded-lg inline-flex">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                    </svg>
+                
+                <!-- Column 2 -->
+                <div>
+                  <div class="mb-6 flex justify-center">
+                    <div class="bg-red-50 p-4 rounded-lg inline-flex">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                    </div>
                   </div>
+                  <h3 class="text-xl font-bold mb-4 text-center">Multiple Payment Solutions</h3>
+                  <ul class="ml-10 space-y-2">
+                    <li class="flex items-start">
+                      <span class="text-custom-red mr-2">•</span>
+                      <span class="text-gray-700">Multiple E-Commerce Gateway</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-custom-red mr-2">•</span>
+                      <span class="text-gray-700">Chargeback Prevention</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-custom-red mr-2">•</span>
+                      <span class="text-gray-700">ACH</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-custom-red mr-2">•</span>
+                      <span class="text-gray-700">E-Check</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-custom-red mr-2">•</span>
+                      <span class="text-gray-700">Credit Cards</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-custom-red mr-2">•</span>
+                      <span class="text-gray-700">B2B-Level I/II/III Data Discounts</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-custom-red mr-2">•</span>
+                      <span class="text-gray-700">3D Secure Frictionless Checkout</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-custom-red mr-2">•</span>
+                      <span class="text-gray-700">Mobile Payment</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-custom-red mr-2">•</span>
+                      <span class="text-gray-700">EMV Readers</span>
+                    </li>
+                  </ul>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-center">Compatibility & Support</h3>
-                <ul class="ml-15 space-y-2">
-                  <li class="flex items-start">
-                    <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">Gateway Recurring Billing</span>
-                  </li>
-                  <li class="flex items-start">
-                    <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">Vault</span>
-                  </li>
-                  <li class="flex items-start">
-                    <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">E-Commerce Cart Plugins</span>
-                  </li>
-                  <li class="flex items-start">
-                    <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">Developer API / Docs</span>
-                  </li>
-                  <li class="flex items-start">
-                    <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">POS/Terminals</span>
-                  </li>
-                  <li class="flex items-start">
-                    <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">Scalable Merchant Accounts</span>
-                  </li>
-                  <li class="flex items-start">
-                    <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">Dedicated Account Managers</span>
-                  </li>
-                </ul>
+                
+                <!-- Column 3 -->
+                <div>
+                  <div class="mb-6 flex justify-center">
+                    <div class="bg-red-50 p-4 rounded-lg inline-flex">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 class="text-xl font-bold mb-4 text-center">Compatibility & Support</h3>
+                  <ul class="ml-15 space-y-2">
+                    <li class="flex items-start">
+                      <span class="text-custom-red mr-2">•</span>
+                      <span class="text-gray-700">Gateway Recurring Billing</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-custom-red mr-2">•</span>
+                      <span class="text-gray-700">Vault</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-custom-red mr-2">•</span>
+                      <span class="text-gray-700">E-Commerce Cart Plugins</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-custom-red mr-2">•</span>
+                      <span class="text-gray-700">Developer API / Docs</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-custom-red mr-2">•</span>
+                      <span class="text-gray-700">POS/Terminals</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-custom-red mr-2">•</span>
+                      <span class="text-gray-700">Scalable Merchant Accounts</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="text-custom-red mr-2">•</span>
+                      <span class="text-gray-700">Dedicated Account Managers</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
+  
   
       <!-- Airline & Booking Payment Gateway Section -->
       <div id="payment-gateway" class="bg-gradient-to-r from-gray-50 to-red-50 py-16">
         <div class="max-w-7xl mx-auto px-4">
-          <h2 class="text-4xl font-bold text-center mb-10" style="color: #973131;">Seamless Payment Processing for Businesses with Bad Credit</h2>
+          <h2 class="text-4xl font-bold text-center mb-10" style="color: #973131;">Seamless Payment Processing for Dating Businesses</h2>
           
           <div class="bg-white p-10 rounded-xl shadow-lg mb-10 relative overflow-hidden">
             <div class="absolute top-0 right-0 h-32 w-32 bg-red-50 rounded-full -mt-10 -mr-10"></div>
@@ -439,22 +441,10 @@
             <div class="flex flex-col md:flex-row items-start gap-12">
               <div class="md:w-1/2 relative z-10 self-center">
                 <p class="text-lg text-gray-700 leading-relaxed">
-                  Our merchant accounts are designed for smooth, reliable payment processing. Focus on expanding your platform while we handle the complexities of high-risk payment solutions.
+                    Our dating merchant accounts are designed to provide smooth, reliable payment processing for your business. With our tailored solutions, you can focus on growing your dating platform while we handle the complexities of payment processing.
                 </p>
                 
-                <div class="mt-8 p-6 bg-gradient-to-r from-gray-900 to-gray-800 rounded-lg shadow-lg text-white relative overflow-hidden">
-                  <!-- Subtle pattern overlay -->
-                  <div class="absolute inset-0 opacity-10">
-                    <div class="absolute inset-0" :style="{ backgroundImage: 'url(\'data:image/svg+xml,%3Csvg width=\\\'20\\\' height=\\\'20\\\' viewBox=\\\'0 0 20 20\\\' xmlns=\\\'http://www.w3.org/2000/svg\\\'%3E%3Crect width=\\\'2\\\' height=\\\'2\\\' fill=\\\'%23ffffff\\\' fill-opacity=\\\'0.4\\\'/%3E%3C/svg%3E\')' }"></div>
-                  </div>
-                  
-                  <div class="relative z-10">
-                    <h3 class="text-2xl font-bold mb-4 text-white">Bad Credit Business Solutions</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        At Hurricane Payments, we set high-risk businesses up with high-risk merchant accounts, payment processing, and secure payment gateways. With Hurricane Payments, you can get a merchant account with bad credit. We'll work with you to find a merchant account tailored to the specific needs of your business.
-                    </p>
-                  </div>
-                </div>
+               
               </div>
               
               <div class="md:w-1/2">
@@ -464,9 +454,9 @@
                     <img :src="fourthImage" alt="Airline Booking Payment Gateway" class="w-full h-auto transform transition hover:scale-105 duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-6">
-                      
+                     
                       <div class="flex items-center">
-                        
+                        <div class="w-3 h-3 rounded-full bg-green-500 mr-2 animate-pulse"></div>
                         
                       </div>
                     </div>
@@ -476,7 +466,30 @@
                   <div class="absolute top-4 right-4 w-24 h-24 bg-red-500/30 rounded-full blur-xl -z-10"></div>
                   <div class="absolute -bottom-2 -left-2 w-16 h-16 bg-blue-500/30 rounded-full blur-lg -z-10"></div>
                   
-                  
+                  <!-- Features list that overlaps with image -->
+                  <div class="absolute -bottom-10 -right-10 bg-white rounded-lg shadow-xl p-6 z-30 max-w-xs transform rotate-3">
+                    <h4 class="font-bold mb-3 text-gray-800">Gateway Features:</h4>
+                    <ul class="space-y-2">
+                      <li class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span class="text-gray-700">Fraud Protection</span>
+                      </li>
+                      <li class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span class="text-gray-700">Real-time Reporting</span>
+                      </li>
+                      <li class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span class="text-gray-700">Recurring Billing</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -490,7 +503,7 @@
       </div>
   
       <!-- CTA Section -->
-      <CtaSection subheading="Apply for your Bad Credit industry merchant account today and experience hassle-free payment processing." />
+      <CtaSection subheading="Apply for your dating industry merchant account today and experience hassle-free payment processing." />
     </MainLayout>
   </template>
   
@@ -500,10 +513,10 @@
   import CtaSection from '../../components/CtaSection.vue';
   
   // Import images 
-  import firstImage from '@/../images/badcredit.jpg';
-  import secondImage from '@/../images/airlinebooking(2).jpg';
-  import thirdImage from '@/../images/badcredit(2).jpg';
-  import fourthImage from '@/../images/badcredit(3).jpg';
+  import firstImage from '@/../images/dating.jpg';
+  import secondImage from '@/../images/dating(2).jpg';
+  import thirdImage from '@/../images/dating(3).jpg';
+  import fourthImage from '@/../images/dating(2).jpg';
   
   // Function to scroll to next section
   const scrollToNextSection = () => {

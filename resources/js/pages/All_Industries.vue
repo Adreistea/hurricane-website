@@ -241,7 +241,6 @@ const industries = ref([
   { name: 'Online Gaming', slug: 'online-gaming', category: 'Gaming & Entertainment' },
   { name: 'Pawn Shops', slug: 'pawn-shops', category: 'Financial Services' },
   { name: 'Pay Lenders', slug: 'pay-lenders', category: 'Financial Services' },
-  { name: 'Franchise', slug: 'franchise', category: 'Professional Services' },
   { name: 'Peer to Peer Lending', slug: 'peer-to-peer-lending', category: 'Financial Services' },
   { name: 'Pharmacy', slug: 'pharmacy', category: 'Health & Wellness' },
   { name: 'Precious Metals Jewelry', slug: 'precious-metals-jewelry', category: 'Collectibles' },

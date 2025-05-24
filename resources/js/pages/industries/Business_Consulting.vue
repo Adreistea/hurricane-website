@@ -472,7 +472,7 @@
       </div>
   
       <!-- CTA Section -->
-      <CtaSection subheading="Apply for your airline & booking industry merchant account today and experience hassle-free payment processing." />
+      <CtaSection subheading="Apply for your Business Consulting industry merchant account today and experience hassle-free payment processing." />
     </MainLayout>
   </template>
   

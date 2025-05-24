@@ -270,6 +270,75 @@ const router = createRouter({
             name: 'Coaching',
             component: () => import('./pages/industries/Coaching.vue')
         },
+        {
+            path: '/industries/coin-collectibles',
+            name: 'CoinCollectibles',
+            component: () => import('./pages/industries/Coin_Collectibles.vue')
+        },
+        {
+            path: '/industries/collection-agency',
+            name: 'CollectionAgency',
+            component: () => import('./pages/industries/Collection_Agency.vue')
+        },
+        {
+            path: '/industries/credit-education-repair',
+            name: 'CreditEducation',
+            component: () => import('./pages/industries/Credit_Education.vue')
+        },
+        {
+            path: '/industries/credit-repair',
+            name: 'CreditRepair',
+            component: () => import('./pages/industries/Credit_Education.vue')
+        },
+        {
+            path: '/industries/credit-monitoring',
+            name: 'CreditMonitoring',
+            component: () => import('./pages/industries/Credit_Monitoring.vue')
+        },
+        {
+            path: '/industries/cryptocurrency-trading',
+            name: 'CryptocurrencyTrading',
+            component: () => import('./pages/industries/Cryptocurrency_Trading.vue')
+        },
+        {
+            path: '/industries/dating',
+            name: 'Dating',
+            component: () => import('./pages/industries/Dating.vue')
+        },
+        {
+            path: '/industries/debt-settlement',
+            name: 'DebtSettlement',
+            component: () => import('./pages/industries/Debt_Settlement.vue')
+        },
+        {
+            path: '/industries/document-preparation',
+            name: 'DocumentPreparation',
+            component: () => import('./pages/industries/Document_Preparation.vue')
+        },
+        {
+            path: '/industries/fantasy-sports',
+            name: 'FantasySports',
+            component: () => import('./pages/industries/Fantasy_Sports.vue')
+        },
+        {
+            path: '/industries/fintech',
+            name: 'Fintech',
+            component: () => import('./pages/industries/Fintech.vue')
+        },
+        {
+            path: '/industries/forex-platforms',
+            name: 'ForexPlatforms',
+            component: () => import('./pages/industries/Forex_Platforms.vue')
+        },
+        {
+            path: '/industries/gentlemans-club',
+            name: 'GentlemansClub',
+            component: () => import('./pages/industries/Gentlemans_Club.vue')
+        }
+        
+        
+        
+        
         
         
         

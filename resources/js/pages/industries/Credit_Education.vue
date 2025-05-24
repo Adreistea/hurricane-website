@@ -7,19 +7,20 @@
         <div class="text-reveal mb-6">
           <h1 class="text-reveal-content text-5xl lg:text-6xl font-bold leading-tight delay-200"
               style="color: #973131;">
-              Auction House Payment Processors & Merchant Accounts
+              Credit Repair Merchant Account and Payment Processing
           </h1>
         </div>
         
         <div class="text-reveal mb-8">
           <h2 class="text-reveal-content text-2xl lg:text-3xl font-semibold leading-tight delay-200 text-gray-800">
-            Auction House Merchant Accounts
+           
+How do you know if your credit education and repair business has been categorized as a high-risk merchant?
           </h2>
         </div>
         
         <div class="text-reveal mb-8">
           <p class="text-reveal-content text-lg text-gray-600 delay-300">
-            At Hurricane Payments, we specialize in providing merchant accounts tailored to the specific needs of auction houses, ensuring you can process payments securely and efficiently. With extensive experience in high-value transactions and high-risk merchants, we understand your unique requirements.
+            A high-risk merchant account is essential for credit education and repair businesses. These specialized payment processing accounts are designed for merchants classified in high-risk categories, providing the necessary solutions for online credit card processing in the credit education and repair industry.
           </p>
           
           <ul class="mt-4 space-y-2">
@@ -95,13 +96,12 @@
       </div>
       
       <!-- Right Content - Image with Card Reveal Animation -->
-<div class="lg:w-1/2 relative card-reveal delay-200">
+      <div class="lg:w-1/2 relative card-reveal delay-200">
   <div class="rounded-lg shadow-2xl overflow-hidden">
     <img :src="firstImage" alt="Airline Booking Payment Processing" class="w-full h-[800px] object-cover" />
   </div>
 
 
-        
         <!-- Animated decorative elements -->
         <div class="absolute -z-10 inset-0 bg-gradient-to-r from-red-100 to-rose-100 rounded-3xl transform rotate-3 translate-x-4 translate-y-4 slide-in-right delay-300"></div>
         <div class="absolute -z-20 inset-0 bg-gradient-to-r from-rose-100 to-red-100 rounded-3xl transform -rotate-2 translate-x-8 translate-y-8 slide-in-right delay-500"></div>
@@ -113,10 +113,10 @@
       <!-- Section Header -->
       <div class="text-center mb-16 scroll-reveal opacity-0">
         <span class="inline-block text-indigo-600 font-semibold mb-4 tracking-wider text-sm uppercase scroll-reveal opacity-0" style="animation-delay: 0.2s; color: #973131;">
-          Get Started with Auction House Payment Processing
+          Get Started with Airlines & Booking Payment Processing
         </span>
         <h2 class="text-4xl lg:text-5xl font-bold mb-6 scroll-reveal opacity-0" style="animation-delay: 0.4s;">
-          Setting up payment processing for your auction house is straightforward with Hurricane Payments. Follow these simple steps to get your merchant account:
+          Set Up Your Merchant Account in Four Easy Steps
         </h2>
       </div>
       
@@ -132,7 +132,7 @@
           </div>
           <h3 class="text-xl font-bold mb-3 text-gray-800">Complete an Online Application</h3>
           <p class="text-gray-700">
-            Begin with our straightforward online application tailored for auction houses.
+            Start your journey with a simple online application process for your credit education and repair business.
           </p>
         </div>
         
@@ -146,7 +146,7 @@
           </div>
           <h3 class="text-xl font-bold mb-3 text-gray-800">Submit Necessary Documentation</h3>
           <p class="text-gray-700">
-            Provide essential documents to support your merchant account application.
+            Provide the required documents to support your credit education and repair merchant account application.
           </p>
         </div>
         
@@ -160,7 +160,7 @@
           </div>
           <h3 class="text-xl font-bold mb-3 text-gray-800">Work with Our Underwriting Team</h3>
           <p class="text-gray-700">
-            Our experts guide you through the underwriting process specific to auction house payment processing.
+            Our expert team will guide you through the underwriting process for credit education and repair businesses.
           </p>
         </div>
         
@@ -174,7 +174,7 @@
           </div>
           <h3 class="text-xl font-bold mb-3 text-gray-800">Start Processing Payments</h3>
           <p class="text-gray-700">
-            Begin accepting payments seamlessly and focus on growing your auction business.
+            Begin accepting payments for your credit education and repair services and watch your business thrive.
           </p>
         </div>
       </div>
@@ -192,7 +192,7 @@
           <div class="text-center mb-16">
             <span class="inline-block bg-red-50 text-custom-red px-4 py-2 rounded-full font-medium text-sm uppercase tracking-wide mb-4">Understanding Industry Challenges</span>
             <h2 class="text-4xl lg:text-5xl font-bold mb-6" style="color: #973131;">
-              Understanding High-Risk Designation for Auction House Merchant Accounts
+                Understanding High-Risk Designation for Credit Repair Merchant Accounts
             </h2>
             <div class="w-24 h-1 bg-custom-red mx-auto rounded-full mb-8"></div>
           </div>
@@ -220,9 +220,9 @@
             <div class="order-1 lg:order-2">
               <div class="space-y-8">
                 <div class="bg-white rounded-xl p-8 shadow-xl transform transition hover:shadow-2xl duration-500 border-l-4 border-custom-red">
-                  <h3 class="text-2xl font-bold mb-4" style="color: #973131;">Why is it "High-Risk"?</h3>
+                  <h3 class="text-2xl font-bold mb-4" style="color: #973131;">High-risk merchants require specialized payment processors</h3>
                   <p class="text-gray-700 leading-relaxed">
-                    Auction houses are classified as high-risk merchants due to several factors including high-value transactions, diverse inventory, and potential fraud risks.The industry faces unique challenges with payment verification and buyer authentication, making it challenging to secure traditional payment processing services. Being labeled as a high-risk merchant necessitates partnering with a payment processor experienced in high-risk accounts. Hurricane Payments understands these challenges and provides specialized solutions for auction houses.
+                    Being labeled as a high-risk merchant necessitates partnering with a payment processor experienced in high-risk accounts. Avoid disruptions by choosing PayKings, a leader in high-risk merchant account solutions for the credit education and repair industry.
                   </p>
                 </div>
                 
@@ -233,48 +233,31 @@
                   </div>
                   
                   <div class="relative z-10">
-                    <h3 class="text-2xl font-bold mb-4 text-white">Why Choose Hurricane Payments for Your Auction House Payment Processing?</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Why Choose PayKings for Your Credit Repair Payment Processing?</h3>
                     <p class="text-gray-300 leading-relaxed mb-6">
-                      Auction house payment processors need to understand the unique requirements of your business model. They must be equipped to handle high-value transactions, implement robust security measures, and maintain compliance with industry regulations. Choose Hurricane Payments, a leader in high-risk merchant account solutions for auction houses.
+                        Benefits of Our Services:
                     </p>
                     
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-                      <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20 flex items-center">
-                        <div class="p-2 bg-red-500/20 rounded-lg mr-4">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                          </svg>
-                        </div>
-                        <span>Secure and efficient payment processing</span>
-                      </div>
-                      
-                      <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20 flex items-center">
-                        <div class="p-2 bg-blue-500/20 rounded-lg mr-4">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                          </svg>
-                        </div>
-                        <span>Chargeback Protection</span>
-                      </div>
-                      
-                      <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20 flex items-center">
-                        <div class="p-2 bg-green-500/20 rounded-lg mr-4">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
-                          </svg>
-                        </div>
-                        <span>Competitive Processing Rates</span>
-                      </div>
-                      
-                      <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20 flex items-center">
-                        <div class="p-2 bg-purple-500/20 rounded-lg mr-4">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                          </svg>
-                        </div>
-                        <span>Fast Approval Process</span>
-                      </div>
-                    </div>
+                    <ul class="text-gray-300 space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <span class="text-red-400 mr-2">•</span>
+                            <span>Fast approval - We expedite the approval process for credit repair merchant accounts.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-red-400 mr-2">•</span>
+                            <span>Multiple payment solutions - Choose from credit card payments, ACH, and more.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-red-400 mr-2">•</span>
+                            <span>Chargeback prevention - Protect your credit repair business from costly disputes.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-red-400 mr-2">•</span>
+                            <span>Dedicated support - Our team is here to guide you every step of the way.</span>
+                        </li>
+                    </ul>
+                    
+                 
                     
                    
                   </div>
@@ -286,7 +269,7 @@
       </div>
     </div>
 
- 
+
       <!-- Our Services Section -->
       <div id="our-services" class="py-20">
         <div class="max-w-7xl mx-auto px-6">
@@ -432,30 +415,19 @@
     <!-- Airline & Booking Payment Gateway Section -->
     <div id="payment-gateway" class="bg-gradient-to-r from-gray-50 to-red-50 py-16">
       <div class="max-w-7xl mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center mb-10" style="color: #973131;">Secure Payment Gateway Solutions</h2>
+        <h2 class="text-4xl font-bold text-center mb-10" style="color: #973131;">Seamless Payment Processing for Credit Education & Repair Businesses</h2>
         
         <div class="bg-white p-10 rounded-xl shadow-lg mb-10 relative overflow-hidden">
           <div class="absolute top-0 right-0 h-32 w-32 bg-red-50 rounded-full -mt-10 -mr-10"></div>
           
           <div class="flex flex-col md:flex-row items-start gap-12">
-            <div class="md:w-1/2 relative z-10 self-center">
-              <p class="text-lg text-gray-700 leading-relaxed">
-                A reliable payment gateway is essential for auction houses. It serves as the crucial link between your business, your bidders, and financial institutions, enabling secure and efficient high-value transactions. Our payment gateway solutions are designed to handle the unique requirements of auction businesses.we handle the complexities of high-risk payment solutions.
+  <div class="md:w-1/2 relative z-10 self-center">
+    <p class="text-2xl text-gray-700 leading-relaxed">
+
+                In the competitive landscape of the credit repair industry, having the right payment processing solutions is crucial. At PayKings, we specialize in providing tailored credit repair merchant services to help your business thrive.
               </p>
               
-              <div class="mt-8 p-6 bg-gradient-to-r from-gray-900 to-gray-800 rounded-lg shadow-lg text-white relative overflow-hidden">
-                <!-- Subtle pattern overlay -->
-                <div class="absolute inset-0 opacity-10">
-                  <div class="absolute inset-0" :style="{ backgroundImage: 'url(\'data:image/svg+xml,%3Csvg width=\\\'20\\\' height=\\\'20\\\' viewBox=\\\'0 0 20 20\\\' xmlns=\\\'http://www.w3.org/2000/svg\\\'%3E%3Crect width=\\\'2\\\' height=\\\'2\\\' fill=\\\'%23ffffff\\\' fill-opacity=\\\'0.4\\\'/%3E%3C/svg%3E\')' }"></div>
-                </div>
-                
-                <div class="relative z-10">
-                  <h3 class="text-2xl font-bold mb-4 text-white">Enhanced Security and Compliance</h3>
-                  <p class="text-gray-300 leading-relaxed">
-                    Choose Hurricane Payments for comprehensive merchant services that include secure payment gateways and robust fraud prevention tools. We understand the importance of maintaining security while providing seamless payment processing for your auction house. Our solutions are designed to protect both your business and your bidders in this high-value industry.
-                  </p>
-                </div>
-              </div>
+           
             </div>
             
             <div class="md:w-1/2">
@@ -465,10 +437,9 @@
                   <img :src="fourthImage" alt="Airline Booking Payment Gateway" class="w-full h-auto transform transition hover:scale-105 duration-500">
                   <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div class="absolute bottom-0 left-0 p-6">
-                    <h3 class="text-xl font-bold text-white mb-2">Secure Online Transactions</h3>
+                  
                     <div class="flex items-center">
-                      <div class="w-3 h-3 rounded-full bg-green-500 mr-2 animate-pulse"></div>
-                      
+                   
                     </div>
                   </div>
                 </div>
@@ -491,7 +462,7 @@
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                       </svg>
-                      <span class="text-gray-700">Compliance Assurance</span>
+                      <span class="text-gray-700">Real-time Reporting</span>
                     </li>
                     <li class="flex items-center">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -514,7 +485,7 @@
     </div>
 
     <!-- CTA Section -->
-    <CtaSection subheading="Apply for your Auction House industry merchant account today and experience hassle-free payment processing." />
+    <CtaSection subheading="Apply for your Credit Education & Repair industry merchant account today and experience hassle-free payment processing." />
   </MainLayout>
 </template>
 
@@ -524,10 +495,10 @@ import MainLayout from '../MainLayout.vue';
 import CtaSection from '../../components/CtaSection.vue';
 
 // Import images 
-import firstImage from '@/../images/auctionhouse.jpg';
+import firstImage from '@/../images/creditrepair.jpg';
 import secondImage from '@/../images/airlinebooking(2).jpg';
-import thirdImage from '@/../images/auctionhouse(2).jpg';
-import fourthImage from '@/../images/auctionhouse(3).jpg';
+import thirdImage from '@/../images/creditrepair(2).jpg';
+import fourthImage from '@/../images/creditrepair(3).jpg';
 
 // Function to scroll to next section
 const scrollToNextSection = () => {

@@ -503,7 +503,7 @@ All of these factors make it harder for coaching businesses to get approved for 
       </div>
   
       <!-- CTA Section -->
-      <CtaSection subheading="Apply for your airline & booking industry merchant account today and experience hassle-free payment processing." />
+      <CtaSection subheading="Apply for your Coaching industry merchant account today and experience hassle-free payment processing." />
     </MainLayout>
   </template>
   
