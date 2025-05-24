@@ -334,9 +334,82 @@ const router = createRouter({
             path: '/industries/gentlemans-club',
             name: 'GentlemansClub',
             component: () => import('./pages/industries/Gentlemans_Club.vue')
-        }
+        },
+        {
+            path: '/industries/health-and-beauty',
+            name: 'HealthBeauty',
+            component: () => import('./pages/industries/Health_Beauty.vue')
+        },
+        {
+            path: '/industries/high-volume',
+            name: 'HighVolume',
+            component: () => import('./pages/industries/High_Volume.vue')
+        },
+        {
+            path: '/industries/hipaa-compliant',
+            name: 'HipaaCompliant',
+            component: () => import('./pages/industries/Hipaa_Compliant.vue')
+        },
+        {
+            path: '/industries/insurance-premium-financing',
+            name: 'Insurance',
+            component: () => import('./pages/industries/Insurance.vue')
+        },
+        {
+            path: '/industries/investment-advisory',
+            name: 'InvestmentAdvisory',
+            component: () => import('./pages/industries/Investment_Advisory.vue')
+        },
+        {
+            path: '/industries/investment-recovery',
+            name: 'InvestmentRecovery',
+            component: () => import('./pages/industries/Investment_Recovery.vue')
+        },
+        {
+            path: '/industries/male-enhancement',
+            name: 'MaleEnhancement',
+            component: () => import('./pages/industries/Male_Enhancement.vue')
+        },
+        {
+            path: '/industries/money-transfer',
+            name: 'MoneyTransfer',
+            component: () => import('./pages/industries/Money_Transfer.vue')
+        },
+        {
+            path: '/industries/multi-level-marketing',
+            name: 'MultilevelMarketing',
+            component: () => import('./pages/industries/Multilevel_Marketing.vue')
+        },
+        {
+            path: '/industries/nonprofit',
+            name: 'Nonprofit',
+            component: () => import('./pages/industries/Nonprofit.vue')
+        },
+        {
+            path: '/industries/nutraceuticals',
+            name: 'Nutraceuticals',
+            component: () => import('./pages/industries/Nutraceuticals.vue')
+        },
+        {
+            path: '/industries/online-gaming',
+            name: 'OnlineGaming',
+            component: () => import('./pages/industries/Online_Gaming.vue')
+        },
+        {
+            path: '/industries/pawn-shops',
+            name: 'Pawnshop',
+            component: () => import('./pages/industries/Pawnshop.vue')
+        },
+        {
+            path: '/industries/pay-lenders',
+            name: 'PaydayLending',
+            component: () => import('./pages/industries/Payday_Lender.vue')
+        },
         
         
+        
+        
+     
         
         
         
