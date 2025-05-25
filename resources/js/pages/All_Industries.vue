@@ -226,6 +226,7 @@ const industries = ref([
   { name: 'Fintech', slug: 'fintech', category: 'Financial Services' },
   { name: 'Fire Arms', slug: 'fire-arms', category: 'Regulated Products' },
   { name: 'Forex Platforms', slug: 'forex-platforms', category: 'Financial Services' },
+  { name: 'Franchise', slug: 'franchise', category: 'Professional Services' },
   { name: 'Gentlemans Club', slug: 'gentlemans-club', category: 'Gaming & Entertainment' },
   { name: 'Health and Beauty', slug: 'health-and-beauty', category: 'Health & Wellness' },
   { name: 'High Volume', slug: 'high-volume', category: 'E-commerce' },

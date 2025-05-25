@@ -456,7 +456,7 @@ const router = createRouter({
             component: () => import('./pages/industries/Social_Gaming.vue')
         },
         {
-            path: '/industries/sport-betting',
+            path: '/industries/sports-betting',
             name: 'SportsBetting',
             component: () => import('./pages/industries/Sports_Betting.vue')
         },
@@ -489,8 +489,12 @@ const router = createRouter({
             path: '/industries/web-design-seo',
             name: 'Web',
             component: () => import('./pages/industries/Web.vue')
+        },
+        {
+            path: '/industries/franchise',
+            name: 'Franchise',
+            component: () => import('./pages/industries/Franchise.vue')
         }
-  
         
     ],
     scrollBehavior(to, from, savedPosition) {

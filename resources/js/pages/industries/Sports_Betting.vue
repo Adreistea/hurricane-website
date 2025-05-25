@@ -7,13 +7,13 @@
           <div class="text-reveal mb-6">
             <h1 class="text-reveal-content text-5xl lg:text-6xl font-bold leading-tight delay-200"
                 style="color: #973131;">
-              Adult Payment Processing and Merchant Account
+              Sports Betting Credit Card Processing & Merchant Account
             </h1>
           </div>
           
           <div class="text-reveal mb-8">
             <p class="text-reveal-content text-lg text-gray-600 delay-300">
-              At Hurricane Payments, we specialize in providing merchant accounts tailored to the specific needs of the adult industry, ensuring you can process payments securely and efficiently. If you need an adult merchant account, trust Hurricane Payments! We have decades of experience working with adult businesses and other high-risk merchants.
+              At Hurricane Payments, we specialize in providing merchant accounts tailored to the specific needs of sports betting businesses. These specialized payment processing accounts are designed for merchants classified in high-risk categories, providing the necessary solutions for online credit card processing in the sports betting industry. Hurricane Payments has the experience and expertise to set your business up with sports betting credit card processing solutions.
             </p>
           </div>
           
@@ -40,7 +40,7 @@
         <!-- Right Content - Image with Card Reveal Animation -->
         <div class="lg:w-1/2 relative card-reveal delay-200">
           <div class="rounded-lg shadow-2xl overflow-hidden">
-            <img :src="adultIndustryImg" alt="Adult Industry Payment Processing" class="w-full h-[800px] object-cover" />
+            <img :src="sportsbetImg" alt="Sports Betting Payment Processing" class="w-full h-[800px] object-cover" />
           </div>
           
           <!-- Animated decorative elements -->
@@ -51,7 +51,7 @@
   
      
   
-      <!-- Adult Entertainment Merchant Accounts Section -->
+      <!-- Sports Betting Merchant Accounts Section -->
       <div class="container mx-auto px-6 py-20 mt-8">
         <!-- Section Header -->
         <div class="text-center mb-16 scroll-reveal opacity-0">
@@ -59,10 +59,10 @@
             Simple Process
           </span>
           <h2 class="text-4xl lg:text-5xl font-bold mb-6 scroll-reveal opacity-0" style="animation-delay: 0.4s;">
-            Get Started with Adult Payment Processing
+            Get Started with Sports Betting Payment Processing
           </h2>
           <p class="text-lg text-gray-600 max-w-3xl mx-auto scroll-reveal opacity-0" style="animation-delay: 0.6s;">
-            If you own an adult business, Hurricane Payments has a straightforward process for getting set up for payment processing. Follow these simple steps to set up your adult merchant account:
+            If you own a sports betting business, Hurricane Payments has a straightforward process for getting set up for payment processing. Follow these simple steps to set up your sports betting merchant account:
           </p>
         </div>
         
@@ -78,9 +78,9 @@
                 </svg>
               </div>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-gray-800">Industry Expertise</h3>
+            <h3 class="text-xl font-bold mb-3 text-gray-800">Complete Online Application</h3>
             <p class="text-gray-700">
-              Benefit from our specialized knowledge in adult business payment processing
+              Begin with our straightforward online application tailored for sports betting businesses
             </p>
           </div>
           
@@ -94,9 +94,9 @@
                 </svg>
               </div>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-gray-800">Competitive Rates</h3>
+            <h3 class="text-xl font-bold mb-3 text-gray-800">Submit Necessary Documentation</h3>
             <p class="text-gray-700">
-              Get fair pricing designed specifically for high-risk merchants
+              Provide essential documents to support your merchant account application
             </p>
           </div>
           
@@ -110,9 +110,9 @@
                 </svg>
               </div>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-gray-800">Fast Approval Process</h3>
+            <h3 class="text-xl font-bold mb-3 text-gray-800">Work with Our Underwriting Team</h3>
             <p class="text-gray-700">
-              Start processing payments in days, not weeks or months
+              Our experts guide you through the underwriting process specific to high-risk industries
             </p>
           </div>
           
@@ -126,9 +126,9 @@
                 </svg>
               </div>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-gray-800">Advanced Fraud Protection</h3>
+            <h3 class="text-xl font-bold mb-3 text-gray-800">Start Processing Payments</h3>
             <p class="text-gray-700">
-              Protect your business with cutting-edge security solutions
+              Begin accepting payments seamlessly and focus on growing your revenue
             </p>
           </div>
         </div>
@@ -146,23 +146,23 @@
             <div class="lg:w-1/2">
               <div class="relative">
                 <div class="absolute -inset-4 bg-gradient-to-r from-red-500/30 to-purple-500/30 rounded-xl blur-xl"></div>
-                <img :src="adultCameraImg" alt="Adult Industry Solutions" class="relative rounded-lg shadow-2xl w-full" />
+                <img :src="sportsbetImg2" alt="Sports Betting Industry Solutions" class="relative rounded-lg shadow-2xl w-full" />
               </div>
             </div>
             <div class="lg:w-1/2">
               <h2 class="text-4xl font-bold mb-6 text-white">
-                Why is an Adult Merchant Account Considered High-Risk?
+                Why is a Sports Betting Merchant Account Considered High-Risk?
               </h2>
               <p class="text-lg text-gray-300 mb-8">
-                Adult businesses are classified as high-risk merchants. That's because every adult business faces a high rate of chargebacks and a high risk of fraud. Card-not-present transactions are risky for payment processing services. These factors lead to the high-risk designation making it difficult for any merchant in the adult industry to find a credit card processing company.
+                Sports betting businesses are classified as high-risk merchants for several reasons. Every sports betting business faces a high rate of chargebacks, regulatory scrutiny, and a high risk of fraud. Card-not-present transactions are risky for payment processing services, especially in the gaming industry where disputes are common.
               </p>
               <p class="text-lg text-gray-300 mb-8">
-                Being labeled as a high-risk merchant necessitates partnering with a payment processor experienced in high-risk accounts. Adult payment processors like Hurricane Payments understand the risks and make the best financial partners.
+                Being labeled as a high-risk merchant necessitates partnering with a payment processor experienced in high-risk accounts. Sports betting payment processors like Hurricane Payments understand the risks and make the best financial partners for your business.
               </p>
               <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
-                <h3 class="text-2xl font-bold mb-4 text-white">Choose an Adult Merchant Account Provider</h3>
+                <h3 class="text-2xl font-bold mb-4 text-white">Choose a Specialized Sports Betting Payment Processor</h3>
                 <p class="text-gray-300">
-                  Adult merchant account providers and payment processing companies work specifically with businesses in the adult industry. They understand the risks adult businesses face and have the expertise to navigate credit card processing in this industry. Avoid disruptions by choosing Hurricane Payments, a leader in high-risk merchant account solutions for the adult entertainment industry.
+                  Sports betting merchant account providers and payment processing companies work specifically with businesses in the betting and gaming industry. They understand the risks sports betting businesses face and have the expertise to navigate credit card processing in this industry. Avoid disruptions by choosing Hurricane Payments, a leader in high-risk merchant account solutions for the sports betting industry.
                 </p>
               </div>
             </div>
@@ -182,11 +182,11 @@
                 <span class="absolute bottom-0 left-0 w-full h-3 bg-red-100 transform -rotate-1"></span>
               </span>
               <span class="block mt-2">Hurricane Payments for</span>
-              <span class="block mt-2 text-custom-red">Adult Payment Processing?</span>
+              <span class="block mt-2 text-custom-red">Sports Betting?</span>
             </h2>
               
               <p class="text-lg text-gray-700 mb-6">
-                Adult entertainment businesses face unique challenges in the payment processing world. As a high-risk industry, many traditional banks and payment processors are hesitant to work with adult merchants. Choose a payment processor who understands the adult entertainment industry.
+                Sports betting businesses face unique challenges in the payment processing world. As a high-risk industry, many traditional banks and payment processors are hesitant to work with sports betting businesses. Choose a payment processor who understands the sports betting industry.
               </p>
               
               <div class="bg-gradient-to-r from-red-50 to-red-100 p-6 rounded-lg mb-8 transform hover:scale-[1.02] transition duration-300">
@@ -196,9 +196,9 @@
               </div>
               
               <div class="bg-white p-6 rounded-lg border border-red-100 mb-8">
-                <h3 class="text-xl font-bold mb-3" style="color: #973131;">Tailored Solutions for the Adult Industry</h3>
+                <h3 class="text-xl font-bold mb-3" style="color: #973131;">Tailored Solutions for the Sports Betting Industry</h3>
                 <p class="text-gray-700">
-                  At Hurricane Payments, we specialize in providing merchant accounts tailored to the specific needs of adult businesses, ensuring you can process payments securely and efficiently. If you need an adult merchant account, trust Hurricane Payments to provide the perfect solution for your adult business needs.
+                  At Hurricane Payments, we specialize in providing merchant accounts tailored to the specific needs of sports betting businesses, ensuring you can process payments securely and efficiently. If you need a sports betting merchant account, trust Hurricane Payments to provide the perfect solution for your sports betting business needs.
                 </p>
               </div>
               
@@ -211,7 +211,7 @@
                   </div>
                   <div>
                     <h3 class="font-semibold">Industry Expertise</h3>
-                    <p class="text-gray-700">Benefit from our specialized knowledge in adult business payment processing</p>
+                    <p class="text-gray-700">Benefit from our specialized knowledge in sports betting payment processing</p>
                   </div>
                 </div>
                 
@@ -257,7 +257,7 @@
                   to="/request-consultation" 
                   class="fancy-button text-white font-medium py-4 px-10 rounded-md shadow-lg inline-block" 
                   style="background-color: #973131; transition: all 0.3s ease;">
-                  Get Your Account Today!
+                  Get Your Sports Betting Account Today!
                 </router-link>
               </div>
             </div>
@@ -267,7 +267,7 @@
           <div class="lg:w-1/2 scroll-reveal-right opacity-0 relative">
             <!-- Image frame with shadow and border effect -->
             <div class="rounded-xl overflow-hidden shadow-2xl relative z-10 border-4 border-white transform transition hover:-rotate-1 hover:scale-[1.01] duration-500">
-              <img :src="adultMerchantImg" alt="Adult Merchant Account Services" class="w-full h-auto" />
+              <img :src="sportsbetImg3" alt="Sports Betting Merchant Account Services" class="w-full h-auto" />
             </div>
             
             <!-- Decorative elements behind the image -->
@@ -299,7 +299,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                   </svg>
                 </div>
-                <h3 class="text-2xl font-bold" style="color: #973131;">Common Industry Challenges</h3>
+                <h3 class="text-2xl font-bold" style="color: #973131;">Common Sports Betting Challenges</h3>
               </div>
               <ul class="space-y-4">
                 <li class="flex items-start">
@@ -312,11 +312,11 @@
                 </li>
                 <li class="flex items-start">
                   <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">Increased risk of fraud in online transactions</span>
+                  <span class="text-gray-700">Complex regulatory compliance requirements</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-custom-red mr-2">•</span>
-                  <span class="text-gray-700">Complex regulatory compliance requirements</span>
+                  <span class="text-gray-700">Increased risk of fraud in online transactions</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-custom-red mr-2">•</span>
@@ -396,22 +396,22 @@
         </div>
       </div>
 
-      <!-- Adult Content Guidelines Section with Page Break -->
+      <!-- Sports Betting Guidelines Section with Page Break -->
       <div id="content-guidelines" class="py-16">
         <div class="max-w-5xl mx-auto px-6 mb-12">
           <hr class="border-t-2 border-red-200 w-1/3 mx-auto mb-12">
           
-          <h2 class="text-4xl font-bold text-center mb-10" style="color: #973131;">Adult Content Guidelines</h2>
+          <h2 class="text-4xl font-bold text-center mb-10" style="color: #973131;">Sports Betting Guidelines</h2>
           
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Acceptable Content -->
+            <!-- Best Practices -->
             <div class="bg-green-50 p-8 rounded-xl relative overflow-hidden">
               <div class="absolute top-0 right-0 w-24 h-24 bg-green-100 rounded-full -mt-8 -mr-8 z-0"></div>
-              <h3 class="text-2xl font-bold mb-6 text-green-800 relative z-10">Acceptable Content</h3>
+              <h3 class="text-2xl font-bold mb-6 text-green-800 relative z-10">Best Practices</h3>
               <ul class="space-y-3 relative z-10">
                 <li class="flex items-start">
                   <span class="text-green-600 mr-2">✓</span>
-                  <span class="text-gray-700">Legal adult entertainment</span>
+                  <span class="text-gray-700">Legal sports betting operation</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-green-600 mr-2">✓</span>
@@ -419,42 +419,50 @@
                 </li>
                 <li class="flex items-start">
                   <span class="text-green-600 mr-2">✓</span>
-                  <span class="text-gray-700">Clear content warnings</span>
+                  <span class="text-gray-700">Clear terms and conditions</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-green-600 mr-2">✓</span>
-                  <span class="text-gray-700">Consensual adult material</span>
+                  <span class="text-gray-700">Responsible gambling practices</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-600 mr-2">✓</span>
+                  <span class="text-gray-700">Regulatory compliance</span>
                 </li>
               </ul>
             </div>
             
-            <!-- Prohibited Content -->
+            <!-- Risk Factors -->
             <div class="bg-red-50 p-8 rounded-xl relative overflow-hidden">
               <div class="absolute top-0 right-0 w-24 h-24 bg-red-100 rounded-full -mt-8 -mr-8 z-0"></div>
-              <h3 class="text-2xl font-bold mb-6 text-red-800 relative z-10">Prohibited Content</h3>
+              <h3 class="text-2xl font-bold mb-6 text-red-800 relative z-10">Risk Factors to Avoid</h3>
               <ul class="space-y-3 relative z-10">
                 <li class="flex items-start">
                   <span class="text-red-600 mr-2">✗</span>
-                  <span class="text-gray-700">Illegal or non-consensual content</span>
+                  <span class="text-gray-700">Operating in prohibited jurisdictions</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-red-600 mr-2">✗</span>
-                  <span class="text-gray-700">Content involving minors</span>
+                  <span class="text-gray-700">Poor player identity verification</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-red-600 mr-2">✗</span>
-                  <span class="text-gray-700">Extreme or violent material</span>
+                  <span class="text-gray-700">Inadequate anti-fraud measures</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-red-600 mr-2">✗</span>
-                  <span class="text-gray-700">Misleading or fraudulent practices</span>
+                  <span class="text-gray-700">Misleading bonus terms or promotions</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-red-600 mr-2">✗</span>
+                  <span class="text-gray-700">Insufficient security for user funds</span>
                 </li>
               </ul>
             </div>
           </div>
           
           <p class="text-center text-gray-700 mt-8">
-            Adhering to these guidelines helps ensure compliance with regulations and maintains a safer environment for all users.
+            Adhering to these guidelines helps ensure compliance with regulations and maintains a safer environment for all users in the sports betting industry.
           </p>
         </div>
       </div>
@@ -475,7 +483,7 @@
                     </svg>
                   </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-center">Adult Entertainment Merchant Accounts</h3>
+                <h3 class="text-xl font-bold mb-4 text-center">Sports Betting Merchant Accounts</h3>
                 <ul class="ml-5 space-y-2">
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
@@ -487,7 +495,7 @@
                   </li>
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">Fast Adult Entertainment Account Approval</span>
+                    <span class="text-gray-700">Fast Sports Betting Account Approval</span>
                   </li>
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
@@ -495,11 +503,11 @@
                   </li>
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">E-Commerce and Retail Adult Entertainment</span>
+                    <span class="text-gray-700">E-Commerce and Retail Sports Betting</span>
                   </li>
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">B2B Adult Entertainment Vendors Supported</span>
+                    <span class="text-gray-700">B2B Sports Betting Vendors Supported</span>
                   </li>
                 </ul>
               </div>
@@ -537,7 +545,7 @@
                   </li>
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">B2B-Level I/II/III Data Discounts</span>
+                    <span class="text-gray-700">B2B-Level II/III Data Discounts</span>
                   </li>
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
@@ -600,10 +608,10 @@
         </div>
       </div>
 
-      <!-- Adult Payment Gateway Section -->
+      <!-- Sports Betting Payment Gateway Section -->
       <div id="payment-gateway" class="bg-gradient-to-r from-gray-50 to-red-50 py-16">
         <div class="max-w-7xl mx-auto px-4">
-          <h2 class="text-4xl font-bold text-center mb-10" style="color: #973131;">Adult Payment Gateway</h2>
+          <h2 class="text-4xl font-bold text-center mb-10" style="color: #973131;">Sports Betting Payment Gateway</h2>
           
           <div class="bg-white p-10 rounded-xl shadow-lg mb-10 relative overflow-hidden">
             <div class="absolute top-0 right-0 h-32 w-32 bg-red-50 rounded-full -mt-10 -mr-10"></div>
@@ -616,7 +624,7 @@
               </div>
               <div class="md:w-1/2">
                 <div class="rounded-lg overflow-hidden shadow-lg">
-                  <img :src="adultGatewayImg" alt="Adult Payment Gateway" class="w-full h-auto transform transition hover:scale-105 duration-500">
+                  <img :src="sportsbetImg4" alt="Sports Betting Payment Gateway" class="w-full h-auto transform transition hover:scale-105 duration-500">
                 </div>
               </div>
             </div>
@@ -625,10 +633,10 @@
               <div class="w-24 h-1 bg-red-200 rounded-full"></div>
             </div>
             
-            <h3 class="text-2xl font-bold mb-8 text-center" style="color: #973131;">Choose The Best Adult Payment Gateway Provider For Enhanced Security</h3>
+            <h3 class="text-2xl font-bold mb-8 text-center" style="color: #973131;">Seamless Payment Processing for Sports Betting Businesses</h3>
             
             <p class="text-lg text-gray-700 leading-relaxed max-w-5xl mx-auto">
-              Choose a host merchant services company that can get your adult business set up with a high-risk payment gateway. At Hurricane Payments, we have years of experience providing merchant account services to high-risk merchants. We'll get you set up with an adult merchant account, payment processing, and a secure payment gateway. Select the best adult payment processor to ensure you can securely accept payments both online and in person.
+              Our sports betting merchant accounts are designed for smooth, reliable payment processing. Focus on expanding your sports betting business while we handle the complexities of high-risk payment solutions. Choose a host merchant services company that can get your sports betting business set up with a high-risk payment gateway. At Hurricane Payments, we have years of experience providing merchant account services to high-risk merchants like sports betting businesses. We'll get you set up with a sports betting merchant account, payment processing, and a secure payment gateway.
             </p>
             
             <div class="mt-10 flex justify-center">
@@ -644,7 +652,7 @@
       </div>
 
       <!-- CTA Section -->
-      <CtaSection subheading="Apply for your adult industry merchant account today and experience hassle-free payment processing." />
+      <CtaSection subheading="Apply for your sports betting industry merchant account today and experience hassle-free payment processing." />
     </MainLayout>
   </template>
   
@@ -654,11 +662,10 @@ import MainLayout from '../MainLayout.vue';
 import CtaSection from '../../components/CtaSection.vue';
 
 // Import images 
-import adultIndustryImg from '@/../images/adultcamera(3).jpg';
-import adultMerchantImg from '@/../images/adultcamera(2).jpg';
-import adultCameraImg from '@/../images/adultcamera.jpg';
-import adultGatewayImg from '@/../images/adult(4).jpg';
-import adultHighRiskImg from '@/../images/adult(1).jpg';
+import sportsbetImg from '@/../images/sportsbet.jpg';
+import sportsbetImg2 from '@/../images/sportsbet(2).jpg';
+import sportsbetImg3 from '@/../images/sportsbet(3).jpg';
+import sportsbetImg4 from '@/../images/sportsbet(4).jpg';
   
   // Function to scroll to next section
   const scrollToNextSection = () => {

@@ -204,7 +204,7 @@
                   <div class="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
                   <div class="absolute bottom-0 left-0 w-full p-8">
                     <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
-                      <h3 class="text-xl font-bold mb-2 text-white">Why Choose PayKings for Your Document Preparation Payment Processing?</h3>
+                      <h3 class="text-xl font-bold mb-2 text-white">Why Choose Hurricane Payments for Your Document Preparation Payment Processing?</h3>
                       <p class="text-white/90">
                         Document preparation businesses face unique challenges in the payment processing world. As a high-risk industry, many traditional banks and payment processors are hesitant to work with document preparation merchants. Being labeled as a high-risk merchant necessitates partnering with a payment processor experienced in high-risk accounts. Avoid disruptions by choosing Hurricane Payments, a leader in high-risk merchant account solutions for the document preparation industry.
                       </p>
@@ -221,7 +221,7 @@
               <div class="order-1 lg:order-2">
                 <div class="space-y-8">
                   <div class="bg-white rounded-xl p-8 shadow-xl transform transition hover:shadow-2xl duration-500 border-l-4 border-custom-red">
-                    <h3 class="text-2xl font-bold mb-4" style="color: #973131;">Why Choose PayKings for Your Document Preparation Payment Processing?</h3>
+                    <h3 class="text-2xl font-bold mb-4" style="color: #973131;">Why Choose Hurricane Payments for Your Document Preparation Payment Processing?</h3>
                     <p class="text-gray-700 leading-relaxed">
                         Document preparation businesses face unique challenges in the payment processing world. As a high-risk industry, many traditional banks and payment processors are hesitant to work with document preparation merchants. Being labeled as a high-risk merchant necessitates partnering with a payment processor experienced in high-risk accounts. Avoid disruptions by choosing Hurricane Payments, a leader in high-risk merchant account solutions for the document preparation industry.
                     </p>

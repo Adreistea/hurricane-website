@@ -19,7 +19,7 @@
           
           <div class="text-reveal mb-8">
             <p class="text-reveal-content text-lg text-gray-600 delay-300">
-                At PayKings, we specialize in providing merchant accounts tailored to the specific needs of cryptocurrency trading platforms, ensuring you can process payments securely and efficiently. With extensive experience in crypto businesses and other high-risk merchants, we understand your unique requirements.
+                At Hurricane Payments, we specialize in providing merchant accounts tailored to the specific needs of cryptocurrency trading platforms, ensuring you can process payments securely and efficiently. With extensive experience in crypto businesses and other high-risk merchants, we understand your unique requirements.
             </p>
           </div>
           
@@ -119,7 +119,7 @@
            Get Started with Cryptocurrency Trading Platform Payment Processing
           </h2>
           <p class="text-lg text-gray-600 max-w-3xl mx-auto scroll-reveal opacity-0" style="animation-delay: 0.6s;">
-            Setting up payment processing for your cryptocurrency trading platform is straightforward with PayKings. Follow these simple steps to get your merchant account:
+            Setting up payment processing for your cryptocurrency trading platform is straightforward with Hurricane Payments. Follow these simple steps to get your merchant account:
           </p>
         </div>
         
@@ -211,12 +211,12 @@
                 Understanding High-Risk Designation for Cryptocurrency Platform Merchant Accounts
               </h2>
               <p class="text-lg text-gray-300 mb-8">
-                Cryptocurrency trading platforms are classified as high-risk merchants due to several factors including regulatory uncertainty, market volatility, and the innovative nature of digital assets.The cryptocurrency industry faces unique challenges with fraud prevention and compliance requirements, making it challenging to secure traditional payment processing services.Being labeled as a high-risk merchant necessitates partnering with a payment processor experienced in high-risk accounts. PayKings understands these challenges and provides specialized solutions for cryptocurrency trading platforms.
+                Cryptocurrency trading platforms are classified as high-risk merchants due to several factors including regulatory uncertainty, market volatility, and the innovative nature of digital assets.The cryptocurrency industry faces unique challenges with fraud prevention and compliance requirements, making it challenging to secure traditional payment processing services.Being labeled as a high-risk merchant necessitates partnering with a payment processor experienced in high-risk accounts. Hurricane Payments understands these challenges and provides specialized solutions for cryptocurrency trading platforms.
               </p>         
               <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
-                <h3 class="text-2xl font-bold mb-4 text-white">  Why Choose PayKings for Your Cryptocurrency Trading Platform Payment Processing?</h3>
+                <h3 class="text-2xl font-bold mb-4 text-white">  Why Choose Hurricane Payments for Your Cryptocurrency Trading Platform Payment Processing?</h3>
                 <p class="text-gray-300">
-                    Cryptocurrency platform payment processors need to understand the unique requirements of your business model. They must be equipped to handle fiat currency transactions, implement robust security measures, and maintain compliance with evolving regulations. At PayKings, we specialize in providing merchant accounts tailored to the specific needs of cryptocurrency trading platforms, ensuring secure and efficient payment processing. Trust PayKings to provide the perfect solution for your crypto platform's payment processing needs.
+                    Cryptocurrency platform payment processors need to understand the unique requirements of your business model. They must be equipped to handle fiat currency transactions, implement robust security measures, and maintain compliance with evolving regulations. At Hurricane Payments, we specialize in providing merchant accounts tailored to the specific needs of cryptocurrency trading platforms, ensuring secure and efficient payment processing. Trust Hurricane Payments to provide the perfect solution for your crypto platform's payment processing needs.
                 </p>
               </div>
             </div>

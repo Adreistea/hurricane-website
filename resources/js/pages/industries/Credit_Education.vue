@@ -222,7 +222,7 @@ How do you know if your credit education and repair business has been categorize
                 <div class="bg-white rounded-xl p-8 shadow-xl transform transition hover:shadow-2xl duration-500 border-l-4 border-custom-red">
                   <h3 class="text-2xl font-bold mb-4" style="color: #973131;">High-risk merchants require specialized payment processors</h3>
                   <p class="text-gray-700 leading-relaxed">
-                    Being labeled as a high-risk merchant necessitates partnering with a payment processor experienced in high-risk accounts. Avoid disruptions by choosing PayKings, a leader in high-risk merchant account solutions for the credit education and repair industry.
+                    Being labeled as a high-risk merchant necessitates partnering with a payment processor experienced in high-risk accounts. Avoid disruptions by choosing Hurricane Payments, a leader in high-risk merchant account solutions for the credit education and repair industry.
                   </p>
                 </div>
                 
@@ -233,7 +233,7 @@ How do you know if your credit education and repair business has been categorize
                   </div>
                   
                   <div class="relative z-10">
-                    <h3 class="text-2xl font-bold mb-4 text-white">Why Choose PayKings for Your Credit Repair Payment Processing?</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Why Choose Hurricane Payments for Your Credit Repair Payment Processing?</h3>
                     <p class="text-gray-300 leading-relaxed mb-6">
                         Benefits of Our Services:
                     </p>
@@ -424,7 +424,7 @@ How do you know if your credit education and repair business has been categorize
   <div class="md:w-1/2 relative z-10 self-center">
     <p class="text-2xl text-gray-700 leading-relaxed">
 
-                In the competitive landscape of the credit repair industry, having the right payment processing solutions is crucial. At PayKings, we specialize in providing tailored credit repair merchant services to help your business thrive.
+                In the competitive landscape of the credit repair industry, having the right payment processing solutions is crucial. At Hurricane Payments, we specialize in providing tailored credit repair merchant services to help your business thrive.
               </p>
               
            

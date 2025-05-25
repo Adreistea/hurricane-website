@@ -718,7 +718,7 @@
             <div class="flex flex-col md:flex-row items-start gap-12">
               <div class="md:w-1/2 relative z-10 self-center">
                 <p class="text-lg text-gray-700 leading-relaxed">
-                  PayKings' online casino payment gateway is designed specifically to support the high-risk needs of the iGaming industry, offering secure, fast, and reliable transaction processing for online casinos and gambling sites. With advanced fraud prevention tools, 3D Secure authentication, and robust encryption technology, Hurricane Payments' software ensures that both operators and players are protected throughout every transaction.
+                  Hurricane Payments' online casino payment gateway is designed specifically to support the high-risk needs of the iGaming industry, offering secure, fast, and reliable transaction processing for online casinos and gambling sites. With advanced fraud prevention tools, 3D Secure authentication, and robust encryption technology, Hurricane Payments' software ensures that both operators and players are protected throughout every transaction.
                 </p>
               </div>
               <div class="md:w-1/2">

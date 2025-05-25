@@ -437,7 +437,7 @@
                   </p>
                   <div class="flex items-center">
                     <div class="w-10 h-1 bg-red-500/50 mr-3"></div>
-                    <p class="text-white/70">Kyle Hall, CEO of Hurricane Payments</p>
+                    
                   </div>
                 </div>
               </div>

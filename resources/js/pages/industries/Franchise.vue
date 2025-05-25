@@ -7,19 +7,19 @@
           <div class="text-reveal mb-6">
             <h1 class="text-reveal-content text-5xl lg:text-6xl font-bold leading-tight delay-200"
                 style="color: #973131;">
-                Credit Monitoring Merchant Account
+              Payment Processing Solutions for Franchises
             </h1>
           </div>
           
           <div class="text-reveal mb-8">
             <h2 class="text-reveal-content text-2xl lg:text-3xl font-semibold leading-tight delay-200 text-gray-800">
-                How do you know if your credit monitoring business has been categorized as a high-risk merchant?
+              Streamlined Payment Processing for Multi-Location Businesses
             </h2>
           </div>
           
           <div class="text-reveal mb-8">
             <p class="text-reveal-content text-lg text-gray-600 delay-300">
-                How do you know if your credit monitoring business has been categorized as a high-risk merchant?
+              Managing payments across multiple franchise locations requires sophisticated solutions that can handle complex operations while maintaining consistency and control. Whether you operate a regional or national franchise network, having reliable payment processing is crucial. Hurricane Payments provides comprehensive payment solutions designed specifically for franchise businesses, offering the tools and technology needed to manage transactions across all your locations efficiently.
             </p>
             
             <ul class="mt-4 space-y-2">
@@ -97,7 +97,7 @@
         <!-- Right Content - Image with Card Reveal Animation -->
         <div class="lg:w-1/2 relative card-reveal delay-200">
     <div class="rounded-lg shadow-2xl overflow-hidden">
-      <img :src="firstImage" alt="Airline Booking Payment Processing" class="w-full h-[800px] object-cover" />
+      <img :src="firstImage" alt="Franchise Payment Processing" class="w-full h-[800px] object-cover" />
     </div>
   
   
@@ -107,15 +107,15 @@
         </div>
       </div>
   
-      <!-- Airline Booking Merchant Accounts Section -->
+      <!-- Franchise Merchant Accounts Section -->
       <div class="container mx-auto px-6 py-20 mt-8">
         <!-- Section Header -->
         <div class="text-center mb-16 scroll-reveal opacity-0">
           <span class="inline-block text-indigo-600 font-semibold mb-4 tracking-wider text-sm uppercase scroll-reveal opacity-0" style="animation-delay: 0.2s; color: #973131;">
-            Get Started with Credit Monitoring Payment Processing
+            Get Started with Franchise Payment Processing
           </span>
           <h2 class="text-4xl lg:text-5xl font-bold mb-6 scroll-reveal opacity-0" style="animation-delay: 0.4s;">
-            Set Up Your Merchant Account in Four Easy Steps
+            Follow these simple steps to implement unified payment processing across your franchise
           </h2>
         </div>
         
@@ -129,9 +129,9 @@
                 <div class="text-4xl font-bold" style="color: #973131;">1</div>
               </div>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-gray-800">Complete an Online Application</h3>
+            <h3 class="text-xl font-bold mb-3 text-gray-800">Complete merchant application</h3>
             <p class="text-gray-700">
-                Start your journey with a simple online application process for your credit monitoring business.
+              Begin with our streamlined application process designed for franchise businesses.
             </p>
           </div>
           
@@ -143,9 +143,9 @@
                 <div class="text-4xl font-bold" style="color: #2196F3;">2</div>
               </div>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-gray-800">Submit Necessary Documentation</h3>
+            <h3 class="text-xl font-bold mb-3 text-gray-800">Set up multi-location processing</h3>
             <p class="text-gray-700">
-                Provide the required documents to support your credit monitoring merchant account application.
+              Implement unified payment systems across all your franchise locations.
             </p>
           </div>
           
@@ -157,9 +157,9 @@
                 <div class="text-4xl font-bold" style="color: #9C27B0;">3</div>
               </div>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-gray-800">Work with Our Underwriting Team</h3>
+            <h3 class="text-xl font-bold mb-3 text-gray-800">Configure reporting tools</h3>
             <p class="text-gray-700">
-                Our expert team will guide you through the underwriting process for credit monitoring businesses.
+              Set up comprehensive reporting and analytics for your entire franchise network.
             </p>
           </div>
           
@@ -171,15 +171,15 @@
                 <div class="text-4xl font-bold" style="color: #4CAF50;">4</div>
               </div>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-gray-800">Start Processing Payments</h3>
+            <h3 class="text-xl font-bold mb-3 text-gray-800">Start processing payments</h3>
             <p class="text-gray-700">
-                Begin accepting payments for your credit monitoring services and watch your business thrive.
+              Begin accepting payments with consistent processing across all locations. Focus on growing your franchise while we handle the complexities of payment processing.
             </p>
           </div>
         </div>
       </div>
   
-      <!-- High-Risk Designation Section -->
+      <!-- Franchise Payment Solutions Section -->
       <div class="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
         <!-- Decorative elements -->
         <div class="absolute top-0 right-0 w-64 h-64 bg-red-100 rounded-full opacity-50 transform translate-x-1/3 -translate-y-1/3"></div>
@@ -189,9 +189,9 @@
           <div class="max-w-7xl mx-auto">
             <!-- Section Header -->
             <div class="text-center mb-16">
-              <span class="inline-block bg-red-50 text-custom-red px-4 py-2 rounded-full font-medium text-sm uppercase tracking-wide mb-4">Understanding Industry Challenges</span>
+              <span class="inline-block bg-red-50 text-custom-red px-4 py-2 rounded-full font-medium text-sm uppercase tracking-wide mb-4">Understanding Industry Solutions</span>
               <h2 class="text-4xl lg:text-5xl font-bold mb-6" style="color: #973131;">
-                Understanding High-Risk Designation for Credit Monitoring Merchant Accounts
+                Why Choose Hurricane Payments for Your Franchise Payment Processing?
               </h2>
               <div class="w-24 h-1 bg-custom-red mx-auto rounded-full mb-8"></div>
             </div>
@@ -200,12 +200,12 @@
               <!-- Left Content: Image with Effects -->
               <div class="relative order-2 lg:order-1">
                 <div class="relative z-10 rounded-xl overflow-hidden shadow-2xl transition duration-500 transform hover:scale-[1.02]">
-                  <img :src="thirdImage" alt="Airline Booking High-Risk Merchant Services" class="w-full h-[800px] object-cover" />
+                  <img :src="thirdImage" alt="Franchise Payment Processing Solutions" class="w-full h-[800px] object-cover" />
                   <div class="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
                   <div class="absolute bottom-0 left-0 w-full p-8">
                     <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
-                      <h3 class="text-xl font-bold mb-2 text-white">Expert Solutions for High-Risk Merchants</h3>
-                      <p class="text-white/90">Specialized processing for Credit Monitoring businesses</p>
+                      <h3 class="text-xl font-bold mb-2 text-white">Expert Solutions for Franchise Businesses</h3>
+                      <p class="text-white/90">Specialized processing for multi-location operations</p>
                     </div>
                   </div>
                 </div>
@@ -215,12 +215,13 @@
                 <div class="absolute -z-20 -inset-8 bg-gradient-to-br from-blue-200 to-indigo-100 rounded-xl transform -rotate-2 blur-sm"></div>
               </div>
               
+              <!-- Right Content: Text with Card Design -->
               <div class="order-1 lg:order-2">
                 <div class="space-y-8">
                   <div class="bg-white rounded-xl p-8 shadow-xl transform transition hover:shadow-2xl duration-500 border-l-4 border-custom-red">
-                    <h3 class="text-2xl font-bold mb-4" style="color: #973131;">High-risk merchants require specialized payment processors</h3>
+                    <h3 class="text-2xl font-bold mb-4" style="color: #973131;">Comprehensive Franchise Payment Processing</h3>
                     <p class="text-gray-700 leading-relaxed">
-                        Being labeled as a high-risk merchant necessitates partnering with a payment processor experienced in high-risk accounts. Avoid disruptions by choosing Hurricane Payments, a leader in high-risk merchant account solutions for the credit monitoring industry.
+                      Hurricane Payments brings extensive experience in multi-location payment processing, with solutions designed specifically for franchise operations. Through our partnerships with over 20 financial institutions, we provide the infrastructure needed to manage payments across your entire franchise network.
                     </p>
                   </div>
                   
@@ -231,9 +232,9 @@
                     </div>
                     
                     <div class="relative z-10">
-                      <h3 class="text-2xl font-bold mb-4 text-white">Choosing the Right Airlines & Booking Payment Processor</h3>
+                      <h3 class="text-2xl font-bold mb-4 text-white">Franchise Payment Solutions</h3>
                       <p class="text-gray-300 leading-relaxed mb-6">
-                        Securing the right credit monitoring payment processor is crucial for businesses in the credit monitoring industry to avoid account closures and fund holds. Learn how Hurricane Payments can provide the stable, high-risk processing account your business needs for uninterrupted sales and growth.
+                        At Hurricane Payments, we understand that franchise businesses need sophisticated payment systems. Our services include multi-location processing, centralized reporting, standardized payment operations, and comprehensive analytics to help you manage your franchise network effectively.
                       </p>
                       
                       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
@@ -243,7 +244,7 @@
                               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                             </svg>
                           </div>
-                          <span>Industry-Specific Compliance</span>
+                          <span>Multi-Location Management</span>
                         </div>
                         
                         <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20 flex items-center">
@@ -252,7 +253,7 @@
                               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                             </svg>
                           </div>
-                          <span>Chargeback Protection</span>
+                          <span>Centralized Reporting</span>
                         </div>
                         
                         <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20 flex items-center">
@@ -261,7 +262,7 @@
                               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
                             </svg>
                           </div>
-                          <span>Competitive Processing Rates</span>
+                          <span>Standardized Operations</span>
                         </div>
                         
                         <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20 flex items-center">
@@ -270,11 +271,9 @@
                               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                             </svg>
                           </div>
-                          <span>Fast Approval Process</span>
+                          <span>Scalable Solutions</span>
                         </div>
                       </div>
-                      
-                   
                       
                      
                     </div>
@@ -303,7 +302,7 @@
                       </svg>
                     </div>
                   </div>
-                  <h3 class="text-xl font-bold mb-4 text-center">Adult Entertainment Merchant Accounts</h3>
+                  <h3 class="text-xl font-bold mb-4 text-center">Franchise Merchant Accounts</h3>
                   <ul class="ml-5 space-y-2">
                     <li class="flex items-start">
                       <span class="text-custom-red mr-2">•</span>
@@ -315,7 +314,7 @@
                     </li>
                     <li class="flex items-start">
                       <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">Fast Adult Entertainment Account Approval</span>
+                      <span class="text-gray-700">Fast Franchise Account Approval</span>
                     </li>
                     <li class="flex items-start">
                       <span class="text-custom-red mr-2">•</span>
@@ -323,11 +322,11 @@
                     </li>
                     <li class="flex items-start">
                       <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">E-Commerce and Retail Adult Entertainment</span>
+                      <span class="text-gray-700">E-Commerce and Retail Franchise</span>
                     </li>
                     <li class="flex items-start">
                       <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">B2B Adult Entertainment Vendors Supported</span>
+                      <span class="text-gray-700">B2B Franchise Vendors Supported</span>
                     </li>
                   </ul>
                 </div>
@@ -365,7 +364,7 @@
                     </li>
                     <li class="flex items-start">
                       <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">B2B-Level I/II/III Data Discounts</span>
+                      <span class="text-gray-700">B2B-Level II/III Data Discounts</span>
                     </li>
                     <li class="flex items-start">
                       <span class="text-custom-red mr-2">•</span>
@@ -429,34 +428,46 @@
         </div>
   
   
-      <!-- Airline & Booking Payment Gateway Section -->
+      <!-- Franchise Payment Gateway Section -->
       <div id="payment-gateway" class="bg-gradient-to-r from-gray-50 to-red-50 py-16">
         <div class="max-w-7xl mx-auto px-4">
-          <h2 class="text-4xl font-bold text-center mb-10" style="color: #973131;">Seamless Payment Processing for Credit Monitoring Businesses</h2>
+          <h2 class="text-4xl font-bold text-center mb-10" style="color: #973131;">Managing Multi-Location Payment Processing</h2>
           
           <div class="bg-white p-10 rounded-xl shadow-lg mb-10 relative overflow-hidden">
             <div class="absolute top-0 right-0 h-32 w-32 bg-red-50 rounded-full -mt-10 -mr-10"></div>
             
             <div class="flex flex-col md:flex-row items-start gap-12">
-    <div class="md:w-1/2 relative z-10 self-center">
-      <p class="text-2xl text-gray-700 leading-relaxed">
-  
-        Our credit monitoring merchant accounts are designed to provide smooth, reliable payment processing for your business. With our tailored solutions, you can focus on growing your credit monitoring platform while we handle the complexities of payment processing.
+              <div class="md:w-1/2 relative z-10 self-center">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                  Success in franchise operations requires payment processing solutions that can handle multiple locations while maintaining consistency and control. You need a partner who can provide comprehensive support, including multi-location processing, centralized reporting, and scalable solutions.
                 </p>
                 
-             
+                <div class="mt-8 p-6 bg-gradient-to-r from-gray-900 to-gray-800 rounded-lg shadow-lg text-white relative overflow-hidden">
+                  <!-- Subtle pattern overlay -->
+                  <div class="absolute inset-0 opacity-10">
+                    <div class="absolute inset-0" :style="{ backgroundImage: 'url(\'data:image/svg+xml,%3Csvg width=\\\'20\\\' height=\\\'20\\\' viewBox=\\\'0 0 20 20\\\' xmlns=\\\'http://www.w3.org/2000/svg\\\'%3E%3Crect width=\\\'2\\\' height=\\\'2\\\' fill=\\\'%23ffffff\\\' fill-opacity=\\\'0.4\\\'/%3E%3C/svg%3E\')' }"></div>
+                  </div>
+                  
+                  <div class="relative z-10">
+                    <h3 class="text-2xl font-bold mb-4 text-white">Complete Payment Solutions for Franchises</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                      Our franchise payment solutions include multi-location processing, centralized reporting, and comprehensive analytics. Focus on growing your franchise while we handle the complexities of payment processing across your entire network.
+                    </p>
+                  </div>
+                </div>
               </div>
               
               <div class="md:w-1/2">
                 <div class="relative">
                   <!-- Main image with effects -->
                   <div class="rounded-lg overflow-hidden shadow-lg relative z-20">
-                    <img :src="fourthImage" alt="Airline Booking Payment Gateway" class="w-full h-auto transform transition hover:scale-105 duration-500">
+                    <img :src="fourthImage" alt="Franchise Payment Processing" class="w-full h-auto transform transition hover:scale-105 duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-6">
-                    
+                      <h3 class="text-xl font-bold text-white mb-2">Secure Multi-Location Transactions</h3>
                       <div class="flex items-center">
-                     
+                        <div class="w-3 h-3 rounded-full bg-green-500 mr-2 animate-pulse"></div>
+                        <span class="text-white font-medium">Centralized Management</span>
                       </div>
                     </div>
                   </div>
@@ -467,25 +478,25 @@
                   
                   <!-- Features list that overlaps with image -->
                   <div class="absolute -bottom-10 -right-10 bg-white rounded-lg shadow-xl p-6 z-30 max-w-xs transform rotate-3">
-                    <h4 class="font-bold mb-3 text-gray-800">Gateway Features:</h4>
+                    <h4 class="font-bold mb-3 text-gray-800">Franchise Features:</h4>
                     <ul class="space-y-2">
                       <li class="flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span class="text-gray-700">Fraud Protection</span>
+                        <span class="text-gray-700">Unified Reporting</span>
                       </li>
                       <li class="flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span class="text-gray-700">Real-time Reporting</span>
+                        <span class="text-gray-700">Consistent Processing</span>
                       </li>
                       <li class="flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span class="text-gray-700">Recurring Billing</span>
+                        <span class="text-gray-700">Network Management</span>
                       </li>
                     </ul>
                   </div>
@@ -502,7 +513,7 @@
       </div>
   
       <!-- CTA Section -->
-      <CtaSection subheading="Apply for your Credit Education & Repair industry merchant account today and experience hassle-free payment processing." />
+      <CtaSection subheading="Apply for your franchise business merchant account today and experience streamlined payment processing across all your locations." />
     </MainLayout>
   </template>
   
@@ -512,10 +523,10 @@
   import CtaSection from '../../components/CtaSection.vue';
   
   // Import images 
-  import firstImage from '@/../images/creditmonitor(2).jpg';
-  import secondImage from '@/../images/airlinebooking(2).jpg';
-  import thirdImage from '@/../images/creditmonitor.jpg';
-  import fourthImage from '@/../images/creditmonitor(3).jpg';
+  import firstImage from '@/../images/franchise.jpg';
+  import secondImage from '@/../images/franchise.jpg';
+  import thirdImage from '@/../images/franchise.jpg';
+  import fourthImage from '@/../images/franchise.jpg';
   
   // Function to scroll to next section
   const scrollToNextSection = () => {
