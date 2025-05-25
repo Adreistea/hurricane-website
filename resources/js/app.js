@@ -405,15 +405,92 @@ const router = createRouter({
             name: 'PaydayLending',
             component: () => import('./pages/industries/Payday_Lender.vue')
         },
-        
-        
-        
-        
-     
-        
-        
-        
-        
+        {
+            path: '/industries/peer-to-peer-lending',
+            name: 'PeerToPeerLending',
+            component: () => import('./pages/industries/P2P_Lending.vue')
+        },
+        {
+            path: '/industries/pharmacy',
+            name: 'Pharmacy',
+            component: () => import('./pages/industries/Pharmacy.vue')
+        },
+        {
+            path: '/industries/precious-metals-jewelry',
+            name: 'PreciousMetalsJewelry',
+            component: () => import('./pages/industries/Precious_Metal_Jewelry.vue')
+        },
+        {
+            path: '/industries/property-management',
+            name: 'PropertyManagement',
+            component: () => import('./pages/industries/Property_Management.vue')
+        },
+        {
+            path: '/industries/restaurant',
+            name: 'Restaurant',
+            component: () => import('./pages/industries/Restaurant.vue')
+        },
+        {
+            path: '/industries/shopping-membership-club',
+            name: 'ShoppingMembershipClub',
+            component: () => import('./pages/industries/Shopping_Membership_Club.vue')
+        },
+        {
+            path: '/industries/skill-based-gaming',
+            name: 'SkillbasedGaming',
+            component: () => import('./pages/industries/Skillbased_Gaming.vue')
+        },
+        {
+            path: '/industries/sweepstakes',
+            name: 'Sweepstakes',
+            component: () => import('./pages/industries/Sweepstake.vue')
+        },
+        {
+            path: '/industries/skin-hair-care',
+            name: 'SkinHairCare',
+            component: () => import('./pages/industries/Skin_Hair_Care.vue')
+        },
+        {
+            path: '/industries/social-gaming',
+            name: 'SocialGaming',
+            component: () => import('./pages/industries/Social_Gaming.vue')
+        },
+        {
+            path: '/industries/sport-betting',
+            name: 'SportsBetting',
+            component: () => import('./pages/industries/Sports_Betting.vue')
+        },
+        {
+            path: '/industries/tech-support',
+            name: 'TechSupport',
+            component: () => import('./pages/industries/Tech_Support.vue')
+        },
+        {
+            path: '/industries/telemedicine',
+            name: 'Telemedicine',
+            component: () => import('./pages/industries/Telemedicine.vue')
+        },
+        {
+            path: '/industries/trading-platforms',
+            name: 'TradingPlatform',
+            component: () => import('./pages/industries/Trading_Platform.vue')
+        },
+        {
+            path: '/industries/travel',
+            name: 'Travel',
+            component: () => import('./pages/industries/Travel.vue')
+        },
+        {
+            path: '/industries/vape',
+            name: 'Vape',
+            component: () => import('./pages/industries/Vape.vue')
+        },
+        {
+            path: '/industries/web-design-seo',
+            name: 'Web',
+            component: () => import('./pages/industries/Web.vue')
+        }
+  
         
     ],
     scrollBehavior(to, from, savedPosition) {
