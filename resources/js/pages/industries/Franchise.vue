@@ -525,8 +525,8 @@
   // Import images 
   import firstImage from '@/../images/franchise.jpg';
   import secondImage from '@/../images/franchise.jpg';
-  import thirdImage from '@/../images/franchise.jpg';
-  import fourthImage from '@/../images/franchise.jpg';
+  import thirdImage from '@/../images/franchise(2).jpg';
+  import fourthImage from '@/../images/franchise(4).png';
   
   // Function to scroll to next section
   const scrollToNextSection = () => {
