@@ -656,7 +656,7 @@ import CtaSection from '../../components/CtaSection.vue';
 // Import images 
 import propertyManagementImg from '@/../images/propertymanagement.jpg';
 import propertyManagement2Img from '@/../images/propertymanagement(2).jpg';
-import franchise4Img from '@/../images/franchise(4).jpg';
+import franchise4Img from '@/../images/franchise(4).png';
   
   // Function to scroll to next section
   const scrollToNextSection = () => {
