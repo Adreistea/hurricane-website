@@ -499,11 +499,6 @@ const router = createRouter({
             path: '/industries/property-management',
             name: 'PropertyManagement',
             component: () => import('./pages/industries/Property_Management.vue')
-        },
-        {
-            path: '/industries/fire-arms',
-            name: 'FireArms',
-            component: () => import('./pages/industries/Firearms.vue')
         }
         
     ],
