@@ -302,7 +302,7 @@
                     </svg>
                   </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-center">Adult Entertainment Merchant Accounts</h3>
+                <h3 class="text-xl font-bold mb-4 text-center">Business Opportunities Merchant Accounts</h3>
                 <ul class="ml-5 space-y-2">
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
@@ -314,7 +314,7 @@
                   </li>
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">Fast Adult Entertainment Account Approval</span>
+                    <span class="text-gray-700">Fast Business Opportunities Account Approval</span>
                   </li>
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
@@ -322,11 +322,11 @@
                   </li>
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">E-Commerce and Retail Adult Entertainment</span>
+                    <span class="text-gray-700">E-Commerce and Retail Business Opportunities</span>
                   </li>
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
-                    <span class="text-gray-700">B2B Adult Entertainment Vendors Supported</span>
+                    <span class="text-gray-700">B2B Business Opportunities Vendors Supported</span>
                   </li>
                 </ul>
               </div>
