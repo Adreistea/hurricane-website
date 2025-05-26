@@ -344,6 +344,38 @@
           
           <!-- Onboarding Form -->
           <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 transition-all duration-500">
+            <!-- Navigation Buttons -->
+            <div v-if="currentStep < 8" class="flex justify-between mb-6">
+              <button 
+                v-if="currentStep > 1" 
+                type="button" 
+                @click="prevStep" 
+                class="px-6 py-2 border border-gray-300 text-gray-700 font-medium rounded-md hover:bg-gray-50 transition-colors duration-300"
+              >
+                Previous
+              </button>
+              <div v-else></div>
+              
+              <button 
+                v-if="currentStep < totalSteps" 
+                type="button" 
+                @click="nextStep" 
+                class="px-8 py-3 bg-custom-red text-white font-medium rounded-md shadow-md hover:bg-red-800 transition-colors duration-300"
+                style="background-color: #973131 !important; color: white !important;"
+              >
+                {{ currentStep === 7 ? 'Submit Application' : 'Next' }}
+              </button>
+              <button 
+                v-else 
+                type="submit" 
+                class="px-8 py-3 bg-custom-red text-white font-medium rounded-md shadow-md hover:bg-red-800 transition-colors duration-300"
+                :disabled="isSubmitting"
+                style="background-color: #973131 !important; color: white !important;"
+              >
+                {{ isSubmitting ? 'Submitting...' : 'Finish' }}
+              </button>
+            </div>
+            
             <form @submit.prevent="submitForm">
               <!-- Step 1: Business Information -->
               <div v-if="currentStep === 1" class="animate-fade-in">
@@ -2198,6 +2230,229 @@
                       </div>
                     </div>
                     
+                    <!-- Licensed Professional Service-specific questions -->
+                    <div v-else-if="form.industry_type === 'Licensed Professional Service'" class="space-y-12">
+                      <!-- Question 1 - Client Management -->
+                      <div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">How do you currently manage client information and scheduling?</h4>
+                        <p class="text-gray-600 mb-4">Understanding your current setup helps us provide the best solution</p>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div 
+                            v-for="option in [
+                              'Manual client records and paper scheduling',
+                              'Basic software but it\'s not integrated with payments',
+                              'Multiple systems that don\'t communicate well',
+                              'We struggle with appointment scheduling',
+                              'We need better client tracking and history'
+                            ]" 
+                            :key="option"
+                            @click="form.professional_client_management = option"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
+                            :class="form.professional_client_management === option ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="flex items-center">
+                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
+                                :class="form.professional_client_management === option ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              >
+                                <div v-if="form.professional_client_management === option" class="w-3 h-3 rounded-full bg-white"></div>
+                              </div>
+                              <div class="font-medium">{{ option }}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Question 2 - Payment Processing -->
+                      <div v-if="form.professional_client_management">
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">What challenges do you face with payment processing?</h4>
+                        <p class="text-gray-600 mb-4">Select all that apply to your professional practice</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                          <div 
+                            v-for="challenge in [
+                              'High processing fees cutting into margins',
+                              'Difficulty with recurring billing',
+                              'Complex insurance payment processing',
+                              'Limited payment options for clients',
+                              'Slow settlement times',
+                              'Payment system not integrated with practice management'
+                            ]" 
+                            :key="challenge"
+                            @click="toggleProfessionalChallenge(challenge)"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all flex items-center"
+                            :class="form.professional_challenges && form.professional_challenges.includes(challenge) ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="w-5 h-5 rounded border mr-3 flex items-center justify-center"
+                              :class="form.professional_challenges && form.professional_challenges.includes(challenge) ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                            >
+                              <svg v-if="form.professional_challenges && form.professional_challenges.includes(challenge)" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                              </svg>
+                            </div>
+                            <div class="font-medium">{{ challenge }}</div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Question 3 - Client Communication -->
+                      <div v-if="form.professional_challenges && form.professional_challenges.length > 0">
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">How do you currently handle client communication and reminders?</h4>
+                        <p class="text-gray-600 mb-4">Effective client communication can reduce no-shows and improve client satisfaction</p>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div 
+                            v-for="method in [
+                              'Manual phone calls for reminders',
+                              'Email but not automated',
+                              'Text messaging but not integrated with our system',
+                              'We struggle with consistent follow-ups',
+                              'We use a third-party system but it\'s not ideal'
+                            ]" 
+                            :key="method"
+                            @click="form.professional_communication = method"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
+                            :class="form.professional_communication === method ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="flex items-center">
+                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
+                                :class="form.professional_communication === method ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              >
+                                <div v-if="form.professional_communication === method" class="w-3 h-3 rounded-full bg-white"></div>
+                              </div>
+                              <div class="font-medium">{{ method }}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Question 4 - Practice Management -->
+                      <div v-if="form.professional_communication">
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">What features would be most valuable in a practice management system?</h4>
+                        <p class="text-gray-600 mb-4">Select all that would benefit your professional practice</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                          <div 
+                            v-for="feature in [
+                              'Integrated payment processing',
+                              'Automated appointment reminders',
+                              'Client record management',
+                              'Electronic document signing',
+                              'Reporting and analytics',
+                              'Online booking options for clients'
+                            ]" 
+                            :key="feature"
+                            @click="toggleProfessionalFeature(feature)"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all flex items-center"
+                            :class="form.professional_features && form.professional_features.includes(feature) ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="w-5 h-5 rounded border mr-3 flex items-center justify-center"
+                              :class="form.professional_features && form.professional_features.includes(feature) ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                            >
+                              <svg v-if="form.professional_features && form.professional_features.includes(feature)" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                              </svg>
+                            </div>
+                            <div class="font-medium">{{ feature }}</div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Question 5 - Complete Solution -->
+                      <div v-if="form.professional_features && form.professional_features.length > 0">
+                        <h4 class="text-xl font-bold text-gray-800 mb-3">Would a complete solution with practice management, client communication, and 0% payment processing fees help your professional practice grow?</h4>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div 
+                            v-for="response in [
+                              'Yes, that would streamline our entire operation',
+                              'The 0% processing fees would be a significant saving',
+                              'We need better client management most of all',
+                              'Integration of all systems would save us time',
+                              'We\'d need to see how it works for our specific practice'
+                            ]" 
+                            :key="response"
+                            @click="form.professional_solution_response = response"
+                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
+                            :class="form.professional_solution_response === response ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
+                          >
+                            <div class="flex items-center">
+                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
+                                :class="form.professional_solution_response === response ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
+                              >
+                                <div v-if="form.professional_solution_response === response" class="w-3 h-3 rounded-full bg-white"></div>
+                              </div>
+                              <div class="font-medium">{{ response }}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Custom Bundle Offer for Professional Service -->
+                      <div v-if="form.professional_solution_response" class="bg-gradient-to-r from-red-100 to-yellow-50 rounded-lg border border-yellow-200 p-5 relative">
+                        <div class="absolute -top-3 -left-3">
+                          <div class="bg-yellow-400 px-3 py-1 text-base font-bold uppercase tracking-wide text-red-900 inline-block shadow-sm transform -rotate-12">
+                            SPECIAL OFFER
+                          </div>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-red-800 mt-6 mb-2">Complete POS Solution Package</h3>
+                        <div class="flex items-baseline mb-4">
+                          <span class="text-2xl font-bold text-gray-900">$999.00</span>
+                          <span class="ml-2 text-red-600 line-through text-lg">$2,388.00</span>
+                          <span class="ml-2 text-gray-500">or $49/Month</span>
+                        </div>
+                        
+                        <div class="space-y-1 mb-4">
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>High-Performance Local Server</span>
+                          </div>
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>15" Touchscreen POS Terminal</span>
+                          </div>
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Thermal Receipt Printer & Credit Card Reader</span>
+                          </div>
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Client Management System & Scheduling Tools</span>
+                          </div>
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Professional Installation & Staff Training</span>
+                          </div>
+                          <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>2-Day Hardware Replacement Warranty</span>
+                          </div>
+                        </div>
+                        
+                        <p class="text-gray-700 text-sm mb-4">
+                          Complete solution with all the hardware and practice management tools you need for your professional service - plus 0% credit card processing with Hurricane Pay.
+                        </p>
+                        
+                        <div class="text-right">
+                          <button 
+                            @click="selectValueBundle"
+                            type="button"
+                            class="px-4 py-2 bg-red-600 text-white font-medium rounded-md hover:bg-red-700 transition-colors"
+                          >
+                            Select This Bundle
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    
                     <!-- Default questions for other business types -->
                     <div v-else class="space-y-12">
                       <!-- Generic Question 1 -->
@@ -2814,10 +3069,10 @@
                 </div>
               </div>
               
-              <!-- Step 7: Bundle Selection -->
+              <!-- Step 7: Checkout -->
               <div v-if="currentStep === 7" class="animate-fade-in">
                 <div class="flex justify-between items-center mb-6">
-                  <h3 class="text-2xl font-bold text-gray-800">Bundle Selection Details</h3>
+                  <h3 class="text-2xl font-bold text-gray-800">Checkout</h3>
                   <button 
                     type="button" 
                     @click="goBackToProducts" 
@@ -3299,37 +3554,7 @@
                         </div>
                       </div>
               
-              <!-- Navigation Buttons -->
-              <div v-if="currentStep < 8" class="flex justify-between mt-8">
-                <button 
-                  v-if="currentStep > 1" 
-                  type="button" 
-                  @click="prevStep" 
-                  class="px-6 py-2 border border-gray-300 text-gray-700 font-medium rounded-md hover:bg-gray-50 transition-colors duration-300"
-                >
-                  Previous
-                </button>
-                <div v-else></div>
-                
-                <button 
-                  v-if="currentStep < totalSteps" 
-                  type="button" 
-                  @click="nextStep" 
-                  class="px-8 py-3 bg-custom-red text-white font-medium rounded-md shadow-md hover:bg-red-800 transition-colors duration-300"
-                  style="background-color: #973131 !important; color: white !important;"
-                >
-                  {{ currentStep === 7 ? 'Submit Application' : 'Next' }}
-                </button>
-                <button 
-                  v-else 
-                  type="submit" 
-                  class="px-8 py-3 bg-custom-red text-white font-medium rounded-md shadow-md hover:bg-red-800 transition-colors duration-300"
-                  :disabled="isSubmitting"
-                  style="background-color: #973131 !important; color: white !important;"
-                >
-                  {{ isSubmitting ? 'Submitting...' : 'Finish' }}
-                </button>
-                          </div>
+
             </form>
                         </div>
                       </div>
@@ -3356,7 +3581,7 @@ const steps = [
   'Owner Information', 
   'System Configuration',
   'Device Selection',
-  'Bundle Selection',
+  'Checkout',
   'Confirmation'
 ];
 const totalSteps = 8;
@@ -3546,6 +3771,13 @@ const form = ref({
   online_challenges: [],
   online_order_volume: '',
   online_solution_response: '',
+  
+  // Additional fields for professional service
+  professional_client_management: '',
+  professional_challenges: [],
+  professional_communication: '',
+  professional_features: [],
+  professional_solution_response: '',
   
   // Signature fields
   terms_agreement: false,
@@ -4042,12 +4274,15 @@ function buyNowBundle() {
   // We don't want to automatically go to step 8, so no navigation here
 }
 
-// Function to add hardware to cart
+// Function to add hardware to cart with quantity
 function addHardwareToCart(hardware) {
+  // The hardware object now includes quantity from the modal
+  const unitName = hardware.quantity > 1 ? 'units' : 'unit';
+  
   addToCart({
-    name: hardware.name,
+    name: hardware.quantity > 1 ? `${hardware.name} (${hardware.quantity} ${unitName})` : hardware.name,
     price: hardware.price,
-    quantity: 1
+    quantity: hardware.quantity || 1
   });
 }
 
@@ -4185,7 +4420,7 @@ function selectValueBundle() {
   });
 }
 
-// Add new function to select a bundle and transfer it to the Bundle Selection step
+// Add new function to select a bundle and transfer it to the Checkout step
 function selectBundleAndTransfer(device, paymentOption) {
   // First set the device (this will also add to cart)
   selectDevice(device, paymentOption);
@@ -4249,6 +4484,31 @@ function toggleOnlineChallenge(challenge) {
     form.value.online_challenges = form.value.online_challenges.filter(c => c !== challenge);
   } else {
     form.value.online_challenges.push(challenge);
+  }
+}
+
+// Add functions for professional service type
+function toggleProfessionalChallenge(challenge) {
+  if (!form.value.professional_challenges) {
+    form.value.professional_challenges = [];
+  }
+  
+  if (form.value.professional_challenges.includes(challenge)) {
+    form.value.professional_challenges = form.value.professional_challenges.filter(c => c !== challenge);
+  } else {
+    form.value.professional_challenges.push(challenge);
+  }
+}
+
+function toggleProfessionalFeature(feature) {
+  if (!form.value.professional_features) {
+    form.value.professional_features = [];
+  }
+  
+  if (form.value.professional_features.includes(feature)) {
+    form.value.professional_features = form.value.professional_features.filter(f => f !== feature);
+  } else {
+    form.value.professional_features.push(feature);
   }
 }
 
@@ -4593,9 +4853,9 @@ function getRecommendationDetails() {
   return 'a complete POS solution with hardware, software, professional installation, and comprehensive training - plus 0% credit card processing with Hurricane Pay.';
 }
 
-// Function to skip to confirmation step
+// Function to skip to the next step (Owner Information)
 function skipToConfirmation() {
-  currentStep.value = 8;
+  currentStep.value = 4;
   window.scrollTo(0, 0);
 }
 
@@ -4831,6 +5091,9 @@ const getOriginalTotalPrice = computed(() => {
     currency: 'USD'
   }).format(totalOriginalPrice);
 });
+
+// Verify component is loading correctly
+console.log("Merchant Onboarding Component loaded successfully");
 </script>
 
 <style scoped>
