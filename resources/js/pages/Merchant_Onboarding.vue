@@ -4,19 +4,24 @@
     <!-- Bundle Details Modal - Moved outside of steps to be accessible from any step -->
     <div 
       v-if="showBundleModal" 
-      class="fixed inset-0 z-50 flex items-center justify-center px-4 py-5 overflow-auto modal-container" 
+      class="fixed inset-0 z-50 flex items-center justify-center px-4 py-5 overflow-hidden modal-container" 
       style="background-color: rgba(0, 0, 0, 0.3); backdrop-filter: blur(2px);"
-      @click.self="showBundleModal = false"
+      @click.self="closeBundleModal"
+      @wheel.prevent
+      @touchmove.prevent
+      @scroll.prevent
     >
       <!-- Modal content -->
       <div 
         class="bg-white rounded-lg shadow-2xl overflow-hidden max-w-5xl w-full max-h-[90vh] relative z-[100] border border-gray-200 modal-content"
-        style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);"
+        @click.stop
+        @wheel.stop
+        @touchmove.stop
       >
         <!-- Modal header -->
         <div class="flex justify-between items-center p-4 border-b border-gray-200">
           <h3 class="text-xl font-bold text-gray-800">Bundle Details - {{ selectedBundleDetails?.name }}</h3>
-          <button @click.stop.prevent="showBundleModal = false" class="text-gray-400 hover:text-gray-600 transition-colors" type="button">
+          <button @click.stop.prevent="closeBundleModal" class="text-gray-400 hover:text-gray-600 transition-colors" type="button">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
@@ -193,6 +198,128 @@
             </button>
             <!-- Removed Buy Now button -->
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hardware Details Modal -->
+    <div 
+      v-if="showHardwareModal" 
+      class="fixed inset-0 z-50 flex items-center justify-center px-4 py-5 overflow-hidden modal-container" 
+      style="background-color: rgba(0, 0, 0, 0.3); backdrop-filter: blur(2px);"
+      @click.self="closeHardwareModal"
+      @wheel.prevent
+      @touchmove.prevent
+      @scroll.prevent
+    >
+      <!-- Modal content -->
+      <div 
+        class="bg-white rounded-lg shadow-2xl overflow-hidden max-w-5xl w-full max-h-[90vh] relative z-[100] border border-gray-200 modal-content"
+        @click.stop
+        @wheel.stop
+        @touchmove.stop
+      >
+        <!-- Modal header -->
+        <div class="flex justify-between items-center p-4 border-b border-gray-200">
+          <h3 class="text-xl font-bold text-gray-800">{{ selectedHardware?.name || 'Hardware Details' }}</h3>
+          <button @click.stop.prevent="closeHardwareModal" class="text-gray-400 hover:text-gray-600 transition-colors" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="overflow-y-auto max-h-[calc(90vh-10rem)]">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+            <!-- Product image -->
+            <div class="bg-gray-50 p-4 rounded-lg flex items-center justify-center">
+              <template v-if="selectedHardware?.name === 'KP Thermal Printer'">
+                <img src="@/../images/KPThermal.png" :alt="selectedHardware?.name" class="h-64 object-contain">
+              </template>
+              <template v-else-if="selectedHardware?.name === 'Epson Kitchen Printer'">
+                <img src="@/../images/A7407925.png" :alt="selectedHardware?.name" class="h-64 object-contain">
+              </template>
+              <template v-else-if="selectedHardware?.name === 'Epson Label Printer'">
+                <img src="@/../images/A7407925.png" :alt="selectedHardware?.name" class="h-64 object-contain">
+              </template>
+              <template v-else-if="selectedHardware?.name === 'Kitchen Display Monitor 20&quot;'">
+                <img src="@/../images/ELO-refurbished KDS.png" :alt="selectedHardware?.name" class="h-64 object-contain">
+              </template>
+              <template v-else-if="selectedHardware?.name === 'Kitchen Armor Kitchen Display Monitor 22&quot;'">
+                <img src="@/../images/ELO-refurbished KDS.png" :alt="selectedHardware?.name" class="h-64 object-contain">
+              </template>
+              <template v-else>
+                <img src="@/../images/fourth.png" :alt="selectedHardware?.name" class="h-64 object-contain">
+              </template>
+            </div>
+            
+            <!-- Product details -->
+            <div class="flex flex-col">
+              <h1 class="text-2xl font-bold text-gray-800 mb-2">{{ selectedHardware?.name }}</h1>
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400">
+                  <svg v-for="i in 5" :key="i" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" :class="i <= 5 ? 'text-yellow-400' : 'text-gray-300'" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
+                <span class="text-blue-600 text-sm ml-2 hover:underline cursor-pointer">120+ ratings</span>
+              </div>
+              
+              <div class="border-t border-b border-gray-200 py-4 mb-4">
+                <div class="flex items-baseline mb-2">
+                  <span class="text-3xl font-bold text-gray-900">{{ getHardwareTotalPrice }}</span>
+                </div>
+                <div class="bg-green-100 text-green-800 inline-block px-2 py-1 rounded text-sm font-medium">
+                  Free Shipping
+                </div>
+              </div>
+              
+              <div class="space-y-4 mb-6">
+                <div>
+                  <h4 class="font-medium text-gray-900">Description</h4>
+                  <p class="text-gray-700 text-sm">High-quality hardware component for your POS system. Compatible with most major POS solutions. Designed for durability and reliability in demanding business environments.</p>
+                </div>
+                
+                <!-- Quantity selector -->
+                <div class="mt-6 pt-5 border-t border-gray-200">
+                  <div class="bg-gradient-to-r from-gray-50 to-gray-100 p-4 rounded-lg border border-gray-300 shadow-sm">
+                    <div class="flex flex-col gap-3">
+                      <div>
+                        <label for="hardwareQuantity" class="block text-lg font-bold text-gray-900 mb-2 flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-custom-red" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                          </svg>
+                          Quantity:
+                        </label>
+                        <select 
+                          id="hardwareQuantity" 
+                          v-model="hardwareQuantity" 
+                          class="rounded-md border-gray-300 shadow-md focus:border-custom-red focus:ring focus:ring-custom-red focus:ring-opacity-30 w-full text-base font-medium py-2 bg-white hover:bg-gray-50 transition-colors"
+                        >
+                          <option v-for="i in 10" :key="i" :value="i">
+                            {{ i }} {{ i === 1 ? 'unit' : 'units' }} ({{ formatHardwarePrice(getHardwareUnitPrice * i) }})
+                          </option>
+                        </select>
+                      </div>
+                      <p class="text-sm text-gray-600 italic">Select the quantity required for your business</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="border-t border-gray-200 p-4 bg-gray-50 flex justify-end gap-4">
+          <button 
+            @click.stop="addHardwareWithQuantity" 
+            class="px-8 py-2 bg-custom-red text-white rounded-md font-medium hover:bg-red-700 transition-colors"
+            type="button"
+          >
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>
@@ -3043,6 +3170,7 @@
                 <AdditionalHardware 
                   :additional-hardware-options="additionalHardwareOptions"
                   @add-to-cart="addHardwareToCart"
+                  @open-hardware-modal="openHardwareModal"
                 />
 
                 <!-- Need assistance card -->
@@ -3566,7 +3694,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, nextTick, watch } from 'vue';
+import { ref, computed, onMounted, nextTick, watch, onUnmounted } from 'vue';
 import axios from 'axios';
 import NavBar from './NavBar.vue';
 import AppFooter from './AppFooter.vue';
@@ -4147,6 +4275,13 @@ function getBundlePrice(device) {
   return '$1,388.00';
 }
 
+// Function to close bundle modal
+function closeBundleModal() {
+  showBundleModal.value = false;
+  // Restore body scrolling when modal is closed
+  document.body.style.overflow = '';
+}
+
 // Function to add bundle to cart
 function addBundleToCart() {
   if (bundleQuantity.value <= 0) {
@@ -4165,7 +4300,7 @@ function addBundleToCart() {
       price: "$500.00",
       quantity: 1
     });
-    showBundleModal.value = false;
+    closeBundleModal();
     return;
   }
   
@@ -4184,7 +4319,7 @@ function addBundleToCart() {
     quantity: quantity
   });
   
-  showBundleModal.value = false;
+  closeBundleModal();
 }
 
 // Function to get bundle prices array based on bundle type
@@ -4269,7 +4404,7 @@ function buyNowBundle() {
   selectDevice(selectedBundleDetails.value.name, 'buy');
   
   // Close the modal
-  showBundleModal.value = false;
+  closeBundleModal();
   
   // We don't want to automatically go to step 8, so no navigation here
 }
@@ -4298,6 +4433,65 @@ const bundleItems = ref([
   { name: 'Installation', description: 'Professional on-site installation and setup' },
   { name: 'Training', description: 'Staff training on using the POS system' },
 ]);
+
+// Hardware Modal
+const showHardwareModal = ref(false);
+const selectedHardware = ref(null);
+const hardwareQuantity = ref(1);
+
+// Function to open hardware modal
+function openHardwareModal(hardware) {
+  selectedHardware.value = hardware;
+  hardwareQuantity.value = 1; // Reset to 1 when opening modal
+  showHardwareModal.value = true;
+  
+  // Prevent body scrolling when modal is open
+  document.body.style.overflow = 'hidden';
+}
+
+// Function to close hardware modal
+function closeHardwareModal() {
+  showHardwareModal.value = false;
+  // Restore body scrolling when modal is closed
+  document.body.style.overflow = '';
+}
+
+// Function to add hardware with quantity to cart
+function addHardwareWithQuantity() {
+  if (hardwareQuantity.value <= 0) {
+    alert('Please select at least 1 unit');
+    return;
+  }
+  
+  addHardwareToCart({
+    name: selectedHardware.value.name,
+    price: formatHardwarePrice(getHardwareUnitPrice.value * hardwareQuantity.value),
+    quantity: hardwareQuantity.value
+  });
+  
+  closeHardwareModal();
+}
+
+// Helper to get the hardware unit price as a number
+const getHardwareUnitPrice = computed(() => {
+  if (!selectedHardware.value) return 0;
+  
+  // Extract numeric value from price string (e.g., "$225.00" -> 225)
+  return parseFloat(selectedHardware.value.price.replace(/[^0-9.]/g, ''));
+});
+
+// Format hardware total price display
+const getHardwareTotalPrice = computed(() => {
+  return formatHardwarePrice(getHardwareUnitPrice.value * hardwareQuantity.value);
+});
+
+// Helper to format hardware price
+function formatHardwarePrice(price) {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD'
+  }).format(price);
+}
 
 // Function to go to a specific step
 function goToStep(step) {
@@ -5090,6 +5284,49 @@ const getOriginalTotalPrice = computed(() => {
     style: 'currency',
     currency: 'USD'
   }).format(totalOriginalPrice);
+});
+
+// Handle escape key to close bundle modal
+function handleBundleKeydown(event) {
+  if (event.key === 'Escape' && showBundleModal.value) {
+    closeBundleModal();
+  }
+}
+
+// Watch for bundle modal state changes to handle body scroll
+watch(showBundleModal, (newValue) => {
+  if (newValue) {
+    document.body.style.overflow = 'hidden';
+    document.addEventListener('keydown', handleBundleKeydown);
+  } else {
+    document.body.style.overflow = '';
+    document.removeEventListener('keydown', handleBundleKeydown);
+  }
+});
+
+// Handle escape key to close hardware modal
+function handleHardwareKeydown(event) {
+  if (event.key === 'Escape' && showHardwareModal.value) {
+    closeHardwareModal();
+  }
+}
+
+// Watch for hardware modal state changes to handle body scroll
+watch(showHardwareModal, (newValue) => {
+  if (newValue) {
+    document.body.style.overflow = 'hidden';
+    document.addEventListener('keydown', handleHardwareKeydown);
+  } else {
+    document.body.style.overflow = '';
+    document.removeEventListener('keydown', handleHardwareKeydown);
+  }
+});
+
+// Cleanup on component unmount
+onUnmounted(() => {
+  document.body.style.overflow = '';
+  document.removeEventListener('keydown', handleBundleKeydown);
+  document.removeEventListener('keydown', handleHardwareKeydown);
 });
 
 // Verify component is loading correctly

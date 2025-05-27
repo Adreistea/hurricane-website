@@ -105,5 +105,5 @@
 </template>
 
 <script setup>
-import logoImg from '@/../images/TransparentLogo.png';
+import logoImg from '@/../images/TransparentWhiteLogo.png';
 </script>
