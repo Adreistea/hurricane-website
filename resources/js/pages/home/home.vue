@@ -574,10 +574,19 @@ const hasShownLightbox = ref(false);
 const fetchLightboxes = async () => {
   try {
     console.log('Fetching lightboxes...');
+    console.log('Environment:', import.meta.env.MODE);
+    console.log('API URL:', '/api/lightboxes/active');
+    console.log('Request params:', { page: 'home' });
+    
     const response = await axios.get('/api/lightboxes/active', {
-      params: { page: 'home' }
+      params: { 
+        page: 'home',
+        _t: Date.now() // Cache busting parameter
+      }
     });
     console.log('API Response:', response.data);
+    console.log('Response status:', response.status);
+    console.log('Response headers:', response.headers);
     
     if (response.data.success && response.data.data.length > 0) {
       console.log('Found active lightbox:', response.data.data[0]);
@@ -585,25 +594,42 @@ const fetchLightboxes = async () => {
       
       // Check if this lightbox should only be shown once
       const showOnceKey = `lightbox_shown_${currentLightbox.value.lightbox_id}`;
+      console.log('Show once key:', showOnceKey);
+      console.log('Show once enabled:', currentLightbox.value.show_once);
+      console.log('Already shown:', localStorage.getItem(showOnceKey));
+      
       if (currentLightbox.value.show_once && localStorage.getItem(showOnceKey)) {
+        console.log('Lightbox already shown, skipping...');
         return;
       }
       
       // Show immediately or set up exit intent
       if (currentLightbox.value.show_on_exit) {
+        console.log('Setting up exit intent...');
         setupExitIntent();
       } else {
+        console.log('Showing lightbox after delay...');
         // Show after a short delay
         setTimeout(() => {
+          console.log('Displaying lightbox now');
           showLightbox.value = true;
           if (currentLightbox.value.show_once) {
             localStorage.setItem(showOnceKey, 'true');
           }
         }, 3000);
       }
+    } else {
+      console.log('No active lightboxes found for home page');
+      console.log('Response data:', response.data);
     }
   } catch (error) {
     console.error('Error fetching lightboxes:', error);
+    console.error('Error details:', {
+      message: error.message,
+      response: error.response?.data,
+      status: error.response?.status,
+      statusText: error.response?.statusText
+    });
   }
 };
 
