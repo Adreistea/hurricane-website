@@ -656,16 +656,8 @@ onMounted(async () => {
     }
   }
   
-  // Fetch lightboxes
+  // Fetch lightboxes - this will handle showing the lightbox internally
   await fetchLightboxes();
-  
-  // If we found a lightbox from the database, show it
-  if (currentLightbox.value) {
-    console.log('Found lightbox from database:', currentLightbox.value);
-    showLightbox.value = true;
-  } else {
-    console.log('No active lightboxes found for home page');
-  }
 });
 
 // Chatbot methods

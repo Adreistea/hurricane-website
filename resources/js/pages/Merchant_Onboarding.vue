@@ -423,14 +423,14 @@
                 class="flex items-center"
               >
                 <div 
-                  class="w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors duration-300 relative border shadow cursor-pointer"
+                  class="w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors duration-300 relative border shadow"
                   :class="[
-                    currentStep > index + 1 ? 'bg-custom-red text-white border-custom-red' : 
-                    currentStep === index + 1 ? 'bg-custom-red text-white border-custom-red font-bold step-active' : 
-                    'bg-gray-200 text-gray-800 border-gray-300'
+                    currentStep > index + 1 ? 'bg-custom-red text-white border-custom-red cursor-pointer' : 
+                    currentStep === index + 1 ? 'bg-custom-red text-white border-custom-red font-bold step-active cursor-pointer' : 
+                    'bg-gray-200 text-gray-800 border-gray-300 cursor-not-allowed opacity-50'
                   ]"
                   :style="currentStep >= index + 1 ? 'background-color: #973131 !important; color: white !important' : ''"
-                  @click="goToStep(index + 1)"
+                  @click="currentStep >= index + 1 ? goToStep(index + 1) : null"
                 >
                   <span v-if="currentStep > index + 1" class="absolute inset-0 flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
@@ -455,12 +455,17 @@
               <div 
                 v-for="(step, index) in steps" 
                 :key="index"
-                class="text-center cursor-pointer" 
-                @click="goToStep(index + 1)"
+                class="text-center" 
+                :class="currentStep >= index + 1 ? 'cursor-pointer' : 'cursor-not-allowed'"
+                @click="currentStep >= index + 1 ? goToStep(index + 1) : null"
               >
                 <div 
                     class="text-xs md:text-sm font-medium px-1 py-1"
-                    :class="currentStep === index + 1 ? 'text-custom-red font-bold' : 'text-gray-500'"
+                    :class="[
+                      currentStep === index + 1 ? 'text-custom-red font-bold' : 
+                      currentStep > index + 1 ? 'text-gray-700' : 
+                      'text-gray-400 opacity-50'
+                    ]"
                 >
                   {{ step }}
                   </div>
@@ -627,7 +632,7 @@
                       required
                     >
                     <label for="privacyAgreement" class="ml-3 text-gray-700">
-                      By submitting this form, you agree to our <a href="#" class="text-custom-red hover:underline">Privacy Policy</a>.
+                      By submitting this form, you agree to our <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" class="text-custom-red hover:underline">Privacy Policy</a>.
                     </label>
                   </div>
                   <p class="text-sm text-gray-500 mt-2 ml-8">Your information is confidential and secure.</p>
@@ -820,6 +825,31 @@
                     >
                   </div>
 
+                  <div>
+                    <label for="state" class="block text-gray-700 font-medium mb-2">State *</label>
+                    <select 
+                      id="state" 
+                      v-model="form.state" 
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                      required
+                    >
+                      <option value="" disabled selected>Select state</option>
+                      <option v-for="state in usStates" :key="state.code" :value="state.code">{{ state.name }}</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label for="zip" class="block text-gray-700 font-medium mb-2">Zip Code *</label>
+                    <input 
+                      type="text" 
+                      id="zip" 
+                      v-model="form.zip" 
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                      placeholder="Enter zip code"
+                      required
+                    >
+                  </div>
+
                   <!-- Payment Acceptance Section -->
                   <div class="mt-8">
                     <h3 class="text-xl font-bold text-gray-800 mb-4">Which Payments Would You Like to Accept?</h3>
@@ -1002,32 +1032,6 @@
 
                     <!-- OptBlue Notice -->
                     <div class="mt-4 text-sm text-gray-600 italic">
-                    </div>
-                  </div>
-                  
-                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label for="state" class="block text-gray-700 font-medium mb-2">State *</label>
-                      <select 
-                        id="state" 
-                        v-model="form.state" 
-                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
-                        required
-                      >
-                        <option value="" disabled selected>Select state</option>
-                        <option v-for="state in usStates" :key="state.code" :value="state.code">{{ state.name }}</option>
-                      </select>
-                    </div>
-                    
-                    <div>
-                      <label for="zip" class="block text-gray-700 font-medium mb-2">ZIP Code *</label>
-                      <input 
-                        type="text" 
-                        id="zip" 
-                        v-model="form.zip" 
-                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
-                        required
-                      >
                     </div>
                   </div>
                 </div>
@@ -2059,236 +2063,10 @@
                       </div>
                       
                       <!-- Recommendation based on answers -->
-                   
+                 
                       
                       <!-- Custom Bundle Offer for Mobile Business -->
                       <div v-if="form.mobile_solution_response" class="bg-gradient-to-r from-red-100 to-yellow-50 rounded-lg border border-yellow-200 p-5 relative">
-                        <div class="absolute -top-3 -left-3">
-                          <div class="bg-yellow-400 px-3 py-1 text-base font-bold uppercase tracking-wide text-red-900 inline-block shadow-sm transform -rotate-12">
-                            SPECIAL OFFER
-                          </div>
-                        </div>
-                        
-                        <h3 class="text-xl font-bold text-red-800 mt-6 mb-2">Complete POS Solution Package</h3>
-                        <div class="flex items-baseline mb-4">
-                          <span class="text-2xl font-bold text-gray-900">$999.00</span>
-                          <span class="ml-2 text-red-600 line-through text-lg">$2,388.00</span>
-                          <span class="ml-2 text-gray-500">or $49/Month</span>
-                        </div>
-                        
-                        <div class="space-y-1 mb-4">
-                          <div class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            <span>High-Performance Local Server</span>
-                          </div>
-                          <div class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            <span>15" Touchscreen POS Terminal</span>
-                          </div>
-                          <div class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            <span>Thermal Receipt Printer & Credit Card Reader</span>
-                          </div>
-                          <div class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            <span>QR Code Ordering System + Marketing Tools</span>
-                          </div>
-                          <div class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            <span>Professional Installation & Staff Training</span>
-                          </div>
-                          <div class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            <span>2-Day Hardware Replacement Warranty</span>
-                          </div>
-                        </div>
-                        
-                        <p class="text-gray-700 text-sm mb-4">
-                          Complete POS solution with all the hardware and marketing tools you need to get started - plus 0% credit card processing with Hurricane Pay.
-                        </p>
-                        
-                        <div class="text-right">
-                          <button 
-                            @click="selectValueBundle"
-                            type="button"
-                            class="px-4 py-2 bg-red-600 text-white font-medium rounded-md hover:bg-red-700 transition-colors"
-                          >
-                            Select This Bundle
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <!-- Online Business-specific questions -->
-                    <div v-else-if="form.industry_type === 'Online/MOTO'" class="space-y-12">
-                      <!-- Question 1 - Online Payment Processing -->
-                      <div>
-                        <h4 class="text-lg font-bold text-gray-800 mb-3">How do you currently process online payments?</h4>
-                        <p class="text-gray-600 mb-4">Secure, reliable online payment processing is essential for e-commerce</p>
-                        <div class="grid grid-cols-1 gap-3">
-                          <div 
-                            v-for="method in [
-                              'PayPal/Stripe/Other payment processor',
-                              'Shopping cart software',
-                              'Manual processing (phone orders)',
-                              'We use multiple payment methods',
-                              'We need a better online payment solution'
-                            ]" 
-                            :key="method"
-                            @click="form.online_payment = method"
-                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
-                            :class="form.online_payment === method ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
-                          >
-                            <div class="flex items-center">
-                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
-                                :class="form.online_payment === method ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
-                              >
-                                <div v-if="form.online_payment === method" class="w-3 h-3 rounded-full bg-white"></div>
-                              </div>
-                              <div class="font-medium">{{ method }}</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <!-- Question 2 - Payment Challenges -->
-                      <div v-if="form.online_payment">
-                        <h4 class="text-lg font-bold text-gray-800 mb-3">What challenges do you face with online payments?</h4>
-                        <p class="text-gray-600 mb-4">Select all that apply to your online business</p>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                          <div 
-                            v-for="challenge in [
-                              'High processing fees',
-                              'Payment security concerns',
-                              'Cart abandonment issues',
-                              'Integration problems with our website',
-                              'International payment limitations',
-                              'Chargeback and fraud concerns'
-                            ]" 
-                            :key="challenge"
-                            @click="toggleOnlineChallenge(challenge)"
-                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all flex items-center"
-                            :class="form.online_challenges && form.online_challenges.includes(challenge) ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
-                          >
-                            <div class="w-5 h-5 rounded border mr-3 flex items-center justify-center"
-                              :class="form.online_challenges && form.online_challenges.includes(challenge) ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
-                            >
-                              <svg v-if="form.online_challenges && form.online_challenges.includes(challenge)" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                              </svg>
-                            </div>
-                            <div class="font-medium">{{ challenge }}</div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <!-- Question 3 - E-commerce Platform -->
-                      <div v-if="form.online_challenges && form.online_challenges.length > 0">
-                        <h4 class="text-lg font-bold text-gray-800 mb-3">What e-commerce platform do you use?</h4>
-                        <p class="text-gray-600 mb-4">Your platform choice affects your payment integration options</p>
-                        <div class="grid grid-cols-1 gap-3">
-                          <div 
-                            v-for="platform in [
-                              'Shopify',
-                              'WooCommerce/WordPress',
-                              'Magento',
-                              'Custom website',
-                              'Other platform/marketplace',
-                              'We don\'t have an e-commerce platform yet'
-                            ]" 
-                            :key="platform"
-                            @click="form.ecommerce_platform = platform"
-                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
-                            :class="form.ecommerce_platform === platform ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
-                          >
-                            <div class="flex items-center">
-                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
-                                :class="form.ecommerce_platform === platform ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
-                              >
-                                <div v-if="form.ecommerce_platform === platform" class="w-3 h-3 rounded-full bg-white"></div>
-                              </div>
-                              <div class="font-medium">{{ platform }}</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <!-- Question 4 - Order Volume -->
-                      <div v-if="form.ecommerce_platform">
-                        <h4 class="text-lg font-bold text-gray-800 mb-3">What is your average monthly online order volume?</h4>
-                        <p class="text-gray-600 mb-4">This helps us recommend the most appropriate payment solution</p>
-                        <div class="grid grid-cols-1 gap-3">
-                          <div 
-                            v-for="volume in [
-                              'Less than 100 orders',
-                              '100-500 orders',
-                              '501-1,000 orders',
-                              '1,001-5,000 orders',
-                              'More than 5,000 orders'
-                            ]" 
-                            :key="volume"
-                            @click="form.online_order_volume = volume"
-                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
-                            :class="form.online_order_volume === volume ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
-                          >
-                            <div class="flex items-center">
-                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
-                                :class="form.online_order_volume === volume ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
-                              >
-                                <div v-if="form.online_order_volume === volume" class="w-3 h-3 rounded-full bg-white"></div>
-                              </div>
-                              <div class="font-medium">{{ volume }}</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <!-- Question 5 - Complete Solution -->
-                      <div v-if="form.online_order_volume">
-                        <h4 class="text-xl font-bold text-gray-800 mb-3">Would an integrated payment solution with 0% processing fees and enhanced fraud protection help your online business grow?</h4>
-                        <div class="grid grid-cols-1 gap-3">
-                          <div 
-                            v-for="response in [
-                              'Yes, eliminating processing fees would be a game-changer',
-                              'We\'d need it to integrate seamlessly with our platform',
-                              'We\'re especially interested in better fraud protection',
-                              'That would help us offer more competitive pricing',
-                              'We\'d need to understand the integration process first'
-                            ]" 
-                            :key="response"
-                            @click="form.online_solution_response = response"
-                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
-                            :class="form.online_solution_response === response ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
-                          >
-                            <div class="flex items-center">
-                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
-                                :class="form.online_solution_response === response ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
-                              >
-                                <div v-if="form.online_solution_response === response" class="w-3 h-3 rounded-full bg-white"></div>
-                              </div>
-                              <div class="font-medium">{{ response }}</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <!-- Recommendation based on answers -->
-                 
-                      
-                      <!-- Custom Bundle Offer for Online Business -->
-                      <div v-if="form.online_solution_response" class="bg-gradient-to-r from-red-100 to-yellow-50 rounded-lg border border-yellow-200 p-5 relative">
                         <div class="absolute -top-3 -left-3">
                           <div class="bg-yellow-400 px-3 py-1 text-base font-bold uppercase tracking-wide text-red-900 inline-block shadow-sm transform -rotate-12">
                             SPECIAL OFFER
@@ -2800,6 +2578,7 @@
                   </div>
                 </div>
               </div>
+              
               
               <!-- Step 5: System Configuration -->
               <div v-if="currentStep === 5" class="animate-fade-in">
@@ -3371,7 +3150,7 @@
                         <span class="block text-gray-600 text-sm">Full payment required for purchases under $1,500</span>
                       </label>
                     </div>
-                    <div class="bg-blue-50 border border-blue-200 rounded p-3 text-sm text-blue-800">
+                    <div class="bg-blue-50 border border-blue-100 rounded p-3 text-sm text-blue-800">
                       <svg xmlns="http://www.w3.org/2000/svg" class="inline-block h-5 w-5 mr-1 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
                       </svg>
@@ -3463,7 +3242,7 @@
                         <ol class="list-decimal pl-5 space-y-2">
                           <li>I am authorized to make purchase decisions on behalf of the business listed in this application.</li>
                           <li>I authorize Hurricane Pay to process this order and agree to the payment terms selected above.</li>
-                          <li>I have reviewed and agree to the <a href="#" class="text-blue-600 hover:underline">Terms of Service</a> and <a href="#" class="text-blue-600 hover:underline">Privacy Policy</a>.</li>
+                          <li>I have reviewed and agree to the <a href="#" class="text-blue-600 hover:underline">Terms of Service</a> and <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Privacy Policy</a>.</li>
                           <li>I understand that the hardware and software bundle is subject to approval of the merchant application.</li>
                           <li>I authorize Hurricane Pay to conduct necessary background and credit checks related to this application.</li>
                         </ol>
@@ -3603,6 +3382,7 @@
                           <div class="text-center">
                             <p class="font-medium">7690 N. Palm Ave., Ste. 101, Fresno,</p>
                             <p class="font-medium">CA 93711</p>
+                            <p class="text-gray-600">(555) 439-0200</p>
                             <p class="text-gray-600">(559) 439-0200</p>
                             <p class="text-sm text-gray-500 mt-2">MID Prefix: starts with 2011</p>
                           </div>
@@ -3656,22 +3436,19 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                     </svg>
-                      </div>
-                  
+                  </div>
                   
                   <h3 class="text-2xl font-bold mb-4 text-gray-800">Application Submitted Successfully!</h3>
                   <p class="text-lg text-gray-600 mb-6">
                     Thank you for completing your merchant application. Our team will review your information and contact you shortly.
                   </p>
                   
-                
-                  
                   <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 mb-6 max-w-md mx-auto">
                     <h4 class="text-xl font-bold text-custom-red mb-2">What Happens Next?</h4>
                     <p class="text-gray-700 mb-4">
                       A member of our team will reach out within 24 hours to confirm your application details and guide you through the next steps.
                     </p>
-                          </div>
+                  </div>
                   
                   <router-link 
                     to="/" 
@@ -3679,18 +3456,17 @@
                   >
                     Return to Home
                   </router-link>
-                        </div>
-                      </div>
-              
+                </div>
+              </div>
 
             </form>
-                        </div>
-                      </div>
-                    </div>
-                          </div>
-    
+          </div>
+        </div>
+      </div>
+    </div>
+
     <AppFooter />
-                        </div>
+  </div>
 </template>
 
 <script setup>
@@ -3972,8 +3748,29 @@ function validateCurrentStep() {
     }
   } else if (currentStep.value === 2) {
     // Validate Business Details
-    if (!form.value.business_entity_type || !form.value.industry_type) {
-      alert('Please select all required business details');
+    if (!form.value.business_entity_type || !form.value.industry_type || 
+        !form.value.product_service || !form.value.business_phone || 
+        !form.value.year_started || !form.value.address_line1 || 
+        !form.value.city || !form.value.state || !form.value.zip) {
+      alert('Please fill out all required business details fields');
+      return false;
+    }
+    
+    // Validate business phone number
+    const businessPhoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    if (!businessPhoneRegex.test(form.value.business_phone)) {
+      alert('Please enter a valid business phone number (e.g., 555-555-5555)');
+      return false;
+    }
+    
+    // Validate conditional required fields
+    if (form.value.accept_amex_esa && !form.value.amex_esa_number) {
+      alert('Please enter the American Express ESA number');
+      return false;
+    }
+    
+    if (form.value.accept_ebt && !form.value.ebt_fns_number) {
+      alert('Please enter the EBT FNS number');
       return false;
     }
     
@@ -3988,8 +3785,72 @@ function validateCurrentStep() {
   }
   // Restaurant Profile (step 3) is optional, so no validation needed
   else if (currentStep.value === 4) {
-    // Validate Owner Information if needed
-    // (this is optional for now)
+    // Validate Owner Information
+    if (!form.value.owner_first_name || !form.value.owner_last_name || 
+        !form.value.title || !form.value.date_of_birth || 
+        !form.value.ownership_percentage || !form.value.drivers_license || 
+        !form.value.dl_state || !form.value.owner_phone || !form.value.ssn ||
+        !form.value.home_address_line1 || !form.value.city || 
+        !form.value.home_state || !form.value.home_zip) {
+      alert('Please fill out all required owner information fields');
+      return false;
+    }
+    
+    // Validate ownership percentage
+    const ownership = Number(form.value.ownership_percentage);
+    if (ownership < 0 || ownership > 100) {
+      alert('Ownership percentage must be between 0 and 100');
+      return false;
+    }
+    
+    // Validate SSN format (9 digits)
+    const ssnRegex = /^[0-9]{9}$/;
+    if (!ssnRegex.test(form.value.ssn)) {
+      alert('Please enter a valid 9-digit Social Security Number');
+      return false;
+    }
+    
+    // Validate owner phone number
+    const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    if (!phoneRegex.test(form.value.owner_phone)) {
+      alert('Please enter a valid owner phone number (e.g., 555-555-5555)');
+      return false;
+    }
+  } else if (currentStep.value === 5) {
+    // Validate System Configuration
+    if (!form.value.number_of_locations || !form.value.number_of_registers) {
+      alert('Please fill out all required system configuration fields');
+      return false;
+    }
+    
+    // Validate restaurant-specific fields if it's a restaurant business
+    if (isRestaurantBusiness.value) {
+      if (!form.value.number_of_servers) {
+        alert('Please specify the number of servers for your restaurant');
+        return false;
+      }
+      
+      if (form.value.handhelds_needed === undefined || form.value.handhelds_needed === null) {
+        alert('Please specify if you need handheld ordering devices');
+        return false;
+      }
+      
+      if (form.value.handhelds_needed && (!form.value.number_of_handhelds || !form.value.handheld_features || form.value.handheld_features.length === 0)) {
+        alert('Please specify the number of handheld devices and select required features');
+        return false;
+      }
+    }
+    
+    if (form.value.customer_displays_needed === undefined || form.value.customer_displays_needed === null) {
+      alert('Please specify if you need customer-facing displays');
+      return false;
+    }
+  } else if (currentStep.value === 6) {
+    // Validate Device Selection - allow if either a device is selected OR items are in cart
+    if (!selectedDevice.value && cartItems.value.length === 0) {
+      alert('Please select a device or add items to your cart before proceeding');
+      return false;
+    }
   }
   
   // Add validation for signature fields in step 7
@@ -4498,7 +4359,7 @@ function goToStep(step) {
   // Allow going back to previous steps without validation
   if (step < currentStep.value) {
     currentStep.value = step;
-  window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
     return;
   }
   
@@ -4507,11 +4368,18 @@ function goToStep(step) {
     return;
   }
   
+  // Prevent jumping ahead more than one step - users must go through steps sequentially
+  if (step > currentStep.value + 1) {
+    alert('Please complete the current step before proceeding to the next one.');
+    return;
+  }
+  
   // When moving forward, we need to validate the current step first
   if (validateCurrentStep()) {
     // Check device selection specifically for step 6
-    if (currentStep.value === 6 && step > 6 && !selectedDevice.value) {
+    if (currentStep.value === 6 && step > 6 && !selectedDevice.value && cartItems.value.length === 0) {
       deviceSelectionError.value = true;
+      alert('Please select a device or add items to your cart before proceeding.');
       return;
     }
     

@@ -211,6 +211,11 @@ const router = createRouter({
             component: () => import('./pages/Merchant_Onboarding.vue')
         },
         {
+            path: '/privacy-policy',
+            name: 'PrivacyPolicy',
+            component: () => import('./pages/PrivacyPolicy.vue')
+        },
+        {
             path: '/industries/adult-industry',
             name: 'AdultIndustry',
             component: () => import('./pages/industries/Adult_Industry.vue')
