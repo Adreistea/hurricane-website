@@ -499,7 +499,7 @@
     </div>
 
     <!-- Lightbox component -->
-    <Lightbox
+    <lightbox
       v-if="currentLightbox"
       :is-visible="showLightbox"
       :lightbox-id="currentLightbox.lightbox_id"
@@ -515,7 +515,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted, nextTick } from 'vue';
 import axios from 'axios';
-import Lightbox from '../lightbox.vue';
+import lightbox from '../lightbox.vue';
 import MainLayout from '../MainLayout.vue'; // Make sure path is correct
 // Import using the @ alias which points to resources/js
 import dashboardImg from '@/../images/homepic.png';
