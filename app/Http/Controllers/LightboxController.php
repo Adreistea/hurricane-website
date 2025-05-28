@@ -246,17 +246,81 @@ class LightboxController extends Controller
     {
         $page = $request->input('page', 'home');
         
-        $lightboxes = Lightbox::active()
-            ->where(function($query) use ($page) {
-                $query->whereJsonContains('display_pages', $page)
-                      ->orWhereNull('display_pages')
-                      ->orWhere('display_pages', '[]');
-            })
-            ->get();
+        // Get all active lightboxes first
+        $lightboxes = Lightbox::active()->get();
+        
+        // Filter by page on the PHP side to avoid JSON query issues
+        $filteredLightboxes = $lightboxes->filter(function($lightbox) use ($page) {
+            // Handle null or empty display_pages
+            if (empty($lightbox->display_pages)) {
+                return true; // Show on all pages if no specific pages set
+            }
+            
+            // Ensure display_pages is an array
+            $displayPages = is_array($lightbox->display_pages) 
+                ? $lightbox->display_pages 
+                : json_decode($lightbox->display_pages, true) ?? [];
+            
+            // Check if the current page is in the display_pages array
+            return in_array($page, $displayPages);
+        });
         
         return response()->json([
             'success' => true,
-            'data' => $lightboxes
+            'data' => $filteredLightboxes->values() // Reset array keys
+        ]);
+    }
+
+    /**
+     * Debug method to check lightbox data and filtering.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function debugLightboxes(Request $request)
+    {
+        $page = $request->input('page', 'home');
+        
+        // Get all lightboxes (not just active)
+        $allLightboxes = Lightbox::all();
+        
+        // Get active lightboxes
+        $activeLightboxes = Lightbox::active()->get();
+        
+        $debug = [
+            'requested_page' => $page,
+            'total_lightboxes' => $allLightboxes->count(),
+            'active_lightboxes' => $activeLightboxes->count(),
+            'all_lightboxes_data' => $allLightboxes->map(function($lightbox) {
+                return [
+                    'id' => $lightbox->lightbox_id,
+                    'header' => $lightbox->header,
+                    'status' => $lightbox->status,
+                    'display_pages' => $lightbox->display_pages,
+                    'display_pages_type' => gettype($lightbox->display_pages),
+                    'start_date' => $lightbox->start_date,
+                    'end_date' => $lightbox->end_date,
+                ];
+            }),
+            'active_lightboxes_data' => $activeLightboxes->map(function($lightbox) use ($page) {
+                $displayPages = is_array($lightbox->display_pages) 
+                    ? $lightbox->display_pages 
+                    : json_decode($lightbox->display_pages, true) ?? [];
+                
+                return [
+                    'id' => $lightbox->lightbox_id,
+                    'header' => $lightbox->header,
+                    'display_pages_raw' => $lightbox->display_pages,
+                    'display_pages_parsed' => $displayPages,
+                    'matches_page' => in_array($page, $displayPages),
+                    'empty_display_pages' => empty($lightbox->display_pages),
+                ];
+            }),
+        ];
+        
+        return response()->json([
+            'success' => true,
+            'debug' => $debug
         ]);
     }
 

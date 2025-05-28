@@ -29,6 +29,7 @@ Route::prefix('lightboxes')->group(function () {
     Route::get('/', [LightboxController::class, 'index']);
     Route::post('/', [LightboxController::class, 'store']);
     Route::get('/active', [LightboxController::class, 'getActiveLightboxes']);
+    Route::get('/debug', [LightboxController::class, 'debugLightboxes']);
     Route::get('/{id}', [LightboxController::class, 'show']);
     Route::put('/{id}', [LightboxController::class, 'update']);
     Route::delete('/{id}', [LightboxController::class, 'destroy']);
