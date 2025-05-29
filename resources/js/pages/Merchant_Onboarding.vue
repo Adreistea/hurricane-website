@@ -632,7 +632,7 @@
                       required
                     >
                     <label for="privacyAgreement" class="ml-3 text-gray-700">
-                      By submitting this form, you agree to our <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" class="text-custom-red hover:underline">Privacy Policy</a>.
+                      By submitting this form, you agree to our <router-link to="/privacy-policy" target="_blank" rel="noopener noreferrer" class="text-custom-red hover:underline">Privacy Policy</router-link>.
                     </label>
                   </div>
                   <p class="text-sm text-gray-500 mt-2 ml-8">Your information is confidential and secure.</p>
@@ -3242,7 +3242,7 @@
                         <ol class="list-decimal pl-5 space-y-2">
                           <li>I am authorized to make purchase decisions on behalf of the business listed in this application.</li>
                           <li>I authorize Hurricane Pay to process this order and agree to the payment terms selected above.</li>
-                          <li>I have reviewed and agree to the <a href="#" class="text-blue-600 hover:underline">Terms of Service</a> and <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Privacy Policy</a>.</li>
+                          <li>I have reviewed and agree to the <router-link to="/privacy-policy#agreement-terms" target="_blank" class="text-blue-600 hover:underline">Terms of Service</router-link> and <router-link to="/privacy-policy" target="_blank" class="text-blue-600 hover:underline">Privacy Policy</router-link>.</li>
                           <li>I understand that the hardware and software bundle is subject to approval of the merchant application.</li>
                           <li>I authorize Hurricane Pay to conduct necessary background and credit checks related to this application.</li>
                         </ol>
