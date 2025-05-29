@@ -95,8 +95,8 @@
           © 2025 Hurricane Payments. All rights reserved.
         </div>
         <div class="flex space-x-6">
-          <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-500 hover:text-gray-300 transition-colors duration-200">Privacy Policy</a>
-          <a href="#" class="text-sm text-gray-500 hover:text-gray-300 transition-colors duration-200">Terms of Service</a>
+          <router-link to="/privacy-policy" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-500 hover:text-gray-300 transition-colors duration-200">Privacy Policy</router-link>
+          <router-link to="/privacy-policy#agreement-terms" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-500 hover:text-gray-300 transition-colors duration-200">Terms of Service</router-link>
           <a href="#" class="text-sm text-gray-500 hover:text-gray-300 transition-colors duration-200">Sitemap</a>
         </div>
       </div>
