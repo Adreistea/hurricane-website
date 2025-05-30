@@ -1,9 +1,42 @@
 <template>
   <MainLayout>
     <!-- Hero Section -->
-    <div class="container mx-auto px-6 py-16 flex flex-col lg:flex-row items-center">
+    <div class="container mx-auto px-6 py-16 flex flex-col lg:flex-row items-center relative">
+      <!-- Decorative dots pattern in background -->
+      <div class="absolute left-0 top-1/3 transform -translate-y-1/2 w-24 h-64 opacity-20 z-0">
+        <div class="w-2 h-2 bg-gray-400 rounded-full m-2 float-left"></div>
+        <div class="w-2 h-2 bg-gray-400 rounded-full m-2 float-left"></div>
+        <div class="w-2 h-2 bg-gray-400 rounded-full m-2 float-left"></div>
+        <div class="w-2 h-2 bg-gray-400 rounded-full m-2 float-left"></div>
+        <div class="w-2 h-2 bg-gray-400 rounded-full m-2 float-left"></div>
+        <div class="w-2 h-2 bg-gray-400 rounded-full m-2 float-left"></div>
+        <div class="w-2 h-2 bg-gray-400 rounded-full m-2 float-left"></div>
+        <div class="w-2 h-2 bg-gray-400 rounded-full m-2 float-left"></div>
+        <div class="w-2 h-2 bg-gray-400 rounded-full m-2 float-left"></div>
+        <div class="w-2 h-2 bg-gray-400 rounded-full m-2 float-left"></div>
+      </div>
+      
+      <!-- Right side decorative pattern -->
+      <div class="absolute right-0 bottom-1/4 transform translate-y-1/2 w-24 h-64 opacity-20 z-0">
+        <div class="w-2 h-2 bg-gray-400 rounded-full m-2 float-left"></div>
+        <div class="w-2 h-2 bg-gray-400 rounded-full m-2 float-left"></div>
+        <div class="w-2 h-2 bg-gray-400 rounded-full m-2 float-left"></div>
+        <div class="w-2 h-2 bg-gray-400 rounded-full m-2 float-left"></div>
+        <div class="w-2 h-2 bg-gray-400 rounded-full m-2 float-left"></div>
+        <div class="w-2 h-2 bg-gray-400 rounded-full m-2 float-left"></div>
+        <div class="w-2 h-2 bg-gray-400 rounded-full m-2 float-left"></div>
+        <div class="w-2 h-2 bg-gray-400 rounded-full m-2 float-left"></div>
+        <div class="w-2 h-2 bg-gray-400 rounded-full m-2 float-left"></div>
+        <div class="w-2 h-2 bg-gray-400 rounded-full m-2 float-left"></div>
+      </div>
+
+      <!-- Floating decorative elements -->
+      <div class="absolute top-1/4 left-1/4 w-20 h-20 rounded-full bg-gradient-to-r from-purple-100 to-indigo-100 opacity-20 float-element" style="animation-delay: 0.2s;"></div>
+      <div class="absolute bottom-1/4 right-1/3 w-16 h-16 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 opacity-20 float-element" style="animation-delay: 1.2s;"></div>
+      <div class="absolute top-1/2 right-1/4 w-12 h-12 rounded-full bg-gradient-to-r from-purple-100 to-indigo-100 opacity-20 float-element" style="animation-delay: 0.7s;"></div>
+      
       <!-- Left Content with Text Reveal Animation -->
-      <div class="lg:w-1/2 lg:pr-12 mb-10 lg:mb-0 slide-in-left">
+      <div class="lg:w-1/2 lg:pr-12 mb-10 lg:mb-0 relative z-10">
         <div class="text-reveal mb-2">
           <span class="text-reveal-content text-indigo-600 font-semibold delay-100">Additional Services</span>
         </div>
@@ -20,22 +53,49 @@
             Enhance customer retention and increase revenue with our customizable gift and loyalty programs. Build lasting relationships with your customers while driving repeat business.
           </p>
         </div>
+        
+        <!-- CTA Buttons with better styling -->
+        <div class="fade-in-up" style="animation-delay: 0.6s;">
+          <div class="flex flex-col sm:flex-row gap-4">
+            <router-link 
+              to="/request-consultation" 
+              class="fancy-button text-white font-medium py-3 px-8 rounded-md shadow-lg" 
+              style="background-color: #973131; transition: all 0.3s ease;">
+              Get Started
+            </router-link>
+            
+            <a href="#programs"
+              class="hover-scale border font-medium py-3 px-8 rounded-md transition-all duration-300 inline-flex items-center"
+              style="border-color: #973131; color: #973131;">
+              Learn More
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
       
       <!-- Right Content - Image with Card Reveal Animation -->
-      <div class="lg:w-1/2 relative card-reveal delay-200">
-        <div class="rounded-lg shadow-2xl overflow-hidden">
-          <img src="@/../images/gift.png" alt="Gift & Loyalty Programs" class="w-full h-auto" />
+      <div class="lg:w-1/2 relative z-10">
+        <div class="card-reveal">
+          <div class="rounded-lg shadow-2xl overflow-hidden">
+            <img src="@/../images/gift.png" alt="Gift & Loyalty Programs" class="w-full h-auto" />
+          </div>
         </div>
         
         <!-- Animated decorative elements -->
         <div class="absolute -z-10 inset-0 bg-gradient-to-r from-purple-100 to-indigo-100 rounded-3xl transform rotate-3 translate-x-4 translate-y-4 slide-in-right delay-300"></div>
         <div class="absolute -z-20 inset-0 bg-gradient-to-r from-pink-100 to-purple-100 rounded-3xl transform -rotate-2 translate-x-8 translate-y-8 slide-in-right delay-500"></div>
+        
+        <!-- Additional floating elements -->
+        <div class="absolute -right-8 -top-8 w-16 h-16 bg-purple-50 rounded-full opacity-70 animate-pulse-slow"></div>
+        <div class="absolute -left-8 -bottom-8 w-16 h-16 bg-indigo-50 rounded-full opacity-70 animate-pulse-slow" style="animation-delay: 1s;"></div>
       </div>
     </div>
 
     <!-- Program Types Section -->
-    <div class="relative py-24 mt-16">
+    <div id="programs" class="relative py-24 mt-16">
       <div class="container mx-auto px-6">
         <div class="text-center mb-12">
           <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Our Loyalty Programs</h2>
@@ -48,12 +108,12 @@
             <!-- Gift Cards Program -->
             <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm scroll-reveal opacity-0 program-card" data-delay="0">
               <div class="flex flex-row items-center mb-4">
-                <div class="w-14 h-14 mr-4 text-purple-500">
+                <div class="w-14 h-14 mr-4" style="color: #973131;">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-full h-full">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                   </svg>
                 </div>
-                <h2 class="text-2xl font-bold text-purple-500">Gift Card Program</h2>
+                <h2 class="text-2xl font-bold" style="color: #973131;">Gift Card Program</h2>
               </div>
               <p class="text-gray-700">
                 Custom-branded physical and digital gift cards that increase sales, bring in new customers, and boost your brand recognition. Perfect for holiday seasons and special occasions.
@@ -63,12 +123,12 @@
             <!-- Points Program -->
             <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm scroll-reveal opacity-0 program-card" data-delay="200">
               <div class="flex flex-row items-center mb-4">
-                <div class="w-14 h-14 mr-4 text-indigo-500">
+                <div class="w-14 h-14 mr-4" style="color: #973131;">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-full h-full">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
                   </svg>
                 </div>
-                <h2 class="text-2xl font-bold text-indigo-500">Points Program</h2>
+                <h2 class="text-2xl font-bold" style="color: #973131;">Points Program</h2>
               </div>
               <p class="text-gray-700">
                 Reward your customers for repeat purchases with a customizable points system. Customers earn points with each purchase that can be redeemed for discounts, free items, or special perks.
@@ -78,12 +138,12 @@
             <!-- Digital Rewards Program -->
             <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm scroll-reveal opacity-0 program-card" data-delay="400">
               <div class="flex flex-row items-center mb-4">
-                <div class="w-14 h-14 mr-4 text-blue-500">
+                <div class="w-14 h-14 mr-4" style="color: #973131;">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-full h-full">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h2 class="text-2xl font-bold text-blue-500">Digital Rewards</h2>
+                <h2 class="text-2xl font-bold" style="color: #973131;">Digital Rewards</h2>
               </div>
               <p class="text-gray-700">
                 Modern, app-based loyalty program that lets customers collect and redeem rewards directly from their smartphones. No physical cards needed, just a seamless digital experience.
@@ -97,7 +157,7 @@
     <!-- Why Loyalty Program Matters Section -->
     <div class="py-20 bg-gray-50">
       <div class="container mx-auto px-6">
-        <div class="text-center mb-12">
+        <div class="text-center mb-12 fade-in-up" style="animation-delay: 0.1s;">
           <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Why Loyalty Program Matters?</h2>
           <div class="w-32 h-1 bg-gray-300 mx-auto mb-6"></div>
           <p class="text-xl text-gray-600 max-w-4xl mx-auto">
@@ -110,28 +170,28 @@
           <!-- Image Slides -->
           <div class="carousel-container">
             <!-- Slide 1 -->
-            <div class="carousel-slide rounded-xl overflow-hidden shadow-xl scroll-reveal opacity-0" data-delay="0" id="slide-1">
+            <div class="carousel-slide rounded-xl overflow-hidden shadow-xl fade-in-up" style="animation-delay: 0.3s;" id="slide-1">
               <div class="flex justify-center bg-white p-4">
                 <img src="@/../images/advancedloyalty.png" alt="Advanced Loyalty Program" class="w-auto h-auto max-w-full max-h-[600px]" />
               </div>
             </div>
             
             <!-- Slide 2 -->
-            <div class="carousel-slide rounded-xl overflow-hidden shadow-xl scroll-reveal opacity-0 hidden" data-delay="100" id="slide-2">
+            <div class="carousel-slide rounded-xl overflow-hidden shadow-xl fade-in-up hidden" style="animation-delay: 0.3s;" id="slide-2">
               <div class="flex justify-center bg-white p-4">
                 <img src="@/../images/kpgiftcard.png" alt="KwickPOS Loyalty" class="w-auto h-auto max-w-full max-h-[600px]" />
               </div>
             </div>
             
             <!-- Slide 3 -->
-            <div class="carousel-slide rounded-xl overflow-hidden shadow-xl scroll-reveal opacity-0 hidden" data-delay="200" id="slide-3">
+            <div class="carousel-slide rounded-xl overflow-hidden shadow-xl fade-in-up hidden" style="animation-delay: 0.3s;" id="slide-3">
               <div class="flex justify-center bg-white p-4">
                 <img src="@/../images/comparison.png" alt="Points and Rewards" class="w-auto h-auto max-w-full max-h-[600px]" />
               </div>
             </div>
             
             <!-- Slide 4 -->
-            <div class="carousel-slide rounded-xl overflow-hidden shadow-xl scroll-reveal opacity-0 hidden" data-delay="300" id="slide-4">
+            <div class="carousel-slide rounded-xl overflow-hidden shadow-xl fade-in-up hidden" style="animation-delay: 0.3s;" id="slide-4">
               <div class="flex justify-center bg-white p-4">
                 <img src="@/../images/benefit.png" alt="Marketing Campaigns" class="w-auto h-auto max-w-full max-h-[600px]" />
               </div>
@@ -153,12 +213,12 @@
           
           <!-- Next/Prev Buttons -->
           <button @click="prevSlide" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg focus:outline-none hover:bg-gray-100 transition-colors z-10">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" style="color: #973131;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
             </svg>
           </button>
           <button @click="nextSlide" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg focus:outline-none hover:bg-gray-100 transition-colors z-10">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" style="color: #973131;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
           </button>
@@ -167,8 +227,13 @@
         <!-- Three column features -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
           <!-- Feature 1 -->
-          <div class="bg-white p-8 rounded-xl shadow-lg scroll-reveal opacity-0" data-delay="0">
+          <div class="bg-white p-8 rounded-xl shadow-lg fade-in-up" style="animation-delay: 0.4s;">
             <div class="text-center mb-6">
+              <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mx-auto mb-4" style="border: 2px solid #973131;">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="#973131">
+                  <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+                </svg>
+              </div>
               <h3 class="text-2xl font-bold mb-2" style="color: #973131;">Love at first sight</h3>
             </div>
             <p class="text-gray-700">
@@ -177,8 +242,13 @@
           </div>
           
           <!-- Feature 2 -->
-          <div class="bg-white p-8 rounded-xl shadow-lg scroll-reveal opacity-0" data-delay="200">
+          <div class="bg-white p-8 rounded-xl shadow-lg fade-in-up" style="animation-delay: 0.5s;">
             <div class="text-center mb-6">
+              <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mx-auto mb-4" style="border: 2px solid #973131;">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="#973131">
+                  <path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd" />
+                </svg>
+              </div>
               <h3 class="text-2xl font-bold mb-2" style="color: #973131;">Points + Rewards</h3>
             </div>
             <p class="text-gray-700">
@@ -187,8 +257,13 @@
           </div>
           
           <!-- Feature 3 -->
-          <div class="bg-white p-8 rounded-xl shadow-lg scroll-reveal opacity-0" data-delay="400">
+          <div class="bg-white p-8 rounded-xl shadow-lg fade-in-up" style="animation-delay: 0.6s;">
             <div class="text-center mb-6">
+              <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mx-auto mb-4" style="border: 2px solid #973131;">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="#973131">
+                  <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z" />
+                </svg>
+              </div>
               <h3 class="text-2xl font-bold mb-2" style="color: #973131;">Retargeting Marketing Campaigns</h3>
             </div>
             <p class="text-gray-700">
@@ -238,7 +313,7 @@
               <div class="absolute -z-20 inset-0 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-3xl transform -rotate-2 translate-x-4 translate-y-12 blur-sm"></div>
               
               <!-- Floating badge/label -->
-              <div class="absolute -right-4 -top-4 bg-custom-red text-black py-2 px-4 rounded-lg font-bold shadow-lg z-20 animate-bounce-slow">
+              <div class="absolute -right-4 -top-4 bg-custom-red text-white py-2 px-4 rounded-lg font-bold shadow-lg z-20 animate-bounce-slow">
                 Watch Demo
               </div>
             </div>
@@ -261,7 +336,7 @@
     <!-- Benefits Section -->
     <div class="bg-white py-24">
       <div class="container mx-auto px-6">
-        <div class="text-center mb-12">
+        <div class="text-center mb-12 fade-in-up" style="animation-delay: 0.1s;">
           <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Program Benefits</h2>
           <div class="w-32 h-1 bg-gray-300 mx-auto"></div>
         </div>
@@ -270,9 +345,9 @@
           <!-- Left Column -->
           <div class="space-y-8">
             <!-- Benefit 1 -->
-            <div class="flex items-start scroll-reveal opacity-0" data-delay="0">
-              <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-400 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
+            <div class="flex items-start fade-in-up" style="animation-delay: 0.2s;">
+              <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mr-4 flex-shrink-0" style="border: 2px solid #973131;">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="#973131">
                   <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd" />
                 </svg>
               </div>
@@ -285,9 +360,9 @@
             </div>
             
             <!-- Benefit 2 -->
-            <div class="flex items-start scroll-reveal opacity-0" data-delay="100">
-              <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
+            <div class="flex items-start fade-in-up" style="animation-delay: 0.3s;">
+              <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mr-4 flex-shrink-0" style="border: 2px solid #973131;">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="#973131">
                   <path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd" />
                 </svg>
               </div>
@@ -300,9 +375,9 @@
             </div>
             
             <!-- Benefit 3 -->
-            <div class="flex items-start scroll-reveal opacity-0" data-delay="200">
-              <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-400 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
+            <div class="flex items-start fade-in-up" style="animation-delay: 0.4s;">
+              <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mr-4 flex-shrink-0" style="border: 2px solid #973131;">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="#973131">
                   <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
                 </svg>
               </div>
@@ -318,9 +393,9 @@
           <!-- Right Column -->
           <div class="space-y-8">
             <!-- Benefit 4 -->
-            <div class="flex items-start scroll-reveal opacity-0" data-delay="300">
-              <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-rose-400 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
+            <div class="flex items-start fade-in-up" style="animation-delay: 0.5s;">
+              <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mr-4 flex-shrink-0" style="border: 2px solid #973131;">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="#973131">
                   <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd" />
                 </svg>
               </div>
@@ -333,9 +408,9 @@
             </div>
             
             <!-- Benefit 5 -->
-            <div class="flex items-start scroll-reveal opacity-0" data-delay="400">
-              <div class="w-12 h-12 bg-gradient-to-r from-amber-500 to-yellow-400 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
+            <div class="flex items-start fade-in-up" style="animation-delay: 0.6s;">
+              <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mr-4 flex-shrink-0" style="border: 2px solid #973131;">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="#973131">
                   <path d="M8 5a1 1 0 100 2h5.586l-1.293 1.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L13.586 5H8zM12 15a1 1 0 100-2H6.414l1.293-1.293a1 1 0 10-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L6.414 15H12z" />
                 </svg>
               </div>
@@ -348,9 +423,9 @@
             </div>
             
             <!-- Benefit 6 -->
-            <div class="flex items-start scroll-reveal opacity-0" data-delay="500">
-              <div class="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-400 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
+            <div class="flex items-start fade-in-up" style="animation-delay: 0.7s;">
+              <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mr-4 flex-shrink-0" style="border: 2px solid #973131;">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="#973131">
                   <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
                 </svg>
               </div>
@@ -369,14 +444,14 @@
     <!-- Attract New Customers Section -->
     <div class="py-20 bg-white">
       <div class="container mx-auto px-6">
-        <div class="text-center mb-12 scroll-reveal opacity-0">
+        <div class="text-center mb-12 fade-in-up" style="animation-delay: 0.1s;">
           <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Attract New Customers</h2>
           <div class="w-32 h-1 bg-gray-300 mx-auto"></div>
         </div>
         
         <div class="flex flex-col lg:flex-row gap-10 items-center max-w-6xl mx-auto">
           <!-- Image Column -->
-          <div class="lg:w-1/2 scroll-reveal opacity-0" data-delay="100">
+          <div class="lg:w-1/2 fade-in-up" style="animation-delay: 0.3s;">
             <div class="rounded-lg shadow-xl overflow-hidden">
               <img src="@/../images/loyalty.png" alt="Attract New Customers" class="w-full h-auto" 
                    onerror="this.onerror=null; this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22400%22%20height%3D%22300%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20300%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_189a44be9d5%20text%20%7B%20fill%3A%23973131%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A20pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_189a44be9d5%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%23f1f5f9%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22110%22%20y%3D%22156.5%22%3EGift%20Cards%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E';" />
@@ -385,22 +460,31 @@
           
           <!-- Text Column -->
           <div class="lg:w-1/2">
-            <div class="scroll-reveal opacity-0" data-delay="200">
+            <div class="fade-in-up" style="animation-delay: 0.4s;">
               <p class="text-lg text-gray-700 mb-6">
                 Gift cards make great thank you gifts, prizes, stocking stuffers, and more. With each gift card you sell, you gain the opportunity to welcome a new customer to your business.
               </p>
             </div>
             
-            <div class="scroll-reveal opacity-0" data-delay="300">
+            <div class="fade-in-up" style="animation-delay: 0.5s;">
               <p class="text-lg text-gray-700 mb-6">
                 Their experience with you starts when they receive that little piece of plastic, which means it needs to be visually appealing and represent your business.
               </p>
             </div>
             
-            <div class="scroll-reveal opacity-0" data-delay="400">
+            <div class="fade-in-up" style="animation-delay: 0.6s;">
               <p class="text-lg text-gray-700 mb-6">
                 Trust the creative professionals at Hurricane Payments to deliver the branded, plastic card masterpiece you need to attract new customers. Our in-house team utilizes software and various designs to build a program that is completely customized to your business.
               </p>
+            </div>
+            
+            <div class="mt-8 fade-in-up" style="animation-delay: 0.7s;">
+              <router-link 
+                to="/request-consultation" 
+                class="fancy-button text-white font-medium py-3 px-8 rounded-md shadow-lg inline-block" 
+                style="background-color: #973131; transition: all 0.3s ease;">
+                Start Your Loyalty Program
+              </router-link>
             </div>
           </div>
         </div>
@@ -436,6 +520,14 @@ const currentLightboxId = ref(null);
 const currentSlide = ref('slide-1');
 const slides = ['slide-1', 'slide-2', 'slide-3', 'slide-4'];
 const youtubeLoaded = ref(false);
+
+// Function to scroll to a section when "Learn More" is clicked
+function scrollToSection(elementId) {
+  const element = document.getElementById(elementId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+}
 
 // Image carousel functions
 const showSlide = (slideId) => {
@@ -510,11 +602,33 @@ const fetchLightboxes = async () => {
 };
 
 onMounted(() => {
+  // Fancy button hover effect
+  document.querySelectorAll('.fancy-button').forEach(button => {
+    button.addEventListener('mouseenter', () => {
+      button.style.backgroundColor = '#7e2929'; // Darker shade for hover
+    });
+    
+    button.addEventListener('mouseleave', () => {
+      button.style.backgroundColor = '#973131'; // Original color
+    });
+  });
+  
   // Initialize animation observer for scroll reveal
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('animate');
+        // Add animation class with delay if specified
+        const delay = entry.target.getAttribute('data-delay') || 0;
+        
+        setTimeout(() => {
+          if (entry.target.classList.contains('scroll-reveal')) {
+            entry.target.classList.add('animate');
+          } else {
+            entry.target.classList.add('animate-reveal');
+            entry.target.classList.remove('opacity-0');
+          }
+        }, parseInt(delay));
+        
         observer.unobserve(entry.target);
       }
     });
@@ -523,6 +637,15 @@ onMounted(() => {
   // Observe all elements with scroll-reveal class
   document.querySelectorAll('.scroll-reveal').forEach(element => {
     observer.observe(element);
+  });
+  
+  // Set up "Learn More" smooth scrolling
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      scrollToSection(targetId);
+    });
   });
   
   // Add slide-in animations for hero section
@@ -585,7 +708,7 @@ onMounted(() => {
       }
     });
   }, { threshold: 0.2 });
-
+  
   // Observe the new section if it exists
   document.querySelectorAll('.py-24.bg-gradient-to-b').forEach(section => {
     newSectionObserver.observe(section);
@@ -640,21 +763,12 @@ onMounted(() => {
       youtubeLoaded.value = true;
     }
   }
+
+  console.log('Gift_Loyalty.vue animations initialized');
 });
 </script>
 
 <style scoped>
-/* Base animations */
-.scroll-reveal {
-  transform: translateY(20px);
-  transition: all 0.6s ease-out;
-}
-
-.scroll-reveal.animate {
-  opacity: 1 !important;
-  transform: translateY(0);
-}
-
 /* Add these font imports at the top of your style section */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap');
 
@@ -700,6 +814,22 @@ p {
   font-weight: 400;
 }
 
+/* Base animations */
+.scroll-reveal {
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.animate-reveal {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.scroll-reveal.animate {
+  opacity: 1 !important;
+  transform: translateY(0);
+}
+
 /* Text animations */
 .text-reveal {
   position: relative;
@@ -707,8 +837,19 @@ p {
 }
 
 .text-reveal-content {
-  transform: translateY(100%);
-  transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation: textReveal 0.8s cubic-bezier(0.23, 1, 0.32, 1) both;
+  will-change: transform, opacity;
+}
+
+@keyframes textReveal {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .text-reveal.animate .text-reveal-content {
@@ -737,13 +878,21 @@ p {
 /* Card animations */
 .card-reveal {
   opacity: 0;
-  transform: scale(0.9);
-  transition: all 0.8s ease-out;
+  animation: cardReveal 0.8s cubic-bezier(0.23, 1, 0.32, 1) both;
+  animation-delay: 0.2s;
+  transform-origin: bottom center;
+  will-change: transform, opacity;
 }
 
-.card-reveal.animate {
-  opacity: 1;
-  transform: scale(1);
+@keyframes cardReveal {
+  from {
+    transform: perspective(1000px) rotateX(30deg) translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: perspective(1000px) rotateX(0) translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Program card hover effects */
@@ -758,32 +907,37 @@ p {
 
 /* Delay utility classes */
 .delay-100 {
-  transition-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 
 .delay-200 {
-  transition-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 .delay-300 {
-  transition-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 .delay-400 {
-  transition-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 
 .delay-500 {
-  transition-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 
 .delay-600 {
-  transition-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 
 /* Hover animation for buttons */
+.hover-scale {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
 .hover-scale:hover {
   transform: scale(1.05);
+  background-color: rgba(151, 49, 49, 0.05); /* Very light red background on hover */
 }
 
 /* Fancy button hover effect */
@@ -807,6 +961,26 @@ p {
 
 .fancy-button:hover:after {
   transform: translateX(100%);
+}
+
+/* Enhanced CTA section background pattern */
+.bg-gray-50 {
+  position: relative;
+  background-image: linear-gradient(rgba(249, 250, 251, 0.8) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(249, 250, 251, 0.8) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: center center;
+}
+
+.bg-gray-50:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: linear-gradient(90deg, transparent, #973131, transparent);
+  opacity: 0.3;
 }
 
 /* New animations for Attract New Customers section */
@@ -841,13 +1015,46 @@ p {
   transform: translateY(0);
 }
 
+/* Fade in animation for sections */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Floating animation for decorative elements */
+.float-element {
+  animation: float 6s ease-in-out infinite;
+}
+
 .floating {
   animation: floating 3s ease-in-out infinite;
 }
 
 .floating-slow {
   animation: floating 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 @keyframes floating {
@@ -918,6 +1125,22 @@ button.bg-red-600 {
 .animate-reveal-left, .animate-reveal-right {
   opacity: 1 !important;
   transform: translateX(0);
+}
+
+/* Pulsing Animation for decorative elements */
+.animate-pulse-slow {
+  animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
 }
 
 /* Slow bounce animation for badges */

@@ -40,8 +40,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                           <defs>
                             <linearGradient id="mobileGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#8b5cf6" />
-                              <stop offset="100%" stop-color="#c084fc" />
+                              <stop offset="0%" stop-color="#973131" />
+                              <stop offset="100%" stop-color="#7e2929" />
                             </linearGradient>
                           </defs>
                           <path d="M17 2H7C5.9 2 5 2.9 5 4v16c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-5 17c-.83 0-1.5-.67-1.5-1.5S11.17 16 12 16s1.5.67 1.5 1.5S12.83 19 12 19zm5-6H7V5h10v8z" fill="url(#mobileGradient)"/>
@@ -57,8 +57,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                           <defs>
                             <linearGradient id="posGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#ec4899" />
-                              <stop offset="100%" stop-color="#f472b6" />
+                              <stop offset="0%" stop-color="#973131" />
+                              <stop offset="100%" stop-color="#7e2929" />
                             </linearGradient>
                           </defs>
                           <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V6h16v12zM6 10h2v2H6zm0 4h8v2H6zm10 0h2v2h-2zm-6-4h8v2h-8z" fill="url(#posGradient)"/>
@@ -74,8 +74,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                           <defs>
                             <linearGradient id="webGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#3b82f6" />
-                              <stop offset="100%" stop-color="#60a5fa" />
+                              <stop offset="0%" stop-color="#973131" />
+                              <stop offset="100%" stop-color="#7e2929" />
                             </linearGradient>
                           </defs>
                           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" fill="url(#webGradient)"/>
@@ -91,8 +91,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                           <defs>
                             <linearGradient id="qrGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#10b981" />
-                              <stop offset="100%" stop-color="#34d399" />
+                              <stop offset="0%" stop-color="#973131" />
+                              <stop offset="100%" stop-color="#7e2929" />
                             </linearGradient>
                           </defs>
                           <path d="M3 11h8V3H3v8zm2-6h4v4H5V5zM3 21h8v-8H3v8zm2-6h4v4H5v-4zM13 3v8h8V3h-8zm6 6h-4V5h4v4zM13 13h2v2h-2zM17 13h2v2h-2zM19 17h2v2h-2zM13 17h2v2h-2zM17 17h2v2h-2zM19 19h2v2h-2zM13 19h2v2h-2z" fill="url(#qrGradient)"/>
@@ -108,8 +108,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                           <defs>
                             <linearGradient id="integrationsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#14b8a6" />
-                              <stop offset="100%" stop-color="#2dd4bf" />
+                              <stop offset="0%" stop-color="#973131" />
+                              <stop offset="100%" stop-color="#7e2929" />
                             </linearGradient>
                           </defs>
                           <path d="M19.5 5.5h-15c-1.1 0-2 .9-2 2v9c0 1.1.9 2 2 2h15c1.1 0 2-.9 2-2v-9c0-1.1-.9-2-2-2zm.5 11c0 .28-.22.5-.5.5h-15c-.28 0-.5-.22-.5-.5v-9c0-.28.22-.5.5-.5h15c.28 0 .5.22.5.5v9zM7 11h10v2H7zm2-3h6v2H9zm8 6H7v2h10z" fill="url(#integrationsGradient)"/>
@@ -132,8 +132,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                           <defs>
                             <linearGradient id="surchargeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#7e22ce" />
-                              <stop offset="100%" stop-color="#a855f7" />
+                              <stop offset="0%" stop-color="#973131" />
+                              <stop offset="100%" stop-color="#7e2929" />
                             </linearGradient>
                           </defs>
                           <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 4h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h11c.55 0 1-.45 1-1s-.45-1-1-1H7l1.1-2h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.67-1.43c-.16-.35-.52-.57-.9-.57H1c-.55 0-1 .45-1 1s.45 1 1 1zm16 15c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" fill="url(#surchargeGradient)"/>
@@ -149,8 +149,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                           <defs>
                             <linearGradient id="dualPricingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#0f766e" />
-                              <stop offset="100%" stop-color="#14b8a6" />
+                              <stop offset="0%" stop-color="#973131" />
+                              <stop offset="100%" stop-color="#7e2929" />
                             </linearGradient>
                           </defs>
                           <path d="M11 17h2v-1h1c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1h-3v-1h4V8h-2V7h-2v1h-1c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3v1H9v2h2v1zm9-13H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4V6h16v12z" fill="url(#dualPricingGradient)"/>
@@ -166,8 +166,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                           <defs>
                             <linearGradient id="loanGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#15803d" />
-                              <stop offset="100%" stop-color="#22c55e" />
+                              <stop offset="0%" stop-color="#973131" />
+                              <stop offset="100%" stop-color="#7e2929" />
                             </linearGradient>
                           </defs>
                           <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z" fill="url(#loanGradient)"/>
@@ -183,8 +183,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                           <defs>
                             <linearGradient id="giftGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#15803d" />
-                              <stop offset="100%" stop-color="#22c55e" />
+                              <stop offset="0%" stop-color="#973131" />
+                              <stop offset="100%" stop-color="#7e2929" />
                             </linearGradient>
                           </defs>
                           <path d="M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z" fill="url(#giftGradient)"/>
@@ -200,8 +200,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24">
                           <defs>
                             <linearGradient id="chargebackGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#f97316" />
-                              <stop offset="100%" stop-color="#fb923c" />
+                              <stop offset="0%" stop-color="#973131" />
+                              <stop offset="100%" stop-color="#7e2929" />
                             </linearGradient>
                           </defs>
                           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="url(#chargebackGradient)"/>
@@ -238,8 +238,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                           <defs>
                             <linearGradient id="retailGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#1d4ed8" />
-                              <stop offset="100%" stop-color="#3b82f6" />
+                              <stop offset="0%" stop-color="#973131" />
+                              <stop offset="100%" stop-color="#7e2929" />
                             </linearGradient>
                           </defs>
                           <path d="M21.9 8.89l-1.05-4.37c-.22-.9-1-1.52-1.91-1.52H5.05c-.9 0-1.69.63-1.9 1.52L2.1 8.89c-.24 1.02-.02 2.06.62 2.88.08.11.19.19.28.29V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6.94c.09-.09.2-.18.28-.28.64-.82.87-1.87.62-2.89zm-2.99-3.9l1.05 4.37c.1.42.01.84-.25 1.17-.14.18-.44.47-.94.47-.61 0-1.14-.49-1.21-1.14L16.98 5l1.93-.01zM13 5h1.96l.54 4.52c.05.39-.07.78-.33 1.07-.22.26-.54.41-.95.41-.67 0-1.22-.59-1.22-1.31V5zM8.49 9.52L9.04 5H11v4.69c0 .72-.55 1.31-1.29 1.31-.34 0-.65-.15-.89-.41-.25-.29-.37-.68-.33-1.07zm-4.45-.16L5.05 5h1.97l-.58 4.86c-.08.65-.6 1.14-1.21 1.14-.49 0-.8-.29-.93-.47-.27-.32-.36-.75-.26-1.17zM5 19v-6.03c.08.01.15.03.23.03.87 0 1.66-.36 2.24-.95.6.6 1.4.95 2.31.95.87 0 1.65-.36 2.23-.93.59.57 1.39.93 2.29.93.84 0 1.64-.35 2.24-.95.58.59 1.37.95 2.24.95.08 0 .15-.02.23-.03V19H5z" fill="url(#retailGradient)"/>
@@ -255,8 +255,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                           <defs>
                             <linearGradient id="ecommerceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#7e22ce" />
-                              <stop offset="100%" stop-color="#a855f7" />
+                              <stop offset="0%" stop-color="#973131" />
+                              <stop offset="100%" stop-color="#7e2929" />
                             </linearGradient>
                           </defs>
                           <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 4h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h11c.55 0 1-.45 1-1s-.45-1-1-1H7l1.1-2h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.67-1.43c-.16-.35-.52-.57-.9-.57H1c-.55 0-1 .45-1 1s.45 1 1 1zm16 15c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" fill="url(#ecommerceGradient)"/>
@@ -278,8 +278,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                           <defs>
                             <linearGradient id="restaurantGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#15803d" />
-                              <stop offset="100%" stop-color="#22c55e" />
+                              <stop offset="0%" stop-color="#973131" />
+                              <stop offset="100%" stop-color="#7e2929" />
                             </linearGradient>
                           </defs>
                           <path d="M8.1 13.34l2.83-2.83-6.19-6.18c-.48-.48-1.31-.35-1.61.27-.71 1.49-.45 3.32.78 4.56l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27l-9.05 9.05 1.41 1.41 9.05-9.05 9.05 9.05 1.41-1.41-9.05-9.05z" fill="url(#restaurantGradient)"/>
@@ -294,12 +294,12 @@
                       <div class="icon-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                           <defs>
-                            <linearGradient id="retailGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#1d4ed8" />
-                              <stop offset="100%" stop-color="#3b82f6" />
+                            <linearGradient id="professionalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" stop-color="#973131" />
+                              <stop offset="100%" stop-color="#7e2929" />
                             </linearGradient>
                           </defs>
-                          <path d="M21.9 8.89l-1.05-4.37c-.22-.9-1-1.52-1.91-1.52H5.05c-.9 0-1.69.63-1.9 1.52L2.1 8.89c-.24 1.02-.02 2.06.62 2.88.08.11.19.19.28.29V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6.94c.09-.09.2-.18.28-.28.64-.82.87-1.87.62-2.89zm-2.99-3.9l1.05 4.37c.1.42.01.84-.25 1.17-.14.18-.44.47-.94.47-.61 0-1.14-.49-1.21-1.14L16.98 5l1.93-.01zM13 5h1.96l.54 4.52c.05.39-.07.78-.33 1.07-.22.26-.54.41-.95.41-.67 0-1.22-.59-1.22-1.31V5zM8.49 9.52L9.04 5H11v4.69c0 .72-.55 1.31-1.29 1.31-.34 0-.65-.15-.89-.41-.25-.29-.37-.68-.33-1.07zm-4.45-.16L5.05 5h1.97l-.58 4.86c-.08.65-.6 1.14-1.21 1.14-.49 0-.8-.29-.93-.47-.27-.32-.36-.75-.26-1.17zM5 19v-6.03c.08.01.15.03.23.03.87 0 1.66-.36 2.24-.95.6.6 1.4.95 2.31.95.87 0 1.65-.36 2.23-.93.59.57 1.39.93 2.29.93.84 0 1.64-.35 2.24-.95.58.59 1.37.95 2.24.95.08 0 .15-.02.23-.03V19H5z" fill="url(#retailGradient)"/>
+                          <path d="M21.9 8.89l-1.05-4.37c-.22-.9-1-1.52-1.91-1.52H5.05c-.9 0-1.69.63-1.9 1.52L2.1 8.89c-.24 1.02-.02 2.06.62 2.88.08.11.19.19.28.29V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6.94c.09-.09.2-.18.28-.28.64-.82.87-1.87.62-2.89zm-2.99-3.9l1.05 4.37c.1.42.01.84-.25 1.17-.14.18-.44.47-.94.47-.61 0-1.14-.49-1.21-1.14L16.98 5l1.93-.01zM13 5h1.96l.54 4.52c.05.39-.07.78-.33 1.07-.22.26-.54.41-.95.41-.67 0-1.22-.59-1.22-1.31V5zM8.49 9.52L9.04 5H11v4.69c0 .72-.55 1.31-1.29 1.31-.34 0-.65-.15-.89-.41-.25-.29-.37-.68-.33-1.07zm-4.45-.16L5.05 5h1.97l-.58 4.86c-.08.65-.6 1.14-1.21 1.14-.49 0-.8-.29-.93-.47-.27-.32-.36-.75-.26-1.17zM5 19v-6.03c.08.01.15.03.23.03.87 0 1.66-.36 2.24-.95.6.6 1.4.95 2.31.95.87 0 1.65-.36 2.23-.93.59.57 1.39.93 2.29.93.84 0 1.64-.35 2.24-.95.58.59 1.37.95 2.24.95.08 0 .15-.02.23-.03V19H5z" fill="url(#professionalGradient)"/>
                         </svg>
                       </div>
                       <span class="link-title">Professional Services</span>
@@ -318,8 +318,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                           <defs>
                             <linearGradient id="skillsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#7e22ce" />
-                              <stop offset="100%" stop-color="#a855f7" />
+                              <stop offset="0%" stop-color="#973131" />
+                              <stop offset="100%" stop-color="#7e2929" />
                             </linearGradient>
                           </defs>
                           <path d="M21.67 18.17l-5.3-5.3h-.99l-2.54 2.54v.99l5.3 5.3c.39.39 1.02.39 1.41 0l2.12-2.12c.39-.38.39-1.02 0-1.41zm-2.83 1.42l-4.24-4.24.71-.71 4.24 4.24-.71.71z M11 15h2v2h-2zm-1-4h4v2h-4zm5-3h-6c-.55 0-1 .45-1 1v1h8V9c0-.55-.45-1-1-1zm-1-4h-4c-.55 0-1 .45-1 1v1h6V5c0-.55-.45-1-1-1zM4.59 11.59l-.69.7-2.12-2.12c-.39-.39-.39-1.02 0-1.41l2.12-2.12.69.7L3.41 8.5h.99c2.48 0 4.5 2.02 4.5 4.5 0 .34-.04.67-.12.98-.23-.37-.53-.71-.88-1-.07-.16-.12-.33-.12-.51 0-1.55-1.22-2.82-2.76-2.88H3.41l1.18 1.18z" fill="url(#skillsGradient)"/>
@@ -335,8 +335,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                           <defs>
                             <linearGradient id="specialtyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#7e22ce" />
-                              <stop offset="100%" stop-color="#a855f7" />
+                              <stop offset="0%" stop-color="#973131" />
+                              <stop offset="100%" stop-color="#7e2929" />
                             </linearGradient>
                           </defs>
                           <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z" fill="url(#specialtyGradient)"/>
@@ -359,8 +359,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                           <defs>
                             <linearGradient id="adultGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#be123c" />
-                              <stop offset="100%" stop-color="#f43f5e" />
+                              <stop offset="0%" stop-color="#973131" />
+                              <stop offset="100%" stop-color="#7e2929" />
                             </linearGradient>
                           </defs>
                           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" fill="url(#adultGradient)"/>
@@ -377,8 +377,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                           <defs>
                             <linearGradient id="firearmsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#475569" />
-                              <stop offset="100%" stop-color="#64748b" />
+                              <stop offset="0%" stop-color="#973131" />
+                              <stop offset="100%" stop-color="#7e2929" />
                             </linearGradient>
                           </defs>
                           <path d="M7 5h10v2h2V3H5v4h2V5zm10 16h-4v-5h-2v5H7v-9H5v11h14v-11h-2v9zM12 9l-4 5h2v7h4v-7h2l-4-5z" fill="url(#firearmsGradient)"/>
@@ -396,8 +396,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <defs>
                             <linearGradient id="viewAllGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#9f1239" />
-                              <stop offset="100%" stop-color="#e11d48" />
+                              <stop offset="0%" stop-color="#973131" />
+                              <stop offset="100%" stop-color="#7e2929" />
                             </linearGradient>
                           </defs>
                           <path stroke="url(#viewAllGradient)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -437,8 +437,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                           <defs>
                             <linearGradient id="agentsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#1e40af" />
-                              <stop offset="100%" stop-color="#3b82f6" />
+                              <stop offset="0%" stop-color="#973131" />
+                              <stop offset="100%" stop-color="#7e2929" />
                             </linearGradient>
                           </defs>
                           <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="url(#agentsGradient)"/>
@@ -460,8 +460,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                           <defs>
                             <linearGradient id="partnershipGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#4f46e5" />
-                              <stop offset="100%" stop-color="#6366f1" />
+                              <stop offset="0%" stop-color="#973131" />
+                              <stop offset="100%" stop-color="#7e2929" />
                             </linearGradient>
                           </defs>
                           <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" fill="url(#partnershipGradient)"/>
@@ -477,8 +477,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                           <defs>
                             <linearGradient id="onboardingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#fb7185" />
-                              <stop offset="100%" stop-color="#f43f5e" />
+                              <stop offset="0%" stop-color="#973131" />
+                              <stop offset="100%" stop-color="#7e2929" />
                             </linearGradient>
                           </defs>
                           <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z" fill="url(#onboardingGradient)"/>
@@ -500,8 +500,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                           <defs>
                             <linearGradient id="resellerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stop-color="#0d9488" />
-                              <stop offset="100%" stop-color="#14b8a6" />
+                              <stop offset="0%" stop-color="#973131" />
+                              <stop offset="100%" stop-color="#7e2929" />
                             </linearGradient>
                           </defs>
                           <path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" fill="url(#resellerGradient)"/>
@@ -793,9 +793,9 @@ defineExpose({
   flex-shrink: 0;
   position: relative;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 1);
   transition: all 0.3s ease;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid #973131;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
@@ -808,11 +808,24 @@ defineExpose({
 .menu-item-link:hover .icon-container {
   transform: scale(1.1) rotate(-5deg);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: rgba(151, 49, 49, 0.05);
 }
 
 .menu-item-link:hover .icon-container svg {
   transform: scale(1.2) rotate(5deg);
   filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.1));
+}
+
+/* Remove the icon background color classes since we're using a consistent style */
+.purple-icon svg, .blue-icon svg, .green-icon svg, .teal-icon svg,
+.red-icon svg, .orange-icon svg, .pink-icon svg, .indigo-icon svg, .yellow-icon svg { 
+  fill: #973131; 
+}
+
+.purple-icon, .blue-icon, .green-icon, .teal-icon,
+.red-icon, .orange-icon, .pink-icon, .indigo-icon, .yellow-icon { 
+  background: white;
+  border: 1px solid #973131;
 }
 
 /* More vibrant icon colors */
