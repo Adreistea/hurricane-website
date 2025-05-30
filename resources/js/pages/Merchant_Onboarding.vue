@@ -741,6 +741,7 @@
                       <option value="Mobile Business">Mobile Business</option>
                       <option value="Licensed Professional Service">Licensed Professional Service</option>
                       <option value="Online/MOTO">Online/MOTO</option>
+                      <option value="Ecommerce">Ecommerce</option>
                     </select>
                   </div>
                   
@@ -753,6 +754,203 @@
                       class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
                       required
                     >
+                  </div>
+                  
+                  <div>
+                    <label for="refundReturnPolicy" class="block text-gray-700 font-medium mb-2">Refund/Return Policy *</label>
+                    <div class="space-y-2">
+                      <div class="flex items-center">
+                        <input
+                          type="radio"
+                          id="fullRefund"
+                          value="Full Refund Within 30 Days: Return items within 30 days for a full refund."
+                          v-model="form.refund_return_policy"
+                          class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                        >
+                        <label for="fullRefund" class="ml-2 text-gray-700">Full Refund Within 30 Days: Return items within 30 days for a full refund.</label>
+                      </div>
+                      <div class="flex items-center">
+                        <input
+                          type="radio"
+                          id="noRefund"
+                          value="No Refund on Sale Items: All discounted sales are final and non-refundable."
+                          v-model="form.refund_return_policy"
+                          class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                        >
+                        <label for="noRefund" class="ml-2 text-gray-700">No Refund on Sale Items: All discounted sales are final and non-refundable.</label>
+                      </div>
+                      <div class="flex items-center">
+                        <input
+                          type="radio"
+                          id="storeCredit"
+                          value="Store Credit Only: Returns accepted for store credit, not cash."
+                          v-model="form.refund_return_policy"
+                          class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                        >
+                        <label for="storeCredit" class="ml-2 text-gray-700">Store Credit Only: Returns accepted for store credit, not cash.</label>
+                      </div>
+                      <div class="flex items-center">
+                        <input
+                          type="radio"
+                          id="refundWithReceipt"
+                          value="Refund with Receipt: Refunds only with original receipt or proof of purchase."
+                          v-model="form.refund_return_policy"
+                          class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                        >
+                        <label for="refundWithReceipt" class="ml-2 text-gray-700">Refund with Receipt: Refunds only with original receipt or proof of purchase.</label>
+                      </div>
+                      <div class="flex items-center">
+                        <input
+                          type="radio"
+                          id="otherRefund"
+                          value="Other"
+                          v-model="form.refund_return_policy"
+                          class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                        >
+                        <label for="otherRefund" class="ml-2 text-gray-700">Other</label>
+                      </div>
+                    </div>
+                    <div v-if="form.refund_return_policy === 'Other'" class="mt-2">
+                      <input
+                        type="text"
+                        id="otherRefundDescription"
+                        v-model="form.refund_return_policy_other"
+                        placeholder="Please describe your refund/return policy"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red"
+                      >
+                    </div>
+                  </div>
+                  
+                  <!-- E-commerce and MOTO Fields Section (Conditional) -->
+                  <div v-if="form.industry_type === 'Ecommerce' || form.industry_type === 'Online/MOTO'" class="mt-8">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">For Card-Not-Present Merchants (E-Commerce & MOTO)</h3>
+                    
+                    <!-- Inventory Maintained Section -->
+                    <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                      <h4 class="text-lg font-semibold text-gray-800 mb-4">Inventory Maintained:</h4>
+                      
+                      <div class="space-y-4">
+                        <!-- ON SITE -->
+                        <div class="flex items-center">
+                          <input
+                            type="radio"
+                            id="onSite"
+                            value="ON SITE"
+                            v-model="form.inventory_maintained"
+                            class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                          >
+                          <label for="onSite" class="ml-2 text-gray-700 font-medium">ON SITE</label>
+                        </div>
+
+                        <!-- OFF SITE -->
+                        <div class="space-y-2">
+                          <div class="flex items-center">
+                            <input
+                              type="radio"
+                              id="offSite"
+                              value="OFF SITE"
+                              v-model="form.inventory_maintained"
+                              class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                            >
+                            <label for="offSite" class="ml-2 text-gray-700 font-medium">OFF SITE (I.E. WAREHOUSE). IF SO, PROVIDE ADDRESS:</label>
+                          </div>
+                          <div v-if="form.inventory_maintained === 'OFF SITE'" class="ml-6 mt-2">
+                            <textarea
+                              id="offSiteAddress"
+                              v-model="form.inventory_off_site_address"
+                              rows="3"
+                              placeholder="Enter warehouse address"
+                              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red"
+                            ></textarea>
+                          </div>
+                        </div>
+
+                        <!-- 3RD PARTY FULFILLMENT CENTER -->
+                        <div class="space-y-2">
+                          <div class="flex items-center">
+                            <input
+                              type="radio"
+                              id="fulfillmentCenter"
+                              value="3RD PARTY FULFILLMENT CENTER"
+                              v-model="form.inventory_maintained"
+                              class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                            >
+                            <label for="fulfillmentCenter" class="ml-2 text-gray-700 font-medium">3RD PARTY FULFILLMENT CENTER. IF SO, PROVIDE FULLY EXECUTED FULFILLMENT AGREEMENT</label>
+                          </div>
+                          <div v-if="form.inventory_maintained === '3RD PARTY FULFILLMENT CENTER'" class="ml-6 mt-2">
+                            <input
+                              type="text"
+                              id="fulfillmentAgreement"
+                              v-model="form.fulfillment_agreement_file"
+                              placeholder="Fulfillment agreement details"
+                              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red"
+                            >
+                          </div>
+                        </div>
+
+                        <!-- Service Only -->
+                        <div class="flex items-center">
+                          <input
+                            type="radio"
+                            id="serviceOnly"
+                            value="SERVICE ONLY"
+                            v-model="form.inventory_maintained"
+                            class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                          >
+                          <label for="serviceOnly" class="ml-2 text-gray-700 font-medium">Service Only (No Products Sold)</label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Other Companies Section -->
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                      <h4 class="text-lg font-semibold text-gray-800 mb-4">ARE THERE ANY OTHER COMPANIES INVOLVED IN SHIPPING OR FULFILLING PRODUCTS/SERVICE (I.E. FULFILLMENT CENTER)?</h4>
+                      
+                      <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                          <div class="flex items-center">
+                            <input
+                              type="radio"
+                              id="otherCompaniesNo"
+                              value="NO"
+                              v-model="form.other_companies_involved_shipping"
+                              class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                            >
+                            <label for="otherCompaniesNo" class="ml-2 text-gray-700">NO</label>
+                          </div>
+                          <div class="flex items-center">
+                            <input
+                              type="radio"
+                              id="otherCompaniesYes"
+                              value="YES"
+                              v-model="form.other_companies_involved_shipping"
+                              class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                            >
+                            <label for="otherCompaniesYes" class="ml-2 text-gray-700">YES. IF SO, PROVIDE FULLY EXECUTED FULFILLMENT AGREEMENT</label>
+                          </div>
+                        </div>
+                        
+                        <div v-if="form.other_companies_involved_shipping === 'YES'" class="space-y-3">
+                          <textarea
+                            id="otherCompaniesDetails"
+                            v-model="form.other_companies_fulfillment_details"
+                            rows="3"
+                            placeholder="Provide details about other companies involved"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red"
+                          ></textarea>
+                          
+                          <div class="flex items-center">
+                            <input
+                              type="checkbox"
+                              id="agreementProvided"
+                              v-model="form.other_companies_agreement_provided"
+                              class="w-4 h-4 text-custom-red border-gray-300 rounded focus:ring-custom-red"
+                            >
+                            <label for="agreementProvided" class="ml-2 text-gray-700">Fulfillment agreement provided</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   
                   <div>
@@ -848,6 +1046,339 @@
                       placeholder="Enter zip code"
                       required
                     >
+                  </div>
+
+                  <!-- Bank Account Information Section -->
+                  <div class="mt-8">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Bank Account Information</h3>
+                    
+                    <!-- Primary Bank Account -->
+                    <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                      <h4 class="text-lg font-semibold text-gray-800 mb-4">Primary Bank Account</h4>
+                      
+                      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Routing Number 1 -->
+                        <div>
+                          <label for="routingNumber1" class="block text-gray-700 font-medium mb-2">Routing Number</label>
+                          <input 
+                            type="text" 
+                            id="routingNumber1" 
+                            v-model="form.routing_number_1" 
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                            placeholder="Enter routing number"
+                          >
+                        </div>
+
+                        <!-- Account Number 1 -->
+                        <div>
+                          <label for="accountNumber1" class="block text-gray-700 font-medium mb-2">Account Number</label>
+                          <input 
+                            type="text" 
+                            id="accountNumber1" 
+                            v-model="form.account_number_1" 
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                            placeholder="Enter account number"
+                          >
+                        </div>
+                      </div>
+
+                      <!-- Bank Account Purpose 1 -->
+                      <div class="mt-4">
+                        <label class="block text-gray-700 font-medium mb-2">Bank Account For:</label>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div class="flex items-center">
+                            <input
+                              type="radio"
+                              id="debits1"
+                              value="debits"
+                              v-model="form.bank_account_1_purpose"
+                              class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                            >
+                            <label for="debits1" class="ml-2 text-gray-700">Debits (such as fees & chargebacks)</label>
+                          </div>
+                          <div class="flex items-center">
+                            <input
+                              type="radio"
+                              id="deposits1"
+                              value="deposits"
+                              v-model="form.bank_account_1_purpose"
+                              class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                            >
+                            <label for="deposits1" class="ml-2 text-gray-700">Deposits (such as payouts)</label>
+                          </div>
+                          <div class="flex items-center">
+                            <input
+                              type="radio"
+                              id="other1"
+                              value="other"
+                              v-model="form.bank_account_1_purpose"
+                              class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                            >
+                            <label for="other1" class="ml-2 text-gray-700">Other (describe)</label>
+                          </div>
+                        </div>
+                        
+                        <!-- Other Description 1 -->
+                        <div v-if="form.bank_account_1_purpose === 'other'" class="mt-3">
+                          <input
+                            type="text"
+                            id="otherDescription1"
+                            v-model="form.bank_account_1_other_description"
+                            placeholder="Please describe"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red"
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Secondary Bank Account -->
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                      <h4 class="text-lg font-semibold text-gray-800 mb-4">Secondary Bank Account <span class="text-gray-500 text-sm font-normal">(Optional)</span></h4>
+                      
+                      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Routing Number 2 -->
+                        <div>
+                          <label for="routingNumber2" class="block text-gray-700 font-medium mb-2">Routing Number</label>
+                          <input 
+                            type="text" 
+                            id="routingNumber2" 
+                            v-model="form.routing_number_2" 
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                            placeholder="Enter routing number"
+                          >
+                        </div>
+
+                        <!-- Account Number 2 -->
+                        <div>
+                          <label for="accountNumber2" class="block text-gray-700 font-medium mb-2">Account Number</label>
+                          <input 
+                            type="text"   
+                            id="accountNumber2" 
+                            v-model="form.account_number_2" 
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
+                            placeholder="Enter account number"
+                          >
+                        </div>
+                      </div>
+
+                      <!-- Bank Account Purpose 2 -->
+                      <div class="mt-4">
+                        <label class="block text-gray-700 font-medium mb-2">Bank Account For:</label>
+                        <div class="grid grid-cols-1 gap-3">
+                          <div class="flex items-center">
+                            <input
+                              type="radio"
+                              id="debits2"
+                              value="debits"
+                              v-model="form.bank_account_2_purpose"
+                              class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                            >
+                            <label for="debits2" class="ml-2 text-gray-700">Debits (such as fees & chargebacks)</label>
+                          </div>
+                          <div class="flex items-center">
+                            <input
+                              type="radio"
+                              id="deposits2"
+                              value="deposits"
+                              v-model="form.bank_account_2_purpose"
+                              class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                            >
+                            <label for="deposits2" class="ml-2 text-gray-700">Deposits (such as payouts)</label>
+                          </div>
+                          <div class="flex items-center">
+                            <input
+                              type="radio"
+                              id="other2"
+                              value="other"
+                              v-model="form.bank_account_2_purpose"
+                              class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                            >
+                            <label for="other2" class="ml-2 text-gray-700">Other (describe)</label>
+                          </div>
+                        </div>
+                        
+                        <!-- Other Description 2 -->
+                        <div v-if="form.bank_account_2_purpose === 'other'" class="mt-3">
+                          <input
+                            type="text"
+                            id="otherDescription2"
+                            v-model="form.bank_account_2_other_description"
+                            placeholder="Please describe"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red"
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mt-4 text-sm text-gray-600 italic">
+                      * If no selection is made, then the Bank Account listed will be used for both Debits and Deposits
+                    </div>
+                  </div>
+
+                  <!-- Location Information Section -->
+                  <div class="mt-8">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Location Information</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <!-- Building Type -->
+                      <div>
+                        <label for="buildingType" class="block text-gray-700 font-medium mb-2">Building Type</label>
+                        <div class="space-y-2">
+                          <div class="flex items-center">
+                            <input
+                              type="radio"
+                              id="shopping_center"
+                              value="shopping_center"
+                              v-model="form.building_type"
+                              class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                            >
+                            <label for="shopping_center" class="ml-2 text-gray-700">Shopping Center</label>
+                          </div>
+                          <div class="flex items-center">
+                            <input
+                              type="radio"
+                              id="office_building"
+                              value="office_building"
+                              v-model="form.building_type"
+                              class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                            >
+                            <label for="office_building" class="ml-2 text-gray-700">Office Building</label>
+                          </div>
+                          <div class="flex items-center">
+                            <input
+                              type="radio"
+                              id="industrial_building"
+                              value="industrial_building"
+                              v-model="form.building_type"
+                              class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                            >
+                            <label for="industrial_building" class="ml-2 text-gray-700">Industrial Building</label>
+                          </div>
+                          <div class="flex items-center">
+                            <input
+                              type="radio"
+                              id="residence"
+                              value="residence"
+                              v-model="form.building_type"
+                              class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                            >
+                            <label for="residence" class="ml-2 text-gray-700">Residence</label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Merchant -->
+                      <div>
+                        <label for="merchantStatus" class="block text-gray-700 font-medium mb-2">Merchant</label>
+                        <div class="space-y-2">
+                          <div class="flex items-center">
+                            <input
+                              type="radio"
+                              id="owns"
+                              value="owns"
+                              v-model="form.merchant_status"
+                              class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                            >
+                            <label for="owns" class="ml-2 text-gray-700">Owns</label>
+                          </div>
+                          <div class="flex items-center">
+                            <input
+                              type="radio"
+                              id="rents"
+                              value="rents"
+                              v-model="form.merchant_status"
+                              class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                            >
+                            <label for="rents" class="ml-2 text-gray-700">Rents</label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Area Zoned -->
+                      <div>
+                        <label for="areaZoned" class="block text-gray-700 font-medium mb-2">Area Zoned</label>
+                        <div class="space-y-2">
+                          <div class="flex items-center">
+                            <input
+                              type="radio"
+                              id="commercial"
+                              value="commercial"
+                              v-model="form.area_zoned"
+                              class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                            >
+                            <label for="commercial" class="ml-2 text-gray-700">Commercial</label>
+                          </div>
+                          <div class="flex items-center">
+                            <input
+                              type="radio"
+                              id="industrial"
+                              value="industrial"
+                              v-model="form.area_zoned"
+                              class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                            >
+                            <label for="industrial" class="ml-2 text-gray-700">Industrial</label>
+                          </div>
+                          <div class="flex items-center">
+                            <input
+                              type="radio"
+                              id="residential"
+                              value="residential"
+                              v-model="form.area_zoned"
+                              class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                            >
+                            <label for="residential" class="ml-2 text-gray-700">Residential</label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Square Footage -->
+                      <div>
+                        <label for="squareFootage" class="block text-gray-700 font-medium mb-2">Square Footage</label>
+                        <div class="space-y-2">
+                          <div class="flex items-center">
+                            <input
+                              type="radio"
+                              id="0-500"
+                              value="0-500"
+                              v-model="form.square_footage"
+                              class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                            >
+                            <label for="0-500" class="ml-2 text-gray-700">0-500</label>
+                          </div>
+                          <div class="flex items-center">
+                            <input
+                              type="radio"
+                              id="501-2500"
+                              value="501-2500"
+                              v-model="form.square_footage"
+                              class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                            >
+                            <label for="501-2500" class="ml-2 text-gray-700">501-2,500</label>
+                          </div>
+                          <div class="flex items-center">
+                            <input
+                              type="radio"
+                              id="2501-5000"
+                              value="2501-5000"
+                              v-model="form.square_footage"
+                              class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                            >
+                            <label for="2501-5000" class="ml-2 text-gray-700">2,501-5,000</label>
+                          </div>
+                          <div class="flex items-center">
+                            <input
+                              type="radio"
+                              id="5001-10000"
+                              value="5001-10000"
+                              v-model="form.square_footage"
+                              class="w-4 h-4 text-custom-red border-gray-300 focus:ring-custom-red"
+                            >
+                            <label for="5001-10000" class="ml-2 text-gray-700">5,001-10,000</label>
+                          </div>
+                       
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
                   <!-- Payment Acceptance Section -->
@@ -1049,6 +1580,7 @@
                         <span v-else-if="form.industry_type === 'Mobile Business'">Mobile Business Profile</span>
                         <span v-else-if="form.industry_type === 'Licensed Professional Service'">Professional Service Profile</span>
                         <span v-else-if="form.industry_type === 'Online/MOTO'">Online Business Profile</span>
+                        <span v-else-if="form.industry_type === 'Ecommerce'">E-Commerce Profile</span>
                         <span v-else>Business Profile</span>
                         <span class="text-sm bg-yellow-300 text-blue-800 px-2 py-1 rounded ml-2">Optional</span>
                       </h3>
@@ -1080,6 +1612,9 @@
                       </span>
                       <span v-else-if="form.industry_type === 'Online/MOTO'">
                         We'd love to learn more about your online business to help us customize your payment system perfectly.
+                      </span>
+                      <span v-else-if="form.industry_type === 'Ecommerce'">
+                        We'd love to learn more about your e-commerce business to help us customize your payment system perfectly.
                       </span>
                       <span v-else>
                         We'd love to learn more about your business to help us customize your system perfectly.
@@ -1838,231 +2373,6 @@
                       </div>
                       
                       <!-- Recommendation based on answers -->
-                  
-                     
-                      <!-- Custom Bundle Offer for Service Business -->
-                      <div v-if="form.service_solution_response" class="bg-gradient-to-r from-red-100 to-yellow-50 rounded-lg border border-yellow-200 p-5 relative">
-                        <div class="absolute -top-3 -left-3">
-                          <div class="bg-yellow-400 px-3 py-1 text-base font-bold uppercase tracking-wide text-red-900 inline-block shadow-sm transform -rotate-12">
-                            SPECIAL OFFER
-                          </div>
-                        </div>
-                        
-                        <h3 class="text-xl font-bold text-red-800 mt-6 mb-2">Complete POS Solution Package</h3>
-                        <div class="flex items-baseline mb-4">
-                          <span class="text-2xl font-bold text-gray-900">$999.00</span>
-                          <span class="ml-2 text-red-600 line-through text-lg">$2,388.00</span>
-                          <span class="ml-2 text-gray-500">or $49/Month</span>
-                        </div>
-                        
-                        <div class="space-y-1 mb-4">
-                          <div class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            <span>High-Performance Local Server</span>
-                          </div>
-                          <div class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            <span>15" Touchscreen POS Terminal</span>
-                          </div>
-                          <div class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            <span>Thermal Receipt Printer & Credit Card Reader</span>
-                          </div>
-                          <div class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            <span>QR Code Ordering System + Marketing Tools</span>
-                          </div>
-                          <div class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            <span>Professional Installation & Staff Training</span>
-                          </div>
-                          <div class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            <span>2-Day Hardware Replacement Warranty</span>
-                          </div>
-                        </div>
-                        
-                        <p class="text-gray-700 text-sm mb-4">
-                          Complete POS solution with all the hardware and marketing tools you need to get started - plus 0% credit card processing with Hurricane Pay.
-                        </p>
-                        
-                        <div class="text-right">
-                          <button 
-                            @click="selectValueBundle"
-                            type="button"
-                            class="px-4 py-2 bg-red-600 text-white font-medium rounded-md hover:bg-red-700 transition-colors"
-                          >
-                            Select This Bundle
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <!-- Mobile Business-specific questions -->
-                    <div v-else-if="form.industry_type === 'Mobile Business'" class="space-y-12">
-                      <!-- Question 1 - Payment Processing -->
-                      <div>
-                        <h4 class="text-lg font-bold text-gray-800 mb-3">How do you currently process payments on the go?</h4>
-                        <p class="text-gray-600 mb-4">Mobile payment solutions can help you accept payments anywhere</p>
-                        <div class="grid grid-cols-1 gap-3">
-                          <div 
-                            v-for="method in [
-                              'Mobile card reader (Square, etc.)',
-                              'Cash only',
-                              'Invoice clients later',
-                              'Mobile POS system',
-                              'We need a better mobile payment solution'
-                            ]" 
-                            :key="method"
-                            @click="form.mobile_payment = method"
-                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
-                            :class="form.mobile_payment === method ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
-                          >
-                            <div class="flex items-center">
-                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
-                                :class="form.mobile_payment === method ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
-                              >
-                                <div v-if="form.mobile_payment === method" class="w-3 h-3 rounded-full bg-white"></div>
-                              </div>
-                              <div class="font-medium">{{ method }}</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <!-- Question 2 - Payment Challenges -->
-                      <div v-if="form.mobile_payment">
-                        <h4 class="text-lg font-bold text-gray-800 mb-3">What challenges do you face with mobile payments?</h4>
-                        <p class="text-gray-600 mb-4">Select all that apply to your mobile business</p>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                          <div 
-                            v-for="challenge in [
-                              'Unreliable internet/connectivity issues',
-                              'Battery life limitations',
-                              'Device durability concerns',
-                              'High processing fees',
-                              'Limited receipt options',
-                              'Difficulty tracking inventory on the go'
-                            ]" 
-                            :key="challenge"
-                            @click="toggleMobileChallenge(challenge)"
-                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all flex items-center"
-                            :class="form.mobile_challenges && form.mobile_challenges.includes(challenge) ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
-                          >
-                            <div class="w-5 h-5 rounded border mr-3 flex items-center justify-center"
-                              :class="form.mobile_challenges && form.mobile_challenges.includes(challenge) ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
-                            >
-                              <svg v-if="form.mobile_challenges && form.mobile_challenges.includes(challenge)" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                              </svg>
-                            </div>
-                            <div class="font-medium">{{ challenge }}</div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <!-- Question 3 - Location Tracking -->
-                      <div v-if="form.mobile_challenges && form.mobile_challenges.length > 0">
-                        <h4 class="text-lg font-bold text-gray-800 mb-3">Do you need to track multiple locations or routes?</h4>
-                        <p class="text-gray-600 mb-4">Location tracking can help optimize your mobile business operations</p>
-                        <div class="grid grid-cols-1 gap-3">
-                          <div 
-                            v-for="response in [
-                              'Yes, we operate in multiple areas',
-                              'Yes, we have regular routes',
-                              'No, we operate in a fixed location',
-                              'No, but we might expand to more areas',
-                              'We need help with route planning'
-                            ]" 
-                            :key="response"
-                            @click="form.location_tracking = response"
-                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
-                            :class="form.location_tracking === response ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
-                          >
-                            <div class="flex items-center">
-                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
-                                :class="form.location_tracking === response ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
-                              >
-                                <div v-if="form.location_tracking === response" class="w-3 h-3 rounded-full bg-white"></div>
-                              </div>
-                              <div class="font-medium">{{ response }}</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <!-- Question 4 - Business Type -->
-                      <div v-if="form.location_tracking">
-                        <h4 class="text-lg font-bold text-gray-800 mb-3">What type of mobile business do you operate?</h4>
-                        <p class="text-gray-600 mb-4">This helps us recommend the most appropriate solution</p>
-                        <div class="grid grid-cols-1 gap-3">
-                          <div 
-                            v-for="type in [
-                              'Food truck or mobile food service',
-                              'Mobile retail (pop-up shop, market vendor)',
-                              'Service provider (repairs, cleaning, etc.)',
-                              'Door-to-door sales',
-                              'Event-based business (fairs, concerts, etc.)'
-                            ]" 
-                            :key="type"
-                            @click="form.mobile_business_type = type"
-                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
-                            :class="form.mobile_business_type === type ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
-                          >
-                            <div class="flex items-center">
-                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
-                                :class="form.mobile_business_type === type ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
-                              >
-                                <div v-if="form.mobile_business_type === type" class="w-3 h-3 rounded-full bg-white"></div>
-                              </div>
-                              <div class="font-medium">{{ type }}</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <!-- Question 5 - Complete Solution -->
-                      <div v-if="form.mobile_business_type">
-                        <h4 class="text-xl font-bold text-gray-800 mb-3">Would a rugged, reliable mobile payment solution with offline capability and 0% processing fees solve your current challenges?</h4>
-                        <div class="grid grid-cols-1 gap-3">
-                          <div 
-                            v-for="response in [
-                              'Yes, that would be perfect for our mobile operations',
-                              'We\'d need inventory tracking capabilities too',
-                              'That sounds great if it works in areas with poor connectivity',
-                              'We\'d need multiple devices for our team',
-                              'We\'d want to see how durable the equipment is first'
-                            ]" 
-                            :key="response"
-                            @click="form.mobile_solution_response = response"
-                            class="border rounded-lg px-4 py-3 cursor-pointer transition-all"
-                            :class="form.mobile_solution_response === response ? 'bg-blue-50 border-blue-400 shadow-sm' : 'border-gray-200 hover:border-gray-300'"
-                          >
-                            <div class="flex items-center">
-                              <div class="w-5 h-5 rounded-full border mr-3 flex items-center justify-center"
-                                :class="form.mobile_solution_response === response ? 'bg-blue-500 border-blue-500' : 'border-gray-400'"
-                              >
-                                <div v-if="form.mobile_solution_response === response" class="w-3 h-3 rounded-full bg-white"></div>
-                              </div>
-                              <div class="font-medium">{{ response }}</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <!-- Recommendation based on answers -->
                  
                       
                       <!-- Custom Bundle Offer for Mobile Business -->
@@ -2472,19 +2782,6 @@
                       class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
                       required
                     >
-                  </div>
-                  
-                  <div>
-                    <label for="dlState" class="block text-gray-700 font-medium mb-2">Driver's License State *</label>
-                    <select 
-                      id="dlState" 
-                      v-model="form.dl_state" 
-                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-red" 
-                      required
-                    >
-                      <option value="" disabled selected>Select state</option>
-                      <option v-for="state in usStates" :key="state.code" :value="state.code">{{ state.name }}</option>
-                    </select>
                   </div>
                   
                   <div>
@@ -3150,11 +3447,28 @@
                         <span class="block text-gray-600 text-sm">Full payment required for purchases under $1,500</span>
                       </label>
                     </div>
-                    <div class="bg-blue-50 border border-blue-100 rounded p-3 text-sm text-blue-800">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="inline-block h-5 w-5 mr-1 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
-                      </svg>
-                      This payment method is automatically selected for your purchase.
+                    <div class="bg-blue-50 border border-blue-100 rounded-md p-3 mt-4">
+                      <h6 class="font-medium text-blue-800 text-sm mb-2">All bundles include:</h6>
+                      <div class="grid grid-cols-2 gap-1 text-sm">
+                        <div class="flex items-start">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-500 mr-1 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>POS Software License</span>
+                        </div>
+                        <div class="flex items-start">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-500 mr-1 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Installation Support</span>
+                        </div>
+                        <div class="flex items-start">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-500 mr-1 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                          </svg>
+                          <span>0% Processing Fees</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   
@@ -3577,6 +3891,8 @@ const form = ref({
   industry_type: '',
   dba: '',
   product_service: '',
+  refund_return_policy: '',
+  refund_return_policy_other: '',
   business_phone: '',
   year_started: '',
   website: '',
@@ -3585,6 +3901,12 @@ const form = ref({
     city: '',
     state: '',
   zip: '',
+  
+  // Location fields
+  building_type: '',
+  merchant_status: '',
+  area_zoned: '',
+  square_footage: '',
   
   // Payment Acceptance fields
   accept_visa_mastercard_discover: false,
@@ -3682,6 +4004,26 @@ const form = ref({
   professional_communication: '',
   professional_features: [],
   professional_solution_response: '',
+  
+  // Bank Account Information fields
+  routing_number_1: '',
+  account_number_1: '',
+  bank_account_1_purpose: '',
+  bank_account_1_other_description: '',
+  routing_number_2: '',
+  account_number_2: '',
+  bank_account_2_purpose: '',
+  bank_account_2_other_description: '',
+  
+  // E-commerce and MOTO fields
+  inventory_maintained: '',
+  inventory_off_site_address: '',
+  has_fulfillment_center: false,
+  fulfillment_agreement_file: '',
+  service_only_no_products: false,
+  other_companies_involved_shipping: '',
+  other_companies_fulfillment_details: '',
+  other_companies_agreement_provided: false,
   
   // Signature fields
   terms_agreement: false,
@@ -3788,7 +4130,7 @@ function validateCurrentStep() {
     if (!form.value.owner_first_name || !form.value.owner_last_name || 
         !form.value.title || !form.value.date_of_birth || 
         !form.value.ownership_percentage || !form.value.drivers_license || 
-        !form.value.dl_state || !form.value.owner_phone || !form.value.ssn ||
+        !form.value.owner_phone || !form.value.ssn ||
         !form.value.home_address_line1 || !form.value.city || 
         !form.value.home_state || !form.value.home_zip) {
       alert('Please fill out all required owner information fields');
@@ -3954,7 +4296,6 @@ function calculateTotalAmount() {
 function selectDevice(device, paymentOption) {
   selectedDevice.value = device;
   selectedPaymentOption.value = paymentOption;
-  deviceSelectionError.value = false; // Clear any error when a device is selected
   
   // Update form data with selected device
   form.value.selected_device = device;

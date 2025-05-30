@@ -58,6 +58,28 @@ class MerchantOnboardingController extends Controller
                     'city' => $request->city,
                     'state' => $request->state,
                     'zip' => $request->zip,
+                    'building_type' => $request->building_type,
+                    'merchant_status' => $request->merchant_status,
+                    'area_zoned' => $request->area_zoned,
+                    'square_footage' => $request->square_footage,
+                    'routing_number_1' => $request->routing_number_1,
+                    'account_number_1' => $request->account_number_1,
+                    'bank_account_1_purpose' => $request->bank_account_1_purpose,
+                    'bank_account_1_other_description' => $request->bank_account_1_other_description,
+                    'routing_number_2' => $request->routing_number_2,
+                    'account_number_2' => $request->account_number_2,
+                    'bank_account_2_purpose' => $request->bank_account_2_purpose,
+                    'bank_account_2_other_description' => $request->bank_account_2_other_description,
+                    'refund_return_policy' => $request->refund_return_policy,
+                    // E-commerce and MOTO fields
+                    'inventory_maintained' => $request->inventory_maintained,
+                    'inventory_off_site_address' => $request->inventory_off_site_address,
+                    'has_fulfillment_center' => $request->inventory_maintained === '3RD PARTY FULFILLMENT CENTER',
+                    'fulfillment_agreement_file' => $request->fulfillment_agreement_file,
+                    'service_only_no_products' => $request->inventory_maintained === 'SERVICE ONLY',
+                    'other_companies_involved_shipping' => $request->other_companies_involved_shipping,
+                    'other_companies_fulfillment_details' => $request->other_companies_fulfillment_details,
+                    'other_companies_agreement_provided' => $request->other_companies_agreement_provided ?? false,
                 ]);
             }
 
@@ -256,6 +278,31 @@ class MerchantOnboardingController extends Controller
                     'in_person_percentage' => $data['in_person_percentage'] ?? 90.00,
                     'mail_phone_percentage' => $data['mail_phone_percentage'] ?? 0.00,
                     'ecommerce_percentage' => $data['ecommerce_percentage'] ?? 10.00,
+                    // Location fields
+                    'building_type' => $data['building_type'] ?? null,
+                    'merchant_status' => $data['merchant_status'] ?? null,
+                    'area_zoned' => $data['area_zoned'] ?? null,
+                    'square_footage' => $data['square_footage'] ?? null,
+                    // Bank account fields
+                    'routing_number_1' => $data['routing_number_1'] ?? null,
+                    'account_number_1' => $data['account_number_1'] ?? null,
+                    'bank_account_1_purpose' => $data['bank_account_1_purpose'] ?? null,
+                    'bank_account_1_other_description' => $data['bank_account_1_other_description'] ?? null,
+                    'routing_number_2' => $data['routing_number_2'] ?? null,
+                    'account_number_2' => $data['account_number_2'] ?? null,
+                    'bank_account_2_purpose' => $data['bank_account_2_purpose'] ?? null,
+                    'bank_account_2_other_description' => $data['bank_account_2_other_description'] ?? null,
+                    // Refund/Return Policy
+                    'refund_return_policy' => $data['refund_return_policy'] ?? null,
+                    // E-commerce and MOTO fields
+                    'inventory_maintained' => $data['inventory_maintained'] ?? null,
+                    'inventory_off_site_address' => $data['inventory_off_site_address'] ?? null,
+                    'has_fulfillment_center' => ($data['inventory_maintained'] ?? '') === '3RD PARTY FULFILLMENT CENTER',
+                    'fulfillment_agreement_file' => $data['fulfillment_agreement_file'] ?? null,
+                    'service_only_no_products' => ($data['inventory_maintained'] ?? '') === 'SERVICE ONLY',
+                    'other_companies_involved_shipping' => $data['other_companies_involved_shipping'] ?? null,
+                    'other_companies_fulfillment_details' => $data['other_companies_fulfillment_details'] ?? null,
+                    'other_companies_agreement_provided' => $data['other_companies_agreement_provided'] ?? false,
                 ],
 
                 // Owner information as nested object
