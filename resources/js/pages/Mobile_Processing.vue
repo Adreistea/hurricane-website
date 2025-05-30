@@ -250,68 +250,13 @@
       </div>
     </div>
 
-    <!-- CTA Consultation Section -->
-    <div class="bg-gray-50 py-16 overflow-hidden relative">
-      <!-- Background Pattern Elements -->
-      <div class="absolute right-0 top-0 w-64 h-64 opacity-10 transform rotate-45">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-full h-full text-custom-red">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path>
-        </svg>
-      </div>
-      <div class="absolute left-0 bottom-0 w-48 h-48 opacity-10 transform -rotate-12">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-full h-full text-custom-red">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path>
-        </svg>
-      </div>
-      
-      <div class="container mx-auto px-6">
-        <div class="max-w-4xl mx-auto text-center relative">
-          <!-- Animated Heading -->
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight cta-heading scroll-reveal opacity-0">
-            Find Out If Our Mobile Payment Processing Solutions Can Serve Your Business
-          </h2>
-          
-          <!-- Pulsing CTA Button -->
-          <div class="cta-button-wrapper scroll-reveal opacity-0" style="animation-delay: 0.3s;">
-            <router-link 
-              to="/request-consultation" 
-              class="inline-block px-8 py-4 text-lg font-semibold text-white rounded-lg shadow-xl bg-gradient-to-br from-[#FF7043] to-[#FF9800] transform transition-all duration-300 hover:scale-105 hover:shadow-2xl pulsing-button">
-              Request a Consultation
-            </router-link>
-          </div>
-          
-          <!-- Scroll-triggered particles on hover -->
-          <div class="cta-particles"></div>
-          
-          <!-- Supporting Text -->
-          <p class="mt-6 text-gray-600 max-w-2xl mx-auto text-lg scroll-reveal opacity-0" style="animation-delay: 0.5s;">
-            Our team of experts will work with you to find the perfect mobile payment solution for your specific business needs.
-          </p>
-          
-          <!-- Trust Badges -->
-          <div class="flex flex-wrap justify-center gap-6 mt-10 scroll-reveal opacity-0" style="animation-delay: 0.7s;">
-            <div class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-              <span class="ml-2 text-sm">Free Consultation</span>
-            </div>
-            <div class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-              </svg>
-              <span class="ml-2 text-sm">No Obligation</span>
-            </div>
-            <div class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-              </svg>
-              <span class="ml-2 text-sm">Secure & Confidential</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+   
+    
+    <!-- KwickPOS CTA Section -->
+    <CtaActionSection 
+      heading="Ready to Accept Payments Anywhere?"
+      subheading="Transform your smartphone or tablet into a powerful mobile payment terminal.<br>Get paid on the go with secure, reliable mobile processing solutions."
+    />
   </MainLayout>
 </template>
 
@@ -319,6 +264,7 @@
 import { onMounted } from 'vue';
 import MainLayout from './MainLayout.vue';
 import NavBar from './NavBar.vue'; // Import the NavBar component
+import CtaActionSection from '../components/CtaActionSection.vue';
 
 // Import mobile device image with correct file name
 const mobileDeviceImg = new URL('@/../images/QR table ordering-01.jpg', import.meta.url).href;

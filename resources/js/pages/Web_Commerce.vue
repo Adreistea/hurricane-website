@@ -293,29 +293,14 @@
     </div>
 
     <!-- CTA Section -->
-    <div class="bg-[#973131] py-16 relative overflow-hidden">
-      <div class="absolute top-0 left-0 w-full h-full opacity-10">
-        <div class="absolute top-0 right-0 bg-white rounded-full w-64 h-64 -mt-20 -mr-20"></div>
-        <div class="absolute bottom-0 left-0 bg-white rounded-full w-80 h-80 -mb-32 -ml-32"></div>
-      </div>
-      
-      <div class="container mx-auto px-6 relative z-10">
-        <div class="max-w-4xl mx-auto text-center">
-          <h2 class="text-4xl font-bold mb-6 text-white">Ready to Transform Your Online Business?</h2>
-          <p class="text-xl mb-10 text-white opacity-90">
-            Join thousands of businesses that trust our web commerce solutions
-          </p>
-          
-          <div class="flex justify-center">
-            <router-link 
-              to="/request-consultation" 
-              class="bg-white text-[#973131] hover:bg-red-50 font-bold py-3 px-8 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
-              Get Started Today
-            </router-link>
-          </div>
-        </div>
-      </div>
-    </div>
+   
+    
+
+    <!-- KwickPOS CTA Section -->
+    <CtaActionSection 
+      heading="Ready to Transform Your Online Business?"
+      subheading="Take your e-commerce to the next level with our secure, efficient web payment solutions.<br>Provide your customers with a seamless checkout experience."
+    />
 
     <!-- Add this at the end of your template, right before closing MainLayout tag -->
     <div v-if="currentLightbox && showLightbox">
@@ -334,6 +319,7 @@ import { ref, onMounted } from 'vue';
 import axios from 'axios';
 import MainLayout from './MainLayout.vue';
 import lightbox from './lightbox.vue'; // Import the lightbox component
+import CtaActionSection from '../components/CtaActionSection.vue';
 
 // Import the image using Vue's import mechanism
 const webPicImg = new URL('@/../images/Online order-01.jpg', import.meta.url).href;

@@ -124,12 +124,16 @@
         </div>
       </div>
     </div>
+
+    <!-- Add the CtaActionSection component before the closing MainLayout tag -->
+    <CtaActionSection />
   </MainLayout>
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 import MainLayout from './MainLayout.vue';
+import CtaActionSection from '../components/CtaActionSection.vue';
 
 onMounted(() => {
   // Initialize animation observer for scroll reveal

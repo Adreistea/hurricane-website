@@ -20,7 +20,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
             </svg>
           </div>
-          <span class="ml-3 font-medium">Customer Support</span>
+          <span class="ml-3 font-medium">Hurricane Payments Chatbot</span>
         </div>
       </div>
       
@@ -80,7 +80,8 @@ const welcomeMessage = {
     { id: 2, text: 'Eliminate My Credit Card Processing Fees', action: 'fees' },
     { id: 3, text: 'Get a Quote or Schedule a Demo', action: 'quote' },
     { id: 4, text: 'Working Capital / Business Funding', action: 'funding' },
-    { id: 7, text: 'I\'m a Partner / Reseller', action: 'partner' }
+    { id: 7, text: 'I\'m a Partner / Reseller', action: 'partner' },
+    { id: 8, text: 'Speak With a Representative', action: 'speak-rep' }
   ]
 };
 
@@ -184,7 +185,6 @@ function handleOptionSelection(action) {
                 • <a href="https://web.hurricanepayments.com/gift-loyalty" target="_blank" style="color: #973131; text-decoration: underline; font-weight: 600;">Reservations & Loyalty</a> - Customer rewards, Gift cards, Reservation management<br>
                 • <a href="https://web.hurricanepayments.com/integrations" target="_blank" style="color: #973131; text-decoration: underline; font-weight: 600;">Online Ordering & Delivery Integration</a> - Third-party delivery services<br>
                 • <a href="https://web.hurricanepayments.com/text-qr" target="_blank" style="color: #973131; text-decoration: underline; font-weight: 600;">QR Code Menus</a> - Contactless ordering<br>
-                • Employee Time Clock - Staff management<br>
                 • Advanced Reporting - Business insights<br><br>
                 Which feature would you like to know more about?`,
           options: [
@@ -299,16 +299,19 @@ function handleOptionSelection(action) {
       case 'fees':
         messages.value.push({
           type: 'bot',
-          text: `<strong>Zero Credit Card Processing Fees</strong><br><br>
-                With Hurricane Payments, you can legally eliminate your credit card processing fees with our surcharge program:<br><br>
-                • 100% compliant with federal regulations<br>
-                • Pass the cost of processing to customers who choose to pay with credit<br>
-                • Keep all your profits<br>
-                • Easy setup and implementation<br><br>
-                Learn more: <a href="https://web.hurricanepayments.com/surcharge" target="_blank" style="color: #973131; text-decoration: underline; font-weight: 600;">Surcharge Program</a>`,
+          text: `<strong>Eliminate Credit Card Processing Fees</strong><br><br>
+                We help business owners eliminate up to 100% of their credit card fees using our Dual Pricing model:<br><br>
+                • Save $500-$3,000 per month<br>
+                • 100% legal & compliant in all 50 states<br>
+                • Transparent pricing for customers<br>
+                • Easy integration with POS systems<br><br>
+                Learn more: <a href="https://web.hurricanepayments.com/dual-pricing" target="_blank" style="color: #973131; text-decoration: underline; font-weight: 600;">Dual Pricing Program</a>`,
           options: [
             { id: 'fees-how', text: 'How Does It Work?', action: 'fees-details' },
             { id: 'fees-quote', text: 'Get Started', action: 'quote' },
+            { id: 'fees-faq', text: 'Common Questions', action: 'fees-faq' },
+            { id: 'fees-savings', text: 'Estimate My Savings', action: 'fees-savings' },
+            { id: 'fees-switch', text: 'Switch From Other Systems', action: 'fees-switch' },
             { id: 'fees-back', text: 'Back to Main Menu', action: 'back' }
           ]
         });
@@ -317,15 +320,71 @@ function handleOptionSelection(action) {
       case 'fees-details':
         messages.value.push({
           type: 'bot',
-          text: `<strong>How Our Surcharge Program Works</strong><br><br>
-                1. We set up a compliant surcharge program for your business<br>
-                2. Customers who pay with credit cards pay a small fee (typically 3-4%)<br>
-                3. Customers who pay with debit cards, cash, or check pay no fee<br>
-                4. You keep 100% of your sales revenue<br><br>
-                It's completely legal and thousands of merchants are already saving!`,
+          text: `<strong>How Our Dual Pricing Works</strong><br><br>
+                1. Display both cash and card prices (like gas stations do)<br>
+                2. Our POS system automatically calculates the appropriate price<br>
+                3. Card users pay a slightly higher price that covers processing fees<br>
+                4. Cash users enjoy a discounted price<br>
+                5. You keep 100% of your sales revenue<br><br>
+                It's fully automated, transparent, and thousands of merchants are already saving!`,
           options: [
             { id: 'fees-quote', text: 'Sign Me Up', action: 'quote' },
+            { id: 'fees-faq', text: 'Common Questions', action: 'fees-faq' },
             { id: 'fees-back', text: 'Back to Main Menu', action: 'back' }
+          ]
+        });
+        break;
+        
+      case 'fees-faq':
+        messages.value.push({
+          type: 'bot',
+          text: `<strong>Common Questions About Dual Pricing</strong><br><br>
+                <strong>Q: Will customers complain?</strong><br>
+                A: Most customers are already familiar with this pricing model from gas stations. We provide staff training and signage to make the transition smooth.<br><br>
+                <strong>Q: Is this legal in my state?</strong><br>
+                A: Yes! Our dual pricing program is 100% legal and compliant in all 50 states.<br><br>
+                <strong>Q: Do I need to update my signage?</strong><br>
+                A: We provide all necessary signage and staff training materials to make implementation easy.`,
+          options: [
+            { id: 'fees-savings', text: 'Estimate My Savings', action: 'fees-savings' },
+            { id: 'fees-quote', text: 'Get Started', action: 'quote' },
+            { id: 'fees-back', text: 'Back to Fees Menu', action: 'fees' }
+          ]
+        });
+        break;
+        
+      case 'fees-savings':
+        messages.value.push({
+          type: 'bot',
+          text: `<strong>Estimate Your Savings</strong><br><br>
+                Here's a quick estimate of your potential monthly savings:<br><br>
+                • $10,000 monthly volume = ~$300 savings<br>
+                • $15,000 monthly volume = ~$450 savings<br>
+                • $25,000 monthly volume = ~$750 savings<br>
+                • $50,000 monthly volume = ~$1,500 savings<br>
+                • $100,000+ monthly volume = $3,000+ savings<br><br>
+                For a personalized savings estimate based on your business, let's schedule a consultation.`,
+          options: [
+            { id: 'fees-quote', text: 'Get My Custom Estimate', action: 'quote' },
+            { id: 'fees-switch', text: 'Switch From Other Systems', action: 'fees-switch' },
+            { id: 'fees-back', text: 'Back to Fees Menu', action: 'fees' }
+          ]
+        });
+        break;
+        
+      case 'fees-switch':
+        messages.value.push({
+          type: 'bot',
+          text: `<strong>Switch From Square, Clover, or Toast</strong><br><br>
+                Square, Toast, and Clover don't offer true dual pricing options to eliminate processing fees. When you switch to Hurricane Payments:<br><br>
+                • Keep all your profit instead of paying 2.5-4% in fees<br>
+                • Transparent pricing for your customers<br>
+                • Full-featured POS with equal or better functionality<br>
+                • Seamless transition with our migration assistance<br><br>
+                We'll provide a detailed comparison showing exactly how much you'll save by switching.`,
+          options: [
+            { id: 'fees-quote', text: 'Get a Comparison & Quote', action: 'quote' },
+            { id: 'fees-back', text: 'Back to Fees Menu', action: 'fees' }
           ]
         });
         break;
@@ -346,17 +405,87 @@ function handleOptionSelection(action) {
       case 'funding':
         messages.value.push({
           type: 'bot',
-          text: `<strong>Business Funding Solutions</strong><br><br>
-                Need capital to grow your business? Hurricane Payments offers:<br><br>
-                • Merchant cash advances<br>
-                • Business loans<br>
-                • Equipment financing<br>
-                • Quick approval process<br>
-                • Competitive rates<br><br>
-                Apply today and get funds as quickly as 24-48 hours!`,
+          text: `<strong>Working Capital / Business Funding</strong><br><br>
+                Need business funding? We offer revenue-based financing solutions to help your business grow:<br><br>
+                • Fast approval (24-48 hours)<br>
+                • Simple qualification process<br>
+                • Funding based on your business revenue<br>
+                • Flexible repayment options<br><br>
+                Learn more: <a href="https://web.hurricanepayments.com/speedybusinessloan" target="_blank" style="color: #973131; text-decoration: underline; font-weight: 600;">Business Funding Options</a>`,
           options: [
-            { id: 'funding-apply', text: 'Apply for Funding', action: 'quote' },
+            { id: 'funding-how', text: 'How It Works', action: 'funding-how' },
+            { id: 'funding-requirements', text: 'Requirements', action: 'funding-requirements' },
+            { id: 'funding-uses', text: 'Use Cases', action: 'funding-uses' },
+            { id: 'funding-apply', text: 'Apply Now', action: 'funding-apply' },
             { id: 'funding-back', text: 'Back to Main Menu', action: 'back' }
+          ]
+        });
+        break;
+        
+      case 'funding-how':
+        messages.value.push({
+          type: 'bot',
+          text: `<strong>How Our Business Funding Works</strong><br><br>
+                Our streamlined funding process makes it easy to get the capital you need:<br><br>
+                1. Submit 3 months of bank statements<br>
+                2. We perform a soft credit pull (no impact on credit score)<br>
+                3. Get approval within 24-48 hours<br>
+                4. Receive funds directly to your business account<br><br>
+                No lengthy paperwork or complex applications required!`,
+          options: [
+            { id: 'funding-requirements', text: 'See Requirements', action: 'funding-requirements' },
+            { id: 'funding-apply', text: 'Apply Now', action: 'funding-apply' },
+            { id: 'funding-back', text: 'Back to Funding Menu', action: 'funding' }
+          ]
+        });
+        break;
+        
+      case 'funding-requirements':
+        messages.value.push({
+          type: 'bot',
+          text: `<strong>Business Funding Requirements</strong><br><br>
+                To qualify for our funding solutions, you need:<br><br>
+                • Minimum 3 months in business<br>
+                • At least $5,000 in monthly revenue<br>
+                • Business bank account<br><br>
+                That's it! We've simplified the qualification process to help more businesses access the capital they need.`,
+          options: [
+            { id: 'funding-uses', text: 'See Use Cases', action: 'funding-uses' },
+            { id: 'funding-apply', text: 'Apply Now', action: 'funding-apply' },
+            { id: 'funding-back', text: 'Back to Funding Menu', action: 'funding' }
+          ]
+        });
+        break;
+        
+      case 'funding-uses':
+        messages.value.push({
+          type: 'bot',
+          text: `<strong>How Businesses Use Our Funding</strong><br><br>
+                Our clients use business funding for a variety of purposes:<br><br>
+                • Payroll and staffing<br>
+                • Equipment purchases<br>
+                • Business expansion<br>
+                • Inventory and supplies<br>
+                • Marketing and advertising<br><br>
+                No matter what your business needs, our funding can help you grow.`,
+          options: [
+            { id: 'funding-how', text: 'How It Works', action: 'funding-how' },
+            { id: 'funding-apply', text: 'Apply Now', action: 'funding-apply' },
+            { id: 'funding-back', text: 'Back to Funding Menu', action: 'funding' }
+          ]
+        });
+        break;
+        
+      case 'funding-apply':
+        messages.value.push({
+          type: 'bot',
+          text: `<strong>Apply for Business Funding</strong><br><br>
+                Ready to get started? Complete our quick request form, and our specialist will contact you within one business day:<br><br>
+                <a href="https://web.hurricanepayments.com/request-consultation" target="_blank" style="color: #973131; text-decoration: underline; font-weight: 600;">Apply for Funding</a><br><br>
+                `,
+          options: [
+            { id: 'funding-back', text: 'Back to Funding Menu', action: 'funding' },
+            { id: 'main-menu', text: 'Back to Main Menu', action: 'back' }
           ]
         });
         break;
@@ -386,6 +515,18 @@ function handleOptionSelection(action) {
                 <a href="https://web.hurricanepayments.com/partnership-forms" target="_blank" style="color: #973131; text-decoration: underline; font-weight: 600;">Partner Application</a>`,
           options: [
             { id: 'partner-back', text: 'Back to Main Menu', action: 'back' }
+          ]
+        });
+        break;
+        
+      case 'speak-rep':
+        messages.value.push({
+          type: 'bot',
+          text: `<strong>Speak With a Representative</strong><br><br>
+                Let's connect you to a human. Fill out this quick form and a Hurricane Payments representative will reach out to you shortly:<br><br>
+                <a href="http://127.0.0.1:8000/request-consultation" target="_blank" style="color: #973131; text-decoration: underline; font-weight: 600;">Contact Representative</a>`,
+          options: [
+            { id: 'rep-back', text: 'Back to Main Menu', action: 'back' }
           ]
         });
         break;
@@ -504,7 +645,7 @@ function handleOptionSelection(action) {
 /* Chat panel header */
 .chatbot-panel-header {
   background-color: var(--custom-red);
-  color: white;
+  color: #4e1a1a;
   padding: 16px;
   display: flex;
   justify-content: space-between;

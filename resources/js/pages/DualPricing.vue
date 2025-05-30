@@ -479,36 +479,22 @@
                 </div>
               </div>
             </section>
-
-            <!-- CTA Section -->
-            <section class="text-center py-16 bg-gradient-to-r from-red-900 to-red-700 text-white rounded-2xl scroll-reveal">
-              <div class="max-w-3xl mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">Interested in Adding Dual Pricing to Your Business?</h2>
-                <p class="text-xl mb-8 opacity-90">
-                  If you're a business owner looking to eliminate credit card fees, increase profits, and maintain customer satisfaction, it's time to consider dual pricing. With the right merchant services partner, the switch is easy—and the savings are real.
-                </p>
-                <div class="space-y-4 md:space-y-0 md:space-x-4 flex flex-col md:flex-row justify-center">
-                  <a href="tel:1-888-440-0936" class="inline-block bg-white text-red-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                    Call 1-888-440-0936
-                  </a>
-                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Thomas@hurricanepayments.com" target="_blank" class="inline-block bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-900 transition-colors">
-                    Email: Thomas@hurricanepayments.com
-                  </a>
-                </div>
-                <p class="mt-8 text-white opacity-80 font-medium">
-                  Your Success Is Our Full-Time Job
-                </p>
-              </div>
-            </section>
           </div>
         </div>
       </article>
+
+      <!-- Add the CtaActionSection component before the closing MainLayout tag -->
+      <CtaActionSection 
+        heading="Interested in Adding Dual Pricing to Your Business?"
+        subheading="If you're a business owner looking to eliminate credit card fees, increase profits, and maintain customer satisfaction, it's time to consider dual pricing.<br>With the right merchant services partner, the switch is easy—and the savings are real."
+      />
     </MainLayout>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
 import MainLayout from './MainLayout.vue';
+import CtaActionSection from '../components/CtaActionSection.vue';
 
 // State for expandable sections
 const expandedDetail = ref(null);

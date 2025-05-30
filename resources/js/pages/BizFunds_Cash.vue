@@ -214,25 +214,18 @@
       </div>
     </div>
     
-    <!-- CTA Section -->
-    <div class="bg-gradient-to-r from-red-900 to-red-700 text-white py-16" style="background: linear-gradient(to right, #973131, #b64848);">
-      <div class="container mx-auto px-6 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6 scroll-reveal opacity-0">Ready to grow your business?</h2>
-        <p class="text-xl opacity-90 max-w-3xl mx-auto mb-8 scroll-reveal opacity-0 delay-200">Apply for BizFunds today and get the capital you need to take your business to the next level.</p>
-        <div class="scroll-reveal opacity-0 delay-300">
-          <router-link to="/request-consultation" class="bg-white text-red-900 font-medium py-3 px-8 rounded-md shadow-lg hover:bg-opacity-90 transition-all duration-300 inline-block mx-2 mb-4">
-            Request a Consultation
-          </router-link>
-        </div>
-      </div>
-    </div>
-    
     <!-- Lightbox Component -->
     <lightbox
       :is-visible="showLightbox"
       :lightbox-id="currentLightboxId"
       @close="showLightbox = false"
       @consultation-click="handleConsultationClick"
+    />
+
+    <!-- Add the CtaActionSection component before the closing MainLayout tag -->
+    <CtaActionSection 
+      heading="Ready to Grow Your Business?"
+      subheading="Apply for BizFunds today and get the capital you need to take your business to the next level.<br>Fast funding decisions and flexible repayment options to match your cash flow."
     />
   </MainLayout>
 </template>
@@ -242,6 +235,7 @@ import { ref, onMounted } from 'vue';
 import MainLayout from './MainLayout.vue';
 import axios from 'axios';
 import lightbox from './lightbox.vue';
+import CtaActionSection from '../components/CtaActionSection.vue';
 
 // Lightbox state
 const showLightbox = ref(false);

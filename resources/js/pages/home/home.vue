@@ -322,7 +322,7 @@
               
               <!-- Card footer with CTA -->
               <div class="p-6 pt-0">
-                <a href="/solutions/retail" class="inline-flex items-center text-custom-red font-medium hover:text-red-800 transition-colors duration-300">
+                <a href="http://127.0.0.1:8000/retail" class="inline-flex items-center text-custom-red font-medium hover:text-red-800 transition-colors duration-300">
                   <span>Learn more</span>
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -349,7 +349,7 @@
                 </p>
               </div>
               <div class="p-6 pt-0">
-                <a href="/solutions/ecommerce" class="inline-flex items-center text-custom-red font-medium hover:text-red-800 transition-colors duration-300">
+                <a href="http://127.0.0.1:8000/ecommerce" class="inline-flex items-center text-custom-red font-medium hover:text-red-800 transition-colors duration-300">
                   <span>Learn more</span>
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -376,7 +376,7 @@
                 </p>
               </div>
               <div class="p-6 pt-0">
-                <a href="/solutions/restaurant" class="inline-flex items-center text-custom-red font-medium hover:text-red-800 transition-colors duration-300">
+                <a href="http://127.0.0.1:8000/restaurants" class="inline-flex items-center text-custom-red font-medium hover:text-red-800 transition-colors duration-300">
                   <span>Learn more</span>
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -403,7 +403,7 @@
                 </p>
               </div>
               <div class="p-6 pt-0">
-                <a href="/solutions/professional" class="inline-flex items-center text-custom-red font-medium hover:text-red-800 transition-colors duration-300">
+                <a href="http://127.0.0.1:8000/professional-services" class="inline-flex items-center text-custom-red font-medium hover:text-red-800 transition-colors duration-300">
                   <span>Learn more</span>
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -430,7 +430,7 @@
                 </p>
               </div>
               <div class="p-6 pt-0">
-                <a href="/solutions/skilled-trade" class="inline-flex items-center text-custom-red font-medium hover:text-red-800 transition-colors duration-300">
+                <a href="http://127.0.0.1:8000/skill-trade" class="inline-flex items-center text-custom-red font-medium hover:text-red-800 transition-colors duration-300">
                   <span>Learn more</span>
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -457,7 +457,7 @@
                 </p>
               </div>
               <div class="p-6 pt-0">
-                <a href="/solutions/specialty" class="inline-flex items-center text-custom-red font-medium hover:text-red-800 transition-colors duration-300">
+                <a href="http://127.0.0.1:8000/specialty-business" class="inline-flex items-center text-custom-red font-medium hover:text-red-800 transition-colors duration-300">
                   <span>Learn more</span>
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />

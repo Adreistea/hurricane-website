@@ -619,99 +619,10 @@
       </div>
 
       <!-- Attention-Grabbing CTA Section -->
-      <div class="relative py-24 overflow-hidden opacity-0 animate-on-scroll" data-animation="fade-up">
-        <!-- Background with angle and patterns -->
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-purple-900 -skew-y-3 transform origin-top-right z-0 overflow-hidden">
-          <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' viewBox=\'0 0 100 100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z\' fill=\'%23ffffff\' fill-opacity=\'0.05\' fill-rule=\'evenodd\'/%3E%3C/svg%3E')"></div>
-          <!-- Animated circles -->
-          <div class="absolute -top-20 -right-20 w-80 h-80 bg-pink-500 opacity-20 rounded-full blur-3xl animate-pulse-slow"></div>
-          <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-blue-400 opacity-20 rounded-full blur-3xl"></div>
-        </div>
-
-        <!-- Content Container -->
-        <div class="container mx-auto px-6 relative z-10 pt-8">
-          <div class="max-w-4xl mx-auto bg-white/10 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/20">
-            <!-- Phone Icon with Pulse Effect -->
-            <div class="flex justify-center -mt-20 mb-6">
-              <div class="w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-xl relative">
-                <div class="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 animate-ping opacity-30"></div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-              </div>
-            </div>
-            
-            <!-- Heading with Glow Effect -->
-            <h2 class="text-4xl font-black text-white text-center mb-4" style="text-shadow: 0 0 15px rgba(255,255,255,0.5);">
-              Ready to See KwickPOS in Action?
-            </h2>
-            
-            <!-- Subheading -->
-            <p class="text-xl text-white/90 text-center mb-10 max-w-2xl mx-auto">
-              Stop letting your POS system hold you back.<br>
-              Get a smarter solution that increases your profits from Day 1.
-            </p>
-            
-            <!-- Call to Action Card -->
-            <div class="text-center mb-10">
-              <h3 class="inline-block text-2xl font-bold text-white bg-gradient-to-r from-yellow-400 to-amber-500 px-6 py-2 rounded-full shadow-lg mb-8">
-                Schedule a Demo or Free Consultation Today
-              </h3>
-              
-              <!-- Contact Information with Buttons -->
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-                <!-- Phone Button - with tel: link -->
-                <a href="tel:18884400936" class="block w-full py-4 px-4 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl text-center">
-                  <div class="flex items-center justify-center mb-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    Call
-                  </div>
-                  <span class="block text-sm">1-888-440-0936</span>
-                </a>
-                
-                <!-- Email Button - with Gmail link -->
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Thomas@hurricanepayments.com" target="_blank" class="block w-full py-4 px-4 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl text-center">
-                  <div class="flex items-center justify-center mb-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    Email
-                  </div>
-                  <span class="block text-xs">Thomas@hurricanepayments.com</span>
-                </a>
-                
-                <!-- Website Button - standard link -->
-                <a href="http://www.hurricanepayments.com" target="_blank" class="block w-full py-4 px-4 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-bold rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl text-center">
-                  <div class="flex items-center justify-center mb-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                    </svg>
-                    Website
-                  </div>
-                  <span class="block text-xs">www.HurricanePayments.com</span>
-                </a>
-              </div>
-            </div>
-            
-            <!-- Special Offer -->
-            <div class="mt-12 mb-4">
-              <div class="bg-gradient-to-r from-green-600 to-green-500 rounded-lg p-6 max-w-2xl mx-auto transform hover:scale-105 transition-all duration-300 shadow-lg border-2 border-white/50">
-                <div class="flex items-center justify-center mb-2">
-                  <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mr-3">
-                    <div class="w-6 h-6 bg-green-600 rounded-full"></div>
-                  </div>
-                  <h4 class="text-xl font-black text-white uppercase tracking-wide">Special Offer</h4>
-                </div>
-                <p class="text-center text-white font-medium">
-                  New clients receive free menu programming & on-site training — limited time only!
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <CtaActionSection 
+        heading="Ready to See KwickPOS in Action?"
+        subheading="Stop letting your POS system hold you back.<br>Get a smarter solution that increases your profits from Day 1."
+      />
     </MainLayout>
     <lightbox 
       v-if="showLightbox"
@@ -726,6 +637,7 @@
 import { onMounted } from 'vue';
 import MainLayout from './MainLayout.vue';
 import lightbox from './lightbox.vue';
+import CtaActionSection from '../components/CtaActionSection.vue';
 
 // Define scrollToNextSection outside onMounted so it's available to the template
 function scrollToNextSection() {
@@ -1192,5 +1104,25 @@ line-height: 1.2;
     opacity: 1;
     transform: scale(1);
   }
+}
+
+/* Custom animation for pulse effect */
+@keyframes pulse-slow {
+  0% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 6s infinite ease-in-out;
 }
 </style>
