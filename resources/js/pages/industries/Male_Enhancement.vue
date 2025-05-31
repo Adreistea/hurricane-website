@@ -1,5 +1,7 @@
 <template>
-    <MainLayout>
+    <div>
+      <NavBar />
+      <MainLayout>
       <!-- Hero Section with same animations as home.vue -->
       <div class="container mx-auto px-6 py-16 flex flex-col lg:flex-row items-center">
         <!-- Left Content with Text Reveal Animation -->
@@ -479,6 +481,8 @@
       <!-- CTA Section -->
       <CtaSection subheading="Apply for your male enhancement merchant account today and experience hassle-free payment processing." />
     </MainLayout>
+    <AppFooter />
+  </div>
 </template>
 
 <script>
@@ -487,8 +491,16 @@ import firstImage from '@/../images/maleenhance.jpg';
 import secondImage from '@/../images/maleenhance(2).jpg';
 import thirdImage from '@/../images/maleenhance(2).jpg';
 import fourthImage from '@/../images/maleenhance(4).jpg';
+import NavBar from '../NavBar.vue';
+import AppFooter from '../AppFooter.vue';
+import CtaSection from '../../components/CtaSection.vue';
 
 export default {
+  components: {
+    NavBar,
+    AppFooter,
+    CtaSection
+  },
   data() {
     return {
       firstImage: firstImage,

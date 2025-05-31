@@ -19,7 +19,7 @@
           
           <div class="text-reveal mb-8">
             <p class="text-reveal-content text-lg text-gray-600 delay-300">
-                Automotive businesses face unique challenges in credit card processing. Traditional banks often hesitate to work with automotive merchants due to high-risk factors. Hurricane Payments specializes in providing customized payment solutions that ensure secure and efficient payment processing for the automotive industry.
+                Automotive businesses face unique challenges in credit card processing. Traditional banks often hesitate to work with automotive merchants due to high-risk factors like high-ticket transactions and chargebacks. Hurricane Payments specializes in providing customized payment solutions that ensure secure and efficient payment processing for auto dealerships, repair shops, body shops, parts retailers, and other automotive businesses.
             </p>
             
             <ul class="mt-4 space-y-2">
@@ -29,7 +29,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span class="ml-3 text-gray-700">Dedicated Account Managers</span>
+                <span class="ml-3 text-gray-700">Dedicated Account Managers for Auto Industry</span>
               </li>
               <li class="flex items-start fade-in-slide-up" style="animation-delay: 200ms;">
                 <div class="flex-shrink-0 w-6 h-6 text-custom-red mt-1">
@@ -37,7 +37,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span class="ml-3 text-gray-700">Years High-Risk Experience</span>
+                <span class="ml-3 text-gray-700">Years of Automotive High-Risk Experience</span>
               </li>
               <li class="flex items-start fade-in-slide-up" style="animation-delay: 300ms;">
                 <div class="flex-shrink-0 w-6 h-6 text-custom-red mt-1">
@@ -45,7 +45,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span class="ml-3 text-gray-700">Fast and Easy Application Process</span>
+                <span class="ml-3 text-gray-700">Fast and Easy Application for Auto Merchants</span>
               </li>
               <li class="flex items-start fade-in-slide-up" style="animation-delay: 400ms;">
                 <div class="flex-shrink-0 w-6 h-6 text-custom-red mt-1">
@@ -97,7 +97,7 @@
         <!-- Right Content - Image with Card Reveal Animation -->
   <div class="lg:w-1/2 relative card-reveal delay-200">
     <div class="rounded-lg shadow-2xl overflow-hidden">
-      <img :src="firstImage" alt="Airline Booking Payment Processing" class="w-full h-[800px] object-cover" />
+      <img :src="firstImage" alt="Automotive Payment Processing" class="w-full h-[800px] object-cover" />
     </div>
   
   
@@ -108,7 +108,7 @@
         </div>
       </div>
   
-      <!-- Airline Booking Merchant Accounts Section -->
+      <!-- Automotive Merchant Accounts Section -->
       <div class="container mx-auto px-6 py-20 mt-8">
         <!-- Section Header -->
         <div class="text-center mb-16 scroll-reveal opacity-0">
@@ -139,9 +139,9 @@
           <!-- Document Submission -->
           <div class="bg-white rounded-lg p-8 text-center shadow-lg scroll-reveal opacity-0 stats-card" data-delay="200">
             <div class="relative mb-6 mx-auto w-24 h-24 flex items-center justify-center">
-              <div class="absolute inset-0 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full pulse-slow"></div>
+              <div class="absolute inset-0 bg-gradient-to-br from-red-100 to-red-200 rounded-full pulse-slow"></div>
               <div class="relative">
-                <div class="text-4xl font-bold" style="color: #2196F3;">2</div>
+                <div class="text-4xl font-bold" style="color: #973131;">2</div>
               </div>
             </div>
             <h3 class="text-xl font-bold mb-3 text-gray-800">Submit Necessary Documentation</h3>
@@ -153,9 +153,9 @@
           <!-- Expert Underwriting Assistance -->
           <div class="bg-white rounded-lg p-8 text-center shadow-lg scroll-reveal opacity-0 stats-card" data-delay="400">
             <div class="relative mb-6 mx-auto w-24 h-24 flex items-center justify-center">
-              <div class="absolute inset-0 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full pulse-slow"></div>
+              <div class="absolute inset-0 bg-gradient-to-br from-red-100 to-red-200 rounded-full pulse-slow"></div>
               <div class="relative">
-                <div class="text-4xl font-bold" style="color: #9C27B0;">3</div>
+                <div class="text-4xl font-bold" style="color: #973131;">3</div>
               </div>
             </div>
             <h3 class="text-xl font-bold mb-3 text-gray-800">Work with Our Underwriting Team</h3>
@@ -167,9 +167,9 @@
           <!-- Launch Secure Payment Processing -->
           <div class="bg-white rounded-lg p-8 text-center shadow-lg scroll-reveal opacity-0 stats-card" data-delay="600">
             <div class="relative mb-6 mx-auto w-24 h-24 flex items-center justify-center">
-              <div class="absolute inset-0 bg-gradient-to-br from-green-100 to-green-200 rounded-full pulse-slow"></div>
+              <div class="absolute inset-0 bg-gradient-to-br from-red-100 to-red-200 rounded-full pulse-slow"></div>
               <div class="relative">
-                <div class="text-4xl font-bold" style="color: #4CAF50;">4</div>
+                <div class="text-4xl font-bold" style="color: #973131;">4</div>
               </div>
             </div>
             <h3 class="text-xl font-bold mb-3 text-gray-800">Start Processing Payments</h3>
@@ -201,12 +201,12 @@
               <!-- Left Content: Image with Effects -->
               <div class="relative order-2 lg:order-1">
                 <div class="relative z-10 rounded-xl overflow-hidden shadow-2xl transition duration-500 transform hover:scale-[1.02]">
-                  <img :src="thirdImage" alt="Airline Booking High-Risk Merchant Services" class="w-full h-[800px] object-cover" />
+                  <img :src="thirdImage" alt="Automotive High-Risk Merchant Services" class="w-full h-[800px] object-cover" />
                   <div class="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
                   <div class="absolute bottom-0 left-0 w-full p-8">
                     <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
                       <h3 class="text-xl font-bold mb-2 text-white">Expert Solutions for High-Risk Merchants</h3>
-                      <p class="text-white/90">Specialized processing for airline and booking businesses</p>
+                      <p class="text-white/90">Specialized processing for automotive dealerships and repair shops</p>
                     </div>
                   </div>
                 </div>
@@ -233,7 +233,7 @@
                     </div>
                     
                     <div class="relative z-10">
-                      <h3 class="text-2xl font-bold mb-4 text-white">Why Choose Hurricane Payments for Your Auction House Payment Processing?</h3>
+                      <h3 class="text-2xl font-bold mb-4 text-white">Why Choose Hurricane Payments for Your Automotive Payment Processing?</h3>
                       <p class="text-gray-300 leading-relaxed mb-6">
                         We understand the unique challenges automotive businesses face, such as auto dealerships and repair shops. Our specialized solutions ensure you have a reliable payment processing system in place. We'll set your business up with online and mobile payment solutions including merchant accounts, payment gateways, and credit card processing. Hurricane Payments offers merchant accounts designed to meet the specific needs of automotive businesses, providing secure and efficient payment processing. We have years of experience helping auto repair and body shops accept major credit cards without hidden fees. We specialize in high-risk merchants like auto repair shops and can get you set up with online processing and credit card terminals quickly.
                       </p>
@@ -299,7 +299,7 @@
                 <div class="mb-6 flex justify-center">
                   <div class="bg-red-50 p-4 rounded-lg inline-flex">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 16v3a2 2 0 01-2 2H7a2 2 0 01-2-2v-3m3-7h8m-4-4v8m0-8l4-4m-4 4l-4-4m0 12h8a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
                 </div>
@@ -337,7 +337,8 @@
                 <div class="mb-6 flex justify-center">
                   <div class="bg-red-50 p-4 rounded-lg inline-flex">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
                     </svg>
                   </div>
                 </div>
@@ -387,7 +388,8 @@
                 <div class="mb-6 flex justify-center">
                   <div class="bg-red-50 p-4 rounded-lg inline-flex">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z M17 17v-1a4 4 0 00-4-4H5" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15a2 2 0 012 2v1a2 2 0 002 2h1a2 2 0 002-2v-1a2 2 0 00-2-2h-1" />
                     </svg>
                   </div>
                 </div>
@@ -429,7 +431,99 @@
       </div>
 
   
-      <!-- Airline & Booking Payment Gateway Section -->
+      <!-- Types of Automotive Businesses We Serve -->
+      <div class="py-16 bg-gradient-to-r from-gray-50 to-red-50">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Automotive Businesses We Serve</h2>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto">Our payment processing solutions are tailored for all types of businesses in the automotive industry</p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold">Auto Dealerships</h3>
+              </div>
+              <p class="text-gray-700">New and used car dealerships benefit from our high-volume transaction processing, secure payment gateways, and chargeback protection.</p>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold">Auto Repair Shops</h3>
+              </div>
+              <p class="text-gray-700">Repair shops can streamline invoicing and payment collection with our mobile solutions, POS systems, and customer management tools.</p>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold">Body Shops</h3>
+              </div>
+              <p class="text-gray-700">Body shops can process insurance claims payments and customer transactions with our secure payment solutions designed for high-ticket sales.</p>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold">Auto Parts Retailers</h3>
+              </div>
+              <p class="text-gray-700">Parts sellers can integrate our payment solutions with inventory management systems for both in-store and online sales channels.</p>
+            </div>
+            
+            <!-- Card 5 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold">Tire Shops</h3>
+              </div>
+              <p class="text-gray-700">Tire retailers can process payments quickly and securely, with options for installment plans and seasonal promotions through our flexible payment system.</p>
+            </div>
+            
+            <!-- Card 6 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold">Auto Detailing Services</h3>
+              </div>
+              <p class="text-gray-700">Detailing businesses can accept mobile payments on-location and implement appointment-based recurring billing for regular customers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  
+      <!-- Automotive Payment Gateway Section -->
       <div id="payment-gateway" class="bg-gradient-to-r from-gray-50 to-red-50 py-16">
         <div class="max-w-7xl mx-auto px-4">
           <h2 class="text-4xl font-bold text-center mb-10" style="color: #973131;">Seamless Payment Processing for Automotive Businesses</h2>
@@ -452,7 +546,7 @@
                 <div class="relative">
                   <!-- Main image with effects -->
                   <div class="rounded-lg overflow-hidden shadow-lg relative z-20">
-                    <img :src="fourthImage" alt="Airline Booking Payment Gateway" class="w-full h-auto transform transition hover:scale-105 duration-500">
+                    <img :src="fourthImage" alt="Automotive Payment Gateway" class="w-full h-auto transform transition hover:scale-105 duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-6">
                      

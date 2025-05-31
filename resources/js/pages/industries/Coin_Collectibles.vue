@@ -97,7 +97,7 @@
         <!-- Right Content - Image with Card Reveal Animation -->
         <div class="lg:w-1/2 relative card-reveal delay-200">
     <div class="rounded-lg shadow-2xl overflow-hidden">
-      <img :src="firstImage" alt="Airline Booking Payment Processing" class="w-full h-[800px] object-cover" />
+      <img :src="firstImage" alt="Coins & Collectibles Payment Processing" class="w-full h-[800px] object-cover" />
     </div>
   
   
@@ -107,7 +107,7 @@
         </div>
       </div>
   
-      <!-- Airline Booking Merchant Accounts Section -->
+      <!-- Coins & Collectibles Merchant Accounts Section -->
       <div class="container mx-auto px-6 py-20 mt-8">
         <!-- Section Header -->
         <div class="text-center mb-16 scroll-reveal opacity-0">
@@ -138,9 +138,9 @@
           <!-- Document Submission -->
           <div class="bg-white rounded-lg p-8 text-center shadow-lg scroll-reveal opacity-0 stats-card" data-delay="200">
             <div class="relative mb-6 mx-auto w-24 h-24 flex items-center justify-center">
-              <div class="absolute inset-0 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full pulse-slow"></div>
+              <div class="absolute inset-0 bg-gradient-to-br from-red-100 to-red-200 rounded-full pulse-slow"></div>
               <div class="relative">
-                <div class="text-4xl font-bold" style="color: #2196F3;">2</div>
+                <div class="text-4xl font-bold" style="color: #973131;">2</div>
               </div>
             </div>
             <h3 class="text-xl font-bold mb-3 text-gray-800">Submit Necessary Documentation</h3>
@@ -152,9 +152,9 @@
           <!-- Expert Underwriting Assistance -->
           <div class="bg-white rounded-lg p-8 text-center shadow-lg scroll-reveal opacity-0 stats-card" data-delay="400">
             <div class="relative mb-6 mx-auto w-24 h-24 flex items-center justify-center">
-              <div class="absolute inset-0 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full pulse-slow"></div>
+              <div class="absolute inset-0 bg-gradient-to-br from-red-100 to-red-200 rounded-full pulse-slow"></div>
               <div class="relative">
-                <div class="text-4xl font-bold" style="color: #9C27B0;">3</div>
+                <div class="text-4xl font-bold" style="color: #973131;">3</div>
               </div>
             </div>
             <h3 class="text-xl font-bold mb-3 text-gray-800">Benefit from our underwriting team's assistance</h3>
@@ -166,9 +166,9 @@
           <!-- Launch Secure Payment Processing -->
           <div class="bg-white rounded-lg p-8 text-center shadow-lg scroll-reveal opacity-0 stats-card" data-delay="600">
             <div class="relative mb-6 mx-auto w-24 h-24 flex items-center justify-center">
-              <div class="absolute inset-0 bg-gradient-to-br from-green-100 to-green-200 rounded-full pulse-slow"></div>
+              <div class="absolute inset-0 bg-gradient-to-br from-red-100 to-red-200 rounded-full pulse-slow"></div>
               <div class="relative">
-                <div class="text-4xl font-bold" style="color: #4CAF50;">4</div>
+                <div class="text-4xl font-bold" style="color: #973131;">4</div>
               </div>
             </div>
             <h3 class="text-xl font-bold mb-3 text-gray-800">Start Processing Payments</h3>
@@ -200,7 +200,7 @@
               <!-- Left Content: Image with Effects -->
               <div class="relative order-2 lg:order-1">
                 <div class="relative z-10 rounded-xl overflow-hidden shadow-2xl transition duration-500 transform hover:scale-[1.02]">
-                  <img :src="thirdImage" alt="Airline Booking High-Risk Merchant Services" class="w-full h-[800px] object-cover" />
+                  <img :src="thirdImage" alt="Coins & Collectibles High-Risk Merchant Services" class="w-full h-[800px] object-cover" />
                   <div class="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
                   <div class="absolute bottom-0 left-0 w-full p-8">
                     <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
@@ -232,7 +232,7 @@
                     </div>
                     
                     <div class="relative z-10">
-                      <h3 class="text-2xl font-bold mb-4 text-white">Choosing the Right Airlines & Booking Payment Processor</h3>
+                      <h3 class="text-2xl font-bold mb-4 text-white">Choosing the Right Coins & Collectibles Payment Processor</h3>
                       <p class="text-gray-300 leading-relaxed mb-6">
                         As high-risk businesses, many traditional financial institutions and payment processors are hesitant to work with collectibles merchants. If your company will be selling coins, precious metals, or other collectibles, you'll need to find a a processor who provides high-risk payment processing solutions. While it's easy to find an adequate payment processor, you want one that not only provides high-risk merchant accounts but can walk you through the process and will treat you fairly.
                       </p>
@@ -285,469 +285,615 @@
         </div>
       </div>
   
-  
-        <!-- Our Services Section -->
-        <div id="our-services" class="py-20">
-          <div class="max-w-7xl mx-auto px-6">
-            <div class="bg-white rounded-2xl border-2 border-red-100 p-10">
-              <h2 class="text-4xl font-bold text-center mb-16" style="color: #973131;">Our Services</h2>
-              
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <!-- Column 1 -->
-                <div>
-                  <div class="mb-6 flex justify-center">
-                    <div class="bg-red-50 p-4 rounded-lg inline-flex">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <h3 class="text-xl font-bold mb-4 text-center">Coin Collectibles Merchant Accounts</h3>
-                  <ul class="ml-5 space-y-2">
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">20+ Proven Bank Relationships</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">Medium/High Risk Accounts</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">Fast Coin Collectibles Account Approval</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">Large Merchant Case Studies</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">E-Commerce and Retail Coin Collectibles</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">B2B Coin Collectibles Vendors Supported</span>
-                    </li>
-                  </ul>
+      <!-- Why Coins & Collectibles Are Considered High-Risk -->
+      <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Why Are Coins & Collectibles Businesses Considered High-Risk?</h2>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto">Understanding the unique challenges facing the collectibles industry</p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Factor 1 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-red">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
                 </div>
-                
-                <!-- Column 2 -->
-                <div>
-                  <div class="mb-6 flex justify-center">
-                    <div class="bg-red-50 p-4 rounded-lg inline-flex">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <h3 class="text-xl font-bold mb-4 text-center">Multiple Payment Solutions</h3>
-                  <ul class="ml-10 space-y-2">
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">Multiple E-Commerce Gateway</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">Chargeback Prevention</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">ACH</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">E-Check</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">Credit Cards</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">B2B-Level I/II/III Data Discounts</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">3D Secure Frictionless Checkout</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">Mobile Payment</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">EMV Readers</span>
-                    </li>
-                  </ul>
-                </div>
-                
-                <!-- Column 3 -->
-                <div>
-                  <div class="mb-6 flex justify-center">
-                    <div class="bg-red-50 p-4 rounded-lg inline-flex">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <h3 class="text-xl font-bold mb-4 text-center">Compatibility & Support</h3>
-                  <ul class="ml-15 space-y-2">
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">Gateway Recurring Billing</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">Vault</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">E-Commerce Cart Plugins</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">Developer API / Docs</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">POS/Terminals</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">Scalable Merchant Accounts</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">Dedicated Account Managers</span>
-                    </li>
-                  </ul>
-                </div>
+                <h3 class="text-xl font-bold">High-Value Transactions</h3>
               </div>
+              <p class="text-gray-700">Coins and collectibles are often valuable items, meaning many of the payments processed are considered high-value transactions. These large ticket sizes create greater financial risk for payment processors.</p>
+            </div>
+            
+            <!-- Factor 2 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-red">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold">Fraud Risk</h3>
+              </div>
+              <p class="text-gray-700">High-value collectibles are targets for fraudulent transactions, including counterfeit items and payments with stolen credit cards. This elevated fraud risk makes traditional payment processors hesitant to work with collectibles merchants.</p>
+            </div>
+            
+            <!-- Factor 3 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-red">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold">Excessive Chargebacks</h3>
+              </div>
+              <p class="text-gray-700">Collectibles businesses often experience higher chargeback rates due to buyer's remorse, authentication disputes, and condition disagreements. These excessive chargebacks contribute to the high-risk designation by payment processors.</p>
             </div>
           </div>
-        </div>
-  
-  
-      <!-- Airline & Booking Payment Gateway Section -->
-      <div id="payment-gateway" class="bg-gradient-to-r from-gray-50 to-red-50 py-16">
-        <div class="max-w-7xl mx-auto px-4">
-          <h2 class="text-4xl font-bold text-center mb-10" style="color: #973131;">Seamless Payment Processing for Coins & Collectibles Businesses</h2>
           
-          <div class="bg-white p-10 rounded-xl shadow-lg mb-10 relative overflow-hidden">
-            <div class="absolute top-0 right-0 h-32 w-32 bg-red-50 rounded-full -mt-10 -mr-10"></div>
-            
-            <div class="flex flex-col md:flex-row items-start gap-12">
-              <div class="md:w-1/2 relative z-10 self-center">
-                <p class="text-lg text-gray-700 leading-relaxed">
-                    Our coins and collectibles merchant accounts are designed to provide smooth, reliable payment processing for your business. With our tailored solutions, you can focus on growing your coins and collectibles platform while we handle the complexities of payment processing.
-                </p>
-                
-             
-              </div>
-              
-              <div class="md:w-1/2">
-                <div class="relative">
-                  <!-- Main image with effects -->
-                  <div class="rounded-lg overflow-hidden shadow-lg relative z-20">
-                    <img :src="fourthImage" alt="Airline Booking Payment Gateway" class="w-full h-auto transform transition hover:scale-105 duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 p-6">
-                    
-                      <div class="flex items-center">
-                       
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <!-- Decorative elements -->
-                  <div class="absolute top-4 right-4 w-24 h-24 bg-red-500/30 rounded-full blur-xl -z-10"></div>
-                  <div class="absolute -bottom-2 -left-2 w-16 h-16 bg-blue-500/30 rounded-full blur-lg -z-10"></div>
-                  
-                  <!-- Features list that overlaps with image -->
-                  <div class="absolute -bottom-10 -right-10 bg-white rounded-lg shadow-xl p-6 z-30 max-w-xs transform rotate-3">
-                    <h4 class="font-bold mb-3 text-gray-800">Gateway Features:</h4>
-                    <ul class="space-y-2">
-                      <li class="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span class="text-gray-700">Fraud Protection</span>
-                      </li>
-                      <li class="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span class="text-gray-700">Real-time Reporting</span>
-                      </li>
-                      <li class="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span class="text-gray-700">Recurring Billing</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="flex items-center justify-center my-8">
-              <div class="w-24 h-1 bg-red-200 rounded-full"></div>
-            </div>
-          
+          <div class="mt-12 p-8 bg-gradient-to-r from-gray-50 to-red-50 rounded-xl shadow-lg">
+            <p class="text-lg text-gray-700 leading-relaxed text-center">
+              These three factors combined mean that coins and collectibles are considered high-risk by traditional financial institutions. Hurricane Payments specializes in providing merchant accounts specifically designed for the unique needs of the coins and collectibles industry.
+            </p>
           </div>
         </div>
       </div>
   
-      <!-- CTA Section -->
-      <CtaSection subheading="Apply for your Coin & Collectibles industry merchant account today and experience hassle-free payment processing." />
-    </MainLayout>
-  </template>
+      <!-- Our Services Section -->
+      <div id="our-services" class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="bg-white rounded-2xl border-2 border-red-100 p-10">
+            <h2 class="text-4xl font-bold text-center mb-16" style="color: #973131;">Our Services</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+              <!-- Column 1 -->
+              <div>
+                <div class="mb-6 flex justify-center">
+                  <div class="bg-red-50 p-4 rounded-lg inline-flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-center">Coin Collectibles Merchant Accounts</h3>
+                <ul class="ml-5 space-y-2">
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">20+ Proven Bank Relationships</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Medium/High Risk Accounts</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Fast Coin Collectibles Account Approval</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Large Merchant Case Studies</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">E-Commerce and Retail Coin Collectibles</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">B2B Coin Collectibles Vendors Supported</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <!-- Column 2 -->
+              <div>
+                <div class="mb-6 flex justify-center">
+                  <div class="bg-red-50 p-4 rounded-lg inline-flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-center">Multiple Payment Solutions</h3>
+                <ul class="ml-10 space-y-2">
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Multiple E-Commerce Gateway</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Chargeback Prevention</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">ACH</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">E-Check</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Credit Cards</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">B2B-Level I/II/III Data Discounts</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">3D Secure Frictionless Checkout</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Mobile Payment</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">EMV Readers</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <!-- Column 3 -->
+              <div>
+                <div class="mb-6 flex justify-center">
+                  <div class="bg-red-50 p-4 rounded-lg inline-flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-center">Compatibility & Support</h3>
+                <ul class="ml-15 space-y-2">
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Gateway Recurring Billing</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Vault</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">E-Commerce Cart Plugins</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Developer API / Docs</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">POS/Terminals</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Scalable Merchant Accounts</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Dedicated Account Managers</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   
-  <script setup>
-  import { ref, onMounted } from 'vue';
-  import MainLayout from '../MainLayout.vue';
-  import CtaSection from '../../components/CtaSection.vue';
   
-  // Import images 
-  import firstImage from '@/../images/coin.jpg';
-  import secondImage from '@/../images/airlinebooking(2).jpg';
-  import thirdImage from '@/../images/coin(2).jpg';
-  import fourthImage from '@/../images/coin(3).jpg';
+    <!-- Types of Coins & Collectibles Businesses We Serve -->
+    <div class="py-16 bg-gradient-to-r from-gray-50 to-red-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Coins & Collectibles Businesses We Serve</h2>
+          <p class="text-xl text-gray-700 max-w-3xl mx-auto">Our payment processing solutions are tailored for all types of businesses in the coins and collectibles industry</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold">Coin Dealers</h3>
+            </div>
+            <p class="text-gray-700">Businesses specializing in rare and collectible coins, numismatic items, and currency collections can benefit from our secure payment processing solutions that handle high-value transactions.</p>
+          </div>
+          
+          <!-- Card 2 -->
+          <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold">Stamp Collectors & Dealers</h3>
+            </div>
+            <p class="text-gray-700">Philatelic businesses dealing in rare stamps and postal history items rely on our merchant services designed for handling specialized collectible transactions with fraud protection.</p>
+          </div>
+          
+          <!-- Card 3 -->
+          <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold">Precious Metals Dealers</h3>
+            </div>
+            <p class="text-gray-700">Businesses selling gold, silver, platinum, and other precious metals require our specialized high-risk merchant accounts to process large transaction values securely.</p>
+          </div>
+          
+          <!-- Card 4 -->
+          <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold">Sports Memorabilia Dealers</h3>
+            </div>
+            <p class="text-gray-700">Businesses specializing in sports cards, autographs, and game-used items benefit from our payment solutions designed to handle collectible transactions with chargeback protection.</p>
+          </div>
+          
+          <!-- Card 5 -->
+          <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold">Comic Book & Trading Card Stores</h3>
+            </div>
+            <p class="text-gray-700">Retailers of comic books, trading cards, and pop culture collectibles can process payments efficiently with our secure merchant accounts designed for collectibles businesses.</p>
+          </div>
+          
+          <!-- Card 6 -->
+          <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold">Auction Houses</h3>
+            </div>
+            <p class="text-gray-700">Auction businesses specializing in collectibles and high-value items can utilize our payment solutions that accommodate large transactions and varying payment schedules.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   
-  // Function to scroll to next section
-  const scrollToNextSection = () => {
-    window.scrollBy({
-      top: window.innerHeight,
-      behavior: 'smooth'
+    <!-- Coins & Collectibles Payment Gateway Section -->
+    <div id="payment-gateway" class="bg-gradient-to-r from-gray-50 to-red-50 py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-10" style="color: #973131;">Seamless Payment Processing for Coins & Collectibles Businesses</h2>
+        
+        <div class="bg-white p-10 rounded-xl shadow-lg mb-10 relative overflow-hidden">
+          <div class="absolute top-0 right-0 h-32 w-32 bg-red-50 rounded-full -mt-10 -mr-10"></div>
+          
+          <div class="flex flex-col md:flex-row items-start gap-12">
+            <div class="md:w-1/2 relative z-10 self-center">
+              <p class="text-lg text-gray-700 leading-relaxed">
+                  Our coins and collectibles merchant accounts are designed to provide smooth, reliable payment processing for your business. With our tailored solutions, you can focus on growing your coins and collectibles platform while we handle the complexities of payment processing.
+              </p>
+              
+           
+            </div>
+            
+            <div class="md:w-1/2">
+              <div class="relative">
+                <!-- Main image with effects -->
+                <div class="rounded-lg overflow-hidden shadow-lg relative z-20">
+                  <img :src="fourthImage" alt="Coins & Collectibles Payment Gateway" class="w-full h-auto transform transition hover:scale-105 duration-500">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div class="absolute bottom-0 left-0 p-6">
+                  
+                    <div class="flex items-center">
+                     
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Decorative elements -->
+                <div class="absolute top-4 right-4 w-24 h-24 bg-red-500/30 rounded-full blur-xl -z-10"></div>
+                <div class="absolute -bottom-2 -left-2 w-16 h-16 bg-blue-500/30 rounded-full blur-lg -z-10"></div>
+                
+                <!-- Features list that overlaps with image -->
+                <div class="absolute -bottom-10 -right-10 bg-white rounded-lg shadow-xl p-6 z-30 max-w-xs transform rotate-3">
+                  <h4 class="font-bold mb-3 text-gray-800">Gateway Features:</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span class="text-gray-700">Fraud Protection</span>
+                    </li>
+                    <li class="flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span class="text-gray-700">Real-time Reporting</span>
+                    </li>
+                    <li class="flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span class="text-gray-700">Recurring Billing</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="flex items-center justify-center my-8">
+            <div class="w-24 h-1 bg-red-200 rounded-full"></div>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  
+    <!-- CTA Section -->
+    <CtaSection subheading="Apply for your Coin & Collectibles industry merchant account today and experience hassle-free payment processing." />
+  </MainLayout>
+</template>
+
+<script setup>
+import { ref, onMounted } from 'vue';
+import MainLayout from '../MainLayout.vue';
+import CtaSection from '../../components/CtaSection.vue';
+
+// Import images 
+import firstImage from '@/../images/coin.jpg';
+import secondImage from '@/../images/coin.jpg';
+import thirdImage from '@/../images/coin(2).jpg';
+import fourthImage from '@/../images/coin(3).jpg';
+
+// Function to scroll to next section
+const scrollToNextSection = () => {
+  window.scrollBy({
+    top: window.innerHeight,
+    behavior: 'smooth'
+  });
+};
+
+onMounted(() => {
+  // Function to handle scroll reveal animations
+  const handleScrollReveal = () => {
+    const scrollRevealElements = document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right');
+    
+    scrollRevealElements.forEach(element => {
+      const elementTop = element.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      
+      if (elementTop < windowHeight * 0.9) {
+        element.classList.add('reveal-active');
+        element.classList.remove('opacity-0');
+      }
+    });
+    
+    // Animate stats cards sequentially
+    const statsCards = document.querySelectorAll('.stats-card');
+    statsCards.forEach((card, index) => {
+      const delay = parseInt(card.getAttribute('data-delay')) || (index * 200);
+      const elementTop = card.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      
+      if (elementTop < windowHeight * 0.9) {
+        setTimeout(() => {
+          card.classList.add('reveal-active');
+          card.classList.remove('opacity-0');
+        }, delay);
+      }
     });
   };
   
-  onMounted(() => {
-    // Function to handle scroll reveal animations
-    const handleScrollReveal = () => {
-      const scrollRevealElements = document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right');
-      
-      scrollRevealElements.forEach(element => {
-        const elementTop = element.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        
-        if (elementTop < windowHeight * 0.9) {
-          element.classList.add('reveal-active');
-          element.classList.remove('opacity-0');
-        }
-      });
-      
-      // Animate stats cards sequentially
-      const statsCards = document.querySelectorAll('.stats-card');
-      statsCards.forEach((card, index) => {
-        const delay = parseInt(card.getAttribute('data-delay')) || (index * 200);
-        const elementTop = card.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        
-        if (elementTop < windowHeight * 0.9) {
-          setTimeout(() => {
-            card.classList.add('reveal-active');
-            card.classList.remove('opacity-0');
-          }, delay);
-        }
-      });
-    };
-    
-    // Initial check for elements in viewport on page load
-    handleScrollReveal();
-    
-    // Add scroll event listener
-    window.addEventListener('scroll', handleScrollReveal);
-    
-    // Cleanup event listener on component unmount
-    return () => {
-      window.removeEventListener('scroll', handleScrollReveal);
-    };
-  });
-  </script>
+  // Initial check for elements in viewport on page load
+  handleScrollReveal();
   
-  <style scoped>
-  /* Add font imports at the top of your style section */
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+  // Add scroll event listener
+  window.addEventListener('scroll', handleScrollReveal);
   
-  /* Apply font families to elements */
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: -0.02em;
+  // Cleanup event listener on component unmount
+  return () => {
+    window.removeEventListener('scroll', handleScrollReveal);
+  };
+});
+</script>
+
+<style scoped>
+/* Add font imports at the top of your style section */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+
+/* Apply font families to elements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+p, a, span, blockquote, li {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Refine heading styles */
+h1 {
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h2 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h3 {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Make CTA buttons more distinct */
+.fancy-button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* Enhance body text readability */
+p {
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Animation Classes */
+.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right {
+  transition: all 0.8s cubic-bezier(0.17, 0.67, 0.3, 0.96);
+}
+
+.scroll-reveal-left {
+  transform: translateX(-50px);
+}
+
+.scroll-reveal-right {
+  transform: translateX(50px);
+}
+
+.reveal-active {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+.fade-in-slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInSlideUp 0.8s forwards;
+}
+
+@keyframes fadeInSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  p, a, span, blockquote, li {
-    font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Card animations */
+.card-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: cardReveal 1s cubic-bezier(0.17, 0.67, 0.3, 0.96) forwards;
+}
+
+@keyframes cardReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* Refine heading styles */
-  h1 {
-    font-weight: 700;
-    line-height: 1.1;
+}
+
+/* Text reveal animation */
+.text-reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+.text-reveal-content {
+  opacity: 0;
+  animation: textReveal 1s ease forwards;
+}
+
+@keyframes textReveal {
+  to {
+    opacity: 1;
   }
-  
-  h2 {
-    font-weight: 600;
-    line-height: 1.2;
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 1s cubic-bezier(0.17, 0.67, 0.3, 0.96) forwards;
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideInRight 1s cubic-bezier(0.17, 0.67, 0.3, 0.96) forwards;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-  h3 {
-    font-weight: 600;
-    line-height: 1.3;
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-  /* Make CTA buttons more distinct */
-  .fancy-button {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.03em;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+/* Pulse animation for stats backgrounds */
+.pulse-slow {
+  animation: pulseSlow 6s infinite alternate;
+}
+
+@keyframes pulseSlow {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
   }
-  
-  /* Enhance body text readability */
-  p {
-    line-height: 1.6;
-    font-weight: 400;
+  100% {
+    transform: scale(1.1);
+    opacity: 1;
   }
-  
-  /* Animation Classes */
-  .scroll-reveal, .scroll-reveal-left, .scroll-reveal-right {
-    transition: all 0.8s cubic-bezier(0.17, 0.67, 0.3, 0.96);
-  }
-  
-  .scroll-reveal-left {
-    transform: translateX(-50px);
-  }
-  
-  .scroll-reveal-right {
-    transform: translateX(50px);
-  }
-  
-  .reveal-active {
-    opacity: 1 !important;
-    transform: translateX(0) !important;
-  }
-  
-  .fade-in-slide-up {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInSlideUp 0.8s forwards;
-  }
-  
-  @keyframes fadeInSlideUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Card animations */
-  .card-reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    animation: cardReveal 1s cubic-bezier(0.17, 0.67, 0.3, 0.96) forwards;
-  }
-  
-  @keyframes cardReveal {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Text reveal animation */
-  .text-reveal {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .text-reveal-content {
-    opacity: 0;
-    animation: textReveal 1s ease forwards;
-  }
-  
-  @keyframes textReveal {
-    to {
-      opacity: 1;
-    }
-  }
-  
-  .slide-in-left {
-    opacity: 0;
-    transform: translateX(-50px);
-    animation: slideInLeft 1s cubic-bezier(0.17, 0.67, 0.3, 0.96) forwards;
-  }
-  
-  .slide-in-right {
-    opacity: 0;
-    transform: translateX(50px);
-    animation: slideInRight 1s cubic-bezier(0.17, 0.67, 0.3, 0.96) forwards;
-  }
-  
-  @keyframes slideInLeft {
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes slideInRight {
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  .delay-200 {
-    animation-delay: 0.2s;
-  }
-  
-  .delay-300 {
-    animation-delay: 0.3s;
-  }
-  
-  .delay-400 {
-    animation-delay: 0.4s;
-  }
-  
-  .delay-500 {
-    animation-delay: 0.5s;
-  }
-  
-  /* Pulse animation for stats backgrounds */
-  .pulse-slow {
-    animation: pulseSlow 6s infinite alternate;
-  }
-  
-  @keyframes pulseSlow {
-    0% {
-      transform: scale(1);
-      opacity: 0.6;
-    }
-    100% {
-      transform: scale(1.1);
-      opacity: 1;
-    }
-  }
-  
-  /* Fancy button hover effect */
-  .fancy-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(151, 49, 49, 0.4);
-  }
-  
-  /* Hover scale effect */
-  .hover-scale:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Custom color variables */
-  .text-custom-red {
-    color: #973131;
-  }
-  
-  .bg-custom-red {
-    background-color: #973131;
-  }
-  </style>
+}
+
+/* Fancy button hover effect */
+.fancy-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(151, 49, 49, 0.4);
+}
+
+/* Hover scale effect */
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Custom color variables */
+.text-custom-red {
+  color: #973131;
+}
+
+.bg-custom-red {
+  background-color: #973131;
+}
+</style>
   

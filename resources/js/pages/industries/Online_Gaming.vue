@@ -142,9 +142,9 @@
           <!-- Step 2 -->
           <div class="bg-white rounded-lg p-8 text-center shadow-lg scroll-reveal opacity-0 stats-card" data-delay="200">
             <div class="relative mb-6 mx-auto w-24 h-24 flex items-center justify-center">
-              <div class="absolute inset-0 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full pulse-slow"></div>
+              <div class="absolute inset-0 bg-gradient-to-br from-red-100 to-red-200 rounded-full pulse-slow"></div>
               <div class="relative">
-                <div class="text-4xl font-bold" style="color: #2196F3;">2</div>
+                <div class="text-4xl font-bold" style="color: #973131;">2</div>
               </div>
             </div>
             <h3 class="text-xl font-bold mb-3 text-gray-800">Submit Necessary Documentation</h3>
@@ -156,9 +156,9 @@
           <!-- Step 3 -->
           <div class="bg-white rounded-lg p-8 text-center shadow-lg scroll-reveal opacity-0 stats-card" data-delay="400">
             <div class="relative mb-6 mx-auto w-24 h-24 flex items-center justify-center">
-              <div class="absolute inset-0 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full pulse-slow"></div>
+              <div class="absolute inset-0 bg-gradient-to-br from-red-100 to-red-200 rounded-full pulse-slow"></div>
               <div class="relative">
-                <div class="text-4xl font-bold" style="color: #9C27B0;">3</div>
+                <div class="text-4xl font-bold" style="color: #973131;">3</div>
               </div>
             </div>
             <h3 class="text-xl font-bold mb-3 text-gray-800">Benefit from Our Underwriting Team's Assistance</h3>
@@ -170,9 +170,9 @@
           <!-- Step 4 -->
           <div class="bg-white rounded-lg p-8 text-center shadow-lg scroll-reveal opacity-0 stats-card" data-delay="600">
             <div class="relative mb-6 mx-auto w-24 h-24 flex items-center justify-center">
-              <div class="absolute inset-0 bg-gradient-to-br from-green-100 to-green-200 rounded-full pulse-slow"></div>
+              <div class="absolute inset-0 bg-gradient-to-br from-red-100 to-red-200 rounded-full pulse-slow"></div>
               <div class="relative">
-                <div class="text-4xl font-bold" style="color: #4CAF50;">4</div>
+                <div class="text-4xl font-bold" style="color: #973131;">4</div>
               </div>
             </div>
             <h3 class="text-xl font-bold mb-3 text-gray-800">Start Processing Payments</h3>
@@ -289,23 +289,23 @@
                 <span class="absolute bottom-0 left-0 w-full h-3 bg-red-100 transform -rotate-1"></span>
               </span>
               <span class="block mt-2">Hurricane Payments for</span>
-              <span class="block mt-2 text-custom-red">Adult Payment Processing?</span>
+              <span class="block mt-2 text-custom-red">Online Gaming Payment Processing?</span>
             </h2>
               
               <p class="text-lg text-gray-700 mb-6">
-                Adult entertainment businesses face unique challenges in the payment processing world. As a high-risk industry, many traditional banks and payment processors are hesitant to work with adult merchants. Choose a payment processor who understands the adult entertainment industry.
+                Online gaming businesses face unique challenges in the payment processing world. As a high-risk industry, many traditional banks and payment processors are hesitant to work with online gaming merchants. Choose a payment processor who understands the iGaming industry.
               </p>
               
               <div class="bg-gradient-to-r from-red-50 to-red-100 p-6 rounded-lg mb-8 transform hover:scale-[1.02] transition duration-300">
                 <p class="text-gray-800 font-medium italic">
-                  "Hurricane payments works with over 20 financial partners, so we can get you approved and ready to accept credit card payments quickly."
+                  "Hurricane Payments works with over 20 financial partners, so we can get your online gaming business approved and ready to accept credit card payments quickly."
                 </p>
               </div>
               
               <div class="bg-white p-6 rounded-lg border border-red-100 mb-8">
-                <h3 class="text-xl font-bold mb-3" style="color: #973131;">Tailored Solutions for the Adult Industry</h3>
+                <h3 class="text-xl font-bold mb-3" style="color: #973131;">Tailored Solutions for the Online Gaming Industry</h3>
                 <p class="text-gray-700">
-                  At Hurricane Payments, we specialize in providing merchant accounts tailored to the specific needs of adult businesses, ensuring you can process payments securely and efficiently. If you need an adult merchant account, trust Hurricane Payments to provide the perfect solution for your adult business needs.
+                  At Hurricane Payments, we specialize in providing merchant accounts tailored to the specific needs of online gaming businesses, ensuring you can process payments securely and efficiently. If you need an online gaming merchant account, trust Hurricane Payments to provide the perfect solution for your gaming business needs.
                 </p>
               </div>
               
@@ -317,8 +317,8 @@
                     </div>
                   </div>
                   <div>
-                    <h3 class="font-semibold">Industry Expertise</h3>
-                    <p class="text-gray-700">Benefit from our specialized knowledge in adult business payment processing</p>
+                    <h3 class="font-semibold">iGaming Industry Expertise</h3>
+                    <p class="text-gray-700">Benefit from our specialized knowledge in online gaming payment processing</p>
                   </div>
                 </div>
                 
@@ -329,8 +329,8 @@
                     </div>
                   </div>
                   <div>
-                    <h3 class="font-semibold">Competitive Rates</h3>
-                    <p class="text-gray-700">Get fair pricing designed specifically for high-risk merchants</p>
+                    <h3 class="font-semibold">Competitive Rates for Gaming Businesses</h3>
+                    <p class="text-gray-700">Get fair pricing designed specifically for high-risk online gaming merchants</p>
                   </div>
                 </div>
                 
@@ -341,8 +341,8 @@
                     </div>
                   </div>
                   <div>
-                    <h3 class="font-semibold">Fast Approval Process</h3>
-                    <p class="text-gray-700">Start processing payments in days, not weeks or months</p>
+                    <h3 class="font-semibold">Fast Gaming Merchant Approval</h3>
+                    <p class="text-gray-700">Get your online casino or gaming site processing payments quickly</p>
                   </div>
                 </div>
                 
@@ -353,8 +353,8 @@
                     </div>
                   </div>
                   <div>
-                    <h3 class="font-semibold">Advanced Fraud Protection</h3>
-                    <p class="text-gray-700">Protect your business with cutting-edge security solutions</p>
+                    <h3 class="font-semibold">Gaming-Specific Fraud Protection</h3>
+                    <p class="text-gray-700">Protect your gaming business with cutting-edge security solutions tailored for iGaming</p>
                   </div>
                 </div>
               </div>
@@ -374,7 +374,7 @@
           <div class="lg:w-1/2 scroll-reveal-right opacity-0 relative">
             <!-- Image frame with shadow and border effect -->
             <div class="rounded-xl overflow-hidden shadow-2xl relative z-10 border-4 border-white transform transition hover:-rotate-1 hover:scale-[1.01] duration-500">
-              <img :src="adultMerchantImg" alt="Adult Merchant Account Services" class="w-full h-auto" />
+              <img :src="secondImage" alt="Online Gaming Merchant Account Services" class="w-full h-auto" />
             </div>
             
             <!-- Decorative elements behind the image -->
@@ -503,34 +503,34 @@
         </div>
       </div>
 
-      <!-- Adult Content Guidelines Section with Page Break -->
+      <!-- Online Gaming Guidelines Section with Page Break -->
       <div id="content-guidelines" class="py-16">
         <div class="max-w-5xl mx-auto px-6 mb-12">
           <hr class="border-t-2 border-red-200 w-1/3 mx-auto mb-12">
           
-          <h2 class="text-4xl font-bold text-center mb-10" style="color: #973131;">Adult Content Guidelines</h2>
+          <h2 class="text-4xl font-bold text-center mb-10" style="color: #973131;">Online Gaming Guidelines</h2>
           
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Acceptable Content -->
             <div class="bg-green-50 p-8 rounded-xl relative overflow-hidden">
               <div class="absolute top-0 right-0 w-24 h-24 bg-green-100 rounded-full -mt-8 -mr-8 z-0"></div>
-              <h3 class="text-2xl font-bold mb-6 text-green-800 relative z-10">Acceptable Content</h3>
+              <h3 class="text-2xl font-bold mb-6 text-green-800 relative z-10">Acceptable Gaming Practices</h3>
               <ul class="space-y-3 relative z-10">
                 <li class="flex items-start">
                   <span class="text-green-600 mr-2">✓</span>
-                  <span class="text-gray-700">Legal adult entertainment</span>
+                  <span class="text-gray-700">Licensed and regulated gaming operations</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-green-600 mr-2">✓</span>
-                  <span class="text-gray-700">Age-verified access controls</span>
+                  <span class="text-gray-700">Age verification systems</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-green-600 mr-2">✓</span>
-                  <span class="text-gray-700">Clear content warnings</span>
+                  <span class="text-gray-700">Responsible gambling controls</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-green-600 mr-2">✓</span>
-                  <span class="text-gray-700">Consensual adult material</span>
+                  <span class="text-gray-700">Transparent terms and conditions</span>
                 </li>
               </ul>
             </div>
@@ -538,30 +538,30 @@
             <!-- Prohibited Content -->
             <div class="bg-red-50 p-8 rounded-xl relative overflow-hidden">
               <div class="absolute top-0 right-0 w-24 h-24 bg-red-100 rounded-full -mt-8 -mr-8 z-0"></div>
-              <h3 class="text-2xl font-bold mb-6 text-red-800 relative z-10">Prohibited Content</h3>
+              <h3 class="text-2xl font-bold mb-6 text-red-800 relative z-10">Prohibited Gaming Practices</h3>
               <ul class="space-y-3 relative z-10">
                 <li class="flex items-start">
                   <span class="text-red-600 mr-2">✗</span>
-                  <span class="text-gray-700">Illegal or non-consensual content</span>
+                  <span class="text-gray-700">Unlicensed gambling operations</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-red-600 mr-2">✗</span>
-                  <span class="text-gray-700">Content involving minors</span>
+                  <span class="text-gray-700">Inadequate age verification controls</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-red-600 mr-2">✗</span>
-                  <span class="text-gray-700">Extreme or violent material</span>
+                  <span class="text-gray-700">Deceptive or predatory practices</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-red-600 mr-2">✗</span>
-                  <span class="text-gray-700">Misleading or fraudulent practices</span>
+                  <span class="text-gray-700">Failure to comply with local regulations</span>
                 </li>
               </ul>
             </div>
           </div>
           
           <p class="text-center text-gray-700 mt-8">
-            Adhering to these guidelines helps ensure compliance with regulations and maintains a safer environment for all users.
+            Following these guidelines helps ensure compliance with regulations and maintains the integrity of the online gaming industry.
           </p>
         </div>
       </div>
@@ -707,6 +707,96 @@
         </div>
       </div>
 
+      <!-- Types of Online Gaming Businesses We Serve -->
+      <div class="py-16 bg-gradient-to-r from-gray-50 to-red-50">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Online Gaming Businesses We Serve</h2>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto">Our payment processing solutions are tailored for all types of businesses in the online gaming and iGaming industry</p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold">Online Casinos</h3>
+              </div>
+              <p class="text-gray-700">Virtual casinos offering traditional casino games like slots, roulette, blackjack, and poker can process payments securely with our specialized merchant accounts.</p>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold">Sports Betting Platforms</h3>
+              </div>
+              <p class="text-gray-700">Sportsbooks and betting exchanges that allow users to wager on sporting events benefit from our reliable payment processing and chargeback protection.</p>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold">Fantasy Sports Sites</h3>
+              </div>
+              <p class="text-gray-700">Daily fantasy sports platforms where users draft virtual teams to compete based on statistical performance can rely on our secure payment solutions.</p>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold">eSports Betting</h3>
+              </div>
+              <p class="text-gray-700">Platforms offering betting on competitive video gaming events can process payments smoothly with our specialized high-risk merchant accounts.</p>
+            </div>
+            
+            <!-- Card 5 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold">Mobile Gaming Apps</h3>
+              </div>
+              <p class="text-gray-700">Gaming applications for mobile devices with in-app purchases or gambling features benefit from our secure mobile payment processing solutions.</p>
+            </div>
+            
+            <!-- Card 6 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold">Lottery and Sweepstakes</h3>
+              </div>
+              <p class="text-gray-700">Online lottery services and sweepstakes websites can integrate our payment solutions to ensure secure and compliant transaction processing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Payment Gateway Section -->
       <div id="payment-gateway" class="bg-gradient-to-r from-gray-50 to-red-50 py-16">
         <div class="max-w-7xl mx-auto px-4">
@@ -746,9 +836,6 @@ import firstImage from '@/../images/onlinecasino.jpg';
 import secondImage from '@/../images/onlinecasino(2).jpg';
 import thirdImage from '@/../images/onlinecasino(3).jpg';
 import fourthImage from '@/../images/onlinecasino(4).jpg';
-import adultMerchantImg from '@/../images/adultcamera(2).jpg';
-import adultCameraImg from '@/../images/adultcamera.jpg';
-import adultGatewayImg from '@/../images/adult(4).jpg';
 
 // Function to scroll to next section
 const scrollToNextSection = () => {

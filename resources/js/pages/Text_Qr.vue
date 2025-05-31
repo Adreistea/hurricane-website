@@ -78,7 +78,7 @@
       <!-- Right Content - Mobile Phone Image with Card Reveal Animation -->
       <div class="lg:w-1/2 relative card-reveal delay-200">
         <div class="rounded-lg shadow-xl overflow-hidden">
-          <img src="@/../images/qrpic.jpg" alt="Payment Complete on Mobile" class="w-full h-auto" />
+          <img src="@/../images/qrpic.jpg" alt="Payment Complete on Mobile" class="h-[800px] object-cover" />
         </div>
         
         <!-- Animated decorative elements -->

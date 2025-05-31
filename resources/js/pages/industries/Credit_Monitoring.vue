@@ -19,7 +19,7 @@
           
           <div class="text-reveal mb-8">
             <p class="text-reveal-content text-lg text-gray-600 delay-300">
-                How do you know if your credit monitoring business has been categorized as a high-risk merchant?
+                Credit monitoring businesses face unique challenges in the payment processing world. As a high-risk industry, many traditional banks and payment processors are hesitant to work with credit monitoring merchants. At Hurricane Payments, we specialize in providing merchant accounts tailored to the specific needs of the credit monitoring industry, ensuring you can process payments securely and efficiently.
             </p>
             
             <ul class="mt-4 space-y-2">
@@ -97,7 +97,7 @@
         <!-- Right Content - Image with Card Reveal Animation -->
         <div class="lg:w-1/2 relative card-reveal delay-200">
     <div class="rounded-lg shadow-2xl overflow-hidden">
-      <img :src="firstImage" alt="Airline Booking Payment Processing" class="w-full h-[800px] object-cover" />
+      <img :src="firstImage" alt="Credit Monitoring Payment Processing" class="w-full h-[800px] object-cover" />
     </div>
   
   
@@ -107,7 +107,7 @@
         </div>
       </div>
   
-      <!-- Airline Booking Merchant Accounts Section -->
+      <!-- Credit Monitoring Merchant Accounts Section -->
       <div class="container mx-auto px-6 py-20 mt-8">
         <!-- Section Header -->
         <div class="text-center mb-16 scroll-reveal opacity-0">
@@ -138,9 +138,9 @@
           <!-- Document Submission -->
           <div class="bg-white rounded-lg p-8 text-center shadow-lg scroll-reveal opacity-0 stats-card" data-delay="200">
             <div class="relative mb-6 mx-auto w-24 h-24 flex items-center justify-center">
-              <div class="absolute inset-0 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full pulse-slow"></div>
+              <div class="absolute inset-0 bg-gradient-to-br from-red-100 to-red-200 rounded-full pulse-slow"></div>
               <div class="relative">
-                <div class="text-4xl font-bold" style="color: #2196F3;">2</div>
+                <div class="text-4xl font-bold" style="color: #973131;">2</div>
               </div>
             </div>
             <h3 class="text-xl font-bold mb-3 text-gray-800">Submit Necessary Documentation</h3>
@@ -152,9 +152,9 @@
           <!-- Expert Underwriting Assistance -->
           <div class="bg-white rounded-lg p-8 text-center shadow-lg scroll-reveal opacity-0 stats-card" data-delay="400">
             <div class="relative mb-6 mx-auto w-24 h-24 flex items-center justify-center">
-              <div class="absolute inset-0 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full pulse-slow"></div>
+              <div class="absolute inset-0 bg-gradient-to-br from-red-100 to-red-200 rounded-full pulse-slow"></div>
               <div class="relative">
-                <div class="text-4xl font-bold" style="color: #9C27B0;">3</div>
+                <div class="text-4xl font-bold" style="color: #973131;">3</div>
               </div>
             </div>
             <h3 class="text-xl font-bold mb-3 text-gray-800">Work with Our Underwriting Team</h3>
@@ -166,9 +166,9 @@
           <!-- Launch Secure Payment Processing -->
           <div class="bg-white rounded-lg p-8 text-center shadow-lg scroll-reveal opacity-0 stats-card" data-delay="600">
             <div class="relative mb-6 mx-auto w-24 h-24 flex items-center justify-center">
-              <div class="absolute inset-0 bg-gradient-to-br from-green-100 to-green-200 rounded-full pulse-slow"></div>
+              <div class="absolute inset-0 bg-gradient-to-br from-red-100 to-red-200 rounded-full pulse-slow"></div>
               <div class="relative">
-                <div class="text-4xl font-bold" style="color: #4CAF50;">4</div>
+                <div class="text-4xl font-bold" style="color: #973131;">4</div>
               </div>
             </div>
             <h3 class="text-xl font-bold mb-3 text-gray-800">Start Processing Payments</h3>
@@ -200,7 +200,7 @@
               <!-- Left Content: Image with Effects -->
               <div class="relative order-2 lg:order-1">
                 <div class="relative z-10 rounded-xl overflow-hidden shadow-2xl transition duration-500 transform hover:scale-[1.02]">
-                  <img :src="thirdImage" alt="Airline Booking High-Risk Merchant Services" class="w-full h-[800px] object-cover" />
+                  <img :src="thirdImage" alt="Credit Monitoring High-Risk Merchant Services" class="w-full h-[800px] object-cover" />
                   <div class="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
                   <div class="absolute bottom-0 left-0 w-full p-8">
                     <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
@@ -231,7 +231,7 @@
                     </div>
                     
                     <div class="relative z-10">
-                      <h3 class="text-2xl font-bold mb-4 text-white">Choosing the Right Airlines & Booking Payment Processor</h3>
+                      <h3 class="text-2xl font-bold mb-4 text-white">Choosing the Right Credit Monitoring Payment Processor</h3>
                       <p class="text-gray-300 leading-relaxed mb-6">
                         Securing the right credit monitoring payment processor is crucial for businesses in the credit monitoring industry to avoid account closures and fund holds. Learn how Hurricane Payments can provide the stable, high-risk processing account your business needs for uninterrupted sales and growth.
                       </p>
@@ -287,157 +287,305 @@
       </div>
   
   
-        <!-- Our Services Section -->
-        <div id="our-services" class="py-20">
+        <!-- Why Credit Monitoring Is Considered High-Risk -->
+        <div class="py-16 bg-white">
           <div class="max-w-7xl mx-auto px-6">
-            <div class="bg-white rounded-2xl border-2 border-red-100 p-10">
-              <h2 class="text-4xl font-bold text-center mb-16" style="color: #973131;">Our Services</h2>
-              
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <!-- Column 1 -->
-                <div>
-                  <div class="mb-6 flex justify-center">
-                    <div class="bg-red-50 p-4 rounded-lg inline-flex">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-                      </svg>
-                    </div>
+            <div class="text-center mb-12">
+              <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Why Are Credit Monitoring Businesses Considered High-Risk?</h2>
+              <p class="text-xl text-gray-700 max-w-3xl mx-auto">Understanding the unique challenges facing the credit monitoring industry</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <!-- Factor 1 -->
+              <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-red">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
                   </div>
-                  <h3 class="text-xl font-bold mb-4 text-center">Credit Monitoring Merchant Accounts</h3>
-                  <ul class="ml-5 space-y-2">
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">20+ Proven Bank Relationships</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">Medium/High Risk Accounts</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">Fast Credit Monitoring Account Approval</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">Large Merchant Case Studies</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">E-Commerce and Retail Credit Monitoring</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">B2B Credit Monitoring Vendors Supported</span>
-                    </li>
-                  </ul>
+                  <h3 class="text-xl font-bold">Subscription-Based Model</h3>
                 </div>
-                
-                <!-- Column 2 -->
-                <div>
-                  <div class="mb-6 flex justify-center">
-                    <div class="bg-red-50 p-4 rounded-lg inline-flex">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <h3 class="text-xl font-bold mb-4 text-center">Multiple Payment Solutions</h3>
-                  <ul class="ml-10 space-y-2">
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">Multiple E-Commerce Gateway</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">Chargeback Prevention</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">ACH</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">E-Check</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">Credit Cards</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">B2B-Level I/II/III Data Discounts</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">3D Secure Frictionless Checkout</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">Mobile Payment</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">EMV Readers</span>
-                    </li>
-                  </ul>
-                </div>
-                
-                <!-- Column 3 -->
-                <div>
-                  <div class="mb-6 flex justify-center">
-                    <div class="bg-red-50 p-4 rounded-lg inline-flex">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <h3 class="text-xl font-bold mb-4 text-center">Compatibility & Support</h3>
-                  <ul class="ml-15 space-y-2">
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">Gateway Recurring Billing</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">Vault</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">E-Commerce Cart Plugins</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">Developer API / Docs</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">POS/Terminals</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">Scalable Merchant Accounts</span>
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-custom-red mr-2">•</span>
-                      <span class="text-gray-700">Dedicated Account Managers</span>
-                    </li>
-                  </ul>
-                </div>
+                <p class="text-gray-700">Credit monitoring services typically operate on a subscription model with recurring billing, which increases the risk of customer disputes and chargebacks when customers forget about their ongoing subscriptions.</p>
               </div>
+              
+              <!-- Factor 2 -->
+              <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-red">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-bold">Regulatory Scrutiny</h3>
+                </div>
+                <p class="text-gray-700">The financial services industry faces significant regulatory oversight, and credit monitoring businesses must navigate complex compliance requirements. This regulatory landscape increases risk for payment processors.</p>
+              </div>
+              
+              <!-- Factor 3 -->
+              <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-red">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-bold">Customer Satisfaction Challenges</h3>
+                </div>
+                <p class="text-gray-700">Credit monitoring services often deal with customers' sensitive financial information, and customer satisfaction can be affected when credit issues are discovered. This can lead to higher chargeback rates than other industries.</p>
+              </div>
+            </div>
+            
+            <div class="mt-12 p-8 bg-gradient-to-r from-gray-50 to-red-50 rounded-xl shadow-lg">
+              <p class="text-lg text-gray-700 leading-relaxed text-center">
+                These factors combine to make credit monitoring services a higher-risk industry in the eyes of traditional payment processors. Hurricane Payments specializes in providing merchant accounts tailored to the specific needs of the credit monitoring industry.
+              </p>
             </div>
           </div>
         </div>
   
   
-      <!-- Airline & Booking Payment Gateway Section -->
-      <div id="payment-gateway" class="bg-gradient-to-r from-gray-50 to-red-50 py-16">
-        <div class="max-w-7xl mx-auto px-4">
-          <h2 class="text-4xl font-bold text-center mb-10" style="color: #973131;">Seamless Payment Processing for Credit Monitoring Businesses</h2>
-          
-          <div class="bg-white p-10 rounded-xl shadow-lg mb-10 relative overflow-hidden">
-            <div class="absolute top-0 right-0 h-32 w-32 bg-red-50 rounded-full -mt-10 -mr-10"></div>
+      <!-- Our Services Section -->
+      <div id="our-services" class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="bg-white rounded-2xl border-2 border-red-100 p-10">
+            <h2 class="text-4xl font-bold text-center mb-16" style="color: #973131;">Our Services</h2>
             
-            <div class="flex flex-col md:flex-row items-start gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+              <!-- Column 1 -->
+              <div>
+                <div class="mb-6 flex justify-center">
+                  <div class="bg-red-50 p-4 rounded-lg inline-flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-center">Credit Monitoring Merchant Accounts</h3>
+                <ul class="ml-5 space-y-2">
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">20+ Proven Bank Relationships</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Medium/High Risk Accounts</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Fast Credit Monitoring Account Approval</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Large Merchant Case Studies</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">E-Commerce and Retail Credit Monitoring</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">B2B Credit Monitoring Vendors Supported</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <!-- Column 2 -->
+              <div>
+                <div class="mb-6 flex justify-center">
+                  <div class="bg-red-50 p-4 rounded-lg inline-flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-center">Multiple Payment Solutions</h3>
+                <ul class="ml-10 space-y-2">
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Multiple E-Commerce Gateway</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Chargeback Prevention</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">ACH</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">E-Check</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Credit Cards</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">B2B-Level I/II/III Data Discounts</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">3D Secure Frictionless Checkout</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Mobile Payment</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">EMV Readers</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <!-- Column 3 -->
+              <div>
+                <div class="mb-6 flex justify-center">
+                  <div class="bg-red-50 p-4 rounded-lg inline-flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-center">Compatibility & Support</h3>
+                <ul class="ml-15 space-y-2">
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Gateway Recurring Billing</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Vault</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">E-Commerce Cart Plugins</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Developer API / Docs</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">POS/Terminals</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Scalable Merchant Accounts</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-custom-red mr-2">•</span>
+                    <span class="text-gray-700">Dedicated Account Managers</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+  
+    <!-- Types of Credit Monitoring Businesses We Serve -->
+    <div class="py-16 bg-gradient-to-r from-gray-50 to-red-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Credit Monitoring Businesses We Serve</h2>
+          <p class="text-xl text-gray-700 max-w-3xl mx-auto">Our payment processing solutions are tailored for all types of businesses in the credit monitoring industry</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold">Identity Theft Protection Services</h3>
+            </div>
+            <p class="text-gray-700">Businesses offering identity monitoring, fraud alerts, and credit monitoring as part of identity theft protection packages can benefit from our secure payment processing solutions.</p>
+          </div>
+          
+          <!-- Card 2 -->
+          <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold">Credit Reporting Agencies</h3>
+            </div>
+            <p class="text-gray-700">Businesses that provide access to credit reports, scores, and analysis need reliable payment processing to handle customer subscriptions and one-time report purchases.</p>
+          </div>
+          
+          <!-- Card 3 -->
+          <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold">Credit Score Improvement Services</h3>
+            </div>
+            <p class="text-gray-700">Companies offering services to help customers improve their credit scores can utilize our payment solutions to handle subscription billing and one-time service fees.</p>
+          </div>
+          
+          <!-- Card 4 -->
+          <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold">Financial Education Platforms</h3>
+            </div>
+            <p class="text-gray-700">Educational platforms that include credit monitoring as part of financial wellness programs need robust payment processing for their subscription-based services.</p>
+          </div>
+          
+          <!-- Card 5 -->
+          <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold">Credit Monitoring Apps</h3>
+            </div>
+            <p class="text-gray-700">Mobile applications offering credit monitoring services can process payments efficiently with our secure merchant accounts designed specifically for subscription-based services.</p>
+          </div>
+          
+          <!-- Card 6 -->
+          <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold">Credit Repair Companies</h3>
+            </div>
+            <p class="text-gray-700">Businesses helping consumers repair their credit need reliable payment processing solutions that can handle recurring billing and accommodate various service packages.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Credit Monitoring Payment Gateway Section -->
+    <div id="payment-gateway" class="bg-gradient-to-r from-gray-50 to-red-50 py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-10" style="color: #973131;">Seamless Payment Processing for Credit Monitoring Businesses</h2>
+        
+        <div class="bg-white p-10 rounded-xl shadow-lg mb-10 relative overflow-hidden">
+          <div class="absolute top-0 right-0 h-32 w-32 bg-red-50 rounded-full -mt-10 -mr-10"></div>
+          
+          <div class="flex flex-col md:flex-row items-start gap-12">
     <div class="md:w-1/2 relative z-10 self-center">
       <p class="text-2xl text-gray-700 leading-relaxed">
   
@@ -451,7 +599,7 @@
                 <div class="relative">
                   <!-- Main image with effects -->
                   <div class="rounded-lg overflow-hidden shadow-lg relative z-20">
-                    <img :src="fourthImage" alt="Airline Booking Payment Gateway" class="w-full h-auto transform transition hover:scale-105 duration-500">
+                    <img :src="fourthImage" alt="Credit Monitoring Payment Gateway" class="w-full h-auto transform transition hover:scale-105 duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-6">
                     
@@ -500,256 +648,257 @@
           </div>
         </div>
       </div>
+   
   
-      <!-- CTA Section -->
-      <CtaSection subheading="Apply for your Credit Education & Repair industry merchant account today and experience hassle-free payment processing." />
-    </MainLayout>
-  </template>
-  
-  <script setup>
-  import { ref, onMounted } from 'vue';
-  import MainLayout from '../MainLayout.vue';
-  import CtaSection from '../../components/CtaSection.vue';
-  
-  // Import images 
-  import firstImage from '@/../images/creditmonitor(2).jpg';
-  import secondImage from '@/../images/airlinebooking(2).jpg';
-  import thirdImage from '@/../images/creditmonitor.jpg';
-  import fourthImage from '@/../images/creditmonitor(3).jpg';
-  
-  // Function to scroll to next section
-  const scrollToNextSection = () => {
-    window.scrollBy({
-      top: window.innerHeight,
-      behavior: 'smooth'
+    <!-- CTA Section -->
+    <CtaSection subheading="Apply for your Credit Monitoring merchant account today and experience hassle-free payment processing." />
+  </MainLayout>
+</template>
+
+<script setup>
+import { ref, onMounted } from 'vue';
+import MainLayout from '../MainLayout.vue';
+import CtaSection from '../../components/CtaSection.vue';
+
+// Import images 
+import firstImage from '@/../images/creditmonitor(2).jpg';
+import secondImage from '@/../images/airlinebooking(2).jpg';
+import thirdImage from '@/../images/creditmonitor.jpg';
+import fourthImage from '@/../images/creditmonitor(3).jpg';
+
+// Function to scroll to next section
+const scrollToNextSection = () => {
+  window.scrollBy({
+    top: window.innerHeight,
+    behavior: 'smooth'
+  });
+};
+
+onMounted(() => {
+  // Function to handle scroll reveal animations
+  const handleScrollReveal = () => {
+    const scrollRevealElements = document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right');
+    
+    scrollRevealElements.forEach(element => {
+      const elementTop = element.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      
+      if (elementTop < windowHeight * 0.9) {
+        element.classList.add('reveal-active');
+        element.classList.remove('opacity-0');
+      }
+    });
+    
+    // Animate stats cards sequentially
+    const statsCards = document.querySelectorAll('.stats-card');
+    statsCards.forEach((card, index) => {
+      const delay = parseInt(card.getAttribute('data-delay')) || (index * 200);
+      const elementTop = card.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      
+      if (elementTop < windowHeight * 0.9) {
+        setTimeout(() => {
+          card.classList.add('reveal-active');
+          card.classList.remove('opacity-0');
+        }, delay);
+      }
     });
   };
   
-  onMounted(() => {
-    // Function to handle scroll reveal animations
-    const handleScrollReveal = () => {
-      const scrollRevealElements = document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right');
-      
-      scrollRevealElements.forEach(element => {
-        const elementTop = element.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        
-        if (elementTop < windowHeight * 0.9) {
-          element.classList.add('reveal-active');
-          element.classList.remove('opacity-0');
-        }
-      });
-      
-      // Animate stats cards sequentially
-      const statsCards = document.querySelectorAll('.stats-card');
-      statsCards.forEach((card, index) => {
-        const delay = parseInt(card.getAttribute('data-delay')) || (index * 200);
-        const elementTop = card.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        
-        if (elementTop < windowHeight * 0.9) {
-          setTimeout(() => {
-            card.classList.add('reveal-active');
-            card.classList.remove('opacity-0');
-          }, delay);
-        }
-      });
-    };
-    
-    // Initial check for elements in viewport on page load
-    handleScrollReveal();
-    
-    // Add scroll event listener
-    window.addEventListener('scroll', handleScrollReveal);
-    
-    // Cleanup event listener on component unmount
-    return () => {
-      window.removeEventListener('scroll', handleScrollReveal);
-    };
-  });
-  </script>
+  // Initial check for elements in viewport on page load
+  handleScrollReveal();
   
-  <style scoped>
-  /* Add font imports at the top of your style section */
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+  // Add scroll event listener
+  window.addEventListener('scroll', handleScrollReveal);
   
-  /* Apply font families to elements */
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: -0.02em;
+  // Cleanup event listener on component unmount
+  return () => {
+    window.removeEventListener('scroll', handleScrollReveal);
+  };
+});
+</script>
+
+<style scoped>
+/* Add font imports at the top of your style section */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+
+/* Apply font families to elements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+p, a, span, blockquote, li {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Refine heading styles */
+h1 {
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h2 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h3 {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Make CTA buttons more distinct */
+.fancy-button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* Enhance body text readability */
+p {
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Animation Classes */
+.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right {
+  transition: all 0.8s cubic-bezier(0.17, 0.67, 0.3, 0.96);
+}
+
+.scroll-reveal-left {
+  transform: translateX(-50px);
+}
+
+.scroll-reveal-right {
+  transform: translateX(50px);
+}
+
+.reveal-active {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+.fade-in-slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInSlideUp 0.8s forwards;
+}
+
+@keyframes fadeInSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  p, a, span, blockquote, li {
-    font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Card animations */
+.card-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: cardReveal 1s cubic-bezier(0.17, 0.67, 0.3, 0.96) forwards;
+}
+
+@keyframes cardReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* Refine heading styles */
-  h1 {
-    font-weight: 700;
-    line-height: 1.1;
+}
+
+/* Text reveal animation */
+.text-reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+.text-reveal-content {
+  opacity: 0;
+  animation: textReveal 1s ease forwards;
+}
+
+@keyframes textReveal {
+  to {
+    opacity: 1;
   }
-  
-  h2 {
-    font-weight: 600;
-    line-height: 1.2;
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 1s cubic-bezier(0.17, 0.67, 0.3, 0.96) forwards;
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideInRight 1s cubic-bezier(0.17, 0.67, 0.3, 0.96) forwards;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-  h3 {
-    font-weight: 600;
-    line-height: 1.3;
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-  /* Make CTA buttons more distinct */
-  .fancy-button {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.03em;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+/* Pulse animation for stats backgrounds */
+.pulse-slow {
+  animation: pulseSlow 6s infinite alternate;
+}
+
+@keyframes pulseSlow {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
   }
-  
-  /* Enhance body text readability */
-  p {
-    line-height: 1.6;
-    font-weight: 400;
+  100% {
+    transform: scale(1.1);
+    opacity: 1;
   }
-  
-  /* Animation Classes */
-  .scroll-reveal, .scroll-reveal-left, .scroll-reveal-right {
-    transition: all 0.8s cubic-bezier(0.17, 0.67, 0.3, 0.96);
-  }
-  
-  .scroll-reveal-left {
-    transform: translateX(-50px);
-  }
-  
-  .scroll-reveal-right {
-    transform: translateX(50px);
-  }
-  
-  .reveal-active {
-    opacity: 1 !important;
-    transform: translateX(0) !important;
-  }
-  
-  .fade-in-slide-up {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInSlideUp 0.8s forwards;
-  }
-  
-  @keyframes fadeInSlideUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Card animations */
-  .card-reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    animation: cardReveal 1s cubic-bezier(0.17, 0.67, 0.3, 0.96) forwards;
-  }
-  
-  @keyframes cardReveal {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Text reveal animation */
-  .text-reveal {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .text-reveal-content {
-    opacity: 0;
-    animation: textReveal 1s ease forwards;
-  }
-  
-  @keyframes textReveal {
-    to {
-      opacity: 1;
-    }
-  }
-  
-  .slide-in-left {
-    opacity: 0;
-    transform: translateX(-50px);
-    animation: slideInLeft 1s cubic-bezier(0.17, 0.67, 0.3, 0.96) forwards;
-  }
-  
-  .slide-in-right {
-    opacity: 0;
-    transform: translateX(50px);
-    animation: slideInRight 1s cubic-bezier(0.17, 0.67, 0.3, 0.96) forwards;
-  }
-  
-  @keyframes slideInLeft {
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes slideInRight {
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  .delay-200 {
-    animation-delay: 0.2s;
-  }
-  
-  .delay-300 {
-    animation-delay: 0.3s;
-  }
-  
-  .delay-400 {
-    animation-delay: 0.4s;
-  }
-  
-  .delay-500 {
-    animation-delay: 0.5s;
-  }
-  
-  /* Pulse animation for stats backgrounds */
-  .pulse-slow {
-    animation: pulseSlow 6s infinite alternate;
-  }
-  
-  @keyframes pulseSlow {
-    0% {
-      transform: scale(1);
-      opacity: 0.6;
-    }
-    100% {
-      transform: scale(1.1);
-      opacity: 1;
-    }
-  }
-  
-  /* Fancy button hover effect */
-  .fancy-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(151, 49, 49, 0.4);
-  }
-  
-  /* Hover scale effect */
-  .hover-scale:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Custom color variables */
-  .text-custom-red {
-    color: #973131;
-  }
-  
-  .bg-custom-red {
-    background-color: #973131;
-  }
-  </style>
+}
+
+/* Fancy button hover effect */
+.fancy-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(151, 49, 49, 0.4);
+}
+
+/* Hover scale effect */
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Custom color variables */
+.text-custom-red {
+  color: #973131;
+}
+
+.bg-custom-red {
+  background-color: #973131;
+}
+</style>
   

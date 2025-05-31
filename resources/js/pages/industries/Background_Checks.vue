@@ -19,7 +19,7 @@
           
           <div class="text-reveal mb-8">
             <p class="text-reveal-content text-lg text-gray-600 delay-300">
-                Discover tailored payment processing solutions designed specifically for background checks businesses. Navigate the complexities of high-risk categorization with Hurricane Payments.
+                Background checks businesses face unique challenges in payment processing. Traditional banks often hesitate to work with these merchants due to high-risk factors including subscription billing models, regulatory compliance requirements, and data privacy concerns. Hurricane Payments specializes in providing customized merchant accounts that ensure secure, compliant, and efficient payment processing for the background checks industry.
             </p>
             
             <ul class="mt-4 space-y-2">
@@ -29,7 +29,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span class="ml-3 text-gray-700">Dedicated Account Managers</span>
+                <span class="ml-3 text-gray-700">Industry-Specific Account Managers</span>
               </li>
               <li class="flex items-start fade-in-slide-up" style="animation-delay: 200ms;">
                 <div class="flex-shrink-0 w-6 h-6 text-custom-red mt-1">
@@ -37,7 +37,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span class="ml-3 text-gray-700">Years High-Risk Experience</span>
+                <span class="ml-3 text-gray-700">Years of Background Check Processing Experience</span>
               </li>
               <li class="flex items-start fade-in-slide-up" style="animation-delay: 300ms;">
                 <div class="flex-shrink-0 w-6 h-6 text-custom-red mt-1">
@@ -45,7 +45,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span class="ml-3 text-gray-700">Fast and Easy Application Process</span>
+                <span class="ml-3 text-gray-700">Streamlined Application for Screening Companies</span>
               </li>
               <li class="flex items-start fade-in-slide-up" style="animation-delay: 400ms;">
                 <div class="flex-shrink-0 w-6 h-6 text-custom-red mt-1">
@@ -97,7 +97,7 @@
         <!-- Right Content - Image with Card Reveal Animation -->
         <div class="lg:w-1/2 relative card-reveal delay-200">
     <div class="rounded-lg shadow-2xl overflow-hidden">
-      <img :src="firstImage" alt="Airline Booking Payment Processing" class="w-full h-[800px] object-cover" />
+      <img :src="firstImage" alt="Background Checks Payment Processing" class="w-full h-[800px] object-cover" />
     </div>
           <!-- Animated decorative elements -->
           <div class="absolute -z-10 inset-0 bg-gradient-to-r from-red-100 to-rose-100 rounded-3xl transform rotate-3 translate-x-4 translate-y-4 slide-in-right delay-300"></div>
@@ -105,7 +105,7 @@
         </div>
       </div>
   
-      <!-- Airline Booking Merchant Accounts Section -->
+      <!-- Background Checks Merchant Accounts Section -->
       <div class="container mx-auto px-6 py-20 mt-8">
         <!-- Section Header -->
         <div class="text-center mb-16 scroll-reveal opacity-0">
@@ -136,9 +136,9 @@
           <!-- Document Submission -->
           <div class="bg-white rounded-lg p-8 text-center shadow-lg scroll-reveal opacity-0 stats-card" data-delay="200">
             <div class="relative mb-6 mx-auto w-24 h-24 flex items-center justify-center">
-              <div class="absolute inset-0 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full pulse-slow"></div>
+              <div class="absolute inset-0 bg-gradient-to-br from-red-100 to-red-200 rounded-full pulse-slow"></div>
               <div class="relative">
-                <div class="text-4xl font-bold" style="color: #2196F3;">2</div>
+                <div class="text-4xl font-bold" style="color: #973131;">2</div>
               </div>
             </div>
             <h3 class="text-xl font-bold mb-3 text-gray-800">Submit Necessary Documentation</h3>
@@ -150,9 +150,9 @@
           <!-- Expert Underwriting Assistance -->
           <div class="bg-white rounded-lg p-8 text-center shadow-lg scroll-reveal opacity-0 stats-card" data-delay="400">
             <div class="relative mb-6 mx-auto w-24 h-24 flex items-center justify-center">
-              <div class="absolute inset-0 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full pulse-slow"></div>
+              <div class="absolute inset-0 bg-gradient-to-br from-red-100 to-red-200 rounded-full pulse-slow"></div>
               <div class="relative">
-                <div class="text-4xl font-bold" style="color: #9C27B0;">3</div>
+                <div class="text-4xl font-bold" style="color: #973131;">3</div>
               </div>
             </div>
             <h3 class="text-xl font-bold mb-3 text-gray-800">Work with Our Underwriting Team</h3>
@@ -164,9 +164,9 @@
           <!-- Launch Secure Payment Processing -->
           <div class="bg-white rounded-lg p-8 text-center shadow-lg scroll-reveal opacity-0 stats-card" data-delay="600">
             <div class="relative mb-6 mx-auto w-24 h-24 flex items-center justify-center">
-              <div class="absolute inset-0 bg-gradient-to-br from-green-100 to-green-200 rounded-full pulse-slow"></div>
+              <div class="absolute inset-0 bg-gradient-to-br from-red-100 to-red-200 rounded-full pulse-slow"></div>
               <div class="relative">
-                <div class="text-4xl font-bold" style="color: #4CAF50;">4</div>
+                <div class="text-4xl font-bold" style="color: #973131;">4</div>
               </div>
             </div>
             <h3 class="text-xl font-bold mb-3 text-gray-800">Start Processing Payments</h3>
@@ -198,7 +198,7 @@
               <!-- Left Content: Image with Effects -->
               <div class="relative order-2 lg:order-1">
                 <div class="relative z-10 rounded-xl overflow-hidden shadow-2xl transition duration-500 transform hover:scale-[1.02]">
-                  <img :src="thirdImage" alt="Airline Booking High-Risk Merchant Services" class="w-full h-[800px] object-cover" />
+                  <img :src="thirdImage" alt="Background Checks High-Risk Merchant Services" class="w-full h-[800px] object-cover" />
                   <div class="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
                   <div class="absolute bottom-0 left-0 w-full p-8">
                     <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
@@ -219,7 +219,7 @@
                   <div class="bg-white rounded-xl p-8 shadow-xl transform transition hover:shadow-2xl duration-500 border-l-4 border-custom-red">
                     <h3 class="text-2xl font-bold mb-4" style="color: #973131;">Why High-Risk?</h3>
                     <p class="text-gray-700 leading-relaxed">
-                        High-risk merchants require specialized payment processors. Avoid disruptions with Hurricane Payments, a leader in high-risk merchant account solutions for the background checks industry.
+                        Background check businesses are often classified as high-risk due to several factors: potential for data privacy concerns, strict regulatory compliance requirements, higher-than-average chargeback rates, and subscription-based billing models. High-risk merchants require specialized payment processors. Avoid disruptions with Hurricane Payments, a leader in high-risk merchant account solutions for the background checks industry.
                     </p>
                   </div>
                   
@@ -296,12 +296,11 @@
                 <div class="mb-6 flex justify-center">
                   <div class="bg-red-50 p-4 rounded-lg inline-flex">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                   </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-center">Background Checks Merchant Accounts
-                </h3>
+                <h3 class="text-xl font-bold mb-4 text-center">Background Checks Merchant Accounts</h3>
                 <ul class="ml-5 space-y-2">
                   <li class="flex items-start">
                     <span class="text-custom-red mr-2">•</span>
@@ -335,7 +334,7 @@
                 <div class="mb-6 flex justify-center">
                   <div class="bg-red-50 p-4 rounded-lg inline-flex">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                     </svg>
                   </div>
                 </div>
@@ -385,7 +384,7 @@
                 <div class="mb-6 flex justify-center">
                   <div class="bg-red-50 p-4 rounded-lg inline-flex">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
                     </svg>
                   </div>
                 </div>
@@ -427,7 +426,98 @@
       </div>
 
   
-      <!-- Airline & Booking Payment Gateway Section -->
+      <!-- Types of Background Check Businesses We Serve -->
+      <div class="py-16 bg-gradient-to-r from-gray-50 to-red-50">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold mb-4" style="color: #973131;">Background Check Businesses We Serve</h2>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto">Our payment processing solutions are tailored for all types of businesses in the background screening industry</p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold">Employment Screening Services</h3>
+              </div>
+              <p class="text-gray-700">Companies that provide pre-employment and ongoing screening services for businesses benefit from our secure payment solutions and recurring billing capabilities.</p>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7m-14 0l2 2m0 0l7 7-7-7m14 0l-2-2m0 0l-7-7-7 7" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold">Tenant Screening Services</h3>
+              </div>
+              <p class="text-gray-700">Property management companies and tenant screening services can process payments from landlords and property managers with our secure, reliable payment solutions.</p>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold">Criminal Background Check Providers</h3>
+              </div>
+              <p class="text-gray-700">Services that provide criminal history checks can integrate our payment processing to ensure seamless customer transactions while maintaining compliance with regulations.</p>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold">Drug Testing Services</h3>
+              </div>
+              <p class="text-gray-700">Drug testing companies can streamline payment collection from businesses and individuals using our secure payment solutions designed for subscription and one-time services.</p>
+            </div>
+            
+            <!-- Card 5 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold">Identity Verification Services</h3>
+              </div>
+              <p class="text-gray-700">Companies that verify identities for online services can process payments securely with our solutions designed to handle recurring subscription models and API-based services.</p>
+            </div>
+            
+            <!-- Card 6 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:shadow-xl border-t-4" style="border-color: #973131;">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-custom-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold">Corporate Due Diligence Providers</h3>
+              </div>
+              <p class="text-gray-700">Firms that conduct corporate background checks and due diligence for mergers and acquisitions can rely on our high-value transaction processing and robust security measures.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  
+      <!-- Background Checks Payment Gateway Section -->
       <div id="payment-gateway" class="bg-gradient-to-r from-gray-50 to-red-50 py-16">
         <div class="max-w-7xl mx-auto px-4">
           <h2 class="text-4xl font-bold text-center mb-10" style="color: #973131;">Seamless Payment Processing for Background Checks Businesses</h2>
@@ -447,7 +537,7 @@
                 <div class="relative">
                   <!-- Main image with effects -->
                   <div class="rounded-lg overflow-hidden shadow-lg relative z-20">
-                    <img :src="fourthImage" alt="Airline Booking Payment Gateway" class="w-full h-auto transform transition hover:scale-105 duration-500">
+                    <img :src="fourthImage" alt="Background Checks Payment Gateway" class="w-full h-auto transform transition hover:scale-105 duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-6">
                      
