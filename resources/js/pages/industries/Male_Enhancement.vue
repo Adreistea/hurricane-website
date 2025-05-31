@@ -1,6 +1,5 @@
 <template>
     <div>
-      <NavBar />
       <MainLayout>
       <!-- Hero Section with same animations as home.vue -->
       <div class="container mx-auto px-6 py-16 flex flex-col lg:flex-row items-center">
@@ -481,7 +480,6 @@
       <!-- CTA Section -->
       <CtaSection subheading="Apply for your male enhancement merchant account today and experience hassle-free payment processing." />
     </MainLayout>
-    <AppFooter />
   </div>
 </template>
 
@@ -491,14 +489,13 @@ import firstImage from '@/../images/maleenhance.jpg';
 import secondImage from '@/../images/maleenhance(2).jpg';
 import thirdImage from '@/../images/maleenhance(2).jpg';
 import fourthImage from '@/../images/maleenhance(4).jpg';
-import NavBar from '../NavBar.vue';
-import AppFooter from '../AppFooter.vue';
+import MainLayout from '../MainLayout.vue';
 import CtaSection from '../../components/CtaSection.vue';
+import { onMounted } from 'vue';
 
 export default {
   components: {
-    NavBar,
-    AppFooter,
+    MainLayout,
     CtaSection
   },
   data() {
@@ -510,9 +507,56 @@ export default {
   },
   methods: {
     scrollToNextSection() {
-      // Implement the logic to scroll to the next section
+      window.scrollBy({
+        top: window.innerHeight,
+        behavior: 'smooth'
+      });
     },
   },
+  setup() {
+    onMounted(() => {
+      // Function to handle scroll reveal animations
+      const handleScrollReveal = () => {
+        const scrollRevealElements = document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right');
+        
+        scrollRevealElements.forEach(element => {
+          const elementTop = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+          
+          if (elementTop < windowHeight * 0.9) {
+            element.classList.add('reveal-active');
+            element.classList.remove('opacity-0');
+          }
+        });
+        
+        // Animate stats cards sequentially
+        const statsCards = document.querySelectorAll('.stats-card');
+        statsCards.forEach((card, index) => {
+          const delay = parseInt(card.getAttribute('data-delay')) || (index * 200);
+          const elementTop = card.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+          
+          if (elementTop < windowHeight * 0.9) {
+            setTimeout(() => {
+              card.classList.add('reveal-active');
+              card.classList.remove('opacity-0');
+            }, delay);
+          }
+        });
+      };
+      
+      // Initial check for elements in viewport on page load
+      handleScrollReveal();
+      
+      // Add scroll event listener
+      window.addEventListener('scroll', handleScrollReveal);
+      
+      // Cleanup event listener on component unmount
+      return () => {
+        window.removeEventListener('scroll', handleScrollReveal);
+      };
+    });
+  }
 };
 </script>
 
